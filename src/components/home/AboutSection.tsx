@@ -7,8 +7,8 @@ export default function AboutSection() {
     <section id="about" className="relative w-full min-h-screen overflow-hidden flex flex-col lg:flex-row bg-[#020408]">
       {/* Full Height & Width Background with Tech Overlay */}
       <div className="absolute inset-0 w-full h-full z-0">
-        <img src="/images/backgrounds/growth_bg.png" className="w-full h-full object-cover mix-blend-luminosity opacity-40" alt="growth vision" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#050810]/95 via-[#050810]/60 to-[#050810]/80" />
+        <img src="/images/backgrounds/medical_tech_bg.png" className="w-full h-full object-cover mix-blend-luminosity opacity-60" alt="medical tech background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#050810]/80 via-[#050810]/40 to-[#050810]/60" />
         <div className="absolute inset-0 bg-tech-dots opacity-40 mix-blend-screen" />
       </div>
 
@@ -20,15 +20,15 @@ export default function AboutSection() {
         viewport={{ once: true, margin: "-100px" }}
         className="relative z-10 w-full lg:w-[40%] flex flex-col justify-start min-h-screen"
       >
-        <div className="glass-panel w-full h-full flex flex-col justify-start p-12 md:p-16 lg:p-20 relative overflow-hidden">
+        <div className="glass-panel w-full h-full flex flex-col justify-start p-12 md:p-16 lg:p-20 pt-24 md:pt-32 relative overflow-hidden">
           {/* Tech Accent Elements inside panel */}
           <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#00B7F1] to-transparent opacity-70" />
           <div className="absolute top-0 left-0 w-[4px] h-[100px] bg-[#00B7F1] shadow-[0_0_15px_#00B7F1]" />
-          
+
           {/* Main Header Text (Top) */}
-          <div className="mt-10 md:mt-20">
-            <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-20 tracking-tight tech-border-l pl-6">
-              다년간의 업적은<br />청안의 <span className="text-primary text-glow">신뢰성</span>과<br />진실성을 말해줍니다.
+          <div className="w-full max-w-4xl">
+            <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight mb-20 tracking-tight tech-border-l pl-6 whitespace-normal md:whitespace-nowrap">
+              다년간의 업적은 청안의<br /><span className="text-primary text-glow">신뢰성</span>과 진실성을 말해줍니다.
             </h2>
           </div>
 
@@ -47,16 +47,12 @@ export default function AboutSection() {
             <div className="space-y-4">
               <p>앞으로도 더 나은 서비스와 혁신적인 솔루션을 제공하며 끊임없이 발전하는 모습으로 보답하겠습니다.</p>
             </div>
-
-            <div className="pt-10 border-t border-[rgba(0,183,241,0.2)]">
-              <p className="font-black tracking-widest text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-white to-[#00B7F1]">SIGNATURE TRUST.</p>
-            </div>
           </div>
         </div>
       </motion.div>
 
       {/* Right Content (상단 슬로건 - Tech Style) */}
-      <div className="relative z-10 hidden lg:flex flex-grow justify-end items-start p-16 md:p-20 text-right">
+      <div className="relative z-10 hidden lg:flex flex-grow justify-end items-start p-16 md:p-20 pt-24 md:pt-32 text-right">
         <motion.div
           initial={{ opacity: 0, filter: 'blur(10px)' }}
           whileInView={{ opacity: 1, filter: 'blur(0px)' }}
@@ -65,7 +61,7 @@ export default function AboutSection() {
           className="relative"
         >
           <div className="absolute -inset-4 bg-[#00B7F1]/5 blur-2xl rounded-full" />
-          <h3 className="text-transparent bg-clip-text bg-gradient-to-b from-white via-gray-300 to-gray-600 text-4xl md:text-6xl font-black italic tracking-tighter leading-[1] drop-shadow-[0_0_30px_rgba(0,183,241,0.2)]">
+          <h3 className="text-transparent bg-clip-text bg-gradient-to-b from-white via-gray-300 to-gray-600 text-4xl md:text-6xl font-black tracking-tighter leading-[1] drop-shadow-[0_0_30px_rgba(0,183,241,0.2)]">
             DO WHAT IS <span className="text-primary text-glow font-inter">RIGHT</span>,<br />NOT WHAT IS EASY.
           </h3>
           <div className="mt-6 flex justify-end gap-2">
