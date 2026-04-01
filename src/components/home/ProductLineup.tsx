@@ -25,45 +25,50 @@ export default function ProductLineup() {
   const nextRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <section id="services" className="product-section py-12 md:py-16 overflow-hidden bg-[#f9fbff]">
-      <div className="max-w-screen-xl mx-auto px-6">
+    <section id="services" className="product-section py-16 md:py-24 overflow-hidden">
+      <div className="absolute inset-0 bg-tech-dots opacity-30 mix-blend-screen pointer-events-none" />
+      <div className="max-w-screen-xl mx-auto px-6 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="product-header-new mb-10"
+          className="mb-14"
         >
-          <div className="product-header-top mb-10">
-            <div className="flex items-center gap-3">
-              <svg width="42" height="42" viewBox="0 0 120 120">
-                <circle cx="60" cy="60" r="50" fill="none" stroke="#00B7F1" strokeWidth="11" />
-                <circle cx="60" cy="60" r="25" fill="none" stroke="#00B7F1" strokeWidth="9" />
-                <circle cx="95" cy="25" r="16" fill="#00B7F1" />
-                <path d="M95,18 v14 M88,25 h14" stroke="white" strokeWidth="4" strokeLinecap="round" />
+          <div className="flex justify-center mb-8">
+            <div className="flex items-center gap-4 bg-[#050810]/80 border border-[#00B7F1]/30 py-2 px-6 backdrop-blur-md rounded-full shadow-[0_0_15px_rgba(0,183,241,0.15)]">
+              <svg width="24" height="24" viewBox="0 0 120 120" className="animate-[spin_10s_linear_infinite]">
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#00B7F1" strokeWidth="8" strokeDasharray="10 20" />
+                <circle cx="60" cy="60" r="30" fill="none" stroke="#00B7F1" strokeWidth="4" />
+                <circle cx="60" cy="30" r="8" fill="#00B7F1" className="animate-ping" />
               </svg>
-              <span className="text-[#00B7F1] font-bold text-[10px] tracking-widest leading-tight uppercase">
-                CHUNG AN MEDICAL<br />CORPORATION
+              <span className="text-[#00B7F1] font-bold text-xs tracking-[0.2em] leading-tight uppercase">
+                CHUNG AN MEDICAL SYSTEM
               </span>
             </div>
           </div>
 
-          <div className="text-center">
-            <h2 className="product-title-underlined inline-block mb-10">CHUNG AN LINE - UP</h2>
-            <p className="product-desc-single-line mx-auto">
-              (주)청안 메디칼 코퍼레이션은 병의원용 피부미용 장비를 판매하고 있으며 이를 통해 지속적으로 유통망을 확대해 나가고 있습니다. 청안의 다양한 제품을 만나보세요.
+          <div className="text-center flex flex-col items-center">
+            <h2 className="text-4xl md:text-5xl font-black text-white tracking-[0.15em] uppercase mb-6 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">
+              CHUNG AN <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00B7F1] to-blue-400 text-glow">LINE-UP</span>
+            </h2>
+            <div className="w-16 h-1 bg-[#00B7F1] mb-8" />
+            <p className="text-slate-400 font-medium max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
+              (주)청안 메디칼 코퍼레이션은 병의원용 피부미용 장비의 새로운 기준을 제시합니다.<br className="hidden md:block" />
+              정밀한 제어와 최상의 결과를 위한 청안의 하이엔드 라인업을 만나보세요.
             </p>
 
             {/* Navigation Buttons */}
-            <div className="flex justify-center items-center gap-4 mt-12">
-              <button ref={prevRef} className="product-prev product-nav-btn" aria-label="이전">
+            <div className="flex justify-center items-center gap-4 mt-12 w-full max-w-md mx-auto relative">
+              <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#00B7F1]/30 to-transparent -z-10" />
+              <button ref={prevRef} className="product-prev product-nav-btn !bg-[#050810]" aria-label="이전">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="15 18 9 12 15 6"></polyline>
                 </svg>
               </button>
-              <div className="w-12 h-[1px] bg-gray-300"></div>
-              <button ref={nextRef} className="product-next product-nav-btn" aria-label="다음">
+              <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-[#00B7F1] to-transparent shadow-[0_0_10px_#00B7F1]"></div>
+              <button ref={nextRef} className="product-next product-nav-btn !bg-[#050810]" aria-label="다음">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
