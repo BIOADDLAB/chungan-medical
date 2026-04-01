@@ -60,7 +60,7 @@ body {
 
 /* Neon Text Glow */
 .text-glow {
-  text-shadow: 0 0 10px rgba(0, 183, 241, 0.8), 0 0 20px rgba(0, 183, 241, 0.4);
+  text-shadow: 0 0 10px rgba(0, 183, 241, 0.35);
 }
 .text-glow-white {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -69,14 +69,14 @@ body {
 .hero-accent-line {
   height: 2px;
   background: #00b7f1;
-  box-shadow: 0 0 12px rgba(0, 183, 241, 0.7);
+  box-shadow: 0 0 10px rgba(0, 183, 241, 0.35);
 }
 
 .hero-title {
   font-family: var(--font-noto-sans-kr), sans-serif;
   font-size: clamp(2.9rem, 6vw, 5.75rem);
   font-weight: 800;
-  line-height: 0.98;
+  line-height: 1.2;
   letter-spacing: -0.06em;
   text-align: center;
   text-wrap: balance;
@@ -89,13 +89,13 @@ body {
 
 .hero-title-highlight {
   color: #00b7f1;
-  text-shadow: 0 0 12px rgba(0, 183, 241, 0.95), 0 0 28px rgba(0, 183, 241, 0.45);
+  text-shadow: 0 0 10px rgba(0, 183, 241, 0.35);
 }
 
 @media (max-width: 768px) {
   .hero-title {
     font-size: clamp(2.4rem, 10vw, 3.75rem);
-    line-height: 1.06;
+    line-height: 1.2;
     letter-spacing: -0.05em;
   }
 }
@@ -181,7 +181,7 @@ body {
 .swiper-pagination-bullet-active {
   opacity: 1;
   background: var(--color-primary) !important;
-  box-shadow: 0 0 15px var(--color-primary), 0 0 5px white;
+  box-shadow: 0 0 10px rgba(0, 183, 241, 0.35);
   width: 12px;
   height: 12px;
   border: 1px solid var(--color-primary);
@@ -297,7 +297,7 @@ body {
   justify-content: center;
   align-items: center;
   border: 2px solid var(--color-primary);
-  box-shadow: 0 0 30px rgba(0, 183, 241, 0.3), inset 0 0 20px rgba(0, 183, 241, 0.2);
+  box-shadow: 0 0 10px rgba(0, 183, 241, 0.35);
   position: relative;
 }
 .cn-plus-symbol::after {
@@ -354,7 +354,7 @@ body {
   font-size: 15px;
   font-weight: 500;
   line-height: 1.4;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 183, 241, 0.35);
   pointer-events: auto;
   left: 50%;
   top: 50%;
@@ -374,7 +374,7 @@ body {
 .orbit-item:hover {
   background: rgba(0, 183, 241, 0.15);
   border-color: var(--color-primary);
-  box-shadow: 0 0 30px rgba(0, 183, 241, 0.4);
+  box-shadow: 0 0 10px rgba(0, 183, 241, 0.35);
   transform: scale(1.1);
   color: var(--color-primary);
   text-shadow: 0 0 5px rgba(0,183,241,0.5);
