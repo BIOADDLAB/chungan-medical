@@ -33,7 +33,7 @@ body {
 
 /* ============================================================ 
    Custom Utilities & Animations (Technical Theme)
-============================================================ */
+ ============================================================ */
 
 /* Tech Grid Background */
 .bg-tech-grid {
@@ -169,20 +169,22 @@ body {
 
 /* Swiper overrides (Tech Style) */
 .swiper-pagination-bullet {
-  width: 32px;
-  height: 4px;
-  background: #334155 !important;
-  opacity: 0.5;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.25) !important;
+  opacity: 1;
   transition: all 0.4s ease;
-  margin: 0 4px !important;
-  border-radius: 0; /* Flat technical lines */
-  transform: skewX(-15deg);
+  margin: 0 6px !important;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .swiper-pagination-bullet-active {
   opacity: 1;
   background: var(--color-primary) !important;
-  box-shadow: 0 0 8px var(--color-primary);
-  width: 48px;
+  box-shadow: 0 0 15px var(--color-primary), 0 0 5px white;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--color-primary);
 }
 
 /* Product Section */
@@ -432,4 +434,3 @@ body {
 .partner-marquee-2 .swiper-slide:hover img {
   filter: brightness(0) invert(1) opacity(1) drop-shadow(0 0 8px rgba(255,255,255,0.5));
 }
-

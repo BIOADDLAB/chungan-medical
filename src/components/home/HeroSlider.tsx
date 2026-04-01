@@ -101,7 +101,7 @@ export default function HeroSlider() {
         ))}
       </Swiper>
 
-      <div className="custom-hero-pagination absolute z-30 flex items-center justify-center gap-2 !bottom-24 !left-1/2 !-translate-x-1/2" />
+      <div className="custom-hero-pagination absolute z-30 flex items-center justify-center gap-2 !bottom-32 !left-1/2 !-translate-x-1/2" />
 
       <div className="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center">
         <Link
