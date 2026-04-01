@@ -66,6 +66,40 @@ body {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+.hero-accent-line {
+  height: 2px;
+  background: #00b7f1;
+  box-shadow: 0 0 12px rgba(0, 183, 241, 0.7);
+}
+
+.hero-title {
+  font-family: var(--font-noto-sans-kr), sans-serif;
+  font-size: clamp(2.9rem, 6vw, 5.75rem);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.hero-title-main {
+  color: #ffffff;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+.hero-title-highlight {
+  color: #00b7f1;
+  text-shadow: 0 0 12px rgba(0, 183, 241, 0.95), 0 0 28px rgba(0, 183, 241, 0.45);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(2.4rem, 10vw, 3.75rem);
+    line-height: 1.06;
+    letter-spacing: -0.05em;
+  }
+}
+
 /* UI Accent Lines */
 .tech-border-l {
   border-left: 2px solid var(--color-primary);
