@@ -1,0 +1,486 @@
+/* Tailwind Custom Utilities Extension */
+@layer utilities {
+    .reveal-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-up.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-30px); }
+        100% { transform: translateY(0px); }
+    }
+    
+    /* Delay classes to match inline tailwind delays */
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-300 { transition-delay: 300ms; }
+}
+
+/* Custom CSS to handle active link highlight and header scroll state */
+.site-header-scrolled {
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.nav-link.is-active {
+    color: #00B7F1; /* Primary Blue */
+}
+
+/* For performance: hardware acceleration on heavy images */
+.service-card img {
+    will-change: transform;
+}
+
+/* Swiper Pagination Custom (Circular - Centered) */
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #fff !important;
+    opacity: 0.3;
+    transition: all 0.4s ease;
+    margin: 0 6px !important;
+    border-radius: 50%;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #00B7F1 !important;
+}
+
+/* About Section Growth Path Animation */
+.reveal-path {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    transition: stroke-dashoffset 2s ease-out;
+}
+.is-visible .reveal-path {
+    stroke-dashoffset: 0;
+}
+
+/* ============================================
+   Product Line-Up Section
+   레퍼런스: 청안 라인업 (3번째) + 클래시스 구조 (2번째)
+   ============================================ */
+
+.product-section {
+    background: linear-gradient(180deg, #d9eef8 0%, #e8f4fc 30%, #f5faff 70%, #ffffff 100%);
+    position: relative;
+}
+.product-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: rgba(0, 183, 241, 0.2);
+}
+
+/* 헤더: 새로운 레이아웃 (로고 좌측, 타이틀 중앙 밑줄) */
+.product-header-new {
+    width: 100%;
+}
+.product-header-top {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.product-title-underlined {
+    font-size: clamp(32px, 6vw, 64px);
+    font-weight: 800;
+    color: #111;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #111;
+}
+
+.product-desc-single-line {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    white-space: nowrap;
+}
+@media (max-width: 1024px) {
+    .product-desc-single-line { white-space: normal; }
+}
+
+/* 네비게이션 버튼 */
+.product-nav-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #444;
+    transition: all 0.3s ease;
+}
+.product-nav-btn:hover {
+    background: #00B7F1;
+    border-color: #00B7F1;
+    color: #fff;
+}
+
+/* 스와이퍼 외부 컨테이너 - 4개 묶음 짤림 방지 */
+.product-swiper-outer {
+    width: 100%;
+    overflow: hidden; /* 슬라이드 짤림 방지 핵심 */
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+.product-swiper {
+    overflow: visible !important; /* 호버 확대를 위해 내부 슬라이더는 visible */
+}
+
+/* 카드 하단 로고 2개 */
+.product-maker-logo-img {
+    height: 20px;
+    width: auto;
+    margin-bottom: 6px;
+    opacity: 0.7;
+}
+.product-footer-logo-img {
+    height: 18px;
+    width: auto;
+}
+
+/* 구분선 제거 또는 리스타일 */
+.product-divider {
+    display: none;
+}
+
+/* 장비 카드 하단 로고 이미지 */
+.product-footer-logo-img {
+    height: 24px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.8;
+}
+
+/* 스와이퍼 - 100% 너비 및 여백 조절 */
+.product-swiper {
+    width: 100%;
+    overflow: visible !important; /* hover 효과를 위해 필요 */
+    padding: 20px 0 60px !important;
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+/* 장비 카드 및 Pedestal 효과 */
+.product-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 20px 30px;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(0, 183, 241, 0.08);
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 40px 80px rgba(0, 183, 241, 0.15);
+}
+
+/* 장비 이미지 및 하단 받침대(Pedestal) 효과 */
+.product-img-wrap {
+    width: 100%;
+    height: 380px; /* 고정 높이 */
+    display: flex;
+    align-items: flex-end; /* 바닥에 정렬 */
+    justify-content: center;
+    position: relative;
+    /* 이미지 하단 요소와의 간격 통일 (40px 근접) */
+    margin-bottom: 20px;
+}
+
+.product-img-wrap::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    width: 160px;
+    height: 15px;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.15) 0%, transparent 75%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.product-machine-img {
+    height: 340px; /* 장비 크기 정밀 조정 */
+    width: auto;
+    max-width: 95%;
+    object-fit: contain;
+    z-index: 2;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-machine-img {
+    transform: scale(1.08); /* 장비 확대 효과 */
+}
+
+/* 카드 하단 정보 */
+.product-card-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px; /* margin 20 + padding 20 = 40px 간격 */
+    gap: 12px;
+}
+
+/* 이미지 로고 */
+.product-maker-logo {
+    height: 26px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+/* 텍스트 로고 */
+.product-maker-text {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    line-height: 1;
+}
+.snj-logo { color: #1a5fcc; font-style: italic; }
+.viol-logo { color: #2a5c8a; font-style: italic; font-size: 16px; }
+.hironic-logo { color: #c0392b; font-size: 13px; letter-spacing: 0.12em; }
+
+/* 장비명 */
+.product-machine-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+    .product-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .product-header-right {
+        align-items: flex-start;
+    }
+    .product-desc { text-align: left; }
+}
+@media (max-width: 640px) {
+    .product-title { font-size: 38px; }
+    .product-img-wrap { height: 180px; }
+    .product-machine-img { max-height: 165px; }
+}
+
+/* ============================================================ 
+   컨설팅 섹션 오빗 다이어그램 (Orbit Diagram)
+============================================================ */
+.consulting-diagram-wrap {
+    width: 600px;
+    height: 600px;
+    margin-top: 40px;
+}
+
+.consulting-center-logo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-inner-circle {
+    width: 140px;
+    height: 140px;
+    background: #fff;
+    border: 12px solid #00B7F1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 183, 241, 0.2);
+}
+
+.logo-target-icon {
+    width: 60px;
+    height: 60px;
+    border: 4px solid #00B7F1;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.target-dot {
+    width: 25px;
+    height: 25px;
+    background: #00B7F1;
+    border-radius: 50%;
+}
+
+/* ============================================================ 
+   컨설팅 섹션 (Orbit Diagram)
+============================================================ */
+.consulting-section {
+    background-image: url('images/backgrounds/consulting_waves.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 80px;
+}
+
+.consulting-diagram-wrap {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    margin-top: 40px;
+}
+
+.consulting-center-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cn-plus-symbol {
+    width: 170px;
+    height: 170px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 50px rgba(0, 183, 241, 0.25);
+    border: 1px solid rgba(0, 183, 241, 0.1);
+}
+
+.consulting-orbit-path {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 2px solid rgba(0, 183, 241, 0.15);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.orbit-items-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.orbit-item {
+    position: absolute;
+    width: 165px;
+    height: 165px;
+    background: #00B7F1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.35;
+    box-shadow: 0 15px 45px rgba(0, 183, 241, 0.4);
+    pointer-events: auto;
+    left: 50%;
+    top: 50%;
+    border: 4px solid #ffffff;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.orbit-item:hover {
+    background: #00a3d8;
+    box-shadow: 0 20px 50px rgba(0, 183, 241, 0.5);
+    /* transform 효과 삭제 (위치 이탈 방지) */
+}
+
+/* 5개 아이템 정적 배치 (5각 구도) */
+.orbit-item.item-1 { transform: translate(-50%, -330px); } /* Top */
+.orbit-item.item-2 { transform: translate(180px, -110px); } /* Right Top */
+.orbit-item.item-3 { transform: translate(90px, 160px); }  /* Right Bottom */
+.orbit-item.item-4 { transform: translate(-250px, 160px); } /* Left Bottom */
+.orbit-item.item-5 { transform: translate(-345px, -110px); } /* Left Top */
+
+@media (max-width: 1024px) {
+    .consulting-diagram-wrap { transform: scale(0.8); }
+}
+
+/* ============================================================ 
+   파트너사 무한 롤링 (두 줄 구성)
+============================================================ */
+.partners-marquee-container {
+    position: relative;
+    /* 배경 이미지를 마키 컨테이너 내부로만 한정 (fixed 제거) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/backgrounds/partners_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* 아예 이 영역에만 박혀 있게 수정 */
+    padding: 100px 0;
+    margin-top: 40px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.partner-marquee-1 .swiper-wrapper,
+.partner-marquee-2 .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+.partner-marquee-1 .swiper-slide img,
+.partner-marquee-2 .swiper-slide img,
+.partner-marquee-1 .swiper-slide svg,
+.partner-marquee-2 .swiper-slide svg {
+    max-height: 45px;
+    width: auto;
+    filter: brightness(0) invert(1); /* 로고를 흰색으로 반전 (배경 대비) */
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.partner-marquee-1 .swiper-slide:hover img,
+.partner-marquee-2 .swiper-slide:hover img {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+.swiper-slide span, 
+.swiper-slide div[class*="text-"] {
+    color: rgba(255, 255, 255, 0.85) !important; /* 텍스트형 로고도 흰색으로 상향 */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+

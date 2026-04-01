@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-Pulse FX / PRO - CHEONGAN MEDICAL</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Swiper CSS (though not used here, for consistency if needed later) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00B7F1',
+                        dark: '#000000',
+                        light: '#F9F9F9'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans KR"', 'sans-serif'],
+                        inter: ['"Inter"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-black text-white font-sans overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-screen-xl mx-auto px-6 h-20 flex justify-between items-center">
+            <!-- Logo Text -->
+            <a href="index.html"
+                class="text-2xl font-bold tracking-widest text-white hover:text-primary transition duration-300 w-32 flex-shrink-0">
+                CHEONGAN
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-10 lg:space-x-14 font-medium text-white relative">
+                <a href="index.html#about"
+                    class="nav-link hover:text-primary transition duration-300 relative py-6">회사소개</a>
+
+                <!-- Dropdown Menu -->
+                <div class="group relative py-6 cursor-pointer">
+                    <span
+                        class="nav-link hover:text-primary transition duration-300 is-active !text-primary">제품소개</span>
+                    <!-- Dropdown Content -->
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 top-full mt-[-8px] w-auto min-w-[240px] bg-[#111111]/95 backdrop-blur-md border border-[#333] rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col overflow-hidden whitespace-nowrap z-50 text-left">
+                        <a href="pico-k.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">피코K</a>
+                        <a href="u-pulse.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">U-Pulse,
+                            U-Pulse DUAL</a>
+                        <a href="n-pulse.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222] text-primary">N-Pulse,
+                            N-Pulse FX</a>
+                        <a href="sylfirm-x.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">실펌엑스</a>
+                        <a href="cellinew.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">셀리뉴</a>
+                        <a href="v-ro-advance.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm">브이로어드밴스</a>
+                    </div>
+                </div>
+
+                <a href="index.html#customers"
+                    class="nav-link hover:text-primary transition duration-300 relative py-6">미래비전</a>
+                <a href="contact.html"
+                    class="nav-link hover:text-primary transition duration-300 py-6 uppercase">contact</a>
+            </nav>
+
+            <div
+                class="flex items-center space-x-2 font-bold cursor-pointer hover:text-primary transition w-32 justify-end flex-shrink-0">
+                <span>KOR</span>
+                <span class="text-xs">▾</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Product Hero Section (Billboard Style) -->
+        <section id="hero"
+            class="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4">
+            <!-- Background Overlay & Image -->
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
+                <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1920&q=80"
+                    class="absolute inset-0 w-full h-full object-cover z-0" alt="medical clinic background">
+            </div>
+
+            <div class="relative z-20 max-w-screen-xl mx-auto">
+                <h1
+                    class="text-3xl md:text-7xl font-bold leading-tight tracking-tight text-white mb-6 uppercase reveal-up">
+                    N-PULSE, N-PULSE FX
+                </h1>
+                <p class="text-lg md:text-2xl text-white/90 font-medium max-w-3xl mx-auto reveal-up delay-100">
+                    합리적인 피부미용 의료 장비,<br>
+                    그리고 최고의 선택
+                </p>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30">
+                <a href="#content"
+                    class="inline-flex justify-center items-center w-12 h-12 border border-white/20 rounded-full hover:bg-white hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-black/10 backdrop-blur-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white group-hover:text-black transition"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- N-Pulse Machine Models Comparison Section -->
+        <section id="content" class="pt-20 pb-0 md:pt-32 md:pb-10 bg-black text-white relative overflow-hidden">
+            <div class="max-w-[1350px] mx-auto px-6 relative">
+
+                <!-- 2-Column Desktop Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 relative z-20 min-h-[600px] md:min-h-[800px]">
+
+                    <!-- Center Divider Line (Desktop only) -->
+                    <div
+                        class="hidden md:block absolute left-1/2 top-4 bottom-10 w-[1px] bg-[#00C4B8]/40 -translate-x-1/2 z-10">
+                    </div>
+
+                    <!-- Left Model: N-Pulse Pro -->
+                    <div class="relative w-full flex flex-col justify-start pt-10 md:pt-32 reveal-up h-full">
+                        <!-- Text Layer -->
+                        <div class="relative z-30 pointer-events-none">
+                            <h3
+                                class="text-[#00C4B8] font-bold text-[26px] md:text-[34px] tracking-tight mb-2 whitespace-nowrap">
+                                Single Mode</h3>
+                            <h2
+                                class="text-white font-extrabold text-[46px] md:text-[58px] tracking-tight leading-none mb-10 whitespace-nowrap">
+                                N-Pulse Pro</h2>
+                            <p
+                                class="text-white/90 text-[18px] md:text-[24px] font-medium tracking-wide whitespace-nowrap">
+                                CO2 (Surgical)</p>
+                        </div>
+
+                        <!-- Absolute Image Layer -->
+                        <img src="images/machine/엔펄스pro 사진.png" alt="N-Pulse Pro"
+                            class="absolute right-[-140px] sm:right-[-180px] md:right-[-280px] lg:right-[-440px] bottom-6 md:bottom-20 h-[75%] md:h-[85%] lg:h-[90%] max-w-none object-contain object-bottom drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] z-20 pointer-events-auto hover:scale-105 transition-transform duration-700 ease-out origin-bottom">
+                    </div>
+
+                    <!-- Right Model: N-Pulse FX -->
+                    <div class="relative w-full flex flex-col justify-start pt-10 md:pt-32 md:pl-20 reveal-up h-full"
+                        style="transition-delay: 150ms;">
+                        <!-- Text Layer -->
+                        <div class="relative z-30 pointer-events-none">
+                            <h3
+                                class="text-[#00C4B8] font-bold text-[26px] md:text-[34px] tracking-tight mb-2 whitespace-nowrap">
+                                Dual Mode</h3>
+                            <h2
+                                class="text-white font-extrabold text-[46px] md:text-[58px] tracking-tight leading-none mb-10 whitespace-nowrap">
+                                N-Pulse FX</h2>
+                            <p
+                                class="text-white/90 text-[18px] md:text-[24px] font-medium tracking-wide mb-1 whitespace-nowrap">
+                                CO2 (Surgical)</p>
+                            <p
+                                class="text-white/90 text-[18px] md:text-[24px] font-medium tracking-wide whitespace-nowrap">
+                                FRX (Fractional)</p>
+                        </div>
+
+                        <!-- Absolute Image Layer -->
+                        <img src="images/machine/엔펄스fx 사진.png" alt="N-Pulse FX"
+                            class="absolute right-[-50px] lg:right-[-100px] bottom-6 md:bottom-20 h-[75%] md:h-[85%] lg:h-[90%] max-w-none object-contain object-bottom drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] z-20 pointer-events-auto hover:scale-105 transition-transform duration-700 ease-out origin-bottom">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Technology Section -->
+        <section id="advanced-tech" class="py-24 md:py-32 bg-black text-white overflow-hidden">
+            <div class="max-w-[1350px] mx-auto px-6">
+                <!-- Section Header -->
+                <h2 class="text-[#00C4B8] text-[36px] md:text-[56px] font-black tracking-tighter mb-20 reveal-up">
+                    Advanced Technology
+                </h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">
+                    <!-- Left Column: Technical Features -->
+                    <div class="lg:col-span-6 space-y-16 py-4 flex flex-col justify-between">
+
+                        <!-- Tech 1 -->
+                        <div class="reveal-up">
+                            <h3 class="text-[#00C4B8] text-[28px] md:text-[38px] font-bold flex items-center mb-6">
+                                <span class="w-2.5 h-2.5 rounded-full bg-[#00C4B8] mr-5"></span>
+                                Technology
+                            </h3>
+                            <div
+                                class="pl-10 space-y-2 text-white/80 text-[18px] md:text-[22px] font-medium leading-snug">
+                                <p>에스앤제이만의 기술력을 바탕으로</p>
+                                <p>비교불가 하이 피크 파워 울트라 펄스 구현</p>
+                            </div>
+                        </div>
+
+                        <!-- Tech 2 -->
+                        <div class="reveal-up" style="transition-delay: 100ms;">
+                            <h3 class="text-[#00C4B8] text-[28px] md:text-[38px] font-bold flex items-center mb-6">
+                                <span class="w-2.5 h-2.5 rounded-full bg-[#00C4B8] mr-5"></span>
+                                Safe & Effective
+                            </h3>
+                            <div
+                                class="pl-10 space-y-2 text-white/80 text-[18px] md:text-[22px] font-medium leading-snug">
+                                <p>열 손상 최소화</p>
+                                <p>다양한 스팟 사이즈로 시술 효과 극대화</p>
+                            </div>
+                        </div>
+
+                        <!-- Tech 3 -->
+                        <div class="reveal-up" style="transition-delay: 200ms;">
+                            <h3 class="text-[#00C4B8] text-[28px] md:text-[38px] font-bold flex items-center mb-6">
+                                <span class="w-2.5 h-2.5 rounded-full bg-[#00C4B8] mr-5"></span>
+                                Convenient
+                            </h3>
+                            <div
+                                class="pl-10 space-y-2 text-white/80 text-[18px] md:text-[22px] font-medium leading-snug">
+                                <p>3가지 핸드피스로 다양한 스팟사이즈 구현</p>
+                                <p>사용자 중심의 인체공학적 디자인 & GUI</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column: Technical Diagrams - Shifted Up & Stretched to Match -->
+                    <div class="lg:col-span-6 reveal-up lg:-mt-16" style="transition-delay: 300ms;">
+                        <div
+                            class="bg-[#111] rounded-3xl p-8 md:p-14 border border-white/5 relative overflow-hidden h-full flex flex-col justify-center">
+                            <!-- Background Subtle Glow -->
+                            <div
+                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#00C4B8]/5 blur-[120px] rounded-full pointer-events-none">
+                            </div>
+
+                            <!-- Diagram Content -->
+                            <div class="relative z-10 space-y-16">
+
+                                <!-- Pro Comparison Diagram -->
+                                <div class="space-y-6">
+                                    <div class="flex justify-between items-end px-4">
+                                        <div class="text-white/40 font-bold text-sm md:text-[17px]">Other</div>
+                                        <div
+                                            class="text-white font-black text-sm md:text-[17px] tracking-tight uppercase">
+                                            N-Pulse Pro</div>
+                                    </div>
+                                    <div class="relative h-[220px] flex items-center justify-center">
+                                        <svg viewBox="0 0 500 220" class="w-full h-full"
+                                            preserveAspectRatio="xMidYMid meet">
+                                            <!-- Other: Needle Handpiece -->
+                                            <g transform="translate(100, 10)">
+                                                <path d="M0,0 L60,15 L70,120 L15,105 Z" fill="#D1D5DB" />
+                                                <path d="M45,115 L35,165 L43,165 L50,120 Z" fill="#D1D5DB" />
+                                                <path d="M68,123 L85,185" stroke="#D1D5DB" stroke-width="2" />
+                                                <path d="M75,185 Q85,175 100,185 Q110,195 95,205 Q80,200 75,185 Z"
+                                                    fill="#D1D5DB" opacity="0.6" />
+                                            </g>
+                                            <!-- Pro: Needle Handpiece -->
+                                            <g transform="translate(320, 10)">
+                                                <path d="M0,0 L60,15 L70,120 L15,105 Z" fill="#296576" />
+                                                <path d="M45,115 L35,165 L43,165 L50,120 Z" fill="#132F38" />
+                                                <path d="M68,123 L85,185" stroke="#132F38" stroke-width="2" />
+                                                <circle cx="88" cy="195" r="10" fill="#00C4B8" opacity="0.9" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <!-- Horizontal Divider -->
+                                <div class="h-[1px] w-full bg-white/10"></div>
+
+                                <!-- FX Comparison Diagram -->
+                                <div class="space-y-6">
+                                    <div class="flex justify-between items-end px-4">
+                                        <div class="text-white/40 font-bold text-sm md:text-[17px]">Other</div>
+                                        <div
+                                            class="text-white font-black text-sm md:text-[17px] tracking-tight uppercase">
+                                            N-Pulse FX</div>
+                                    </div>
+                                    <div class="relative h-[240px] flex items-center justify-center">
+                                        <svg viewBox="0 0 500 240" class="w-full h-full"
+                                            preserveAspectRatio="xMidYMid meet">
+                                            <line x1="50" y1="20" x2="450" y2="20" stroke="white" stroke-width="2"
+                                                opacity="1" />
+                                            <g transform="translate(70, 20)">
+                                                <path d="M0,0 C0,220 180,220 180,0" fill="#D1D5DB" />
+                                                <path d="M40,0 C40,160 140,160 140,0" fill="#111" />
+                                            </g>
+                                            <g transform="translate(370, 20)">
+                                                <path d="M0,0 L50,0 L50,200 C50,225 0,225 0,200 Z" fill="#00C4B8" />
+                                                <path d="M15,0 L35,0 L35,190 C35,205 15,205 15,190 Z" fill="#ffffff" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results of Treatment Section -->
+        <section class="py-24 bg-black overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="max-w-6xl mx-auto">
+                    <!-- Text Content -->
+                    <div class="reveal-up mb-16">
+                        <h2 class="text-[#00C4B8] text-[32px] md:text-[42px] font-bold mb-8">The Results of Treatment
+                        </h2>
+                        <ul class="space-y-4 text-white text-[18px] md:text-[22px] font-medium list-none">
+                            <li class="flex items-start">
+                                <span class="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
+                                <div>피부 깊숙이 빠르고 강하게 열 에너지 전달</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
+                                <div>피부 재생을 위한 콜라겐 형성을 유도</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
+                                <div>콜라겐 재생을 통해 흉터, 주름 등을 개선</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Clinical Step Grid -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center reveal-up">
+                        <!-- Steps 1-3 -->
+                        <div
+                            class="lg:col-span-8 flex items-center bg-[#111] p-4 rounded-xl border border-white/5 space-x-2 md:space-x-4">
+                            <!-- Step 1 -->
+                            <div
+                                class="relative flex-1 aspect-[4/3] bg-white/5 rounded-lg overflow-hidden border border-white/10">
+                                <div
+                                    class="absolute top-2 left-2 bg-white text-black font-bold px-2 py-0.5 text-xs z-10">
+                                    1</div>
+                                <!-- Image Placeholder -->
+                                <div class="w-full h-full bg-gradient-to-br from-white/10 to-transparent"></div>
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="flex flex-col space-y-1">
+                                <svg class="w-4 h-6 text-[#00C4B8]" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div
+                                class="relative flex-1 aspect-[4/3] bg-white/5 rounded-lg overflow-hidden border border-white/10">
+                                <div
+                                    class="absolute top-2 left-2 bg-white text-black font-bold px-2 py-0.5 text-xs z-10">
+                                    2</div>
+                                <!-- Image Placeholder -->
+                                <div class="w-full h-full bg-gradient-to-br from-white/10 to-transparent"></div>
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="flex flex-col space-y-1">
+                                <svg class="w-4 h-6 text-[#00C4B8]" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div
+                                class="relative flex-1 aspect-[4/3] bg-white/5 rounded-lg overflow-hidden border border-white/10">
+                                <div
+                                    class="absolute top-2 left-2 bg-white text-black font-bold px-2 py-0.5 text-xs z-10">
+                                    3</div>
+                                <!-- Image Placeholder -->
+                                <div class="w-full h-full bg-gradient-to-br from-white/10 to-transparent"></div>
+                            </div>
+                        </div>
+
+                        <!-- Arrow Large (Desktop) -->
+                        <div class="hidden lg:flex flex-col space-y-1 items-center justify-center lg:col-span-1">
+                            <div class="flex space-x-[-10px]">
+                                <svg class="w-6 h-10 text-[#00C4B8] opacity-30" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <svg class="w-6 h-10 text-[#00C4B8] opacity-60" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <svg class="w-6 h-10 text-[#00C4B8]" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 (Highlighted) -->
+                        <div
+                            class="lg:col-span-3 relative aspect-[4/3] bg-white/5 rounded-xl overflow-hidden border-2 border-[#00C4B8]">
+                            <div class="absolute top-0 left-0 bg-[#00C4B8] text-white font-bold px-3 py-1 text-sm z-10">
+                                4</div>
+                            <!-- Image Placeholder -->
+                            <div class="w-full h-full bg-gradient-to-br from-[#00C4B8]/20 to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+
+        <!-- Smaller Beam Size Section -->
+        <section class="py-24 bg-black overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="max-w-6xl mx-auto">
+                    <!-- Text Content -->
+                    <div class="reveal-up mb-20">
+                        <h2 class="text-[#00C4B8] text-[32px] md:text-[42px] font-bold mb-8">Smaller Beam Size
+                            Fractional Laser System</h2>
+                        <ul class="space-y-4 text-white text-[18px] md:text-[22px] font-medium list-none">
+                            <li class="flex items-start">
+                                <span class="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
+                                <div>정교하고 깊게 조사되어 회복과 재생을 빠르게</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
+                                <div>시술 횟수와 통증은 줄이고 효과는 높게</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Visual Grid -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 reveal-up items-end">
+                        <!-- Left: Min Beam Size Box -->
+                        <div class="lg:col-span-4 flex flex-col items-center">
+                            <div class="text-center mb-10">
+                                <p class="text-white text-[20px] md:text-[24px] font-bold mb-1">Min. Beam Size</p>
+                                <p class="text-[#00C4B8] text-[20px] md:text-[24px] font-medium italic">80~100um</p>
+                            </div>
+                            <!-- Image Placeholder -->
+                            <div
+                                class="relative w-full aspect-square bg-[#0f0f0f] rounded-[24px] border border-white/5 overflow-hidden flex items-center justify-center">
+                                <!-- Mock Grid -->
+                                <div class="grid grid-cols-8 gap-1.5 opacity-10">
+                                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                                </div>
+                                <!-- Target Circle UI -->
+                                <div
+                                    class="absolute top-[30%] right-[25%] w-10 h-10 border border-[#00C4B8] rounded-full flex items-center justify-center">
+                                    <div class="w-1 h-1 bg-[#00C4B8] rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Skin Cross-Section Box -->
+                        <div class="lg:col-span-8">
+                            <div
+                                class="w-full aspect-[16/9] bg-[#0f0f0f] rounded-[24px] border border-white/5 overflow-hidden relative">
+                                <!-- Vertical Beams Simulation -->
+                                <div class="absolute inset-0 flex items-center pl-10 space-x-6">
+                                    <div class="w-[2px] h-[140px] bg-white/10"></div>
+                                    <div class="w-[2px] h-[140px] bg-white/10"></div>
+                                    <div class="w-[2px] h-[140px] bg-white/10"></div>
+                                    <div class="w-[2px] h-[140px] bg-white/10"></div>
+                                    <div class="w-[2px] h-[140px] bg-white/10"></div>
+                                    <div class="w-[2px] h-[140px] bg-white/10"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- High Peak Power Ultra Pulse Section -->
+        <section class="py-24 bg-black overflow-hidden mt-12">
+            <div class="container mx-auto px-6">
+                <div class="max-w-6xl mx-auto">
+                    <!-- Text Content -->
+                    <div class="reveal-up mb-6">
+                        <h2 class="text-[#00C4B8] text-[32px] md:text-[42px] font-bold mb-10">High Peak Power Ultra
+                            Pulse</h2>
+                        <ul class="space-y-4 text-white text-[18px] md:text-[22px] font-medium list-none">
+                            <li class="flex items-start">
+                                <span class="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
+                                <div>울트라 펄스를 통한 열손상 최소화</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
+                                <div>시술 횟수와 통증은 <span
+                                        class="font-bold underline underline-offset-4 decoration-[#00C4B8]/30">Down</span>
+                                    효과는 <span
+                                        class="font-bold underline underline-offset-4 decoration-[#00C4B8]/30">Up</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
+                                <div>샤프하게 조사되는 고퀄리티 레이저 빔</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
+                                <div><span class="font-bold">Frequency</span>와 <span class="font-bold">Duration</span>을
+                                    통해 섬세한 레이저 빔 조사</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Overlapping Circles Diagram -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center reveal-up pt-10">
+                        <!-- Left: Compact Venn Diagram -->
+                        <div
+                            class="relative w-full aspect-square max-w-[400px] mx-auto flex items-center justify-center">
+                            <!-- Circles with Professional Proportions & Smaller Text -->
+                            <div class="relative w-full h-full flex items-center justify-center">
+                                <!-- Power Board (Top) -->
+                                <div
+                                    class="absolute top-[60px] w-[160px] h-[160px] rounded-full bg-[#aaa]/50 flex items-center justify-center text-black font-extrabold text-[16px] md:text-[18px] z-10 transition-all">
+                                    <span class="mb-4">파워보드</span>
+                                </div>
+                                <!-- Glass Tube (Bottom Left) -->
+                                <div
+                                    class="absolute bottom-[80px] left-[60px] w-[160px] h-[160px] rounded-full bg-[#aaa]/50 flex flex-col items-center justify-center text-black font-extrabold text-[16px] md:text-[18px] text-center px-4 z-10 transition-all">
+                                    <span class="mb-2">높은 파워의<br>글래스튜브</span>
+                                </div>
+                                <!-- Regulator (Bottom Right) -->
+                                <div
+                                    class="absolute bottom-[80px] right-[60px] w-[160px] h-[160px] rounded-full bg-[#aaa]/50 flex flex-col items-center justify-center text-black font-extrabold text-[16px] md:text-[18px] text-center px-4 z-10 transition-all">
+                                    <span class="mb-2">고성능의<br>레귤레이터</span>
+                                </div>
+                            </div>
+
+                            <!-- Central Connecting Point (Smaller Mint Dot) -->
+                            <div
+                                class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-20 w-3 h-3 bg-[#00C4B8] rounded-full border border-white/50 shadow-[0_0_8px_rgba(0,196,184,0.3)]">
+                            </div>
+
+                            <!-- Refined Vector SVG Arrow (Precisely Centered) -->
+                            <div class="absolute left-[50%] top-[50%] w-[420px] pointer-events-none z-10 hidden lg:block"
+                                style="transform: rotate(-4deg); transform-origin: 0px 10px; margin-top: -10px;">
+                                <svg viewBox="0 0 420 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                                    <line x1="0" y1="10" x2="410" y2="10" stroke="#00C4B8" stroke-width="2.5" />
+                                    <!-- Dynamic Triangular Arrowhead -->
+                                    <path d="M410 4L420 10L410 16V4Z" fill="#00C4B8" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Right: 3D Visualization Map Box -->
+                        <div
+                            class="w-full aspect-square max-w-[480px] mx-auto bg-black rounded-[24px] overflow-hidden flex items-center justify-center relative border border-white/5">
+                            <canvas id="gaussianCanvas" class="w-full h-full"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Indication Section -->
+        <section class="py-24 bg-black overflow-hidden relative border-t border-white/5">
+            <div class="container mx-auto px-6">
+                <div class="max-w-6xl mx-auto text-left">
+                    <!-- Section Title -->
+                    <h2 class="text-[#00C4B8] text-[42px] md:text-[56px] font-bold mb-20 reveal-up">Indication</h2>
+
+                    <!-- Indication Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-8 reveal-up">
+                        <!-- Indication 1 -->
+                        <div class="flex flex-col items-center text-center">
+                            <div class="relative group mb-10">
+                                <!-- Dashed Circle Decoration -->
+                                <div class="absolute -inset-5 border border-dashed border-[#00C4B8]/30 rounded-full">
+                                </div>
+                                <div class="absolute -inset-2.5 border border-dashed border-[#00C4B8]/50 rounded-full">
+                                </div>
+                                <!-- Image Container -->
+                                <div
+                                    class="w-[180px] h-[180px] md:w-[200px] md:h-[200px] bg-[#f8f8f8] rounded-full overflow-hidden border-2 border-transparent group-hover:border-[#00C4B8] transition-all duration-500 relative">
+                                    <!-- Image will be inserted here manually -->
+                                </div>
+                            </div>
+                            <h3 class="text-[#00C4B8] text-[18px] md:text-[20px] font-bold mb-2">점, 검버섯</h3>
+                            <p class="text-white/60 text-[15px] md:text-[17px]">Mole, Melasma</p>
+                        </div>
+
+                        <!-- Indication 2 -->
+                        <div class="flex flex-col items-center text-center">
+                            <div class="relative group mb-10">
+                                <div class="absolute -inset-5 border border-dashed border-[#00C4B8]/30 rounded-full">
+                                </div>
+                                <div class="absolute -inset-2.5 border border-dashed border-[#00C4B8]/50 rounded-full">
+                                </div>
+                                <div
+                                    class="w-[180px] h-[180px] md:w-[200px] md:h-[200px] bg-[#f8f8f8] rounded-full overflow-hidden border-2 border-transparent group-hover:border-[#00C4B8] transition-all duration-500 relative">
+                                </div>
+                            </div>
+                            <h3 class="text-[#00C4B8] text-[18px] md:text-[20px] font-bold mb-2 text-balance px-4">편평
+                                사마귀, 사마귀, 쥐젖</h3>
+                            <p class="text-white/60 text-[15px] md:text-[17px]">Verruca Plana, Wart</p>
+                        </div>
+
+                        <!-- Indication 3 -->
+                        <div class="flex flex-col items-center text-center">
+                            <div class="relative group mb-10">
+                                <div class="absolute -inset-5 border border-dashed border-[#00C4B8]/30 rounded-full">
+                                </div>
+                                <div class="absolute -inset-2.5 border border-dashed border-[#00C4B8]/50 rounded-full">
+                                </div>
+                                <div
+                                    class="w-[180px] h-[180px] md:w-[200px] md:h-[200px] bg-[#f8f8f8] rounded-full overflow-hidden border-2 border-transparent group-hover:border-[#00C4B8] transition-all duration-500 relative">
+                                </div>
+                            </div>
+                            <h3 class="text-[#00C4B8] text-[18px] md:text-[20px] font-bold mb-2">한관종, 비립종</h3>
+                            <p class="text-white/60 text-[15px] md:text-[17px]">Syriongoma, Milium</p>
+                        </div>
+
+                        <!-- Indication 4 -->
+                        <div class="flex flex-col items-center text-center">
+                            <div class="relative group mb-10">
+                                <div class="absolute -inset-5 border border-dashed border-[#00C4B8]/30 rounded-full">
+                                </div>
+                                <div class="absolute -inset-2.5 border border-dashed border-[#00C4B8]/50 rounded-full">
+                                </div>
+                                <div
+                                    class="w-[180px] h-[180px] md:w-[200px] md:h-[200px] bg-[#f8f8f8] rounded-full overflow-hidden border-2 border-transparent group-hover:border-[#00C4B8] transition-all duration-500 relative">
+                                </div>
+                            </div>
+                            <h3 class="text-[#00C4B8] text-[18px] md:text-[20px] font-bold mb-2 text-balance px-4">흉터
+                                (화상, 모공, 여드름)</h3>
+                            <p class="text-white/60 text-[15px] md:text-[17px]">Scar (Burn, Pore, Acne)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Specification Section -->
+            <section class="py-24 bg-black overflow-hidden relative border-t border-white/5">
+                <div class="container mx-auto px-6">
+                    <div class="max-w-7xl mx-auto">
+                        <!-- Section Title -->
+                        <h2 class="text-[#00C4B8] text-[42px] md:text-[56px] font-bold mb-20 reveal-up">Specification
+                        </h2>
+
+                        <div class="flex flex-col lg:flex-row items-end justify-between gap-8 reveal-up">
+                            <!-- Left Image: N-Pulse Pro -->
+                            <!-- Pro 이미지: 극단적으로 긴 비율이므로 가로 폭(w) 기준으로 크기 조절 -->
+                            <div class="hidden lg:block w-1/4 relative order-1 self-stretch" style="min-height: 600px;">
+                                <img src="images/machine/엔펄스pro 사진.png" alt="N-Pulse Pro"
+                                    class="absolute bottom-0 -right-[390px] w-[1100px] max-w-none object-contain object-bottom drop-shadow-[0_40px_80px_rgba(0,0,0,0.9)] z-20 hover:scale-105 transition-transform duration-700 ease-out origin-bottom">
+                            </div>
+
+                            <!-- Central Specification Table -->
+                            <div class="w-full lg:w-1/2 order-2 overflow-x-auto self-center">
+                                <table
+                                    class="w-full border-collapse text-[14px] md:text-[16px] text-center min-w-[500px] shadow-2xl border border-black">
+                                    <thead>
+                                        <tr class="h-16">
+                                            <th class="w-[28%] bg-[#222] text-white border border-black font-bold">
+                                                Product Name</th>
+                                            <th class="w-[36%] bg-[#e0e0e0] text-black border border-black font-bold">
+                                                N-Pulse Pro</th>
+                                            <th colspan="2"
+                                                class="w-[36%] bg-[#e0e0e0] text-black border border-black font-bold">
+                                                N-Pulse FX</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white text-black font-medium">
+                                        <tr class="h-14">
+                                            <td class="bg-[#444] text-white font-bold border border-black px-4">Mode
+                                            </td>
+                                            <td class="border border-black">CO2 (Surgical)</td>
+                                            <td colspan="2" class="border border-black py-2">CO2 (Surgical), <br>FR7
+                                                (Fractional)</td>
+                                        </tr>
+                                        <tr class="h-14">
+                                            <td class="bg-[#444] text-white font-bold border border-black px-4">Laser
+                                                System</td>
+                                            <td colspan="3" class="border border-black">Fractional CO2 Laser</td>
+                                        </tr>
+                                        <tr class="h-14">
+                                            <td class="bg-[#444] text-white font-bold border border-black px-4">
+                                                Wavelength</td>
+                                            <td colspan="3" class="border border-black">10,600 nm</td>
+                                        </tr>
+                                        <tr class="h-16">
+                                            <td class="bg-[#444] text-white font-bold border border-black px-4">Power
+                                                (COS)</td>
+                                            <td class="border border-black">0.5 ~ 30 W</td>
+                                            <td class="bg-black text-white border border-black font-bold text-[14px]">
+                                                Energy (FRX)</td>
+                                            <td class="border border-black">2 ~ 300mJ</td>
+                                        </tr>
+                                        <tr class="h-14">
+                                            <td class="bg-[#444] text-white font-bold border border-black px-4">
+                                                Electrical</td>
+                                            <td colspan="3" class="border border-black">220~240 VAC, 50/60 Hz, 1,100VA
+                                            </td>
+                                        </tr>
+                                        <tr class="h-14">
+                                            <td class="bg-[#444] text-white font-bold border border-black px-4">User
+                                                Interface</td>
+                                            <td colspan="3" class="border border-black">10.2 Inch</td>
+                                        </tr>
+                                        <tr class="h-14">
+                                            <td class="bg-[#444] text-white font-bold border border-black px-4">
+                                                Dimension</td>
+                                            <td colspan="3" class="border border-black">340(W) X 350(D) X 1,100(H) mm
+                                            </td>
+                                        </tr>
+                                        <tr class="h-14">
+                                            <td class="bg-[#444] text-white font-bold border border-black px-4">Weight
+                                            </td>
+                                            <td colspan="3" class="border border-black">35 kg</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Right Image: N-Pulse FX -->
+                            <!-- FX 이미지: 높이와 z-index 조절 -->
+                            <div class="hidden lg:block w-1/4 relative order-3 self-stretch" style="min-height: 600px;">
+                                <img src="images/machine/엔펄스fx 사진.png" alt="N-Pulse FX"
+                                    class="absolute bottom-0 -left-12 h-[102%] max-w-none object-contain object-bottom drop-shadow-[0_40px_80px_rgba(0,0,0,0.9)] z-20 hover:scale-105 transition-transform duration-700 ease-out origin-bottom">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Canvas Script for True 3D Gaussian Surface -->
+            <script>
+                function drawGaussian() {
+                    const canvas = document.getElementById('gaussianCanvas');
+                    if (!canvas) return;
+                    const ctx = canvas.getContext('2d');
+                    const w = canvas.width = canvas.offsetWidth * 2;
+                    const h = canvas.height = canvas.offsetHeight * 2;
+
+                    const rows = 50;
+                    const cols = 50;
+                    const size = w * 0.75;
+                    const centerX = w / 2;
+                    const centerY = h / 2 + 150;
+
+                    ctx.clearRect(0, 0, w, h);
+                    ctx.lineWidth = 0.5;
+
+                    function getZ(x, y) {
+                        const d2 = x * x + y * y;
+                        // Extreme peak for 3D mountain effect
+                        return Math.exp(-d2 * 25) * 450;
+                    }
+
+                    function project(x, y, z) {
+                        // True 3D Isometric-ish Perspective
+                        const rotX = 1.2; // Tilt
+                        const rotZ = 0.7; // Spin
+                        const px = (x * Math.cos(rotZ) - y * Math.sin(rotZ)) * size;
+                        const py = (x * Math.sin(rotZ) + y * Math.cos(rotZ)) * size;
+                        const finalY = py * Math.cos(rotX) - z * Math.sin(rotX);
+                        return { x: centerX + px, y: centerY + finalY, z: z };
+                    }
+
+                    function getColor(z) {
+                        const t = z / 450;
+                        if (t > 0.8) return '#ff0000'; // Peak
+                        if (t > 0.6) return '#ffaa00'; // High
+                        if (t > 0.4) return '#ffff00'; // Mid-high
+                        if (t > 0.2) return '#00ffcc'; // Mid-low
+                        if (t > 0.05) return '#0044ff'; // Low
+                        return '#001166'; // Base
+                    }
+
+                    const grid = [];
+                    for (let i = 0; i <= rows; i++) {
+                        grid[i] = [];
+                        for (let j = 0; j <= cols; j++) {
+                            const x = (i / rows) - 0.5;
+                            const y = (j / cols) - 0.5;
+                            grid[i][j] = project(x, y, getZ(x, y));
+                        }
+                    }
+
+                    // Painter's Algorithm: Render from back to front
+                    for (let i = 0; i < rows; i++) {
+                        for (let j = 0; j < cols; j++) {
+                            const p1 = grid[i][j];
+                            const p2 = grid[i + 1][j];
+                            const p3 = grid[i + 1][j + 1];
+                            const p4 = grid[i][j + 1];
+
+                            ctx.beginPath();
+                            ctx.moveTo(p1.x, p1.y);
+                            ctx.lineTo(p2.x, p2.y);
+                            ctx.lineTo(p3.x, p3.y);
+                            ctx.lineTo(p4.x, p4.y);
+                            ctx.closePath();
+
+                            const avgZ = (getZ((i / rows) - 0.5, (j / cols) - 0.5) + getZ(((i + 1) / rows) - 0.5, ((j + 1) / cols) - 0.5)) / 2;
+                            ctx.fillStyle = getColor(avgZ);
+                            ctx.fill();
+
+                            // Subtle grid lines that follow curvature
+                            ctx.strokeStyle = 'rgba(0,0,0,0.2)';
+                            ctx.stroke();
+                        }
+                    }
+                }
+                window.addEventListener('load', drawGaussian);
+                window.addEventListener('resize', drawGaussian);
+                setTimeout(drawGaussian, 150);
+            </script>
+
+            <!-- Swiper JS -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <!-- Main Script -->
+            <script src="script.js"></script>
+</body>
+
+</html>

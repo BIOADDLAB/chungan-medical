@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실펌엑스 - CHEONGAN MEDICAL</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#00B7F1', dark: '#000000', light: '#F9F9F9' },
+                    fontFamily: { sans: ['"Noto Sans KR"', 'sans-serif'], inter: ['"Inter"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-black text-white font-sans overflow-x-hidden antialiased">
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-screen-xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html"
+                class="text-2xl font-bold tracking-widest text-white hover:text-primary transition duration-300 w-32">CHEONGAN</a>
+            <nav class="hidden md:flex items-center space-x-10 lg:space-x-14 font-medium text-white relative">
+                <a href="index.html#about" class="nav-link hover:text-primary transition duration-300 py-6">회사소개</a>
+                <div class="group relative py-6 cursor-pointer">
+                    <span
+                        class="nav-link hover:text-primary transition duration-300 is-active !text-primary">제품소개</span>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 top-full mt-[-8px] w-auto min-w-[240px] bg-[#111111]/95 backdrop-blur-md border border-[#333] rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col overflow-hidden whitespace-nowrap z-50 text-left">
+                        <a href="pico-k.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">피코K</a>
+                        <a href="u-pulse.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">U-Pulse,
+                            U-Pulse DUAL</a>
+                        <a href="n-pulse.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">N-Pulse,
+                            N-Pulse FX</a>
+                        <a href="sylfirm-x.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222] text-primary">실펌엑스</a>
+                        <a href="cellinew.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">셀리뉴</a>
+                        <a href="v-ro-advance.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm">브이로어드밴스</a>
+                    </div>
+                </div>
+                <a href="index.html#customers" class="nav-link hover:text-primary transition duration-300 py-6">미래비전</a>
+                <a href="contact.html"
+                    class="nav-link hover:text-primary transition duration-300 py-6 uppercase">contact</a>
+            </nav>
+            <div
+                class="flex items-center space-x-2 font-bold cursor-pointer hover:text-primary transition w-32 justify-end">
+                <span>KOR</span><span class="text-xs">▾</span></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero"
+            class="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
+                <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1920&q=80"
+                    class="absolute inset-0 w-full h-full object-cover z-0" alt="medical background">
+            </div>
+            <div class="relative z-20 max-w-screen-xl mx-auto">
+                <h1
+                    class="text-3xl md:text-7xl font-bold leading-tight tracking-tight text-white mb-6 uppercase reveal-up uppercase">
+                    실펌엑스 (SYLFIRM X)</h1>
+                <p class="text-lg md:text-2xl text-white/90 font-medium max-w-3xl mx-auto reveal-up delay-100">
+                    합리적인 피부미용 의료 장비,<br>그리고 최고의 선택
+                </p>
+            </div>
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30">
+                <a href="#content"
+                    class="inline-flex justify-center items-center w-12 h-12 border border-white/20 rounded-full hover:bg-white hover:text-black transition duration-300 animate-bounce">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+        <section id="content" class="py-24 bg-white text-black overflow-hidden section-reveal">
+            <div class="max-w-[1200px] mx-auto px-6 relative">
+                <!-- Section Title -->
+                <div class="text-center mb-24">
+                    <h2 class="text-[#2C335E] text-[42px] md:text-[52px] font-extrabold tracking-tight">What is SYLFIRM
+                        X</h2>
+                </div>
+
+                <!-- Main Content Grid: Balanced Alignment -->
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
+                    <!-- Left: Machine Image (Vertically Aligned with text) -->
+                    <div class="w-full md:w-[40%] flex justify-center">
+                        <img src="images/machine/실펌x 사진.png" alt="SYLFIRM X Machine"
+                            class="w-full max-w-[340px] md:max-w-[420px] h-auto object-contain drop-shadow-[0_15px_40px_rgba(0,0,0,0.12)]">
+                    </div>
+
+                    <!-- Right: Text Content (Vertically Aligned with image) -->
+                    <div class="w-full md:w-[60%] space-y-14 md:pb-6 relative flex flex-col justify-center">
+                        <!-- Paragraph 1 -->
+                        <div class="text-[#333] text-[17px] md:text-[21px] leading-[1.7]">
+                            <p>
+                                SYLFIRM X 는 Needle RF장비로 피부 속 원하는 깊이에 <span class="font-bold">바늘(needle)이
+                                    침습(Invasive)</span>해<br>
+                                <span class="font-bold">피부 속에서 고주파 열을 전달해 효과를 내는 장비입니다.</span>
+                            </p>
+                        </div>
+
+                        <!-- Paragraph 2 -->
+                        <div class="text-[#333] text-[17px] md:text-[21px] leading-[1.7]">
+                            <p>
+                                SYLFIRM X 는 레이저와 달리<br>
+                                <span class="font-bold">피부 타입, 피부 컬러에 상관 없이 모든 환자에게 시술 가능하며,</span><br>
+                                <span class="font-bold">민감해 레이저 시술이 불가능한 환자도 시술 가능 합니다.</span>
+                            </p>
+                        </div>
+
+                        <!-- Paragraph 3 -->
+                        <div class="text-[#333] text-[17px] md:text-[21px] leading-[1.7]">
+                            <p>
+                                8가지 모드로 환자의 피부 상태 및 원하는 효과에 따라 모드를 선택해 시술 합니다.
+                            </p>
+                        </div>
+
+                        <!-- Logo at Bottom Right (Restored Original Colors) -->
+                        <div class="flex justify-end pt-8 pr-2">
+                            <img src="images/machine/실펌x 로고.png" alt="SYLFIRM X Logo"
+                                class="h-8 md:h-10 object-contain">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SYLFIRM X Indication Section -->
+        <section id="indication" class="py-24 bg-white text-black overflow-hidden">
+            <div class="max-w-[1200px] mx-auto px-6 relative">
+                <!-- Section Title & Description -->
+                <div class="text-center mb-16">
+                    <h2 class="text-[#2C335E] text-[36px] md:text-[48px] font-extrabold tracking-tight mb-8">SYLFIRM X
+                        Indication</h2>
+                    <div class="space-y-3 text-[#555] text-[17px] md:text-[20px] font-medium leading-relaxed">
+                        <p>SYLFIRM X는 Continuous(CW) 방식만 가능한 타 Needle RF와 달리 Pulsed(PW)방식도 구현 가능합니다.</p>
+                        <p>PW모드 사용으로 기저막과 혈관벽의 선택적 열 반응을 통해 기미, 홍조, PIH 치료에 사용 가능합니다.</p>
+                    </div>
+                </div>
+
+                <!-- Indication Table Component -->
+                <div class="w-full overflow-x-auto">
+                    <div class="min-w-[900px] border-t-2 border-[#A8C7DF]">
+                        <!-- Table Header: CW vs PW -->
+                        <div class="flex text-center font-bold text-[16px] md:text-[18px]">
+                            <div class="flex-1 py-4 border-r border-[#A8C7DF] text-[#2C335E]">
+                                <div>CW MODE</div>
+                                <div class="text-sm font-medium">(Continuous Wave)</div>
+                            </div>
+                            <div class="flex-1 py-4 text-[#2C335E]">
+                                <div>PW MODE</div>
+                                <div class="text-sm font-medium">(Pulsed Wave)</div>
+                            </div>
+                        </div>
+
+                        <!-- Side-by-Side Content Grid -->
+                        <div class="flex border-t border-[#A8C7DF]">
+                            <!-- Left Side: CW Mode Detailed Info -->
+                            <div class="flex-1 border-r border-[#A8C7DF]">
+                                <!-- Diagram Placeholder -->
+                                <div
+                                    class="bg-[#EEF4F9] p-6 h-[220px] flex flex-col items-center justify-center space-y-4 border-b border-[#A8C7DF]">
+                                    <div
+                                        class="w-[80%] h-[120px] bg-white/50 rounded-lg flex items-center justify-center text-gray-400 text-sm">
+                                        [CW Animation Path Placeholder]
+                                    </div>
+                                    <div class="text-center font-bold text-[14px] leading-tight">
+                                        진피부터 표피까지 피부 층 전체에 열 에너지 전달<br>
+                                        <span class="text-xs font-medium text-gray-500">기존의 모든 Needle RF device의 에너지
+                                            방식</span>
+                                    </div>
+                                </div>
+                                <!-- Table Sub-header -->
+                                <div class="flex text-center font-bold text-sm select-none">
+                                    <div class="w-[30%] py-3 bg-[#EEF4F9] border-r border-[#A8C7DF]">Mode<br>(Duration)
+                                    </div>
+                                    <div class="flex-1 py-3 bg-[#EEF4F9]">Indication</div>
+                                </div>
+                                <!-- Table Rows -->
+                                <div class="flex text-center text-sm">
+                                    <div class="w-[30%] flex flex-col">
+                                        <div class="py-4 border-t border-b border-r border-[#A8C7DF] bg-[#D6E2ED]">CW1
+                                        </div>
+                                        <div class="py-4 border-b border-r border-[#A8C7DF] bg-[#D6E2ED]">CW2</div>
+                                        <div class="py-4 border-b border-r border-[#A8C7DF] bg-[#D6E2ED]">CW3</div>
+                                        <div class="py-4 border-b border-r border-[#A8C7DF] bg-[#D6E2ED]">CW4</div>
+                                    </div>
+                                    <div class="flex-1 flex flex-col justify-center font-medium">
+                                        <div
+                                            class="py-4 border-t border-b border-[#A8C7DF] h-1/4 flex items-center justify-center">
+                                            두피 시술 (리프팅, 순환 등)</div>
+                                        <div
+                                            class="flex-1 flex items-center justify-center px-4 leading-relaxed border-b border-[#A8C7DF]">
+                                            타이트닝/리프팅<br>모공, 흉터, 여드름<br>이중턱
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Side: PW Mode Detailed Info -->
+                            <div class="flex-1">
+                                <!-- Diagram Placeholder -->
+                                <div
+                                    class="bg-[#EEF4F9] p-6 h-[220px] flex flex-col items-center justify-center space-y-4 border-b border-[#A8C7DF]">
+                                    <div
+                                        class="w-[80%] h-[120px] bg-white/50 rounded-lg flex items-center justify-center text-gray-400 text-sm">
+                                        [PW Animation Path Placeholder]
+                                    </div>
+                                    <div class="text-center font-bold text-[14px] leading-tight">
+                                        기저막, 혈관벽에만 열 에너지가 선택적으로 반응<br>
+                                        <span class="text-xs font-medium text-gray-500">SYLFIRM에서부터 사용하던 비올의 기술력</span>
+                                    </div>
+                                </div>
+                                <!-- Table Sub-header -->
+                                <div class="flex text-center font-bold text-sm select-none">
+                                    <div class="w-[30%] py-3 bg-[#EEF4F9] border-r border-[#A8C7DF]">Mode<br>(Duration)
+                                    </div>
+                                    <div class="flex-1 py-3 bg-[#EEF4F9]">Indication</div>
+                                </div>
+                                <!-- Table Rows -->
+                                <div class="flex text-center text-sm">
+                                    <div class="w-[30%] flex flex-col">
+                                        <div class="py-4 border-t border-b border-r border-[#A8C7DF] bg-[#D6E2ED]">PW1
+                                        </div>
+                                        <div class="py-4 border-b border-r border-[#A8C7DF] bg-[#D6E2ED]">PW2</div>
+                                        <div class="py-4 border-b border-r border-[#A8C7DF] bg-[#D6E2ED]">PW3</div>
+                                        <div class="py-4 border-b border-r border-[#A8C7DF] bg-[#D6E2ED]">PW4</div>
+                                    </div>
+                                    <div
+                                        class="flex-1 flex items-center justify-center font-medium border-t border-b border-[#A8C7DF] px-4 leading-relaxed">
+                                        기미, 홍조<br>염증성 여드름
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logo at Bottom Right -->
+                <div class="flex justify-end pt-12">
+                    <img src="images/machine/실펌x 로고.png" alt="SYLFIRM X Logo" class="h-8 md:h-10 object-contain">
+                </div>
+            </div>
+        </section>
+
+        <!-- SYLFIRM X Detailed Indication Features Section -->
+        <section id="indication-features" class="py-24 bg-white text-black overflow-hidden">
+            <div class="max-w-[1200px] mx-auto px-6 relative">
+                <!-- Section Title -->
+                <div class="text-center mb-20">
+                    <h2 class="text-[#2C335E] text-[36px] md:text-[48px] font-extrabold tracking-tight">SYLFIRM X
+                        Indication</h2>
+                </div>
+
+                <!-- Feature List -->
+                <div class="space-y-24 max-w-5xl mx-auto">
+                    <!-- Feature 1: 300 -->
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
+                        <!-- Icon Circle -->
+                        <div
+                            class="w-[160px] h-[160px] md:w-[180px] md:h-[180px] bg-[#E2E8F0] rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="text-[#000] text-[48px] md:text-[64px] font-extrabold">300</span>
+                        </div>
+                        <!-- Content -->
+                        <div class="flex-1 pt-4 text-center md:text-left">
+                            <h3 class="text-[#000] text-[20px] md:text-[24px] font-extrabold mb-6 leading-tight">
+                                최소 통증, 최소 마취 시술이 가능한 300마이크론(㎛) 모드
+                            </h3>
+                            <ul
+                                class="space-y-3 text-[#333] text-[16px] md:text-[18px] font-medium leading-relaxed list-none">
+                                <li class="flex items-start justify-center md:justify-start">
+                                    <span class="mr-2 mt-2.5 w-1.5 h-1.5 bg-black rounded-full shrink-0"></span>
+                                    아기 피부에서 보이는 Type 3 Collagen과 섬유아세포가 많이 분포되어 있는 유두진피층을 타겟
+                                </li>
+                                <li class="flex items-start justify-center md:justify-start">
+                                    <span class="mr-2 mt-2.5 w-1.5 h-1.5 bg-black rounded-full shrink-0"></span>
+                                    10분 내외의 마취로 통증 없이 시술 가능
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: C -->
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
+                        <!-- Icon Circle -->
+                        <div
+                            class="w-[160px] h-[160px] md:w-[180px] md:h-[180px] bg-[#E2E8F0] rounded-full flex items-center justify-center flex-shrink-0">
+                            <span
+                                class="text-[#000] text-[56px] md:text-[84px] font-extrabold tracking-tighter">C</span>
+                        </div>
+                        <!-- Content -->
+                        <div class="flex-1 pt-4 text-center md:text-left">
+                            <h3 class="text-[#000] text-[20px] md:text-[24px] font-extrabold mb-6 leading-tight">
+                                피부 탄력&리프팅&흉터 개선에 최적화 된 셀모드(CW모드)
+                            </h3>
+                            <ul
+                                class="space-y-3 text-[#333] text-[16px] md:text-[18px] font-medium leading-relaxed list-none">
+                                <li class="flex items-start justify-center md:justify-start">
+                                    <span class="mr-2 mt-2.5 w-1.5 h-1.5 bg-black rounded-full shrink-0"></span>
+                                    콜라겐, 엘라스틴파이버 생성으로 피부 탄력 개선
+                                </li>
+                                <li class="flex items-start justify-center md:justify-start">
+                                    <span class="mr-2 mt-2.5 w-1.5 h-1.5 bg-black rounded-full shrink-0"></span>
+                                    피부의 노화로 커지는 모공, 울퉁불퉁 흉터
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3: P -->
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
+                        <!-- Icon Circle -->
+                        <div
+                            class="w-[160px] h-[160px] md:w-[180px] md:h-[180px] bg-[#E2E8F0] rounded-full flex items-center justify-center flex-shrink-0">
+                            <span
+                                class="text-[#000] text-[56px] md:text-[84px] font-extrabold tracking-tighter">P</span>
+                        </div>
+                        <!-- Content -->
+                        <div class="flex-1 pt-4 text-center md:text-left">
+                            <h3 class="text-[#000] text-[20px] md:text-[24px] font-extrabold mb-6 leading-tight">
+                                기미&홍조&색소침착에 최적화 된 리페어 모드(PW 모드)
+                            </h3>
+                            <ul
+                                class="space-y-3 text-[#333] text-[16px] md:text-[18px] font-medium leading-relaxed list-none">
+                                <li class="flex items-start justify-center md:justify-start">
+                                    <span class="mr-2 mt-2.5 w-1.5 h-1.5 bg-black rounded-full shrink-0"></span>
+                                    기미의 원인이 되는 기저막 붕괴, 과 생성된 혈관 치료
+                                </li>
+                                <li class="flex items-start justify-center md:justify-start">
+                                    <span class="mr-2 mt-2.5 w-1.5 h-1.5 bg-black rounded-full shrink-0"></span>
+                                    단순한 기미 제거 뿐 아니라 전반적인 피부 톤, 피부 결, 큰 혈관 치료, 염증성 여드름 치료
+                                </li>
+                                <li class="flex items-start justify-center md:justify-start">
+                                    <span class="mr-2 mt-2.5 w-1.5 h-1.5 bg-black rounded-full shrink-0"></span>
+                                    레이저 시술 후 발생하는 PIH 및 화상 흉터 시술 가능
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logo at Bottom Right -->
+                <div class="flex justify-end pt-24">
+                    <img src="images/machine/실펌x 로고.png" alt="SYLFIRM X Logo" class="h-8 md:h-10 object-contain">
+                </div>
+            </div>
+        </section>
+        <!-- SYLFIRM X Pricing Section -->
+        <section id="pricing" class="py-24 bg-white text-black overflow-hidden">
+            <div class="max-w-[1200px] mx-auto px-6 relative">
+                <!-- Section Title & Info -->
+                <div class="text-center mb-20">
+                    <h2 class="text-[#2C335E] text-[36px] md:text-[52px] font-extrabold tracking-tight mb-8">SYLFIRM X
+                        시술 수가</h2>
+                    <div class="text-gray-400 text-[15px] md:text-[18px] font-medium leading-relaxed">
+                        <p>서울, 경기 평균 수가로 지역 및 원내 구비 장비에 따라 상이합니다.</p>
+                        <p>아래 사항은 예시로 병원에 맞는 장비 및 횟수로 조정하시면 됩니다.</p>
+                    </div>
+                </div>
+
+                <!-- Pricing Layout -->
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-20">
+                    <!-- Left Column: Highlighted Box -->
+                    <div class="lg:w-1/4">
+                        <div
+                            class="bg-[#F8F9FA] rounded-2xl p-8 md:p-10 border border-gray-100 flex flex-col justify-center min-h-[220px]">
+                            <div class="flex flex-col md:flex-row lg:flex-col justify-between items-baseline gap-4">
+                                <h3 class="text-[#000] text-[20px] md:text-[24px] font-extrabold leading-tight">
+                                    실펌X 단독<br>시술 1회
+                                </h3>
+                                <div class="text-[#2C335E] text-[32px] md:text-[42px] font-black">
+                                    25~30<span class="text-[18px] md:text-[22px] font-bold ml-1">만</span>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-8 space-y-2 text-gray-400 text-[12px] md:text-[13px] font-medium leading-normal">
+                                <p>* CW모드로 리프팅 시술 시 시술 수가 더 높음</p>
+                                <p>* 단독 시술 수가가 낮은 병원의 경우 TIP값 별도 측정</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: List -->
+                    <div class="lg:w-3/4 flex flex-col md:flex-row gap-12 md:gap-16">
+                        <!-- Left List -->
+                        <div class="flex-1 space-y-10">
+                            <!-- Programming 1 -->
+                            <div class="border-b border-gray-100 pb-8 flex justify-between items-end">
+                                <div>
+                                    <h4 class="text-[#000] text-[20px] md:text-[22px] font-extrabold mb-2">미백실펌X(기미,색소)
+                                    </h4>
+                                    <p class="text-gray-500 text-[14px] md:text-[15px] font-medium">실펌X + 토닝 + 미백/진정관리
+                                    </p>
+                                </div>
+                                <div class="text-[#2C335E] text-[24px] md:text-[28px] font-black">45<span
+                                        class="text-[16px] md:text-[18px] font-bold ml-0.5 text-black">만</span></div>
+                            </div>
+                            <!-- Programming 2 -->
+                            <div class="border-b border-gray-100 pb-8 flex justify-between items-end">
+                                <div>
+                                    <h4 class="text-[#000] text-[20px] md:text-[22px] font-extrabold mb-2">홍조실펌X</h4>
+                                    <p class="text-gray-500 text-[14px] md:text-[15px] font-medium">실펌X + V레이저 / 홍조레이저 +
+                                        진정관리</p>
+                                </div>
+                                <div class="text-[#2C335E] text-[24px] md:text-[28px] font-black">40<span
+                                        class="text-[16px] md:text-[18px] font-bold ml-0.5 text-black">만</span></div>
+                            </div>
+                            <!-- Programming 3 -->
+                            <div class="border-b border-gray-100 pb-8 flex justify-between items-end">
+                                <div>
+                                    <h4 class="text-[#000] text-[20px] md:text-[22px] font-extrabold mb-2">물광실펌X</h4>
+                                    <p class="text-gray-500 text-[14px] md:text-[15px] font-medium">실펌X + Skin Booster
+                                    </p>
+                                    <div class="text-gray-300 text-[10px] mt-1 italic">* 사용하는 부스터에 따라 가격 상이</div>
+                                    <p class="text-[#000] text-[15px] font-bold mt-4">실펌X + 스킨보톡스 + LDM + 재생관리</p>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <div class="text-[#2C335E] text-[24px] md:text-[28px] font-black">60<span
+                                            class="text-[16px] md:text-[18px] font-bold ml-0.5 text-black">만</span>
+                                    </div>
+                                    <div class="text-[#2C335E] text-[24px] md:text-[28px] font-black mt-4">50<span
+                                            class="text-[16px] md:text-[18px] font-bold ml-0.5 text-black">만</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Programming 4 -->
+                            <div class="flex justify-between items-end">
+                                <div>
+                                    <h4 class="text-[#000] text-[20px] md:text-[22px] font-extrabold mb-2">아기실펌X</h4>
+                                    <p class="text-gray-500 text-[14px] md:text-[15px] font-medium">실펌X + 프락셀 + PRP</p>
+                                </div>
+                                <div class="text-[#2C335E] text-[24px] md:text-[28px] font-black">80<span
+                                        class="text-[16px] md:text-[18px] font-bold ml-0.5 text-black">만</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Right List -->
+                        <div class="flex-1 space-y-10">
+                            <!-- Programming 1 -->
+                            <div class="border-b border-gray-100 pb-8 flex justify-between items-end">
+                                <div>
+                                    <h4 class="text-[#000] text-[20px] md:text-[22px] font-extrabold mb-2">색소</h4>
+                                    <p class="text-gray-500 text-[14px] md:text-[15px] font-medium">실펌X 3회 + 토닝 5회 +
+                                        재생관리 5회</p>
+                                </div>
+                                <div class="text-[#2C335E] text-[24px] md:text-[28px] font-black">165<span
+                                        class="text-[16px] md:text-[18px] font-bold ml-0.5 text-black">만</span></div>
+                            </div>
+                            <!-- Programming 2 -->
+                            <div class="border-b border-gray-100 pb-8 flex justify-between items-end">
+                                <div>
+                                    <h4 class="text-[#000] text-[20px] md:text-[22px] font-extrabold mb-2">홍조</h4>
+                                    <p class="text-gray-500 text-[14px] md:text-[15px] font-medium">실펌X 5회 + 롱펄스레이저 5회 +
+                                        진정관리 5회</p>
+                                </div>
+                                <div class="text-[#2C335E] text-[24px] md:text-[28px] font-black">185<span
+                                        class="text-[16px] md:text-[18px] font-bold ml-0.5 text-black">만</span></div>
+                            </div>
+                            <!-- Programming 3 -->
+                            <div class="border-b border-gray-100 pb-8 flex justify-between items-end">
+                                <div>
+                                    <h4 class="text-[#000] text-[20px] md:text-[22px] font-extrabold mb-2">모공/여드름</h4>
+                                    <p class="text-gray-500 text-[14px] md:text-[15px] font-medium">나비존 실펌X 시술 1회</p>
+                                    <p class="text-gray-500 text-[14px] md:text-[15px] font-medium mt-4">실펌X (얼굴전체) +
+                                        아쿠아필 + 압출 + 진정관리</p>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <div class="text-[#2C335E] text-[24px] md:text-[28px] font-black">15<span
+                                            class="text-[16px] md:text-[18px] font-bold ml-0.5 text-black">만</span>
+                                    </div>
+                                    <div class="text-[#2C335E] text-[24px] md:text-[28px] font-black mt-4">50<span
+                                            class="text-[16px] md:text-[18px] font-bold ml-0.5 text-black">만</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Programming 4 -->
+                            <div class="flex justify-between items-end">
+                                <div>
+                                    <h4 class="text-[#000] text-[20px] md:text-[22px] font-extrabold mb-2">탄력/리프팅</h4>
+                                    <p class="text-gray-500 text-[14px] md:text-[15px] font-medium">실펌X + HIFU + 보톡스 +
+                                        재생관리</p>
+                                </div>
+                                <div class="text-[#2C335E] text-[24px] md:text-[28px] font-black">80<span
+                                        class="text-[16px] md:text-[18px] font-bold ml-0.5 text-black">만</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logo at Bottom Right -->
+                <div class="flex justify-end pt-24">
+                    <img src="images/machine/실펌x 로고.png" alt="SYLFIRM X Logo" class="h-8 md:h-10 object-contain">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

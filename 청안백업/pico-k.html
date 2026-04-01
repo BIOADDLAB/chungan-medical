@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>피코K - CHEONGAN MEDICAL</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#00B7F1', dark: '#000000', light: '#F9F9F9' },
+                    fontFamily: { sans: ['"Noto Sans KR"', 'sans-serif'], inter: ['"Inter"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-black text-white font-sans overflow-x-hidden antialiased">
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-screen-xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html"
+                class="text-2xl font-bold tracking-widest text-white hover:text-primary transition duration-300 w-32">CHEONGAN</a>
+            <nav class="hidden md:flex items-center space-x-10 lg:space-x-14 font-medium text-white relative">
+                <a href="index.html#about" class="nav-link hover:text-primary transition duration-300 py-6">회사소개</a>
+                <div class="group relative py-6 cursor-pointer">
+                    <span
+                        class="nav-link hover:text-primary transition duration-300 is-active !text-primary">제품소개</span>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 top-full mt-[-8px] w-auto min-w-[240px] bg-[#111111]/95 backdrop-blur-md border border-[#333] rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col overflow-hidden whitespace-nowrap z-50 text-left">
+                        <a href="pico-k.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222] text-primary">피코K</a>
+                        <a href="u-pulse.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">U-Pulse,
+                            U-Pulse DUAL</a>
+                        <a href="n-pulse.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">N-Pulse,
+                            N-Pulse FX</a>
+                        <a href="sylfirm-x.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">실펌엑스</a>
+                        <a href="cellinew.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">셀리뉴</a>
+                        <a href="v-ro-advance.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm">브이로어드밴스</a>
+                    </div>
+                </div>
+                <a href="index.html#customers" class="nav-link hover:text-primary transition duration-300 py-6">미래비전</a>
+                <a href="index.html#contact"
+                    class="nav-link hover:text-primary transition duration-300 py-6">contact</a>
+            </nav>
+            <div
+                class="flex items-center space-x-2 font-bold cursor-pointer hover:text-primary transition w-32 justify-end">
+                <span>KOR</span><span class="text-xs">▾</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero"
+            class="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80"
+                    class="absolute inset-0 w-full h-full object-cover z-0" alt="medical background">
+            </div>
+            <div class="relative z-20 max-w-screen-xl mx-auto">
+                <h1
+                    class="text-3xl md:text-7xl font-bold leading-tight tracking-tight text-white mb-6 uppercase reveal-up uppercase">
+                    피코K (PICO-K)</h1>
+                <p class="text-lg md:text-2xl text-white/90 font-medium max-w-3xl mx-auto reveal-up delay-100 italic">
+                    합리적인 피부미용 의료 장비,<br>그리고 최고의 선택
+                </p>
+            </div>
+            <!-- Scroll Down Indicator -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30">
+                <a href="#overview"
+                    class="inline-flex justify-center items-center w-12 h-12 border border-white/20 rounded-full hover:bg-white hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-black/10 backdrop-blur-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white group-hover:text-black transition"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Product Overview Section (Dark Premium Design) -->
+        <!-- Product Overview Section (Premium 2-Column Redesign) -->
+        <section id="overview"
+            class="relative py-24 bg-[radial-gradient(circle_at_80%_50%,rgba(0,183,241,0.1)_0%,rgba(10,10,10,1)_70%)] text-white overflow-hidden">
+            <!-- Background Accent Glow -->
+            <div
+                class="absolute top-1/2 right-[10%] -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[130px] pointer-events-none z-0">
+            </div>
+
+            <div class="max-w-screen-xl mx-auto px-6 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- Left: Content area -->
+                    <div class="reveal-up text-left">
+                        <span
+                            class="inline-block text-primary font-bold tracking-[0.3em] uppercase text-sm mb-6">Complete
+                            Solution</span>
+                        <h2 class="text-5xl md:text-[72px] font-black tracking-tight leading-[0.95] mb-10">
+                            Revolutionary<br>
+                            <span class="text-primary">Pico</span> Technology
+                        </h2>
+                        <p class="text-xl text-gray-400 mb-16 leading-relaxed max-w-xl">
+                            최첨단 피코 레이저 기술을 통해 더욱 빠르고 정밀한 색소 치료와<br class="hidden md:block">
+                            피부 재생의 새로운 기준을 제시합니다.
+                        </p>
+
+                        <!-- Info Cards (Stacked/Compact) -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl">
+                            <!-- Product Identity Card -->
+                            <div
+                                class="p-6 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:bg-white/10 hover:border-primary/50 transition duration-500 group flex items-center gap-6">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-[10px] font-bold text-gray-500 tracking-wider uppercase mb-1">Product
+                                        Identity</span>
+                                    <h3 class="text-lg font-bold text-white whitespace-nowrap">로고</h3>
+                                </div>
+                                <div class="w-[1px] h-8 bg-white/10"></div>
+                                <img src="images/machine/피코케이 로고.png"
+                                    class="h-6 w-auto brightness-0 invert opacity-70 group-hover:opacity-100 transition"
+                                    alt="PICO-K">
+                            </div>
+
+                            <!-- Manufacturer Card -->
+                            <div
+                                class="p-6 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:bg-white/10 hover:border-primary/50 transition duration-500 group flex items-center gap-6">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-[10px] font-bold text-gray-500 tracking-wider uppercase mb-1">Official
+                                        Manufacturer</span>
+                                    <h3 class="text-lg font-bold text-white whitespace-nowrap">제조사</h3>
+                                </div>
+                                <div class="w-[1px] h-8 bg-white/10"></div>
+                                <img src="images/machine/피코케이 제조사 로고.png"
+                                    class="h-6 w-auto brightness-0 invert opacity-70 group-hover:opacity-100 transition"
+                                    alt="Speclipse">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Large Device Image -->
+                    <div class="flex justify-center lg:justify-end reveal-up delay-200 relative">
+                        <div class="relative group">
+                            <img src="images/machine/피코케이 사진.png"
+                                class="max-w-full h-auto relative z-10 drop-shadow-[0_45px_100px_rgba(0,0,0,0.6)] group-hover:scale-[1.02] transition duration-1000"
+                                alt="PICO-K">
+                            <!-- Bottom Glow (Subtle & Fixed) -->
+                            <div
+                                class="absolute inset-x-0 bottom-0 h-16 bg-primary/20 blur-[90px] rounded-full scale-150 transform translate-y-4 opacity-40">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Patent Technology Section -->
+        <section id="patents" class="py-32 bg-white text-black">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <!-- Top Content Row -->
+                <div class="flex flex-col lg:flex-row justify-between items-start mb-20 gap-12">
+                    <!-- Left: Text Content -->
+                    <div class="lg:w-3/5 reveal-up">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="text-primary font-bold tracking-widest text-lg lg:text-xl">CHEONGAN
+                                MEDICAL</span>
+                            <div class="h-[2px] w-12 bg-primary"></div>
+                        </div>
+                        <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-8 tracking-tight">특허기술</h2>
+                        <p class="text-lg md:text-2xl text-gray-600 leading-relaxed font-medium">
+                            수년간의 연구와 개발을 통해 다양한 특허를 바탕으로<br>
+                            시장에서 월등하고 혁신적인 솔루션을 제공하는 피코초 레이저입니다.
+                        </p>
+                    </div>
+
+                    <!-- Right: Large Certificates Preview -->
+                    <div class="lg:w-2/5 flex justify-center lg:justify-end gap-4 reveal-up delay-100">
+                        <div
+                            class="w-48 h-64 bg-gray-100 border border-gray-200 rounded-sm shadow-xl transform rotate-[-3deg] flex items-center justify-center text-gray-300 text-xs text-center p-4">
+                            특허증 이미지<br>(메인 1)
+                        </div>
+                        <div
+                            class="w-48 h-64 bg-gray-100 border border-gray-200 rounded-sm shadow-xl transform rotate-[3deg] -ml-12 mt-8 flex items-center justify-center text-gray-300 text-xs text-center p-4">
+                            특허증 이미지<br>(메인 2)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Row: 9 Patent Thumbnails -->
+                <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-9 gap-4 reveal-up delay-200">
+                    <!-- 9 Placeholder Boxes -->
+                    <div
+                        class="aspect-[3/4] bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center text-[10px] text-gray-300">
+                        특허증 1</div>
+                    <div
+                        class="aspect-[3/4] bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center text-[10px] text-gray-300">
+                        특허증 2</div>
+                    <div
+                        class="aspect-[3/4] bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center text-[10px] text-gray-300">
+                        특허증 3</div>
+                    <div
+                        class="aspect-[3/4] bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center text-[10px] text-gray-300">
+                        특허증 4</div>
+                    <div
+                        class="aspect-[3/4] bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center text-[10px] text-gray-300">
+                        특허증 5</div>
+                    <div
+                        class="aspect-[3/4] bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center text-[10px] text-gray-300">
+                        특허증 6</div>
+                    <div
+                        class="aspect-[3/4] bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center text-[10px] text-gray-300">
+                        특허증 7</div>
+                    <div
+                        class="aspect-[3/4] bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center text-[10px] text-gray-300">
+                        특허증 8</div>
+                    <div
+                        class="aspect-[3/4] bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center text-[10px] text-gray-300">
+                        특허증 9</div>
+                </div>
+            </div>
+        </section>
+        <!-- Technical Detail 01: Thermal Lens Effect -->
+        <section id="thermal-lens-tech" class="pt-16 pb-24 bg-white text-black">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <!-- Header with Index & Full Line -->
+                <div class="flex items-center gap-4 mb-10 reveal-up">
+                    <span class="text-4xl font-extrabold text-primary leading-none">01</span>
+                    <div class="h-[2px] flex-grow bg-primary/40"></div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
+                    <!-- Left: Content area -->
+                    <div class="lg:w-[45%] reveal-up">
+                        <div class="mb-10">
+                            <h2 class="text-4xl md:text-[44px] font-extrabold text-gray-900 mb-8 tracking-tight">써멀렌즈
+                                이펙트 최소화</h2>
+                            <div class="mb-3">
+                                <span class="text-3xl font-bold text-primary/80 font-inter tracking-tight">Thermal Lens
+                                    Effect</span>
+                            </div>
+                            <p class="text-lg text-gray-500 font-medium leading-relaxed">렌즈의 과열로 부풀어올라 초점의 깊이가 변하는 현상
+                            </p>
+                        </div>
+
+                        <!-- Sub items -->
+                        <div class="space-y-14">
+                            <!-- Item 1 -->
+                            <div class="group">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">단일 챔버 레이저 발진 장치</h3>
+                                <p class="text-sm font-bold text-gray-400 mb-4 tracking-tighter">[특허등록 번호:제10-165288]
+                                </p>
+                                <p class="text-gray-600 leading-relaxed text-[17px]">
+                                    이중 챔버를 사용하는 기존 Q-switch레이저와 달리, 단일 챔버를 활용하여<br class="hidden md:block">
+                                    기존 대비 효율은 10%이상 높이고, 제작 단가를 줄일 수 있는 기술입니다.
+                                </p>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="group">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">의료용 레이저 열 렌즈 효과 제어 시스템</h3>
+                                <p class="text-sm font-bold text-gray-400 mb-4 tracking-tighter">[특허등록 번호:제10-2333260]
+                                </p>
+                                <p class="text-gray-600 leading-relaxed text-[17px]">
+                                    열 렌즈 효과 제어를 위해 기계 스위치와 마이크로 컨트롤러를 활용하여<br class="hidden md:block">
+                                    안정적인 출력에너지와 일관된 빔 크기를 유지합니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Diagram Placeholders (Empty as requested) -->
+                    <div class="lg:w-[55%] w-full reveal-up delay-100 mt-8 lg:mt-0">
+                        <div class="grid grid-cols-2 gap-6 min-h-[500px]">
+                            <!-- Comparison Slot 1 -->
+                            <div class="flex flex-col items-center">
+                                <span class="text-base font-bold text-gray-600 mb-6 tracking-tight">[ 특허기술 미적용 ]</span>
+                                <div
+                                    class="w-full flex-grow bg-gray-50/50 rounded-lg border border-gray-100 flex items-center justify-center min-h-[350px]">
+                                    <!-- Empty space for image -->
+                                </div>
+                                <div class="text-center mt-6">
+                                    <p class="text-sm font-bold text-red-600 leading-tight">
+                                        과밀화된 레이저 에너지로<br>피부 표면에 사이드이펙트 발생
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Comparison Slot 2 -->
+                            <div class="flex flex-col items-center">
+                                <span class="text-base font-bold text-gray-600 mb-6 tracking-tight">[ 특허기술 적용 ]</span>
+                                <div
+                                    class="w-full flex-grow bg-gray-50/50 rounded-lg border border-gray-100 flex items-center justify-center min-h-[350px]">
+                                    <!-- Empty space for image -->
+                                </div>
+                                <div class="text-center mt-6">
+                                    <p class="text-sm font-bold text-gray-900 leading-tight mb-2">
+                                        특허기술로 써멀렌즈 이펙트 최소화 구현
+                                    </p>
+                                    <p class="text-[12px] text-gray-500 font-medium">
+                                        (9개 특허 중 2개 특허 보유)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Technical Detail 02 & 03: Output Stability & Harmonization -->
+        <section id="tech-details-02-03" class="pt-16 pb-24 bg-white text-black">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+
+                    <!-- Section 02: 출력안정성 -->
+                    <div class="reveal-up">
+                        <!-- Header with Index & Line -->
+                        <div class="flex items-center gap-4 mb-10">
+                            <span class="text-4xl font-extrabold text-primary leading-none">02</span>
+                            <div class="h-[2px] flex-grow bg-primary/40"></div>
+                        </div>
+
+                        <div class="mb-10">
+                            <h2 class="text-4xl font-extrabold text-gray-900 mb-8 tracking-tight">출력안정성</h2>
+                            <p class="text-xl font-bold text-gray-900 mb-4 leading-tight">
+                                피코의 성능을 완성하는 출력안정성<br>
+                                특허기술이 적용된 파워서플라이 채용
+                            </p>
+                            <p class="text-gray-500 leading-relaxed text-lg">
+                                PFC(Power Factor Correction)를 통합하여 일정하고<br class="hidden md:block">
+                                안정적인 에너지 출력을 제공하는 데 도움을 줍니다.
+                            </p>
+                        </div>
+
+                        <!-- Image Placeholder for 02 -->
+                        <div
+                            class="w-full aspect-video bg-gray-50/50 rounded-lg border border-gray-100 flex items-center justify-center min-h-[300px]">
+                            <!-- Empty space for Power Supply image -->
+                        </div>
+                    </div>
+
+                    <!-- Section 03: 핵심 부품의 조화 -->
+                    <div class="reveal-up delay-100">
+                        <!-- Header with Index & Line -->
+                        <div class="flex items-center gap-4 mb-10">
+                            <span class="text-4xl font-extrabold text-primary leading-none">03</span>
+                            <div class="h-[2px] flex-grow bg-primary/40"></div>
+                        </div>
+
+                        <div class="mb-10">
+                            <h2 class="text-4xl font-extrabold text-gray-900 mb-8 tracking-tight">핵심 부품의 조화</h2>
+                            <p class="text-gray-500 leading-relaxed text-lg mb-10">
+                                순수 자체 기술을 통한 개발과 생산으로 핵심 부품 간의 매칭<br class="hidden md:block">
+                                부적합을 줄이고 최상의 퍼포먼스를 실현합니다.
+                            </p>
+                        </div>
+
+                        <!-- Diagram Placeholder for 03 -->
+                        <div class="space-y-6">
+                            <div class="text-center">
+                                <span class="text-2xl font-bold text-[#2a4b8d] font-inter">Core
+                                    Components<br>Harmonization</span>
+                            </div>
+                            <!-- Three Icons Row -->
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="flex flex-col items-center">
+                                    <div
+                                        class="w-full aspect-square bg-gray-50/50 rounded-xl border border-gray-100 mb-3">
+                                    </div>
+                                    <span class="text-[10px] font-bold tracking-wider text-gray-400">OPTICS</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div
+                                        class="w-full aspect-square bg-gray-50/50 rounded-xl border border-gray-100 mb-3">
+                                    </div>
+                                    <span class="text-[10px] font-bold tracking-wider text-gray-400">POWER SUPPLY</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div
+                                        class="w-full aspect-square bg-gray-50/50 rounded-xl border border-gray-100 mb-3">
+                                    </div>
+                                    <span class="text-[10px] font-bold tracking-wider text-gray-400">CONTROLER</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Technical Detail 04 & 05: 300PS Verification & Alignment Stability -->
+        <section id="tech-details-04-05" class="pt-16 pb-24 bg-white text-black">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+
+                    <!-- Section 04: 국내최초 300PS 실명제 -->
+                    <div class="reveal-up">
+                        <!-- Header -->
+                        <div class="flex items-center gap-4 mb-10">
+                            <span class="text-4xl font-extrabold text-primary leading-none">04</span>
+                            <div class="h-[2px] flex-grow bg-primary/40"></div>
+                        </div>
+
+                        <div class="mb-10">
+                            <h2 class="text-4xl font-extrabold text-gray-900 mb-10 tracking-tight">국내최초 300PS 실명제</h2>
+
+                            <!-- Graph Placeholder -->
+                            <div
+                                class="w-full aspect-[2/1] bg-gray-50/50 rounded-lg border border-gray-100 mb-10 flex items-center justify-center">
+                                <!-- Empty space for Oscilloscope Graph -->
+                            </div>
+
+                            <!-- Spec Highlights -->
+                            <div class="space-y-8 mb-10">
+                                <div class="flex items-start gap-6">
+                                    <span class="text-5xl font-extrabold text-[#2a4b8d] font-inter">300ps</span>
+                                    <div class="h-12 w-[1px] bg-gray-300 mt-1"></div>
+                                    <div class="text-gray-900 font-bold leading-tight pt-1 text-lg">
+                                        펄스 지속 시간<br>표준편차 약 2% 유지
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-6">
+                                    <span class="text-5xl font-extrabold text-[#00B7F1] font-inter">2.0GW</span>
+                                    <div class="h-12 w-[1px] bg-gray-300 mt-1"></div>
+                                    <div class="text-gray-900 font-bold leading-tight pt-1 text-lg">
+                                        최대 출력 보장<br>일관된 고품질 빔 프로필 유지
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="text-gray-500 leading-relaxed text-[17px] font-medium">
+                                부작용을 최소화하며 정확하고 일관된 레이저 치료를 제공받을 수 있도록
+                                300PS 실명제를 운영하여 전 구매 고객들 대상으로 본사의 QC자료(PULSE DURATION)를 투명하게 제공해 드립니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 05: 얼라인먼트 변성방지 기술 적용 -->
+                    <div class="reveal-up delay-100">
+                        <!-- Header -->
+                        <div class="flex items-center gap-4 mb-10">
+                            <span class="text-4xl font-extrabold text-primary leading-none">05</span>
+                            <div class="h-[2px] flex-grow bg-primary/40"></div>
+                        </div>
+
+                        <div class="mb-10">
+                            <h2 class="text-4xl font-extrabold text-gray-900 mb-10 tracking-tight">얼라인먼트<br>변성방지 기술 적용
+                            </h2>
+                            <p class="text-gray-600 leading-relaxed text-lg mb-12">
+                                운송 또는 사용 중 내부 얼라인먼트 변형으로 장비출력 및 빔 품질에 영향을 줄 수 있는
+                                <span class="font-bold text-gray-900 text-xl">[외부충격]</span>에 취약한 광학레이저의 특성을 고려하여 솔루션을
+                                개발, 적용하였습니다.
+                            </p>
+
+                            <!-- Process Diagram Blue Box Placeholder -->
+                            <div class="w-full bg-[#5d8ec0] rounded-3xl p-6 mb-10 shadow-lg shadow-blue-100">
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center text-white text-center">
+                                    <!-- Empty/Simplified placeholder content -->
+                                    <div class="flex flex-col items-center gap-3">
+                                        <div
+                                            class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                                        </div>
+                                        <span class="text-sm font-bold leading-tight">항공/해상<br>운송 테스트</span>
+                                    </div>
+                                    <div class="flex flex-col items-center gap-3">
+                                        <div
+                                            class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                                        </div>
+                                        <span class="text-sm font-bold leading-tight">변성방지 솔루션<br>개발 및 적용</span>
+                                    </div>
+                                    <div class="flex flex-col items-center gap-3">
+                                        <div
+                                            class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                                        </div>
+                                        <span class="text-sm font-bold leading-tight">스위스제<br>철도 부품 사용</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Beam Test Row -->
+                            <div class="flex items-center gap-8 mb-12">
+                                <div
+                                    class="w-32 h-32 rounded-full border border-gray-200 bg-gray-50 flex items-center justify-center overflow-hidden">
+                                    <!-- Beam image placeholder -->
+                                </div>
+                                <div
+                                    class="text-3xl font-extrabold text-gray-800 font-inter tracking-tight leading-tight uppercase">
+                                    PICO-K<br>BEAM TEST
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product image area (Minimal space) -->
+                        <div class="w-full min-h-[50px] flex items-center justify-center">
+                            <!-- Adjusted to prevent excessive bottom gap -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Technical Detail 06: Multi-Diffraction Mode -->
+        <section id="tech-detail-06" class="pt-16 pb-24 bg-white text-black">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <!-- Header -->
+                <div class="flex items-center gap-4 mb-10 reveal-up">
+                    <span class="text-4xl font-extrabold text-primary leading-none">06</span>
+                    <div class="h-[2px] flex-grow bg-primary/40"></div>
+                </div>
+
+                <div class="mb-14 reveal-up">
+                    <h2 class="text-4xl font-extrabold text-gray-900 tracking-tight">TOP-HAT에 가장 근접한 멀티디프렉션 MODE</h2>
+                </div>
+
+                <!-- Dark Diagram Box (Slimmer) -->
+                <div class="w-full bg-[#3c3e42] rounded-[30px] p-4 md:p-6 mb-10 reveal-up shadow-xl overflow-hidden">
+                    <div
+                        class="h-[280px] flex items-center justify-center text-white/20 text-xs border border-dashed border-white/10 rounded-xl">
+                        <!-- Multi-Diffraction Diagram Placeholder -->
+                        멀티디프렉션 모드 다이어그램 영역 (Slim)
+                    </div>
+                </div>
+
+                <!-- Info Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-16 reveal-up">
+                    <!-- Text explanation -->
+                    <div>
+                        <p class="text-base text-gray-600 leading-relaxed font-medium">
+                            PICO-K만의 멀티디프렉션모드는 TOP-HAT 빔과 가우시안 빔의 장점을 결합한 고품질 의료용 레이저로 100μm, 31.84 J/cm² 의 MLA빔이 최고의
+                            L.I.O.B 효과를 이끌어냅니다.
+                        </p>
+                    </div>
+                    <!-- Bullet points -->
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-3">
+                            <span class="text-primary mt-1.5">•</span>
+                            <p class="text-xl font-bold text-gray-900 leading-tight">
+                                에너지 손실없이 <span class="text-primary">260개</span>의 마이크로빔이 동일하게 전달
+                            </p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-primary mt-1.5">•</span>
+                            <p class="text-xl font-bold text-gray-900 leading-tight">
+                                <span class="text-primary text-2xl font-black">최대 31.84</span> J/cm² 큰 출력값
+                            </p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-primary mt-1.5">•</span>
+                            <p class="text-xl font-bold text-gray-900 leading-tight">
+                                <span class="text-primary text-2xl font-black">100μm</span>의 작은 빔 스폿 굵기로 피부표면에 손실 없이 전달
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beam Quality Test -->
+                <div class="reveal-up">
+                    <div class="flex items-center gap-6 mb-8">
+                        <h3 class="text-xl font-bold text-gray-900 whitespace-nowrap">BEAM QUALITY 테스트</h3>
+                        <div class="h-[1px] flex-grow bg-gray-300"></div>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 lg:gap-10">
+                        <!-- 5 Test Circles (Smaller) -->
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="w-24 h-24 bg-gray-50 rounded-full border border-gray-100 flex items-center justify-center overflow-hidden">
+                                <!-- Image placeholder -->
+                            </div>
+                            <span class="text-lg font-bold text-gray-800 font-inter">12mJ</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="w-24 h-24 bg-gray-50 rounded-full border border-gray-100 flex items-center justify-center overflow-hidden">
+                                <!-- Image placeholder -->
+                            </div>
+                            <span class="text-lg font-bold text-gray-800 font-inter">23mJ</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="w-24 h-24 bg-gray-50 rounded-full border border-gray-100 flex items-center justify-center overflow-hidden">
+                                <!-- Image placeholder -->
+                            </div>
+                            <span class="text-lg font-bold text-gray-800 font-inter">45mJ</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="w-24 h-24 bg-gray-50 rounded-full border border-gray-100 flex items-center justify-center overflow-hidden">
+                                <!-- Image placeholder -->
+                            </div>
+                            <span class="text-lg font-bold text-gray-800 font-inter">68mJ</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="w-24 h-24 bg-gray-50 rounded-full border border-gray-100 flex items-center justify-center overflow-hidden">
+                                <!-- Image placeholder -->
+                            </div>
+                            <span class="text-lg font-bold text-gray-800 font-inter">113mJ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Bottom Label -->
+                <div class="mt-20 reveal-up opacity-30">
+                    <span class="text-primary font-bold tracking-widest text-lg lg:text-xl uppercase block mb-1">New
+                        Paradigm of</span>
+                    <span class="text-primary font-black text-2xl lg:text-3xl uppercase">PICOSECOND TECHNOLOGY</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

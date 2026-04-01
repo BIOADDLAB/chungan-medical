@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addd - 혁신에 가치를 더하는 AI 데이터텔링</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00B7F1', // 레퍼런스에 더 가까운 시안 블루
+                        dark: '#000000',
+                        light: '#F9F9F9'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans KR"', 'sans-serif'],
+                        inter: ['"Inter"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-black text-white font-sans overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-screen-xl mx-auto px-6 h-20 flex justify-between items-center">
+            <!-- Logo Text -->
+            <a href="#home"
+                class="text-2xl font-bold tracking-widest text-white hover:text-primary transition duration-300 w-32 flex-shrink-0">
+                CHEONGAN
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-10 lg:space-x-14 font-medium text-white relative">
+                <a href="#about" class="nav-link hover:text-primary transition duration-300 relative py-6">회사소개</a>
+
+                <!-- Dropdown Menu -->
+                <div class="group relative py-6 cursor-pointer">
+                    <span class="nav-link hover:text-primary transition duration-300">제품소개</span>
+                    <!-- Dropdown Content -->
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 top-full mt-[-8px] w-auto min-w-[240px] bg-[#111111]/95 backdrop-blur-md border border-[#333] rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col overflow-hidden whitespace-nowrap z-50 text-left">
+                        <a href="pico-k.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">피코K</a>
+                        <a href="u-pulse.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">U-Pulse,
+                            U-Pulse DUAL</a>
+                        <a href="n-pulse.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">N-Pulse,
+                            N-Pulse FX</a>
+                        <a href="sylfirm-x.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">실펌엑스</a>
+                        <a href="cellinew.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">셀리뉴</a>
+                        <a href="v-ro-advance.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm">브이로어드밴스</a>
+                    </div>
+                </div>
+
+                <a href="#customers" class="nav-link hover:text-primary transition duration-300 relative py-6">미래비전</a>
+                <a href="contact.html"
+                    class="nav-link hover:text-primary transition duration-300 relative py-6 uppercase">contact</a>
+            </nav>
+
+            <div
+                class="flex items-center space-x-2 font-bold cursor-pointer hover:text-primary transition w-32 justify-end flex-shrink-0">
+                <span>KOR</span>
+                <span class="text-xs">▾</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero Slider -->
+        <section id="home" class="relative w-full h-screen overflow-hidden">
+            <div class="swiper hero-swiper h-full w-full">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1: Medical Equipment Focus -->
+                    <div class="swiper-slide relative h-full w-full">
+                        <div class="absolute inset-0 bg-black/50 z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=1920&q=80"
+                            class="absolute inset-0 w-full h-full object-cover z-0" alt="medical equipment">
+                        <div class="relative z-20 h-full flex flex-col justify-center items-center text-center px-4">
+                            <h2 class="text-lg md:text-xl font-medium mb-4 text-gray-200 reveal-up">Dermatology
+                                Solutions</h2>
+                            <h1
+                                class="text-4xl md:text-7xl font-bold leading-tight tracking-tight text-white mb-20 reveal-up delay-100">
+                                CHEONGAN MEDICAL<br>Premium Device Frontier
+                            </h1>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Message Focus -->
+                    <div class="swiper-slide relative h-full w-full">
+                        <div class="absolute inset-0 bg-black/60 z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80"
+                            class="absolute inset-0 w-full h-full object-cover z-0" alt="office meeting">
+                        <div class="relative z-20 h-full flex flex-col justify-center items-center text-center px-4">
+                            <h1 class="text-3xl md:text-6xl font-bold leading-tight text-white reveal-up">
+                                합리적인 피부미용 의료 장비,<br>그리고 최고의 선택
+                            </h1>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Quote Focus -->
+                    <div class="swiper-slide relative h-full w-full">
+                        <div class="absolute inset-0 bg-black/60 z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80"
+                            class="absolute inset-0 w-full h-full object-cover z-0" alt="abstract tech">
+                        <div class="relative z-20 h-full flex flex-col justify-center items-center text-center px-4">
+                            <h1 class="text-4xl md:text-8xl font-black text-white italic tracking-tighter reveal-up">
+                                "Do what is Right,<br class="md:hidden"> Not what is easy"
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination Dots (Circular & Higher Up) -->
+                <div
+                    class="swiper-pagination !bottom-32 !left-1/2 !-translate-x-1/2 !w-auto !flex !justify-center !items-center !gap-3">
+                </div>
+
+                <!-- Scroll Down Indicator -->
+                <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30">
+                    <a href="#about"
+                        class="inline-flex justify-center items-center w-12 h-12 border border-white/20 rounded-full hover:bg-white hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-black/10 backdrop-blur-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="w-5 h-5 text-white group-hover:text-black transition" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: About (회사 소개) - 전면 배경 & 오버레이 레이아웃 -->
+        <section id="about" class="relative w-full min-h-screen overflow-hidden flex flex-col lg:flex-row">
+            <!-- Full Height & Width Background -->
+            <div class="absolute inset-0 w-full h-full z-0">
+                <img src="images/backgrounds/growth_bg.png" class="w-full h-full object-cover" alt="growth vision">
+                <!-- 전체적인 톤 조절을 위한 은은한 오버레이 -->
+                <div class="absolute inset-0 bg-black/10"></div>
+            </div>
+
+            <!-- Left: Semi-Transparent Blue Overlay (Narrower: 35%) -->
+            <div
+                class="relative z-10 w-full lg:w-[35%] bg-[#00B7F1]/85 p-12 md:p-16 lg:p-20 flex flex-col justify-start reveal-up min-h-screen">
+                <!-- Main Header Text (Top) -->
+                <div class="mt-10 md:mt-20">
+                    <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight mb-20 tracking-tight">
+                        다년간의 업적은<br>청안의 신뢰성과<br>진실성을 말해줍니다.
+                    </h2>
+                </div>
+
+                <!-- Intro Body Text (Middle to Bottom) -->
+                <div class="space-y-10 text-white/95 text-base md:text-lg leading-relaxed font-medium">
+                    <div class="space-y-4">
+                        <p class="font-bold text-white">안녕하세요.</p>
+                        <p>주식회사 청안메디칼 코퍼레이션입니다.</p>
+                        <p>청안은 지난 20년 동안 국내 피부미용 의료장비 시장에 몸담아 오고 있습니다.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <p>병의원 원장님과 맺은 인간적인 유대감과 장비 및 개원관련 수많은 경험을 바탕으로 국내에 광범위한 유통망을 확보해왔습니다.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <p>앞으로도 더 나은 서비스와 혁신적인 솔루션을 제공하며 끊임없이 발전하는 모습으로 보답하겠습니다.</p>
+                    </div>
+
+                    <div class="pt-10">
+                        <p class="font-bold text-xl md:text-2xl text-white">감사합니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content (상단 슬로건) -->
+            <div class="relative z-10 hidden lg:flex flex-grow justify-end items-start p-16 md:p-20 text-right">
+                <h3
+                    class="text-white text-4xl md:text-6xl font-black italic tracking-tighter leading-[1.1] drop-shadow-2xl reveal-up delay-200">
+                    DO WHAT IS RIGHT,<br>NOT WHAT IS EASY.
+                </h3>
+            </div>
+        </section>
+
+
+
+        <!-- Section 3: Product Line-Up (장비 소개) -->
+        <section id="services" class="product-section py-12 md:py-16 overflow-hidden bg-[#f9fbff]">
+            <div class="max-w-screen-xl mx-auto px-6">
+
+                <!-- 섹션 헤더: 레이아웃 수정 -->
+                <div class="product-header-new reveal-up mb-10">
+                    <div class="product-header-top mb-10">
+                        <div class="flex items-center gap-3">
+                            <svg width="42" height="42" viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="50" fill="none" stroke="#00B7F1" stroke-width="11" />
+                                <circle cx="60" cy="60" r="25" fill="none" stroke="#00B7F1" stroke-width="9" />
+                                <circle cx="95" cy="25" r="16" fill="#00B7F1" />
+                                <path d="M95,18 v14 M88,25 h14" stroke="white" stroke-width="4"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <span
+                                class="text-[#00B7F1] font-bold text-[10px] tracking-widest leading-tight uppercase">CHUNG
+                                AN MEDICAL<br>CORPORATION</span>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <h2 class="product-title-underlined inline-block mb-10">CHUNG AN LINE - UP</h2>
+
+                        <p class="product-desc-single-line mx-auto">
+                            (주)청안 메디칼 코퍼레이션은 병의원용 피부미용 장비를 판매하고 있으며 이를 통해 지속적으로 유통망을 확대해 나가고 있습니다. 청안의 다양한 제품을 만나보세요.
+                        </p>
+
+                        <!-- 네비게이션 버튼 -->
+                        <div class="flex justify-center items-center gap-4 mt-12">
+                            <button class="product-prev product-nav-btn" aria-label="이전">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </button>
+                            <div class="w-12 h-[1px] bg-gray-300"></div>
+                            <button class="product-next product-nav-btn" aria-label="다음">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- 구분선 -->
+                <div class="product-divider reveal-up"></div>
+
+                <!-- 장비 스와이퍼 컨테이너 (너비 제한 및 잘림 방지) -->
+                <div class="product-swiper-outer">
+                    <div class="swiper product-swiper reveal-up">
+
+
+                        <div class="swiper-wrapper">
+
+                            <!-- 1. 스페클립스 / PICO-K -->
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <div class="product-img-wrap">
+                                        <img src="images/machine/피코케이 사진.png" alt="PICO-K 장비"
+                                            class="product-machine-img">
+                                    </div>
+                                    <div class="product-card-footer">
+                                        <img src="images/machine/피코케이 로고.png" alt="제조사 로고"
+                                            class="product-maker-logo-img">
+                                        <img src="images/machine/피코케이 제조사 로고.png" alt="제품 로고"
+                                            class="product-footer-logo-img">
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!-- 2. SNJ / 유펄스 -->
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <div class="product-img-wrap">
+                                        <img src="images/machine/피코케이 사진.png" alt="유펄스 장비" class="product-machine-img">
+                                    </div>
+                                    <div class="product-card-footer">
+                                        <img src="images/machine/피코케이 로고.png" alt="제조사 로고"
+                                            class="product-maker-logo-img">
+                                        <img src="images/machine/피코케이 제조사 로고.png" alt="제품 로고"
+                                            class="product-footer-logo-img">
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!-- 3. SNJ / 유펄스듀얼 -->
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <div class="product-img-wrap">
+                                        <img src="images/machine/피코케이 사진.png" alt="유펄스듀얼 장비"
+                                            class="product-machine-img">
+                                    </div>
+                                    <div class="product-card-footer">
+                                        <img src="images/machine/피코케이 로고.png" alt="제조사 로고"
+                                            class="product-maker-logo-img">
+                                        <img src="images/machine/피코케이 제조사 로고.png" alt="제품 로고"
+                                            class="product-footer-logo-img">
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!-- 4. SNJ / 앤펄스FX -->
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <div class="product-img-wrap">
+                                        <img src="images/machine/피코케이 사진.png" alt="앤펄스FX 장비"
+                                            class="product-machine-img">
+                                    </div>
+                                    <div class="product-card-footer">
+                                        <img src="images/machine/피코케이 로고.png" alt="제조사 로고"
+                                            class="product-maker-logo-img">
+                                        <img src="images/machine/피코케이 제조사 로고.png" alt="제품 로고"
+                                            class="product-footer-logo-img">
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!-- 5. SNJ / 앤펄스 프라임 -->
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <div class="product-img-wrap">
+                                        <img src="images/machine/피코케이 사진.png" alt="앤펄스 프라임 장비"
+                                            class="product-machine-img">
+                                    </div>
+                                    <div class="product-card-footer">
+                                        <img src="images/machine/피코케이 로고.png" alt="제조사 로고"
+                                            class="product-maker-logo-img">
+                                        <img src="images/machine/피코케이 제조사 로고.png" alt="제품 로고"
+                                            class="product-footer-logo-img">
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!-- 6. 비올 / SYLFIRM X -->
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <div class="product-img-wrap">
+                                        <img src="images/machine/피코케이 사진.png" alt="SYLFIRM X 장비"
+                                            class="product-machine-img">
+                                    </div>
+                                    <div class="product-card-footer">
+                                        <img src="images/machine/피코케이 로고.png" alt="제조사 로고"
+                                            class="product-maker-logo-img">
+                                        <img src="images/machine/피코케이 제조사 로고.png" alt="제품 로고"
+                                            class="product-footer-logo-img">
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!-- 7. 비올 / CELLINEW -->
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <div class="product-img-wrap">
+                                        <img src="images/machine/피코케이 사진.png" alt="CELLINEW 장비"
+                                            class="product-machine-img">
+                                    </div>
+                                    <div class="product-card-footer">
+                                        <img src="images/machine/피코케이 로고.png" alt="제조사 로고"
+                                            class="product-maker-logo-img">
+                                        <img src="images/machine/피코케이 제조사 로고.png" alt="제품 로고"
+                                            class="product-footer-logo-img">
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!-- 8. 하이로닉 / 브이로어드밴스 -->
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <div class="product-img-wrap">
+                                        <img src="images/machine/피코케이 사진.png" alt="브이로어드밴스 장비"
+                                            class="product-machine-img">
+                                    </div>
+                                    <div class="product-card-footer">
+                                        <img src="images/machine/피코케이 로고.png" alt="제조사 로고"
+                                            class="product-maker-logo-img">
+                                        <img src="images/machine/피코케이 제조사 로고.png" alt="제품 로고"
+                                            class="product-footer-logo-img">
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div> <!-- .swiper-wrapper END -->
+                    </div> <!-- .product-swiper END -->
+                </div> <!-- .product-swiper-outer END -->
+            </div> <!-- .max-w-screen-xl END -->
+        </section>
+
+        <!-- Section: Clinic Consulting (개원컨설팅 / 턴키) -->
+        <section id="consulting" class="consulting-section items-center flex flex-col pt-12 pb-16 md:pt-16 md:pb-24">
+            <div class="max-w-screen-xl mx-auto px-6 w-full text-center relative z-10">
+                <!-- Header -->
+                <div class="reveal-up mb-10">
+                    <h2 class="text-[#00B7F1] text-3xl md:text-4xl font-bold mb-4">01 병의원 개원컨설팅/턴키</h2>
+                    <p class="text-gray-700 text-lg font-medium">청안의 원팀 서비스는 원장님의 불안 요소를 줄이고 시간 가치는 높여 드립니다.</p>
+                </div>
+
+                <!-- Orbit Diagram Container -->
+                <div class="reveal-up consulting-diagram-wrap relative mx-auto flex justify-center items-center">
+                    <!-- Central Logo: CN+ Style -->
+                    <div class="consulting-center-logo z-10">
+                        <div class="cn-plus-symbol">
+                            <svg viewBox="0 0 120 120" class="w-24 h-24">
+                                <!-- C Shape -->
+                                <path d="M85,35 C85,20 60,15 45,20 C30,25 20,45 20,60 C20,75 35,95 55,90" fill="none"
+                                    stroke="#00B7F1" stroke-width="12" stroke-linecap="round" />
+                                <!-- N Shape (Bar) overlaying -->
+                                <path d="M55,35 L55,85" fill="none" stroke="#00B7F1" stroke-width="12"
+                                    stroke-linecap="round" />
+                                <!-- Accent Plus -->
+                                <circle cx="100" cy="35" r="14" fill="#00B7F1" />
+                                <path d="M100,28 v14 M93,35 h14" stroke="white" stroke-width="4"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div
+                            class="text-center mt-6 font-black text-[#00B7F1] leading-tight text-2xl tracking-tighter uppercase">
+                            CHUNG AN MEDICAL<br>
+                            <span
+                                class="text-[12px] font-bold text-gray-500 tracking-[0.3em] opacity-80">CORPORATION</span>
+                        </div>
+                    </div>
+
+                    <!-- Orbiting Circles Wrapper -->
+                    <div class="consulting-orbit-path"></div>
+                    <div class="orbit-items-wrap">
+                        <div class="orbit-item item-1"><span>병의원 전문<br>MSO 운영/관리</span></div>
+                        <div class="orbit-item item-2"><span>국 · 내외<br>환자유치</span></div>
+                        <div class="orbit-item item-3"><span>병의원 전문<br>온라인 마케팅</span></div>
+                        <div class="orbit-item item-4"><span>병의원 전문<br>인테리어</span></div>
+                        <div class="orbit-item item-5"><span>병의원 전문<br>세무사/노무사</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Partners & Clients (두 줄 무한 롤링) -->
+        <section id="partners" class="partners-section pt-12 pb-0 bg-[#1a1a1a] overflow-hidden">
+            <div class="max-w-screen-xl mx-auto px-6 mb-10 reveal-up">
+                <h2 class="text-white text-3xl md:text-4xl font-bold mb-4">Our Partners & Clients</h2>
+                <p class="text-gray-400 text-lg">병원 분과 별로 맞춤 세팅, 이제 당신의 브랜드가 가장 주목받는 의료 공간에서 가장 필요한 타겟과 만날 시간입니다</p>
+            </div>
+
+            <div class="partners-marquee-container space-y-8">
+                <!-- Row 1: Left to Right -->
+                <div class="swiper partner-marquee-1 reveal-up py-2">
+                    <div class="swiper-wrapper items-center">
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">ISOI</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Dr.Plus</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">MEDI HUB</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">애경</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 tracking-widest">PICO-K
+                        </div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 italic">Johnson &
+                            Johnson</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 uppercase">Rejuran</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 font-serif">Olive Young
+                        </div>
+                        <!-- Triplicate for smooth loop -->
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">ISOI</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Dr.Plus</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">MEDI HUB</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">애경</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 tracking-widest">PICO-K
+                        </div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 italic">Johnson &
+                            Johnson</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 uppercase">Rejuran</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 font-serif">Olive Young
+                        </div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">ISOI</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Dr.Plus</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">MEDI HUB</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">애경</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 tracking-widest">PICO-K
+                        </div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 italic">Johnson &
+                            Johnson</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 uppercase">Rejuran</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 font-serif">Olive Young
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2: Right to Left -->
+                <div class="swiper partner-marquee-2 reveal-up py-2">
+                    <div class="swiper-wrapper items-center">
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 lowercase">Hironic</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">SNJ</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Viol</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Lutronic</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Cynosure</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Alma</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Lumenis</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 uppercase">Candela</div>
+                        <!-- Triplicate for smooth loop -->
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 lowercase">Hironic</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">SNJ</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Viol</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Lutronic</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Cynosure</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Alma</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Lumenis</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 uppercase">Candela</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 lowercase">Hironic</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">SNJ</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Viol</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Lutronic</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Cynosure</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Alma</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30">Lumenis</div>
+                        <div class="swiper-slide !w-auto px-10 text-2xl font-bold text-white/30 uppercase">Candela</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Bottom Section (기존 유지) -->
+
+        <!-- Footer -->
+        <footer id="contact" class="bg-black pt-20 pb-12 border-t border-[#333]">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <div class="mb-12 reveal-up">
+                    <img src="https://addd.co.kr/assets/images/header_logo.png" alt="addd logo" class="w-28 opacity-90">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 reveal-up">
+                    <!-- Footer Left -->
+                    <div class="space-y-4 text-[0.9rem]">
+                        <div class="flex">
+                            <span class="w-24 font-bold text-gray-500">대표</span>
+                            <span class="text-gray-300 font-medium">안상현</span>
+                        </div>
+                        <div class="flex">
+                            <span class="w-24 font-bold text-gray-500">이메일</span>
+                            <span class="text-gray-300 font-medium">addd.cs@addd.co.kr</span>
+                        </div>
+                        <div class="flex">
+                            <span class="w-24 font-bold text-gray-500">Biz No.</span>
+                            <span class="text-gray-300 font-medium">616-88-01307</span>
+                        </div>
+                        <div class="flex mt-2">
+                            <span class="w-24 font-bold text-gray-500 shrink-0 mt-1">주소</span>
+                            <span class="text-gray-400 leading-[1.8]">
+                                <strong class="text-gray-300 font-medium">(대전 개발본부/본사)</strong> 대전광역시 서구 문정로
+                                148,302-1호<br>
+                                <strong class="text-gray-300 font-medium">(서울 사업본부)</strong> 강남구 역삼로 175, 현승빌딩 6층
+                                ADDD<br>
+                                <strong class="text-gray-300 font-medium">(Japan)</strong> 141-0022 東京都品川区東五反田2-3-5
+                                五反田中央ビル7F
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Footer Right -->
+                    <div class="md:text-right">
+                        <p class="text-gray-500 mb-8 font-medium space-x-4 text-sm">
+                            <span class="hover:text-white cursor-pointer transition">광고 집행</span> <span>|</span>
+                            <span class="hover:text-white cursor-pointer transition">매체 제휴</span> <span>|</span>
+                            <span class="hover:text-white cursor-pointer transition">기술문의</span>
+                        </p>
+                        <h3
+                            class="text-2xl md:text-4xl font-bold font-inter mb-6 hover:text-primary transition duration-300 cursor-pointer">
+                            addd.cs@addd.co.kr</h3>
+                        <p class="text-gray-400 mb-2 font-inter text-sm"><span class="text-gray-500 mr-2">T (KOR)</span>
+                            02-6925-4446</p>
+                        <p class="text-gray-400 font-inter text-sm"><span class="text-gray-500 mr-2">T (JPN)</span>
+                            050-8895-0272</p>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom -->
+                <div
+                    class="mt-24 pt-8 border-t border-[#222] flex flex-col md:flex-row justify-between text-xs text-gray-500 reveal-up">
+                    <div class="flex space-x-6 mb-4 md:mb-0">
+                        <a href="#" class="hover:text-gray-300 transition">이용약관</a>
+                        <a href="#" class="hover:text-gray-300 transition">개인정보 취급방침</a>
+                        <a href="#" class="hover:text-gray-300 transition">이메일무단수집거부</a>
+                    </div>
+                    <div class="font-inter">Copyright© addd. All Rights Reserved.</div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

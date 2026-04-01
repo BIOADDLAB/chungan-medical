@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | CHEONGAN - 청안메디칼</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00AEEF', // 청안 고유의 하늘색 (Sky Blue)
+                        dark: '#111111',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 18px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #00AEEF;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link.is-active::after {
+            width: 100%;
+        }
+
+        .form-input {
+            width: 100%;
+            border: 1px solid #E5E7EB;
+            padding: 0.75rem 1rem;
+            border-radius: 0.375rem;
+            transition: all 0.3s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #00AEEF;
+            box-shadow: 0 0 0 2px rgba(0, 174, 239, 0.1);
+        }
+
+        .label-red::after {
+            content: ' *';
+            color: #EF4444;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-black/80 backdrop-blur-md">
+        <div class="max-w-screen-xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html"
+                class="text-2xl font-bold tracking-widest text-white hover:text-primary transition duration-300 w-32 uppercase">CHEONGAN</a>
+            <nav
+                class="hidden md:flex items-center space-x-10 lg:space-x-14 font-medium text-white relative text-[15px]">
+                <a href="index.html#about" class="nav-link hover:text-primary transition duration-300 py-6">회사소개</a>
+                <div class="group relative py-6 cursor-pointer">
+                    <span class="nav-link hover:text-primary transition duration-300">제품소개</span>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 top-full mt-[-8px] w-auto min-w-[240px] bg-[#111111]/95 backdrop-blur-md border border-[#333] rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col overflow-hidden whitespace-nowrap z-50 text-left">
+                        <a href="pico-k.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">피코K</a>
+                        <a href="u-pulse.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">U-Pulse,
+                            U-Pulse DUAL</a>
+                        <a href="n-pulse.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">N-Pulse,
+                            N-Pulse FX</a>
+                        <a href="sylfirm-x.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">실펌엑스</a>
+                        <a href="cellinew.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]">셀리뉴</a>
+                        <a href="v-ro-advance.html"
+                            class="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm">브이로어드밴스</a>
+                    </div>
+                </div>
+                <a href="index.html#customers" class="nav-link hover:text-primary transition duration-300 py-6">미래비전</a>
+                <a href="contact.html"
+                    class="nav-link hover:text-primary transition duration-300 py-6 is-active !text-primary">CONTACT</a>
+            </nav>
+            <div
+                class="flex items-center space-x-2 font-bold cursor-pointer hover:text-primary transition-all text-white w-32 justify-end">
+                <span>KOR</span><span class="text-xs">▾</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section: Premium Product Style -->
+        <section id="hero"
+            class="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
+                <img src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?auto=format&fit=crop&w=1920&q=80"
+                    class="absolute inset-0 w-full h-full object-cover z-0 grayscale-[20%]" alt="Contact background">
+            </div>
+
+            <div class="relative z-20 max-w-screen-xl mx-auto">
+                <h1
+                    class="text-4xl md:text-8xl font-black leading-tight tracking-tighter text-white mb-6 uppercase reveal-up">
+                    CONTACT US
+                </h1>
+                <div class="reveal-up delay-100">
+                    <p class="text-[18px] md:text-[24px] font-bold text-white italic tracking-tight opacity-90">
+                        합리적인 피부미용 의료 장비,
+                    </p>
+                    <p class="text-[18px] md:text-[24px] font-bold text-white italic tracking-tight opacity-90 mt-1">
+                        그리고 최고의 선택
+                    </p>
+                </div>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-30">
+                <a href="#contact-form"
+                    class="inline-flex justify-center items-center w-12 h-12 border border-white/20 rounded-full hover:bg-white hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-black/10 backdrop-blur-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white group-hover:text-black transition"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact-form" class="py-24 bg-white">
+            <div class="max-w-[1000px] mx-auto px-6">
+
+                <form action="#" class="space-y-10">
+
+                    <!-- Row 1 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <label class="block text-[15px] font-bold text-[#333] mb-2 label-red">병원명/회사명
+                                (Hospital/Company)</label>
+                            <input type="text" class="form-input" placeholder="병원명 또는 회사명을 입력해주세요">
+                        </div>
+                        <div>
+                            <label class="block text-[15px] font-bold text-[#333] mb-2 label-red">성함 (Name)</label>
+                            <input type="text" class="form-input" placeholder="성함을 입력해주세요">
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <label class="block text-[15px] font-bold text-[#333] mb-2 label-red">연락받으실 이메일
+                                (Email)</label>
+                            <input type="email" class="form-input" placeholder="example@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-[15px] font-bold text-[#333] mb-2 label-red">전화번호 (Phone)</label>
+                            <input type="tel" class="form-input" placeholder="010-0000-0000">
+                        </div>
+                    </div>
+
+                    <!-- Row 3 (Products - Exact Replica of Image) -->
+                    <div class="border border-gray-100 bg-[#F9FBFF] p-8 rounded-xl ring-1 ring-primary/5">
+                        <label class="block text-[16px] font-black text-primary mb-6 flex items-center gap-2 uppercase">
+                            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                            관심 제품 (Interested Products)
+                        </label>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-4 gap-x-2">
+                            <!-- CHUNGAN PRODUCTS (Replaced placeholder with real names) -->
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" class="w-4 h-4 accent-primary rounded">
+                                <span
+                                    class="text-[13px] font-medium text-gray-700 group-hover:text-primary transition">PICO-K</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" class="w-4 h-4 accent-primary rounded">
+                                <span
+                                    class="text-[13px] font-medium text-gray-700 group-hover:text-primary transition">U-PULSE</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" class="w-4 h-4 accent-primary rounded">
+                                <span
+                                    class="text-[13px] font-medium text-gray-700 group-hover:text-primary transition">N-PULSE</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" class="w-4 h-4 accent-primary rounded">
+                                <span
+                                    class="text-[13px] font-medium text-gray-700 group-hover:text-primary transition">SYLFIRM
+                                    X</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" class="w-4 h-4 accent-primary rounded">
+                                <span
+                                    class="text-[13px] font-medium text-gray-700 group-hover:text-primary transition">CELLINEW</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" class="w-4 h-4 accent-primary rounded">
+                                <span
+                                    class="text-[13px] font-medium text-gray-700 group-hover:text-primary transition">V-RO
+                                    ADVANCE</span>
+                            </label>
+                            <!-- Extra options matching image style -->
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" class="w-4 h-4 accent-primary rounded">
+                                <span
+                                    class="text-[13px] font-medium text-gray-700 group-hover:text-primary transition">AQUAPURE</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" class="w-4 h-4 accent-primary rounded">
+                                <span
+                                    class="text-[13px] font-medium text-gray-700 group-hover:text-primary transition">REFIT</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" class="w-4 h-4 accent-primary rounded text-[13px]">
+                                <span class="text-[13px] font-bold text-primary">개원 문의</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div>
+                        <label class="block text-[15px] font-bold text-[#333] mb-2 label-red">문의제목 (Subject)</label>
+                        <input type="text" class="form-input" placeholder="문의 제목을 입력해주세요">
+                    </div>
+
+                    <!-- Row 5 -->
+                    <div>
+                        <label class="block text-[15px] font-bold text-[#333] mb-2 label-red">문의내용 (Message)</label>
+                        <textarea class="form-input h-48 resize-none" placeholder="문의하실 내용을 상세하게 입력해주세요"></textarea>
+                    </div>
+
+                    <!-- Row 6: File Upload -->
+                    <div class="py-4 border-t border-gray-100">
+                        <label class="block text-[15px] font-bold text-[#333] mb-4">첨부파일 (Attachments)</label>
+                        <div class="flex items-center gap-4">
+                            <label
+                                class="cursor-pointer bg-white border border-gray-300 rounded-md py-2 px-6 font-bold text-[14px] hover:bg-gray-50 flex items-center gap-2 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 4v16m8-8H4" />
+                                </svg>
+                                파일선택
+                                <input type="file" class="hidden">
+                            </label>
+                            <span class="text-[13px] text-gray-400 font-medium">허용 파일 : jpg, jpeg, png, gif, pdf (최대
+                                10MB)</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 7: Privacy Agreement -->
+                    <div class="pt-6 border-t border-gray-100">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="w-4 h-4 accent-primary" required>
+                            <span class="text-[14px] font-medium text-gray-600 underline underline-offset-4">기재하신 개인정보의
+                                수집 및 이용에 동의합니다. (필수)</span>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-10 flex justify-center">
+                        <button type="submit"
+                            class="bg-primary hover:bg-black text-white text-[18px] font-black py-4 px-20 rounded-sm shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            문의하기 SEND MESSAGE
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Copy (Simplified matching standard) -->
+    <footer class="bg-dark py-12 text-center text-white/40 text-[14px]">
+        <p>&copy; 2024 CHEONGAN MEDICAL. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
