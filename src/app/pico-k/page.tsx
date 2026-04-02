@@ -150,12 +150,19 @@ export default function PicoKPage() {
       {/* ③ Patent Technology Section */}
       <section id="patents" className="relative py-20 bg-[#020408] overflow-hidden">
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
-        
+
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           {/* 긴 상단 강조선 (디자인 가이드 반영) */}
-          <div className="flex items-center gap-6 mb-12">
-            <span className="text-primary font-bold text-[10px] tracking-[0.4em] uppercase whitespace-nowrap">HUEMEDICAL</span>
-            <div className="h-[2px] flex-grow bg-primary shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+          <div className="flex items-center gap-4 mb-20 relative overflow-hidden">
+            <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap">HUEMEDICAL</span>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              style={{ originX: 0 }}
+              className="h-[1px] w-[500%] bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none shadow-[0_0_15px_rgba(0,183,241,0.2)]"
+            />
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
@@ -219,60 +226,68 @@ export default function PicoKPage() {
       <section id="thermal-lens-tech" className="relative py-28 bg-[#020408] overflow-hidden">
         <div className="absolute inset-0 bg-tech-dots opacity-20 mix-blend-screen pointer-events-none" />
         <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
-
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
-          {/* 번호 라인 */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="flex items-center gap-4 mb-14"
-          >
-            <span className="text-5xl font-black text-primary leading-none">01</span>
-            <div className="h-[1px] flex-grow bg-gradient-to-r from-primary/50 to-transparent" />
-          </motion.div>
+          {/* TECH.01 라벨 — HUEMEDICAL과 동일하게 플렉스 외부에 배치 */}
+          <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
+            <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap">TECH 01</span>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              style={{ originX: 0 }}
+              className="h-[1px] w-[500%] bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none shadow-[0_0_15px_rgba(0,183,241,0.2)]"
+            />
+          </div>
 
-          <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
-            {/* 좌측: 설명 */}
+          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 relative">
+            {/* 배경 테크 글로우 포인트 */}
+            <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none z-0" />
+
+            {/* 좌측: 설명 (Technical Blueprint Style) */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="lg:w-[45%]"
+              className="lg:w-[45%] relative z-10"
             >
-              {/* 메인 타이틀 */}
-              <div className="mb-12">
+              {/* 메인 타이틀 & 넘버링 */}
+              <div className="mb-14">
                 <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-4">
                   <span className="hero-title-main">써멀렌즈</span><br />
                   <span className="hero-title-highlight">이펙트 최소화</span>
                 </h3>
-                <div className="w-20 h-[2px] bg-primary mb-10 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
               </div>
 
               {/* 부제 및 기본 설명 */}
-              <div className="mb-12">
-                <h4 className="text-primary font-bold text-xl md:text-2xl mb-2">Thermal Lens Effect</h4>
+              <div className="mb-14 pl-4 border-l-2 border-primary/20">
+                <h4 className="text-primary font-black text-xl md:text-2xl mb-2 tracking-tight">Thermal Lens Effect</h4>
                 <p className="text-slate-400 font-medium leading-relaxed">렌즈의 과열로 부풀어올라 초점의 깊이가 변하는 현상</p>
               </div>
 
-              {/* 기술 설명 상세 */}
+              {/* 기술 설명 상세 (도면 스타일) */}
               <div className="space-y-12">
                 {/* 기술 01 */}
-                <div>
-                  <h5 className="text-white font-bold text-xl mb-1">단일 챔버 레이저 발진 장치</h5>
-                  <p className="text-primary/60 text-xs font-bold mb-3">[특허등록 번호: 제10-165288]</p>
-                  <p className="text-slate-400 leading-relaxed max-w-lg">
+                <div className="group">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary shadow-[0_0_8px_rgba(0,183,241,0)] group-hover:shadow-[0_0_8px_rgba(0,183,241,1)] transition-all duration-500" />
+                    <h5 className="text-white font-bold text-xl">단일 챔버 레이저 발진 장치</h5>
+                  </div>
+                  <p className="text-primary/70 text-[10px] font-bold mb-4 tracking-[0.2em] uppercase pl-4">Patent Registration: No.10-165288</p>
+                  <p className="text-slate-400 leading-relaxed max-w-lg pl-4 border-l border-white/5 group-hover:border-primary/30 transition-colors duration-500">
                     이중 챔버를 사용하는 기존 Q-switch레이저와 달리, 단일 챔버를 활용하여 기존 대비 효율은 10%이상 높이고, 제작 단가를 줄일 수 있는 기술입니다.
                   </p>
                 </div>
 
                 {/* 기술 02 */}
-                <div>
-                  <h5 className="text-white font-bold text-xl mb-1">의료용 레이저 열 렌즈 효과 제어 시스템</h5>
-                  <p className="text-primary/60 text-xs font-bold mb-3">[특허등록 번호: 제10-2333260]</p>
-                  <p className="text-slate-400 leading-relaxed max-w-lg">
+                <div className="group">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary shadow-[0_0_8px_rgba(0,183,241,0)] group-hover:shadow-[0_0_8px_rgba(0,183,241,1)] transition-all duration-500" />
+                    <h5 className="text-white font-bold text-xl">의료용 레이저 열 렌즈 효과 제어 시스템</h5>
+                  </div>
+                  <p className="text-primary/70 text-[10px] font-bold mb-4 tracking-[0.2em] uppercase pl-4">Patent Registration: No.10-2333260</p>
+                  <p className="text-slate-400 leading-relaxed max-w-lg pl-4 border-l border-white/5 group-hover:border-primary/30 transition-colors duration-500">
                     열 렌즈 효과 제어를 위해 기계 스위치와 마이크로 컨트롤러를 활용하여 안정적인 출력에너지와 일관된 빔 크기를 유지합니다.
                   </p>
                 </div>
