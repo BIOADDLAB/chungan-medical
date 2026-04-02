@@ -11,14 +11,14 @@ export default function PicoKPage() {
         id="hero"
         className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-[#020408]"
       >
-        {/* 배경 이미지 레이어 */}
+        {/* 배경 이미지 레이어 (선명도 상향된 그레이 톤) */}
         <img
           src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-40 brightness-[0.8]"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-70 brightness-[0.6] contrast-[1.05]"
           alt="medical background"
         />
-        {/* 그라디언트 오버레이 */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#020408]/60 via-transparent to-[#020408]/80 z-10" />
+        {/* 그라디언트 오버레이 (Clear Matte Effect) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050810]/30 via-transparent to-[#050810]/70 z-10" />
         {/* Tech Grid 오버레이 */}
         <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-screen z-10 pointer-events-none" />
 
@@ -86,9 +86,9 @@ export default function PicoKPage() {
 
               {/* 타이틀 */}
               <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
-                <span className="hero-title-main">Revolutionary</span><br />
-                <span className="hero-title-highlight">Pico</span>
-                <span className="hero-title-main"> Technology</span>
+                <span className="hero-title-main">REVOLUTIONARY</span><br />
+                <span className="hero-title-highlight">PICO-K</span>
+                <span className="hero-title-main"> TECHNOLOGY</span>
               </h2>
               <div className="w-20 h-[2px] bg-primary mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
 
@@ -148,64 +148,67 @@ export default function PicoKPage() {
       </section>
 
       {/* ③ Patent Technology Section */}
-      <section id="patents" className="relative py-28 bg-[#020408] overflow-hidden">
+      <section id="patents" className="relative py-20 bg-[#020408] overflow-hidden">
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
-        {/* 상단 구분선 */}
-        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
-
+        
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
-          {/* 헤더 */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
-              CHEONGAN MEDICAL
-            </div>
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
-              <span className="hero-title-main">특허</span>
-              <span className="hero-title-highlight">기술</span>
-            </h2>
-            <div className="w-20 h-[2px] bg-primary mx-auto mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-            <p className="text-slate-400 text-lg font-medium max-w-2xl mx-auto leading-relaxed">
-              수년간의 연구와 개발을 통해 다양한 특허를 바탕으로<br />
-              시장에서 월등하고 혁신적인 솔루션을 제공하는 피코초 레이저입니다.
-            </p>
-          </motion.div>
+          {/* 긴 상단 강조선 (디자인 가이드 반영) */}
+          <div className="flex items-center gap-6 mb-12">
+            <span className="text-primary font-bold text-[10px] tracking-[0.4em] uppercase whitespace-nowrap">HUEMEDICAL</span>
+            <div className="h-[2px] flex-grow bg-primary shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+          </div>
 
-          {/* 특허증 메인 2개 */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="flex justify-center gap-6 mb-16"
-          >
-            <div className="w-44 h-60 glass-panel flex items-center justify-center transform rotate-[-3deg] shadow-[0_0_30px_rgba(0,183,241,0.1)] text-slate-600 text-xs text-center p-4">
-              특허증 이미지<br />(메인 1)
-            </div>
-            <div className="w-44 h-60 glass-panel flex items-center justify-center transform rotate-[3deg] -ml-8 mt-8 shadow-[0_0_30px_rgba(0,183,241,0.1)] text-slate-600 text-xs text-center p-4">
-              특허증 이미지<br />(메인 2)
-            </div>
-          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+            {/* 좌측: 타이틀 및 설명 */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-left"
+            >
+              <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-tight mb-8">
+                <span className="hero-title-main">특허기술</span>
+              </h2>
+              <p className="text-slate-400 text-lg font-medium leading-relaxed max-w-lg">
+                수년간의 연구와 개발을 통해 다양한 특허를 바탕으로 시장에서<br />
+                월등하고 혁신적인 솔루션을 제공하는 피코초 레이저입니다.
+              </p>
+            </motion.div>
 
-          {/* 특허증 그리드 9개 */}
+            {/* 우측: 메인 특허증 2개 (플로팅 레이아웃) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="flex justify-end gap-6"
+            >
+              <div className="w-40 h-56 bg-white/95 rounded-sm shadow-2xl p-2 transform -rotate-3 hover:rotate-0 transition duration-500">
+                <div className="w-full h-full border border-slate-200 flex items-center justify-center text-[10px] text-slate-400">Main Patent 01</div>
+              </div>
+              <div className="w-40 h-56 bg-white/95 rounded-sm shadow-2xl p-2 transform rotate-3 -mt-8 hover:rotate-0 transition duration-500">
+                <div className="w-full h-full border border-slate-200 flex items-center justify-center text-[10px] text-slate-400">Main Patent 02</div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* 하단: 서브 특허증 그리드 (한눈에 보이도록 축소) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-9 gap-3"
+            className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-9 gap-4"
           >
             {Array.from({ length: 9 }).map((_, i) => (
               <div
                 key={i}
-                className="aspect-[3/4] glass-panel flex items-center justify-center text-[10px] text-slate-600 hover:border-primary/40 transition duration-300"
+                className="aspect-[3/4] bg-white/90 rounded-sm shadow-lg p-1.5 hover:scale-105 transition duration-300 border border-transparent hover:border-primary/50 cursor-pointer"
               >
-                특허증 {i + 1}
+                <div className="w-full h-full border border-slate-100 flex items-center justify-center text-[8px] text-slate-400 font-bold">
+                  Patent {String(i + 1).padStart(2, '0')}
+                </div>
               </div>
             ))}
           </motion.div>
@@ -239,33 +242,38 @@ export default function PicoKPage() {
               viewport={{ once: true }}
               className="lg:w-[45%]"
             >
-              <div className="mb-10">
-                <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
+              {/* 메인 타이틀 */}
+              <div className="mb-12">
+                <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-4">
                   <span className="hero-title-main">써멀렌즈</span><br />
                   <span className="hero-title-highlight">이펙트 최소화</span>
-                </h2>
-                <div className="w-20 h-[2px] bg-primary mb-6 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-                <div className="mb-2">
-                  <span className="text-xl font-bold text-primary tracking-tight font-inter">
-                    Thermal Lens Effect
-                  </span>
-                </div>
-                <p className="text-slate-400 text-lg font-medium leading-relaxed">
-                  렌즈의 과열로 부풀어올라 초점의 깊이가 변하는 현상
-                </p>
+                </h3>
+                <div className="w-20 h-[2px] bg-primary mb-10 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
               </div>
 
-              <div className="space-y-4">
-                <div className="glass-panel p-7 border-l-[3px] border-primary">
-                  <h4 className="text-lg font-black text-white mb-3">빔 품질 유지</h4>
-                  <p className="text-slate-400 font-medium leading-relaxed">
-                    높은 반복율에서도 안정적인 빔 프로파일을 유지하여 정밀한 시술이 가능합니다.
+              {/* 부제 및 기본 설명 */}
+              <div className="mb-12">
+                <h4 className="text-primary font-bold text-xl md:text-2xl mb-2">Thermal Lens Effect</h4>
+                <p className="text-slate-400 font-medium leading-relaxed">렌즈의 과열로 부풀어올라 초점의 깊이가 변하는 현상</p>
+              </div>
+
+              {/* 기술 설명 상세 */}
+              <div className="space-y-12">
+                {/* 기술 01 */}
+                <div>
+                  <h5 className="text-white font-bold text-xl mb-1">단일 챔버 레이저 발진 장치</h5>
+                  <p className="text-primary/60 text-xs font-bold mb-3">[특허등록 번호: 제10-165288]</p>
+                  <p className="text-slate-400 leading-relaxed max-w-lg">
+                    이중 챔버를 사용하는 기존 Q-switch레이저와 달리, 단일 챔버를 활용하여 기존 대비 효율은 10%이상 높이고, 제작 단가를 줄일 수 있는 기술입니다.
                   </p>
                 </div>
-                <div className="glass-panel p-7 border-l-[3px] border-primary">
-                  <h4 className="text-lg font-black text-white mb-3">냉각 기술 적용</h4>
-                  <p className="text-slate-400 font-medium leading-relaxed">
-                    핵심 부품의 열 관리를 통해 장시간 사용 시 발생할 수 있는 에너지 변화를 최소화했습니다.
+
+                {/* 기술 02 */}
+                <div>
+                  <h5 className="text-white font-bold text-xl mb-1">의료용 레이저 열 렌즈 효과 제어 시스템</h5>
+                  <p className="text-primary/60 text-xs font-bold mb-3">[특허등록 번호: 제10-2333260]</p>
+                  <p className="text-slate-400 leading-relaxed max-w-lg">
+                    열 렌즈 효과 제어를 위해 기계 스위치와 마이크로 컨트롤러를 활용하여 안정적인 출력에너지와 일관된 빔 크기를 유지합니다.
                   </p>
                 </div>
               </div>
