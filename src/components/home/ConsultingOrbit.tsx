@@ -23,9 +23,9 @@ export default function ConsultingOrbit() {
             Service Protocol
           </div>
           <h2 className="text-white text-3xl md:text-5xl font-black mb-6 tracking-tight">
-            병의원 개원컨설팅 / <span className="text-primary text-glow font-inter italic">TURN-KEY</span>
+            <span className="hero-title-main">병의원 개원컨설팅</span> / <span className="hero-title-highlight">TURN-KEY</span>
           </h2>
-          <div className="w-20 h-[2px] bg-primary mx-auto mb-8 shadow-[0_0_10px_#00B7F1]" />
+          <div className="w-20 h-[2px] bg-primary mx-auto mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
           <p className="text-slate-400 text-lg font-medium max-w-2xl mx-auto leading-relaxed">
             청안의 원팀 서비스는 원장님의 불안 요소를 줄이고<br />
             <span className="text-white">시간 가치는 극대화</span>해 드리는 정밀 솔루션입니다.
@@ -49,14 +49,6 @@ export default function ConsultingOrbit() {
                 <circle cx="100" cy="35" r="14" fill="#00B7F1" />
                 <path d="M100,28 v14 M93,35 h14" stroke="white" strokeWidth="4" strokeLinecap="round" />
               </svg>
-            </div>
-            <div className="text-center mt-8 font-black text-white leading-tight text-xl tracking-tighter uppercase">
-              CHUNG AN <span className="text-primary">MEDICAL</span><br />
-              <div className="flex items-center justify-center gap-2 mt-2 opacity-50">
-                <div className="h-[1px] w-4 bg-primary" />
-                <span className="text-[10px] font-bold tracking-[0.3em]">EST. 2004</span>
-                <div className="h-[1px] w-4 bg-primary" />
-              </div>
             </div>
           </div>
 

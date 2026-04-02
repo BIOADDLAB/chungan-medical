@@ -50,25 +50,25 @@ export default function ProductLineup() {
           </div>
 
           <div className="text-center flex flex-col items-center">
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-[0.15em] uppercase mb-6 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">
-              CHUNG AN <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00B7F1] to-blue-400 text-glow">LINE-UP</span>
+            <h2 className="text-4xl md:text-5xl font-black tracking-[0.15em] uppercase mb-6">
+              <span className="hero-title-main">CHUNG AN</span> <span className="hero-title-highlight">LINE-UP</span>
             </h2>
-            <div className="w-16 h-1 bg-[#00B7F1] mb-8" />
+            <div className="w-16 h-1 bg-[#00B7F1] mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
             <p className="text-slate-400 font-medium max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
               (주)청안 메디칼 코퍼레이션은 병의원용 피부미용 장비의 새로운 기준을 제시합니다.<br className="hidden md:block" />
               정밀한 제어와 최상의 결과를 위한 청안의 하이엔드 라인업을 만나보세요.
             </p>
 
             {/* Navigation Buttons */}
-            <div className="flex justify-center items-center gap-4 mt-12 w-full max-w-md mx-auto relative">
+            <div className="flex justify-center items-center gap-4 mt-12 w-full max-w-md mx-auto relative z-30">
               <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#00B7F1]/30 to-transparent -z-10" />
-              <button ref={prevRef} className="product-prev product-nav-btn !bg-[#050810]" aria-label="이전">
+              <button ref={prevRef} className="product-prev product-nav-btn relative z-10" aria-label="이전">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="15 18 9 12 15 6"></polyline>
                 </svg>
               </button>
-              <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-[#00B7F1] to-transparent shadow-[0_0_10px_#00B7F1]"></div>
-              <button ref={nextRef} className="product-next product-nav-btn !bg-[#050810]" aria-label="다음">
+              <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-[#00B7F1] to-transparent shadow-[0_0_10px_#00B7F1] z-0"></div>
+              <button ref={nextRef} className="product-next product-nav-btn relative z-10" aria-label="다음">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
@@ -102,13 +102,13 @@ export default function ProductLineup() {
             breakpoints={{
                640: { slidesPerView: 2, spaceBetween: 20 },
                768: { slidesPerView: 3, spaceBetween: 30 },
-              1024: { slidesPerView: 4, spaceBetween: 40 },
+              1024: { slidesPerView: 4, spaceBetween: 30 },
             }}
             className="product-swiper"
           >
             {PRODUCTS.map((prod) => (
-              <SwiperSlide key={prod.id}>
-                <div className="product-card">
+              <SwiperSlide key={prod.id} className="py-12">
+                <div className="product-card group">
                   <div className="product-img-wrap">
                     {/* Note: In a real environment, different images per product id should be used */}
                     <img src="/images/machine/피코케이 사진.png" alt={`${prod.name} 장비`} className="product-machine-img" />
