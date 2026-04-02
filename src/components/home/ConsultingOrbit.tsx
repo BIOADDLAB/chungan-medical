@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 
 export default function ConsultingOrbit() {
   return (
-    <section id="consulting" className="consulting-section items-center flex flex-col pt-12 pb-16 relative overflow-hidden bg-[#050810]">
+    <section id="consulting" className="consulting-section items-center flex flex-col pt-12 pb-16 relative overflow-hidden bg-[#020408]">
       {/* Background Decorative Tech Elements */}
       <div className="absolute top-0 left-0 w-full h-full bg-tech-grid opacity-10 pointer-events-none" />
-      <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-screen-xl mx-auto px-6 w-full text-center relative z-10">
         {/* Header */}

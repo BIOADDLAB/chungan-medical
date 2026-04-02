@@ -462,7 +462,7 @@ body {
 /* Partners Marquee (Digital Display) */
 .partners-marquee-container {
   position: relative;
-  background-color: #030508;
+  background-color: #020408;
   background-image: linear-gradient(rgba(0, 183, 241, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 183, 241, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;

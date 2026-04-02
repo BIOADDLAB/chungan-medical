@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 
 const heroSlides = [
   {
-    background: 'bg-[#030508]',
+    background: 'bg-[#020408]',
     overlay: (
       <>
         <img
@@ -28,7 +28,7 @@ const heroSlides = [
     highlight: '정확한 기술의 시작',
   },
   {
-    background: 'bg-[#030508]',
+    background: 'bg-[#020408]',
     overlay: (
       <>
         <div className="absolute inset-0 bg-[#050810]/42 z-10" />
@@ -43,7 +43,7 @@ const heroSlides = [
     highlight: '그리고 최고의 선택',
   },
   {
-    background: 'bg-[#030508]',
+    background: 'bg-[#020408]',
     overlay: (
       <>
         <div className="absolute inset-0 bg-gradient-to-b from-[#050810]/52 to-[#050810]/18 z-10" />
@@ -61,7 +61,7 @@ const heroSlides = [
 
 export default function HeroSlider() {
   return (
-    <section id="home" className="relative h-screen w-full overflow-hidden bg-black">
+    <section id="home" className="relative h-screen w-full overflow-hidden bg-[#020408]">
       <div className="absolute inset-0 z-20 pointer-events-none bg-tech-grid opacity-30 mix-blend-screen" />
 
       <Swiper

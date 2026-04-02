@@ -31,7 +31,7 @@ const PARTNERS_ROW_2 = [
 
 export default function PartnerMarquee() {
   return (
-    <section id="partners" className="partners-section pt-24 pb-0 bg-[#030508] overflow-hidden border-y border-white/5">
+    <section id="partners" className="partners-section pt-24 pb-0 bg-[#020408] overflow-hidden">
       <div className="max-w-screen-xl mx-auto px-6 mb-16 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30, scale: 0.9 }}
@@ -72,8 +72,8 @@ export default function PartnerMarquee() {
           viewport={{ once: true }}
           className="py-4 relative"
         >
-          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#030508] to-transparent z-20 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#030508] to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#020408] to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#020408] to-transparent z-20 pointer-events-none" />
           
           <Swiper
             modules={[Autoplay]}
@@ -83,6 +83,7 @@ export default function PartnerMarquee() {
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
+              pauseOnMouseEnter: false,
             }}
             allowTouchMove={false}
             className="partner-marquee-1"
@@ -107,8 +108,8 @@ export default function PartnerMarquee() {
           viewport={{ once: true }}
           className="py-4 relative flex"
         >
-          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#030508] to-transparent z-20 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#030508] to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#020408] to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#020408] to-transparent z-20 pointer-events-none" />
 
           <Swiper
             modules={[Autoplay]}
@@ -118,7 +119,8 @@ export default function PartnerMarquee() {
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
-              reverseDirection: true, // 이 설정만으로도 반대 방향 이동 가능 (dir="rtl" 제거 시 더 안정적)
+              reverseDirection: true,
+              pauseOnMouseEnter: false,
             }}
             allowTouchMove={false}
             className="partner-marquee-2"

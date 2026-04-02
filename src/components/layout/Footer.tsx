@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-black pt-20 pb-12 border-t border-[#333]">
+    <footer id="contact" className="bg-black pt-20 pb-12">
       <div className="max-w-screen-xl mx-auto px-6">
         <div className="mb-12">
           {/* Note: The image src should ideally be downloaded and put into public/images/ */}
