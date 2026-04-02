@@ -153,7 +153,7 @@ export default function PicoKPage() {
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           {/* 긴 상단 강조선 (디자인 가이드 반영) */}
-          <div className="flex items-center gap-4 mb-20 relative overflow-hidden">
+          <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
             <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap">HUEMEDICAL</span>
             <motion.div
               initial={{ scaleX: 0 }}
@@ -165,7 +165,7 @@ export default function PicoKPage() {
             />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mt-10 mb-20 relative z-10">
             {/* 좌측: 타이틀 및 설명 */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -174,9 +174,11 @@ export default function PicoKPage() {
               viewport={{ once: true }}
               className="text-left"
             >
-              <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-tight mb-8">
-                <span className="hero-title-main">특허기술</span>
-              </h2>
+              <div className="mb-14">
+                <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-8">
+                  <span className="hero-title-main">특허기술</span>
+                </h2>
+              </div>
               <p className="text-slate-400 text-lg font-medium leading-relaxed max-w-lg">
                 수년간의 연구와 개발을 통해 다양한 특허를 바탕으로 시장에서<br />
                 월등하고 혁신적인 솔루션을 제공하는 피코초 레이저입니다.
@@ -250,7 +252,7 @@ export default function PicoKPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="lg:w-[45%] relative z-10"
+              className="lg:w-[45%] relative z-10 text-left"
             >
               {/* 메인 타이틀 & 넘버링 */}
               <div className="mb-14">
@@ -313,72 +315,128 @@ export default function PicoKPage() {
         </div>
       </section>
 
-      {/* ⑤ Technical Detail 02: 800um Big Spot Size */}
-      <section id="big-spot-tech" className="relative py-28 bg-[#020408] overflow-hidden">
+      {/* ⑤ Technical Detail 02 & 03: Integrated Layout */}
+      <section id="tech-integrated-detail" className="relative py-28 bg-[#020408] overflow-hidden">
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
         <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
-        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
-          {/* 번호 라인 */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="flex items-center gap-4 mb-14"
-          >
-            <span className="text-5xl font-black text-primary leading-none">02</span>
-            <div className="h-[1px] flex-grow bg-gradient-to-r from-primary/50 to-transparent" />
-          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24">
-            {/* 우측(역방향): 설명 */}
+            {/* 02. 출력안정성 쪽 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="lg:w-1/2"
+              className="flex flex-col"
             >
-              <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
-                <span className="hero-title-main">800um Big Spot</span><br />
-                <span className="hero-title-highlight">Flat-Top</span>
-              </h2>
-              <div className="w-20 h-[2px] bg-primary mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-              <p className="text-slate-400 text-lg font-medium mb-10 leading-relaxed">
-                가장 큰 스팟 사이즈와 균일한 빔 패턴으로<br />
-                빠른 시술과 낮은 통증을 동시에 구현했습니다.
-              </p>
+              {/* 테드 라벨 02 */}
+              <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
+                <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap">TECH 02</span>
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                  viewport={{ once: true }}
+                  style={{ originX: 0 }}
+                  className="h-[1px] w-full bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none"
+                />
+              </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="glass-panel p-6 border-t-[2px] border-primary">
-                  <span className="block text-primary font-black text-2xl mb-2">Fast</span>
-                  <p className="text-slate-400 text-sm font-medium">대면적 시술 가능</p>
-                </div>
-                <div className="glass-panel p-6 border-t-[2px] border-primary">
-                  <span className="block text-primary font-black text-2xl mb-2">Uniform</span>
-                  <p className="text-slate-400 text-sm font-medium">균일한 에너지 전달</p>
+              <h3 className="text-4xl md:text-5xl font-black tracking-tight mb-12">
+                <span className="hero-title-main">출력안정성</span>
+              </h3>
+
+              <div className="mb-10">
+                <p className="text-slate-200 font-bold text-xl leading-snug mb-6">
+                  피코의 성능을 완성하는 출력안정성<br />
+                  특허기술이 적용된 파워서플라이 채용
+                </p>
+                <p className="text-slate-400 font-medium leading-relaxed max-w-md">
+                  PFC(Power Factor Correction)를 통합하여 일정하고<br />
+                  안정적인 에너지 출력을 제공하는 데 도움을 줍니다.
+                </p>
+              </div>
+
+              {/* 파워 서플라이 장치 이미지 + 특허 엠블럼 */}
+              <div className="relative glass-panel p-4 bg-tech-grid/50 overflow-hidden mt-auto">
+                {/* 파워 서플라이 장치 이미지 영역 (Empty Slot) */}
+                <div className="relative glass-panel aspect-video bg-tech-grid/10 overflow-hidden flex items-center justify-center border-white/5">
+                  <span className="text-white/20 text-xs font-black uppercase tracking-widest italic group-hover:text-primary/40 transition-colors">
+                    Technical Device Illustration
+                  </span>
+                  <div className="absolute bottom-4 right-4 w-32 md:w-44 flex items-center justify-center aspect-[4/3] bg-white/5 border border-white/10 rounded-sm">
+                    <span className="text-[10px] text-white/30 font-bold uppercase">Patent Emblem Area</span>
+                  </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* 좌측(역방향): 이미지 */}
+            {/* 03. 핵심 부품의 조화 쪽 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="lg:w-1/2"
+              className="flex flex-col"
             >
-              <div className="glass-panel p-2 overflow-hidden">
-                <img
-                  src="/images/machine/피코케이 임시1.png"
-                  alt="Flat top beam illustration"
-                  className="w-full h-auto"
+              {/* 테드 라벨 03 */}
+              <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
+                <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap">TECH 03</span>
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                  viewport={{ once: true }}
+                  style={{ originX: 0 }}
+                  className="h-[1px] w-full bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none"
                 />
               </div>
+
+              <h3 className="text-4xl md:text-5xl font-black tracking-tight mb-12">
+                <span className="hero-title-main">핵심 부품의 조화</span>
+              </h3>
+
+              <div className="mb-10">
+                <p className="text-slate-200 font-bold text-xl leading-snug mb-6">
+                  순수 자체 기술을 통한 개발과 생산으로<br />
+                  핵심 부품 간의 정밀한 매칭을 구현했습니다.
+                </p>
+                <p className="text-slate-400 font-medium leading-relaxed max-w-md">
+                  부적합을 줄이고 최상의 퍼포먼스를 실현하여<br />
+                  신뢰할 수 있는 안정성을 제공합니다.
+                </p>
+              </div>
+
+              {/* 부품 조화 일러스트 영역 */}
+              <div className="relative glass-panel p-8 bg-tech-grid/50 border-t border-primary/20 mt-auto">
+                <div className="text-center mb-8">
+                  <h4 className="text-primary/90 font-black text-xl tracking-tight leading-tight">
+                    Core Components<br />Harmonization
+                  </h4>
+                </div>
+
+                <div className="grid grid-cols-3 gap-4 mb-4 relative">
+                  {[
+                    { label: 'OPTICS' },
+                    { label: 'POWER SUPPLY' },
+                    { label: 'CONTROLER' }
+                  ].map((item, idx) => (
+                    <div key={idx} className="text-center group">
+                      <div className="aspect-square rounded-xl border border-white/10 bg-white/5 overflow-hidden mb-3 group-hover:border-primary/50 transition-all duration-300 flex items-center justify-center">
+                         <span className="text-[10px] text-white/20 font-black tracking-widest">{item.label} IMAGE</span>
+                      </div>
+                      <span className="text-[10px] text-white font-black tracking-widest group-hover:text-primary transition-colors uppercase">{item.label}</span>
+                    </div>
+                  ))}
+
+                  {/* 연결 라인 장식 */}
+                  <div className="absolute top-[35%] left-[20%] right-[20%] h-[1px] bg-primary/20 pointer-events-none" />
+                </div>
+              </div>
             </motion.div>
+
           </div>
         </div>
       </section>
