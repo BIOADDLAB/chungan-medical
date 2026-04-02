@@ -44,14 +44,14 @@ export default function ProductLineup() {
                 <circle cx="60" cy="30" r="8" fill="#00B7F1" className="animate-ping" />
               </svg>
               <span className="text-[#00B7F1] font-bold text-xs tracking-[0.2em] leading-tight uppercase">
-                CHUNG AN MEDICAL SYSTEM
+                CHUNGAN MEDICAL SYSTEM
               </span>
             </div>
           </div>
 
           <div className="text-center flex flex-col items-center">
             <h2 className="text-4xl md:text-5xl font-black tracking-[0.15em] uppercase mb-6">
-              <span className="hero-title-main">CHUNG AN</span> <span className="hero-title-highlight">LINE-UP</span>
+              <span className="hero-title-main">CHUNGAN</span> <span className="hero-title-highlight">LINE-UP</span>
             </h2>
             <div className="w-16 h-1 bg-[#00B7F1] mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
             <p className="text-slate-400 font-medium max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
@@ -100,8 +100,8 @@ export default function ProductLineup() {
             slidesPerView={1}
             spaceBetween={20}
             breakpoints={{
-               640: { slidesPerView: 2, spaceBetween: 20 },
-               768: { slidesPerView: 3, spaceBetween: 30 },
+              640: { slidesPerView: 2, spaceBetween: 20 },
+              768: { slidesPerView: 3, spaceBetween: 30 },
               1024: { slidesPerView: 4, spaceBetween: 30 },
             }}
             className="product-swiper"
