@@ -1,5 +1,7 @@
 'use client';
+export const dynamic = 'force-dynamic';
 
+import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
@@ -436,7 +438,290 @@ export default function PicoKPage() {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
 
+      {/* ⑥ Technical Detail 04 & 05: Performance Standards */}
+      <section id="tech-performance-standards" className="relative py-28 bg-[#020408] overflow-hidden border-t border-white/5">
+        <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none" />
+        
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+            
+            {/* 04. 국내최초 300PS 실명제 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="flex flex-col h-full"
+            >
+              {/* 테드 라벨 04 */}
+              <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
+                <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap uppercase">TECH 04</span>
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                  viewport={{ once: true }}
+                  style={{ originX: 0 }}
+                  className="h-[1px] w-full bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none"
+                />
+              </div>
+
+              <h3 className="text-4xl md:text-5xl font-black tracking-tight mb-12">
+                <span className="hero-title-main">국내최초 300PS 실명제</span>
+              </h3>
+
+              {/* 오실로스코프 파형 영역 (Empty Slot) */}
+              <div className="relative glass-panel aspect-[16/10] bg-tech-grid/30 border border-white/10 rounded-sm mb-12 overflow-hidden flex items-center justify-center">
+                 <div className="absolute inset-0 flex items-center justify-center opacity-20">
+                    <div className="w-[80%] h-[1px] bg-primary/40 shadow-[0_0_15px_rgba(0,183,241,1)]" />
+                 </div>
+                 <span className="text-[10px] text-white/40 font-black uppercase tracking-[0.3em] z-10">Oscilloscope Waveform Area</span>
+              </div>
+
+              {/* 핵심 스펙 타이포그래피 */}
+              <div className="space-y-8 mb-12">
+                <div className="flex items-start gap-8 border-l-2 border-primary/40 pl-6 group">
+                  <div className="flex flex-col">
+                    <span className="text-5xl md:text-6xl font-black text-white tracking-tighter group-hover:text-primary transition-colors">300ps</span>
+                  </div>
+                  <div className="flex flex-col justify-center pt-2">
+                    <span className="text-slate-200 font-bold text-lg leading-tight mb-1">펄스 지속 시간</span>
+                    <span className="text-slate-400 text-sm font-medium">표준편차 약 2% 이내 유지</span>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-8 border-l-2 border-primary/40 pl-6 group">
+                  <div className="flex flex-col">
+                    <span className="text-5xl md:text-6xl font-black text-white tracking-tighter group-hover:text-primary transition-colors">2.0GW</span>
+                  </div>
+                  <div className="flex flex-col justify-center pt-2">
+                    <span className="text-slate-200 font-bold text-lg leading-tight mb-1">최대 출력 보장</span>
+                    <span className="text-slate-400 text-sm font-medium">일관된 고품질 빔 프로필 유지</span>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-slate-400 font-medium text-lg leading-relaxed mt-auto max-w-xl">
+                 부작용을 최소화하며 정확하고 일관된 레이저 치료를 제공받을 수 있도록 <br className="hidden md:block" />
+                 300PS 실명제를 운영하며 투명한 QC 자료를 제공해 드립니다.
+              </p>
+            </motion.div>
+
+            {/* 05. 얼라인먼트 변성방지 기술 적용 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="flex flex-col h-full"
+            >
+              {/* 테드 라벨 05 */}
+              <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
+                <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap uppercase">TECH 05</span>
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                  viewport={{ once: true }}
+                  style={{ originX: 0 }}
+                  className="h-[1px] w-full bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none"
+                />
+              </div>
+
+              <h3 className="text-4xl md:text-5xl font-black tracking-tight mb-12">
+                <span className="hero-title-main">얼라인먼트</span><br />
+                <span className="hero-title-highlight">변성방지 기술 적용</span>
+              </h3>
+
+              <p className="text-slate-300 font-medium text-lg leading-relaxed mb-12 max-w-md">
+                운송 또는 사용 중 내부 얼라인먼트 변형으로 장비출력 및 빔 품질에 영향을 줄 수 있는 
+                <span className="text-primary/90 font-bold"> [외부충격]</span>에 취약한 광학레이저의 특성을 고려하여 솔루션을 개발, 적용하였습니다.
+              </p>
+
+              {/* 프로세스 아이콘 영역 */}
+              <div className="glass-panel p-8 bg-tech-grid/30 mb-12 border-t border-primary/20">
+                <div className="flex justify-between items-center gap-4">
+                  {[
+                    { label: '항공/해상\n운송 테스트' },
+                    { label: '변성방지 솔루션\n개발 및 적용' },
+                    { label: '스위스제\n철도 부품 사용' }
+                  ].map((step, idx) => (
+                    <React.Fragment key={idx}>
+                      <div className="flex flex-col items-center text-center gap-3">
+                         <div className="w-16 h-16 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
+                            <div className="w-8 h-8 border border-primary/40 rounded-sm opacity-40" />
+                         </div>
+                         <span className="text-[12px] text-slate-300 font-bold whitespace-pre-line leading-tight">{step.label}</span>
+                      </div>
+                      {idx < 2 && <div className="text-primary/40 font-black text-xl">+</div>}
+                    </React.Fragment>
+                  ))}
+                </div>
+              </div>
+
+              {/* 암(Arm) 일러스트 및 빔 테스트 영역 (Empty Slot) */}
+              <div className="grid grid-cols-2 gap-8 mt-auto">
+                 <div className="glass-panel aspect-square bg-tech-dots/10 flex items-center justify-center border-white/5 relative overflow-hidden group">
+                    <div className="absolute inset-0 border border-primary/10 group-hover:border-primary/30 transition-colors" />
+                    <span className="text-[10px] text-white/30 font-black uppercase text-center leading-tight">Robot Arm<br />Alignment Area</span>
+                 </div>
+                 <div className="flex flex-col justify-center gap-4">
+                    <div className="w-24 h-24 rounded-full border-2 border-primary/20 flex items-center justify-center bg-tech-grid/20">
+                       <div className="w-[80%] h-[80%] rounded-full border border-primary/30 border-dashed" />
+                    </div>
+                    <div>
+                       <span className="text-2xl font-black text-white tracking-widest uppercase">PICO-K</span><br />
+                       <span className="text-lg font-black text-primary/80 uppercase tracking-tighter">BEAM TEST</span>
+                    </div>
+                 </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ⑦ Technical Detail 06: Multi-Diffraction Mode */}
+      <section id="tech-multi-diffraction" className="relative py-28 bg-[#020408] overflow-hidden border-t border-white/5">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+        
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          {/* 테드 라벨 06 */}
+          <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
+            <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap uppercase">TECH 06</span>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              style={{ originX: 0 }}
+              className="h-[1px] w-full bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none"
+            />
+          </div>
+
+          <h3 className="text-4xl md:text-5xl font-black tracking-tight mb-16">
+            <span className="hero-title-main uppercase">TOP-HAT</span><span className="hero-title-main">에 가장 근접한</span><br />
+            <span className="hero-title-highlight">멀티디프렉션 MODE</span>
+          </h3>
+
+          {/* 상단: 가로로 긴 통합 그래픽 영역 (1단 배치) */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative w-full aspect-[21/9] md:aspect-[21/7] glass-panel bg-tech-grid/40 border border-white/10 rounded-2xl overflow-hidden flex items-center justify-center group mb-16 shadow-2xl"
+          >
+            <div className="absolute inset-0 flex flex-col items-center justify-center opacity-40">
+              <div className="w-[80%] h-full flex items-center justify-between px-12">
+                <div className="flex flex-col items-center gap-4">
+                  <div className="w-24 h-48 border border-white/20 rounded-lg opacity-40" />
+                  <span className="text-[10px] text-white/50 font-bold uppercase tracking-widest">Handpiece</span>
+                </div>
+                <div className="flex-1 flex items-center justify-center gap-8">
+                  <div className="w-64 h-48 bg-primary/5 border border-primary/20 rounded-sm relative overflow-hidden">
+                    <div className="absolute inset-0 bg-tech-grid opacity-20" />
+                  </div>
+                  <div className="text-primary/40 font-black text-2xl">→</div>
+                  <div className="w-80 h-56 bg-primary/10 border border-primary/30 rounded-sm relative shadow-[0_0_50px_rgba(0,183,241,0.1)]">
+                     <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[1px] bg-primary/40 shadow-[0_0_15px_rgba(0,183,241,1)]" />
+                  </div>
+                </div>
+                <div className="w-48 h-48 rounded-full border border-white/10 bg-tech-dots/10 relative overflow-hidden">
+                   <div className="absolute inset-2 rounded-full border border-primary/20 border-dashed" />
+                </div>
+              </div>
+              <div className="absolute bottom-6 flex gap-12">
+                 <span className="text-[10px] text-white/30 font-black uppercase tracking-[0.4em]">Multi-Beam Pattern Analysis</span>
+                 <span className="text-[10px] text-white/30 font-black uppercase tracking-[0.4em]">Energy Fluorescence Mapping</span>
+              </div>
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#020408]/80 to-transparent pointer-events-none" />
+          </motion.div>
+
+          {/* 하단: 설명 및 상세 스펙 (2단 배치) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start mb-20">
+            {/* 좌측 설명 */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-slate-400 font-medium text-lg leading-relaxed max-w-xl">
+                PICO-K만의 멀티디프렉션모드는 TOP-HAT 빔과 가우시안 빔의 장점을 결합한 고품질 의료용 레이저로 100μm, 31.84 J/cm² 의 MLA빔이 최고의 L.I.O.B 효과를 이끌어냅니다.
+              </p>
+            </motion.div>
+
+            {/* 우측 불렛 포인트 */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <ul className="space-y-6">
+                {[
+                  { text: '에너지 손실없이 ', highlight: '260개', suffix: '의 마이크로빔이 동일하게 전달' },
+                  { text: '최대 ', highlight: '31.84 J/cm²', suffix: ' 큰 출력값' },
+                  { text: '', highlight: '100μm', suffix: '의 작은 빔 스폿 굵기로 피부표면에 손실 없이 전달' }
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 group">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-3 group-hover:scale-150 transition-transform" />
+                    <span className="text-slate-200 text-xl font-bold leading-tight">
+                      {item.text}
+                      <span className="text-primary mx-1">{item.highlight}</span>
+                      {item.suffix}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+
+          {/* 하단: BEAM QUALITY 테스트 섹션 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="pt-12 border-t border-white/5"
+          >
+            <div className="flex items-center gap-6 mb-12">
+              <h4 className="text-white font-black text-xl tracking-tight whitespace-nowrap uppercase">BEAM QUALITY 테스트</h4>
+              <div className="h-[1px] w-full bg-gradient-to-r from-white/10 to-transparent" />
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+              {[ '12mJ', '23mJ', '45mJ', '68mJ', '113mJ' ].map((val, idx) => (
+                <div key={idx} className="flex flex-col items-center gap-6 group">
+                  <div className="relative w-full aspect-square rounded-full border border-white/10 overflow-hidden bg-tech-dots/10 group-hover:border-primary/50 transition-all duration-500">
+                    <div className="absolute inset-0 flex items-center justify-center opacity-30">
+                       {/* 가상의 빔 패턴 그리드 */}
+                       <div className="grid grid-cols-10 gap-1 opacity-20">
+                         {Array.from({ length: 100 }).map((_, i) => (
+                            <div key={i} className="w-0.5 h-0.5 rounded-full bg-white" />
+                         ))}
+                       </div>
+                    </div>
+                    {/* 패턴 이미지 플레이스홀더 */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 group-hover:bg-primary/5 transition-colors">
+                       <span className="text-[10px] text-white/20 font-black tracking-widest uppercase">Beam Result</span>
+                    </div>
+                  </div>
+                  <span className="text-slate-400 font-black text-lg tracking-widest group-hover:text-primary transition-colors">{val}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* 하단 푸터 느낌의 슬로건 */}
+          <div className="mt-28 flex flex-col items-start gap-2">
+            <span className="text-primary/30 text-xs font-bold tracking-[0.4em] uppercase italic">New Paradigm of</span>
+            <span className="text-slate-600 text-lg font-black tracking-widest uppercase">PICOSECOND TECHNOLOGY</span>
           </div>
         </div>
       </section>
