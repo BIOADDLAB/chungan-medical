@@ -19,7 +19,7 @@ export default function ConsultingOrbit() {
           viewport={{ once: true }}
           className="mb-6"
         >
-          <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4 bg-primary/5">
+          <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
             Service Protocol
           </div>
           <h2 className="text-white text-3xl md:text-5xl font-black mb-6 tracking-tight">

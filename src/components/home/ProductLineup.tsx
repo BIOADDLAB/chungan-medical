@@ -50,11 +50,11 @@ export default function ProductLineup() {
           </div>
 
           <div className="text-center flex flex-col items-center">
-            <h2 className="text-4xl md:text-5xl font-black tracking-[0.15em] uppercase mb-6">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight uppercase mb-6">
               <span className="hero-title-main">CHUNGAN</span> <span className="hero-title-highlight">LINE-UP</span>
             </h2>
-            <div className="w-16 h-1 bg-[#00B7F1] mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-            <p className="text-slate-400 font-medium max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
+            <div className="w-20 h-[2px] bg-primary mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+            <p className="text-slate-400 font-medium max-w-2xl mx-auto leading-relaxed text-lg">
               (주)청안 메디칼 코퍼레이션은 병의원용 피부미용 장비의 새로운 기준을 제시합니다.<br className="hidden md:block" />
               정밀한 제어와 최상의 결과를 위한 청안의 하이엔드 라인업을 만나보세요.
             </p>

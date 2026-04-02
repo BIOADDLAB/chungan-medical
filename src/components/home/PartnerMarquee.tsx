@@ -51,12 +51,13 @@ export default function PartnerMarquee() {
         >
           <span className="hero-title-main">Our</span> <span className="hero-title-highlight">Partners</span> <span className="hero-title-main">& Clients</span>
         </motion.h2>
+        <div className="w-20 h-[2px] bg-primary mx-auto mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-slate-400 text-lg max-w-3xl mx-auto leading-relaxed"
+          className="text-slate-400 text-lg font-medium max-w-2xl mx-auto leading-relaxed"
         >
           병원 분과 별 맞춤 세팅 시스템. 당신의 브랜드가 가장 주목받는 의료 공간에서<br className="hidden md:block" />
           최적의 솔루션과 만나는 혁신적인 네트워크를 경험하세요.
