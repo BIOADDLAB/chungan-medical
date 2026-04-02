@@ -13,13 +13,13 @@ export default function ConsultingOrbit() {
       <div className="max-w-screen-xl mx-auto px-6 w-full text-center relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="mb-6"
         >
-          <div className="inline-block px-4 py-1 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4 bg-primary/5">
+          <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4 bg-primary/5">
             Service Protocol
           </div>
           <h2 className="text-white text-3xl md:text-5xl font-black mb-6 tracking-tight">

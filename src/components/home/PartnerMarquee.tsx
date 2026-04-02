@@ -34,21 +34,22 @@ export default function PartnerMarquee() {
     <section id="partners" className="partners-section pt-24 pb-0 bg-[#030508] overflow-hidden border-y border-white/5">
       <div className="max-w-screen-xl mx-auto px-6 mb-16 text-center">
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="inline-block px-3 py-1 border border-primary/20 text-primary text-[9px] font-bold tracking-[0.5em] uppercase mb-6"
+          initial={{ opacity: 0, y: 30, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5"
         >
           Global Network
         </motion.div>
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-white text-3xl md:text-5xl font-black mb-6 tracking-tight uppercase"
         >
-          Our <span className="text-primary text-glow italic">Partners</span> & Clients
+          <span className="hero-title-main">Our</span> <span className="hero-title-highlight">Partners</span> <span className="hero-title-main">& Clients</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
