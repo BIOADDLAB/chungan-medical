@@ -1,221 +1,172 @@
+'use client';
+export const dynamic = 'force-dynamic';
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+
 export default function UPulsePage() {
   return (
     <>
-      {/* Standardized Hero Section */}
+      {/* ① Hero Section (PICO-K Style) */}
       <section
         id="hero"
-        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4"
+        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-[#020408]"
       >
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-black/60 z-10"></div>
-          <img
-            src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1920&q=80"
-            className="absolute inset-0 w-full h-full object-cover z-0"
-            alt="medical background"
-          />
+        {/* 배경 이미지 레이어 */}
+        <img
+          src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1920&q=80"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-70 brightness-[0.5] contrast-[1.1]"
+          alt="medical background"
+        />
+        {/* 그라디언트 오버레이 */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050810]/30 via-transparent to-[#050810]/70 z-10" />
+        {/* Tech Grid 오버레이 */}
+        <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-screen z-10 pointer-events-none" />
+
+        {/* 콘텐츠 */}
+        <div className="relative z-20 flex flex-col items-center max-w-screen-xl mx-auto px-6 w-full">
+          {/* 타이틀 */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight"
+          >
+            <span className="hero-title-main block md:inline">U - PULSE</span>
+            <span className="hero-title-highlight ml-0 md:ml-4">/ DUAL</span>
+          </motion.h1>
+
+          {/* 부제 */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col items-center"
+          >
+            <div className="w-16 h-[2px] bg-primary mb-6 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+            <p className="text-slate-300 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl">
+              합리적인 피부미용 의료 장비, <span className="text-primary font-bold">그리고 최고의 선택</span>
+            </p>
+          </motion.div>
         </div>
-        <div className="relative z-20 max-w-screen-xl mx-auto">
-          <h1 className="text-3xl md:text-7xl font-bold leading-tight tracking-tight text-white mb-6 uppercase reveal-up">
-            U-Pulse / DUAL
-          </h1>
-          <p className="text-lg md:text-2xl text-white/90 font-medium max-w-3xl mx-auto reveal-up delay-100">
-            합리적인 피부미용 의료 장비,<br />그리고 최고의 선택
-          </p>
-        </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30">
-          <a
+
+        {/* 스크롤 유도 버튼 */}
+        <div className="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center">
+          <Link
             href="#u-pulse-difference"
+            aria-label="Scroll down"
             className="inline-flex justify-center items-center w-12 h-12 border border-white/20 rounded-full hover:bg-white hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-black/10 backdrop-blur-sm"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5 text-white group-hover:text-black transition"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white group-hover:text-black transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
-          </a>
+          </Link>
         </div>
       </section>
 
-      {/* U-Pulse Overview */}
-      <section
-        id="u-pulse-difference"
-        className="relative py-24 bg-white text-black overflow-hidden"
-      >
-        <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none">
-          <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-            <path
-              d="M-100,150 Q150,50 350,250 T850,50"
-              fill="none"
-              stroke="#E84A8A"
-              strokeWidth="1.5"
-            />
-            <path
-              d="M-100,450 Q250,350 450,550 T1050,350"
-              fill="none"
-              stroke="#00B7F1"
-              strokeWidth="1.5"
-            />
-          </svg>
-        </div>
+      {/* ② U-Pulse Overview (PICO-K Style) */}
+      <section id="u-pulse-difference" className="relative py-28 bg-[#020408] overflow-hidden border-t border-white/5">
+        {/* 배경 장식: 테크 도트 및 블루 블러 */}
+        <div className="absolute inset-0 bg-tech-dots opacity-20 mix-blend-screen pointer-events-none" />
+        <div className="absolute top-1/2 right-[5%] -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 blur-[130px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-start">
-            {/* Left Column: Features and Quotes */}
-            <div className="reveal-up z-20">
-              <div className="mb-14">
-                <h2 className="text-[32px] md:text-[44px] font-medium text-[#666] leading-[1.0] tracking-tight relative inline-block">
-                  <span className="text-gray-200 text-[80px] font-serif leading-none opacity-60 absolute -left-12 -top-2">
-                    “
-                  </span>
-                  <div className="whitespace-nowrap">
-                    The Difference of <span className="text-[#E84A8A] font-bold">High-Peak-Power</span>
-                  </div>
-                  <div className="whitespace-nowrap -mt-5">
-                    make a <span className="text-[#00B7F1] font-bold">Big Difference</span>
-                    <span className="text-gray-200 text-[80px] font-serif leading-none opacity-60 ml-2 align-bottom inline-block translate-y-6">
-                      ”
-                    </span>
-                  </div>
-                </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            {/* 좌측: 텍스트 및 카드 */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              {/* 배지 (블루 네온) */}
+              <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 shadow-[0_0_15px_rgba(0,183,241,0.1)]">
+                The Power of High-Peak
               </div>
 
-              <div className="mb-14">
-                <h3 className="text-[38px] md:text-[48px] font-black text-gray-900 mb-6 tracking-tighter">
-                  유펄스<span className="font-medium text-gray-300">는 다릅니다.</span>
-                </h3>
-                <div className="space-y-0.5 text-[17px] text-gray-500 font-medium leading-tight tracking-tight">
-                  <p>U-Pulse is a pioneer of fractional CO2 devices</p>
-                  <p>based on advanced technology.</p>
-                  <br />
-                  <p>Outstanding technology and reliable clinical</p>
-                  <p>data have been built over a long period of time.</p>
-                </div>
+              {/* 타이틀 */}
+              <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6 leading-tight">
+                <span className="hero-title-main">REVOLUTIONARY</span><br />
+                <span className="hero-title-highlight">U - PULSE</span>
+                <span className="hero-title-main"> TECHNOLOGY</span>
+              </h2>
+              <div className="w-20 h-[2px] bg-primary mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+
+              <p className="text-slate-400 text-lg font-medium leading-relaxed mb-12 max-w-xl">
+                최첨단 High-Peak-Power 기술을 통해 피부 깊숙이 정밀한 <br className="hidden md:block" />
+                에너지를 전달하여 탁월한 치료 효과와 빠른 회복을 선사합니다.
+              </p>
+
+              {/* 특징 카드 그리드 (세로 리스트 배치) */}
+              <div className="grid grid-cols-1 gap-4 max-w-lg">
+                {[
+                  { 
+                    label: 'Down Time', 
+                    title: '최소한의 Down Time', 
+                    icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318z' 
+                  },
+                  { 
+                    label: 'Recovery', 
+                    title: '빠른 회복', 
+                    icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' 
+                  },
+                  { 
+                    label: 'Pain/Swelling', 
+                    title: '통증 및 붓기 최소화', 
+                    icon: 'M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' 
+                  },
+                  { 
+                    label: 'Spot Size', 
+                    title: '작은 스팟 (80-100um)', 
+                    icon: 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z' 
+                  }
+                ].map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    viewport={{ once: true }}
+                    className="glass-panel p-5 flex items-center gap-6 hover:border-primary/50 transition duration-500 group cursor-default"
+                  >
+                    <div className="flex flex-col flex-shrink-0 items-center justify-center">
+                      <div className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center group-hover:bg-primary/10 group-hover:border-primary transition-all duration-500">
+                        <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={item.icon} />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="w-[1px] h-10 bg-white/10" />
+                    <span className="text-[16px] md:text-[18px] font-bold text-slate-200 group-hover:text-white transition whitespace-nowrap">{item.title}</span>
+                  </motion.div>
+                ))}
               </div>
+            </motion.div>
 
-              <div className="space-y-6 max-w-lg relative">
-                <div className="absolute left-[42px] top-10 bottom-10 w-[3px] bg-gray-200 z-0"></div>
-
-                {/* Feature 1: Down Time */}
-                <div className="flex items-center group cursor-pointer transition-all duration-500 hover:translate-x-4 relative z-10">
-                  <div className="w-[84px] h-[84px] shrink-0 rounded-full border-[3.5px] border-[#E84A8A] flex items-center justify-center bg-white shadow-[0_10px_25px_rgba(232,74,138,0.1)] z-20 group-hover:bg-[#E84A8A] transition-all duration-500">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-12 h-12 text-[#E84A8A] group-hover:text-white transition-colors"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.3"
-                    >
-                      <path d="M7 19c-1-2.5-1-6.5 2-9M12 21c-1.5-3.5-1.5-8.5 3-12"></path>
-                      <path d="M12 21c4.5-3.5 6.5-6.5 7-11S16 3 12 7c-4-4-7.5-2.5-7 2s2.5 7.5 7 12Z" />
-                      <circle cx="9" cy="11" r="0.5" fill="currentColor"></circle>
-                      <circle cx="15" cy="10" r="0.5" fill="currentColor"></circle>
-                    </svg>
-                  </div>
-                  <div className="relative -ml-8 flex-grow h-[64px] flex items-center">
-                    <div className="absolute inset-x-0 top-1 bottom-[-4px] bg-[#E84A8A]/10 transform -skew-x-[18deg] rounded-sm translate-x-1 translate-y-1"></div>
-                    <div className="absolute inset-0 bg-[#E84A8A] transform -skew-x-[18deg] rounded-sm"></div>
-                    <span className="relative z-10 pl-14 pr-8 text-white font-black text-[23px] tracking-tighter">
-                      최소한의 Down Time
-                    </span>
-                  </div>
-                </div>
-
-                {/* Feature 2: Fast Recovery */}
-                <div className="flex items-center group cursor-pointer transition-all duration-500 hover:translate-x-4 relative z-10">
-                  <div className="w-[84px] h-[84px] shrink-0 rounded-full border-[3.5px] border-[#E84A8A] flex items-center justify-center bg-white shadow-[0_10px_25px_rgba(232,74,138,0.1)] z-20 group-hover:bg-[#E84A8A] transition-all duration-500">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-12 h-12 text-[#E84A8A] group-hover:text-white transition-colors"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.3"
-                    >
-                      <circle cx="12" cy="12" r="9" />
-                      <path d="M12 7v5l3 2" />
-                      <path d="M19 4l1 1M5 4l-1 1" />
-                      <path d="M12 3a9 9 0 0 0-9 9M21 12a9 9 0 0 0-3-6.7" />
-                    </svg>
-                  </div>
-                  <div className="relative -ml-8 flex-grow h-[64px] flex items-center">
-                    <div className="absolute inset-x-0 top-1 bottom-[-4px] bg-[#E84A8A]/10 transform -skew-x-[18deg] rounded-sm translate-x-1 translate-y-1"></div>
-                    <div className="absolute inset-0 bg-[#E84A8A] transform -skew-x-[18deg] rounded-sm"></div>
-                    <span className="relative z-10 pl-14 pr-8 text-white font-black text-[23px] tracking-tighter">
-                      빠른 회복
-                    </span>
-                  </div>
-                </div>
-
-                {/* Feature 3: Pain/Swelling */}
-                <div className="flex items-center group cursor-pointer transition-all duration-500 hover:translate-x-4 relative z-10">
-                  <div className="w-[84px] h-[84px] shrink-0 rounded-full border-[3.5px] border-[#00B7F1] flex items-center justify-center bg-white shadow-[0_10px_25px_rgba(0,183,241,0.1)] z-20 group-hover:bg-[#00B7F1] transition-all duration-500">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-12 h-12 text-[#00B7F1] group-hover:text-white transition-colors"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.3"
-                    >
-                      <circle cx="12" cy="12" r="9" />
-                      <path d="M9 10l2 2m0-2l-2 2M13 10l2 2m0-2l-2 2" />
-                      <path d="M8 16s1.5 1 4 1 4-1 4-1" />
-                    </svg>
-                  </div>
-                  <div className="relative -ml-8 flex-grow h-[64px] flex items-center">
-                    <div className="absolute inset-x-0 top-1 bottom-[-4px] bg-[#00B7F1]/10 transform -skew-x-[18deg] rounded-sm translate-x-1 translate-y-1"></div>
-                    <div className="absolute inset-0 bg-[#00B7F1] transform -skew-x-[18deg] rounded-sm"></div>
-                    <span className="relative z-10 pl-14 pr-8 text-white font-black text-[23px] tracking-tighter">
-                      통증, 붓기 최소화
-                    </span>
-                  </div>
-                </div>
-
-                {/* Feature 4: Spot Size */}
-                <div className="flex items-center group cursor-pointer transition-all duration-500 hover:translate-x-4 relative z-10">
-                  <div className="w-[84px] h-[84px] shrink-0 rounded-full border-[3.5px] border-[#00B7F1] flex items-center justify-center bg-white shadow-[0_10px_25px_rgba(0,183,241,0.1)] z-20 group-hover:bg-[#00B7F1] transition-all duration-500">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-12 h-12 text-[#00B7F1] group-hover:text-white transition-colors"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.3"
-                    >
-                      <circle cx="12" cy="12" r="4" />
-                      <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1l2.1-2.1M17 7l2.1-2.1" />
-                    </svg>
-                  </div>
-                  <div className="relative -ml-8 flex-grow h-[64px] flex items-center">
-                    <div className="absolute inset-x-0 top-1 bottom-[-4px] bg-[#00B7F1]/10 transform -skew-x-[18deg] rounded-sm translate-x-1 translate-y-1"></div>
-                    <div className="absolute inset-0 bg-[#00B7F1] transform -skew-x-[18deg] rounded-sm"></div>
-                    <span className="relative z-10 pl-14 pr-8 text-white font-black text-[23px] tracking-tighter leading-tight">
-                      작은 스팟사이즈<br />
-                      <span className="text-base font-bold">80-100um</span>
-                    </span>
-                  </div>
-                </div>
+            {/* 우측: 제품 이미지 (블루 네온 글로우 배경) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="flex justify-center lg:justify-end relative"
+            >
+              <div className="relative group">
+                {/* 배경 광채 */}
+                <div className="absolute inset-0 bg-primary/20 blur-[80px] rounded-full scale-110 opacity-30 group-hover:opacity-50 transition duration-1000" />
+                <img
+                  src="images/machine/유펄스 사진.png"
+                  className="max-w-full h-auto relative z-10 drop-shadow-[0_45px_100px_rgba(0,0,0,0.7)] group-hover:scale-[1.03] transition duration-1000 cursor-zoom-in"
+                  alt="U-Pulse 장비"
+                />
+                
+                {/* 하단 그림자 */}
+                <div className="absolute inset-x-0 bottom-0 h-10 bg-black/40 blur-[40px] rounded-full translate-y-8" />
               </div>
-            </div>
-
-            {/* Right Column: Product Image */}
-            <div className="relative flex justify-center lg:justify-start reveal-up delay-300 self-center mt-12 lg:mt-0">
-              <img
-                src="images/machine/유펄스 사진.png"
-                alt="U-Pulse Detail"
-                className="w-auto h-auto max-h-[80vh] drop-shadow-[0_45px_100px_rgba(0,0,0,0.1)] scale-100 lg:scale-[1.15] transform lg:translate-x-40 lg:translate-y-10 z-10"
-              />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
