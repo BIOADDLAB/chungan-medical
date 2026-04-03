@@ -66,7 +66,7 @@ export default function UPulsePage() {
       </section>
 
       {/* ② U-Pulse Overview (PICO-K Style) */}
-      <section id="u-pulse-difference" className="relative py-28 bg-[#020408] overflow-hidden border-t border-white/5">
+      <section id="u-pulse-difference" className="relative py-28 bg-[#020408] overflow-hidden">
         {/* 배경 장식: 테크 도트 및 블루 블러 */}
         <div className="absolute inset-0 bg-tech-dots opacity-20 mix-blend-screen pointer-events-none" />
         <div className="absolute top-1/2 right-[5%] -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 blur-[130px] rounded-full pointer-events-none" />
@@ -172,7 +172,7 @@ export default function UPulsePage() {
       </section>
 
       {/* ③ High-Peak-Power Pulsed Technology (Full Stable Container) */}
-      <section id="u-pulse-tech" className="relative py-32 bg-[#020408] overflow-hidden border-t border-white/5">
+      <section id="u-pulse-tech" className="relative py-32 bg-[#020408] overflow-hidden">
         {/* 배경 장식 요소 */}
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
@@ -184,7 +184,7 @@ export default function UPulsePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mb-14 flex flex-col items-center"
+            className="mb-16 flex flex-col items-center"
           >
             {/* 배지 */}
             <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
@@ -192,11 +192,11 @@ export default function UPulsePage() {
             </div>
 
             {/* 타이틀 */}
-            <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-6 text-center">
+            <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-6 text-left">
               <span className="hero-title-main uppercase">REVOLUTIONARY</span><br />
               <span className="hero-title-highlight uppercase">HIGH - PEAK POWER</span>
             </h3>
-            <div className="w-20 h-[2px] bg-primary mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+            <div className="w-20 h-[2px] bg-primary mb-8" />
           </motion.div>
 
           {/* 중앙: 대형 펄스 그래프 */}
@@ -205,7 +205,7 @@ export default function UPulsePage() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="relative w-full max-w-7xl mx-auto aspect-[16/6] md:aspect-[21/9] bg-black/60 rounded-[3rem] border border-white/10 p-10 md:p-20 backdrop-blur-2xl overflow-visible shadow-[0_40px_120px_rgba(0,0,0,0.8)] mb-16"
+            className="relative w-full max-w-7xl mx-auto aspect-[16/6] md:aspect-[21/9] overflow-visible mb-16 -mt-40"
           >
             <svg viewBox="0 0 1000 300" className="w-full h-full overflow-visible">
               <defs>
