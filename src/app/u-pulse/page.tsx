@@ -184,17 +184,19 @@ export default function UPulsePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mb-24 flex flex-col items-center lg:items-start"
+            className="mb-24 flex flex-col items-center"
           >
+            {/* 배지 */}
             <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
               The Power of High-Peak
             </div>
 
-            <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
+            {/* 타이틀 */}
+            <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-6 text-center">
               <span className="hero-title-main uppercase">REVOLUTIONARY</span><br />
-              <span className="hero-title-highlight">HIGH - PEAK POWER</span>
+              <span className="hero-title-highlight uppercase">HIGH - PEAK POWER</span>
             </h3>
-            <div className="w-20 h-[2px] bg-primary mt-4 mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+            <div className="w-20 h-[2px] bg-primary mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
           </motion.div>
 
           {/* 중앙: 대형 펄스 그래프 */}
