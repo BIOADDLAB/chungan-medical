@@ -184,7 +184,7 @@ export default function UPulsePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mb-24 flex flex-col items-center"
+            className="mb-14 flex flex-col items-center"
           >
             {/* 배지 */}
             <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
@@ -205,7 +205,7 @@ export default function UPulsePage() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="relative w-full max-w-7xl mx-auto aspect-[16/6] md:aspect-[21/9] bg-black/60 rounded-[3rem] border border-white/10 p-10 md:p-20 backdrop-blur-2xl overflow-visible shadow-[0_40px_120px_rgba(0,0,0,0.8)] mb-32"
+            className="relative w-full max-w-7xl mx-auto aspect-[16/6] md:aspect-[21/9] bg-black/60 rounded-[3rem] border border-white/10 p-10 md:p-20 backdrop-blur-2xl overflow-visible shadow-[0_40px_120px_rgba(0,0,0,0.8)] mb-16"
           >
             <svg viewBox="0 0 1000 300" className="w-full h-full overflow-visible">
               <defs>
