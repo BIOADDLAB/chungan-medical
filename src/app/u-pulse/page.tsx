@@ -34,7 +34,7 @@ export default function UPulsePage() {
             className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight"
           >
             <span className="hero-title-main block md:inline">U - PULSE</span>
-            <span className="hero-title-highlight ml-0 md:ml-4">/ DUAL</span>
+            <span className="hero-title-highlight ml-0 md:ml-4">DUAL</span>
           </motion.h1>
 
           {/* 부제 */}
@@ -75,20 +75,20 @@ export default function UPulsePage() {
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-            {/* 좌측: 텍스트 및 카드 */}
+            {/* 좌측: 텍스트 및 카드 (Revolutionary Header System) */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              {/* 배지 (블루 네온) */}
-              <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 shadow-[0_0_15px_rgba(0,183,241,0.1)]">
-                The Power of High-Peak
+              {/* 배지 */}
+              <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
+                U-Pulse Technology
               </div>
 
               {/* 타이틀 */}
-              <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
                 <span className="hero-title-main">REVOLUTIONARY</span><br />
                 <span className="hero-title-highlight">U - PULSE</span>
                 <span className="hero-title-main"> TECHNOLOGY</span>
@@ -96,32 +96,32 @@ export default function UPulsePage() {
               <div className="w-20 h-[2px] bg-primary mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
 
               <p className="text-slate-400 text-lg font-medium leading-relaxed mb-12 max-w-xl">
-                최첨단 High-Peak-Power 기술을 통해 피부 깊숙이 정밀한 <br className="hidden md:block" />
+                최첨단 High-Peak-Power 기술을 통해 피부 깊숙이 정밀한<br className="hidden md:block" />
                 에너지를 전달하여 탁월한 치료 효과와 빠른 회복을 선사합니다.
               </p>
 
               {/* 특징 카드 그리드 (세로 리스트 배치) */}
               <div className="grid grid-cols-1 gap-4 max-w-lg">
                 {[
-                  { 
-                    label: 'Down Time', 
-                    title: '최소한의 Down Time', 
-                    icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318z' 
+                  {
+                    label: 'Down Time',
+                    title: '최소한의 Down Time',
+                    icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318z'
                   },
-                  { 
-                    label: 'Recovery', 
-                    title: '빠른 회복', 
-                    icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' 
+                  {
+                    label: 'Recovery',
+                    title: '빠른 회복',
+                    icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'
                   },
-                  { 
-                    label: 'Pain/Swelling', 
-                    title: '통증 및 붓기 최소화', 
-                    icon: 'M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' 
+                  {
+                    label: 'Pain/Swelling',
+                    title: '통증 및 붓기 최소화',
+                    icon: 'M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
                   },
-                  { 
-                    label: 'Spot Size', 
-                    title: '작은 스팟 (80-100um)', 
-                    icon: 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z' 
+                  {
+                    label: 'Spot Size',
+                    title: '작은 스팟 (80-100um)',
+                    icon: 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
                   }
                 ].map((item, idx) => (
                   <motion.div
@@ -135,12 +135,12 @@ export default function UPulsePage() {
                     <div className="flex flex-col flex-shrink-0 items-center justify-center">
                       <div className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center group-hover:bg-primary/10 group-hover:border-primary transition-all duration-500">
                         <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={item.icon} />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={item.icon} />
                         </svg>
                       </div>
                     </div>
-                    <div className="w-[1px] h-10 bg-white/10" />
-                    <span className="text-[16px] md:text-[18px] font-bold text-slate-200 group-hover:text-white transition whitespace-nowrap">{item.title}</span>
+                    <div className="w-[1px] h-8 bg-primary/20" />
+                    <span className="text-xl font-bold text-white group-hover:text-primary transition">{item.title}</span>
                   </motion.div>
                 ))}
               </div>
@@ -162,7 +162,7 @@ export default function UPulsePage() {
                   className="max-w-full h-auto relative z-10 drop-shadow-[0_45px_100px_rgba(0,0,0,0.7)] group-hover:scale-[1.03] transition duration-1000 cursor-zoom-in"
                   alt="U-Pulse 장비"
                 />
-                
+
                 {/* 하단 그림자 */}
                 <div className="absolute inset-x-0 bottom-0 h-10 bg-black/40 blur-[40px] rounded-full translate-y-8" />
               </div>
@@ -171,136 +171,169 @@ export default function UPulsePage() {
         </div>
       </section>
 
-      {/* Technical Detail 01: High-Peak-Power Graph */}
-      <section id="tech-u-power" className="py-24 bg-[#0C111D] text-white relative overflow-hidden">
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-40">
-          <div className="absolute top-[-10%] left-[-10%] w-[120%] h-[120%] bg-gradient-to-br from-[#1E293B] via-transparent to-transparent"></div>
-          <div className="absolute top-[20%] left-[25%] w-[700px] h-[500px] bg-[#161d2b] skew-y-3 rotate-3 opacity-30 border border-white/5 shadow-2xl"></div>
-          <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#0C111D] to-transparent"></div>
-        </div>
+      {/* ③ High-Peak-Power Pulsed Technology (Full Stable Container) */}
+      <section id="u-pulse-tech" className="relative py-32 bg-[#020408] overflow-hidden border-t border-white/5">
+        {/* 배경 장식 요소 */}
+        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
 
-        <div className="max-w-screen-xl mx-auto px-6 relative z-10 text-center">
-          <h2 className="text-[30px] md:text-[40px] font-extralight mb-10 tracking-tight reveal-up">
-            <span className="text-[#00B7F1] font-bold">Deeper</span>,{' '}
-            <span className="text-[#00B7F1] font-bold">Better</span> Effect,{' '}
-            <span className="text-[#00B7F1] font-bold">Faster</span> Recovery
-          </h2>
-
-          <div className="max-w-4xl mx-auto mb-16 reveal-up">
-            <div className="mb-10 font-medium text-[20px] tracking-tight text-white/80">
-              High-Peak-Power
+        <div className="max-w-screen-2xl mx-auto px-6 relative z-10">
+          {/* 상단: 대형 타이틀 디자인 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-24 flex flex-col items-center lg:items-start"
+          >
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
+              The Power of High-Peak
             </div>
 
-            <div className="relative pt-10 pb-4 px-10">
-              <div className="absolute left-6 top-20 text-sm font-bold text-white/40">W</div>
-              <div className="absolute left-[11%] top-0 text-[15px] font-bold text-white/90">100 W</div>
+            <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
+              <span className="hero-title-main uppercase">REVOLUTIONARY</span><br />
+              <span className="hero-title-highlight">HIGH - PEAK POWER</span>
+            </h3>
+            <div className="w-20 h-[2px] bg-primary mt-4 mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+          </motion.div>
 
-              <svg className="w-full h-[300px]" viewBox="0 0 1000 300" preserveAspectRatio="none">
-                <defs>
-                  <linearGradient id="p-grad-1" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: '#845A8B', stopOpacity: 0.8 }} />
-                    <stop offset="100%" style={{ stopColor: '#845A8B', stopOpacity: 0.05 }} />
-                  </linearGradient>
-                  <linearGradient id="p-grad-2" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: '#715D8F', stopOpacity: 0.7 }} />
-                    <stop offset="100%" style={{ stopColor: '#715D8F', stopOpacity: 0.05 }} />
-                  </linearGradient>
-                  <linearGradient id="p-grad-3" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: '#FFFFFF', stopOpacity: 0.3 }} />
-                    <stop offset="100%" style={{ stopColor: '#FFFFFF', stopOpacity: 0 }} />
-                  </linearGradient>
-                  <linearGradient id="p-grad-4" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: '#5D799B', stopOpacity: 0.5 }} />
-                    <stop offset="100%" style={{ stopColor: '#5D799B', stopOpacity: 0.05 }} />
-                  </linearGradient>
-                  <linearGradient id="p-grad-5" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: '#4A909F', stopOpacity: 0.7 }} />
-                    <stop offset="100%" style={{ stopColor: '#4A909F', stopOpacity: 0.05 }} />
-                  </linearGradient>
-                  <linearGradient id="p-grad-6" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: '#32A2B2', stopOpacity: 0.8 }} />
-                    <stop offset="100%" style={{ stopColor: '#32A2B2', stopOpacity: 0.05 }} />
-                  </linearGradient>
-                  <filter id="pulse-glow" x="-50%" y="-50%" width="200%" height="200%">
-                    <feGaussianBlur stdDeviation="4" result="blur" />
-                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                  </filter>
-                </defs>
+          {/* 중앙: 대형 펄스 그래프 */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="relative w-full max-w-7xl mx-auto aspect-[16/6] md:aspect-[21/9] bg-black/60 rounded-[3rem] border border-white/10 p-10 md:p-20 backdrop-blur-2xl overflow-visible shadow-[0_40px_120px_rgba(0,0,0,0.8)] mb-32"
+          >
+            <svg viewBox="0 0 1000 300" className="w-full h-full overflow-visible">
+              <defs>
+                <linearGradient id="pulse-gradient-premium" x1="0" y1="1" x2="0" y2="0">
+                  <stop offset="0%" stopColor="#00B7F1" stopOpacity="0.05" />
+                  <stop offset="50%" stopColor="#00B7F1" stopOpacity="0.5" />
+                  <stop offset="100%" stopColor="#00B7F1" stopOpacity="1" />
+                </linearGradient>
+                <filter id="point-glow-large">
+                  <feGaussianBlur stdDeviation="8" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
 
-                <line x1="75" y1="280" x2="925" y2="280" stroke="white" strokeWidth="1.2" opacity="0.4" />
+              <line x1="50" y1="230" x2="950" y2="230" stroke="white" strokeOpacity="0.1" strokeWidth="1" />
+              <line x1="50" y1="30" x2="50" y2="230" stroke="white" strokeOpacity="0.1" strokeWidth="1" />
+              <text x="35" y="45" className="fill-white/40 text-[12px] font-bold tracking-widest" textAnchor="end">W</text>
+              <text x="145" y="25" className="fill-white font-black text-[14px] tracking-tight">100 W</text>
 
-                <path d="M75,280 C95,280 115,60 125,60 C135,60 155,280 175,280" fill="url(#p-grad-1)" />
-                <circle cx="125" cy="60" r="2.5" fill="white" filter="url(#pulse-glow)" />
+              {[...Array(6)].map((_, i) => (
+                <motion.g key={i}>
+                  <motion.path
+                    d={`M ${120 + i * 140} 230 C ${150 + i * 140} 230 ${165 + i * 140} 40 ${185 + i * 140} 40 C ${205 + i * 140} 40 ${220 + i * 140} 230 ${250 + i * 140} 230`}
+                    fill="url(#pulse-gradient-premium)"
+                    stroke="#00B7F1"
+                    strokeWidth="3"
+                    initial={{ pathLength: 0, opacity: 0 }}
+                    whileInView={{ pathLength: 1, opacity: 1 }}
+                    transition={{ duration: 1.5, delay: i * 0.15 + 0.5, ease: "easeInOut" }}
+                    viewport={{ once: true }}
+                    className="drop-shadow-[0_0_20px_rgba(0,183,241,0.4)] saturate-150"
+                  />
+                  <motion.circle
+                    cx={185 + i * 140}
+                    cy={40}
+                    r="4"
+                    fill="white"
+                    filter="url(#point-glow-large)"
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: i * 0.15 + 1.5 }}
+                    viewport={{ once: true }}
+                  />
+                </motion.g>
+              ))}
 
-                <path d="M225,280 C245,280 265,60 275,60 C285,60 305,280 325,280" fill="url(#p-grad-2)" />
-                <circle cx="275" cy="60" r="2.5" fill="white" filter="url(#pulse-glow)" />
+              <motion.g
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 2.8 }}
+                viewport={{ once: true }}
+              >
+                <path d="M 680 255 L 820 255" stroke="white" strokeWidth="1.5" strokeDasharray="6 6" opacity="0.3" />
+                <path d="M 680 245 L 680 265 M 820 245 L 820 265" stroke="#00B7F1" strokeWidth="3" opacity="1" />
+                <text x="750" y="295" className="fill-primary font-black text-[20px] tracking-tight" textAnchor="middle">100 ~ 200 us</text>
+                <text x="750" y="320" className="fill-white/30 text-[12px] font-bold uppercase tracking-[0.4em]" textAnchor="middle">Duration</text>
+              </motion.g>
+            </svg>
+          </motion.div>
 
-                <path d="M375,280 C395,280 415,60 425,60 C435,60 455,280 475,280" fill="url(#p-grad-3)" />
-                <circle cx="425" cy="60" r="2.5" fill="white" filter="url(#pulse-glow)" />
-
-                <path d="M525,280 C545,280 565,60 575,60 C585,60 605,280 625,280" fill="url(#p-grad-4)" />
-                <circle cx="575" cy="60" r="2.5" fill="white" filter="url(#pulse-glow)" />
-
-                <path d="M675,280 C695,280 715,60 725,60 C735,60 755,280 775,280" fill="url(#p-grad-5)" />
-                <circle cx="725" cy="60" r="2.5" fill="white" filter="url(#pulse-glow)" />
-
-                <path d="M825,280 C845,280 865,60 875,60 C885,60 905,280 925,280" fill="url(#p-grad-6)" />
-                <circle cx="875" cy="60" r="2.5" fill="white" filter="url(#pulse-glow)" />
-              </svg>
-
-              <div className="relative w-full h-24 mt-4">
-                <div className="absolute left-[67.5%] w-[10%] h-12">
-                  <div className="absolute left-0 right-0 top-0 h-[1.5px] bg-white/60">
-                    <div className="absolute left-0 top-[-4px] w-2.5 h-2.5 border-l border-t border-white/80 rotate-[-45deg]"></div>
-                    <div className="absolute right-0 top-[-4px] w-2.5 h-2.5 border-r border-t border-white/80 rotate-[45deg]"></div>
-                  </div>
-                  <div className="absolute left-1/2 top-0 w-[1.5px] h-12 bg-white/40 -translate-x-1/2"></div>
-                  <div className="absolute left-1/2 top-14 -translate-x-1/2 whitespace-nowrap text-center">
-                    <div className="text-[17px] font-bold text-white tracking-widest leading-none">
-                      100 ~ 200 us
-                    </div>
-                    <div className="text-[11px] text-white/50 uppercase tracking-[0.25em] mt-2 font-medium">
-                      Duration
-                    </div>
+          {/* 하단: 상세 정보 블록 */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="glass-panel p-12 relative overflow-hidden group border-primary/20"
+            >
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 blur-[60px] rounded-full group-hover:bg-primary/20 transition-all duration-700" />
+              <div className="relative z-10">
+                <span className="text-primary/60 text-[11px] font-bold tracking-[0.4em] uppercase mb-4 block">Engineered Precision</span>
+                <div className="flex flex-col gap-2">
+                  <span className="text-white/40 text-lg font-medium tracking-tight">Peak Power</span>
+                  <h4 className="text-[44px] md:text-[56px] font-black text-white tracking-tighter leading-none mb-4">
+                    800 ~ 1000 W
+                  </h4>
+                  <div className="inline-flex items-center gap-2">
+                    <div className="w-8 h-[2px] bg-primary" />
+                    <span className="text-[22px] font-bold text-primary tracking-tight uppercase">Ultra-Pulse</span>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto text-left py-6 reveal-up">
-            <div className="bg-[#1C2333]/90 border border-white/5 rounded-md p-10 shadow-2xl backdrop-blur-md">
-              <div className="text-[17px] font-medium text-white/50 mb-3 tracking-tight">
-                Peak Power
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="flex flex-col gap-8"
+            >
+              <div className="space-y-4">
+                <p className="text-white text-xl md:text-2xl font-bold leading-snug tracking-tight">
+                  유펄스는 <span className="text-primary underline underline-offset-8 decoration-primary/30">울트라펄스</span>와 높은 <br className="hidden md:block" />
+                  <span className="text-primary hover:text-white transition cursor-default">피크파워</span>를 통해 한 차원 높은 치료 경험을 제공합니다.
+                </p>
+                <div className="w-12 h-[1px] bg-white/20" />
+                <p className="text-slate-400 text-lg md:text-[19px] leading-relaxed font-medium tracking-tight">
+                  높은 피크파워는 주변 조직의 <span className="text-white">열 손상(Thermal Damage)</span>을 <br className="hidden md:block" />
+                  최소화하여, 환자가 느끼는 통증은 줄이고 회복 속도는 <br className="hidden md:block" />
+                  압도적으로 단축시키는 핵심 기술입니다.
+                </p>
               </div>
-              <div className="text-[44px] font-black text-white leading-none mb-3 tracking-tighter">
-                800 ~ 1000 W
-              </div>
-              <div className="text-[22px] font-bold text-[#00B7F1]/80">Ultra-Pulse</div>
-            </div>
-
-            <div>
-              <p className="text-[19px] leading-[1.65] text-white/80 font-normal tracking-tight">
-                유펄스는 울트라펄스와 높은 피크파워를 가지고 있습니다.<br className="hidden lg:block" />
-                높은 피크파워는 적은 <span className="text-[#E84A8A] font-bold">thermal damage</span>를 주어 환자들에게
-                <br className="hidden lg:block" />
-                통증을 덜 느끼고 빠른 회복을 가져다 줍니다.
-              </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Technical Detail 02: Stable Ultra-Pulse Secret */}
       <section id="tech-social-secret" className="py-24 bg-[#0C111D] text-white overflow-hidden">
-        <div className="max-w-screen-xl mx-auto px-6 text-center">
-          <h2 className="text-[34px] md:text-[48px] font-bold mb-28 tracking-tighter reveal-up">
-            <span className="text-[#E84A8A]">Stable</span>,{' '}
-            <span className="text-[#E84A8A]">Ultra-Pulse</span>,{' '}
-            <span className="text-[#E84A8A]">Secret</span>{' '}
-            <span className="text-white/60">of</span> <span className="text-white/80">All</span>{' '}
-            <span className="text-white/60">the</span> <span className="text-[#E84A8A]">Thing</span>
-          </h2>
+        <div className="max-w-screen-xl mx-auto px-6 flex flex-col items-center">
+          {/* Revolutionary Header System (Centered) */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-24 flex flex-col items-center"
+          >
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
+              Stable Tech Secret
+            </div>
+
+            <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-10 text-center">
+              <span className="hero-title-main">STABLE</span><br />
+              <span className="hero-title-highlight uppercase">Ultra - Pulse</span>
+            </h3>
+            <div className="w-20 h-[2px] bg-primary mt-4 mb-14 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center max-w-5xl mx-auto text-left reveal-up">
             <div className="relative h-[480px] flex items-center justify-center">
@@ -320,14 +353,14 @@ export default function UPulsePage() {
               <div className="absolute w-24 h-24 bg-white/20 blur-[50px] rounded-full"></div>
             </div>
             <div className="space-y-8">
-              <h3 className="text-[40px] font-black text-white leading-tight tracking-tighter">
+              <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight">
                 안정적인 울트라펄스
               </h3>
-              <div className="text-[20px] leading-[1.8] text-white/70 space-y-2">
+              <div className="text-lg md:text-xl font-medium leading-relaxed text-slate-400 space-y-2">
                 <p>
-                  SNJ만의 <span className="text-white font-bold">파워보드, 높은 파워의 글래스 튜브,</span>
+                  SNJ만의 <span className="text-primary font-bold">파워보드, 높은 파워의 글래스 튜브,</span>
                   <br />
-                  <span className="text-white font-bold">높은 볼트의 레귤레이터</span> 3박자가 맞아 이루어 낸
+                  <span className="text-primary font-bold">높은 볼트의 레귤레이터</span> 3박자가 맞아 이루어 낸
                   <br />
                   타사와는 차별화 된 안정적인 울트라펄스
                 </p>
@@ -342,11 +375,25 @@ export default function UPulsePage() {
         <div className="max-w-screen-xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal-up">
             <div className="space-y-4">
-              <h2 className="text-[26px] md:text-[32px] font-bold text-white tracking-tight flex items-center">
-                <span className="w-1.5 h-1.5 rounded-full bg-white mr-4"></span>
-                유펄스 줌핸드피스 1-5단계
-              </h2>
-              <div className="text-[17px] md:text-[18px] leading-[1.7] text-white/60 font-medium">
+              {/* Revolutionary Header System */}
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="mb-12 flex flex-col items-start"
+              >
+                <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
+                  Precision Zoom
+                </div>
+
+                <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
+                  <span className="hero-title-main">VERSATILE</span><br />
+                  <span className="hero-title-highlight uppercase">Zoom Handpiece</span>
+                </h3>
+                <div className="w-20 h-[2px] bg-primary mt-4 mb-10 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+              </motion.div>
+              <div className="text-lg md:text-xl font-medium leading-relaxed text-slate-400">
                 <p>1단계 (0.2mm) 부터 5단계</p>
                 <p>(1.3mm) 까지 핸드피스 하나로</p>
                 <p>다양한 스팟사이즈 변동 가능</p>
