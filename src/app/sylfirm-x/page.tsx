@@ -7,11 +7,11 @@ import Link from 'next/link';
 
 export default function SylfirmXPage() {
   return (
-    <main className="bg-[#020408] min-h-screen">
+    <main className="bg-[#050810] min-h-screen">
       {/* ① Hero Section (Standard Tech Style) */}
       <section
         id="hero"
-        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-[#020408]"
+        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-[#050810]"
       >
         <img
           src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1920&q=80"
@@ -59,7 +59,7 @@ export default function SylfirmXPage() {
       </section>
 
       {/* ② Sylfirm-X Overview Section (Orchestration Standard) */}
-      <section id="content" className="relative py-28 bg-[#020408] overflow-hidden">
+      <section id="content" className="relative py-28 bg-[#050810] overflow-hidden">
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
         <div className="absolute bottom-0 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
@@ -422,47 +422,93 @@ export default function SylfirmXPage() {
       </section>
 
       {/* ④ Pricing Section (Orchestration Standard) */}
-      <section id="pricing" className="relative py-28 bg-[#020408] overflow-hidden border-t border-white/5">
-        <div className="max-w-screen-xl mx-auto px-6 relative z-10 text-center">
-          <div className="mb-14">
+      <section id="pricing" className="relative py-28 bg-[#050810] overflow-hidden">
+        <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          
+          {/* Section Header */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
             <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">PRICING POLICY</div>
             <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-8 uppercase text-white">SYLFIRM X 시술 수가</h2>
             <div className="w-20 h-[2px] bg-primary mx-auto mb-8 shadow-[0_0_10px_rgba(0,183,241,0.5)]" />
-            <div className="text-slate-400 text-sm md:text-base font-medium leading-relaxed max-w-3xl mx-auto">
-              <p>서울, 경기 평균 수가로 지역 및 원내 구비 장비에 따라 상이합니다.</p>
-              <p>아래 사항은 예시로 병원에 맞는 장비 및 횟수로 조정하시면 됩니다.</p>
+            <div className="text-slate-400 text-sm md:text-base font-medium leading-relaxed max-w-3xl mx-auto break-keep opacity-80">
+              서울, 경기 평균 수가로 지역 및 원내 구비 장비에 따라 상이합니다.<br />
+              아래 사항은 예시로 병원에 맞는 장비 및 횟수로 조정하시면 됩니다.
             </div>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left uppercase font-inter">
-            <div className="glass-panel p-8">
-              <h3 className="text-primary text-xs font-black mb-4 uppercase">SINGLE TREATMENT</h3>
-              <p className="text-2xl font-black text-white mb-6">실펌X 단독 시술 1회</p>
-              <div className="text-4xl font-black text-white mb-8">25~30<span className="text-lg ml-1">만</span></div>
-              <div className="text-[11px] text-slate-500 font-medium leading-relaxed font-sans normal-case">
-                * CW모드로 리프팅 시술 시 수가 상향 가능<br />
-                * 팁 값 별도 측정 가능
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            {/* Left: Highlight Card (Single Treatment) */}
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="lg:col-span-4 glass-panel p-10 flex flex-col items-center justify-center text-center min-h-[400px] border-primary/30 bg-primary/5"
+            >
+              <h3 className="text-2xl font-black text-white mb-4 break-keep">실펌X 단독<br />시술 1회</h3>
+              <div className="flex items-baseline gap-1 mb-8">
+                <span className="text-5xl font-black text-white">25~30</span>
+                <span className="text-xl font-bold text-slate-400">만</span>
               </div>
-            </div>
-            <div className="glass-panel p-8 border-primary/30 bg-primary/5">
-              <h3 className="text-primary text-xs font-black mb-4 uppercase">COMBINATION A</h3>
-              <p className="text-2xl font-black text-white mb-6">미백/홍조 복합 솔루션</p>
-              <div className="text-4xl font-black text-white mb-8">40~45<span className="text-lg ml-1">만</span></div>
-              <div className="text-[11px] text-slate-300 font-medium leading-relaxed font-sans normal-case">
-                실펌X + 토닝/레이저 + 특수 진정 관리 포함
+              <div className="space-y-2 text-[12px] text-slate-500 font-medium leading-relaxed font-sans mt-4 border-t border-white/10 pt-6 w-full">
+                <p className="break-keep">* CW모드로 리프팅 시술 시 시가 더 높음</p>
+                <p className="break-keep">* 단독 시술 수가가 낮은 병원의 경우 TIP값 별도 측정</p>
               </div>
-            </div>
-            <div className="glass-panel p-8">
-              <h3 className="text-primary text-xs font-black mb-4 uppercase">COMBINATION B</h3>
-              <p className="text-2xl font-black text-white mb-6">아기 피부 리페어</p>
-              <div className="text-4xl font-black text-white mb-8">60~80<span className="text-lg ml-1">만</span></div>
-              <div className="text-[11px] text-slate-500 font-medium leading-relaxed font-sans normal-case">
-                실펌X + 스킨부스터/PRP + 재생 관리 포함
+            </motion.div>
+
+            {/* Right: Detailed List Grid */}
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0"
+            >
+              {/* Detailed Pricing Column 1 */}
+              <div className="flex flex-col">
+                <PricingItem title="미백실펌X(기미,색소)" sub="실펌X + 토닝 + 미벽/진정관리" price="45" />
+                <PricingItem title="홍조실펌X" sub="실펌X + V레이저 / 홍조레이저 + 진정관리" price="40" />
+                <PricingItem title="물광실펌X" sub="실펌X + Skin Booster (*부스터에 따라 가격 상이)" price="60" />
+                <PricingItem title="물광실펌X (Special)" sub="실펌X + 스킨보톡스 + LDM + 재생관리" price="50" />
+                <PricingItem title="아기실펌X" sub="실펌X + 프락셀 + PRP" price="80" />
               </div>
-            </div>
+
+              {/* Detailed Pricing Column 2 */}
+              <div className="flex flex-col">
+                <PricingItem title="색소" sub="실펌X 3회 + 토닝 5회 + 재생관리 5회" price="165" />
+                <PricingItem title="홍조" sub="실펌X 5회 + 롱펄스레이저 5회 + 진정관리 5회" price="185" />
+                <PricingItem title="모공 / 여드름" sub="나비존 실펌X 시술 1회" price="15" />
+                <PricingItem title="모공 / 여드름 (전체)" sub="실펌X(얼굴전체) + 아쿠아필 + 압출 + 진정관리" price="50" />
+                <PricingItem title="탄력 / 리프팅" sub="실펌X + HIFU + 보톡스 + 재생관리" price="80" />
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </section>
     </main>
+  );
+}
+
+// ─── Sub-Components ─────────────────────────────────────────────────────────
+
+function PricingItem({ title, sub, price }: { title: string; sub: string; price: string }) {
+  return (
+    <div className="flex justify-between items-center py-6 border-b border-white/10 group hover:bg-white/[0.02] transition-colors px-2">
+      <div className="flex flex-col gap-1">
+        <h4 className="text-white font-bold text-[15px] md:text-[17px] tracking-tight">{title}</h4>
+        <p className="text-slate-500 text-[12px] md:text-[13px] font-medium tracking-tight uppercase">{sub}</p>
+      </div>
+      <div className="flex items-baseline gap-1 shrink-0 ml-4">
+        <span className="text-xl md:text-2xl font-black text-primary">{price}</span>
+        <span className="text-[12px] font-bold text-slate-500">만</span>
+      </div>
+    </div>
   );
 }
