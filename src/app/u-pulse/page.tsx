@@ -300,8 +300,8 @@ export default function UPulsePage() {
             >
               <div className="space-y-4">
                 <p className="text-white text-xl md:text-2xl font-bold leading-snug tracking-tight">
-                  유펄스는 <span className="text-primary underline underline-offset-8 decoration-primary/30">울트라펄스</span>와 높은 <br className="hidden md:block" />
-                  <span className="text-primary hover:text-white transition cursor-default">피크파워</span>를 통해 한 차원 높은 치료 경험을 제공합니다.
+                  유펄스는 <span className="text-primary">울트라펄스</span>와 높은 <br className="hidden md:block" />
+                  <span className="text-primary">피크파워</span>를 통해 한 차원 높은 치료 경험을 제공합니다.
                 </p>
                 <div className="w-12 h-[1px] bg-white/20" />
                 <p className="text-slate-400 text-lg md:text-[19px] leading-relaxed font-medium tracking-tight">
