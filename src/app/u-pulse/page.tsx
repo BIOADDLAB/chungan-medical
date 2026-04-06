@@ -619,292 +619,397 @@ export default function UPulsePage() {
         </div>
       </section>
 
+      {/* Section: Before & After - Tech Enhanced */}
+      <section id="u-pulse-before-after" className="py-28 bg-[#020408] text-white overflow-hidden relative">
+        {/* Tech Decor Background */}
+        <div className="absolute inset-0 bg-tech-dots opacity-20 mix-blend-screen pointer-events-none" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          {/* Header section with Tech Label - Exact Match to PICO-K TECH 01 */}
+          <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
+            <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap uppercase">CLINICAL DATA</span>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              style={{ originX: 0 }}
+              className="h-[1px] w-[500%] bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none shadow-[0_0_15px_rgba(0,183,241,0.2)]"
+            />
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-14 text-left"
+          >
+            <div className="mb-0">
+              <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4">
+                <span className="hero-title-main">BEFORE &</span><br />
+                <span className="hero-title-highlight uppercase">AFTER</span>
+              </h2>
+            </div>
+          </motion.div>
 
 
-      {/* Section: Before & After */}
-      <section id="u-pulse-before-after" className="py-24 bg-[#0C111D] text-white overflow-hidden">
-        <div className="max-w-screen-xl mx-auto px-6">
-          <h2 className="text-[26px] md:text-[32px] font-bold text-white mb-16 tracking-tight flex items-center reveal-up">
-            <span className="w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-white mr-4"></span>
-            Before & After
-          </h2>
+          {/* Grid Layout (Restored 6:4:5:5 structure with premium tech styling) */}
+          <div className="grid grid-cols-1 lg:grid-cols-11 gap-y-24 lg:gap-x-12 px-2 md:px-0">
 
-          <div className="grid grid-cols-1 lg:grid-cols-11 gap-y-20 lg:gap-x-8 px-2 md:px-0">
-            <div className="lg:col-span-6 reveal-up">
-              <div className="flex flex-col h-full w-full">
-                <h4 className="text-[17px] md:text-[19px] font-bold mb-6 text-center text-white/90 shrink-0">
-                  점 제거, 흉터 개선
-                </h4>
-                <div className="flex flex-col w-full flex-grow">
-                  <div className="flex border border-white/10 rounded-sm overflow-hidden" style={{ background: '#131B2A' }}>
-                    <div className="w-1/3 aspect-[4/5] bg-white/5 flex items-center justify-center border-r border-white/10">
-                      <span className="text-white/10 font-bold text-[10px]">Image 1</span>
+            {/* Case 1: 점 제거, 흉터 개선 (6 Columns) */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="lg:col-span-6 group"
+            >
+              <div className="mb-6 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_rgba(0,183,241,0.8)] animate-pulse" />
+                  <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_01 / ANALYSIS</span>
+                </div>
+                <span className="h-px w-16 bg-gradient-to-r from-primary/40 to-transparent"></span>
+              </div>
+              <h4 className="text-2xl font-black mb-8 text-white tracking-tight group-hover:text-primary transition-colors duration-500">
+                점 제거, 흉터 개선
+              </h4>
+              <div className="relative glass-panel-dark overflow-hidden border-[#ffffff15] group-hover:border-primary/50 transition-all duration-700 shadow-2xl">
+                <div className="absolute inset-0 bg-tech-grid opacity-25 group-hover:opacity-40 transition-opacity" />
+                <div className="grid grid-cols-3 relative">
+                  {[1, 2, 3].map((idx) => (
+                    <div key={idx} className="aspect-[4/5] border-r border-white/10 last:border-none flex items-center justify-center relative overflow-hidden group/slot">
+                      <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover/slot:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute top-2 left-2 text-[8px] font-black text-white/20 tracking-widest uppercase">POS_0{idx}</div>
+                      <span className="text-white/10 font-bold text-[10px] tracking-[0.4em] uppercase z-10 group-hover:text-primary/40 transition-all duration-500 group-hover:scale-110">Image Data</span>
+                      {/* Corner Accents for Slot */}
+                      <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-white/10" />
+                      <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white/10" />
                     </div>
-                    <div className="w-1/3 aspect-[4/5] bg-white/5 flex items-center justify-center border-r border-white/10">
-                      <span className="text-white/10 font-bold text-[10px]">Image 2</span>
-                    </div>
-                    <div className="w-1/3 aspect-[4/5] bg-white/5 flex items-center justify-center">
-                      <span className="text-white/10 font-bold text-[10px]">Image 3</span>
-                    </div>
-                  </div>
-                  <div className="flex mt-auto pt-4 pb-1">
-                    <div className="w-1/3 text-[14px] text-white/90 font-bold text-center">Before</div>
-                    <div className="w-2/3 text-[14px] text-white/90 font-bold text-center">After</div>
-                  </div>
+                  ))}
                 </div>
               </div>
-            </div>
-
-            <div className="lg:col-span-4 lg:col-start-8 reveal-up">
-              <div className="flex flex-col h-full w-full">
-                <h4 className="text-[17px] md:text-[19px] font-bold mb-6 text-center text-white/90 shrink-0">
-                  점, 검버섯 제거
-                </h4>
-                <div className="flex flex-col w-full flex-grow">
-                  <div className="flex flex-col">
-                    <div
-                      className="aspect-[3/1] bg-white/5 rounded-sm border border-white/10 flex items-center justify-center"
-                      style={{ background: '#131B2A' }}
-                    >
-                      <span className="text-white/10 font-bold text-[10px]">Image Slot</span>
-                    </div>
-                    <div className="text-[14px] text-white/90 font-bold text-center mt-3">Before</div>
-                  </div>
-                  <div className="flex flex-col mt-auto pt-6">
-                    <div
-                      className="aspect-[3/1] bg-white/5 rounded-sm border border-white/10 flex items-center justify-center"
-                      style={{ background: '#131B2A' }}
-                    >
-                      <span className="text-white/10 font-bold text-[10px]">Image Slot</span>
-                    </div>
-                    <div className="text-[14px] text-white/90 font-bold text-center mt-3 pb-1">After</div>
-                  </div>
+              <div className="flex mt-8 px-4 justify-between items-end">
+                <div className="flex flex-col">
+                  <span className="text-[10px] font-black text-primary/70 tracking-[0.4em] uppercase mb-1">Observation</span>
+                  <span className="text-lg font-black text-white/40 tracking-[0.1em] uppercase group-hover:text-white/60 transition-colors">Before Treatment</span>
+                </div>
+                <div className="w-12 h-px bg-primary/30 mb-2"></div>
+                <div className="flex flex-col text-right">
+                  <span className="text-[10px] font-black text-primary tracking-[0.4em] uppercase mb-1">Validated</span>
+                  <span className="text-lg font-black text-primary tracking-[0.1em] uppercase shadow-[0_0_20px_rgba(0,183,241,0.2)]">After Result</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="lg:col-span-5 lg:col-start-1 reveal-up">
-              <h4 className="text-[17px] md:text-[19px] font-bold mb-6 text-center text-white/90">
+            {/* Case 2: 점, 검버섯 제거 (4 Columns) */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="lg:col-span-11 lg:mt-0 xl:col-span-4 xl:col-start-8 group"
+            >
+              <div className="mb-6 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_rgba(0,183,241,0.8)] animate-pulse" />
+                  <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_02 / SCAN</span>
+                </div>
+                <span className="h-px w-16 bg-gradient-to-r from-primary/40 to-transparent"></span>
+              </div>
+              <h4 className="text-2xl font-black mb-8 text-white tracking-tight group-hover:text-primary transition-colors duration-500">
+                점, 검버섯 제거
+              </h4>
+              <div className="flex flex-col gap-10">
+                <div className="relative glass-panel-dark aspect-[3/1] border-[#ffffff15] group-hover:border-primary/40 transition-all duration-700 overflow-hidden flex items-center justify-center group/slot shadow-lg">
+                  <div className="absolute inset-0 bg-tech-dots opacity-15" />
+                  <span className="text-white/10 font-bold text-[10px] tracking-[0.4em] uppercase z-10 group-hover/slot:text-white/30 transition-colors">Pre-Condition</span>
+                  <div className="absolute top-0 right-0 p-3 text-[9px] font-black text-white/30 uppercase tracking-[0.2em] border-l border-b border-white/10 bg-white/5">Raw Scan</div>
+                  <div className="absolute bottom-0 left-0 w-8 h-px bg-white/20"></div>
+                </div>
+                <div className="relative glass-panel-dark aspect-[3/1] border-primary/30 bg-primary/5 group-hover:border-primary transition-all duration-700 overflow-hidden flex items-center justify-center shadow-[0_0_40px_rgba(0,183,241,0.1)] group/slot">
+                  <div className="absolute inset-0 bg-tech-dots opacity-20" />
+                  <span className="text-primary/40 font-bold text-[10px] tracking-[0.4em] uppercase z-10 group-hover/slot:text-primary group-hover/slot:scale-110 transition-all duration-500">Post-Optimize</span>
+                  <div className="absolute top-0 right-0 p-3 text-[9px] font-black text-primary/60 uppercase tracking-[0.2em] border-l border-b border-primary/20 bg-primary/10">Result</div>
+                  <div className="absolute bottom-0 left-0 w-12 h-[2px] bg-primary animate-pulse"></div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Case 3: 사마귀 제거 (5 Columns) */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="lg:col-span-5 group"
+            >
+              <div className="mb-6 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full" />
+                  <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_03 / DETAIL</span>
+                </div>
+                <div className="flex-1 mx-6 h-[1px] bg-gradient-to-r from-primary/30 to-transparent"></div>
+              </div>
+              <h4 className="text-2xl font-black mb-8 text-white tracking-tight group-hover:text-primary transition-colors duration-500">
                 사마귀 제거
               </h4>
-              <div className="flex flex-col w-full">
-                <div className="flex border border-white/10 rounded-sm overflow-hidden" style={{ background: '#131B2A' }}>
-                  <div className="w-1/2 aspect-square bg-white/5 flex items-center justify-center border-r border-white/10">
-                    <span className="text-white/10 font-bold text-[10px]">Image Slot</span>
+              <div className="relative glass-panel-dark overflow-hidden border-[#ffffff15] group-hover:border-primary/50 transition-all duration-700 shadow-xl">
+                <div className="absolute inset-0 bg-tech-grid opacity-15" />
+                <div className="grid grid-cols-2 relative h-full">
+                  <div className="aspect-square border-r border-white/10 flex items-center justify-center relative group/slot overflow-hidden">
+                    <div className="absolute inset-0 bg-white/5 opacity-0 group-hover/slot:opacity-100 transition-opacity" />
+                    <span className="text-white/10 font-bold text-[10px] tracking-[0.4em] uppercase z-10 group-hover/slot:text-white/30 transition-colors">Before</span>
+                    <div className="absolute top-3 left-3 w-3 h-3 border-t border-l border-white/10" />
                   </div>
-                  <div className="w-1/2 aspect-square bg-white/5 flex items-center justify-center">
-                    <span className="text-white/10 font-bold text-[10px]">Image Slot</span>
+                  <div className="aspect-square flex items-center justify-center relative group/slot overflow-hidden bg-primary/5">
+                    <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover/slot:opacity-100 transition-opacity" />
+                    <span className="text-primary/40 font-bold text-[10px] tracking-[0.4em] uppercase z-10 group-hover/slot:text-primary transition-all group-hover/slot:scale-110">After Match</span>
+                    <div className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-primary/30" />
                   </div>
-                </div>
-                <div className="flex mt-3">
-                  <div className="w-1/2 text-[14px] text-white/90 font-bold text-center">Before</div>
-                  <div className="w-1/2 text-[14px] text-white/90 font-bold text-center">After</div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="lg:col-span-5 lg:col-start-7 reveal-up">
-              <h4 className="text-[17px] md:text-[19px] font-bold mb-6 text-center text-white/90 tracking-tight">
+            {/* Case 4: CMN (5 Columns) */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="lg:col-span-5 lg:col-start-7 group"
+            >
+              <div className="mb-6 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_rgba(0,183,241,0.8)] animate-pulse" />
+                  <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_04 / CLINIC</span>
+                </div>
+                <div className="flex-1 mx-6 h-[1px] bg-gradient-to-r from-primary/30 to-transparent"></div>
+              </div>
+              <h4 className="text-2xl font-black mb-8 text-white tracking-tight uppercase group-hover:text-primary transition-colors duration-500">
                 Congenital Melanocytic Nevus
               </h4>
-              <div className="flex flex-col w-full">
-                <div className="flex border border-white/10 rounded-sm overflow-hidden" style={{ background: '#131B2A' }}>
-                  <div className="w-1/2 aspect-square bg-white/5 flex items-center justify-center border-r border-white/10">
-                    <span className="text-white/10 font-bold text-[10px]">Image Slot</span>
+              <div className="relative glass-panel-dark overflow-hidden border-[#ffffff15] group-hover:border-primary/50 transition-all duration-700 shadow-xl">
+                <div className="absolute inset-0 bg-tech-dots opacity-15" />
+                <div className="grid grid-cols-2 relative h-full">
+                  <div className="aspect-square border-r border-white/10 flex items-center justify-center relative group/slot overflow-hidden">
+                    <span className="text-white/10 font-bold text-[10px] tracking-[0.4em] uppercase z-10">Initial</span>
+                    <div className="absolute top-0 left-0 w-full h-full bg-tech-grid opacity-5" />
                   </div>
-                  <div className="w-1/2 aspect-square bg-white/5 flex items-center justify-center">
-                    <span className="text-white/10 font-bold text-[10px]">Image Slot</span>
+                  <div className="aspect-square flex items-center justify-center relative group/slot overflow-hidden bg-primary/5 border-l border-primary/10">
+                    <div className="absolute inset-x-0 bottom-0 h-1 bg-primary/20" />
+                    <span className="text-primary/40 font-bold text-[10px] tracking-[0.4em] uppercase z-10 group-hover/slot:text-primary transition-all">Cleared Result</span>
+                    <div className="absolute top-3 right-3 text-[8px] font-black text-primary/40">VERIFIED</div>
                   </div>
-                </div>
-                <div className="flex mt-3">
-                  <div className="w-1/2 text-[14px] text-white/90 font-bold text-center">Before</div>
-                  <div className="w-1/2 text-[14px] text-white/90 font-bold text-center">After</div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
+
+
 
       {/* Section: Downtime Comparison */}
-      <section id="u-pulse-downtime" className="py-24 bg-[#0C111D] text-white overflow-hidden">
-        <div className="max-w-screen-xl mx-auto px-6">
-          <div className="max-w-5xl mx-auto mb-16">
-            <div className="grid grid-cols-4 gap-4 md:gap-8 reveal-up mb-6">
-              <div className="col-span-3 grid grid-cols-3">
-                <div className="text-center font-bold text-[17px] text-white/80">직후</div>
-                <div className="text-center font-bold text-[17px] text-white/80">16h</div>
-                <div className="text-center font-bold text-[17px] text-white/80">48h 경과</div>
-              </div>
-              <div className="col-span-1 flex items-end justify-center pb-2">
-                <div className="font-bold text-[17px] text-white/80 shrink-0">Pulse 차이</div>
-              </div>
+      <section id="u-pulse-downtime" className="py-28 bg-[#050810] text-white overflow-hidden relative">
+        <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none" />
+
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-14 flex flex-col items-center"
+          >
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
+              Efficiency Test
             </div>
+            <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-6 text-center">
+              <span className="hero-title-main">LESS</span> <span className="hero-title-highlight">DOWNTIME</span>
+            </h3>
+            <div className="w-20 h-[2px] bg-primary mb-8" />
+          </motion.div>
 
-            <div className="grid grid-cols-4 gap-4 md:gap-8 items-stretch reveal-up mb-12">
-              <div className="col-span-3 flex flex-col">
-                <div className="grid grid-cols-3 bg-[#131B2A] rounded-t-sm border border-white/10">
-                  <div className="aspect-[4/3] relative border-r border-white/10 flex items-center justify-center">
-                    <span className="text-white/10 font-bold text-xs">Image Slot</span>
+          <div className="max-w-5xl mx-auto space-y-12">
+            {/* 30W Row */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"
+            >
+              <div className="lg:col-span-2 text-center lg:text-left">
+                <span className="text-3xl font-black text-white/20 tracking-tighter">30W</span>
+                <p className="text-[10px] font-bold text-slate-500 tracking-[0.3em] uppercase mt-1">Output Level</p>
+              </div>
+              <div className="lg:col-span-8 grid grid-cols-3 gap-3">
+                {["Immediate", "16H", "48H"].map((label, idx) => (
+                  <div key={idx} className="space-y-2">
+                    <div className="aspect-[4/3] bg-white/5 border border-white/5 rounded-sm flex items-center justify-center relative group overflow-hidden">
+                      <span className="text-primary/10 font-bold text-[10px] tracking-widest uppercase">Img_{idx + 1}</span>
+                      {idx === 2 && <div className="absolute inset-0 border-2 border-primary/30 z-10 pointer-events-none" />}
+                    </div>
+                    <p className="text-center text-[10px] font-bold text-slate-400 tracking-widest uppercase">{label}</p>
                   </div>
-                  <div className="aspect-[4/3] relative border-r border-white/10 flex items-center justify-center">
-                    <span className="text-white/10 font-bold text-xs">Image Slot</span>
+                ))}
+              </div>
+              <div className="lg:col-span-2 h-full">
+                <div className="h-full min-h-[100px] flex flex-col items-center justify-center bg-primary/5 border border-primary/20 rounded-sm p-4">
+                  <div className="w-6 h-6 border border-primary/40 rounded-full flex items-center justify-center mb-2">
+                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                   </div>
-                  <div className="aspect-[4/3] relative flex items-center justify-center">
-                    <span className="text-white/10 font-bold text-xs">Image Slot</span>
-                    <div className="absolute inset-x-[-1px] inset-y-[-1px] md:inset-x-[-2px] md:inset-y-[-2px] border-[3.5px] border-red-500 z-10 pointer-events-none shadow-[0_0_20px_rgba(239,68,68,0.2)]"></div>
+                  <span className="text-[10px] font-black text-primary tracking-widest uppercase">Pulse Analysing</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Divider */}
+            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+
+            {/* 100W Row */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"
+            >
+              <div className="lg:col-span-2 text-center lg:text-left">
+                <span className="text-3xl font-black text-primary tracking-tighter">100W</span>
+                <p className="text-[10px] font-bold text-primary/60 tracking-[0.3em] uppercase mt-1">High-Peak</p>
+              </div>
+              <div className="lg:col-span-8 grid grid-cols-3 gap-3">
+                {["Immediate", "16H", "48H"].map((label, idx) => (
+                  <div key={idx} className="space-y-2">
+                    <div className="aspect-[4/3] bg-white/5 border border-white/5 rounded-sm flex items-center justify-center relative group overflow-hidden">
+                      <span className="text-primary/10 font-bold text-[10px] tracking-widest uppercase">Img_{idx + 1}</span>
+                      {idx === 2 && <div className="absolute inset-0 border-2 border-primary/30 z-10 pointer-events-none" />}
+                    </div>
+                    <p className="text-center text-[10px] font-bold text-slate-400 tracking-widest uppercase">{label}</p>
                   </div>
-                </div>
-                <div className="bg-white/5 py-3 md:py-4 px-6 border-x border-b border-white/10 rounded-b-sm shadow-inner">
-                  <span className="font-bold text-[17px] md:text-[19px] text-white/60">30W</span>
-                </div>
+                ))}
               </div>
-              <div
-                className="col-span-1 flex items-center justify-center bg-white/5 rounded-sm border border-white/10 shadow-inner overflow-hidden w-full h-full min-h-[140px]"
-                style={{ background: '#131B2A' }}
-              >
-                <span className="text-white/10 font-bold text-xs">Pulse Slot</span>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-4 gap-4 md:gap-8 items-stretch reveal-up">
-              <div className="col-span-3 flex flex-col">
-                <div className="grid grid-cols-3 bg-[#131B2A] rounded-t-sm border border-white/10">
-                  <div className="aspect-[4/3] relative border-r border-white/10 flex items-center justify-center">
-                    <span className="text-white/10 font-bold text-xs">Image Slot</span>
+              <div className="lg:col-span-2 h-full">
+                <div className="h-full min-h-[100px] flex flex-col items-center justify-center bg-primary/5 border border-primary/20 rounded-sm p-4">
+                  <div className="w-6 h-6 border border-primary/40 rounded-full flex items-center justify-center mb-2">
+                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                   </div>
-                  <div className="aspect-[4/3] relative border-r border-white/10 flex items-center justify-center">
-                    <span className="text-white/10 font-bold text-xs">Image Slot</span>
+                  <span className="text-[10px] font-black text-primary tracking-widest uppercase">Pulse Analysing</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Divider */}
+            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+
+            {/* 100W Row */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"
+            >
+              <div className="lg:col-span-2 text-center lg:text-left">
+                <span className="text-3xl font-black text-primary tracking-tighter">100W</span>
+                <p className="text-[10px] font-bold text-primary/60 tracking-[0.3em] uppercase mt-1">High-Peak</p>
+              </div>
+              <div className="lg:col-span-8 grid grid-cols-3 gap-3">
+                {["Immediate", "16H", "48H"].map((label, idx) => (
+                  <div key={idx} className="space-y-2">
+                    <div className="aspect-[4/3] bg-white/5 border border-white/5 rounded-sm flex items-center justify-center relative group overflow-hidden">
+                      <span className="text-primary/10 font-bold text-[10px] tracking-widest uppercase">Img_{idx + 1}</span>
+                      {idx === 2 && <div className="absolute inset-0 border-2 border-primary animate-pulse z-10 pointer-events-none" />}
+                    </div>
+                    <p className="text-center text-[10px] font-bold text-slate-400 tracking-widest uppercase">{label}</p>
                   </div>
-                  <div className="aspect-[4/3] relative flex items-center justify-center">
-                    <span className="text-white/10 font-bold text-xs">Image Slot</span>
-                    <div className="absolute inset-x-[-1px] inset-y-[-1px] md:inset-x-[-2px] md:inset-y-[-2px] border-[3.5px] border-red-500 z-10 pointer-events-none shadow-[0_0_20px_rgba(239,68,68,0.2)]"></div>
+                ))}
+              </div>
+              <div className="lg:col-span-2 h-full">
+                <div className="h-full min-h-[100px] flex flex-col items-center justify-center bg-primary/10 border border-primary/40 rounded-sm p-4 shadow-[0_0_20px_rgba(0,183,241,0.1)]">
+                  <div className="w-8 h-8 border-2 border-primary rounded-full flex items-center justify-center mb-2 shadow-[0_0_10px_rgba(0,183,241,0.5)]">
+                    <div className="w-3 h-3 bg-primary rounded-full shadow-[0_0_15px_rgba(0,183,241,1)]" />
                   </div>
-                </div>
-                <div className="bg-white/5 py-3 md:py-4 px-6 border-x border-b border-white/10 rounded-b-sm shadow-inner">
-                  <span className="font-bold text-[17px] md:text-[19px] text-white/90">100W</span>
+                  <span className="text-[10px] font-black text-white tracking-widest uppercase">Fast Recovery</span>
                 </div>
               </div>
-              <div
-                className="col-span-1 flex items-center justify-center bg-white/5 rounded-sm border border-white/10 shadow-inner overflow-hidden w-full h-full min-h-[140px]"
-                style={{ background: '#131B2A' }}
-              >
-                <span className="text-white/10 font-bold text-xs">Pulse Slot</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="max-w-5xl mx-auto grid grid-cols-4 gap-4 md:gap-8 mt-6 mb-10 reveal-up">
-            <div className="col-span-3 grid grid-cols-3">
-              <div className="col-start-3 flex justify-center items-center">
-                <h3 className="text-[22px] md:text-[28px] font-bold tracking-tight inline-flex items-center whitespace-nowrap">
-                  <span className="text-[#E84A8A] mr-2">Less</span> <span className="text-white">Downtime</span>
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section: Technical Specifications */}
-      <section id="u-pulse-tech-specs" className="py-24 bg-[#0C111D] text-white overflow-hidden">
-        <div className="max-w-screen-xl mx-auto px-6">
-          <div className="text-center mb-16 reveal-up">
-            <h2 className="text-[32px] md:text-[42px] font-bold tracking-tight">
-              Technical Specifications
-            </h2>
-          </div>
-
-          <div className="max-w-5xl mx-auto border border-white/20 reveal-up">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-white/20">
-              <div className="grid grid-cols-[120px_1fr] md:grid-cols-[130px_1fr] gap-[1px] bg-white/20">
-                <div className="bg-[#303540] py-4 md:py-5 px-3 flex items-center justify-center text-center font-bold text-[13px] md:text-[15px] text-white">
-                  Wavelength
-                </div>
-                <div className="bg-[#0C111D] py-4 md:py-5 px-4 md:px-6 flex items-center font-bold text-[14px] md:text-[16px] text-white tracking-wide leading-snug whitespace-nowrap">
-                  10,600nm
-                </div>
-              </div>
-              <div className="grid grid-cols-[120px_1fr] md:grid-cols-[130px_1fr] gap-[1px] bg-white/20">
-                <div className="bg-[#303540] py-4 md:py-5 px-3 flex items-center justify-center text-center font-bold text-[13px] md:text-[15px] text-white">
-                  Scan Shape
-                </div>
-                <div className="bg-[#0C111D] py-4 md:py-5 px-4 md:px-6 flex items-center font-bold text-[14px] md:text-[16px] text-white tracking-wide leading-snug whitespace-nowrap">
-                  Square, Rectangle, Triangle, Circle
-                </div>
-              </div>
-
-              <div className="grid grid-cols-[120px_1fr] md:grid-cols-[130px_1fr] gap-[1px] bg-white/20">
-                <div className="bg-[#303540] py-4 md:py-5 px-3 flex items-center justify-center text-center font-bold text-[13px] md:text-[15px] text-white">
-                  Mode
-                </div>
-                <div className="bg-[#0C111D] py-4 md:py-5 px-4 md:px-6 flex items-center font-bold text-[14px] md:text-[16px] text-white tracking-wide leading-snug whitespace-nowrap">
-                  FRX(Fractional) / CO2(Surgical)
-                </div>
-              </div>
-              <div className="grid grid-cols-[120px_1fr] md:grid-cols-[130px_1fr] gap-[1px] bg-white/20">
-                <div className="bg-[#303540] py-4 md:py-5 px-3 flex items-center justify-center text-center font-bold text-[13px] md:text-[15px] text-white">
-                  Scan Pattern
-                </div>
-                <div className="bg-[#0C111D] py-4 md:py-5 px-4 md:px-6 flex items-center font-bold text-[14px] md:text-[16px] text-white tracking-wide leading-snug whitespace-nowrap">
-                  Standard, Alternate, Random, Scatter
-                </div>
-              </div>
-
-              <div className="grid grid-cols-[120px_1fr] md:grid-cols-[130px_1fr] gap-[1px] bg-white/20">
-                <div className="bg-[#303540] py-4 md:py-5 px-3 flex items-center justify-center text-center font-bold text-[13px] md:text-[15px] text-white">
-                  Max Power
-                </div>
-                <div className="bg-[#0C111D] py-4 md:py-5 px-4 md:px-6 flex items-center font-bold text-[14px] md:text-[16px] text-white tracking-wide leading-snug whitespace-nowrap">
-                  100W
-                </div>
-              </div>
-              <div className="grid grid-cols-[120px_1fr] md:grid-cols-[130px_1fr] gap-[1px] bg-white/20">
-                <div className="bg-[#303540] py-4 md:py-5 px-3 flex items-center justify-center text-center font-bold text-[13px] md:text-[15px] text-white">
-                  Electrical
-                </div>
-                <div className="bg-[#0C111D] py-4 md:py-5 px-4 md:px-6 flex items-center font-bold text-[14px] md:text-[16px] text-white tracking-wide leading-snug whitespace-nowrap">
-                  200-240VAC, 50/60Hz
-                </div>
-              </div>
-
-              <div className="grid grid-cols-[120px_1fr] md:grid-cols-[130px_1fr] gap-[1px] bg-white/20">
-                <div className="bg-[#303540] py-4 md:py-5 px-3 flex items-center justify-center text-center font-bold text-[13px] md:text-[15px] text-white">
-                  Scan Area
-                </div>
-                <div className="bg-[#0C111D] py-4 md:py-5 px-4 md:px-6 flex items-center font-bold text-[14px] md:text-[16px] text-white tracking-wide leading-snug whitespace-nowrap">
-                  Up to 20x20mm
-                </div>
-              </div>
-              <div className="grid grid-cols-[120px_1fr] md:grid-cols-[130px_1fr] gap-[1px] bg-white/20">
-                <div className="bg-[#303540] py-4 md:py-5 px-3 flex items-center justify-center text-center font-bold text-[13px] md:text-[15px] text-white">
-                  Dimension
-                </div>
-                <div className="bg-[#0C111D] py-4 md:py-5 px-4 md:px-6 flex items-center font-bold text-[14px] md:text-[16px] text-white tracking-wide leading-snug whitespace-nowrap">
-                  400(W) x 500(L) x 1500(H) mm
-                </div>
-              </div>
-
-              <div className="grid grid-cols-[120px_1fr] md:grid-cols-[130px_1fr] gap-[1px] bg-white/20">
-                <div className="bg-[#303540] py-4 md:py-5 px-3 flex items-center justify-center text-center font-bold text-[13px] md:text-[15px] text-white">
-                  Energy
-                </div>
-                <div className="bg-[#0C111D] py-4 md:py-5 px-4 md:px-6 flex items-center font-bold text-[14px] md:text-[16px] text-white tracking-wide leading-snug whitespace-nowrap">
-                  5~300mJ
-                </div>
-              </div>
-              <div className="grid grid-cols-[120px_1fr] md:grid-cols-[130px_1fr] gap-[1px] bg-white/20">
-                <div className="bg-[#303540] py-4 md:py-5 px-3 flex items-center justify-center text-center font-bold text-[13px] md:text-[15px] text-white">
-                  Weight
-                </div>
-                <div className="bg-[#0C111D] py-4 md:py-5 px-4 md:px-6 flex items-center font-bold text-[14px] md:text-[16px] text-white tracking-wide leading-snug whitespace-nowrap">
-                  50kg (Max Weight: 60kg)
-                </div>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
+
+      {/* Section: Technical Specifications - Orchestration Compliant */}
+      <section id="u-pulse-tech-specs" className="py-28 bg-[#020408] text-white overflow-hidden relative">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+        
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-14 flex flex-col items-center text-center"
+          >
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">
+              SPECIFICATIONS
+            </div>
+            <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-6 uppercase leading-tight">
+              TECHNICAL <span className="text-primary font-black">DETAILS</span>
+            </h3>
+            <div className="w-20 h-[2px] bg-primary mb-8" />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+            className="max-w-5xl mx-auto glass-panel p-0 overflow-hidden border-primary/20 bg-primary/[0.02] shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              {[
+                { label: 'WAVELENGTH', value: '10,600nm' },
+                { label: 'SCAN SHAPE', value: 'Square, Rectangle, Triangle, Circle' },
+                { label: 'MODE', value: 'FRX (Fractional) / CO2 (Surgical)' },
+                { label: 'SCAN PATTERN', value: 'Standard, Alternate, Random, Scatter' },
+                { label: 'MAX POWER', value: '100W' },
+                { label: 'ELECTRICAL', value: '200-240VAC, 50/60Hz' },
+                { label: 'SCAN AREA', value: 'Up to 20x20mm' },
+                { label: 'DIMENSION', value: '400(W) x 500(L) x 1500(H) mm' },
+                { label: 'ENERGY', value: '5 ~ 300mJ' },
+                { label: 'WEIGHT', value: '50kg (Max Weight: 60kg)' }
+              ].map((item, idx) => (
+                <div 
+                  key={idx} 
+                  className={`flex items-stretch border-b border-white/5 last:border-b-0 ${idx % 2 === 0 ? 'md:border-r' : ''} group hover:bg-white/[0.01] transition-colors`}
+                >
+                  <div className="w-32 md:w-36 lg:w-40 bg-white/[0.03] py-5 px-5 flex items-center shrink-0 border-r border-white/5">
+                    <span className="text-[9px] md:text-[10px] font-black tracking-[0.3em] text-primary/70 group-hover:text-primary transition-colors uppercase leading-none whitespace-nowrap">
+                      {item.label}
+                    </span>
+                  </div>
+                  <div className="flex-grow py-5 px-5 md:px-6 flex items-center overflow-x-auto no-scrollbar">
+                    <span className="text-sm md:text-base font-black text-slate-200 tracking-tight whitespace-nowrap group-hover:text-white transition-colors">
+                      {item.value}
+                    </span>
+                  </div>
+                </div>
+              ))}
+
+            </div>
+            
+            <div className="absolute bottom-4 right-6 opacity-[0.05] pointer-events-none select-none">
+              <span className="text-[40px] md:text-[60px] font-black italic tracking-tighter text-primary/30 leading-none">U-PULSE</span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+
     </>
   );
 }
