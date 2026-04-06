@@ -229,46 +229,46 @@ export default function PicoKPage() {
               viewport={{ once: true }}
               className="lg:w-[55%]"
             >
-                <div className="relative w-full h-auto mt-12 group perspective-1000">
-                  {/* 상단 라벨 오버레이 (이미지 밖 상단으로 이동) */}
-                  <div className="absolute -top-12 left-0 w-full px-4 flex justify-between z-20 pointer-events-none transition-transform duration-1000 ease-out group-hover:translate-y-[-10px]">
-                    <span className="text-slate-400 font-extrabold text-sm md:text-lg tracking-tight drop-shadow-lg">
-                      [ 특허기술 미적용 ]
-                    </span>
-                    <span className="text-primary font-black text-sm md:text-lg tracking-tight drop-shadow-[0_0_10px_rgba(0,183,241,0.5)]">
-                      [ 특허기술 적용 ]
-                    </span>
-                  </div>
+              <div className="relative w-full h-auto mt-12 group perspective-1000">
+                {/* 상단 라벨 오버레이 (이미지 밖 상단으로 이동) */}
+                <div className="absolute -top-12 left-0 w-full px-4 flex justify-between z-20 pointer-events-none transition-transform duration-1000 ease-out group-hover:translate-y-[-10px]">
+                  <span className="text-slate-400 font-extrabold text-sm md:text-lg tracking-tight drop-shadow-lg">
+                    [ 특허기술 미적용 ]
+                  </span>
+                  <span className="text-primary font-black text-sm md:text-lg tracking-tight drop-shadow-[0_0_10px_rgba(0,183,241,0.5)]">
+                    [ 특허기술 적용 ]
+                  </span>
+                </div>
 
-                  {/* 메인 이미지 & 포인트 레이어 통합 확대 */}
-                  <div className="relative w-full h-full transition-transform duration-1000 ease-out group-hover:scale-105">
-                    <img
-                      src="/images/picok/Thermal.png"
-                      alt="Thermal Lens Effect Control Logic"
-                      className="w-full h-auto block"
-                    />
+                {/* 메인 이미지 & 포인트 레이어 통합 확대 */}
+                <div className="relative w-full h-full transition-transform duration-1000 ease-out group-hover:scale-105">
+                  <img
+                    src="/images/picok/Thermal.png"
+                    alt="Thermal Lens Effect Control Logic"
+                    className="w-full h-auto block"
+                  />
 
-                    {/* 과열 및 부풀어오름 지시선 및 라벨 (포인트 기준 왼쪽으로 배치) */}
-                    <div className="absolute top-[40%] left-[5.5%] z-20 pointer-events-none flex items-center flex-row">
-                      {/* 설명 텍스트 (우측 정렬) */}
-                      <div className="flex flex-col items-end text-right mr-2 transition-all duration-700">
-                        <span className="text-[11px] md:text-sm font-black text-[#FF4D4D] tracking-tighter leading-none drop-shadow-md group-hover:scale-110 group-hover:text-[#FF6666] origin-right transition-all">
-                          과열되어
-                        </span>
-                        <span className="text-[11px] md:text-sm font-black text-[#FF4D4D] tracking-tighter leading-none mt-1 drop-shadow-md group-hover:scale-110 group-hover:text-[#FF6666] origin-right transition-all">
-                          부풀어 오름
-                        </span>
-                      </div>
-                      {/* 지시선 (텍스트 우측에서 포인트로 연결) - 길이를 고정하여 포인트 지점을 명확히 유지 */}
-                      <div className="w-16 h-[1px] bg-white/40 mr-1.5 shadow-sm transition-opacity duration-700 group-hover:bg-white/60" />
-                      {/* 지점 포인트 (노란색 펄스) */}
-                      <div className="relative transition-transform duration-700 group-hover:scale-125">
-                        <div className="w-2.5 h-2.5 bg-yellow-400 rounded-full shadow-[0_0_10px_rgba(250,204,21,1)]" />
-                        <div className="absolute inset-0 w-2.5 h-2.5 bg-yellow-400 rounded-full animate-ping opacity-75" />
-                      </div>
+                  {/* 과열 및 부풀어오름 지시선 및 라벨 (포인트 기준 왼쪽으로 배치) */}
+                  <div className="absolute top-[40%] left-[5.5%] z-20 pointer-events-none flex items-center flex-row">
+                    {/* 설명 텍스트 (우측 정렬) */}
+                    <div className="flex flex-col items-end text-right mr-2 transition-all duration-700">
+                      <span className="text-[11px] md:text-sm font-black text-[#FF4D4D] tracking-tighter leading-none drop-shadow-md group-hover:scale-110 group-hover:text-[#FF6666] origin-right transition-all">
+                        과열되어
+                      </span>
+                      <span className="text-[11px] md:text-sm font-black text-[#FF4D4D] tracking-tighter leading-none mt-1 drop-shadow-md group-hover:scale-110 group-hover:text-[#FF6666] origin-right transition-all">
+                        부풀어 오름
+                      </span>
+                    </div>
+                    {/* 지시선 (텍스트 우측에서 포인트로 연결) - 길이를 고정하여 포인트 지점을 명확히 유지 */}
+                    <div className="w-16 h-[1px] bg-white/40 mr-1.5 shadow-sm transition-opacity duration-700 group-hover:bg-white/60" />
+                    {/* 지점 포인트 (노란색 펄스) */}
+                    <div className="relative transition-transform duration-700 group-hover:scale-125">
+                      <div className="w-2.5 h-2.5 bg-yellow-400 rounded-full shadow-[0_0_10px_rgba(250,204,21,1)]" />
+                      <div className="absolute inset-0 w-2.5 h-2.5 bg-yellow-400 rounded-full animate-ping opacity-75" />
                     </div>
                   </div>
                 </div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -382,8 +382,8 @@ export default function PicoKPage() {
                   ].map((item, idx) => (
                     <div key={idx} className="text-center group">
                       <div className="aspect-square rounded-xl border border-white/10 bg-white/5 overflow-hidden mb-2 group-hover:border-primary/50 transition-all duration-500 flex items-center justify-center relative">
-                        <img 
-                          src={`/images/picok/${item.img}`} 
+                        <img
+                          src={`/images/picok/${item.img}`}
                           className="w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-110"
                           alt={item.label}
                         />
@@ -433,11 +433,13 @@ export default function PicoKPage() {
               </h3>
 
               {/* 오실로스코프 파형 영역 (Empty Slot) */}
-              <div className="relative glass-panel aspect-[16/10] bg-tech-grid/30 border border-white/10 rounded-sm mb-12 overflow-hidden flex items-center justify-center">
-                <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                  <div className="w-[80%] h-[1px] bg-primary/40 shadow-[0_0_15px_rgba(0,183,241,1)]" />
-                </div>
-                <span className="text-[10px] text-white/40 font-black uppercase tracking-[0.3em] z-10">Oscilloscope Waveform Area</span>
+              <div className="relative glass-panel aspect-[16/10] bg-tech-grid/30 border border-white/10 rounded-sm mb-12 overflow-hidden flex items-center justify-center group/wave">
+                <img 
+                  src="/images/picok/300ps.png"
+                  alt="300ps Waveform"
+                  className="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover/wave:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#020408]/40 to-transparent pointer-events-none" />
               </div>
 
               {/* 핵심 스펙 타이포그래피 */}
@@ -504,16 +506,22 @@ export default function PicoKPage() {
               <div className="glass-panel p-8 bg-tech-grid/30 mb-12 border-t border-primary/20">
                 <div className="flex justify-between items-center gap-4">
                   {[
-                    { label: '항공/해상\n운송 테스트' },
-                    { label: '변성방지 솔루션\n개발 및 적용' },
-                    { label: '스위스제\n철도 부품 사용' }
+                    { label: '항공/해상\n운송 테스트', img: '/images/picok/imo1.png' },
+                    { label: '변성방지 솔루션\n개발 및 적용', img: '/images/picok/imo2.png' },
+                    { label: '스위스제\n철도 부품 사용', img: null }
                   ].map((step, idx) => (
                     <React.Fragment key={idx}>
-                      <div className="flex flex-col items-center text-center gap-3">
-                        <div className="w-16 h-16 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
-                          <div className="w-8 h-8 border border-primary/40 rounded-sm opacity-40" />
+                      <div className="flex flex-col items-center text-center gap-3 group cursor-pointer">
+                        <div className="w-24 h-24 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:scale-110 group-hover:border-primary/60 group-hover:bg-primary/20 group-hover:shadow-[0_0_25px_rgba(0,183,241,0.3)]">
+                          {step.img && (
+                            <img
+                              src={step.img}
+                              alt={step.label}
+                              className="w-[80%] h-[80%] object-contain brightness-0 invert opacity-80 transition-transform duration-500 group-hover:scale-110"
+                            />
+                          )}
                         </div>
-                        <span className="text-[12px] text-slate-300 font-bold whitespace-pre-line leading-tight">{step.label}</span>
+                        <span className="text-[12px] text-slate-300 font-bold whitespace-pre-line leading-tight transition-colors duration-500 group-hover:text-primary">{step.label}</span>
                       </div>
                       {idx < 2 && <div className="text-primary/40 font-black text-xl">+</div>}
                     </React.Fragment>
