@@ -365,7 +365,7 @@ export default function UPulsePage() {
                   initial={{ x: -20, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.5, duration: 0.8 }}
-                  className="absolute bottom-12 left-0 w-[240px] h-[240px] rounded-full bg-gradient-to-tr from-[#3B6B98]/40 to-[#3B6B98]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen shadow-[0_0_40px_rgba(59,107,152,0.1)]"
+                  className="absolute bottom-4 left-0 w-[240px] h-[240px] rounded-full bg-gradient-to-tr from-[#3B6B98]/40 to-[#3B6B98]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen shadow-[0_0_40px_rgba(59,107,152,0.1)]"
                 >
                   <span className="font-bold text-white/90 text-center leading-tight tracking-tighter">
                     높은 파워의<br />글래스튜브
@@ -377,7 +377,7 @@ export default function UPulsePage() {
                   initial={{ x: 20, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.7, duration: 0.8 }}
-                  className="absolute bottom-12 right-0 w-[240px] h-[240px] rounded-full bg-gradient-to-tl from-[#00B7F1]/30 to-[#00B7F1]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen shadow-[0_0_40px_rgba(0,183,241,0.1)]"
+                  className="absolute bottom-4 right-0 w-[240px] h-[240px] rounded-full bg-gradient-to-tl from-[#00B7F1]/30 to-[#00B7F1]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen shadow-[0_0_40px_rgba(0,183,241,0.1)]"
                 >
                   <span className="font-bold text-white/90 text-center leading-tight tracking-tighter">
                     높은 볼트의<br />레귤레이터
@@ -420,42 +420,46 @@ export default function UPulsePage() {
       </section>
 
       {/* Technical Detail 03: Zoom Handpiece */}
-      <section id="tech-zoom-handpiece" className="py-24 bg-[#0C111D] text-white overflow-hidden">
-        <div className="max-w-screen-xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal-up">
-            <div className="space-y-4">
+      <section id="tech-zoom-handpiece" className="py-28 bg-[#050810] text-white overflow-hidden relative border-t border-white/5">
+        <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
               {/* Revolutionary Header System */}
-              <motion.div
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className="mb-12 flex flex-col items-start"
-              >
-                <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
-                  Precision Zoom
-                </div>
-
-                <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
-                  <span className="hero-title-main">VERSATILE</span><br />
-                  <span className="hero-title-highlight uppercase">Zoom Handpiece</span>
-                </h3>
-                <div className="w-20 h-[2px] bg-primary mt-4 mb-10 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-              </motion.div>
-              <div className="text-lg md:text-xl font-medium leading-relaxed text-slate-400">
+              <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
+                Precision Zoom
+              </div>
+              <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
+                <span className="hero-title-main uppercase leading-tight">VERSATILE</span><br />
+                <span className="hero-title-highlight uppercase leading-tight">Zoom Handpiece</span>
+              </h3>
+              <div className="w-20 h-[2px] bg-primary mb-8" />
+              <div className="text-lg md:text-xl font-medium leading-relaxed text-slate-400 space-y-2 pl-4 border-l border-white/5">
                 <p>1단계 (0.2mm) 부터 5단계</p>
                 <p>(1.3mm) 까지 핸드피스 하나로</p>
                 <p>다양한 스팟사이즈 변동 가능</p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="relative w-full h-48 flex items-center justify-center">
-              <svg viewBox="0 0 800 240" className="w-full h-auto">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="relative flex items-center justify-center p-8 glass-panel bg-tech-dots/10 overflow-visible"
+            >
+              <svg viewBox="0 0 800 240" className="w-full h-auto overflow-visible">
                 <defs>
                   <linearGradient id="laser-beam-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#ffffff" />
-                    <stop offset="40%" stopColor="#E84A8A" />
-                    <stop offset="100%" stopColor="#E84A8A" />
+                    <stop offset="0%" stopColor="#ffffff" stopOpacity="0.2" />
+                    <stop offset="60%" stopColor="#00B7F1" />
+                    <stop offset="100%" stopColor="#00B7F1" />
                   </linearGradient>
                 </defs>
 
@@ -463,53 +467,76 @@ export default function UPulsePage() {
                   <path
                     d="M0,60 L140,60 L190,40 L340,40 L360,60 L360,100 L340,120 L190,120 L140,100 L0,100 Z"
                     fill="#1C2333"
-                    stroke="#ffffff15"
+                    stroke="#00B7F130"
                     strokeWidth="2"
                   />
-                  <rect x="30" y="70" width="20" height="20" fill="#ffffff" opacity={0.1} />
-                  <ellipse cx="160" cy="80" rx="8" ry="28" fill="#3B6B98" opacity={0.5} />
-                  <ellipse cx="220" cy="80" rx="8" ry="28" fill="#3B6B98" opacity={0.5} />
-                  <ellipse cx="280" cy="80" rx="8" ry="28" fill="#3B6B98" opacity={0.5} />
-                  <line x1="80" y1="80" x2="360" y2="80" stroke="white" strokeWidth="1.2" opacity={0.6} />
+                  <ellipse cx="160" cy="80" rx="6" ry="24" fill="#00B7F1" opacity={0.3} />
+                  <ellipse cx="220" cy="80" rx="6" ry="24" fill="#00B7F1" opacity={0.3} />
+                  <ellipse cx="280" cy="80" rx="6" ry="24" fill="#00B7F1" opacity={0.3} />
                 </g>
 
-                <rect x="400" y="139.5" width="280" height="1.5" fill="url(#laser-beam-grad)" />
+                <rect x="400" y="139" width="280" height="2" fill="url(#laser-beam-grad)" className="animate-pulse" />
 
                 <g transform="translate(680, 140)">
-                  <circle cx="0" cy="0" r="80" stroke="white" strokeWidth="0.8" fill="none" opacity={0.1} />
-                  <circle cx="0" cy="0" r="60" stroke="white" strokeWidth="0.8" fill="none" opacity={0.1} />
-                  <circle cx="0" cy="0" r="40" stroke="white" strokeWidth="0.8" fill="none" opacity={0.1} />
-                  <circle
-                    cx="0"
-                    cy="0"
-                    r="20"
-                    stroke="#00B7F1"
-                    strokeWidth="1.5"
-                    fill="#00B7F1"
-                    fillOpacity="0.1"
-                    opacity={0.5}
-                  />
-
-                  <line x1="-90" y1="0" x2="90" y2="0" stroke="white" strokeWidth="0.5" opacity={0.1} />
-                  <line x1="0" y1="-90" x2="0" y2="90" stroke="white" strokeWidth="0.5" opacity={0.1} />
-
-                  <text x="65" y="-65" fill="white" fontSize="16" fontWeight="bold" opacity={0.5}>
-                    5단계
-                  </text>
-                  <text
-                    x="0"
-                    y="5"
-                    fill="white"
-                    fontSize="14"
-                    fontWeight="bold"
-                    textAnchor="middle"
-                    opacity={0.9}
-                  >
-                    1단계
-                  </text>
+                  {[80, 60, 40].map((r, i) => (
+                    <circle key={i} cx="0" cy="0" r={r} stroke="white" strokeWidth="0.5" fill="none" opacity={0.1 - i * 0.02} />
+                  ))}
+                  <circle cx="0" cy="0" r="20" stroke="#00B7F1" strokeWidth="2" fill="#00B7F110" />
+                  <text x="65" y="-65" fill="white" fontSize="14" fontWeight="bold" opacity={0.5}>5단계</text>
+                  <text x="0" y="5" fill="white" fontSize="12" fontWeight="bold" textAnchor="middle">1단계</text>
                 </g>
               </svg>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technical Detail 04: Thermal-Free Multi-Pinhole */}
+      <section id="tech-thermal-free" className="py-28 bg-[#050810] text-white overflow-hidden relative">
+        <div className="absolute inset-0 bg-tech-dots opacity-5 pointer-events-none" />
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-20 flex flex-col items-center"
+          >
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
+              Advance Technology
             </div>
+            <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-8">
+              <span className="hero-title-main">THERMAL-FREE</span><br />
+              <span className="hero-title-highlight uppercase">Multi-Pinhole</span>
+            </h3>
+            <div className="w-20 h-[2px] bg-primary" />
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { title: "Easy Control", sub: "깊이 조절 가능", desc: "정밀한 파워 조절 시스템으로 원하는 깊이까지 정확한 시술이 가능합니다." },
+              { title: "표준화된 임상", sub: "쉽고 정확하게", desc: "다양한 케이스를 통해 검증된 표준화 데이터를 바탕으로 안정적인 결과를 도출합니다." },
+              { title: "Thermal Damage", sub: "없이 깊게", desc: "열 손상을 최소화하는 독자적인 멀티핀홀 기법으로 통증은 줄이고 효과는 극대화했습니다." }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
+                viewport={{ once: true }}
+                className="glass-panel p-10 relative group overflow-hidden border-white/5 hover:border-primary/40 transition-all duration-500"
+              >
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/5 blur-3xl group-hover:bg-primary/20 transition-all duration-700" />
+                <div className="relative z-10">
+                  <div className="w-12 h-12 mb-8 bg-primary/10 border border-primary/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <div className="w-6 h-6 border-b-2 border-r-2 border-primary/60 rotate-45 group-hover:border-primary transition-colors" />
+                  </div>
+                  <h4 className="text-white font-black text-2xl mb-1 tracking-tight group-hover:text-primary transition-colors">{item.title}</h4>
+                  <p className="text-primary font-bold text-[11px] tracking-[0.2em] uppercase mb-6">{item.sub}</p>
+                  <p className="text-slate-400 text-[15px] leading-relaxed font-medium">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
