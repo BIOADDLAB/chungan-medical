@@ -413,7 +413,7 @@ export default function PicoKPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="flex flex-col h-full"
+              className="flex flex-col h-full pb-10"
             >
               {/* 테드 라벨 04 */}
               <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
