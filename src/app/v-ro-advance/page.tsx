@@ -57,98 +57,45 @@ export default function VRoAdvancePage() {
         </div>
       </section>
 
-      {/* ② V-RO ADVANCE Overview Banner (First Section) */}
+      {/* ② + ③ MERGED: V-RO Lifting Solution × Hybrid Core System */}
       <section id="overview" className="relative py-28 bg-[#050810] overflow-hidden">
-        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/[0.04] blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute inset-0 bg-tech-grid opacity-8 pointer-events-none" />
+        <div className="absolute top-1/3 left-1/4 w-[800px] h-[800px] bg-primary/[0.04] blur-[160px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-primary/[0.03] blur-[120px] rounded-full pointer-events-none" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
-          <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
-            <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap uppercase">TECH 01</span>
-            <motion.div
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              viewport={{ once: true }}
-              style={{ originX: 0 }}
-              className="h-[1px] w-[500%] bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none"
-            />
-          </div>
 
-          <div className="flex flex-col items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none"
-            >
+          {/* 제목 블록 (PICO-K 황금표준 스타일) */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-20 flex flex-col items-center text-center"
+          >
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">
               Advanced Lifting Solution
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <h2 className="mb-6">
-                <span className="hero-title-main block text-4xl md:text-6xl mb-4">고주파 + 하이푸</span>
-                <span className="hero-title-highlight block text-5xl md:text-8xl">브이로 리프팅</span>
-              </h2>
-
-              <div className="flex justify-center mb-10">
-                <div className="w-20 h-[2px] bg-primary" />
-              </div>
-
-              <div className="glass-panel px-12 py-10 md:px-24 md:py-16 relative overflow-hidden group">
-                <div className="absolute inset-0 bg-tech-dots opacity-20 pointer-events-none" />
-                <div className="relative z-10">
-                  <h3 className="text-white text-3xl md:text-5xl font-black tracking-tighter uppercase font-inter leading-none">
-                    V-RO <span className="text-primary/60 text-xl md:text-2xl font-bold ml-2">LIFTING SYSTEM</span>
-                  </h3>
-                  <div className="mt-8 flex justify-center items-center gap-4 leading-none">
-                    <span className="h-px w-8 bg-primary/20" />
-                    <p className="text-slate-400 font-bold text-lg md:text-xl tracking-tight leading-none">혁신적인 시너지가 만드는 리프팅의 새로운 기준</p>
-                    <span className="h-px w-8 bg-primary/20" />
-                  </div>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-[1500ms]" />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ③ V-RO ADVANCE SYSTEM CORE: HLA & Safety/TIS (Merged Section) */}
-      <section id="system-core" className="relative py-28 bg-[#050810] overflow-hidden border-t border-white/5">
-        <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-primary/[0.03] blur-[200px] rounded-full pointer-events-none" />
-
-        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
-          <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
-            <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap uppercase">TECH 02</span>
-            <motion.div
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              viewport={{ once: true }}
-              style={{ originX: 0 }}
-              className="h-[1px] w-[500%] bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none"
-            />
-          </div>
-
-          <div className="flex flex-col items-center mb-20 text-center">
-            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
-              Integrated System Intelligence
             </div>
-            <h2 className="hero-title-main text-3xl md:text-5xl mb-6 uppercase">HYBRID CORE SYSTEM</h2>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
+              <span className="hero-title-main">고주파 + 하이푸</span><br />
+              <span className="hero-title-highlight">V-RO</span>
+              <span className="hero-title-main"> ADVANCE</span>
+            </h2>
             <div className="w-20 h-[2px] bg-primary mb-8" />
-          </div>
+            <p className="text-slate-400 text-lg font-medium leading-relaxed max-w-xl">
+              혁신적인 고주파와 하이푸의 결합으로
+              리프팅의 새로운 기준을 제시합니다.
+            </p>
+          </motion.div>
 
+          {/* 메인 콘텐츠: 좌측(HLA 카드) + 중앙(머신 이미지) + 우측(TECH 02 기능) */}
           <div className="flex flex-col lg:grid lg:grid-cols-12 gap-12 items-center leading-none">
-            {/* 좌측: HLA Features */}
-            <div className="lg:col-span-3 space-y-8 order-2 lg:order-1 w-full leading-none">
+
+            {/* 좌측: HLA 핵심 기능 카드 */}
+            <div className="lg:col-span-3 order-2 lg:order-1 w-full space-y-4 leading-none">
+              <div className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase py-1 border-b border-primary/20 mb-6 leading-none">
+                convenience
+              </div>
               {[
                 { id: 'H', title: '총 5개의 핸드피스', desc: '하나의 장비로 다양한 시술 가능' },
                 { id: 'L', title: '핸드피스 서브 LCD', desc: '본체 조작 없이 정밀한 제어' },
@@ -156,77 +103,98 @@ export default function VRoAdvancePage() {
               ].map((feature, idx) => (
                 <motion.div
                   key={idx}
-                  initial={{ opacity: 0, x: -30 }}
+                  initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.1 }}
                   viewport={{ once: true }}
-                  className="glass-panel p-6 border-l-2 border-l-primary/30 group hover:border-primary/50 transition-all shadow-xl"
+                  className="glass-panel p-5 border-l-2 border-l-primary/30 group hover:border-primary/50 transition-all"
                 >
-                  <div className="flex items-center gap-4 mb-4 leading-none">
-                    <span className="text-primary text-2xl font-black font-inter leading-none">{feature.id}</span>
-                    <h4 className="text-white text-lg font-black tracking-tighter uppercase leading-none">{feature.title}</h4>
+                  <div className="flex items-center gap-3 mb-2 leading-none">
+                    <span className="text-primary text-xl font-black font-inter leading-none">{feature.id}</span>
+                    <h4 className="text-white text-sm font-black tracking-tighter uppercase leading-none">{feature.title}</h4>
                   </div>
-                  <p className="text-slate-500 text-sm font-bold tracking-tighter leading-tight break-keep">{feature.desc}</p>
+                  <p className="text-slate-500 text-xs font-bold tracking-tighter leading-tight break-keep">{feature.desc}</p>
                 </motion.div>
               ))}
             </div>
 
-            {/* 중앙: 기기 메인이미지 */}
+            {/* 중앙: 머신 이미지 */}
             <div className="lg:col-span-6 relative flex flex-col items-center order-1 lg:order-2 w-full">
-              <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 aspect-square bg-primary/5 blur-[120px] rounded-full scale-110 opacity-30 pointer-events-none" />
+              <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 aspect-square bg-primary/5 blur-[140px] rounded-full scale-125 opacity-40 pointer-events-none" />
               <motion.img
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
+                initial={{ opacity: 0, scale: 0.88, y: 20 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
                 viewport={{ once: true }}
                 src="images/machine/브이로어드밴스 사진.png"
                 alt="V-RO Advance Core"
-                className="w-full max-w-[420px] drop-shadow-[0_0_80px_rgba(0,183,241,0.2)] z-10 relative"
+                className="w-full max-w-[380px] drop-shadow-[0_0_100px_rgba(0,183,241,0.25)] z-10 relative"
               />
-              <div className="absolute bottom-[-10%] z-0 text-center opacity-10">
-                <span className="text-8xl md:text-[10rem] font-black italic font-inter text-white tracking-widest uppercase pointer-events-none block leading-none">V-RO</span>
+              <div className="absolute bottom-0 z-0 text-center opacity-[0.06] pointer-events-none">
+                <span className="text-[8rem] md:text-[11rem] font-black font-inter text-white tracking-widest uppercase block leading-none">V-RO</span>
               </div>
             </div>
 
-            {/* 우측: Safety & TIS System */}
-            <div className="lg:col-span-3 space-y-12 order-3 w-full text-left leading-none">
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
-                <div className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4 py-1 border-b border-primary/20 leading-none">SAFETY SENSORS</div>
+            {/* 우측 TECH 02: Safety & TIS */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="lg:col-span-3 space-y-10 order-3 w-full text-left leading-none flex flex-col justify-center"
+            >
+              {/* Safety Sensors */}
+              <div className="space-y-5">
+                <div className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase py-1 border-b border-primary/20 leading-none">SAFETY SENSORS</div>
                 {[
                   { title: '접촉 감지 센서', desc: '밀착 시에만 에너지 활성화' },
                   { title: '이동 감지 센서', desc: '정지 시 조사 자동 차단' }
                 ].map((item, idx) => (
-                  <div key={idx} className="group leading-none">
-                    <h5 className="text-white font-black text-base mb-2 tracking-tighter group-hover:text-primary transition-colors leading-none">{item.title}</h5>
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group leading-none"
+                  >
+                    <h5 className="text-white font-black text-sm mb-1.5 tracking-tighter group-hover:text-primary transition-colors leading-none">{item.title}</h5>
                     <p className="text-slate-500 text-xs font-bold tracking-tighter leading-tight break-keep">{item.desc}</p>
-                  </div>
+                  </motion.div>
                 ))}
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="space-y-6"
-              >
-                <div className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4 py-1 border-b border-primary/20 leading-none">TIS SYSTEM</div>
+              {/* TIS System */}
+              <div className="space-y-5">
+                <div className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase py-1 border-b border-primary/20 leading-none">TIS SYSTEM</div>
                 {[
                   { title: 'Treatment History', desc: '시술 통계 및 패턴 자동 기록' },
                   { title: 'Clinical Intelligence', desc: '개별 맞춤형 시술 데이터 제공' }
                 ].map((item, idx) => (
-                  <div key={idx} className="group leading-none">
-                    <h5 className="text-white font-black text-base mb-2 tracking-tighter group-hover:text-primary transition-colors leading-none">{item.title}</h5>
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.2 + idx * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group leading-none"
+                  >
+                    <h5 className="text-white font-black text-sm mb-1.5 tracking-tighter group-hover:text-primary transition-colors leading-none">{item.title}</h5>
                     <p className="text-slate-500 text-xs font-bold tracking-tighter leading-tight break-keep">{item.desc}</p>
-                  </div>
+                  </motion.div>
                 ))}
-              </motion.div>
-            </div>
+              </div>
+
+              {/* 수직 구분 라인 + 통합 슬로건 */}
+              <div className="glass-panel p-6 relative overflow-hidden group">
+                <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none" />
+                <p className="text-slate-400 text-xs font-bold tracking-tighter break-keep leading-relaxed relative z-10">
+                  단 하나의 시스템으로<br />
+                  <span className="text-primary font-black">고주파 × 하이푸의 완전한 시너지</span>를<br />
+                  실현합니다
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -246,11 +214,11 @@ export default function VRoAdvancePage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center leading-none">
-            <motion.div 
-               initial={{ opacity: 0, scale: 0.95 }}
-               whileInView={{ opacity: 1, scale: 1 }}
-               viewport={{ once: true }}
-               className="aspect-square bg-white/[0.02] rounded-[40px] border border-white/10 flex items-center justify-center relative overflow-hidden group shadow-2xl"
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="aspect-square bg-white/[0.02] rounded-[40px] border border-white/10 flex items-center justify-center relative overflow-hidden group shadow-2xl"
             >
               <div className="absolute inset-0 bg-tech-grid opacity-10" />
               <div className="w-20 h-20 bg-primary/5 blur-[40px] rounded-full group-hover:scale-150 transition-transform duration-1000" />
@@ -262,7 +230,7 @@ export default function VRoAdvancePage() {
                 { title: '0.25Φ Microneedle', desc: '가장 얇은 니들로 자극 최소화 및 정밀 냉각 타겟팅' },
                 { title: 'Gold Plating System', desc: '순금 도금 니들을 통한 압도적인 에너지 전도 효율' }
               ].map((box, idx) => (
-                <motion.div 
+                <motion.div
                   key={idx}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -353,10 +321,10 @@ export default function VRoAdvancePage() {
       <section id="bottom-banner" className="relative py-48 bg-[#050810] overflow-hidden border-t border-white/5 leading-none">
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
         <div className="absolute bottom-[-50px] left-1/2 -translate-x-1/2 w-[1200px] h-[300px] bg-primary/[0.05] blur-[150px] rounded-full pointer-events-none" />
-        
+
         <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-20 relative z-10 leading-none">
           <div className="md:w-1/2 flex justify-center items-center leading-none">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2 }}
@@ -373,13 +341,13 @@ export default function VRoAdvancePage() {
 
           <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-12 leading-none">
             <motion.div
-               initial={{ opacity: 0, y: 30 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.8 }}
-               className="space-y-10 leading-none"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-10 leading-none"
             >
               <p className="text-primary text-3xl md:text-5xl font-black tracking-tighter break-keep leading-tight">
-                강력한 시너지가 만드는<br/>
+                강력한 시너지가 만드는<br />
                 <span className="text-white">리프팅의 압도적 진화</span>
               </p>
               <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row md:items-end md:gap-8 leading-none">
