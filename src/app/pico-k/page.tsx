@@ -288,7 +288,7 @@ export default function PicoKPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="flex flex-col"
+              className="flex flex-col h-full"
             >
               {/* 테드 라벨 02 */}
               <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
@@ -318,17 +318,15 @@ export default function PicoKPage() {
                 </p>
               </div>
 
-              {/* 파워 서플라이 장치 이미지 + 특허 엠블럼 */}
-              <div className="relative glass-panel p-4 bg-tech-grid/50 overflow-hidden mt-auto">
-                {/* 파워 서플라이 장치 이미지 영역 (Empty Slot) */}
-                <div className="relative glass-panel aspect-video bg-tech-grid/10 overflow-hidden flex items-center justify-center border-white/5">
-                  <span className="text-white/20 text-xs font-black uppercase tracking-widest italic group-hover:text-primary/40 transition-colors">
-                    Technical Device Illustration
-                  </span>
-                  <div className="absolute bottom-4 right-4 w-32 md:w-44 flex items-center justify-center aspect-[4/3] bg-white/5 border border-white/10 rounded-sm">
-                    <span className="text-[10px] text-white/30 font-bold uppercase">Patent Emblem Area</span>
-                  </div>
-                </div>
+              {/* 파워 서플라이 장치 이미지 - 내부 테두리 제거 및 고정 비율 적용 */}
+              <div className="relative glass-panel aspect-video bg-tech-grid/10 overflow-hidden mt-auto group flex items-center justify-center border-white/5">
+                <img
+                  src="/images/picok/pfc.png"
+                  alt="PFC Power Supply Unit"
+                  className="w-[95%] h-[95%] object-contain z-10 transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* 하단 강조 글로우 */}
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-primary/10 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
               </div>
             </motion.div>
 
@@ -338,7 +336,7 @@ export default function PicoKPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="flex flex-col"
+              className="flex flex-col h-full"
             >
               {/* 테드 라벨 03 */}
               <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
@@ -368,30 +366,33 @@ export default function PicoKPage() {
                 </p>
               </div>
 
-              {/* 부품 조화 일러스트 영역 */}
-              <div className="relative glass-panel p-8 bg-tech-grid/50 border-t border-primary/20 mt-auto">
-                <div className="text-center mb-8">
-                  <h4 className="text-primary/90 font-black text-xl tracking-tight leading-tight">
-                    Core Components<br />Harmonization
+              {/* 부품 조화 일러스트 영역 - 좌측과 동일한 aspect-video 적용 */}
+              <div className="relative glass-panel aspect-video bg-tech-grid/50 border-t border-primary/20 mt-auto flex flex-col justify-center px-8 relative">
+                <div className="text-center mb-6">
+                  <h4 className="text-primary/90 font-black text-lg tracking-tight leading-tight uppercase">
+                    Core Components Harmonization
                   </h4>
                 </div>
 
-                <div className="grid grid-cols-3 gap-4 mb-4 relative">
+                <div className="grid grid-cols-3 gap-4 relative">
                   {[
-                    { label: 'OPTICS' },
-                    { label: 'POWER SUPPLY' },
-                    { label: 'CONTROLER' }
+                    { label: 'OPTICS', img: 'core1.png' },
+                    { label: 'POWER SUPPLY', img: 'core2.png' },
+                    { label: 'CONTROLER', img: 'core3.png' }
                   ].map((item, idx) => (
                     <div key={idx} className="text-center group">
-                      <div className="aspect-square rounded-xl border border-white/10 bg-white/5 overflow-hidden mb-3 group-hover:border-primary/50 transition-all duration-300 flex items-center justify-center">
-                        <span className="text-[10px] text-white/20 font-black tracking-widest">{item.label} IMAGE</span>
+                      <div className="aspect-square rounded-xl border border-white/10 bg-white/5 overflow-hidden mb-2 group-hover:border-primary/50 transition-all duration-500 flex items-center justify-center relative">
+                        <img 
+                          src={`/images/picok/${item.img}`} 
+                          className="w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-110"
+                          alt={item.label}
+                        />
+                        <div className="absolute inset-0 bg-primary/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       </div>
                       <span className="text-[10px] text-white font-black tracking-widest group-hover:text-primary transition-colors uppercase">{item.label}</span>
                     </div>
                   ))}
-
-                  {/* 연결 라인 장식 */}
-                  <div className="absolute top-[35%] left-[20%] right-[20%] h-[1px] bg-primary/20 pointer-events-none" />
+                  {/* 연결 라인 장식 제거됨 */}
                 </div>
               </div>
             </motion.div>
