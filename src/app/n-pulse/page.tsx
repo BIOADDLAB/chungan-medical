@@ -445,115 +445,263 @@ export default function NPulsePage() {
             {/* ⑤ Beam Size Section (Standardized Tech Style) */}
             <section className="relative py-28 bg-[#020408] overflow-hidden">
                 <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none" />
-                <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-[130px] rounded-full pointer-events-none" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[130px] rounded-full pointer-events-none" />
 
                 <div className="max-w-screen-xl mx-auto px-6 relative z-10">
                     <motion.div
-                        initial={{ opacity: 0, x: -40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
+                        className="text-center mb-20"
                     >
                         <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
                             Precision Engineering
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
-                            <span className="hero-title-main">SMALLER BEAM</span><br />
-                            <span className="hero-title-highlight uppercase">SIZE</span>
-                            <span className="hero-title-main ml-3">FRACTIONAL</span>
+                        <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-8 uppercase leading-tight">
+                            <span className="hero-title-main">SMALLER BEAM SIZE</span><br />
+                            <span className="hero-title-highlight">FRACTIONAL</span>
+                            <span className="hero-title-main ml-3">LASER SYSTEM</span>
                         </h2>
-                        <div className="w-20 h-[2px] bg-primary mb-12" />
+                        <div className="w-20 h-[2px] bg-primary mx-auto mb-20" />
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                            <div className="space-y-6">
-                                {[
-                                    '정교하고 깊게 조사되어 회복과 재생을 빠르게',
-                                    '시술 횟수와 통증은 줄이고 효과는 높게',
-                                    '미세 빔으로 손상을 줄이고 정교한 시술 가능'
-                                ].map((text, i) => (
-                                    <motion.div
-                                        key={i}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.6, delay: i * 0.1 }}
-                                        viewport={{ once: true }}
-                                        className="flex items-start gap-5 p-6 glass-panel-dark hover:bg-white/5 transition-colors group"
-                                    >
-                                        <div className="w-2 h-2 rounded-full bg-primary mt-2.5 shadow-[0_0_10px_rgba(0,183,241,1)]" />
-                                        <p className="text-slate-200 text-lg md:text-xl font-bold leading-relaxed whitespace-pre-line group-hover:text-white transition-colors">
-                                            {text}
-                                        </p>
-                                    </motion.div>
-                                ))}
-                            </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto mb-24">
+                            {[
+                                {
+                                    id: '01',
+                                    title: 'ULTRA MICRO BEAM',
+                                    text: '정교하고 깊게 조사되어\n회복과 재생을 빠르게'
+                                },
+                                {
+                                    id: '02',
+                                    title: 'PATIENT COMFORT+',
+                                    text: '시술 횟수와 통증은 줄이고\n효과는 높게'
+                                }
+                            ].map((item, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, x: i === 0 ? -20 : 20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.8, delay: i * 0.2 }}
+                                    viewport={{ once: true }}
+                                    className="relative group p-0"
+                                >
+                                    <div className="flex items-start gap-8">
+                                        {/* Step Indicator with Pulse Line */}
+                                        <div className="flex flex-col items-center flex-shrink-0 w-10">
+                                            <div className="w-10 h-10 rounded-lg border border-primary/30 flex items-center justify-center text-primary font-black text-xs bg-primary/5 shadow-[0_0_15px_rgba(0,183,241,0.2)] group-hover:bg-primary group-hover:text-black transition-all duration-500 relative z-10">
+                                                {item.id}
+                                            </div>
 
-                            <div className="relative aspect-square lg:aspect-auto h-full min-h-[400px] glass-panel bg-tech-grid/20 flex flex-col items-center justify-center overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-30" />
-                                <svg viewBox="0 0 400 400" className="w-64 h-64 relative z-10">
-                                    <circle cx="200" cy="200" r="180" fill="none" stroke="white" strokeWidth="1" strokeDasharray="5 5" opacity="0.2" />
-                                    <circle cx="200" cy="200" r="120" fill="none" stroke="#00B7F1" strokeWidth="1" opacity="0.3" />
-                                    <circle cx="200" cy="200" r="5" fill="#00B7F1" className="shadow-[0_0_20px_rgba(0,183,241,1)]" />
-                                    <line x1="200" y1="200" x2="350" y2="200" stroke="#00B7F1" strokeWidth="2" opacity="0.6">
-                                        <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="5s" repeatCount="indefinite" />
-                                    </line>
-                                    <text x="200" y="360" textAnchor="middle" className="fill-slate-500 text-[12px] font-black tracking-[0.8em] uppercase">Scanning Precision</text>
-                                </svg>
-                            </div>
+                                            <div className="relative w-px h-16 mt-3 overflow-hidden">
+                                                {/* Background static line: Reduced height to match text */}
+                                                <div className="absolute inset-0 bg-white/10" />
+
+                                                {/* Internal energy pulse flowing */}
+                                                <motion.div
+                                                    animate={{ y: ['-100%', '300%'] }}
+                                                    transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+                                                    className="absolute inset-x-0 h-10 bg-gradient-to-b from-transparent via-primary to-transparent opacity-60"
+                                                />
+
+                                                {/* Glow effect on hover */}
+                                                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                                            </div>
+                                        </div>
+
+                                        <div className="flex-grow space-y-4 pt-1">
+                                            <div className="flex items-center justify-between border-b border-white/5 pb-2">
+                                                <span className="text-primary/70 font-black text-[10px] tracking-[0.3em] uppercase">{item.title}</span>
+                                            </div>
+                                            <div className="relative">
+                                                <div className="absolute -left-4 top-0 bottom-0 w-[2px] bg-primary scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-500 shadow-[0_0_15px_#00B7F1]" />
+                                                <p className="text-white text-xl md:text-2xl font-black leading-tight tracking-tight whitespace-pre-line transition-all duration-500 group-hover:translate-x-2">
+                                                    {item.text}
+                                                </p>
+                                            </div>
+                                            <div className="flex gap-1.5 opacity-20 group-hover:opacity-100 transition-opacity duration-700">
+                                                {[1, 2, 3, 4, 5].map((dot) => (
+                                                    <div key={dot} className="w-1 h-1 rounded-full bg-primary" />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            ))}
                         </div>
                     </motion.div>
+
+                    {/* Bottom: Technical Visualizations side-by-side */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            viewport={{ once: true }}
+                            className="space-y-6"
+                        >
+                            <div className="text-center group">
+                                <span className="text-primary/60 font-black text-[10px] tracking-[0.4em] uppercase block mb-1 group-hover:text-primary transition-colors">Micro Beam Technology</span>
+                                <span className="text-white font-bold text-lg tracking-widest">Min. 80~100um</span>
+                            </div>
+                            <div className="aspect-square glass-panel bg-black/40 relative overflow-hidden flex items-center justify-center p-8 border-white/10">
+                                <div className="absolute inset-0 bg-tech-grid opacity-20" />
+                                <div className="grid grid-cols-12 gap-2 opacity-80 scale-110">
+                                    {Array.from({ length: 144 }).map((_, i) => (
+                                        <div
+                                            key={i}
+                                            className="w-1.5 h-1.5 rounded-full bg-primary/30 shadow-[0_0_5px_rgba(0,183,241,0.3)] animate-pulse"
+                                            style={{
+                                                animationDelay: `${Math.random() * 2}s`,
+                                                backgroundColor: i === 54 || i === 78 || i === 92 ? '#00B7F1' : '',
+                                                boxShadow: i === 54 || i === 78 || i === 92 ? '0 0 10px #00B7F1' : ''
+                                            }}
+                                        />
+                                    ))}
+                                    <div className="absolute inset-0 flex items-center justify-center">
+                                        <div className="w-24 h-24 border border-primary/20 rounded-full animate-[spin_10s_linear_infinite]" />
+                                        <div className="w-16 h-16 border-2 border-primary/40 rounded-full animate-ping" />
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            viewport={{ once: true }}
+                            className="flex flex-col h-full"
+                        >
+                            <div className="text-center mb-6">
+                                <span className="text-primary/60 font-black text-[10px] tracking-[0.4em] uppercase block mb-1">Tissue Interaction</span>
+                                <span className="text-white font-bold text-lg tracking-widest">Deep Layer Delivery</span>
+                            </div>
+                            <div className="flex-grow aspect-square md:aspect-auto glass-panel bg-black/40 relative overflow-hidden flex flex-col border-white/10 pt-10">
+                                <div className="absolute inset-x-0 bottom-0 h-[65%] opacity-50">
+                                    <div className="h-full w-full bg-gradient-to-b from-[#8B4444] via-[#5C2E2E] to-[#3D1F1F]" />
+                                    <div className="absolute top-0 inset-x-0 h-6 bg-[#C28282] rounded-full blur-[4px] opacity-40 shadow-[0_0_20px_rgba(194,130,130,0.3)]" />
+                                </div>
+                                <div className="flex justify-around items-start h-full px-8 relative z-10">
+                                    {[1, 2, 3, 4, 5].map((i) => (
+                                        <div key={i} className="flex flex-col items-center h-full">
+                                            <motion.div
+                                                initial={{ height: 0 }}
+                                                whileInView={{ height: '70%' }}
+                                                transition={{ duration: 1.5, delay: i * 0.2 }}
+                                                className="w-0.5 bg-gradient-to-b from-primary via-white to-transparent shadow-[0_0_15px_rgba(0,183,241,0.8)]"
+                                            />
+                                            <div className="w-5 h-5 rounded-full bg-orange-500/40 blur-[5px] -mt-2" />
+                                            <div className="w-2.5 h-2.5 rounded-full bg-orange-500 -mt-4 shadow-[0_0_20px_#f97316] animate-pulse" />
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="absolute bottom-6 left-8 flex items-center gap-3">
+                                    <div className="w-10 h-px bg-primary/40" />
+                                    <span className="text-[11px] text-primary/80 font-black uppercase tracking-[0.3em]">Vertical Energy Flow</span>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
                 </div>
             </section>
 
-            {/* High Peak Power Ultra Pulse Section */}
-            <section className="py-24 bg-black overflow-hidden relative border-t border-white/5">
-                <div className="container mx-auto px-6">
-                    <div className="max-w-6xl mx-auto">
-                        <div className="reveal-up mb-6">
-                            <h2 className="text-[#00C4B8] text-[32px] md:text-[42px] font-bold mb-10">High Peak Power Ultra Pulse</h2>
-                            <ul className="space-y-4 text-white text-[18px] md:text-[22px] font-medium list-none">
-                                <li className="flex items-start">
-                                    <span className="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
-                                    <div>울트라 펄스를 통한 열손상 최소화</div>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
-                                    <div>
-                                        시술 횟수와 통증은 <span className="font-bold underline underline-offset-4 decoration-[#00C4B8]/30">Down</span> 효과는{' '}
-                                        <span className="font-bold underline underline-offset-4 decoration-[#00C4B8]/30">Up</span>
-                                    </div>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
-                                    <div>샤프하게 조사되는 고퀄리티 레이저 빔</div>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
-                                    <div>
-                                        <span className="font-bold">Frequency</span>와 <span className="font-bold">Duration</span>을 통해 섬세한 레이저 빔 조사
-                                    </div>
-                                </li>
-                            </ul>
+            {/* ⑥ Ultra Pulse Technology Section (Standardized Tech Style) */}
+            <section id="ultra-pulse-tech" className="relative py-28 bg-[#020408] overflow-hidden border-t border-white/5">
+                <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+                <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
+
+                <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+                    <div className="flex items-center gap-4 mb-14">
+                        <span className="text-primary font-black text-sm tracking-widest uppercase">Ultra Pulse Core</span>
+                        <div className="h-[1px] flex-grow bg-gradient-to-r from-primary/30 to-transparent" />
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                        {/* 좌측: 상세 기술 카드 */}
+                        <div className="lg:col-span-12 xl:col-span-7">
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8 }}
+                                viewport={{ once: true }}
+                                className="mb-16"
+                            >
+                                <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-8 uppercase leading-tight">
+                                    <span className="hero-title-main">HIGH PEAK POWER</span><br />
+                                    <span className="hero-title-highlight">ULTRA PULSE</span>
+                                </h2>
+                                <div className="w-20 h-[2px] bg-primary mb-12" />
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    {[
+                                        { title: 'MINIMIZED THERMAL DAMAGE', desc: '울트라 펄스를 통한 열손상 최소화로\n빠른 회복과 정교한 시술 가능' },
+                                        { title: 'OPTIMIZED EFFICIENCY', desc: '시술 횟수와 통증은 획기적으로 낮추고\n임상 효과는 극대화' },
+                                        { title: 'ELITE BEAM QUALITY', desc: '주변 조직 결손 없이 샤프하게 조사되는\n최상급 퀄리티의 레이저 빔' },
+                                        { title: 'PRECISION CONTROL', desc: 'Frequency와 Duration 조절을 통한\n차원이 다른 섬세한 에너지 전달' }
+                                    ].map((item, i) => (
+                                        <div key={i} className="glass-panel-dark p-6 group border-white/5 hover:border-primary/20 transition-all duration-500">
+                                            <div className="flex items-center gap-3 mb-4">
+                                                <div className="w-1 h-3 bg-primary/40 group-hover:bg-primary transition-all duration-500" />
+                                                <h4 className="text-primary/70 font-black text-[11px] tracking-widest uppercase">{item.title}</h4>
+                                            </div>
+                                            <p className="text-white font-bold leading-relaxed whitespace-pre-line text-[15px] md:text-[16px]">
+                                                {item.desc}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </motion.div>
                         </div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center reveal-up pt-10">
-                            <div className="relative w-full aspect-square max-w-[400px] mx-auto flex items-center justify-center">
-                                <div className="relative w-full h-full flex items-center justify-center">
-                                    <div className="absolute top-[60px] w-[160px] h-[160px] rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white font-extrabold text-[16px] md:text-[18px] z-10">
-                                        <span className="mb-4">파워보드</span>
-                                    </div>
-                                    <div className="absolute bottom-[80px] left-[60px] w-[160px] h-[160px] rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex flex-col items-center justify-center text-white font-extrabold text-[16px] md:text-[18px] text-center px-4 z-10">
-                                        <span className="mb-2">높은 파워의<br />글래스튜브</span>
-                                    </div>
-                                    <div className="absolute bottom-[80px] right-[60px] w-[160px] h-[160px] rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex flex-col items-center justify-center text-white font-extrabold text-[16px] md:text-[18px] text-center px-4 z-10">
-                                        <span className="mb-2">고성능의<br />레귤레이터</span>
-                                    </div>
-                                </div>
-                                <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-20 w-3 h-3 bg-[#00C4B8] rounded-full shadow-[0_0_15px_rgba(0,196,184,0.8)]"></div>
-                            </div>
+                        {/* 우측: 통합 파워 시스템 시각화 */}
+                        <div className="lg:col-span-12 xl:col-span-5 relative">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 1 }}
+                                viewport={{ once: true }}
+                                className="relative aspect-square max-w-[500px] mx-auto"
+                            >
+                                {/* 중앙 코어 에너지 효과 */}
+                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-primary/10 blur-3xl animate-pulse" />
 
-                            <div className="w-full aspect-square max-w-[480px] mx-auto bg-black rounded-[24px] overflow-hidden flex items-center justify-center relative border border-white/5">
-                                <canvas ref={canvasRef} className="w-full h-full" />
-                            </div>
+                                {/* 3개 코어 연결선 */}
+                                <svg viewBox="0 0 400 400" className="absolute inset-0 w-full h-full opacity-30">
+                                    <path d="M200,80 L100,280 L300,280 Z" fill="none" stroke="#00B7F1" strokeWidth="1" strokeDasharray="5,5" />
+                                    <circle cx="200" cy="80" r="4" fill="#00B7F1" />
+                                    <circle cx="100" cy="280" r="4" fill="#00B7F1" />
+                                    <circle cx="300" cy="280" r="4" fill="#00B7F1" />
+                                </svg>
+
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    {/* 상단: 파워보드 */}
+                                    <div className="absolute top-0 w-36 h-36 rounded-full glass-panel flex items-center justify-center text-center p-4 group hover:border-primary/50 transition-all duration-500 hover:-translate-y-2">
+                                        <div className="space-y-1">
+                                            <div className="text-primary font-black text-[10px] tracking-widest">UNIT 01</div>
+                                            <div className="text-white font-black text-[15px]">파워보드</div>
+                                        </div>
+                                    </div>
+                                    {/* 좌하단: 글래스튜브 */}
+                                    <div className="absolute bottom-10 left-0 w-36 h-36 rounded-full glass-panel flex items-center justify-center text-center p-4 group hover:border-primary/50 transition-all duration-500 hover:-translate-x-2">
+                                        <div className="space-y-1">
+                                            <div className="text-primary font-black text-[10px] tracking-widest">UNIT 02</div>
+                                            <div className="text-white font-black text-[15px]">높은 파워의<br />글래스튜브</div>
+                                        </div>
+                                    </div>
+                                    {/* 우하단: 레귤레이터 */}
+                                    <div className="absolute bottom-10 right-0 w-36 h-36 rounded-full glass-panel flex items-center justify-center text-center p-4 group hover:border-primary/50 transition-all duration-500 hover:translate-x-2">
+                                        <div className="space-y-1">
+                                            <div className="text-primary font-black text-[10px] tracking-widest">UNIT 03</div>
+                                            <div className="text-white font-black text-[15px]">고성능의<br />레귤레이터</div>
+                                        </div>
+                                    </div>
+
+                                    {/* 중앙 에너지 코어 노드 */}
+                                    <div className="w-4 h-4 bg-primary rounded-full shadow-[0_0_20px_#00B7F1] animate-ping opacity-40" />
+                                    <div className="absolute w-2 h-2 bg-white rounded-full shadow-[0_0_10px_#fff] z-20" />
+                                </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
