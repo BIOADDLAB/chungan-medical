@@ -759,58 +759,58 @@ export default function NPulsePage() {
                                 className="w-full lg:w-1/2 order-2 overflow-x-auto self-center z-30"
                             >
                                 <div className="shadow-2xl active-table-container">
-                                    <table className="w-full border-collapse text-[14px] md:text-[15px] border border-black text-center min-w-[500px]">
+                                    <table className="w-full border-collapse text-[14px] md:text-[15px] border border-primary/20 text-center min-w-[500px] bg-black/40 backdrop-blur-md">
                                         <thead>
                                             <tr className="h-16">
-                                                <th className="bg-[#222] text-white border border-black font-bold w-[28%]">Product Name</th>
-                                                <th className="bg-[#e0e0e0] text-black border border-black font-bold w-[36%]">N-Pulse Pro</th>
-                                                <th className="bg-[#e0e0e0] text-black border border-black font-bold w-[36%]">N-Pulse FX</th>
+                                                <th className="bg-black/80 text-primary border border-primary/20 font-black uppercase tracking-widest w-[28%] text-[11px]">Product Name</th>
+                                                <th className="bg-white/5 text-slate-300 border border-primary/20 font-black w-[36%]">N-Pulse Pro</th>
+                                                <th className="bg-white/5 text-slate-300 border border-primary/20 font-black w-[36%]">N-Pulse FX</th>
                                             </tr>
                                         </thead>
-                                        <tbody className="bg-white text-black font-medium">
-                                            <tr className="h-14">
-                                                <td className="bg-[#444] text-white border border-black font-bold px-4">Mode</td>
-                                                <td className="border border-black">CO2 (Surgical)</td>
-                                                <td className="border border-black">CO2 (Surgical),<br />FRX (Fractional)</td>
+                                        <tbody className="text-slate-300 font-medium">
+                                            <tr className="h-14 border-b border-white/5">
+                                                <td className="bg-primary/10 text-primary border border-primary/20 font-black px-4 text-[11px] uppercase tracking-widest">Mode</td>
+                                                <td className="border border-white/5 bg-white/[0.02]">CO2 (Surgical)</td>
+                                                <td className="border border-white/5 bg-white/[0.02]">CO2 (Surgical),<br />FRX (Fractional)</td>
                                             </tr>
-                                            <tr className="h-14">
-                                                <td className="bg-[#444] text-white border border-black font-bold px-4">Laser System</td>
-                                                <td colSpan={2} className="border border-black">Fractional CO2 Laser</td>
+                                            <tr className="h-14 border-b border-white/5">
+                                                <td className="bg-primary/10 text-primary border border-primary/20 font-black px-4 text-[11px] uppercase tracking-widest">Laser System</td>
+                                                <td colSpan={2} className="border border-white/5 bg-white/[0.02]">Fractional CO2 Laser</td>
                                             </tr>
-                                            <tr className="h-14">
-                                                <td className="bg-[#444] text-white border border-black font-bold px-4">Wavelength</td>
-                                                <td colSpan={2} className="border border-black">10,600 nm</td>
+                                            <tr className="h-14 border-b border-white/5">
+                                                <td className="bg-primary/10 text-primary border border-primary/20 font-black px-4 text-[11px] uppercase tracking-widest">Wavelength</td>
+                                                <td colSpan={2} className="border border-white/5 bg-white/[0.02]">10,600 nm</td>
                                             </tr>
-                                            <tr className="h-16">
-                                                <td className="bg-[#444] text-white border border-black font-bold px-4">Power (COS)</td>
-                                                <td className="border border-black">0.5 ~ 30 W</td>
-                                                {/* 사진과 똑같은 Energy (FRX) 강조 디자인 - 검은 박스 디테일 */}
-                                                <td className="border border-black p-0">
+                                            <tr className="h-16 border-b border-white/5">
+                                                <td className="bg-primary/10 text-primary border border-primary/20 font-black px-4 text-[11px] uppercase tracking-widest leading-tight">Power (COS)</td>
+                                                <td className="border border-white/5 bg-white/[0.02]">0.5 ~ 30 W</td>
+                                                {/* 사진과 똑같은 Energy (FRX) 강조 디자인 - 프리미엄 블루 박스 */}
+                                                <td className="border border-white/5 p-0 bg-white/[0.02]">
                                                     <div className="flex h-16 w-full items-stretch">
-                                                        <div className="flex-1 bg-black text-white flex items-center justify-center font-bold border-r border-black px-2">
+                                                        <div className="flex-1 bg-primary text-black flex items-center justify-center font-black text-[12px] uppercase tracking-tighter px-2 shadow-[0_0_20px_rgba(0,183,241,0.3)]">
                                                             Energy (FRX)
                                                         </div>
-                                                        <div className="flex-1 flex items-center justify-center px-2">
+                                                        <div className="flex-1 flex items-center justify-center px-2 font-black text-white">
                                                             2 ~ 300mJ
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <tr className="h-14">
-                                                <td className="bg-[#444] text-white border border-black font-bold px-4">Electrical</td>
-                                                <td colSpan={2} className="border border-black">220~240 VAC, 50/60 Hz, 1,100VA</td>
+                                            <tr className="h-14 border-b border-white/5">
+                                                <td className="bg-primary/10 text-primary border border-primary/20 font-black px-4 text-[11px] uppercase tracking-widest">Electrical</td>
+                                                <td colSpan={2} className="border border-white/5 bg-white/[0.02]">220~240 VAC, 50/60 Hz, 1,100VA</td>
+                                            </tr>
+                                            <tr className="h-14 border-b border-white/5">
+                                                <td className="bg-primary/10 text-primary border border-primary/20 font-black px-4 text-[11px] uppercase tracking-widest leading-tight">User Interface</td>
+                                                <td colSpan={2} className="border border-white/5 bg-white/[0.02]">10.2 Inch</td>
+                                            </tr>
+                                            <tr className="h-14 border-b border-white/5">
+                                                <td className="bg-primary/10 text-primary border border-primary/20 font-black px-4 text-[11px] uppercase tracking-widest">Dimension</td>
+                                                <td colSpan={2} className="border border-white/5 bg-white/[0.02]">340(W) X 350(D) X 1,100(H) mm</td>
                                             </tr>
                                             <tr className="h-14">
-                                                <td className="bg-[#444] text-white border border-black font-bold px-4">User Interface</td>
-                                                <td colSpan={2} className="border border-black">10.2 Inch</td>
-                                            </tr>
-                                            <tr className="h-14">
-                                                <td className="bg-[#444] text-white border border-black font-bold px-4">Dimension</td>
-                                                <td colSpan={2} className="border border-black">340(W) X 350(D) X 1,100(H) mm</td>
-                                            </tr>
-                                            <tr className="h-14">
-                                                <td className="bg-[#444] text-white border border-black font-bold px-4">Weight</td>
-                                                <td colSpan={2} className="border border-black">35 kg</td>
+                                                <td className="bg-primary/10 text-primary border border-primary/20 font-black px-4 text-[11px] uppercase tracking-widest">Weight</td>
+                                                <td colSpan={2} className="border border-white/5 bg-white/[0.02]">35 kg</td>
                                             </tr>
                                         </tbody>
                                     </table>

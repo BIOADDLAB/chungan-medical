@@ -648,7 +648,7 @@ export default function UPulsePage() {
           >
             <div className="mb-0">
               <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4">
-                <span className="hero-title-main">BEFORE &</span><br />
+                <span className="hero-title-main">BEFORE & </span>
                 <span className="hero-title-highlight uppercase">AFTER</span>
               </h2>
             </div>
@@ -669,7 +669,7 @@ export default function UPulsePage() {
               <div className="mb-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_rgba(0,183,241,0.8)] animate-pulse" />
-                  <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_01 / ANALYSIS</span>
+                  <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_01</span>
                 </div>
                 <span className="h-px w-16 bg-gradient-to-r from-primary/40 to-transparent"></span>
               </div>
@@ -693,12 +693,10 @@ export default function UPulsePage() {
               </div>
               <div className="flex mt-8 px-4 justify-between items-end">
                 <div className="flex flex-col">
-                  <span className="text-[10px] font-black text-primary/70 tracking-[0.4em] uppercase mb-1">Observation</span>
                   <span className="text-lg font-black text-white/40 tracking-[0.1em] uppercase group-hover:text-white/60 transition-colors">Before Treatment</span>
                 </div>
                 <div className="w-12 h-px bg-primary/30 mb-2"></div>
                 <div className="flex flex-col text-right">
-                  <span className="text-[10px] font-black text-primary tracking-[0.4em] uppercase mb-1">Validated</span>
                   <span className="text-lg font-black text-primary tracking-[0.1em] uppercase shadow-[0_0_20px_rgba(0,183,241,0.2)]">After Result</span>
                 </div>
               </div>
@@ -715,7 +713,7 @@ export default function UPulsePage() {
               <div className="mb-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_rgba(0,183,241,0.8)] animate-pulse" />
-                  <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_02 / SCAN</span>
+                  <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_02</span>
                 </div>
                 <span className="h-px w-16 bg-gradient-to-r from-primary/40 to-transparent"></span>
               </div>
@@ -749,7 +747,7 @@ export default function UPulsePage() {
               <div className="mb-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full" />
-                  <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_03 / DETAIL</span>
+                  <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_03</span>
                 </div>
                 <div className="flex-1 mx-6 h-[1px] bg-gradient-to-r from-primary/30 to-transparent"></div>
               </div>
@@ -784,7 +782,7 @@ export default function UPulsePage() {
               <div className="mb-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_rgba(0,183,241,0.8)] animate-pulse" />
-                  <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_04 / CLINIC</span>
+                  <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_04</span>
                 </div>
                 <div className="flex-1 mx-6 h-[1px] bg-gradient-to-r from-primary/30 to-transparent"></div>
               </div>
@@ -909,7 +907,7 @@ export default function UPulsePage() {
       {/* Section: Technical Specifications - Orchestration Compliant */}
       <section id="u-pulse-tech-specs" className="py-28 bg-[#020408] text-white overflow-hidden relative">
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
-        
+
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -947,8 +945,8 @@ export default function UPulsePage() {
                 { label: 'ENERGY', value: '5 ~ 300mJ' },
                 { label: 'WEIGHT', value: '50kg (Max Weight: 60kg)' }
               ].map((item, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className={`flex items-stretch border-b border-white/5 last:border-b-0 ${idx % 2 === 0 ? 'md:border-r' : ''} group hover:bg-white/[0.01] transition-colors`}
                 >
                   <div className="w-32 md:w-36 lg:w-40 bg-white/[0.03] py-5 px-5 flex items-center shrink-0 border-r border-white/5">
@@ -965,7 +963,7 @@ export default function UPulsePage() {
               ))}
 
             </div>
-            
+
             <div className="absolute bottom-4 right-6 opacity-[0.05] pointer-events-none select-none">
               <span className="text-[40px] md:text-[60px] font-black italic tracking-tighter text-primary/30 leading-none">U-PULSE</span>
             </div>
