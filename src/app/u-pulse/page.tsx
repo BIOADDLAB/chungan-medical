@@ -541,40 +541,80 @@ export default function UPulsePage() {
             className="mb-20 flex flex-col items-center"
           >
             <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
-              Advance Technology
+              Advanced Technique
             </div>
             <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-8">
-              <span className="hero-title-main">THERMAL-FREE</span><br />
-              <span className="hero-title-highlight uppercase">Multi-Pinhole</span>
+              <span className="hero-title-main">높은 출력만 가능한</span><br />
+              <span className="hero-title-highlight uppercase">Thermal-Free 멀티핀홀 기법</span>
             </h3>
             <div className="w-20 h-[2px] bg-primary" />
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: "Easy Control", sub: "깊이 조절 가능", desc: "정밀한 파워 조절 시스템으로 원하는 깊이까지 정확한 시술이 가능합니다." },
-              { title: "표준화된 임상", sub: "쉽고 정확하게", desc: "다양한 케이스를 통해 검증된 표준화 데이터를 바탕으로 안정적인 결과를 도출합니다." },
-              { title: "Thermal Damage", sub: "없이 깊게", desc: "열 손상을 최소화하는 독자적인 멀티핀홀 기법으로 통증은 줄이고 효과는 극대화했습니다." }
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.15 }}
-                viewport={{ once: true }}
-                className="glass-panel p-10 relative group overflow-hidden border-white/5 hover:border-primary/40 transition-all duration-500"
-              >
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/5 blur-3xl group-hover:bg-primary/20 transition-all duration-700" />
-                <div className="relative z-10">
-                  <div className="w-12 h-12 mb-8 bg-primary/10 border border-primary/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                    <div className="w-6 h-6 border-b-2 border-r-2 border-primary/60 rotate-45 group-hover:border-primary transition-colors" />
-                  </div>
-                  <h4 className="text-white font-black text-2xl mb-1 tracking-tight group-hover:text-primary transition-colors">{item.title}</h4>
-                  <p className="text-primary font-bold text-[11px] tracking-[0.2em] uppercase mb-6">{item.sub}</p>
-                  <p className="text-slate-400 text-[15px] leading-relaxed font-medium">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Card 1: Easy Control */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="glass-panel p-10 flex flex-col items-center group hover:border-primary/40 transition-all duration-500"
+            >
+              <div className="w-20 h-20 mb-8 flex items-center justify-center bg-white/5 rounded-2xl relative overflow-hidden">
+                <svg viewBox="0 0 40 40" className="w-12 h-12">
+                  <g stroke="#00B7F1" strokeWidth="1.5" fill="none">
+                    <line x1="10" y1="5" x2="10" y2="35" opacity="0.3" />
+                    <line x1="20" y1="5" x2="20" y2="35" opacity="0.3" />
+                    <line x1="30" y1="5" x2="30" y2="35" opacity="0.3" />
+                    <circle cx="10" cy="15" r="3" fill="#00B7F1" />
+                    <circle cx="20" cy="25" r="3" fill="#00B7F1" />
+                    <circle cx="30" cy="10" r="3" fill="#00B7F1" />
+                  </g>
+                </svg>
+                <div className="absolute inset-0 bg-primary/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+              <h4 className="text-white font-bold text-xl mb-1">Easy Control</h4>
+              <p className="text-slate-400 text-sm font-medium">깊이 조절 가능</p>
+            </motion.div>
+
+            {/* Card 2: Clinical Normalization */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="glass-panel p-10 flex flex-col items-center group hover:border-primary/40 transition-all duration-500"
+            >
+              <div className="w-20 h-20 mb-8 flex items-center justify-center bg-white/5 rounded-2xl relative overflow-hidden">
+                <svg viewBox="0 0 40 40" className="w-12 h-12">
+                  <rect x="8" y="8" width="24" height="24" stroke="white" strokeWidth="1.5" fill="none" opacity="0.4" />
+                  <path d="M12,20 L18,26 L28,14" stroke="#00B7F1" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <div className="absolute inset-0 bg-primary/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+              <h4 className="text-white font-bold text-xl mb-1">표준화된 임상으로</h4>
+              <p className="text-slate-400 text-sm font-medium">쉽고 정확하게</p>
+            </motion.div>
+
+            {/* Card 3: Thermal Damage Zero */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="glass-panel p-10 flex flex-col items-center group hover:border-primary/40 transition-all duration-500"
+            >
+              <div className="w-20 h-20 mb-8 flex items-center justify-center bg-white/5 rounded-2xl relative overflow-hidden">
+                <svg viewBox="0 0 40 40" className="w-12 h-12">
+                  <circle cx="20" cy="20" r="16" stroke="white" strokeWidth="1.2" fill="none" opacity="0.3" />
+                  <path d="M10,18 Q15,14 20,18 T30,18" stroke="#FB7185" strokeWidth="1.5" fill="none" />
+                  <path d="M10,24 Q15,20 20,24 T30,24" stroke="#00B7F1" strokeWidth="1.5" fill="none" opacity="0.6" />
+                  <path d="M20,10 L20,30 M15,25 L20,30 L25,25" stroke="white" strokeWidth="1.5" fill="none" />
+                </svg>
+                <div className="absolute inset-0 bg-primary/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+              <h4 className="text-white font-bold text-xl mb-1">Thermal Damage</h4>
+              <p className="text-slate-400 text-sm font-medium">없이 깊게</p>
+            </motion.div>
           </div>
         </div>
       </section>
