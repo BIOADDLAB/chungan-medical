@@ -65,53 +65,114 @@ export default function SylfirmXPage() {
         </div>
       </section>
 
-      {/* Main Content Section */}
-      <section id="content" className="py-24 bg-white text-black overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-6 relative">
-          <div className="text-center mb-24">
-            <h2 className="text-[#2C335E] text-[42px] md:text-[52px] font-extrabold tracking-tight">
-              What is SYLFIRM X
-            </h2>
+      {/* ② Sylfirm-X Overview Section (Current Standard Tech Style) */}
+      <section id="content" className="relative py-32 bg-[#020408] overflow-hidden">
+        {/* 테크니컬 배경 요소 */}
+        <div className="absolute inset-0 bg-tech-grid opacity-10 mix-blend-screen pointer-events-none" />
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          {/* 상단 라벨 및 구분선 */}
+          <div className="flex items-center gap-4 mb-20 relative overflow-hidden">
+            <span className="text-primary font-black text-xs md:text-sm tracking-[0.4em] font-inter whitespace-nowrap uppercase">CORE TECHNOLOGY</span>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              style={{ originX: 0 }}
+              className="h-[1px] w-full bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none"
+            />
           </div>
 
-          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
-            <div className="w-full md:w-[40%] flex justify-center reveal-up">
-              <img
-                src="images/machine/실펌x 사진.png"
-                alt="SYLFIRM X Machine"
-                className="w-full max-w-[340px] md:max-w-[420px] h-auto object-contain drop-shadow-[0_15px_40px_rgba(0,0,0,0.12)]"
-              />
-            </div>
-
-            <div className="w-full md:w-[60%] space-y-14 md:pb-6 relative flex flex-col justify-center reveal-up delay-100">
-              <div className="text-[#333] text-[17px] md:text-[21px] leading-[1.7]">
-                <p>
-                  SYLFIRM X 는 Needle RF장비로 피부 속 원하는 깊이에{' '}
-                  <span className="font-bold">바늘(needle)이 침습(Invasive)</span>해<br />
-                  <span className="font-bold">피부 속에서 고주파 열을 전달해 효과를 내는 장비입니다.</span>
-                </p>
-              </div>
-
-              <div className="text-[#333] text-[17px] md:text-[21px] leading-[1.7]">
-                <p>
-                  SYLFIRM X 는 레이저와 달리<br />
-                  <span className="font-bold">피부 타입, 피부 컬러에 상관 없이 모든 환자에게 시술 가능하며,</span>
-                  <br />
-                  <span className="font-bold">민감해 레이저 시술이 불가능한 환자도 시술 가능 합니다.</span>
-                </p>
-              </div>
-
-              <div className="text-[#333] text-[17px] md:text-[21px] leading-[1.7]">
-                <p>8가지 모드로 환자의 피부 상태 및 원하는 효과에 따라 모드를 선택해 시술 합니다.</p>
-              </div>
-
-              <div className="flex justify-end pt-8 pr-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            {/* 좌측: 장비 이미지 (강조 디자인) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="relative order-2 lg:order-1 flex justify-center"
+            >
+              <div className="relative group">
+                {/* 배경 네온 글로우 */}
+                <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full scale-125 opacity-40 group-hover:opacity-60 transition duration-1000" />
                 <img
-                  src="images/machine/실펌x 로고.png"
-                  alt="SYLFIRM X Logo"
-                  className="h-8 md:h-10 object-contain"
+                  src="images/machine/실펌x 사진.png"
+                  alt="SYLFIRM X Advanced System"
+                  className="relative z-10 w-full max-w-[420px] h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,183,241,0.2)] group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
+            </motion.div>
+
+            {/* 우측: 핵심 기술 설명 (Revolutionary Header System) */}
+            <div className="relative order-1 lg:order-2">
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="space-y-12"
+              >
+                <div>
+                  <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-8 uppercase leading-tight">
+                    <span className="hero-title-main">WHAT IS</span><br />
+                    <span className="hero-title-highlight">SYLFIRM - X</span>
+                  </h2>
+                  <div className="w-24 h-[2px] bg-primary mb-10 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+                </div>
+
+                <div className="space-y-8">
+                  {/* 기술 설명 블록 1 */}
+                  <div className="flex gap-6 items-start">
+                    <div className="mt-2 shrink-0 w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(0,183,241,1)]" />
+                    <div>
+                      <p className="text-slate-200 text-lg md:text-xl font-black leading-relaxed mb-3">
+                        바늘을 통한 정밀한 <span className="text-primary">고주파 전달</span>
+                      </p>
+                      <p className="text-slate-400 text-[15px] md:text-base font-medium leading-relaxed">
+                        SYLFIRM X는 Needle RF장비로 피부 속 원하는 깊이에 바늘(Needle)이 침습(Invasive)해 피부 속에서 고주파 열을 전달해 효과를 내는 장비입니다.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* 기술 설명 블록 2 */}
+                  <div className="flex gap-6 items-start">
+                    <div className="mt-2 shrink-0 w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(0,183,241,1)]" />
+                    <div>
+                      <p className="text-slate-200 text-lg md:text-xl font-black leading-relaxed mb-3">
+                        피부 타입과 컬러에 구애받지 않는 <span className="text-primary">시술 솔루션</span>
+                      </p>
+                      <p className="text-slate-400 text-[15px] md:text-base font-medium leading-relaxed">
+                        레이저와 달리 피부 타입, 피부 컬러에 상관없이 시술 가능하며, 민감해 레이저 시술이 불가능한 환자도 시술 가능합니다.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* 기술 설명 블록 3 */}
+                  <div className="flex gap-6 items-start">
+                    <div className="mt-2 shrink-0 w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(0,183,241,1)]" />
+                    <div>
+                      <p className="text-slate-200 text-lg md:text-xl font-black leading-relaxed mb-3">
+                        8가지 모드를 통한 <span className="text-primary">맞춤 치료</span>
+                      </p>
+                      <p className="text-slate-400 text-[15px] md:text-base font-medium leading-relaxed">
+                        8가지 모드로 환자의 피부 상태 및 원하는 효과에 따라 모드를 선택해 시술합니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 로고 장식 */}
+                <div className="pt-8 flex justify-end">
+                  <img
+                    src="images/machine/실펌x 로고.png"
+                    alt="SYLFIRM X Logo"
+                    className="h-8 md:h-10 object-contain opacity-50 grayscale hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
