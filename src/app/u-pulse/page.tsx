@@ -315,58 +315,106 @@ export default function UPulsePage() {
       </section>
 
       {/* Technical Detail 02: Stable Ultra-Pulse Secret */}
-      <section id="tech-social-secret" className="py-24 bg-[#0C111D] text-white overflow-hidden">
-        <div className="max-w-screen-xl mx-auto px-6 flex flex-col items-center">
+      <section id="tech-social-secret" className="py-28 bg-[#050810] text-white overflow-hidden relative">
+        {/* 테크 배경 텍스처 */}
+        <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+        <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none" />
+
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10 flex flex-col items-center">
           {/* Revolutionary Header System (Centered) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mb-24 flex flex-col items-center"
+            className="mb-12 flex flex-col items-center"
           >
             <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
               Stable Tech Secret
             </div>
 
-            <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-10 text-center">
+            <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-6 text-center leading-tight">
               <span className="hero-title-main">STABLE</span><br />
               <span className="hero-title-highlight uppercase">Ultra - Pulse</span>
             </h3>
-            <div className="w-20 h-[2px] bg-primary mt-4 mb-14 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+            <div className="w-20 h-[2px] bg-primary mb-8" />
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center max-w-5xl mx-auto text-left reveal-up">
-            <div className="relative h-[480px] flex items-center justify-center">
-              <div className="absolute w-64 h-64 rounded-full bg-gradient-to-br from-[#257788]/50 to-transparent border border-white/10 -translate-y-24 backdrop-blur-md flex items-center justify-center">
-                <span className="font-bold text-white/90 text-lg">파워보드</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center max-w-5xl mx-auto">
+            {/* 좌측: 벤다이어그램 시스템 (Overlapping Circle Venn Diagram) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="relative aspect-square w-full max-w-[440px] mx-auto flex items-center justify-center p-4 h-[440px]"
+            >
+              <div className="relative w-full h-full flex items-center justify-center">
+                {/* 상단 원 (파워보드) */}
+                <motion.div
+                  initial={{ y: -20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.8 }}
+                  className="absolute top-4 w-[240px] h-[240px] rounded-full bg-gradient-to-b from-[#00B7F1]/40 to-[#00B7F1]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen shadow-[0_0_40px_rgba(0,183,241,0.1)]"
+                >
+                  <span className="font-bold text-white text-lg tracking-tighter">파워보드</span>
+                </motion.div>
+
+                {/* 좌측 하단 (글래스튜브) */}
+                <motion.div
+                  initial={{ x: -20, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.5, duration: 0.8 }}
+                  className="absolute bottom-12 left-0 w-[240px] h-[240px] rounded-full bg-gradient-to-tr from-[#3B6B98]/40 to-[#3B6B98]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen shadow-[0_0_40px_rgba(59,107,152,0.1)]"
+                >
+                  <span className="font-bold text-white/90 text-center leading-tight tracking-tighter">
+                    높은 파워의<br />글래스튜브
+                  </span>
+                </motion.div>
+
+                {/* 우측 하단 (레귤레이터) */}
+                <motion.div
+                  initial={{ x: 20, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.7, duration: 0.8 }}
+                  className="absolute bottom-12 right-0 w-[240px] h-[240px] rounded-full bg-gradient-to-tl from-[#00B7F1]/30 to-[#00B7F1]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen shadow-[0_0_40px_rgba(0,183,241,0.1)]"
+                >
+                  <span className="font-bold text-white/90 text-center leading-tight tracking-tighter">
+                    높은 볼트의<br />레귤레이터
+                  </span>
+                </motion.div>
+
+                {/* 중심 글로우 코어 */}
+                <div className="absolute w-24 h-24 bg-primary/20 blur-[60px] rounded-full z-0" />
               </div>
-              <div className="absolute w-64 h-64 rounded-full bg-gradient-to-bl from-[#7D416D]/50 to-transparent border border-white/10 -translate-x-24 translate-y-20 backdrop-blur-md flex items-center justify-center">
-                <span className="font-bold text-white/90 text-[17px] text-center leading-tight">
-                  높은 파워의<br />글래스튜브
-                </span>
+            </motion.div>
+
+            {/* 우측: 상세 기술 설명 (Technical Blueprint Style) */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-12 text-left"
+            >
+              <div className="group">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)] transition-all duration-500" />
+                  <h5 className="text-white font-bold text-2xl">안정적인 울트라펄스</h5>
+                </div>
+                <p className="text-primary/70 text-[10px] font-bold mb-4 tracking-[0.2em] uppercase pl-4">Patent Registration: No.10-XXXXXX</p>
+                <div className="space-y-4 pl-4 border-l border-white/5 group-hover:border-primary/30 transition-colors duration-500">
+                  <p className="text-slate-400 text-lg leading-relaxed font-medium">
+                    SNJ만의 <span className="text-white font-bold">파워보드, 높은 파워의 글래스 튜브,<br className="hidden md:block" /> 높은 볼트의 레귤레이터</span> 3박자가 어우러진<br className="hidden md:block" />
+                    안정적인 울트라펄스 기술입니다.
+                  </p>
+                  <p className="text-slate-500 text-base leading-relaxed">
+                    타사와는 차별화된 균일한 에너지를 투광하여 <br className="hidden md:block" />
+                    정교하고 일관적인 치료 효과를 실현합니다.
+                  </p>
+                </div>
               </div>
-              <div className="absolute w-64 h-64 rounded-full bg-gradient-to-br from-[#3B6B98]/50 to-transparent border border-white/10 translate-x-24 translate-y-20 backdrop-blur-md flex items-center justify-center">
-                <span className="font-bold text-white/90 text-[17px] text-center leading-tight">
-                  높은 볼트의<br />레귤레이터
-                </span>
-              </div>
-              <div className="absolute w-24 h-24 bg-white/20 blur-[50px] rounded-full"></div>
-            </div>
-            <div className="space-y-8">
-              <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight">
-                안정적인 울트라펄스
-              </h3>
-              <div className="text-lg md:text-xl font-medium leading-relaxed text-slate-400 space-y-2">
-                <p>
-                  SNJ만의 <span className="text-primary font-bold">파워보드, 높은 파워의 글래스 튜브,</span>
-                  <br />
-                  <span className="text-primary font-bold">높은 볼트의 레귤레이터</span> 3박자가 맞아 이루어 낸
-                  <br />
-                  타사와는 차별화 된 안정적인 울트라펄스
-                </p>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
