@@ -229,13 +229,46 @@ export default function PicoKPage() {
               viewport={{ once: true }}
               className="lg:w-[55%]"
             >
-              <div className="relative w-full h-auto glass-panel bg-black/20 flex items-center justify-center overflow-hidden group shadow-2xl rounded-2xl">
-                <img
-                  src="/images/picok/Thermal.png"
-                  alt="Thermal Lens Effect Control Logic"
-                  className="w-full h-auto block group-hover:scale-105 transition-transform duration-1000 ease-out"
-                />
-              </div>
+                <div className="relative w-full h-auto mt-12 group perspective-1000">
+                  {/* 상단 라벨 오버레이 (이미지 밖 상단으로 이동) */}
+                  <div className="absolute -top-12 left-0 w-full px-4 flex justify-between z-20 pointer-events-none transition-transform duration-1000 ease-out group-hover:translate-y-[-10px]">
+                    <span className="text-slate-400 font-extrabold text-sm md:text-lg tracking-tight drop-shadow-lg">
+                      [ 특허기술 미적용 ]
+                    </span>
+                    <span className="text-primary font-black text-sm md:text-lg tracking-tight drop-shadow-[0_0_10px_rgba(0,183,241,0.5)]">
+                      [ 특허기술 적용 ]
+                    </span>
+                  </div>
+
+                  {/* 메인 이미지 & 포인트 레이어 통합 확대 */}
+                  <div className="relative w-full h-full transition-transform duration-1000 ease-out group-hover:scale-105">
+                    <img
+                      src="/images/picok/Thermal.png"
+                      alt="Thermal Lens Effect Control Logic"
+                      className="w-full h-auto block"
+                    />
+
+                    {/* 과열 및 부풀어오름 지시선 및 라벨 (포인트 기준 왼쪽으로 배치) */}
+                    <div className="absolute top-[40%] left-[5.5%] z-20 pointer-events-none flex items-center flex-row">
+                      {/* 설명 텍스트 (우측 정렬) */}
+                      <div className="flex flex-col items-end text-right mr-2 transition-all duration-700">
+                        <span className="text-[11px] md:text-sm font-black text-[#FF4D4D] tracking-tighter leading-none drop-shadow-md group-hover:scale-110 group-hover:text-[#FF6666] origin-right transition-all">
+                          과열되어
+                        </span>
+                        <span className="text-[11px] md:text-sm font-black text-[#FF4D4D] tracking-tighter leading-none mt-1 drop-shadow-md group-hover:scale-110 group-hover:text-[#FF6666] origin-right transition-all">
+                          부풀어 오름
+                        </span>
+                      </div>
+                      {/* 지시선 (텍스트 우측에서 포인트로 연결) - 길이를 고정하여 포인트 지점을 명확히 유지 */}
+                      <div className="w-16 h-[1px] bg-white/40 mr-1.5 shadow-sm transition-opacity duration-700 group-hover:bg-white/60" />
+                      {/* 지점 포인트 (노란색 펄스) */}
+                      <div className="relative transition-transform duration-700 group-hover:scale-125">
+                        <div className="w-2.5 h-2.5 bg-yellow-400 rounded-full shadow-[0_0_10px_rgba(250,204,21,1)]" />
+                        <div className="absolute inset-0 w-2.5 h-2.5 bg-yellow-400 rounded-full animate-ping opacity-75" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </motion.div>
           </div>
         </div>
