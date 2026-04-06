@@ -619,78 +619,7 @@ export default function UPulsePage() {
         </div>
       </section>
 
-      {/* Technical Detail 04: Thermal-Free */}
-      <section id="tech-thermal-free" className="py-24 bg-[#0C111D] text-white overflow-hidden">
-        <div className="max-w-screen-xl mx-auto px-6">
-          <h2 className="text-[26px] md:text-[32px] font-bold text-white mb-16 tracking-tight flex items-center reveal-up">
-            <span className="w-1.5 h-1.5 rounded-full bg-white mr-4"></span>
-            높은 출력만 가능한 Thermal-Free 멀티핀홀 기법
-          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto reveal-up">
-            <div className="bg-[#1C2333]/40 rounded-xl p-8 border border-white/5 text-center shadow-inner">
-              <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center bg-[#252C3E] rounded-lg relative overflow-hidden">
-                <svg viewBox="0 0 50 50" className="w-10 h-10" fill="none">
-                  <line x1="12" y1="12" x2="12" y2="38" stroke="white" strokeWidth="1.5" opacity={0.3} />
-                  <line x1="25" y1="12" x2="25" y2="38" stroke="white" strokeWidth="1.5" opacity={0.3} />
-                  <line x1="38" y1="12" x2="38" y2="38" stroke="white" strokeWidth="1.5" opacity={0.3} />
-                  <circle cx="12" cy="18" r="3.5" fill="#E84A8A" opacity={0.8} />
-                  <circle cx="25" cy="32" r="3.5" fill="#E84A8A" opacity={0.8} />
-                  <circle cx="38" cy="24" r="3.5" fill="#E84A8A" opacity={0.8} />
-                  <circle cx="12" cy="18" r="3.5" fill="#E84A8A" className="blur-[3px]" />
-                </svg>
-              </div>
-              <h4 className="text-[18px] font-bold mb-1 text-white/90">Easy Control</h4>
-              <p className="text-[15px] text-white/40 font-medium">깊이 조절 가능</p>
-            </div>
-
-            <div className="bg-[#1C2333]/40 rounded-xl p-8 border border-white/5 text-center shadow-inner">
-              <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center bg-[#252C3E] rounded-lg relative">
-                <svg viewBox="0 0 50 50" className="w-10 h-10" fill="none">
-                  <rect
-                    x="8"
-                    y="8"
-                    width="34"
-                    height="34"
-                    rx="3"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    opacity={0.3}
-                  />
-                  <path
-                    d="M16,25 L22,31 L34,19"
-                    stroke="#00B7F1"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M16,25 L22,31 L34,19"
-                    stroke="#00B7F1"
-                    strokeWidth="2"
-                    className="blur-[2px]"
-                    opacity={0.6}
-                  />
-                </svg>
-              </div>
-              <h4 className="text-[18px] font-bold mb-1 text-white/90">표준화된 임상으로</h4>
-              <p className="text-[15px] text-white/40 font-medium">쉽고 정확하게</p>
-            </div>
-
-            <div className="bg-[#1C2333]/40 rounded-xl p-8 border border-white/5 text-center shadow-inner">
-              <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center bg-[#252C3E] rounded-lg relative overflow-hidden">
-                <svg viewBox="0 0 50 50" className="w-12 h-12" fill="none">
-                  <circle cx="25" cy="22" r="13" stroke="white" strokeWidth="1.2" opacity={0.3} />
-                  <path d="M15,20 Q25,12 35,20 M15,26 Q25,18 35,26" stroke="#E84A8A" strokeWidth="1.5" opacity={0.7} />
-                  <path d="M25,30 V40 M21,36 L25,40 L29,36" stroke="white" strokeWidth="1.5" opacity={0.8} />
-                </svg>
-              </div>
-              <h4 className="text-[18px] font-bold mb-1 text-white/90">Thermal Damage</h4>
-              <p className="text-[15px] text-white/40 font-medium">없이 깊게</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Section: Before & After */}
       <section id="u-pulse-before-after" className="py-24 bg-[#0C111D] text-white overflow-hidden">
