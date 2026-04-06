@@ -69,6 +69,16 @@
 - **모바일 대응**: 컨테이너에 **`overflow-x-auto no-scrollbar`** 필수 적용.
 - **레이블 규격**: `text-[10px] font-black tracking-[0.4em] text-primary/70`
 
+### 5. Detailed Feature Cards (Sylfirm-X 표준)
+- **헤더 고정 높이**: `<div className="h-[70px] flex items-center justify-center">`
+  - ⚠️ 문장 길이에 상관없이 모든 카드의 구분선 위치를 수평으로 일치시키기 위해 필수 적용.
+- **불렛 도트 정렬**: 텍스트 첫 줄 중앙 정렬을 위해 `<div className="flex items-center h-[21px] shrink-0">` 래퍼 사용.
+
+### 6. Modern Pricing Table (Sylfirm-X 표준)
+- **레이아웃**: `lg:grid-cols-12` (왼쪽 4: 오른쪽 8 비율).
+- **왼쪽**: 단독 시술 하이라이트 카드 (`glass-panel` + 강조 가격).
+- **오른쪽**: 상세 수가 리스트 (2열 그리드 + `border-b` 구분선).
+
 ---
 
 ## 📐 스페이싱 규칙 (Spacing Rules)
@@ -89,11 +99,11 @@
 
 ### 등장 애니메이션
 - 모든 섹션 컨텐츠는 **`initial={{ opacity: 0, y: 30 }}`** 표준을 따름.
-- 이미지 블록 등은 `x: 40` 또는 `scale: 0.95` 미세 적용 가능.
+- **스크롤 감지**: 모든 주요 섹션에 `whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}` 적용 필수.
 
 ### ❌ 절대 금지 (Anti-Patterns)
 1. **기울임꼴(italic) 금지** — 모든 텍스트는 정체(upright) 사용.
-2. **border-t 금지** — 섹션 구분은 여백과 배경색으로만 처리.
+2. **border-t 금지** — 섹션 구분은 여백과 배경색으로만 처리. (단, 리스트 내부 아이템 구분선 제외)
 3. **그림자 아티팩트 금지** — 텍스트에 직접적인 강한 `box-shadow` 처리는 사각형 잔상을 유발하므로 금지.
 
 ---
@@ -104,12 +114,12 @@
 |---|---|---|
 | `src/app/pico-k/page.tsx` | **Finalized** | 황금 표준 01 |
 | `src/app/u-pulse/page.tsx` | **Finalized** | 황금 표준 02 (복합 그리드) |
+| `src/app/sylfirm-x/page.tsx` | **Finalized** | 황금 표준 03 (상세 카드 & 수가 리스트) |
 | `src/app/n-pulse/page.tsx` | 미작업 | |
-| `src/app/sylfirm-x/page.tsx` | 미작업 | |
 | `src/app/v-ro-advance/page.tsx` | 미작업 | |
 | `src/app/cellinew/page.tsx` | 미작업 | |
 
 ---
 
-_Last Updated: 2026-04-06 | 버전 1.1 (Finalized Standards Integrated)_
+_Last Updated: 2026-04-06 | 버전 1.2 (Sylfirm-X Standardization Integrated)_
 
