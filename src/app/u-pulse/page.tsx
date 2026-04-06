@@ -303,7 +303,6 @@ export default function UPulsePage() {
                   유펄스는 <span className="text-primary">울트라펄스</span>와 높은 <br className="hidden md:block" />
                   <span className="text-primary">피크파워</span>를 통해 한 차원 높은 치료 경험을 제공합니다.
                 </p>
-                <div className="w-12 h-[1px] bg-white/20" />
                 <p className="text-slate-400 text-lg md:text-[19px] leading-relaxed font-medium tracking-tight">
                   높은 피크파워는 주변 조직의 <span className="text-white">열 손상(Thermal Damage)</span>을 <br className="hidden md:block" />
                   최소화하여, 환자가 느끼는 통증은 줄이고 회복 속도는 <br className="hidden md:block" />
