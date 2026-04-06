@@ -152,7 +152,7 @@ export default function CellinewPage() {
           </div>
 
           <div className="flex flex-col items-center mb-24">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -165,7 +165,7 @@ export default function CellinewPage() {
               </h2>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -284,7 +284,7 @@ export default function CellinewPage() {
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           <div className="text-center mb-24">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -297,8 +297,8 @@ export default function CellinewPage() {
               </h4>
               <div className="w-10 h-[1px] bg-primary/40" />
             </motion.div>
-            
-            <motion.h2 
+
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -308,7 +308,7 @@ export default function CellinewPage() {
               오랜기간 지속되는 <span className="text-primary tracking-tighter">탄력</span>
             </motion.h2>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -361,9 +361,9 @@ export default function CellinewPage() {
                 <p className="text-primary text-sm font-bold tracking-tight mb-10 opacity-70">
                   {feature.subTitle}
                 </p>
-                
+
                 <div className="w-12 h-[1px] bg-white/10 mb-10 group-hover:w-full group-hover:bg-primary/20 transition-all duration-700" />
-                
+
                 <div className="flex-1 flex flex-col items-center justify-center text-center space-y-6">
                   <h6 className="text-white text-[20px] md:text-[24px] font-black leading-tight tracking-tighter break-keep">
                     {feature.mainTitle}
@@ -386,83 +386,134 @@ export default function CellinewPage() {
         </div>
       </section>
 
-      {/* CELLINEW Safe Monitoring & Control Section */}
-      <section id="safety-detail" className="py-24 bg-white text-black text-center">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="mb-14">
-            <h4 className="text-[32px] md:text-[40px] font-black leading-none mb-3">CELLINEW's</h4>
-            <h2 className="text-[#B5916A] text-[32px] md:text-[40px] font-black italic">
-              Safe Monitoring & Control
-            </h2>
+      {/* ④ CELLINEW Safe Monitoring & Control Section (Tech-Premium Dark) */}
+      <section id="safety-detail" className="relative py-28 bg-[#050810] overflow-hidden border-t border-white/5">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="flex items-center justify-center gap-3 mb-6"
+            >
+              <div className="w-10 h-[1px] bg-primary/40" />
+              <h4 className="text-primary text-xs md:text-sm font-black tracking-[0.4em] uppercase font-inter">
+                CELLINEW's Main Features
+              </h4>
+              <div className="w-10 h-[1px] bg-primary/40" />
+            </motion.div>
+
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-white text-3xl md:text-5xl font-black mb-10 leading-tight tracking-tighter"
+            >
+              CELLINEW's<br />
+              <span className="text-primary tracking-tighter">Safe Monitoring & Control</span>
+            </motion.h2>
           </div>
 
-          <div className="bg-[#B5916A] py-8 px-10 rounded-sm mb-28 max-w-5xl mx-auto shadow-lg">
-            <p className="text-white text-[17px] md:text-[22px] font-medium tracking-tight">
-              안전한 시술환경을 제공하기 위해 <span className="font-black">피부 온도, 시술자의 압력, 냉각시스템을</span>{' '}
-              <span className="font-black underline underline-offset-4 decoration-white/40">
-                실시간으로 모니터링하고 제어
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="group relative bg-white/[0.03] backdrop-blur-md py-10 px-8 md:px-16 rounded-2xl mb-24 max-w-5xl mx-auto shadow-2xl border-l-4 border-primary shadow-primary/5"
+          >
+            <p className="text-white text-[16px] md:text-[21px] font-bold tracking-tighter leading-relaxed break-keep">
+              안전한 시술환경을 제공하기 위해 <span className="text-primary font-black">피부 온도, 시술자의 압력, 냉각시스템</span>을<br />
+              <span className="text-glow-primary font-black underline underline-offset-8 decoration-primary/30">
+                실시간으로 모니터링하고 정밀하게 제어
               </span>합니다.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
-            <div className="flex flex-col items-center">
-              <div className="w-28 h-28 mb-12 text-[#B5916A]">
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M32 10a8 8 0 0 0-8 8v20a12 12 0 1 0 16 0V18a8 8 0 0 0-8-8z" />
-                  <circle cx="32" cy="46" r="4" fill="currentColor" />
-                  <path
-                    d="M44 20c4 0 6 2 6 6s-2 6-6 6M20 20c-4 0-6 2-6 6s2 6 6 6"
-                    opacity="0.3"
-                    strokeDasharray="2 4"
-                  />
-                  <circle cx="50" cy="20" r="2" fill="currentColor" opacity="0.5" />
-                </svg>
-              </div>
-              <h5 className="text-[#B5916A] text-[24px] font-black mb-2 tracking-tight">Skin Temperature</h5>
-              <p className="text-[#B5916A]/70 text-[18px] font-bold mb-8 italic">Skin Surface Protection</p>
-              <div className="text-[#333] text-[17px] font-bold leading-relaxed space-y-1">
-                <p>시술 부위의 온도를 확인하여</p>
-                <p>일정온도 이내에서만</p>
-                <p>고주파 에너지 전달</p>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center">
-              <div className="w-28 h-28 mb-12 text-[#B5916A]">
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M22 10l10 10 10-10M32 20v24" />
-                  <path d="M14 44h36M14 50h36M14 56h36" opacity="0.5" />
-                  <circle cx="38" cy="14" r="4" fill="none" opacity="0.4" />
-                  <path d="M38 11l2 3-2 3" opacity="0.4" />
-                </svg>
-              </div>
-              <h5 className="text-[#B5916A] text-[24px] font-black mb-2 tracking-tight">Operator Pressure</h5>
-              <p className="text-[#B5916A]/70 text-[18px] font-bold mb-8 italic">Procedure with Complete Contact Surface</p>
-              <div className="text-[#333] text-[17px] font-bold leading-relaxed space-y-1">
-                <p>피부와 Tip이 완전하게 밀착되고</p>
-                <p>균일하게 압력이 가해질 경우에만</p>
-                <p>안전하게 고주파 에너지 전달</p>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center">
-              <div className="w-28 h-28 mb-12 text-[#B5916A]">
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M10 32h44M20 32a12 12 0 1 1 24 0H20z" />
-                  <path d="M32 10v10M32 44v10M10 22l6 4M48 22l6-4" opacity="0.5" />
-                  <path d="M54 28l-4 4 4 4M10 28l4 4-4 4" strokeLinecap="round" />
-                  <circle cx="32" cy="32" r="3" fill="currentColor" />
-                </svg>
-              </div>
-              <h5 className="text-[#B5916A] text-[24px] font-black mb-2 tracking-tight">Internal Cooling System</h5>
-              <p className="text-[#B5916A]/70 text-[18px] font-bold mb-8 italic">Monitoring & Control</p>
-              <div className="text-[#333] text-[17px] font-bold leading-relaxed space-y-1">
-                <p>온도의 변화에 민감한 가스를</p>
-                <p>섬세하게 컨트롤하여 균일한 양의 가스 전달</p>
-                <p>안전한 시술환경 제공</p>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12 pb-10">
+            {[
+              {
+                icon: (
+                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.4" className="w-full h-full">
+                    {/* Thermometer */}
+                    <path d="M24 12a6 6 0 0 1 12 0v20.5a10 10 0 1 1-12 0V12z" className="text-white/40" />
+                    <path d="M30 38V14" className="text-primary" strokeWidth="3" strokeLinecap="round" />
+                    <circle cx="30" cy="44" r="4" fill="currentColor" className="text-primary" />
+                    {/* Checkmark Circle */}
+                    <circle cx="46" cy="24" r="10" className="text-primary/20" fill="currentColor" />
+                    <circle cx="46" cy="24" r="10" className="text-primary" />
+                    <path d="M41 24l3.5 3.5 6.5-6.5" className="text-primary" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                    {/* Wave lines */}
+                    <path d="M12 40h4M12 46h4M12 52h4" className="text-white/20" strokeLinecap="round" />
+                  </svg>
+                ),
+                title: "Skin Temperature",
+                subTitle: "Skin Surface Protection",
+                lines: ["시술 부위의 온도를 확인하여", "일정온도 이내에서만", "고주파 에너지 전달"]
+              },
+              {
+                icon: (
+                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.4" className="w-full h-full">
+                    {/* Downward Arrow */}
+                    <path d="M32 8v20M24 20l8 8 8-8" className="text-primary" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                    {/* Skin Layers */}
+                    <path d="M12 36c4-2 8-2 12 0s8 2 12 0 8-2 12 0" className="text-white" strokeLinecap="round" />
+                    <path d="M12 44h40M12 52h40" className="text-white/30" strokeDasharray="4 4" />
+                    {/* Checkmark in circle */}
+                    <circle cx="50" cy="18" r="8" className="text-primary/10" fill="currentColor" />
+                    <circle cx="50" cy="18" r="8" className="text-primary" />
+                    <path d="M46 18l2.5 2.5 4.5-4.5" className="text-primary" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                ),
+                title: "Operator Pressure",
+                subTitle: "Procedure with Contact Surface",
+                lines: ["피부와 Tip이 완전하게 밀착되고", "균일하게 압력이 가해질 경우에만", "안전하게 고주파 에너지 전달"]
+              },
+              {
+                icon: (
+                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.4" className="w-full h-full">
+                    {/* Slider Control */}
+                    <rect x="10" y="24" width="44" height="12" rx="6" className="text-white/20" fill="currentColor" stroke="none" />
+                    <rect x="10" y="24" width="44" height="12" rx="6" className="text-white/40" />
+                    <circle cx="28" cy="30" r="4" fill="currentColor" className="text-primary" />
+                    {/* Snowflake Circle */}
+                    <circle cx="50" cy="18" r="10" className="text-primary/20" fill="currentColor" />
+                    <circle cx="50" cy="18" r="10" className="text-primary" />
+                    <path d="M50 12v12M44 18h12M46 14l8 8M54 14l-8 8" className="text-primary" strokeWidth="2" />
+                    {/* Interacting Hand */}
+                    <path d="M30 35l6 14c1 2 4 1 3-2l-4-9 4 1 3-1-1-3-6-2" className="text-white" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                ),
+                title: "Internal Cooling System",
+                subTitle: "Monitoring & Control",
+                lines: ["온도의 변화에 민감한 가스를", "섬세하게 제어하여 균일한 양 전달", "안전한 시술환경 제공"]
+              }
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 + idx * 0.1 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-center group"
+              >
+                <div className="w-24 h-24 mb-10 transform group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_15px_rgba(0,183,241,0.3)]">
+                  {item.icon}
+                </div>
+                <h5 className="text-white text-xl md:text-2xl font-black mb-1 tracking-tighter group-hover:text-primary transition-colors">
+                  {item.title}
+                </h5>
+                <p className="text-white text-sm md:text-base font-bold mb-8 tracking-tight">{item.subTitle}</p>
+                <div className="text-slate-400 text-sm md:text-[17px] font-medium leading-relaxed space-y-1 text-center break-keep">
+                  {item.lines.map((line, lidx) => (
+                    <p key={lidx}>{line}</p>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

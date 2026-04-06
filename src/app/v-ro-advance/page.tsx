@@ -1,47 +1,59 @@
+'use client';
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+
 export default function VRoAdvancePage() {
   return (
-    <>
-      {/* Hero Section */}
+    <main className="bg-[#050810] min-h-screen lowercase-titles">
+      {/* ① Hero Section (Standard Tech Style) */}
       <section
         id="hero"
-        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4"
+        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-[#050810]"
       >
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-black/60 z-10"></div>
-          <img
-            src="https://images.unsplash.com/photo-1512677859289-868722942457?auto=format&fit=crop&w=1920&q=80"
-            className="absolute inset-0 w-full h-full object-cover z-0"
-            alt="medical background"
-          />
-        </div>
-        <div className="relative z-20 max-w-screen-xl mx-auto">
-          <h1 className="text-3xl md:text-7xl font-bold leading-tight tracking-tight text-white mb-6 uppercase reveal-up uppercase">
-            브이로어드밴스 (V-RO Advance)
-          </h1>
-          <p className="text-lg md:text-2xl text-white/90 font-medium max-w-3xl mx-auto reveal-up delay-100">
-            합리적인 피부미용 의료 장비,<br />그리고 최고의 선택
-          </p>
-        </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30">
-          <a
-            href="#content"
-            className="inline-flex justify-center items-center w-12 h-12 border border-white/20 rounded-full hover:bg-white hover:text-black transition duration-300 animate-bounce"
+        <img
+          src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1920&q=80"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-50 brightness-[0.5] contrast-[1.1]"
+          alt="medical background"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050810]/30 via-transparent to-[#050810]/70 z-10" />
+        <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-screen z-10 pointer-events-none" />
+
+        <div className="relative z-20 flex flex-col items-center max-w-screen-xl mx-auto px-6 w-full">
+          <motion.h1
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
+            <span className="hero-title-main block md:inline">V-RO - </span>
+            <span className="hero-title-highlight ml-0 md:ml-4">ADVANCE</span>
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col items-center"
+          >
+            <div className="w-16 h-[2px] bg-primary mb-6 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+            <p className="text-slate-300 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-3xl">
+              합리적인 피부미용 의료 장비, <span className="text-primary font-bold">그리고 최고의 선택</span>
+            </p>
+          </motion.div>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center text-white">
+          <Link
+            href="#overview"
+            aria-label="Scroll down"
+            className="inline-flex justify-center items-center w-12 h-12 border border-white/20 rounded-full hover:bg-white hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-black/10 backdrop-blur-sm"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -411,6 +423,6 @@ export default function VRoAdvancePage() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
