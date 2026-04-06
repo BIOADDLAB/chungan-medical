@@ -870,47 +870,11 @@ export default function UPulsePage() {
             {/* Divider */}
             <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-white/5 to-transparent" />
 
-            {/* 100W Row */}
+            {/* 100W Row (Fast Recovery) */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"
-            >
-              <div className="lg:col-span-2 text-center lg:text-left">
-                <span className="text-3xl font-black text-primary tracking-tighter">100W</span>
-                <p className="text-[10px] font-bold text-primary/60 tracking-[0.3em] uppercase mt-1">High-Peak</p>
-              </div>
-              <div className="lg:col-span-8 grid grid-cols-3 gap-3">
-                {["Immediate", "16H", "48H"].map((label, idx) => (
-                  <div key={idx} className="space-y-2">
-                    <div className="aspect-[4/3] bg-white/5 border border-white/5 rounded-sm flex items-center justify-center relative group overflow-hidden">
-                      <span className="text-primary/10 font-bold text-[10px] tracking-widest uppercase">Img_{idx + 1}</span>
-                      {idx === 2 && <div className="absolute inset-0 border-2 border-primary/30 z-10 pointer-events-none" />}
-                    </div>
-                    <p className="text-center text-[10px] font-bold text-slate-400 tracking-widest uppercase">{label}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="lg:col-span-2 h-full">
-                <div className="h-full min-h-[100px] flex flex-col items-center justify-center bg-primary/5 border border-primary/20 rounded-sm p-4">
-                  <div className="w-6 h-6 border border-primary/40 rounded-full flex items-center justify-center mb-2">
-                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                  </div>
-                  <span className="text-[10px] font-black text-primary tracking-widest uppercase">Pulse Analysing</span>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Divider */}
-            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-white/5 to-transparent" />
-
-            {/* 100W Row */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"
             >

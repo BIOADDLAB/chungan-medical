@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function NPulsePage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -79,98 +81,142 @@ export default function NPulsePage() {
 
   return (
     <>
-      {/* Hero Section */}
+      {/* ① Hero Section (PICO-K Style) */}
       <section
         id="hero"
-        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4"
+        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-[#020408]"
       >
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-black/60 z-10"></div>
-          <img
-            src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1920&q=80"
-            className="absolute inset-0 w-full h-full object-cover z-0"
-            alt="medical clinic background"
-          />
+        {/* 배경 이미지 레이어 */}
+        <img
+          src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1920&q=80"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-70 brightness-[0.5] contrast-[1.1]"
+          alt="medical background"
+        />
+        {/* 그라디언트 오버레이 */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050810]/30 via-transparent to-[#050810]/70 z-10" />
+        {/* Tech Grid 오버레이 */}
+        <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-screen z-10 pointer-events-none" />
+
+        {/* 콘텐츠 */}
+        <div className="relative z-20 flex flex-col items-center max-w-screen-xl mx-auto px-6 w-full">
+          {/* 타이틀 */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight"
+          >
+            <span className="hero-title-main block md:inline text-white">N - PULSE,</span>
+            <span className="hero-title-highlight ml-0 md:ml-4">N - PULSE FX</span>
+          </motion.h1>
+
+          {/* 부제 */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col items-center"
+          >
+            <div className="w-16 h-[2px] bg-primary mb-6 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+            <p className="text-slate-300 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl">
+              합리적인 피부미용 의료 장비, <span className="text-primary font-bold">그리고 최고의 선택</span>
+            </p>
+          </motion.div>
         </div>
-        <div className="relative z-20 max-w-screen-xl mx-auto">
-          <h1 className="text-3xl md:text-7xl font-bold leading-tight tracking-tight text-white mb-6 uppercase reveal-up">
-            N-PULSE, N-PULSE FX
-          </h1>
-          <p className="text-lg md:text-2xl text-white/90 font-medium max-w-3xl mx-auto reveal-up delay-100">
-            합리적인 피부미용 의료 장비,<br />그리고 최고의 선택
-          </p>
-        </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30">
-          <a
+
+        {/* 스크롤 유도 버튼 */}
+        <div className="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center">
+          <Link
             href="#content"
+            aria-label="Scroll down"
             className="inline-flex justify-center items-center w-12 h-12 border border-white/20 rounded-full hover:bg-white hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-black/10 backdrop-blur-sm"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5 text-white group-hover:text-black transition"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white group-hover:text-black transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
-          </a>
+          </Link>
         </div>
       </section>
 
-      {/* Machine Models Comparison Section */}
-      <section id="content" className="pt-20 pb-0 md:pt-32 md:pb-10 bg-black text-white relative overflow-hidden">
-        <div className="max-w-[1350px] mx-auto px-6 relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 relative z-20 min-h-[600px] md:min-h-[800px]">
-            <div className="hidden md:block absolute left-1/2 top-4 bottom-10 w-[1px] bg-[#00C4B8]/40 -translate-x-1/2 z-10"></div>
+      {/* ② Machine Models Comparison Section (Standardized Tech Style) */}
+      <section id="content" className="relative pt-20 pb-0 md:pt-32 md:pb-20 bg-[#020408] overflow-hidden">
+        {/* 테크 배경 장식 */}
+        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
+
+        <div className="max-w-[1350px] mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 relative min-h-[600px] md:min-h-[850px]">
+            {/* 중앙 테크 수직 구분선 */}
+            <div className="hidden md:block absolute left-1/2 top-10 bottom-32 w-[1px] bg-gradient-to-b from-transparent via-primary/40 to-transparent -translate-x-1/2 z-10">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-primary rounded-full shadow-[0_0_10px_rgba(0,183,241,1)]" />
+            </div>
 
             {/* Left Model: N-Pulse Pro */}
-            <div className="relative w-full flex flex-col justify-start pt-10 md:pt-32 reveal-up h-full">
-              <div className="relative z-30 pointer-events-none">
-                <h3 className="text-[#00C4B8] font-bold text-[26px] md:text-[34px] tracking-tight mb-2 whitespace-nowrap">
-                  Single Mode
-                </h3>
-                <h2 className="text-white font-extrabold text-[46px] md:text-[58px] tracking-tight leading-none mb-10 whitespace-nowrap">
-                  N-Pulse Pro
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative w-full flex flex-col justify-start pt-10 md:pt-32 h-full"
+            >
+              <div className="relative z-30 pointer-events-none mb-12">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-[1px] bg-primary" />
+                  <span className="text-primary font-black text-sm tracking-widest uppercase">Single Mode</span>
+                </div>
+                <h2 className="text-white font-black text-[46px] md:text-[68px] tracking-tighter leading-none mb-8 uppercase">
+                  <span className="hero-title-main">N - PULSE</span><br />
+                  <span className="hero-title-highlight">PRO</span>
                 </h2>
-                <p className="text-white/90 text-[18px] md:text-[24px] font-medium tracking-wide whitespace-nowrap">
-                  CO2 (Surgical)
-                </p>
+                <div className="space-y-2">
+                  <p className="text-slate-200 text-[18px] md:text-[22px] font-bold tracking-tight flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary/40" />
+                    CO2 (Surgical)
+                  </p>
+                </div>
               </div>
               <img
                 src="images/machine/엔펄스pro 사진.png"
                 alt="N-Pulse Pro"
-                className="absolute right-[-140px] sm:right-[-180px] md:right-[-280px] lg:right-[-440px] bottom-6 md:bottom-20 h-[75%] md:h-[85%] lg:h-[90%] max-w-none object-contain object-bottom drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] z-20 pointer-events-auto hover:scale-105 transition-transform duration-700 ease-out origin-bottom"
+                className="absolute right-[-140px] sm:right-[-180px] md:right-[-280px] lg:right-[-440px] bottom-6 md:bottom-20 h-[75%] md:h-[85%] lg:h-[90%] max-w-none object-contain object-bottom drop-shadow-[0_20px_60px_rgba(0,0,0,0.9)] z-20 pointer-events-auto hover:scale-105 transition-transform duration-1000 ease-out origin-bottom brightness-[1.1] contrast-[1.05]"
               />
-            </div>
+            </motion.div>
 
             {/* Right Model: N-Pulse FX */}
-            <div className="relative w-full flex flex-col justify-start pt-10 md:pt-32 md:pl-20 reveal-up h-full delay-150">
-              <div className="relative z-30 pointer-events-none">
-                <h3 className="text-[#00C4B8] font-bold text-[26px] md:text-[34px] tracking-tight mb-2 whitespace-nowrap">
-                  Dual Mode
-                </h3>
-                <h2 className="text-white font-extrabold text-[46px] md:text-[58px] tracking-tight leading-none mb-10 whitespace-nowrap">
-                  N-Pulse FX
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative w-full flex flex-col justify-start pt-10 md:pt-32 md:pl-24 h-full"
+            >
+              <div className="relative z-30 pointer-events-none mb-12">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-[1px] bg-primary" />
+                  <span className="text-primary font-black text-sm tracking-widest uppercase">Dual Mode</span>
+                </div>
+                <h2 className="text-white font-black text-[46px] md:text-[68px] tracking-tighter leading-none mb-8 uppercase">
+                   <span className="hero-title-main">N - PULSE</span><br />
+                   <span className="hero-title-highlight">FX</span>
                 </h2>
-                <p className="text-white/90 text-[18px] md:text-[24px] font-medium tracking-wide mb-1 whitespace-nowrap">
-                  CO2 (Surgical)
-                </p>
-                <p className="text-white/90 text-[18px] md:text-[24px] font-medium tracking-wide whitespace-nowrap">
-                  FRX (Fractional)
-                </p>
+                <div className="space-y-2">
+                  <p className="text-slate-200 text-[18px] md:text-[22px] font-bold tracking-tight flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary/40" />
+                    CO2 (Surgical)
+                  </p>
+                  <p className="text-slate-200 text-[18px] md:text-[22px] font-bold tracking-tight flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary/40" />
+                    FRX (Fractional)
+                  </p>
+                </div>
               </div>
               <img
                 src="images/machine/엔펄스fx 사진.png"
                 alt="N-Pulse FX"
-                className="absolute right-[-50px] lg:right-[-100px] bottom-6 md:bottom-20 h-[75%] md:h-[85%] lg:h-[90%] max-w-none object-contain object-bottom drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] z-20 pointer-events-auto hover:scale-105 transition-transform duration-700 ease-out origin-bottom"
+                className="absolute right-[-50px] lg:right-[-100px] bottom-6 md:bottom-20 h-[75%] md:h-[85%] lg:h-[90%] max-w-none object-contain object-bottom drop-shadow-[0_20px_60px_rgba(0,0,0,0.9)] z-20 pointer-events-auto hover:scale-105 transition-transform duration-1000 ease-out origin-bottom brightness-[1.1] contrast-[1.05]"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

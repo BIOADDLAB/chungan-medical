@@ -238,3 +238,248 @@ Google Fonts CDN으로 `layout.tsx`에 추가 필요
 - [ ] 6. `PartnerMarquee.tsx` — 라이트 배경 + 로고 필터 교체
 - [ ] 7. `Header.tsx` — 초기 반투명 처리
 - [ ] 8. `layout.tsx` — Syne + DM Sans 폰트 추가
+
+---
+
+---
+
+# N-Pulse 페이지 리디자인 구현 계획서
+
+> 작성일: 2026-04-06 | 파일: `src/app/n-pulse/page.tsx`
+
+## 목표
+기존 n-pulse/page.tsx를 pico-k/u-pulse 황금 표준에 맞게 전면 리디자인.
+**섹션 구조(틀)는 유지**, 디자인 시스템 100% 적용.
+
+## 변경 파일
+- **Modify**: `src/app/n-pulse/page.tsx` (전체 재작성)
+
+---
+
+## 핵심 변경사항
+
+| 항목 | 기존 | 변경 |
+|---|---|---|
+| 배경색 | `bg-black` | `bg-[#020408]` / `bg-[#050810]` 교대 |
+| 포인트 컬러 | `#00C4B8` (teal) | `text-primary` = `#00B7F1` (cyan blue) |
+| 애니메이션 | `reveal-up` CSS | `framer-motion` `whileInView` |
+| Hero | 구형 패턴 | pico-k/u-pulse 동일 패턴 |
+| 섹션 배지 | 없음 | `border-primary/30` 표준 배지 |
+| 발광 막대 | 없음 | `w-20 h-[2px] bg-primary` |
+| tech overlay | 없음 | `bg-tech-grid` / `bg-tech-dots` |
+| Spec 테이블 | 흑백 표 | U-PULSE 스타일 dark + whitespace-nowrap |
+| imports | useEffect/useRef | + framer-motion motion, Link |
+
+---
+
+## 섹션별 구현 스펙
+
+### ① Hero — pico-k 동일 패턴
+```tsx
+'use client';
+export const dynamic = 'force-dynamic';
+
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+
+// Hero
+<section id="hero" className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-[#020408]">
+  <img
+    src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1920&q=80"
+    className="absolute inset-0 w-full h-full object-cover z-0 opacity-70 brightness-[0.5] contrast-[1.1]"
+  />
+  <div className="absolute inset-0 bg-gradient-to-b from-[#050810]/30 via-transparent to-[#050810]/70 z-10" />
+  <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-screen z-10 pointer-events-none" />
+
+  <div className="relative z-20 flex flex-col items-center max-w-screen-xl mx-auto px-6 w-full">
+    <motion.h1
+      initial={{ opacity: 0, y: 30, scale: 0.95 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight"
+    >
+      <span className="hero-title-main block md:inline">N — PULSE</span>
+      <span className="hero-title-highlight ml-0 md:ml-4">FX</span>
+    </motion.h1>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
+      className="flex flex-col items-center"
+    >
+      <div className="w-16 h-[2px] bg-primary mb-6 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+      <p className="text-slate-300 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl">
+        합리적인 피부미용 의료 장비, <span className="text-primary font-bold">그리고 최고의 선택</span>
+      </p>
+    </motion.div>
+  </div>
+
+  <div className="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center">
+    <Link href="#models" aria-label="Scroll down"
+      className="inline-flex justify-center items-center w-12 h-12 border border-white/20 rounded-full hover:bg-white hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-black/10 backdrop-blur-sm">
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white group-hover:text-black transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </Link>
+  </div>
+</section>
+```
+
+---
+
+### ② Machine Models Comparison
+- `id="models"`, `bg-[#020408]` + `bg-tech-dots opacity-20` overlay
+- **섹션 상단 헤더 추가** (배지 + 타이틀 + 발광 막대)
+- 구분선: `bg-primary/30` (기존 `#00C4B8/40`)
+- 모델명 텍스트: `text-primary` (기존 인라인 `#00C4B8`)
+- 이미지 hover scale 유지
+- `motion.div whileInView` 애니메이션
+
+```tsx
+<section id="models" className="relative py-28 bg-[#020408] overflow-hidden">
+  <div className="absolute inset-0 bg-tech-dots opacity-20 mix-blend-screen pointer-events-none" />
+  <div className="max-w-[1350px] mx-auto px-6 relative z-10">
+    {/* 섹션 헤더 */}
+    <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }} viewport={{ once: true }} className="mb-14">
+      <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">
+        N-PULSE LINEUP
+      </div>
+      <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
+        <span className="hero-title-main">CHOOSE YOUR</span><br/>
+        <span className="hero-title-highlight">N — PULSE</span>
+      </h2>
+      <div className="w-20 h-[2px] bg-primary" />
+    </motion.div>
+
+    {/* 2열 모델 그리드 */}
+    <div className="grid grid-cols-1 md:grid-cols-2 relative min-h-[700px]">
+      <div className="hidden md:block absolute left-1/2 top-4 bottom-10 w-[1px] bg-primary/30 -translate-x-1/2 z-10" />
+      {/* 기존 Left/Right 구조 유지, #00C4B8 → text-primary 교체 */}
+    </div>
+  </div>
+</section>
+```
+
+---
+
+### ③ Advanced Technology
+- `bg-[#050810]` + `bg-tech-grid opacity-10`
+- 배지: `ADVANCED TECHNOLOGY`
+- TECH 01 / 02 / 03 스캔 라인 (아래 패턴으로 각 feature 앞에)
+
+```tsx
+// TECH 스캔 라인 패턴
+<div className="flex items-center gap-4 mb-14 relative overflow-hidden">
+  <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap">TECH 01</span>
+  <motion.div
+    className="h-[1px] w-[500%] bg-gradient-to-r from-primary/60 via-primary/10 to-transparent"
+    initial={{ x: '-100%' }} whileInView={{ x: 0 }}
+    transition={{ duration: 1, ease: 'easeOut' }} viewport={{ once: true }}
+  />
+</div>
+```
+
+- 우측 비교 차트 패널: `bg-[#0a0f1a] border border-primary/10 rounded-2xl p-8 md:p-14`
+- SVG 내 색상 `#00C4B8` → `#00B7F1`
+
+---
+
+### ④ Results of Treatment
+- `bg-[#020408]` + `bg-tech-dots opacity-20`
+- 배지: `TREATMENT RESULTS`
+- 발광 막대 추가
+- 불릿: `bg-primary rounded-full`
+- 단계 번호: `bg-primary text-[#020408] font-bold px-2 py-0.5 text-xs`
+- 최종 결과 패널: `border-2 border-primary/60` (기존 `border-[#00C4B8]`)
+
+---
+
+### ⑤ Smaller Beam Size
+- `bg-[#050810]` + `bg-tech-grid opacity-10`
+- 배지: `PRECISION FRACTIONAL`
+- `80~100um` 수치: `text-primary font-black` (**italic 제거** — anti-pattern)
+- 닷 그리드 중심 원: `border-primary`
+- 레이저 빔 바: `bg-primary/40 blur-[1px]`
+
+---
+
+### ⑥ High Peak Power Ultra Pulse
+- `bg-[#020408]` + `bg-tech-dots opacity-20`
+- 배지: `HIGH PEAK POWER`
+- 벤다이어그램 3원 → u-pulse 스타일 업그레이드:
+  ```tsx
+  // 각 원 클래스
+  "absolute w-[200px] h-[200px] rounded-full
+   bg-gradient-to-b from-primary/40 to-primary/5
+   backdrop-blur-xl border border-white/10
+   flex items-center justify-center mix-blend-screen
+   shadow-[0_0_40px_rgba(0,183,241,0.1)]"
+  ```
+- Canvas 가우시안: `rgba(0,183,241, ...)` 으로 stroke 색상 변경 (기존 `0,196,184`)
+- 중심 코어: `w-24 h-24 bg-primary/20 blur-[60px] rounded-full absolute`
+
+---
+
+### ⑦ Specification
+- `bg-[#050810]`
+- 배지: `SPECIFICATION`
+- 테이블 완전 재작성 (U-PULSE 표준):
+
+```tsx
+<div className="overflow-x-auto no-scrollbar">
+  <table className="w-full border-collapse min-w-[600px]">
+    <thead>
+      <tr>
+        <th className="text-[10px] font-black tracking-[0.4em] text-primary/70 bg-[#0a0f1a] border border-primary/10 px-6 py-4 whitespace-nowrap text-left">
+          SPEC
+        </th>
+        <th className="text-base font-black tracking-tight text-primary bg-[#0a0f1a] border border-primary/10 px-6 py-4 whitespace-nowrap">
+          N-Pulse Pro
+        </th>
+        <th colSpan={2} className="text-base font-black tracking-tight text-primary bg-[#0a0f1a] border border-primary/10 px-6 py-4 whitespace-nowrap">
+          N-Pulse FX
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {/* 각 행: bg-[#020408] border border-primary/10 text-slate-200 text-base font-black whitespace-nowrap */}
+      <tr>
+        <td className="text-[10px] font-black tracking-[0.4em] text-primary/70 bg-[#0a0f1a] border border-primary/10 px-6 py-4 whitespace-nowrap">
+          MODE
+        </td>
+        <td className="bg-[#020408] border border-primary/10 text-slate-200 text-base font-black tracking-tight px-6 py-4 whitespace-nowrap text-center">
+          CO2 (Surgical)
+        </td>
+        <td colSpan={2} className="bg-[#020408] border border-primary/10 text-slate-200 text-base font-black tracking-tight px-6 py-4 whitespace-nowrap text-center">
+          CO2 (Surgical) / FRX (Fractional)
+        </td>
+      </tr>
+      {/* 나머지 행 동일 패턴 */}
+    </tbody>
+  </table>
+</div>
+```
+
+---
+
+## Anti-Pattern 체크리스트 (구현 완료 후 확인)
+
+- [ ] italic 텍스트 없음 (`80~100um` 등 수정)
+- [ ] `border-t` 클래스 없음 (섹션 구분은 배경색 교대로만)
+- [ ] 텍스트 직접 `box-shadow` 없음
+- [ ] 모든 spec 데이터 `whitespace-nowrap`
+- [ ] `no-scrollbar` + `overflow-x-auto` 적용
+
+## 구현 체크리스트
+
+- [ ] 1. imports 교체 (framer-motion, Link 추가)
+- [ ] 2. Hero — pico-k 동일 패턴으로 교체
+- [ ] 3. Machine Models — 섹션 헤더 추가 + 색상·오버레이·애니메이션
+- [ ] 4. Advanced Technology — TECH 스캔라인 + 배지 + 색상 + 패널 스타일
+- [ ] 5. Results of Treatment — 배지 + 색상
+- [ ] 6. Smaller Beam Size — 배지 + italic 제거 + 색상
+- [ ] 7. High Peak Power — 벤다이어그램 업그레이드 + canvas 색상
+- [ ] 8. Specification — 테이블 U-PULSE 표준 재작성
+- [ ] 9. Anti-pattern 최종 검토
