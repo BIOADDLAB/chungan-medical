@@ -170,104 +170,107 @@ export default function SylfirmXPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            {/* CW MODE PANEL */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="glass-panel p-8 md:p-12 relative group overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 p-6 opacity-20 select-none pointer-events-none">
-                <span className="text-6xl font-black text-white/5 uppercase font-inter">CW</span>
-              </div>
-              <div className="mb-12">
-                <div className="text-primary text-xs font-black tracking-widest mb-2 uppercase font-inter">CONTINUOUS WAVE</div>
-                <h3 className="text-3xl font-black text-white uppercase font-inter">CW MODE</h3>
-                <p className="text-slate-400 text-sm mt-3">진피부터 표피까지 피부 층 전체에 열 에너지 전달</p>
-              </div>
-              <div className="relative w-full aspect-video bg-[#0A0D16] border border-white/5 rounded-lg mb-12 overflow-hidden flex items-center justify-center">
-                 <div className="absolute inset-0 bg-tech-dots opacity-20" />
-                 <div className="relative z-10 flex flex-col items-center">
-                    <div className="w-16 h-16 border-2 border-primary/20 rounded-full flex items-center justify-center animate-pulse mb-4">
-                       <div className="w-8 h-8 bg-primary/40 rounded-full blur-sm" />
+          {/* Redesigned 2-Column Table Grid (Directly Following Reference Photo) */}
+          <div className="max-w-screen-xl mx-auto border border-primary/20 bg-slate-900/40 backdrop-blur-xl rounded-2xl overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-primary/20 items-stretch">
+              
+              {/* LEFT COLUMN: CW MODE */}
+              <div className="flex flex-col">
+                <div className="flex flex-col flex-grow">
+                  <div className="p-6 text-center border-b border-primary/20 bg-primary/5 shrink-0 h-[100px] flex flex-col justify-center">
+                    <h3 className="text-xl font-black text-white font-inter tracking-[0.2em] mb-1 leading-none uppercase">CW MODE</h3>
+                    <p className="text-primary text-[10px] font-black uppercase tracking-widest leading-none mt-2">(Continuous Wave)</p>
+                  </div>
+                  
+                  <div className="p-8 space-y-6 flex-grow flex flex-col justify-center bg-black/20">
+                    <div className="aspect-[16/7] bg-primary/10 rounded-lg flex items-center justify-center relative overflow-hidden group shrink-0 border border-white/5">
+                      <div className="absolute inset-0 bg-[url('https://www.sylfirmx.com/img/img_sylfirmx01_01.jpg')] bg-cover bg-center opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700" />
+                      <div className="relative z-10 p-4 text-center">
+                        <span className="text-[10px] text-primary/40 font-black tracking-widest uppercase block leading-none">CW Energy visualization</span>
+                      </div>
                     </div>
-                    <span className="text-[10px] text-primary/40 font-bold tracking-widest uppercase mb-4">Waveform Visualization</span>
-                 </div>
-              </div>
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-primary/20" />
-                  <span className="text-[11px] font-black tracking-[0.2em] text-primary/60 uppercase">Indications</span>
-                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-primary/20" />
-                </div>
-                <div className="grid grid-cols-1 gap-3">
-                  <div className="flex justify-between items-center py-4 px-6 bg-white/[0.02] border border-white/5 rounded-lg group-hover:border-primary/20 transition duration-500">
-                    <span className="text-slate-300 font-bold text-sm">Scalp Treatment</span>
-                    <span className="text-primary text-sm font-black uppercase">두피 시술 (리프팅/순환)</span>
-                  </div>
-                  <div className="flex justify-between items-center py-4 px-6 bg-white/[0.02] border border-white/5 rounded-lg group-hover:border-primary/20 transition duration-500">
-                    <span className="text-slate-300 font-bold text-sm">Face Rejuvenation</span>
-                    <span className="text-primary text-sm font-black uppercase">타이트닝 / 리프팅</span>
-                  </div>
-                  <div className="flex justify-between items-center py-4 px-6 bg-white/[0.02] border border-white/5 rounded-lg group-hover:border-primary/20 transition duration-500">
-                    <span className="text-slate-300 font-bold text-sm">Pore & Scars</span>
-                    <span className="text-primary text-sm font-black uppercase">모공 / 흉터 / 여드름</span>
+                    <div className="text-center">
+                      <p className="text-slate-200 text-[14px] md:text-[15px] font-bold mb-1 tracking-tight leading-relaxed">진피부터 표피까지 피부 층 전체에 열 에너지 전달</p>
+                      <p className="text-slate-500 text-[11px] font-medium tracking-tight leading-none">기존의 모든 Needle RF device의 에너지 방식</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
 
-            {/* PW MODE PANEL */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="glass-panel p-8 md:p-12 relative group overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 p-6 opacity-20 select-none pointer-events-none">
-                <span className="text-6xl font-black text-white/5 uppercase font-inter">PW</span>
+                <div className="border-t border-primary/20 flex flex-col shrink-0">
+                   <div className="grid grid-cols-[120px_1fr] bg-primary/5 border-b border-primary/10 h-[50px] shrink-0">
+                      <div className="text-center text-slate-300 text-[10px] font-black uppercase font-inter border-r border-primary/10 flex items-center justify-center">Mode (Duration)</div>
+                      <div className="text-center text-slate-300 text-[10px] font-black uppercase font-inter flex items-center justify-center tracking-[0.2em]">Indication</div>
+                   </div>
+                   <div className="grid grid-cols-[120px_1fr] border-b border-primary/10 h-[80px] shrink-0">
+                      <div className="flex items-center justify-center bg-primary/5 border-r border-primary/10">
+                         <span className="text-primary text-xs font-black font-inter tracking-widest text-center">CW1</span>
+                      </div>
+                      <div className="flex items-center justify-center bg-transparent px-6">
+                         <span className="text-slate-300 text-[14px] md:text-[15px] font-medium tracking-tight text-center">두피 시술 (리프팅 / 순환 등)</span>
+                      </div>
+                   </div>
+                   <div className="grid grid-cols-[120px_1fr] h-[240px] shrink-0">
+                      <div className="flex flex-col divide-y divide-primary/10 border-r border-primary/10 bg-primary/5">
+                         {['CW2', 'CW3', 'CW4'].map(mode => (
+                           <div key={mode} className="flex-1 flex items-center justify-center">
+                              <span className="text-primary text-xs font-black font-inter tracking-widest text-center">{mode}</span>
+                           </div>
+                         ))}
+                      </div>
+                      <div className="flex items-center justify-center text-center bg-transparent p-6">
+                         <span className="text-slate-300 text-[14px] md:text-[15px] font-medium leading-relaxed tracking-tight">
+                           타이트닝 / 리프팅<br />모공 / 흉터 / 여드름 / 이중턱
+                         </span>
+                      </div>
+                   </div>
+                </div>
               </div>
-              <div className="mb-12">
-                <div className="text-primary text-xs font-black tracking-widest mb-2 uppercase font-inter">PULSED WAVE</div>
-                <h3 className="text-3xl font-black text-white uppercase font-inter">PW MODE</h3>
-                <p className="text-slate-400 text-sm mt-3">기저막, 혈관벽에만 열 에너지가 선택적으로 반응</p>
-              </div>
-              <div className="relative w-full aspect-video bg-[#0A0D16] border border-white/5 rounded-lg mb-12 overflow-hidden flex items-center justify-center">
-                 <div className="absolute inset-0 bg-tech-dots opacity-20" />
-                 <div className="relative z-10 flex flex-col items-center">
-                    <div className="flex gap-2">
-                       {[1, 2, 3].map(i => (
-                         <div key={i} className="w-3 h-12 bg-primary/40 rounded-full blur-[2px] animate-pulse" style={{ animationDelay: `${i * 0.2}s` }} />
-                       ))}
+
+              {/* RIGHT COLUMN: PW MODE */}
+              <div className="flex flex-col">
+                <div className="flex flex-col flex-grow">
+                  <div className="p-6 text-center border-b border-primary/20 bg-primary/5 shrink-0 h-[100px] flex flex-col justify-center">
+                    <h3 className="text-xl font-black text-white font-inter tracking-[0.2em] mb-1 leading-none uppercase">PW MODE</h3>
+                    <p className="text-primary text-[10px] font-black uppercase tracking-widest leading-none mt-2">(Pulsed Wave)</p>
+                  </div>
+
+                  <div className="p-8 space-y-6 flex-grow flex flex-col justify-center bg-black/20">
+                    <div className="aspect-[16/7] bg-primary/10 rounded-lg flex items-center justify-center relative overflow-hidden group shrink-0 border border-white/5">
+                      <div className="absolute inset-0 bg-[url('https://www.sylfirmx.com/img/img_sylfirmx01_02.jpg')] bg-cover bg-center opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700" />
+                      <div className="relative z-10 p-4 text-center">
+                        <span className="text-[10px] text-primary/40 font-black tracking-widest uppercase block leading-none">PW Energy visualization</span>
+                      </div>
                     </div>
-                    <span className="text-[10px] text-primary/40 font-bold tracking-widest uppercase mt-4">Pulsed Visualization</span>
-                 </div>
-              </div>
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-primary/20" />
-                  <span className="text-[11px] font-black tracking-[0.2em] text-primary/60 uppercase">Indications</span>
-                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-primary/20" />
-                </div>
-                <div className="grid grid-cols-1 gap-3">
-                  <div className="flex justify-between items-center py-4 px-6 bg-white/[0.02] border border-white/5 rounded-lg group-hover:border-primary/20 transition duration-500">
-                    <span className="text-slate-300 font-bold text-sm">Pigmentation</span>
-                    <span className="text-primary text-sm font-black uppercase">기미 / PIH</span>
-                  </div>
-                  <div className="flex justify-between items-center py-4 px-6 bg-white/[0.02] border border-white/5 rounded-lg group-hover:border-primary/20 transition duration-500">
-                    <span className="text-slate-300 font-bold text-sm">Vascular</span>
-                    <span className="text-primary text-sm font-black uppercase">홍조 / 혈관 치료</span>
-                  </div>
-                  <div className="flex justify-between items-center py-4 px-6 bg-white/[0.02] border border-white/5 rounded-lg group-hover:border-primary/20 transition duration-500">
-                    <span className="text-slate-300 font-bold text-sm">Inflammatory</span>
-                    <span className="text-primary text-sm font-black uppercase">염증성 여드름</span>
+                    <div className="text-center">
+                      <p className="text-slate-200 text-[14px] md:text-[15px] font-bold mb-1 tracking-tight leading-relaxed">기저막, 혈관에만 열 에너지가 선택적으로 반응</p>
+                      <p className="text-slate-500 text-[11px] font-medium tracking-tight leading-none">SYLFIRM에서부터 사용하던 비올의 기술력</p>
+                    </div>
                   </div>
                 </div>
+
+                <div className="border-t border-primary/20 flex flex-col shrink-0">
+                   <div className="grid grid-cols-[120px_1fr] bg-primary/5 border-b border-primary/10 h-[50px] shrink-0">
+                      <div className="text-center text-slate-300 text-[10px] font-black uppercase font-inter border-r border-primary/10 flex items-center justify-center">Mode (Duration)</div>
+                      <div className="text-center text-slate-300 text-[10px] font-black uppercase font-inter flex items-center justify-center tracking-[0.2em]">Indication</div>
+                   </div>
+                   <div className="grid grid-cols-[120px_1fr] h-[320px] shrink-0">
+                      <div className="flex flex-col divide-y divide-primary/10 border-r border-primary/10 bg-primary/5">
+                         {['PW1', 'PW2', 'PW3', 'PW4'].map(mode => (
+                           <div key={mode} className="flex-1 flex items-center justify-center">
+                              <span className="text-primary text-xs font-black font-inter tracking-widest text-center">{mode}</span>
+                           </div>
+                         ))}
+                      </div>
+                      <div className="flex items-center justify-center text-center bg-transparent p-6">
+                         <span className="text-slate-300 text-[14px] md:text-[15px] font-medium leading-relaxed tracking-tight">
+                           기미 / 홍조<br />염증성 여드름
+                         </span>
+                      </div>
+                   </div>
+                </div>
               </div>
-            </motion.div>
+
+            </div>
           </div>
         </div>
       </section>
@@ -286,31 +289,31 @@ export default function SylfirmXPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left uppercase font-inter">
-             <div className="glass-panel p-8">
-                <h3 className="text-primary text-xs font-black mb-4 uppercase">SINGLE TREATMENT</h3>
-                <p className="text-2xl font-black text-white mb-6">실펌X 단독 시술 1회</p>
-                <div className="text-4xl font-black text-white mb-8">25~30<span className="text-lg ml-1">만</span></div>
-                <div className="text-[11px] text-slate-500 font-medium leading-relaxed font-sans normal-case">
-                   * CW모드로 리프팅 시술 시 수가 상향 가능<br />
-                   * 팁 값 별도 측정 가능
-                </div>
-             </div>
-             <div className="glass-panel p-8 border-primary/30 bg-primary/5">
-                <h3 className="text-primary text-xs font-black mb-4 uppercase">COMBINATION A</h3>
-                <p className="text-2xl font-black text-white mb-6">미백/홍조 복합 솔루션</p>
-                <div className="text-4xl font-black text-white mb-8">40~45<span className="text-lg ml-1">만</span></div>
-                <div className="text-[11px] text-slate-300 font-medium leading-relaxed font-sans normal-case">
-                   실펌X + 토닝/레이저 + 특수 진정 관리 포함
-                </div>
-             </div>
-             <div className="glass-panel p-8">
-                <h3 className="text-primary text-xs font-black mb-4 uppercase">COMBINATION B</h3>
-                <p className="text-2xl font-black text-white mb-6">아기 피부 리페어</p>
-                <div className="text-4xl font-black text-white mb-8">60~80<span className="text-lg ml-1">만</span></div>
-                <div className="text-[11px] text-slate-500 font-medium leading-relaxed font-sans normal-case">
-                   실펌X + 스킨부스터/PRP + 재생 관리 포함
-                </div>
-             </div>
+            <div className="glass-panel p-8">
+              <h3 className="text-primary text-xs font-black mb-4 uppercase">SINGLE TREATMENT</h3>
+              <p className="text-2xl font-black text-white mb-6">실펌X 단독 시술 1회</p>
+              <div className="text-4xl font-black text-white mb-8">25~30<span className="text-lg ml-1">만</span></div>
+              <div className="text-[11px] text-slate-500 font-medium leading-relaxed font-sans normal-case">
+                * CW모드로 리프팅 시술 시 수가 상향 가능<br />
+                * 팁 값 별도 측정 가능
+              </div>
+            </div>
+            <div className="glass-panel p-8 border-primary/30 bg-primary/5">
+              <h3 className="text-primary text-xs font-black mb-4 uppercase">COMBINATION A</h3>
+              <p className="text-2xl font-black text-white mb-6">미백/홍조 복합 솔루션</p>
+              <div className="text-4xl font-black text-white mb-8">40~45<span className="text-lg ml-1">만</span></div>
+              <div className="text-[11px] text-slate-300 font-medium leading-relaxed font-sans normal-case">
+                실펌X + 토닝/레이저 + 특수 진정 관리 포함
+              </div>
+            </div>
+            <div className="glass-panel p-8">
+              <h3 className="text-primary text-xs font-black mb-4 uppercase">COMBINATION B</h3>
+              <p className="text-2xl font-black text-white mb-6">아기 피부 리페어</p>
+              <div className="text-4xl font-black text-white mb-8">60~80<span className="text-lg ml-1">만</span></div>
+              <div className="text-[11px] text-slate-500 font-medium leading-relaxed font-sans normal-case">
+                실펌X + 스킨부스터/PRP + 재생 관리 포함
+              </div>
+            </div>
           </div>
         </div>
       </section>
