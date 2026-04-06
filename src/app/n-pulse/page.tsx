@@ -153,7 +153,7 @@ export default function NPulsePage() {
             </div>
 
             {/* Left Model: N-Pulse Pro */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -165,12 +165,12 @@ export default function NPulsePage() {
                   <div className="w-8 h-[1px] bg-primary" />
                   <span className="text-primary font-black text-sm tracking-widest uppercase">Single Mode</span>
                 </div>
-                <h2 className="text-white font-black text-[46px] md:text-[68px] tracking-tighter leading-none mb-8 uppercase">
+                <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-8 uppercase leading-tight">
                   <span className="hero-title-main">N - PULSE</span><br />
                   <span className="hero-title-highlight">PRO</span>
                 </h2>
                 <div className="space-y-2">
-                  <p className="text-slate-200 text-[18px] md:text-[22px] font-bold tracking-tight flex items-center gap-3">
+                  <p className="text-slate-200 text-lg md:text-xl font-bold tracking-tight flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary/40" />
                     CO2 (Surgical)
                   </p>
@@ -184,7 +184,7 @@ export default function NPulsePage() {
             </motion.div>
 
             {/* Right Model: N-Pulse FX */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -196,16 +196,16 @@ export default function NPulsePage() {
                   <div className="w-8 h-[1px] bg-primary" />
                   <span className="text-primary font-black text-sm tracking-widest uppercase">Dual Mode</span>
                 </div>
-                <h2 className="text-white font-black text-[46px] md:text-[68px] tracking-tighter leading-none mb-8 uppercase">
-                   <span className="hero-title-main">N - PULSE</span><br />
-                   <span className="hero-title-highlight">FX</span>
+                <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-8 uppercase leading-tight">
+                  <span className="hero-title-main">N - PULSE</span><br />
+                  <span className="hero-title-highlight">FX</span>
                 </h2>
                 <div className="space-y-2">
-                  <p className="text-slate-200 text-[18px] md:text-[22px] font-bold tracking-tight flex items-center gap-3">
+                  <p className="text-slate-200 text-lg md:text-xl font-bold tracking-tight flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary/40" />
                     CO2 (Surgical)
                   </p>
-                  <p className="text-slate-200 text-[18px] md:text-[22px] font-bold tracking-tight flex items-center gap-3">
+                  <p className="text-slate-200 text-lg md:text-xl font-bold tracking-tight flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary/40" />
                     FRX (Fractional)
                   </p>
@@ -221,229 +221,294 @@ export default function NPulsePage() {
         </div>
       </section>
 
-      {/* Advanced Technology Section */}
-      <section id="advanced-tech" className="py-24 md:py-32 bg-black text-white overflow-hidden">
-        <div className="max-w-[1350px] mx-auto px-6">
-          <h2 className="text-[#00C4B8] text-[36px] md:text-[56px] font-black tracking-tighter mb-20 reveal-up">
-            Advanced Technology
-          </h2>
+      {/* ③ Advanced Technology Section (Standardized Tech Style) */}
+      <section id="advanced-tech" className="relative py-28 bg-[#020408] overflow-hidden">
+        {/* 테크 배경 장식 */}
+        <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none" />
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-[130px] rounded-full pointer-events-none" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">
-            <div className="lg:col-span-6 space-y-16 py-4 flex flex-col justify-between">
-              <div className="reveal-up">
-                <h3 className="text-[#00C4B8] text-[28px] md:text-[38px] font-bold flex items-center mb-6">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#00C4B8] mr-5"></span>
-                  Technology
-                </h3>
-                <div className="pl-10 space-y-2 text-white/80 text-[18px] md:text-[22px] font-medium leading-snug">
-                  <p>에스앤제이만의 기술력을 바탕으로</p>
-                  <p>비교불가 하이 피크 파워 울트라 펄스 구현</p>
-                </div>
-              </div>
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          {/* 상단 라벨 */}
+          <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
+            <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap uppercase">ADVANCED CORE</span>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              style={{ originX: 0 }}
+              className="h-[1px] w-full bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none"
+            />
+          </div>
 
-              <div className="reveal-up delay-100">
-                <h3 className="text-[#00C4B8] text-[28px] md:text-[38px] font-bold flex items-center mb-6">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#00C4B8] mr-5"></span>
-                  Safe & Effective
-                </h3>
-                <div className="pl-10 space-y-2 text-white/80 text-[18px] md:text-[22px] font-medium leading-snug">
-                  <p>열 손상 최소화</p>
-                  <p>다양한 스팟 사이즈로 시술 효과 극대화</p>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            {/* 좌측: 기술 리스트 */}
+            <div className="lg:col-span-6 space-y-12">
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-3xl md:text-5xl font-black tracking-tight mb-16"
+              >
+                <span className="hero-title-main">ADVANCED</span><br />
+                <span className="hero-title-highlight uppercase">Technology</span>
+              </motion.h2>
 
-              <div className="reveal-up delay-200">
-                <h3 className="text-[#00C4B8] text-[28px] md:text-[38px] font-bold flex items-center mb-6">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#00C4B8] mr-5"></span>
-                  Convenient
-                </h3>
-                <div className="pl-10 space-y-2 text-white/80 text-[18px] md:text-[22px] font-medium leading-snug">
-                  <p>3가지 핸드피스로 다양한 스팟사이즈 구현</p>
-                  <p>사용자 중심의 인체공학적 디자인 & GUI</p>
-                </div>
+              <div className="space-y-10">
+                {[
+                  {
+                    title: 'Technology',
+                    desc: '에스앤제이만의 기술력을 바탕으로 비교불가\n하이 피크 파워 울트라 펄스 구현'
+                  },
+                  {
+                    title: 'Safe & Effective',
+                    desc: '열 손상 최소화 및 다양한 스팟 사이즈로\n시술 효과 극대화'
+                  },
+                  {
+                    title: 'Convenient',
+                    desc: '3가지 핸드피스로 다양한 스팟사이즈 구현\n사용자 중심의 인체공학적 디자인 & GUI'
+                  }
+                ].map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: idx * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group"
+                  >
+                    <div className="flex items-center gap-5 mb-4">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary transition-all duration-500 shadow-[0_0_10px_rgba(0,183,241,0)] group-hover:shadow-[0_0_10px_rgba(0,183,241,1)]" />
+                      <h3 className="text-white font-black text-2xl tracking-tight group-hover:text-primary transition-colors duration-500">{item.title}</h3>
+                    </div>
+                    <p className="text-slate-400 text-lg font-medium leading-relaxed pl-6.5 whitespace-pre-line border-l border-white/5 group-hover:border-primary/20 transition-colors duration-500">
+                      {item.desc}
+                    </p>
+                  </motion.div>
+                ))}
               </div>
             </div>
 
-            <div className="lg:col-span-6 reveal-up lg:-mt-16 delay-300">
-              <div className="bg-[#111] rounded-3xl p-8 md:p-14 border border-white/5 relative overflow-hidden h-full flex flex-col justify-center">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#00C4B8]/5 blur-[120px] rounded-full pointer-events-none"></div>
+            {/* 우측: 비교 일러스트 패널 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="lg:col-span-6 relative"
+            >
+              <div className="glass-panel p-8 md:p-12 relative overflow-hidden bg-tech-grid/30">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-50" />
 
-                <div className="relative z-10 space-y-16">
-                  <div className="space-y-6">
-                    <div className="flex justify-between items-end px-4">
-                      <div className="text-white/40 font-bold text-sm md:text-[17px]">Other</div>
-                      <div className="text-white font-black text-sm md:text-[17px] tracking-tight uppercase">
-                        N-Pulse Pro
-                      </div>
+                <div className="relative z-10 space-y-12">
+                  {/* Item 01: N-Pulse Pro */}
+                  <div className="space-y-6 group">
+                    <div className="flex justify-between items-center px-2">
+                      <span className="text-slate-500 font-bold text-[10px] tracking-[0.4em] uppercase group-hover:text-primary/50 transition-colors">Pulse Analysis</span>
+                      <span className="text-white font-black text-xs tracking-widest uppercase">N-PULSE PRO</span>
                     </div>
-                    <div className="relative h-[220px] flex items-center justify-center">
-                      <svg viewBox="0 0 500 220" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
-                        <g transform="translate(100, 10)">
-                          <path d="M0,0 L60,15 L70,120 L15,105 Z" fill="#D1D5DB" />
-                          <path d="M45,115 L35,165 L43,165 L50,120 Z" fill="#D1D5DB" />
-                          <path d="M68,123 L85,185" stroke="#D1D5DB" strokeWidth="2" />
-                          <path
-                            d="M75,185 Q85,175 100,185 Q110,195 95,205 Q80,200 75,185 Z"
-                            fill="#D1D5DB"
-                            opacity="0.6"
-                          />
+                    <div className="relative aspect-[21/9] glass-panel-dark bg-black/40 flex items-center justify-center p-6 border-white/5 group-hover:border-primary/20 transition-all duration-700 overflow-hidden">
+                      <svg viewBox="0 0 500 150" className="w-full h-full opacity-90 group-hover:opacity-100 transition-opacity duration-700">
+                        {/* Comparison Label */}
+                        <text x="135" y="20" textAnchor="middle" className="fill-slate-500 text-[10px] font-bold uppercase tracking-widest">Other</text>
+                        <text x="365" y="20" textAnchor="middle" className="fill-primary text-[10px] font-black uppercase tracking-widest">N-Pulse PRO</text>
+                        
+                        {/* Left Side: Standard Tip */}
+                        <g transform="translate(100, 30) scale(0.6)">
+                          <path d="M0,0 L60,15 L70,120 L15,105 Z" fill="#D1D5DB" opacity="0.4" />
+                          <path d="M45,115 L35,165 L43,165 L50,120 Z" fill="#D1D5DB" opacity="0.6" />
+                          <circle cx="43" cy="175" r="8" fill="#D1D5DB" opacity="0.3" className="blur-[2px]" />
                         </g>
-                        <g transform="translate(320, 10)">
-                          <path d="M0,0 L60,15 L70,120 L15,105 Z" fill="#296576" />
-                          <path d="M45,115 L35,165 L43,165 L50,120 Z" fill="#132F38" />
-                          <path d="M68,123 L85,185" stroke="#132F38" strokeWidth="2" />
-                          <circle cx="88" cy="195" r="10" fill="#00C4B8" opacity="0.9" />
+
+                        {/* Right Side: Pro Tip (Sharp & Focused) */}
+                        <g transform="translate(330, 30) scale(0.6)">
+                          <path d="M0,0 L60,15 L70,120 L15,105 Z" fill="#00B7F1" opacity="0.6" />
+                          <path d="M45,115 L35,165 L43,165 L50,120 Z" fill="#00B7F1" />
+                          <circle cx="43" cy="175" r="5" fill="#00B7F1" className="animate-pulse shadow-[0_0_15px_rgba(0,183,241,1)]" />
                         </g>
+
+                        {/* Connection Line */}
+                        <line x1="220" y1="75" x2="280" y2="75" stroke="#00B7F1" strokeWidth="0.5" strokeDasharray="4 4" opacity="0.3" />
                       </svg>
                     </div>
                   </div>
 
-                  <div className="h-[1px] w-full bg-white/10"></div>
+                  <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-                  <div className="space-y-6">
-                    <div className="flex justify-between items-end px-4">
-                      <div className="text-white/40 font-bold text-sm md:text-[17px]">Other</div>
-                      <div className="text-white font-black text-sm md:text-[17px] tracking-tight uppercase">
-                        N-Pulse FX
-                      </div>
+                  {/* Item 02: N-Pulse FX */}
+                  <div className="space-y-6 group">
+                    <div className="flex justify-between items-center px-2">
+                       <span className="text-slate-500 font-bold text-[10px] tracking-[0.4em] uppercase group-hover:text-primary/50 transition-colors">Depth Control</span>
+                      <span className="text-white font-black text-xs tracking-widest uppercase">N-PULSE FX</span>
                     </div>
-                    <div className="relative h-[240px] flex items-center justify-center">
-                      <svg viewBox="0 0 500 240" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
-                        <line x1="50" y1="20" x2="450" y2="20" stroke="white" strokeWidth="2" opacity="1" />
-                        <g transform="translate(70, 20)">
-                          <path d="M0,0 C0,220 180,220 180,0" fill="#D1D5DB" />
-                          <path d="M40,0 C40,160 140,160 140,0" fill="#111" />
+                    <div className="relative aspect-[21/9] glass-panel-dark bg-black/40 flex items-center justify-center p-6 border-white/5 group-hover:border-primary/20 transition-all duration-700">
+                      <svg viewBox="0 0 500 150" className="w-full h-full opacity-90 group-hover:opacity-100 transition-opacity duration-700">
+                         {/* Comparison Label */}
+                        <text x="135" y="20" textAnchor="middle" className="fill-slate-500 text-[10px] font-bold uppercase tracking-widest">Other</text>
+                        <text x="365" y="20" textAnchor="middle" className="fill-primary text-[10px] font-black uppercase tracking-widest">N-Pulse FX</text>
+
+                        {/* Left Side: Standard Pulse */}
+                        <g transform="translate(70, 40)">
+                          <path d="M0,0 C0,100 130,100 130,0" fill="none" stroke="#D1D5DB" strokeWidth="12" opacity="0.3" />
                         </g>
-                        <g transform="translate(370, 20)">
-                          <path d="M0,0 L50,0 L50,200 C50,225 0,225 0,200 Z" fill="#00C4B8" />
-                          <path d="M15,0 L35,0 L35,190 C35,205 15,205 15,190 Z" fill="#ffffff" />
+                        {/* Right Side: FX Pulse (Deep & Narrow) */}
+                        <g transform="translate(345, 40)">
+                          <path d="M0,0 L40,0 L40,85 C40,100 0,100 0,85 Z" fill="#00B7F1" opacity="0.8" className="shadow-[0_0_20px_rgba(0,183,241,0.5)]" />
+                          <path d="M12,0 L28,0 L28,80 C28,90 12,90 12,80 Z" fill="white" className="animate-pulse" />
                         </g>
+
+                        {/* Horizontal Base Line */}
+                        <line x1="50" y1="40" x2="450" y2="40" stroke="white" strokeWidth="0.5" opacity="0.3" />
                       </svg>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Results of Treatment Section */}
-      <section className="py-24 bg-black overflow-hidden">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="reveal-up mb-16">
-              <h2 className="text-[#00C4B8] text-[32px] md:text-[42px] font-bold mb-8">The Results of Treatment</h2>
-              <ul className="space-y-4 text-white text-[18px] md:text-[22px] font-medium list-none">
-                <li className="flex items-start">
-                  <span className="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
-                  <div>피부 깊숙이 빠르고 강하게 열 에너지 전달</div>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
-                  <div>피부 재생을 위한 콜라겐 형성을 유도</div>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
-                  <div>콜라겐 재생을 통해 흉터, 주름 등을 개선</div>
-                </li>
-              </ul>
+      {/* ④ Results of Treatment Section (Standardized Tech Style) */}
+      <section id="treatment-results" className="relative py-28 bg-[#020408] overflow-hidden">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+        
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
+              Clinical Performance
             </div>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
+              <span className="hero-title-main">THE RESULTS OF</span><br />
+              <span className="hero-title-highlight">TREATMENT</span>
+            </h2>
+            <div className="w-20 h-[2px] bg-primary mb-12" />
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center reveal-up">
-              <div className="lg:col-span-8 flex items-center bg-[#111] p-4 rounded-xl border border-white/5 space-x-2 md:space-x-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                '피부 깊숙이 빠르고 강하게\n열 에너지 전달',
+                '피부 재생을 위한\n콜라겐 형성을 유도',
+                '콜라겐 재생을 통해\n흉터, 주름 등을 개선'
+              ].map((text, idx) => (
+                <div key={idx} className="glass-panel p-8 group hover:border-primary/40 transition-all duration-500">
+                   <div className="text-primary font-black text-4xl mb-6 opacity-20 group-hover:opacity-100 transition-opacity">0{idx + 1}</div>
+                   <p className="text-white text-lg md:text-xl font-bold leading-relaxed whitespace-pre-line">
+                     {text}
+                   </p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Step Visualizer */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="glass-panel-dark p-6 md:p-10 border-white/5"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-9 grid grid-cols-3 gap-4">
                 {[1, 2, 3].map((step) => (
-                  <div key={step} className="flex flex-1 items-center space-x-2 md:space-x-4">
-                    <div className="relative w-full aspect-[4/3] bg-white/5 rounded-lg overflow-hidden border border-white/10">
-                      <div className="absolute top-2 left-2 bg-white text-black font-bold px-2 py-0.5 text-xs z-10">
+                  <div key={step} className="relative group">
+                    <div className="aspect-[4/3] rounded-xl bg-black/60 border border-white/10 flex items-center justify-center overflow-hidden group-hover:border-primary/30 transition-all duration-500">
+                       <div className="absolute top-4 left-4 w-7 h-7 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-xs font-black text-white group-hover:bg-primary group-hover:border-primary transition-colors">
                         {step}
-                      </div>
-                      <div className="w-full h-full bg-gradient-to-br from-white/10 to-transparent"></div>
+                       </div>
+                       <div className="w-full h-full bg-gradient-to-br from-primary/5 to-transparent" />
                     </div>
-                    {step < 3 && (
-                      <div className="flex flex-col space-y-1">
-                        <svg className="w-4 h-6 text-[#00C4B8]" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                    )}
                   </div>
                 ))}
               </div>
 
-              <div className="hidden lg:flex flex-col space-y-1 items-center justify-center lg:col-span-1">
-                <div className="flex space-x-[-10px]">
-                  <svg className="w-6 h-10 text-[#00C4B8] opacity-30" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                  <svg className="w-6 h-10 text-[#00C4B8] opacity-60" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                  <svg className="w-6 h-10 text-[#00C4B8]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
+              <div className="lg:col-span-1 flex justify-center py-4 lg:py-0">
+                <div className="flex lg:flex-col items-center gap-1">
+                   {[0.3, 0.6, 1].map((op, i) => (
+                     <svg key={i} className="w-6 h-6 text-primary rotate-0 lg:rotate-90" style={{ opacity: op }} fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+                     </svg>
+                   ))}
                 </div>
               </div>
 
-              <div className="lg:col-span-3 relative aspect-[4/3] bg-white/5 rounded-xl overflow-hidden border-2 border-[#00C4B8]">
-                <div className="absolute top-0 left-0 bg-[#00C4B8] text-white font-bold px-3 py-1 text-sm z-10">4</div>
-                <div className="w-full h-full bg-gradient-to-br from-[#00C4B8]/20 to-transparent"></div>
+              <div className="lg:col-span-2">
+                <div className="aspect-square rounded-2xl bg-primary/10 border-2 border-primary flex items-center justify-center relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-primary/5 animate-pulse" />
+                  <span className="text-primary font-black text-4xl group-hover:scale-110 transition-transform duration-500">RE</span>
+                </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Smaller Beam Size Section */}
-      <section className="py-24 bg-black overflow-hidden relative border-t border-white/5">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="reveal-up mb-20">
-              <h2 className="text-[#00C4B8] text-[32px] md:text-[42px] font-bold mb-8">
-                Smaller Beam Size Fractional Laser System
-              </h2>
-              <ul className="space-y-4 text-white text-[18px] md:text-[22px] font-medium list-none">
-                <li className="flex items-start">
-                  <span className="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
-                  <div>정교하고 깊게 조사되어 회복과 재생을 빠르게</div>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 mt-2.5 w-1.5 h-1.5 bg-white rounded-full shrink-0"></span>
-                  <div>시술 횟수와 통증은 줄이고 효과는 높게</div>
-                </li>
-              </ul>
-            </div>
+      {/* ⑤ Beam Size Section (Standardized Tech Style) */}
+      <section className="relative py-28 bg-[#020408] overflow-hidden">
+        <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none" />
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-[130px] rounded-full pointer-events-none" />
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 reveal-up items-end">
-              <div className="lg:col-span-4 flex flex-col items-center">
-                <div className="text-center mb-10">
-                  <p className="text-white text-[20px] md:text-[24px] font-bold mb-1">Min. Beam Size</p>
-                  <p className="text-[#00C4B8] text-[20px] md:text-[24px] font-medium italic">80~100um</p>
-                </div>
-                <div className="relative w-full aspect-square bg-[#0f0f0f] rounded-[24px] border border-white/5 overflow-hidden flex items-center justify-center">
-                  <div className="grid grid-cols-8 gap-1.5 opacity-10">
-                    {Array.from({ length: 64 }).map((_, i) => (
-                      <div key={i} className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                    ))}
-                  </div>
-                  <div className="absolute top-[30%] right-[25%] w-10 h-10 border border-[#00C4B8] rounded-full flex items-center justify-center">
-                    <div className="w-1 h-1 bg-[#00C4B8] rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="lg:col-span-8">
-                <div className="w-full aspect-[16/9] bg-[#0f0f0f] rounded-[24px] border border-white/5 overflow-hidden relative">
-                  <div className="absolute inset-0 flex items-center pl-10 space-x-6">
-                    {[1, 2, 3, 4, 5, 6].map((i) => (
-                      <div key={i} className="w-[2px] h-[140px] bg-[#00C4B8]/40 blur-[1px]"></div>
-                    ))}
-                  </div>
-                  {/* Skin simulation visual could go here */}
-                </div>
-              </div>
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
+              Precision Engineering
             </div>
-          </div>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
+              <span className="hero-title-main">SMALLER BEAM</span><br />
+              <span className="hero-title-highlight uppercase">SIZE</span>
+              <span className="hero-title-main ml-3">FRACTIONAL</span>
+            </h2>
+            <div className="w-20 h-[2px] bg-primary mb-12" />
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+               <div className="space-y-6">
+                 {[
+                   '정교하고 깊게 조사되어 회복과 재생을 빠르게',
+                   '시술 횟수와 통증은 줄이고 효과는 높게',
+                   '미세 빔으로 손상을 줄이고 정교한 시술 가능'
+                 ].map((text, i) => (
+                   <motion.div 
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: i * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-start gap-5 p-6 glass-panel-dark hover:bg-white/5 transition-colors group"
+                   >
+                     <div className="w-2 h-2 rounded-full bg-primary mt-2.5 shadow-[0_0_10px_rgba(0,183,241,1)]" />
+                     <p className="text-slate-200 text-lg md:text-xl font-bold leading-relaxed whitespace-pre-line group-hover:text-white transition-colors">
+                       {text}
+                     </p>
+                   </motion.div>
+                 ))}
+               </div>
+
+               <div className="relative aspect-square lg:aspect-auto h-full min-h-[400px] glass-panel bg-tech-grid/20 flex flex-col items-center justify-center overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-30" />
+                  <svg viewBox="0 0 400 400" className="w-64 h-64 relative z-10">
+                    <circle cx="200" cy="200" r="180" fill="none" stroke="white" strokeWidth="1" strokeDasharray="5 5" opacity="0.2" />
+                    <circle cx="200" cy="200" r="120" fill="none" stroke="#00B7F1" strokeWidth="1" opacity="0.3" />
+                    <circle cx="200" cy="200" r="5" fill="#00B7F1" className="shadow-[0_0_20px_rgba(0,183,241,1)]" />
+                    <line x1="200" y1="200" x2="350" y2="200" stroke="#00B7F1" strokeWidth="2" opacity="0.6">
+                      <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="5s" repeatCount="indefinite" />
+                    </line>
+                    <text x="200" y="360" textAnchor="middle" className="fill-slate-500 text-[12px] font-black tracking-[0.8em] uppercase">Scanning Precision</text>
+                  </svg>
+               </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
