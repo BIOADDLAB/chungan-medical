@@ -612,9 +612,17 @@ export default function NPulsePage() {
                 <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
 
                 <div className="max-w-screen-xl mx-auto px-6 relative z-10">
-                    <div className="flex items-center gap-4 mb-14">
-                        <span className="text-primary font-black text-sm tracking-widest uppercase">Ultra Pulse Core</span>
-                        <div className="h-[1px] flex-grow bg-gradient-to-r from-primary/30 to-transparent" />
+                    {/* 상단 라벨 */}
+                    <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
+                        <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap uppercase">Ultra Pulse Core</span>
+                        <motion.div
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                            viewport={{ once: true }}
+                            style={{ originX: 0 }}
+                            className="h-[1px] w-full bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none"
+                        />
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
@@ -707,93 +715,114 @@ export default function NPulsePage() {
                 </div>
             </section>
 
-            {/* Specification Section */}
-            <section className="py-24 bg-black overflow-hidden relative border-t border-white/5">
-                <div className="container mx-auto px-6">
+            {/* Specification Section - Premium HUD 리뉴얼 */}
+            <section className="py-32 bg-black overflow-hidden relative">
+                {/* 배경 네온 글로우 */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
+
+                <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-7xl mx-auto">
-                        <h2 className="text-[#00C4B8] text-[42px] md:text-[56px] font-bold mb-20 reveal-up">Specification</h2>
-                        <div className="flex flex-col lg:flex-row items-end justify-between gap-8 reveal-up">
-                            <div className="hidden lg:block w-1/4 relative order-1 self-stretch min-h-[600px]">
+                        {/* HUD Header - 일관된 디자인 적용 */}
+                        {/* 상단 라벨 */}
+                        <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
+                            <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap uppercase">SPECIFICATION</span>
+                            <motion.div
+                                initial={{ scaleX: 0 }}
+                                whileInView={{ scaleX: 1 }}
+                                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                                viewport={{ once: true }}
+                                style={{ originX: 0 }}
+                                className="h-[1px] w-full bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none"
+                            />
+                        </div>
+
+                        <div className="flex flex-col lg:flex-row items-end justify-between gap-8">
+                            {/* Pro Image - 좌측 위치 유지 */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8 }}
+                                className="hidden lg:block w-1/4 relative order-1 self-stretch min-h-[600px]"
+                            >
                                 <img
                                     src="images/machine/엔펄스pro 사진.png"
                                     alt="N-Pulse Pro"
-                                    className="absolute bottom-0 -right-[390px] w-[1100px] max-w-none object-contain object-bottom drop-shadow-[0_40px_80px_rgba(0,0,0,0.9)] z-20 hover:scale-105 transition-transform duration-700 ease-out origin-bottom"
+                                    className="absolute bottom-0 -right-[390px] w-[1100px] max-w-none object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,183,241,0.2)] z-20 hover:scale-105 transition-transform duration-700 ease-out origin-bottom"
                                 />
-                            </div>
+                            </motion.div>
 
-                            <div className="w-full lg:w-1/2 order-2 overflow-x-auto self-center">
-                                <table className="w-full border-collapse text-[14px] md:text-[16px] text-center min-w-[500px] shadow-2xl border border-black">
-                                    <thead>
-                                        <tr className="h-16">
-                                            <th className="w-[28%] bg-[#222] text-white border border-black font-bold">Product Name</th>
-                                            <th className="w-[36%] bg-[#e0e0e0] text-black border border-black font-bold">N-Pulse Pro</th>
-                                            <th colSpan={2} className="w-[36%] bg-[#e0e0e0] text-black border border-black font-bold">
-                                                N-Pulse FX
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="bg-white text-black font-medium">
-                                        <tr className="h-14">
-                                            <td className="bg-[#444] text-white font-bold border border-black px-4">Mode</td>
-                                            <td className="border border-black">CO2 (Surgical)</td>
-                                            <td colSpan={2} className="border border-black py-2">
-                                                CO2 (Surgical), <br />
-                                                FR7 (Fractional)
-                                            </td>
-                                        </tr>
-                                        <tr className="h-14">
-                                            <td className="bg-[#444] text-white font-bold border border-black px-4">Laser System</td>
-                                            <td colSpan={3} className="border border-black">
-                                                Fractional CO2 Laser
-                                            </td>
-                                        </tr>
-                                        <tr className="h-14">
-                                            <td className="bg-[#444] text-white font-bold border border-black px-4">Wavelength</td>
-                                            <td colSpan={3} className="border border-black">
-                                                10,600 nm
-                                            </td>
-                                        </tr>
-                                        <tr className="h-16">
-                                            <td className="bg-[#444] text-white font-bold border border-black px-4">Power (COS)</td>
-                                            <td className="border border-black">0.5 ~ 30 W</td>
-                                            <td className="bg-black text-white border border-black font-bold text-[14px]">Energy (FRX)</td>
-                                            <td className="border border-black">2 ~ 300mJ</td>
-                                        </tr>
-                                        <tr className="h-14">
-                                            <td className="bg-[#444] text-white font-bold border border-black px-4">Electrical</td>
-                                            <td colSpan={3} className="border border-black">
-                                                220~240 VAC, 50/60 Hz, 1,100VA
-                                            </td>
-                                        </tr>
-                                        <tr className="h-14">
-                                            <td className="bg-[#444] text-white font-bold border border-black px-4">User Interface</td>
-                                            <td colSpan={3} className="border border-black">
-                                                10.2 Inch
-                                            </td>
-                                        </tr>
-                                        <tr className="h-14">
-                                            <td className="bg-[#444] text-white font-bold border border-black px-4">Dimension</td>
-                                            <td colSpan={3} className="border border-black">
-                                                340(W) X 350(D) X 1,100(H) mm
-                                            </td>
-                                        </tr>
-                                        <tr className="h-14">
-                                            <td className="bg-[#444] text-white font-bold border border-black px-4">Weight</td>
-                                            <td colSpan={3} className="border border-black">
-                                                35 kg
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            {/* HUD Table - 중앙 위치 유지 */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                                className="w-full lg:w-1/2 order-2 overflow-x-auto self-center z-30"
+                            >
+                                <div className="glass-panel border-primary/20 overflow-hidden shadow-2xl">
+                                    <table className="w-full border-collapse text-sm md:text-base text-left min-w-[500px]">
+                                        <thead>
+                                            <tr className="border-b border-primary/20">
+                                                <th className="p-5 bg-primary/10 text-primary font-bold w-1/3">Product Name</th>
+                                                <th className="p-5 bg-white/5 text-white font-bold w-1/3 text-center">N-Pulse Pro</th>
+                                                <th className="p-5 bg-white/5 text-white font-bold w-1/3 text-center border-l border-primary/10">N-Pulse FX</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="text-white/80">
+                                            <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                                <td className="p-4 bg-white/5 text-white font-semibold">Mode</td>
+                                                <td className="p-4 text-center">CO2 (Surgical)</td>
+                                                <td className="p-4 text-center border-l border-primary/5">CO2 (Surgical)<br /><span className="text-primary/70 text-xs">FR7 (Fractional)</span></td>
+                                            </tr>
+                                            <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                                <td className="p-4 bg-white/5 text-white font-semibold">Laser System</td>
+                                                <td colSpan={2} className="p-4 text-center">Fractional CO2 Laser</td>
+                                            </tr>
+                                            <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                                <td className="p-4 bg-white/5 text-white font-semibold">Wavelength</td>
+                                                <td colSpan={2} className="p-4 text-center font-mono text-primary text-lg">10,600 nm</td>
+                                            </tr>
+                                            <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                                <td className="p-4 bg-white/5 text-white font-semibold">Power (COS)</td>
+                                                <td className="p-4 text-center">0.5 ~ 30 W</td>
+                                                <td className="p-4 text-center bg-primary/20 text-primary font-bold border-l border-primary/5">
+                                                    <div className="text-[10px] opacity-70 mb-1 leading-none uppercase tracking-tighter">Energy (FRX)</div>
+                                                    2 ~ 300mJ
+                                                </td>
+                                            </tr>
+                                            <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                                <td className="p-4 bg-white/5 text-white font-semibold">Electrical</td>
+                                                <td colSpan={2} className="p-4 text-center">220~240 VAC, 50/60 Hz, 1,100VA</td>
+                                            </tr>
+                                            <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                                <td className="p-4 bg-white/5 text-white font-semibold">User Interface</td>
+                                                <td colSpan={2} className="p-4 text-center">10.2 Inch Touch Display</td>
+                                            </tr>
+                                            <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                                <td className="p-4 bg-white/5 text-white font-semibold">Dimension</td>
+                                                <td colSpan={2} className="p-4 text-center font-mono">340(W) X 350(D) X 1,100(H) mm</td>
+                                            </tr>
+                                            <tr className="hover:bg-white/5 transition-colors">
+                                                <td className="p-4 bg-white/5 text-white font-semibold">Weight</td>
+                                                <td colSpan={2} className="p-4 text-center">35 kg</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </motion.div>
 
-                            <div className="hidden lg:block w-1/4 relative order-3 self-stretch min-h-[600px]">
+                            {/* FX Image - 우측 위치 유지 */}
+                            <motion.div
+                                initial={{ opacity: 0, x: 50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8 }}
+                                className="hidden lg:block w-1/4 relative order-3 self-stretch min-h-[600px]"
+                            >
                                 <img
                                     src="images/machine/엔펄스fx 사진.png"
                                     alt="N-Pulse FX"
-                                    className="absolute bottom-0 -left-12 h-[102%] max-w-none object-contain object-bottom drop-shadow-[0_40px_80px_rgba(0,0,0,0.9)] z-20 hover:scale-105 transition-transform duration-700 ease-out origin-bottom"
+                                    className="absolute bottom-0 -left-12 h-[102%] max-w-none object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,183,241,0.2)] z-20 hover:scale-105 transition-transform duration-700 ease-out origin-bottom"
                                 />
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
