@@ -126,7 +126,9 @@ export default function SylfirmXPage() {
                 <div className="space-y-8">
                   {/* 기술 설명 블록 1 */}
                   <div className="flex gap-6 items-start">
-                    <div className="mt-2 shrink-0 w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(0,183,241,1)]" />
+                    <div className="flex items-center h-[1.75rem] md:h-[2.25rem] shrink-0">
+                      <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(0,183,241,1)]" />
+                    </div>
                     <div>
                       <p className="text-slate-200 text-lg md:text-xl font-black leading-relaxed mb-3">
                         바늘을 통한 정밀한 <span className="text-primary">고주파 전달</span>
@@ -139,7 +141,9 @@ export default function SylfirmXPage() {
 
                   {/* 기술 설명 블록 2 */}
                   <div className="flex gap-6 items-start">
-                    <div className="mt-2 shrink-0 w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(0,183,241,1)]" />
+                    <div className="flex items-center h-[1.75rem] md:h-[2.25rem] shrink-0">
+                      <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(0,183,241,1)]" />
+                    </div>
                     <div>
                       <p className="text-slate-200 text-lg md:text-xl font-black leading-relaxed mb-3">
                         피부 타입과 컬러에 구애받지 않는 <span className="text-primary">시술 솔루션</span>
@@ -152,7 +156,9 @@ export default function SylfirmXPage() {
 
                   {/* 기술 설명 블록 3 */}
                   <div className="flex gap-6 items-start">
-                    <div className="mt-2 shrink-0 w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(0,183,241,1)]" />
+                    <div className="flex items-center h-[1.75rem] md:h-[2.25rem] shrink-0">
+                      <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(0,183,241,1)]" />
+                    </div>
                     <div>
                       <p className="text-slate-200 text-lg md:text-xl font-black leading-relaxed mb-3">
                         8가지 모드를 통한 <span className="text-primary">맞춤 치료</span>
