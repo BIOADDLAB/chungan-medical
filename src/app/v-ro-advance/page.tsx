@@ -65,23 +65,23 @@ export default function VRoAdvancePage() {
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
 
-          {/* 제목 블록 (PICO-K 황금표준 스타일) */}
+          {/* 제목 블록 (PICO-K 황금표준 스타일 - 요청에 따라 간격 타이트하게 조정) */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mb-20 flex flex-col items-center text-center"
+            className="mb-8 flex flex-col items-center text-center"
           >
-            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-5 bg-primary/5 leading-none">
               Advanced Lifting Solution
             </div>
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-5">
               <span className="hero-title-main">고주파 + 하이푸</span><br />
               <span className="hero-title-highlight">V-RO</span>
               <span className="hero-title-main"> ADVANCE</span>
             </h2>
-            <div className="w-20 h-[2px] bg-primary mb-8" />
+            <div className="w-20 h-[2px] bg-primary mb-6" />
             <p className="text-slate-400 text-lg font-medium leading-relaxed max-w-xl">
               혁신적인 고주파와 하이푸의 결합으로
               리프팅의 새로운 기준을 제시합니다.
@@ -118,20 +118,28 @@ export default function VRoAdvancePage() {
               ))}
             </div>
 
-            {/* 중앙: 머신 이미지 */}
-            <div className="lg:col-span-6 relative flex flex-col items-center order-1 lg:order-2 w-full">
-              <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 aspect-square bg-primary/5 blur-[140px] rounded-full scale-125 opacity-40 pointer-events-none" />
-              <motion.img
-                initial={{ opacity: 0, scale: 0.88, y: 20 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-                viewport={{ once: true }}
-                src="images/machine/브이로어드밴스 사진.png"
-                alt="V-RO Advance Core"
-                className="w-full max-w-[380px] drop-shadow-[0_0_100px_rgba(0,183,241,0.25)] z-10 relative"
-              />
-              <div className="absolute bottom-0 z-0 text-center opacity-[0.06] pointer-events-none">
-                <span className="text-[8rem] md:text-[11rem] font-black font-inter text-white tracking-widest uppercase block leading-none">V-RO</span>
+            {/* 중앙: 머신 이미지 (하단 페이드 & 로고 추가) */}
+            <div className="lg:col-span-6 relative flex flex-col items-center order-1 lg:order-2 w-full pt-10">
+              {/* 배경 장식 로고 (Behind Machine - Image Based) */}
+              <div className="absolute bottom-[2%] z-0 text-center pointer-events-none w-full flex justify-center">
+                <img
+                  src="images/machine/브이로어드밴스 로고.png"
+                  alt="V-RO Logo Background"
+                  className="w-full max-w-[300px]"
+                />
+              </div>
+
+              {/* 머신 이미지 (하단 마스킹 페이드 - 더 공격적으로 희미하게 조정) */}
+              <div className="relative z-10 w-full max-w-[420px] h-[630px] [mask-image:linear-gradient(to_bottom,black_50%,transparent_85%)]">
+                <motion.img
+                  initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                  viewport={{ once: true }}
+                  src="images/machine/브이로어드밴스 사진.png"
+                  alt="V-RO Advance Core"
+                  className="w-full"
+                />
               </div>
             </div>
 
