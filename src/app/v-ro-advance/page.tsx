@@ -6,8 +6,8 @@ import Link from 'next/link';
 
 export default function VRoAdvancePage() {
   return (
-    <main className="bg-[#050810] min-h-screen lowercase-titles">
-      {/* ① Hero Section (Standard Tech Style) */}
+    <main className="bg-[#050810] min-h-screen lowercase-titles overflow-x-hidden">
+      {/* ① Hero Section */}
       <section
         id="hero"
         className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-[#050810]"
@@ -57,369 +57,342 @@ export default function VRoAdvancePage() {
         </div>
       </section>
 
-      {/* High-end Banner Section */}
-      <section id="content" className="pt-32 pb-16 bg-white text-center">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="inline-block bg-[#B5916A] p-12 md:p-20 text-left rounded-sm shadow-2xl relative overflow-hidden group reveal-up">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-            <h4 className="text-white text-[24px] md:text-[32px] font-medium mb-4 tracking-tight">고주파 + 하이푸</h4>
-            <h2 className="text-white text-[56px] md:text-[86px] font-black leading-none mb-8 tracking-tighter">
-              브이로 리프팅
-            </h2>
-            <h3 className="text-white text-[38px] md:text-[54px] font-bold italic tracking-tighter opacity-95">
-              V-RO <span className="text-[24px] md:text-[32px] not-italic font-medium ml-1">LIFTING</span>
-            </h3>
+      {/* ② V-RO ADVANCE Overview Banner (First Section) */}
+      <section id="overview" className="relative py-28 bg-[#050810] overflow-hidden">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/[0.04] blur-[150px] rounded-full pointer-events-none" />
+
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
+            <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap uppercase">TECH 01</span>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              style={{ originX: 0 }}
+              className="h-[1px] w-[500%] bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none"
+            />
+          </div>
+
+          <div className="flex flex-col items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none"
+            >
+              Advanced Lifting Solution
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <h2 className="mb-6">
+                <span className="hero-title-main block text-4xl md:text-6xl mb-4">고주파 + 하이푸</span>
+                <span className="hero-title-highlight block text-5xl md:text-8xl">브이로 리프팅</span>
+              </h2>
+
+              <div className="flex justify-center mb-10">
+                <div className="w-20 h-[2px] bg-primary" />
+              </div>
+
+              <div className="glass-panel px-12 py-10 md:px-24 md:py-16 relative overflow-hidden group">
+                <div className="absolute inset-0 bg-tech-dots opacity-20 pointer-events-none" />
+                <div className="relative z-10">
+                  <h3 className="text-white text-3xl md:text-5xl font-black tracking-tighter uppercase font-inter leading-none">
+                    V-RO <span className="text-primary/60 text-xl md:text-2xl font-bold ml-2">LIFTING SYSTEM</span>
+                  </h3>
+                  <div className="mt-8 flex justify-center items-center gap-4 leading-none">
+                    <span className="h-px w-8 bg-primary/20" />
+                    <p className="text-slate-400 font-bold text-lg md:text-xl tracking-tight leading-none">혁신적인 시너지가 만드는 리프팅의 새로운 기준</p>
+                    <span className="h-px w-8 bg-primary/20" />
+                  </div>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-[1500ms]" />
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Handpiece Features Section */}
-      <section id="handpiece-features" className="pb-24 bg-white text-black text-center">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {/* Feature 1 */}
-            <div className="flex flex-col items-center reveal-up">
-              <div className="w-64 h-64 rounded-full bg-[#F3F0EC] flex items-center justify-center mb-8 overflow-hidden shadow-inner border border-[#E5DACE] relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent"></div>
-                <span className="text-[#B5916A]/20 text-[120px] font-black select-none">H</span>
-              </div>
-              <h4 className="text-[28px] font-black mb-4">총 5개의 핸드피스</h4>
-              <div className="text-[#333] text-[18px] font-medium leading-relaxed">
-                <p>하나의 장비로 총 5개의</p>
-                <p>핸드피스 사용 가능</p>
+      {/* ③ V-RO ADVANCE SYSTEM CORE: HLA & Safety/TIS (Merged Section) */}
+      <section id="system-core" className="relative py-28 bg-[#050810] overflow-hidden border-t border-white/5">
+        <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-primary/[0.03] blur-[200px] rounded-full pointer-events-none" />
+
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
+            <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap uppercase">TECH 02</span>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              style={{ originX: 0 }}
+              className="h-[1px] w-[500%] bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none"
+            />
+          </div>
+
+          <div className="flex flex-col items-center mb-20 text-center">
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
+              Integrated System Intelligence
+            </div>
+            <h2 className="hero-title-main text-3xl md:text-5xl mb-6 uppercase">HYBRID CORE SYSTEM</h2>
+            <div className="w-20 h-[2px] bg-primary mb-8" />
+          </div>
+
+          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-12 items-center leading-none">
+            {/* 좌측: HLA Features */}
+            <div className="lg:col-span-3 space-y-8 order-2 lg:order-1 w-full leading-none">
+              {[
+                { id: 'H', title: '총 5개의 핸드피스', desc: '하나의 장비로 다양한 시술 가능' },
+                { id: 'L', title: '핸드피스 서브 LCD', desc: '본체 조작 없이 정밀한 제어' },
+                { id: 'A', title: '핸드피스 자동 인식', desc: 'GUI 자동 변경 스마트 시스템' }
+              ].map((feature, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: idx * 0.1 }}
+                  viewport={{ once: true }}
+                  className="glass-panel p-6 border-l-2 border-l-primary/30 group hover:border-primary/50 transition-all shadow-xl"
+                >
+                  <div className="flex items-center gap-4 mb-4 leading-none">
+                    <span className="text-primary text-2xl font-black font-inter leading-none">{feature.id}</span>
+                    <h4 className="text-white text-lg font-black tracking-tighter uppercase leading-none">{feature.title}</h4>
+                  </div>
+                  <p className="text-slate-500 text-sm font-bold tracking-tighter leading-tight break-keep">{feature.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* 중앙: 기기 메인이미지 */}
+            <div className="lg:col-span-6 relative flex flex-col items-center order-1 lg:order-2 w-full">
+              <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 aspect-square bg-primary/5 blur-[120px] rounded-full scale-110 opacity-30 pointer-events-none" />
+              <motion.img
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+                src="images/machine/브이로어드밴스 사진.png"
+                alt="V-RO Advance Core"
+                className="w-full max-w-[420px] drop-shadow-[0_0_80px_rgba(0,183,241,0.2)] z-10 relative"
+              />
+              <div className="absolute bottom-[-10%] z-0 text-center opacity-10">
+                <span className="text-8xl md:text-[10rem] font-black italic font-inter text-white tracking-widest uppercase pointer-events-none block leading-none">V-RO</span>
               </div>
             </div>
 
-            {/* Feature 2 */}
-            <div className="flex flex-col items-center reveal-up delay-100">
-              <div className="w-64 h-64 rounded-full bg-[#F3F0EC] flex items-center justify-center mb-8 overflow-hidden shadow-inner border border-[#E5DACE] relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent"></div>
-                <span className="text-[#B5916A]/20 text-[120px] font-black select-none">L</span>
-              </div>
-              <h4 className="text-[28px] font-black mb-4">핸드피스 서브 LCD</h4>
-              <div className="text-[#333] text-[18px] font-medium leading-relaxed">
-                <p>본체 조작 없이 시술 가능</p>
-                <p>서브 LCD 스위치 or 풋 스위치</p>
-                <p>선택 사용 가능</p>
-              </div>
-            </div>
+            {/* 우측: Safety & TIS System */}
+            <div className="lg:col-span-3 space-y-12 order-3 w-full text-left leading-none">
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <div className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4 py-1 border-b border-primary/20 leading-none">SAFETY SENSORS</div>
+                {[
+                  { title: '접촉 감지 센서', desc: '밀착 시에만 에너지 활성화' },
+                  { title: '이동 감지 센서', desc: '정지 시 조사 자동 차단' }
+                ].map((item, idx) => (
+                  <div key={idx} className="group leading-none">
+                    <h5 className="text-white font-black text-base mb-2 tracking-tighter group-hover:text-primary transition-colors leading-none">{item.title}</h5>
+                    <p className="text-slate-500 text-xs font-bold tracking-tighter leading-tight break-keep">{item.desc}</p>
+                  </div>
+                ))}
+              </motion.div>
 
-            {/* Feature 3 */}
-            <div className="flex flex-col items-center reveal-up delay-200">
-              <div className="w-64 h-64 rounded-full bg-[#F3F0EC] flex items-center justify-center mb-8 overflow-hidden shadow-inner border border-[#E5DACE] relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent"></div>
-                <span className="text-[#B5916A]/20 text-[120px] font-black select-none">A</span>
-              </div>
-              <h4 className="text-[28px] font-black mb-4">핸드피스 자동 인식</h4>
-              <div className="text-[#333] text-[18px] font-medium leading-relaxed">
-                <p>핸드피스 자동 인식을 통한</p>
-                <p>GUI 자동 변경 시스템 탑재</p>
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="space-y-6"
+              >
+                <div className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4 py-1 border-b border-primary/20 leading-none">TIS SYSTEM</div>
+                {[
+                  { title: 'Treatment History', desc: '시술 통계 및 패턴 자동 기록' },
+                  { title: 'Clinical Intelligence', desc: '개별 맞춤형 시술 데이터 제공' }
+                ].map((item, idx) => (
+                  <div key={idx} className="group leading-none">
+                    <h5 className="text-white font-black text-base mb-2 tracking-tighter group-hover:text-primary transition-colors leading-none">{item.title}</h5>
+                    <p className="text-slate-500 text-xs font-bold tracking-tighter leading-tight break-keep">{item.desc}</p>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ④ RM (RF-Microneedle) Mechanism Section */}
+      <section id="rm-mechanism" className="py-28 bg-[#050810] relative overflow-hidden border-t border-white/5 leading-none">
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10 leading-none">
+          <div className="flex items-baseline gap-6 mb-20 relative leading-none">
+            <span className="text-[140px] md:text-[200px] font-black text-white/[0.03] leading-none select-none -ml-4 font-inter tracking-tighter block">01</span>
+            <div className="z-10 border-b border-white/10 w-full pb-10 ml-6 leading-none">
+              <h2 className="text-primary text-5xl md:text-7xl font-black leading-none mb-6 uppercase tracking-tighter font-inter font-inter">Multi & Micro</h2>
+              <h4 className="text-white/40 text-xl font-bold mb-6 tracking-tight uppercase font-inter leading-none">RM(RF-Microneedle) Handpiece</h4>
+              <p className="text-white text-2xl md:text-4xl font-black tracking-tighter break-keep leading-snug">
+                RM 핸드피스로 <span className="text-primary">피부 속까지 전달하는 RF 에너지</span>
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center leading-none">
+            <motion.div 
+               initial={{ opacity: 0, scale: 0.95 }}
+               whileInView={{ opacity: 1, scale: 1 }}
+               viewport={{ once: true }}
+               className="aspect-square bg-white/[0.02] rounded-[40px] border border-white/10 flex items-center justify-center relative overflow-hidden group shadow-2xl"
+            >
+              <div className="absolute inset-0 bg-tech-grid opacity-10" />
+              <div className="w-20 h-20 bg-primary/5 blur-[40px] rounded-full group-hover:scale-150 transition-transform duration-1000" />
+              <span className="text-primary/20 text-sm font-black uppercase tracking-[0.5em] z-10">Technical Illustration</span>
+            </motion.div>
+
+            <div className="space-y-8 leading-none">
+              {[
+                { title: '0.25Φ Microneedle', desc: '가장 얇은 니들로 자극 최소화 및 정밀 냉각 타겟팅' },
+                { title: 'Gold Plating System', desc: '순금 도금 니들을 통한 압도적인 에너지 전도 효율' }
+              ].map((box, idx) => (
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: idx * 0.2 }}
+                  viewport={{ once: true }}
+                  className="bg-white/[0.03] p-8 rounded-3xl border border-white/10 shadow-xl group hover:border-primary/30 transition-all leading-none text-left"
+                >
+                  <div className="inline-block bg-primary/10 border border-primary/40 text-primary px-6 py-2 text-lg font-black rounded-full mb-4 font-inter uppercase leading-none">
+                    {box.title}
+                  </div>
+                  <p className="text-slate-400 text-lg font-bold tracking-tighter leading-snug break-keep leading-none">{box.desc}</p>
+                </motion.div>
+              ))}
+              <div className="text-right leading-none">
+                <span className="text-slate-600 text-sm font-bold tracking-tighter">* 최소 0.1mm 단위 조절 시스템 탑재</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Safety & TIS System Section */}
-      <section id="safety-tis" className="py-24 bg-[#F8F7F5] text-black overflow-hidden relative">
-        <div className="max-w-[1400px] mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-0 mt-10">
-            {/* Left: Safety Sensors */}
-            <div className="lg:w-1/3 flex flex-col items-center lg:items-end text-center lg:text-right space-y-24 reveal-up">
-              <div className="inline-block bg-[#B5916A] text-white px-6 py-2 rounded-sm shadow-md mb-8">
-                <span className="text-[20px] font-black">특허 받은 안전 센서 2종</span>
-                <p className="text-[12px] opacity-80 italic">특허 제 10-1075878호, 특허 제 10-2149062호</p>
+      {/* ⑤ SD (Synergy Dotting) Combination Mechanism Section */}
+      <section id="sd-combination" className="py-28 bg-[#050810] relative overflow-hidden border-t border-white/5 leading-none text-left">
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10 leading-none">
+          <div className="flex items-baseline gap-6 mb-20 relative leading-none">
+            <span className="text-[140px] md:text-[200px] font-black text-white/[0.03] leading-none select-none -ml-4 font-inter tracking-tighter block">02</span>
+            <div className="z-10 border-b border-white/10 w-full pb-10 ml-6 leading-none">
+              <h2 className="text-primary text-5xl md:text-7xl font-black leading-none mb-6 uppercase tracking-tighter font-inter font-inter">Combination</h2>
+              <h4 className="text-white/40 text-xl font-bold mb-6 tracking-tight uppercase font-inter leading-none">SD(Synergy Dotting) Handpiece</h4>
+              <p className="text-white text-2xl md:text-4xl font-black tracking-tighter break-keep leading-snug">
+                단 하나의 핸드피스로 <span className="text-primary uppercase font-inter">HIFU+RF를 동시에</span>
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-16 items-stretch leading-none">
+            <div className="lg:w-[60%] space-y-12 leading-none">
+              <div className="grid grid-cols-2 gap-8 leading-none">
+                <div className="bg-white/[0.03] p-10 rounded-3xl border border-white/10 flex flex-col items-center group hover:bg-primary/[0.02] transition-all leading-none">
+                  <div className="w-40 h-40 rounded-full border border-primary/20 flex items-center justify-center mb-6 shadow-[inset_0_0_30px_rgba(0,183,241,0.05)]">
+                    <span className="text-primary text-4xl font-black italic font-inter uppercase">RF</span>
+                  </div>
+                  <p className="text-white/60 text-base font-bold tracking-tighter leading-none text-center">진피층 열 자극</p>
+                </div>
+                <div className="bg-white/[0.03] p-10 rounded-3xl border border-white/10 flex flex-col items-center group hover:bg-primary/[0.02] transition-all leading-none">
+                  <div className="w-40 h-40 rounded-full border border-primary/20 flex items-center justify-center mb-6 shadow-[inset_0_0_30px_rgba(0,183,241,0.05)]">
+                    <span className="text-primary text-4xl font-black italic font-inter uppercase">HIFU</span>
+                  </div>
+                  <p className="text-white/60 text-base font-bold tracking-tighter leading-none text-center">SMAS층 응고점 형성</p>
+                </div>
               </div>
 
-              <div className="flex flex-col items-center lg:items-end group">
-                <div className="w-28 h-28 rounded-full bg-white flex items-center justify-center mb-6 shadow-md border border-[#E5DACE] relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#B5916A]/5 to-transparent"></div>
-                  <svg viewBox="0 0 24 24" className="w-10 h-10 text-[#B5916A] opacity-30" fill="currentColor">
-                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
-                  </svg>
+              <div className="grid grid-cols-2 gap-8 lg:pt-8 leading-none">
+                <div className="text-center group leading-none">
+                  <span className="text-primary text-5xl md:text-6xl font-black font-inter tracking-tighter block mb-2 leading-none">+10Hz</span>
+                  <div className="inline-block bg-primary/10 text-primary px-3 py-1 text-[10px] font-black rounded-sm mb-4 uppercase font-inter tracking-widest leading-none">Speed Performance</div>
+                  <p className="text-slate-500 font-bold text-sm tracking-tighter leading-tight">압도적으로 빨라진 시술 시간</p>
                 </div>
-                <h5 className="text-[26px] font-black mb-3">접촉 감지 센서</h5>
-                <div className="text-[#555] text-[18px] font-bold leading-relaxed">
-                  <p>피부 표면과 밀착되지 않았을 경우,</p>
-                  <p>에너지 조사를 중지하여 화상 방지</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center lg:items-end group">
-                <div className="w-28 h-28 rounded-full bg-white flex items-center justify-center mb-6 shadow-md border border-[#E5DACE] relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#B5916A]/5 to-transparent"></div>
-                  <svg viewBox="0 0 24 24" className="w-10 h-10 text-[#B5916A] opacity-30" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
-                  </svg>
-                </div>
-                <h5 className="text-[26px] font-black mb-3">이동 감지 센서</h5>
-                <div className="text-[#555] text-[18px] font-bold leading-relaxed">
-                  <p>핸드피스가 움직이지 않을 경우,</p>
-                  <p>에너지 조사를 중지하여 화상 방지</p>
+                <div className="text-center group leading-none">
+                  <span className="text-primary text-5xl md:text-6xl font-black font-inter tracking-tighter block mb-2 leading-none">High-V</span>
+                  <div className="inline-block bg-primary/10 text-primary px-3 py-1 text-[10px] font-black rounded-sm mb-4 uppercase font-inter tracking-widest leading-none">Energy Output</div>
+                  <p className="text-slate-500 font-bold text-sm tracking-tighter leading-tight">SD 전용 RF 출력값 극대화</p>
                 </div>
               </div>
             </div>
 
-            {/* Center: Machine Image */}
-            <div className="lg:w-1/3 flex flex-col items-center relative py-10 reveal-up delay-150">
+            <div className="lg:w-[40%] bg-white/[0.02] rounded-[40px] border border-white/10 p-10 flex flex-col justify-between shadow-2xl relative leading-none">
+              <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+              <div className="space-y-4 group leading-none text-left">
+                <span className="text-primary/40 text-[10px] font-black tracking-[0.4em] uppercase block mb-4 leading-none">Cartridge Engineering</span>
+                <div className="flex flex-col gap-6 leading-none">
+                  <div className="bg-white/[0.03] p-6 rounded-2xl border border-white/5 hover:border-primary/20 transition-all leading-none">
+                    <h6 className="text-white font-black text-lg mb-2 uppercase leading-none">Pen Type</h6>
+                    <p className="text-slate-500 text-sm font-bold tracking-tighter leading-none">좁은 영역의 정밀 시술용 최적화</p>
+                  </div>
+                  <div className="bg-white/[0.03] p-6 rounded-2xl border border-white/5 hover:border-primary/20 transition-all leading-none">
+                    <h6 className="text-white font-black text-lg mb-2 uppercase leading-none">Long Type</h6>
+                    <p className="text-slate-500 text-sm font-bold tracking-tighter leading-none">40mm 확장형 카트리지 시스템</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ⑥ Final Slogan Section */}
+      <section id="bottom-banner" className="relative py-48 bg-[#050810] overflow-hidden border-t border-white/5 leading-none">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+        <div className="absolute bottom-[-50px] left-1/2 -translate-x-1/2 w-[1200px] h-[300px] bg-primary/[0.05] blur-[150px] rounded-full pointer-events-none" />
+        
+        <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-20 relative z-10 leading-none">
+          <div className="md:w-1/2 flex justify-center items-center leading-none">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.2 }}
+              className="relative w-full max-w-[500px] group leading-none"
+            >
+              <div className="absolute inset-0 bg-primary/20 blur-[100px] opacity-10" />
               <img
                 src="images/machine/브이로어드밴스 사진.png"
-                alt="V-RO Advance Machine"
-                className="w-full max-w-[500px] drop-shadow-2xl z-10 relative"
+                alt="V-RO ADVANCE Footer"
+                className="w-full h-auto object-contain relative z-10 drop-shadow-[0_0_120px_rgba(0,183,241,0.15)] group-hover:scale-[1.02] transition-transform duration-1000"
               />
-              <div className="absolute bottom-10 z-20">
-                <h2 className="text-[#B5916A] text-[60px] md:text-[80px] font-black italic tracking-tighter opacity-70">
-                  V-RO <span className="not-italic text-[20px] md:text-[30px] font-medium ml-1">LIFTING</span>
-                </h2>
-              </div>
-            </div>
-
-            {/* Right: TIS System */}
-            <div className="lg:w-1/3 flex flex-col items-center lg:items-start text-center lg:text-left space-y-24 reveal-up delay-300">
-              <div className="inline-block bg-[#B5916A] text-white px-10 py-2 rounded-sm shadow-md mb-8">
-                <span className="text-[28px] font-black uppercase">TIS</span>
-                <p className="text-[12px] opacity-80 italic">(Treatment Information System)</p>
-              </div>
-
-              <div className="flex flex-col items-center lg:items-start">
-                <div className="w-56 h-40 bg-white border border-[#E5DACE] rounded-lg shadow-lg relative overflow-hidden mb-6 flex items-center justify-center">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-[#B5916A]/5 to-transparent"></div>
-                  <div className="w-12 h-1 bg-[#B5916A]/10 rounded-full"></div>
-                </div>
-                <h5 className="text-[26px] font-black mb-3">Treatment History</h5>
-                <div className="text-[#555] text-[18px] font-bold leading-relaxed">
-                  <p>핸드피스 별 사용량을 기록하여</p>
-                  <p>시술 통계 확인 가능</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center lg:items-start">
-                <div className="w-56 h-40 bg-white border border-[#E5DACE] rounded-lg shadow-lg relative overflow-hidden mb-6 flex items-center justify-center">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-[#B5916A]/5 to-transparent"></div>
-                  <div className="w-12 h-1 bg-[#B5916A]/10 rounded-full"></div>
-                </div>
-                <h5 className="text-[26px] font-black mb-3">Patients Information</h5>
-                <div className="text-[#555] text-[18px] font-bold leading-relaxed">
-                  <p>환자별 시술 이력 확인을 통한</p>
-                  <p>맞춤형 시술 제공</p>
-                </div>
-              </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
-      </section>
 
-      {/* RM (RF-Microneedle) Mechanism Section */}
-      <section id="rm-mechanism" className="py-32 bg-white text-black overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="flex items-baseline gap-6 mb-20 relative reveal-up">
-            <span className="text-[140px] font-black text-[#F3F0EC] leading-none select-none -ml-4">01</span>
-            <div className="z-10 border-b border-[#E5DACE] w-full pb-8">
-              <h2 className="text-[#B5916A] text-[52px] md:text-[72px] font-black leading-none mb-4 uppercase tracking-tighter">
-                Multi & Micro
-              </h2>
-              <h4 className="text-[22px] md:text-[26px] font-medium text-black mb-6 tracking-tight">
-                RM(RF-Microneedle) Handpiece
-              </h4>
-              <p className="text-[26px] md:text-[34px] font-black text-black tracking-tight">
-                RM 핸드피스로 <span className="font-black text-black">피부 속까지 전달하는 RF 에너지</span>
+          <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-12 leading-none">
+            <motion.div
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.8 }}
+               className="space-y-10 leading-none"
+            >
+              <p className="text-primary text-3xl md:text-5xl font-black tracking-tighter break-keep leading-tight">
+                강력한 시너지가 만드는<br/>
+                <span className="text-white">리프팅의 압도적 진화</span>
               </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col lg:flex-row items-start gap-20 mb-32 reveal-up">
-            <div className="lg:w-[45%] w-full">
-              <div className="aspect-square bg-[#F9F8F6] rounded-2xl border border-[#E5DACE] flex items-center justify-center relative overflow-hidden group shadow-sm">
-                <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent"></div>
-                <div className="w-24 h-[2px] bg-[#B5916A]/10"></div>
-              </div>
-            </div>
-
-            <div className="lg:w-[55%] pt-10 space-y-16">
-              <div>
-                <div className="inline-block bg-[#B5916A] text-white px-8 py-3 text-[22px] font-black rounded-sm mb-6 shadow-sm">
-                  0.25Φ Microneedle
-                </div>
-                <div className="text-[22px] md:text-[26px] font-medium leading-snug text-[#333]">
-                  <p>얇게 가공된 Microneedle 사용으로</p>
-                  <p>정밀하게</p>
-                </div>
-              </div>
-              <div>
-                <div className="inline-block bg-[#B5916A] text-white px-8 py-3 text-[22px] font-black rounded-sm mb-6 shadow-sm">
-                  Gold Plating
-                </div>
-                <div className="text-[22px] md:text-[26px] font-medium leading-snug text-[#333]">
-                  <p>Gold Plating Microneedle 사용으로</p>
-                  <p>에너지 절연 가능</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mb-32 space-y-12 reveal-up">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-1 h-6 bg-[#3498db]"></div>
-                  <h5 className="text-[#3498db] text-[22px] font-black uppercase">INSULATED Type</h5>
-                </div>
-                <div className="aspect-[16/9] bg-[#F9F8F6] rounded-xl border border-[#E5DACE] flex items-center justify-center">
-                  <div className="w-12 h-[1px] bg-[#3498db]/20"></div>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-1 h-6 bg-[#e74c3c]"></div>
-                  <h5 className="text-[#e74c3c] text-[22px] font-black uppercase">NON-INSULATED Type</h5>
-                </div>
-                <div className="aspect-[16/9] bg-[#F9F8F6] rounded-xl border border-[#E5DACE] flex items-center justify-center">
-                  <div className="w-12 h-[1px] bg-[#e74c3c]/20"></div>
-                </div>
-              </div>
-            </div>
-            <p className="text-right text-[17px] text-[#888] font-bold">* 최소 0.1mm 단위로 세밀한 깊이 조절 가능</p>
-          </div>
-        </div>
-      </section>
-
-      {/* SD (Synergy Dotting) Combination Mechanism Section */}
-      <section id="sd-combination" className="py-32 bg-white text-black overflow-hidden border-t border-gray-50">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="flex items-baseline gap-6 mb-20 relative reveal-up">
-            <span className="text-[140px] font-black text-[#F3F0EC] leading-none select-none -ml-4">02</span>
-            <div className="z-10 border-b border-[#E5DACE] w-full pb-8">
-              <h2 className="text-[#B5916A] text-[52px] md:text-[72px] font-black leading-none mb-4 uppercase tracking-tighter">
-                Combination of HIFU+RF
-              </h2>
-              <h4 className="text-[22px] md:text-[26px] font-medium text-black mb-6 tracking-tight">
-                SD(Synergy Dotting) Handpiece
-              </h4>
-              <p className="text-[26px] md:text-[34px] font-black text-black tracking-tight">
-                단 하나의 핸드피스로 <span className="font-black text-black uppercase">HIFU+RF를 한 번에</span>
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col lg:flex-row gap-12 reveal-up">
-            <div className="lg:w-[60%] space-y-20">
-              <div className="inline-block bg-[#B5916A] text-white px-10 py-3 text-[22px] font-black rounded-sm shadow-sm">
-                HIFU와 RF의 장점을 한 번의 Combination 시술로!
-              </div>
-
-              <div className="flex flex-col md:flex-row items-center gap-12 py-10">
-                <div className="w-64 h-64 rounded-full bg-[#F9F8F6] border border-[#E5DACE] flex items-center justify-center relative overflow-hidden flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full border-2 border-[#B5916A]/20"></div>
-                  <div className="absolute w-[2px] h-full bg-[#B5916A]/5 rotate-45"></div>
-                </div>
-
-                <div className="space-y-8">
-                  <div className="flex items-center gap-4">
-                    <span className="text-[#B5916A] text-[32px] font-black italic">RF</span>
-                    <p className="text-[20px] font-bold text-[#333]">피부와 피하조직의 열 발생</p>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <span className="text-[#B5916A] text-[32px] font-black italic">HIFU</span>
-                    <p className="text-[20px] font-bold text-[#333]">Target하는 깊이에만 열 집중</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-16 border-t border-gray-100 pt-16">
-                <h3 className="text-[#B5916A] text-[42px] font-black tracking-tighter border-b-2 border-[#B5916A] inline-block pb-2 mb-4">
-                  빠르고, 안전하게, 강력하게
-                </h3>
-
-                <div className="flex items-center gap-10 reveal-up">
-                  <span className="text-[72px] md:text-[96px] font-black text-[#B5916A]/80 tracking-tighter leading-none">
-                    +43%
-                  </span>
-                  <div className="space-y-1">
-                    <div className="inline-block bg-[#B5916A]/10 text-[#B5916A] px-4 py-1 text-[18px] font-black rounded-sm mb-2">
-                      Shot Speed
-                    </div>
-                    <p className="text-[20px] md:text-[24px] font-black text-[#333]">최대 10Hz의 속도 향상으로,</p>
-                    <p className="text-[20px] md:text-[24px] font-black text-[#333]">더 빨라진 시술 속도</p>
-                    <p className="text-[14px] text-gray-400 font-bold mt-2">*기존 자사 장비 대비</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-10 reveal-up delay-100">
-                  <span className="text-[72px] md:text-[96px] font-black text-[#B5916A]/80 tracking-tighter leading-none">
-                    +93%
-                  </span>
-                  <div className="space-y-1">
-                    <div className="inline-block bg-[#B5916A]/10 text-[#B5916A] px-4 py-1 text-[18px] font-black rounded-sm mb-2">
-                      RF Value
-                    </div>
-                    <p className="text-[20px] md:text-[24px] font-black text-[#333]">SD Type의 RF 출력 값 상승으로</p>
-                    <p className="text-[20px] md:text-[24px] font-black text-[#333]">더 높아진 열적 효과</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:w-[40%] bg-[#F9F8F6] rounded-[40px] p-12 space-y-20 border border-[#E5DACE]/30 reveal-up">
-              <div className="flex flex-col items-center">
-                <h5 className="text-[#B5916A] text-[20px] font-bold mb-10 opacity-70">| Pen Type 카트리지 |</h5>
-                <div className="flex gap-4 mb-10">
-                  {[1, 2, 3].map((i) => (
-                    <div key={i} className="w-16 h-32 bg-white rounded-lg border border-[#E5DACE] shadow-sm"></div>
-                  ))}
-                </div>
-                <div className="text-center text-[18px] font-medium text-[#555] leading-snug">
-                  <p>보다 작은 사이즈의 가벼운 카트리지로</p>
-                  <p>시술 편의성을 높였습니다.</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center">
-                <h5 className="text-[#B5916A] text-[20px] font-bold mb-10 opacity-70">| Long Type 카트리지 |</h5>
-                <div className="flex gap-4 mb-10">
-                  {[1, 2, 3].map((i) => (
-                    <div key={i} className="w-20 h-40 bg-white rounded-xl border border-[#E5DACE] shadow-sm"></div>
-                  ))}
-                </div>
-                <div className="text-center text-[18px] font-medium text-[#555] leading-snug">
-                  <p>40mm 길어진 카트리지의</p>
-                  <p>증류수 양이 증대되어 장시간 사용 시에도</p>
-                  <p>안정적인 시술을 제공합니다.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final Slogan Section */}
-      <section id="bottom-banner" className="relative py-48 bg-[#D2C8BE] overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 reveal-up">
-          <div className="md:w-1/2 flex justify-center md:justify-end items-center">
-            <div className="relative w-full max-w-[650px]">
-              <img
-                src="images/machine/브이로어드밴스 사진.png"
-                alt="V-RO ADVANCE"
-                className="w-full h-auto object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.15)]"
-              />
-            </div>
-          </div>
-
-          <div className="md:w-1/2 w-full flex flex-col items-center md:items-start text-center md:text-left pt-12 md:pt-0">
-            <div className="space-y-4">
-              <p className="text-[26px] md:text-[38px] font-black italic tracking-tighter text-[#111] leading-none mb-4">
-                두가지 에너지로 강력한 맞춤 리프팅
-              </p>
-              <div className="flex items-center gap-4">
-                <h2 className="text-[80px] md:text-[120px] lg:text-[160px] font-black tracking-tighter text-[#000] leading-none uppercase">
+              <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row md:items-end md:gap-8 leading-none">
+                <h2 className="text-[100px] md:text-[140px] font-black tracking-tighter text-white leading-none font-inter uppercase relative z-10">
                   V-RO
                 </h2>
-                <div className="bg-[#000] text-white px-6 py-2 md:px-10 md:py-5 rounded-[12px] md:rounded-[20px] transform translate-y-1 md:translate-y-4">
-                  <span className="text-[34px] md:text-[54px] lg:text-[76px] font-bold tracking-tighter uppercase leading-none block">
+                <div className="bg-primary text-[#050810] px-10 py-5 rounded-[20px] transform md:translate-y-4 shadow-[0_0_50px_rgba(0,183,241,0.4)]">
+                  <span className="text-[40px] md:text-[60px] font-black tracking-tighter uppercase leading-none block font-inter">
                     ADVANCE
                   </span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
