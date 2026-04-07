@@ -445,8 +445,7 @@ export default function UPulsePage() {
               </h3>
               <div className="w-20 h-[2px] bg-primary mb-8" />
               <div className="text-lg md:text-xl font-medium leading-relaxed text-slate-400 space-y-2 pl-4 border-l border-white/5">
-                <p>1단계 (0.2mm) 부터 5단계</p>
-                <p>(1.3mm) 까지 핸드피스 하나로</p>
+                <p>1단계 (0.2mm) 부터 5단계 (1.3mm) 까지 핸드피스 하나로</p>
                 <p>다양한 스팟사이즈 변동 가능</p>
               </div>
             </motion.div>
@@ -458,90 +457,100 @@ export default function UPulsePage() {
               viewport={{ once: true }}
               className="relative flex items-center justify-center p-12 glass-panel bg-tech-dots/5 overflow-visible min-h-[320px]"
             >
-              <svg viewBox="0 0 800 320" className="w-full h-auto overflow-visible px-2 scale-110">
+              {/* 2번째 이미지 스타일: 흰색 두꺼운 외벽 + 어두운 내부 + 긴 테이퍼 + 빨간 레이저 */}
+              <svg viewBox="0 0 880 240" className="w-full h-auto overflow-visible">
                 <defs>
-                  <linearGradient id="laser-glow-premium" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
-                    <stop offset="30%" stopColor="#00B7F1" stopOpacity="0.9" />
-                    <stop offset="100%" stopColor="#00B7F1" stopOpacity="1" />
-                  </linearGradient>
-                  {/* 화살표 헤더 정의 */}
-                  <marker id="arrow-start" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-                    <path d="M 10 0 L 0 5 L 10 10 Z" fill="white" />
-                  </marker>
-                  <marker id="arrow-end" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-                    <path d="M 0 0 L 10 5 L 0 10 Z" fill="white" />
-                  </marker>
-                  <filter id="glow-bright">
-                    <feGaussianBlur stdDeviation="3.5" result="coloredBlur" />
-                    <feMerge>
-                      <feMergeNode in="coloredBlur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
+                  <filter id="z2-glow">
+                    <feGaussianBlur stdDeviation="2.5" result="b" />
+                    <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
                   </filter>
+                  {/* 좌향 화살표 */}
+                  <marker id="z2-al" markerWidth="7" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                    <path d="M7,0 L0,3.5 L7,7 Z" fill="white" />
+                  </marker>
+                  {/* 우향 화살표 */}
+                  <marker id="z2-ar" markerWidth="7" markerHeight="7" refX="7" refY="3.5" orient="auto">
+                    <path d="M0,0 L7,3.5 L0,7 Z" fill="white" />
+                  </marker>
+                  {/* 상향 화살표 */}
+                  <marker id="z2-au" markerWidth="8" markerHeight="8" refX="4" refY="0" orient="auto">
+                    <path d="M0,8 L4,0 L8,8 Z" fill="white" />
+                  </marker>
                 </defs>
 
-                {/* 핸드피스 본체 (확대 버전) */}
-                <g transform="translate(15, 100) scale(1.15)">
-                  {/* 외곽선 및 본체 */}
-                  <path
-                    d="M 0 35 L 180 35 L 240 10 L 420 10 L 465 42 L 465 58 L 420 90 L 240 90 L 180 65 L 0 65 Z"
-                    fill="rgba(255,255,255,0.12)"
-                    stroke="#ffffff"
-                    strokeWidth="2.2"
-                  />
+                {/* --- 노즐부 광학 블록 (어두운 회색) --- */}
+                {/* 프레임 뒤에 깔리도록 가장 먼저 렌더링 */}
+                <rect x="442" y="105" width="38" height="30" fill="#4B5563" />
 
-                  {/* 줌 렌즈 시스템 (정적 배치) */}
-                  {[180, 260, 340].map((cx, i) => (
-                    <motion.g key={i}>
-                      <ellipse cx={cx} cy={50} rx="8" ry="32" fill="#00B7F1" filter="url(#glow-bright)" />
-                      <ellipse cx={cx} cy={50} rx="3" ry="24" fill="white" opacity="0.6" />
-                    </motion.g>
-                  ))}
-
-                  {/* 줌 가이드 양방향 화살표 */}
-                  <line
-                    x1="190" y1="50" x2="330" y2="50"
-                    stroke="white" strokeWidth="1.5"
-                    markerStart="url(#arrow-start)"
-                    markerEnd="url(#arrow-end)"
-                    opacity="0.8"
-                  />
-
-                  {/* 노즐 유닛 */}
-                  <rect x="465" y="40" width="15" height="20" fill="#4B5563" />
-                  <rect x="480" y="46" width="30" height="8" fill="#ffffff" opacity="0.8" />
-                </g>
-
-                {/* 레이저 빔 (더 두껍게 강조) */}
-                <motion.line
-                  x1="580" y1="160" x2="680" y2="160"
-                  stroke="url(#laser-glow-premium)"
+                {/* --- 기기 외곽 라인 (화이트 두터운 선) --- */}
+                <path
+                  d="
+                    M 480 105
+                    L 444 105 
+                    L 434 100 
+                    L 410 100 
+                    L 300 70 
+                    L 12 70 
+                    L 12 170 
+                    L 300 170 
+                    L 410 140 
+                    L 434 140 
+                    L 444 135 
+                    L 550 135
+                  "
+                  fill="none"
+                  stroke="white"
                   strokeWidth="4"
-                  filter="url(#glow-bright)"
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  whileInView={{ pathLength: 1, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.5 }}
+                  strokeLinejoin="round"
+                />
+                <line x1="12" y1="70" x2="12" y2="170" stroke="white" strokeWidth="4" strokeLinejoin="round" />
+
+                {/* --- 내부 회색 레이어 (사진 속 상하단 바) --- */}
+                <rect x="95" y="74" width="200" height="8" fill="#4a5568" opacity="0.8" />
+                <rect x="95" y="158" width="200" height="8" fill="#4a5568" opacity="0.8" />
+
+                {/* --- 렌즈 1, 2, 3 --- */}
+                <ellipse cx="108" cy="120" rx="8" ry="28" fill="#b6d9ef" opacity="0.9" filter="url(#z2-glow)" />
+                <ellipse cx="194" cy="120" rx="8" ry="28" fill="#b6d9ef" opacity="0.9" filter="url(#z2-glow)" />
+                <ellipse cx="280" cy="120" rx="8" ry="28" fill="#b6d9ef" opacity="0.9" filter="url(#z2-glow)" />
+
+                {/* --- 줌 가이드 화살표 --- */}
+                <line
+                  x1="118" y1="120" x2="270" y2="120"
+                  stroke="white" strokeWidth="2.2"
+                  markerStart="url(#z2-al)" markerEnd="url(#z2-ar)"
                 />
 
-                {/* 타겟 레티클 (확대 버전) */}
-                <g transform="translate(680, 160) scale(1.3)">
-                  {/* 단계별 동심원 */}
-                  {[90, 70, 50, 30].map((r, i) => (
-                    <circle key={i} cx="0" cy="0" r={r} stroke="white" strokeWidth="1.2" fill="none" opacity={0.6 - i * 0.1} />
-                  ))}
+                {/* ============================================================
+                    레이저 빔 (가장 왼쪽 렌즈부터 기기 관통)
+                ============================================================ */}
+                <line x1="108" y1="120" x2="762" y2="120" stroke="#f472b6" strokeWidth="2.5" opacity="0.9" />
 
-                  {/* 중앙 활성 타겟 */}
-                  <circle cx="0" cy="0" r="18" fill="#00B7F1" filter="url(#glow-bright)" />
-                  <circle cx="0" cy="0" r="13" fill="none" stroke="white" strokeWidth="2" />
+                {/* ============================================================
+                    동심원 타겟 (중심: 762, 120 / 반지름: 82, 63, 44, 26)
+                    상단 끝: y=38, 하단 끝: y=202 → 240px 내부 ✓
+                ============================================================ */}
+                <circle cx="762" cy="120" r="82" stroke="white" strokeWidth="1.8" fill="none" opacity="0.78" />
+                <circle cx="762" cy="120" r="63" stroke="white" strokeWidth="1.8" fill="none" opacity="0.78" />
+                <circle cx="762" cy="120" r="44" stroke="white" strokeWidth="1.8" fill="none" opacity="0.78" />
+                <circle cx="762" cy="120" r="26" stroke="white" strokeWidth="1.8" fill="none" opacity="0.82" />
 
-                  {/* 라벨 텍스트 */}
-                  <text x="80" y="-80" fill="white" fontSize="14" fontWeight="black" className="tracking-tight">5단계</text>
-                  <text x="0" y="5" fill="white" fontSize="10" fontWeight="extrabold" textAnchor="middle">1단계</text>
+                {/* --- 중앙에서 위로 뻗는 화살표 (5단계 가이드) --- */}
+                <line x1="762" y1="120" x2="762" y2="40" stroke="white" strokeWidth="2" markerEnd="url(#z2-ar)" opacity="0.9" />
 
-                  {/* 가이드라인 */}
-                  <line x1="0" y1="0" x2="70" y2="-75" stroke="#f43f5e" strokeWidth="2" strokeDasharray="4 4" opacity="0.8" />
-                </g>
+                {/* --- 5단계 텍스트 --- */}
+                <text
+                  x="762" y="24"
+                  fill="white" fontSize="15" fontWeight="bold"
+                  textAnchor="middle" fontFamily="system-ui,sans-serif"
+                >5단계</text>
+
+                {/* --- 1단계 텍스트 (우측 하단 사분면 배치) --- */}
+                <text
+                  x="782" y="142"
+                  fill="white" fontSize="14" fontWeight="bold"
+                  textAnchor="middle" fontFamily="system-ui,sans-serif"
+                >1단계</text>
               </svg>
             </motion.div>
           </div>
