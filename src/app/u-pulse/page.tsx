@@ -720,6 +720,8 @@ export default function UPulsePage() {
                         src={img.src} 
                         alt={`Clinical Case Position ${img.id}`} 
                         fill 
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 300px"
+                        priority={img.id === 1}
                         className={`object-cover ${img.label === 'BEFORE' ? 'opacity-70' : 'opacity-85'} group-hover/slot:opacity-100 group-hover/slot:scale-110 transition-all duration-700 ease-out`}
                       />
                       
@@ -758,17 +760,26 @@ export default function UPulsePage() {
                 점, 검버섯 제거
               </h4>
               <div className="flex flex-col gap-10">
-                <div className="relative glass-panel-dark aspect-[3/1] border-[#ffffff15] group-hover:border-primary/40 transition-all duration-700 overflow-hidden flex items-center justify-center group/slot shadow-lg">
-                  <div className="absolute inset-0 bg-tech-dots opacity-15" />
-                  <span className="text-white/10 font-bold text-[10px] tracking-[0.4em] uppercase z-10 group-hover/slot:text-white/30 transition-colors">Pre-Condition</span>
-                  <div className="absolute top-0 right-0 p-3 text-[9px] font-black text-white/30 uppercase tracking-[0.2em] border-l border-b border-white/10 bg-white/5">Raw Scan</div>
-                  <div className="absolute bottom-0 left-0 w-8 h-px bg-white/20"></div>
+                <div className="relative glass-panel-dark aspect-[3/1] border-[#ffffff15] group-hover:border-primary/40 transition-all duration-700 overflow-hidden flex items-center justify-center group/slot shadow-lg cursor-pointer">
+                  <Image 
+                    src="/images/upulse/cs2top.png"
+                    alt="Clinical Case - Before"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    className="object-cover opacity-75 group-hover/slot:opacity-100 group-hover/slot:scale-105 transition-all duration-700 ease-out"
+                  />
+                  <div className="absolute top-0 left-0 p-3 text-[9px] font-black text-white bg-black/60 uppercase tracking-[0.2em] border-r border-b border-white/20 z-20">BEFORE</div>
                 </div>
-                <div className="relative glass-panel-dark aspect-[3/1] border-primary/30 bg-primary/5 group-hover:border-primary transition-all duration-700 overflow-hidden flex items-center justify-center shadow-[0_0_40px_rgba(0,183,241,0.1)] group/slot">
-                  <div className="absolute inset-0 bg-tech-dots opacity-20" />
-                  <span className="text-primary/40 font-bold text-[10px] tracking-[0.4em] uppercase z-10 group-hover/slot:text-primary group-hover/slot:scale-110 transition-all duration-500">Post-Optimize</span>
-                  <div className="absolute top-0 right-0 p-3 text-[9px] font-black text-primary/60 uppercase tracking-[0.2em] border-l border-b border-primary/20 bg-primary/10">Result</div>
-                  <div className="absolute bottom-0 left-0 w-12 h-[2px] bg-primary animate-pulse"></div>
+                <div className="relative glass-panel-dark aspect-[3/1] border-primary/30 bg-primary/5 group-hover:border-primary transition-all duration-700 overflow-hidden flex items-center justify-center shadow-[0_0_40px_rgba(0,183,241,0.1)] group/slot cursor-pointer">
+                  <Image 
+                    src="/images/upulse/cs2bottom.png"
+                    alt="Clinical Case - After"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    className="object-cover opacity-85 group-hover/slot:opacity-100 group-hover/slot:scale-105 transition-all duration-700 ease-out"
+                  />
+                  <div className="absolute top-0 left-0 p-3 text-[9px] font-black text-primary bg-black/60 uppercase tracking-[0.2em] border-r border-b border-primary/40 z-20">AFTER</div>
+
                 </div>
               </div>
             </motion.div>
@@ -794,15 +805,25 @@ export default function UPulsePage() {
               <div className="relative glass-panel-dark overflow-hidden border-[#ffffff15] group-hover:border-primary/50 transition-all duration-700 shadow-xl">
                 <div className="absolute inset-0 bg-tech-grid opacity-15" />
                 <div className="grid grid-cols-2 relative h-full">
-                  <div className="aspect-square border-r border-white/10 flex items-center justify-center relative group/slot overflow-hidden">
-                    <div className="absolute inset-0 bg-white/5 opacity-0 group-hover/slot:opacity-100 transition-opacity" />
-                    <span className="text-white/10 font-bold text-[10px] tracking-[0.4em] uppercase z-10 group-hover/slot:text-white/30 transition-colors">Before</span>
-                    <div className="absolute top-3 left-3 w-3 h-3 border-t border-l border-white/10" />
+                  <div className="aspect-square border-r border-white/10 flex items-center justify-center relative group/slot overflow-hidden cursor-pointer">
+                    <Image 
+                      src="/images/upulse/cs3left.png"
+                      alt="Clinical Case - Before"
+                      fill
+                      sizes="(max-width: 768px) 50vw, 300px"
+                      className="object-cover opacity-75 group-hover/slot:opacity-100 group-hover/slot:scale-110 transition-all duration-700 ease-out"
+                    />
+                    <div className="absolute top-0 left-0 p-3 text-[9px] font-black text-white bg-black/60 uppercase tracking-[0.2em] border-r border-b border-white/20 z-20">BEFORE</div>
                   </div>
-                  <div className="aspect-square flex items-center justify-center relative group/slot overflow-hidden bg-primary/5">
-                    <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover/slot:opacity-100 transition-opacity" />
-                    <span className="text-primary/40 font-bold text-[10px] tracking-[0.4em] uppercase z-10 group-hover/slot:text-primary transition-all group-hover/slot:scale-110">After Match</span>
-                    <div className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-primary/30" />
+                  <div className="aspect-square flex items-center justify-center relative group/slot overflow-hidden bg-primary/5 cursor-pointer">
+                    <Image 
+                      src="/images/upulse/cs3right.png"
+                      alt="Clinical Case - After"
+                      fill
+                      sizes="(max-width: 768px) 50vw, 300px"
+                      className="object-cover opacity-85 group-hover/slot:opacity-100 group-hover/slot:scale-110 transition-all duration-700 ease-out"
+                    />
+                    <div className="absolute top-0 left-0 p-3 text-[9px] font-black text-primary bg-black/60 uppercase tracking-[0.2em] border-r border-b border-primary/40 z-20">AFTER</div>
                   </div>
                 </div>
               </div>
@@ -829,14 +850,25 @@ export default function UPulsePage() {
               <div className="relative glass-panel-dark overflow-hidden border-[#ffffff15] group-hover:border-primary/50 transition-all duration-700 shadow-xl">
                 <div className="absolute inset-0 bg-tech-dots opacity-15" />
                 <div className="grid grid-cols-2 relative h-full">
-                  <div className="aspect-square border-r border-white/10 flex items-center justify-center relative group/slot overflow-hidden">
-                    <span className="text-white/10 font-bold text-[10px] tracking-[0.4em] uppercase z-10">Initial</span>
-                    <div className="absolute top-0 left-0 w-full h-full bg-tech-grid opacity-5" />
+                  <div className="aspect-square border-r border-white/10 flex items-center justify-center relative group/slot overflow-hidden cursor-pointer">
+                    <Image 
+                      src="/images/upulse/cs4left.png"
+                      alt="Clinical Case - Before"
+                      fill
+                      sizes="(max-width: 768px) 50vw, 300px"
+                      className="object-cover opacity-75 group-hover/slot:opacity-100 group-hover/slot:scale-110 transition-all duration-700 ease-out"
+                    />
+                    <div className="absolute top-0 left-0 p-3 text-[9px] font-black text-white bg-black/60 uppercase tracking-[0.2em] border-r border-b border-white/20 z-20">BEFORE</div>
                   </div>
-                  <div className="aspect-square flex items-center justify-center relative group/slot overflow-hidden bg-primary/5 border-l border-primary/10">
-                    <div className="absolute inset-x-0 bottom-0 h-1 bg-primary/20" />
-                    <span className="text-primary/40 font-bold text-[10px] tracking-[0.4em] uppercase z-10 group-hover/slot:text-primary transition-all">Cleared Result</span>
-                    <div className="absolute top-3 right-3 text-[8px] font-black text-primary/40">VERIFIED</div>
+                  <div className="aspect-square flex items-center justify-center relative group/slot overflow-hidden bg-primary/5 cursor-pointer">
+                    <Image 
+                      src="/images/upulse/cs4right.png"
+                      alt="Clinical Case - After"
+                      fill
+                      sizes="(max-width: 768px) 50vw, 300px"
+                      className="object-cover opacity-85 group-hover/slot:opacity-100 group-hover/slot:scale-110 transition-all duration-700 ease-out"
+                    />
+                    <div className="absolute top-0 left-0 p-3 text-[9px] font-black text-primary bg-black/60 uppercase tracking-[0.2em] border-r border-b border-primary/40 z-20">AFTER</div>
                   </div>
                 </div>
               </div>
