@@ -325,20 +325,25 @@ export default function VRoAdvancePage() {
                 INSULATED Type
               </h5>
 
-              <div className="flex flex-col xl:flex-row gap-6 items-stretch relative z-10">
+              <div className="flex flex-col xl:flex-row gap-6 items-stretch relative z-10 w-full h-full">
                 {/* 25pin / 49pin Image Space */}
-                <div className="xl:w-[40%] flex flex-col items-center justify-center border border-[#00B7F1]/20 rounded-xl bg-black/40 p-4">
-                  <span className="text-[#00B7F1]/50 text-xs font-bold uppercase tracking-widest mb-2">Tips Image</span>
-                  <div className="w-full h-32 border-2 border-dashed border-[#00B7F1]/30 rounded-lg flex items-center justify-center">
-                    <span className="text-[#00B7F1]/40 text-[10px]">IMG 25/49pin</span>
+                <div className="xl:w-[40%] flex flex-col border border-[#00B7F1]/20 rounded-xl bg-black/40 p-4">
+                  <span className="text-[#00B7F1]/50 text-xs font-bold uppercase tracking-widest mb-3 text-center">Tips (2EA)</span>
+                  <div className="w-full flex gap-3 flex-grow min-h-[120px]">
+                    <div className="flex-1 border-2 border-dashed border-[#00B7F1]/30 rounded-lg flex items-center justify-center bg-black/20 hover:bg-[#00B7F1]/5 transition-colors">
+                      <span className="text-[#00B7F1]/40 text-[10px] text-center font-bold">IMG 1<br/>(ex. 25pin)</span>
+                    </div>
+                    <div className="flex-1 border-2 border-dashed border-[#00B7F1]/30 rounded-lg flex items-center justify-center bg-black/20 hover:bg-[#00B7F1]/5 transition-colors">
+                      <span className="text-[#00B7F1]/40 text-[10px] text-center font-bold">IMG 2<br/>(ex. 49pin)</span>
+                    </div>
                   </div>
                 </div>
 
                 {/* Skin Penetration Diagram Space */}
-                <div className="xl:w-[60%] flex flex-col items-center justify-center border border-[#00B7F1]/20 rounded-xl bg-black/40 p-4">
-                  <span className="text-[#00B7F1]/50 text-xs font-bold uppercase tracking-widest mb-2">Depth Diagram</span>
-                  <div className="w-full h-32 border-2 border-dashed border-[#00B7F1]/30 rounded-lg flex items-center justify-center">
-                    <span className="text-[#00B7F1]/40 text-[10px]">IMG Skin Depth</span>
+                <div className="xl:w-[60%] flex flex-col border border-[#00B7F1]/20 rounded-xl bg-black/40 p-4">
+                  <span className="text-[#00B7F1]/50 text-xs font-bold uppercase tracking-widest mb-3 text-center">Depth Diagram (Wide)</span>
+                  <div className="w-full flex-grow border-2 border-dashed border-[#00B7F1]/30 rounded-lg flex items-center justify-center min-h-[120px] bg-black/20 hover:bg-[#00B7F1]/5 transition-colors">
+                    <span className="text-[#00B7F1]/40 text-[10px] text-center font-bold">WIDE IMG (Skin Penetration)</span>
                   </div>
                 </div>
               </div>
@@ -352,20 +357,25 @@ export default function VRoAdvancePage() {
                 NON-INSULATED Type
               </h5>
 
-              <div className="flex flex-col xl:flex-row gap-6 items-stretch relative z-10">
+              <div className="flex flex-col xl:flex-row gap-6 items-stretch relative z-10 w-full h-full">
                 {/* 25pin / 49pin Image Space */}
-                <div className="xl:w-[40%] flex flex-col items-center justify-center border border-[#FF4B4B]/20 rounded-xl bg-black/40 p-4">
-                  <span className="text-[#FF4B4B]/50 text-xs font-bold uppercase tracking-widest mb-2">Tips Image</span>
-                  <div className="w-full h-32 border-2 border-dashed border-[#FF4B4B]/30 rounded-lg flex items-center justify-center">
-                    <span className="text-[#FF4B4B]/40 text-[10px]">IMG 25/49pin</span>
+                <div className="xl:w-[40%] flex flex-col border border-[#FF4B4B]/20 rounded-xl bg-black/40 p-4">
+                  <span className="text-[#FF4B4B]/50 text-xs font-bold uppercase tracking-widest mb-3 text-center">Tips (2EA)</span>
+                  <div className="w-full flex gap-3 flex-grow min-h-[120px]">
+                    <div className="flex-1 border-2 border-dashed border-[#FF4B4B]/30 rounded-lg flex items-center justify-center bg-black/20 hover:bg-[#FF4B4B]/5 transition-colors">
+                      <span className="text-[#FF4B4B]/40 text-[10px] text-center font-bold">IMG 1<br/>(ex. 25pin)</span>
+                    </div>
+                    <div className="flex-1 border-2 border-dashed border-[#FF4B4B]/30 rounded-lg flex items-center justify-center bg-black/20 hover:bg-[#FF4B4B]/5 transition-colors">
+                      <span className="text-[#FF4B4B]/40 text-[10px] text-center font-bold">IMG 2<br/>(ex. 49pin)</span>
+                    </div>
                   </div>
                 </div>
 
                 {/* Skin Penetration Diagram Space */}
-                <div className="xl:w-[60%] flex flex-col items-center justify-center border border-[#FF4B4B]/20 rounded-xl bg-black/40 p-4">
-                  <span className="text-[#FF4B4B]/50 text-xs font-bold uppercase tracking-widest mb-2">Depth Diagram</span>
-                  <div className="w-full h-32 border-2 border-dashed border-[#FF4B4B]/30 rounded-lg flex items-center justify-center">
-                    <span className="text-[#FF4B4B]/40 text-[10px]">IMG Skin Depth</span>
+                <div className="xl:w-[60%] flex flex-col border border-[#FF4B4B]/20 rounded-xl bg-black/40 p-4">
+                  <span className="text-[#FF4B4B]/50 text-xs font-bold uppercase tracking-widest mb-3 text-center">Depth Diagram (Wide)</span>
+                  <div className="w-full flex-grow border-2 border-dashed border-[#FF4B4B]/30 rounded-lg flex items-center justify-center min-h-[120px] bg-black/20 hover:bg-[#FF4B4B]/5 transition-colors">
+                    <span className="text-[#FF4B4B]/40 text-[10px] text-center font-bold">WIDE IMG (Skin Penetration)</span>
                   </div>
                 </div>
               </div>
