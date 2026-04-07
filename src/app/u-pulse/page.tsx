@@ -874,97 +874,102 @@ export default function UPulsePage() {
 
 
 
-      {/* Section: Downtime Comparison */}
-      <section id="u-pulse-downtime" className="py-28 bg-[#050810] text-white overflow-hidden relative">
+      {/* Section: Efficiency Test - Vertical Comparison */}
+      <section id="u-pulse-efficiency" className="py-28 bg-[#050810] text-white overflow-hidden relative">
         <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none" />
 
-        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mb-14 flex flex-col items-center"
+            className="mb-20 flex flex-col items-center"
           >
             <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
               Efficiency Test
             </div>
-            <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-6 text-center">
-              <span className="hero-title-main">LESS</span> <span className="hero-title-highlight">DOWNTIME</span>
+            <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-6 text-center leading-tight">
+              <span className="text-rose-400">High Power</span> <span className="text-slate-400 font-medium">makes</span> <br className="md:hidden" />
+              <span className="hero-title-highlight">Big Difference</span>
             </h3>
-            <div className="w-20 h-[2px] bg-primary mb-8" />
+            <div className="w-20 h-[2px] bg-primary/50 mb-8" />
           </motion.div>
 
-          <div className="max-w-5xl mx-auto space-y-12">
-            {/* 30W Row */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"
-            >
-              <div className="lg:col-span-2 text-center lg:text-left">
-                <span className="text-3xl font-black text-white/20 tracking-tighter">30W</span>
-                <p className="text-[10px] font-bold text-slate-500 tracking-[0.3em] uppercase mt-1">Output Level</p>
-              </div>
-              <div className="lg:col-span-8 grid grid-cols-3 gap-3">
-                {["Immediate", "16H", "48H"].map((label, idx) => (
-                  <div key={idx} className="space-y-2">
-                    <div className="aspect-[4/3] bg-white/5 border border-white/5 rounded-sm flex items-center justify-center relative group overflow-hidden">
-                      <span className="text-primary/10 font-bold text-[10px] tracking-widest uppercase">Img_{idx + 1}</span>
-                      {idx === 2 && <div className="absolute inset-0 border-2 border-primary/30 z-10 pointer-events-none" />}
-                    </div>
-                    <p className="text-center text-[10px] font-bold text-slate-400 tracking-widest uppercase">{label}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="lg:col-span-2 h-full">
-                <div className="h-full min-h-[100px] flex flex-col items-center justify-center bg-primary/5 border border-primary/20 rounded-sm p-4">
-                  <div className="w-6 h-6 border border-primary/40 rounded-full flex items-center justify-center mb-2">
-                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                  </div>
-                  <span className="text-[10px] font-black text-primary tracking-widest uppercase">Pulse Analysing</span>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Divider */}
-            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-white/5 to-transparent" />
-
-            {/* 100W Row (Fast Recovery) */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"
-            >
-              <div className="lg:col-span-2 text-center lg:text-left">
-                <span className="text-3xl font-black text-primary tracking-tighter">100W</span>
-                <p className="text-[10px] font-bold text-primary/60 tracking-[0.3em] uppercase mt-1">High-Peak</p>
-              </div>
-              <div className="lg:col-span-8 grid grid-cols-3 gap-3">
-                {["Immediate", "16H", "48H"].map((label, idx) => (
-                  <div key={idx} className="space-y-2">
-                    <div className="aspect-[4/3] bg-white/5 border border-white/5 rounded-sm flex items-center justify-center relative group overflow-hidden">
-                      <span className="text-primary/10 font-bold text-[10px] tracking-widest uppercase">Img_{idx + 1}</span>
-                      {idx === 2 && <div className="absolute inset-0 border-2 border-primary animate-pulse z-10 pointer-events-none" />}
-                    </div>
-                    <p className="text-center text-[10px] font-bold text-slate-400 tracking-widest uppercase">{label}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="lg:col-span-2 h-full">
-                <div className="h-full min-h-[100px] flex flex-col items-center justify-center bg-primary/10 border border-primary/40 rounded-sm p-4 shadow-[0_0_20px_rgba(0,183,241,0.1)]">
-                  <div className="w-8 h-8 border-2 border-primary rounded-full flex items-center justify-center mb-2 shadow-[0_0_10px_rgba(0,183,241,0.5)]">
-                    <div className="w-3 h-3 bg-primary rounded-full shadow-[0_0_15px_rgba(0,183,241,1)]" />
-                  </div>
-                  <span className="text-[10px] font-black text-white tracking-widest uppercase">Fast Recovery</span>
-                </div>
-              </div>
-            </motion.div>
+          {/* Comparison Header Table */}
+          <div className="grid grid-cols-12 gap-0 mb-12">
+            <div className="col-span-3 h-12 bg-rose-500/20 flex items-center justify-center">
+              <span className="text-rose-400 font-black text-sm tracking-widest">30W</span>
+            </div>
+            <div className="col-span-6 h-12 bg-white/5 flex items-center justify-center">
+              <span className="text-slate-400 font-bold text-xs tracking-[0.2em] uppercase">Time (Hour)</span>
+            </div>
+            <div className="col-span-3 h-12 bg-primary/20 flex items-center justify-center">
+              <span className="text-primary font-black text-sm tracking-widest">U-Pulse</span>
+            </div>
           </div>
+
+          {/* Comparison Rows */}
+          <div className="space-y-12 relative">
+            {/* Background Vertical Line removed as per user request */}
+
+            {[
+              { label: "시술직후", sub: "통증, 붓기 최소화", img30: "/images/upulse/first30w.png", imgUp: "/images/upulse/first100w.png" },
+              { label: "Spot Size", sub: "작은 스팟사이즈 80~100um", img30: "/images/upulse/second30w.png", imgUp: "/images/upulse/second100w.png" },
+              { label: "30분 뒤 홍반", sub: "빠른 회복", img30: "/images/upulse/third30w.png", imgUp: "/images/upulse/third100w.png" },
+              { label: "30시간 경과", sub: "최소한의 Down Time", img30: "/images/upulse/four30w.png", imgUp: "/images/upulse/four100w.png" },
+              { label: "Pulse", sub: "Diagram Comparison", img30: "/images/upulse/five30w.png", imgUp: "/images/upulse/five100w.png" }
+            ].map((row, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-12 gap-4 items-center group"
+              >
+                {/* 30W Image Column */}
+                <div className="col-span-4 md:col-span-3">
+                  <div className={`aspect-square relative overflow-hidden transition-all duration-500 ${idx === 4 ? '' : 'glass-panel-dark border-white/5 group-hover:border-white/20'}`}>
+                    <Image 
+                      src={row.img30}
+                      alt={`30W Result - ${row.label}`}
+                      fill
+                      className={`transition-all duration-700 ease-out ${idx === 4 ? 'object-contain scale-150 group-hover:scale-[1.65]' : 'object-cover opacity-90 group-hover:opacity-100 group-hover:scale-110'}`}
+                    />
+                  </div>
+                </div>
+
+                {/* Center Description Column */}
+                <div className="col-span-4 md:col-span-6 flex flex-col items-center justify-center text-center px-2">
+                  <div className="hidden md:flex items-center w-full gap-4 mb-4 opacity-10">
+                    <div className="h-px flex-1 border-t border-dashed border-white" />
+                    <div className="h-px flex-1 border-t border-dashed border-white" />
+                  </div>
+                  
+                  <div className="bg-white/5 border border-white/10 px-3 md:px-6 py-1 md:py-2 mb-2 group-hover:border-primary/40 group-hover:bg-primary/5 transition-all duration-300">
+                    <span className="text-white font-black text-[11px] md:text-sm tracking-widest whitespace-nowrap group-hover:text-primary transition-colors">{row.label}</span>
+                  </div>
+                  <p className="text-[9px] md:text-xs text-slate-400 font-medium whitespace-pre-line leading-relaxed group-hover:text-slate-300 transition-colors">{row.sub}</p>
+                </div>
+
+                {/* U-Pulse Image Column */}
+                <div className="col-span-4 md:col-span-3">
+                  <div className={`aspect-square relative overflow-hidden transition-all duration-500 shadow-[0_10px_30px_rgba(0,0,0,0.5)] ${idx === 4 ? '' : 'glass-panel-dark border-white/5 group-hover:border-primary/40'}`}>
+                    <Image 
+                      src={row.imgUp}
+                      alt={`U-Pulse Result - ${row.label}`}
+                      fill
+                      className={`transition-all duration-700 ease-out ${idx === 4 ? 'object-contain scale-150 group-hover:scale-[1.65]' : 'object-cover opacity-95 group-hover:opacity-100 group-hover:scale-110'}`}
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Bottom Gradient Bar */}
+          <div className="mt-20 h-2 w-full bg-gradient-to-r from-rose-500 via-slate-500 to-primary opacity-50 rounded-full" />
         </div>
       </section>
 

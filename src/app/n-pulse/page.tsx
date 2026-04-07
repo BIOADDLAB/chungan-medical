@@ -552,7 +552,7 @@ export default function NPulsePage() {
                                             key={i}
                                             className="w-1.5 h-1.5 rounded-full bg-primary/30 shadow-[0_0_5px_rgba(0,183,241,0.3)] animate-pulse"
                                             style={{
-                                                animationDelay: `${Math.random() * 2}s`,
+                                                animationDelay: `${(i % 20) * 0.1}s`,
                                                 backgroundColor: i === 54 || i === 78 || i === 92 ? '#00B7F1' : '',
                                                 boxShadow: i === 54 || i === 78 || i === 92 ? '0 0 10px #00B7F1' : ''
                                             }}
