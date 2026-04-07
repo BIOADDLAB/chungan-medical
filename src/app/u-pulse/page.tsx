@@ -455,10 +455,10 @@ export default function UPulsePage() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className="relative flex items-center justify-center p-12 glass-panel bg-tech-dots/5 overflow-visible min-h-[320px]"
+              className="group relative flex items-center justify-center p-12 glass-panel bg-tech-dots/5 overflow-visible min-h-[320px] transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:shadow-[0_0_40px_rgba(244,114,182,0.15)] hover:border-pink-500/20 cursor-crosshair"
             >
               {/* 2번째 이미지 스타일: 흰색 두꺼운 외벽 + 어두운 내부 + 긴 테이퍼 + 빨간 레이저 */}
-              <svg viewBox="0 0 880 240" className="w-full h-auto overflow-visible">
+              <svg viewBox="0 0 880 240" className="w-full h-auto overflow-visible transition-transform duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] group-hover:scale-[1.05]">
                 <defs>
                   <filter id="z2-glow">
                     <feGaussianBlur stdDeviation="2.5" result="b" />
@@ -524,16 +524,18 @@ export default function UPulsePage() {
                 {/* ============================================================
                     레이저 빔 (가장 왼쪽 렌즈부터 기기 관통)
                 ============================================================ */}
-                <line x1="108" y1="120" x2="762" y2="120" stroke="#f472b6" strokeWidth="2.5" opacity="0.9" />
+                <line x1="108" y1="120" x2="762" y2="120" stroke="#f472b6" strokeWidth="2.5" className="opacity-90 group-hover:opacity-100 transition-opacity duration-700" />
+                {/* 호버 시 점등되는 레이저 글로우 효과 */}
+                <line x1="108" y1="120" x2="762" y2="120" stroke="#f472b6" strokeWidth="8" className="opacity-0 group-hover:opacity-50 blur-[3px] transition-opacity duration-700 pointer-events-none" />
 
                 {/* ============================================================
                     동심원 타겟 (중심: 762, 120 / 반지름: 82, 63, 44, 26)
                     상단 끝: y=38, 하단 끝: y=202 → 240px 내부 ✓
                 ============================================================ */}
-                <circle cx="762" cy="120" r="82" stroke="white" strokeWidth="1.8" fill="none" opacity="0.78" />
-                <circle cx="762" cy="120" r="63" stroke="white" strokeWidth="1.8" fill="none" opacity="0.78" />
-                <circle cx="762" cy="120" r="44" stroke="white" strokeWidth="1.8" fill="none" opacity="0.78" />
-                <circle cx="762" cy="120" r="26" stroke="white" strokeWidth="1.8" fill="none" opacity="0.82" />
+                <circle cx="762" cy="120" r="82" stroke="white" strokeWidth="1.8" fill="none" className="opacity-75 transition-colors duration-700 group-hover:stroke-pink-400/80 group-hover:opacity-100" />
+                <circle cx="762" cy="120" r="63" stroke="white" strokeWidth="1.8" fill="none" className="opacity-75 transition-colors duration-700 delay-75 group-hover:stroke-pink-400 group-hover:opacity-100" />
+                <circle cx="762" cy="120" r="44" stroke="white" strokeWidth="1.8" fill="none" className="opacity-75 transition-colors duration-700 delay-150 group-hover:stroke-pink-500 group-hover:opacity-100" />
+                <circle cx="762" cy="120" r="26" stroke="white" strokeWidth="1.8" className="fill-transparent opacity-80 transition-all duration-700 delay-200 group-hover:stroke-pink-500 group-hover:fill-pink-500/20 group-hover:opacity-100" />
 
                 {/* --- 중앙에서 위로 뻗는 화살표 (5단계 가이드) --- */}
                 <line x1="762" y1="120" x2="762" y2="40" stroke="white" strokeWidth="2" markerEnd="url(#z2-ar)" opacity="0.9" />
