@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
@@ -360,42 +360,66 @@ export default function NPulsePage() {
                         </div>
                     </motion.div>
 
-                    {/* Step Visualizer */}
+                    {/* Step Visualizer - clinical images integration */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.98 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1 }}
                         viewport={{ once: true }}
-                        className="glass-panel-dark p-6 md:p-10 border-white/5"
+                        className="glass-panel-dark p-4 md:p-8 border-white/5 bg-black/50"
                     >
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                            <div className="lg:col-span-9 grid grid-cols-3 gap-4">
-                                {[1, 2, 3].map((step) => (
-                                    <div key={step} className="relative group">
-                                        <div className="aspect-[4/3] rounded-xl bg-black/60 border border-white/10 flex items-center justify-center overflow-hidden group-hover:border-primary/30 transition-all duration-500">
-                                            <div className="absolute top-4 left-4 w-7 h-7 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-xs font-black text-white group-hover:bg-primary group-hover:border-primary transition-colors">
-                                                {step}
+                        <div className="flex flex-col xl:flex-row items-center gap-4 xl:gap-6">
+                            {/* Steps 1-3 Cluster: Slightly enlarged for better visibility */}
+                            <div className="xl:w-[62%] flex items-center justify-between gap-0">
+                                {[1, 2, 3].map((step, i) => (
+                                    <React.Fragment key={step}>
+                                        <div className="relative group flex-1">
+                                            <div className="aspect-[4/3] bg-[#0a0c10] border border-white/10 flex items-center justify-center overflow-hidden group-hover:border-primary/40 transition-all duration-500">
+                                                <div className="absolute top-0 left-0 w-6 h-6 bg-white flex items-center justify-center text-[11px] font-black text-black z-20">
+                                                    {step}
+                                                </div>
+                                                <img
+                                                    src={`/images/npulse/treatment${step}.png`}
+                                                    alt={`Treatment Mechanism Step ${step}`}
+                                                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                                                />
                                             </div>
-                                            <div className="w-full h-full bg-gradient-to-br from-primary/5 to-transparent" />
                                         </div>
-                                    </div>
+
+                                        {/* Minimal Arrow Connector */}
+                                        {i < 2 && (
+                                            <div className="flex-shrink-0 px-1">
+                                                <svg className="w-3 h-3 md:w-5 md:h-5 text-primary/60" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M10 17l5-5-5-5v10z" />
+                                                </svg>
+                                            </div>
+                                        )}
+                                    </React.Fragment>
                                 ))}
                             </div>
 
-                            <div className="lg:col-span-1 flex justify-center py-4 lg:py-0">
-                                <div className="flex lg:flex-col items-center gap-1">
-                                    {[0.3, 0.6, 1].map((op, i) => (
-                                        <svg key={i} className="w-6 h-6 text-primary rotate-0 lg:rotate-90" style={{ opacity: op }} fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
-                                        </svg>
-                                    ))}
-                                </div>
+                            {/* Triple Chevron Transition */}
+                            <div className="flex xl:flex-row items-center gap-0.5 py-4 xl:py-0 px-2 lg:px-4">
+                                {[0.3, 0.6, 1].map((op, i) => (
+                                    <svg key={i} className="w-5 h-5 md:w-7 md:h-7 text-primary rotate-0" style={{ opacity: op }} fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+                                    </svg>
+                                ))}
                             </div>
 
-                            <div className="lg:col-span-2">
-                                <div className="aspect-square rounded-2xl bg-primary/10 border-2 border-primary flex items-center justify-center relative overflow-hidden group">
-                                    <div className="absolute inset-0 bg-primary/5 animate-pulse" />
-                                    <span className="text-primary font-black text-4xl group-hover:scale-110 transition-transform duration-500">RE</span>
+                            {/* Result Step 4: Maintaining its status as the largest single element */}
+                            <div className="w-full xl:w-[35%] flex-grow">
+                                <div className="relative group">
+                                    <div className="aspect-[16/11] border-2 border-primary/40 bg-black/60 flex items-center justify-center overflow-hidden group-hover:border-primary transition-all duration-500 shadow-[0_0_40px_rgba(0,183,241,0.15)]">
+                                        <div className="absolute top-0 left-0 px-5 py-1.5 bg-primary/20 backdrop-blur-md border-r border-b border-primary/40 flex items-center justify-center text-sm font-black text-primary z-20">
+                                            4
+                                        </div>
+                                        <img
+                                            src="/images/npulse/treatment4.png"
+                                            alt="Treatment Mechanism Result"
+                                            className="w-full h-full object-cover group-hover:scale-160 transition-all duration-700 scale-150 mt-30"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
