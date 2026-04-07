@@ -330,11 +330,17 @@ export default function VRoAdvancePage() {
                 <div className="xl:w-[40%] flex flex-col border border-[#00B7F1]/20 rounded-xl bg-black/40 p-4">
                   <span className="text-[#00B7F1]/50 text-xs font-bold uppercase tracking-widest mb-3 text-center">Tips (2EA)</span>
                   <div className="w-full flex gap-3 flex-grow min-h-[120px]">
-                    <div className="flex-1 border-2 border-dashed border-[#00B7F1]/30 rounded-lg flex items-center justify-center bg-black/20 hover:bg-[#00B7F1]/5 transition-colors">
-                      <span className="text-[#00B7F1]/40 text-[10px] text-center font-bold">IMG 1<br/>(ex. 25pin)</span>
+                    <div className="flex-1 flex flex-col items-center justify-between rounded-lg bg-black/20 p-2 overflow-hidden hover:bg-[#00B7F1]/10 transition-colors group/tip">
+                      <div className="relative w-full flex-grow flex items-center justify-center min-h-[80px]">
+                        <img src="/images/vro_advance/I25.png" alt="Insulated 25pin Tip" className="max-h-[80px] object-contain drop-shadow-[0_5px_15px_rgba(0,183,241,0.1)] group-hover/tip:scale-[1.15] transition-transform duration-500" />
+                      </div>
+                      <span className="text-[#00B7F1]/70 text-[10px] font-bold mt-2 tracking-widest uppercase">25pin</span>
                     </div>
-                    <div className="flex-1 border-2 border-dashed border-[#00B7F1]/30 rounded-lg flex items-center justify-center bg-black/20 hover:bg-[#00B7F1]/5 transition-colors">
-                      <span className="text-[#00B7F1]/40 text-[10px] text-center font-bold">IMG 2<br/>(ex. 49pin)</span>
+                    <div className="flex-1 flex flex-col items-center justify-between rounded-lg bg-black/20 p-2 overflow-hidden hover:bg-[#00B7F1]/10 transition-colors group/tip">
+                      <div className="relative w-full flex-grow flex items-center justify-center min-h-[80px]">
+                        <img src="/images/vro_advance/I49.png" alt="Insulated 49pin Tip" className="max-h-[80px] object-contain drop-shadow-[0_5px_15px_rgba(0,183,241,0.1)] group-hover/tip:scale-[1.15] transition-transform duration-500" />
+                      </div>
+                      <span className="text-[#00B7F1]/70 text-[10px] font-bold mt-2 tracking-widest uppercase">49pin</span>
                     </div>
                   </div>
                 </div>
@@ -342,8 +348,8 @@ export default function VRoAdvancePage() {
                 {/* Skin Penetration Diagram Space */}
                 <div className="xl:w-[60%] flex flex-col border border-[#00B7F1]/20 rounded-xl bg-black/40 p-4">
                   <span className="text-[#00B7F1]/50 text-xs font-bold uppercase tracking-widest mb-3 text-center">Depth Diagram (Wide)</span>
-                  <div className="w-full flex-grow border-2 border-dashed border-[#00B7F1]/30 rounded-lg flex items-center justify-center min-h-[120px] bg-black/20 hover:bg-[#00B7F1]/5 transition-colors">
-                    <span className="text-[#00B7F1]/40 text-[10px] text-center font-bold">WIDE IMG (Skin Penetration)</span>
+                  <div className="w-full flex-grow flex items-center justify-center min-h-[120px] rounded-lg overflow-hidden relative">
+                    <img src="/images/vro_advance/insulated.png" alt="Insulated Depth Diagram" className="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(0,183,241,0.2)] group-hover:scale-105 transition-transform duration-500" />
                   </div>
                 </div>
               </div>
@@ -362,11 +368,17 @@ export default function VRoAdvancePage() {
                 <div className="xl:w-[40%] flex flex-col border border-[#FF4B4B]/20 rounded-xl bg-black/40 p-4">
                   <span className="text-[#FF4B4B]/50 text-xs font-bold uppercase tracking-widest mb-3 text-center">Tips (2EA)</span>
                   <div className="w-full flex gap-3 flex-grow min-h-[120px]">
-                    <div className="flex-1 border-2 border-dashed border-[#FF4B4B]/30 rounded-lg flex items-center justify-center bg-black/20 hover:bg-[#FF4B4B]/5 transition-colors">
-                      <span className="text-[#FF4B4B]/40 text-[10px] text-center font-bold">IMG 1<br/>(ex. 25pin)</span>
+                    <div className="flex-1 flex flex-col items-center justify-between rounded-lg bg-black/20 p-2 overflow-hidden hover:bg-[#FF4B4B]/10 transition-colors group/tip">
+                      <div className="relative w-full flex-grow flex items-center justify-center min-h-[80px]">
+                        <img src="/images/vro_advance/N25.png" alt="Non-Insulated 25pin Tip" className="max-h-[80px] object-contain drop-shadow-[0_5px_15px_rgba(255,75,75,0.1)] group-hover/tip:scale-[1.15] transition-transform duration-500" />
+                      </div>
+                      <span className="text-[#FF4B4B]/70 text-[10px] font-bold mt-2 tracking-widest uppercase">25pin</span>
                     </div>
-                    <div className="flex-1 border-2 border-dashed border-[#FF4B4B]/30 rounded-lg flex items-center justify-center bg-black/20 hover:bg-[#FF4B4B]/5 transition-colors">
-                      <span className="text-[#FF4B4B]/40 text-[10px] text-center font-bold">IMG 2<br/>(ex. 49pin)</span>
+                    <div className="flex-1 flex flex-col items-center justify-between rounded-lg bg-black/20 p-2 overflow-hidden hover:bg-[#FF4B4B]/10 transition-colors group/tip">
+                      <div className="relative w-full flex-grow flex items-center justify-center min-h-[80px]">
+                        <img src="/images/vro_advance/N49.png" alt="Non-Insulated 49pin Tip" className="max-h-[80px] object-contain drop-shadow-[0_5px_15px_rgba(255,75,75,0.1)] group-hover/tip:scale-[1.15] transition-transform duration-500" />
+                      </div>
+                      <span className="text-[#FF4B4B]/70 text-[10px] font-bold mt-2 tracking-widest uppercase">49pin</span>
                     </div>
                   </div>
                 </div>
@@ -374,8 +386,8 @@ export default function VRoAdvancePage() {
                 {/* Skin Penetration Diagram Space */}
                 <div className="xl:w-[60%] flex flex-col border border-[#FF4B4B]/20 rounded-xl bg-black/40 p-4">
                   <span className="text-[#FF4B4B]/50 text-xs font-bold uppercase tracking-widest mb-3 text-center">Depth Diagram (Wide)</span>
-                  <div className="w-full flex-grow border-2 border-dashed border-[#FF4B4B]/30 rounded-lg flex items-center justify-center min-h-[120px] bg-black/20 hover:bg-[#FF4B4B]/5 transition-colors">
-                    <span className="text-[#FF4B4B]/40 text-[10px] text-center font-bold">WIDE IMG (Skin Penetration)</span>
+                  <div className="w-full flex-grow flex items-center justify-center min-h-[120px] rounded-lg overflow-hidden relative">
+                    <img src="/images/vro_advance/non_insulated.png" alt="Non-Insulated Depth Diagram" className="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(255,75,75,0.2)] group-hover:scale-105 transition-transform duration-500" />
                   </div>
                 </div>
               </div>
