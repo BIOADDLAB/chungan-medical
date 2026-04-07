@@ -710,6 +710,79 @@ export default function NPulsePage() {
                 </div>
             </section>
 
+            {/* ⑦ Indication Section */}
+            <section id="indication" className="relative py-28 bg-[#020408] overflow-hidden border-t border-white/5">
+                <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
+
+                <div className="max-w-screen-xl mx-auto px-6 relative z-10 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="mb-16"
+                    >
+                        <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
+                            Clinical Applications
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-8 uppercase leading-tight">
+                            <span className="hero-title-main">INDICATION</span>
+                        </h2>
+                        <div className="w-20 h-[2px] bg-primary mx-auto mb-12" />
+
+                        <p className="text-slate-300 text-lg md:text-xl font-medium leading-relaxed max-w-3xl mx-auto mb-20 break-keep">
+                            N-Pulse Pro와 N-Pulse FX는 점·사마귀·쥐젖 제거와 기미·검버섯 개선 등,<br className="hidden md:block" />
+                            다양한 병변에 효과적일 뿐만 아니라 외과수술에서도 활용이 가능합니다.
+                        </p>
+
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12 md:gap-8 max-w-5xl mx-auto">
+                            {[
+                                { 
+                                    ko: '점, 검버섯', 
+                                    en: 'Mole, Melasma'
+                                },
+                                { 
+                                    ko: '편평 사마귀, 사마귀, 쥐젖', 
+                                    en: 'Verruca Plana, Wart'
+                                },
+                                { 
+                                    ko: '한관종, 비립종', 
+                                    en: 'Syringoma, Milium'
+                                },
+                                { 
+                                    ko: '흉터 (화상, 모공, 여드름)', 
+                                    en: 'Scar (Burn, Pore, Acne)'
+                                }
+                            ].map((item, idx) => (
+                                <motion.div
+                                    key={idx}
+                                    initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: idx * 0.1 }}
+                                    viewport={{ once: true }}
+                                    className="flex flex-col items-center group cursor-pointer"
+                                >
+                                    <div className="w-full max-w-[160px] md:max-w-[190px] aspect-square relative rounded-full mb-6 p-1.5 bg-gradient-to-br from-white/10 via-transparent to-transparent flex items-center justify-center overflow-hidden border border-white/10 group-hover:border-primary/50 group-hover:shadow-[0_0_30px_rgba(0,183,241,0.3)] transition-all duration-500 bg-black/40">
+                                        {/* Image placeholder */}
+                                        <div className="absolute inset-[3px] rounded-full overflow-hidden bg-[#0A0C10] flex items-center justify-center border border-white/5">
+                                            <div className="text-white/20 text-[10px] font-bold uppercase tracking-widest text-center px-2">Image Area</div>
+                                            <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
+                                        </div>
+                                    </div>
+                                    <h4 className="text-white font-bold text-[14px] md:text-[16px] mb-1.5 group-hover:text-primary transition-colors duration-300 break-keep">
+                                        {item.ko}
+                                    </h4>
+                                    <p className="text-slate-400 font-medium text-[11px] md:text-[13px] uppercase tracking-wider text-center">
+                                        {item.en}
+                                    </p>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+
             {/* Specification Section - Premium HUD 리뉴얼 */}
             <section className="py-32 bg-black overflow-hidden relative">
                 {/* 배경 네온 글로우 */}
