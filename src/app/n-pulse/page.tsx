@@ -303,31 +303,39 @@ export default function NPulsePage() {
 
                                 <div className="relative z-10 space-y-4">
                                     {/* Item 01: N-Pulse Pro */}
-                                    <div className="space-y-2 group">
+                                    <div className="space-y-3 group">
                                         <div className="flex justify-between items-center px-1">
                                             <span className="text-slate-500 font-bold text-[9px] tracking-[0.4em] uppercase group-hover:text-primary/50 transition-colors">Pulse Analysis</span>
                                             <span className="text-white font-black text-[10px] tracking-widest uppercase">N-PULSE PRO</span>
                                         </div>
-                                        <div className="relative aspect-[21/8] glass-panel-dark bg-black/40 flex items-center justify-center p-2 border-white/5 group-hover:border-primary/20 transition-all duration-700 overflow-hidden">
-                                            <svg viewBox="0 0 500 120" className="w-full h-full opacity-90 group-hover:opacity-100 transition-opacity duration-700">
-                                                {/* Comparison Label */}
-                                                <text x="135" y="15" textAnchor="middle" className="fill-slate-500 text-[10px] font-bold uppercase tracking-widest">Other</text>
-                                                <text x="365" y="15" textAnchor="middle" className="fill-primary text-[10px] font-black uppercase tracking-widest">N-Pulse PRO</text>
+                                        <div className="relative aspect-[21/10] glass-panel-dark bg-[#0a0f12] flex items-center justify-center p-2 border-white/5 group-hover:border-primary/20 transition-all duration-700 overflow-hidden">
+                                            <svg viewBox="0 0 500 200" className="w-full h-full opacity-90 group-hover:opacity-100 transition-opacity duration-700">
+                                                <text x="115" y="35" textAnchor="middle" className="fill-[#888888] text-[15px] font-medium tracking-wide">Other</text>
+                                                <text x="345" y="35" textAnchor="middle" className="fill-white text-[15px] font-bold tracking-wide">N-Pulse Pro</text>
 
-                                                {/* Left Side: Standard Tip */}
-                                                <g transform="translate(100, 20) scale(0.55)">
-                                                    <path d="M0,0 L60,15 L70,120 L15,105 Z" fill="#D1D5DB" opacity="0.4" />
-                                                    <path d="M45,115 L35,165 L43,165 L50,120 Z" fill="#D1D5DB" opacity="0.6" />
-                                                    <circle cx="43" cy="175" r="8" fill="#D1D5DB" opacity="0.3" className="blur-[2px]" />
+                                                {/* Left Side: Other (Light Grey) */}
+                                                <g transform="translate(80, 45)">
+                                                    {/* Body (Tilted Parallelogram) */}
+                                                    <polygon points="0,0 45,0 70,110 25,110" fill="#B3B3B3" />
+                                                    {/* Left thick tip */}
+                                                    <polygon points="37,110 47,110 56,150 46,150" fill="#B3B3B3" />
+                                                    {/* Right thin tip */}
+                                                    <polygon points="55,110 59,110 64,130 60,130" fill="#B3B3B3" />
+                                                    {/* Splattered energy trace */}
+                                                    <ellipse cx="51" cy="156" rx="16" ry="4" fill="#D4D4D4" />
                                                 </g>
 
-                                                {/* Right Side: Pro Tip (Sharp & Focused) */}
-                                                <g transform="translate(330, 20) scale(0.55)">
-                                                    <path d="M0,0 L60,15 L70,120 L15,105 Z" fill="#00B7F1" opacity="0.6" />
-                                                    <path d="M45,115 L35,165 L43,165 L50,120 Z" fill="#00B7F1" />
-                                                    <circle cx="43" cy="175" r="5" fill="#00B7F1" className="animate-pulse shadow-[0_0_15px_rgba(0,183,241,1)]" />
+                                                {/* Right Side: N-Pulse Pro (Teal/Slate) */}
+                                                <g transform="translate(310, 45)">
+                                                    {/* Body */}
+                                                    <polygon points="0,0 45,0 70,110 25,110" fill="#446775" />
+                                                    {/* Left short thin tip */}
+                                                    <polygon points="36,110 40,110 45,130 41,130" fill="#446775" />
+                                                    {/* Main right beam (sharp, tapered point) */}
+                                                    <polygon points="46,110 56,110 62,155 60,155" fill="#446775" />
+                                                    {/* Precise target dot */}
+                                                    <ellipse cx="61" cy="158" rx="7" ry="2" fill="#6997A8" />
                                                 </g>
-                                                <line x1="220" y1="65" x2="280" y2="65" stroke="#00B7F1" strokeWidth="0.5" strokeDasharray="4 4" opacity="0.3" />
                                             </svg>
                                         </div>
                                     </div>
@@ -335,23 +343,27 @@ export default function NPulsePage() {
                                     <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
                                     {/* Item 02: N-Pulse FX */}
-                                    <div className="space-y-2 group">
+                                    <div className="space-y-3 group">
                                         <div className="flex justify-between items-center px-1">
                                             <span className="text-slate-500 font-bold text-[9px] tracking-[0.4em] uppercase group-hover:text-primary/50 transition-colors">Depth Control</span>
                                             <span className="text-white font-black text-[10px] tracking-widest uppercase">N-PULSE FX</span>
                                         </div>
-                                        <div className="relative aspect-[21/9] glass-panel-dark bg-black/40 flex items-center justify-center p-2 border-white/5 group-hover:border-primary/20 transition-all duration-700">
-                                            <svg viewBox="0 0 500 120" className="w-full h-full opacity-90 group-hover:opacity-100 transition-opacity duration-700">
-                                                <text x="135" y="15" textAnchor="middle" className="fill-slate-500 text-[10px] font-bold uppercase tracking-widest">Other</text>
-                                                <text x="365" y="15" textAnchor="middle" className="fill-primary text-[10px] font-black uppercase tracking-widest">N-Pulse FX</text>
-                                                <g transform="translate(70, 30)">
-                                                    <path d="M0,0 C0,80 130,80 130,0" fill="none" stroke="#D1D5DB" strokeWidth="12" opacity="0.3" />
+                                        <div className="relative aspect-[21/10] glass-panel-dark bg-[#0a0f12] flex items-center justify-center p-2 border-white/5 group-hover:border-primary/20 transition-all duration-700">
+                                            <svg viewBox="0 0 500 200" className="w-full h-full opacity-90 group-hover:opacity-100 transition-opacity duration-700">
+                                                <text x="130" y="35" textAnchor="middle" className="fill-[#888888] text-[15px] font-medium tracking-wide">Other</text>
+                                                <text x="345" y="35" textAnchor="middle" className="fill-white text-[15px] font-bold tracking-wide">N-Pulse FX</text>
+
+                                                {/* Connecting Top Boundary Line */}
+                                                <line x1="50" y1="60" x2="450" y2="60" stroke="#777" strokeWidth="1.5" />
+
+                                                {/* Left Side: Other (Thick curved U-shape) */}
+                                                <path d="M 60,60 C 90,210 170,210 200,60 L 170,60 C 150,150 110,150 90,60 Z" fill="#B3B3B3" />
+
+                                                {/* Right Side: N-Pulse FX (Deep, narrow) */}
+                                                <g transform="translate(325, 60)">
+                                                    <path d="M 0,0 L 0,110 A 20,20 0 0 0 40,110 L 40,0 Z" fill="#548C9E" />
+                                                    <path d="M 16,0 L 16,108 A 4,4 0 0 0 24,108 L 24,0 Z" fill="white" />
                                                 </g>
-                                                <g transform="translate(345, 30)">
-                                                    <path d="M0,0 L40,0 L40,65 C40,75 0,75 0,65 Z" fill="#00B7F1" opacity="0.8" />
-                                                    <path d="M12,0 L28,0 L28,60 C28,70 12,70 12,60 Z" fill="white" className="animate-pulse" />
-                                                </g>
-                                                <line x1="50" y1="30" x2="450" y2="30" stroke="white" strokeWidth="0.5" opacity="0.3" />
                                             </svg>
                                         </div>
                                     </div>
