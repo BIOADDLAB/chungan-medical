@@ -369,33 +369,39 @@ export default function NPulsePage() {
                         className="glass-panel-dark p-4 md:p-8 border-white/5 bg-black/50"
                     >
                         <div className="flex flex-col xl:flex-row items-center gap-4 xl:gap-6">
-                            {/* Steps 1-3 Cluster: Slightly enlarged for better visibility */}
+                            {/* Steps 1-3 Cluster: Unrolled for individual control */}
                             <div className="xl:w-[62%] flex items-center justify-between gap-0">
-                                {[1, 2, 3].map((step, i) => (
-                                    <React.Fragment key={step}>
-                                        <div className="relative group flex-1">
-                                            <div className="aspect-[4/3] bg-[#0a0c10] border border-white/10 flex items-center justify-center overflow-hidden group-hover:border-primary/40 transition-all duration-500">
-                                                <div className="absolute top-0 left-0 w-6 h-6 bg-white flex items-center justify-center text-[11px] font-black text-black z-20">
-                                                    {step}
-                                                </div>
-                                                <img
-                                                    src={`/images/npulse/treatment${step}.png`}
-                                                    alt={`Treatment Mechanism Step ${step}`}
-                                                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-                                                />
-                                            </div>
-                                        </div>
+                                {/* Step 1 */}
+                                <div className="relative group flex-1">
+                                    <div className="aspect-[4/3] bg-black border border-white/10 flex items-center justify-center overflow-hidden group-hover:border-primary/40 transition-all duration-500">
+                                        <div className="absolute top-0 left-0 w-6 h-6 bg-white flex items-center justify-center text-[11px] font-black text-black z-20">1</div>
+                                        <img src="/images/npulse/treatment1.png" alt="Treatment Step 1" className="w-full h-full object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 scale-250 mt-25" />
+                                    </div>
+                                </div>
 
-                                        {/* Minimal Arrow Connector */}
-                                        {i < 2 && (
-                                            <div className="flex-shrink-0 px-1">
-                                                <svg className="w-3 h-3 md:w-5 md:h-5 text-primary/60" viewBox="0 0 24 24" fill="currentColor">
-                                                    <path d="M10 17l5-5-5-5v10z" />
-                                                </svg>
-                                            </div>
-                                        )}
-                                    </React.Fragment>
-                                ))}
+                                <div className="flex-shrink-0 px-1">
+                                    <svg className="w-3 h-3 md:w-5 md:h-5 text-primary/60" viewBox="0 0 24 24" fill="currentColor"><path d="M10 17l5-5-5-5v10z" /></svg>
+                                </div>
+
+                                {/* Step 2 */}
+                                <div className="relative group flex-1">
+                                    <div className="aspect-[4/3] bg-black border border-white/10 flex items-center justify-center overflow-hidden group-hover:border-primary/40 transition-all duration-500">
+                                        <div className="absolute top-0 left-0 w-6 h-6 bg-white flex items-center justify-center text-[11px] font-black text-black z-20">2</div>
+                                        <img src="/images/npulse/treatment2.png" alt="Treatment Step 2" className="w-full h-full object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 scale-250 mt-25" />
+                                    </div>
+                                </div>
+
+                                <div className="flex-shrink-0 px-1">
+                                    <svg className="w-3 h-3 md:w-5 md:h-5 text-primary/60" viewBox="0 0 24 24" fill="currentColor"><path d="M10 17l5-5-5-5v10z" /></svg>
+                                </div>
+
+                                {/* Step 3 */}
+                                <div className="relative group flex-1">
+                                    <div className="aspect-[4/3] bg-[#0a0c10] border border-white/10 flex items-center justify-center overflow-hidden group-hover:border-primary/40 transition-all duration-500">
+                                        <div className="absolute top-0 left-0 w-6 h-6 bg-white flex items-center justify-center text-[11px] font-black text-black z-20">3</div>
+                                        <img src="/images/npulse/treatment3.png" alt="Treatment Step 3" className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                                    </div>
+                                </div>
                             </div>
 
                             {/* Triple Chevron Transition */}
@@ -407,7 +413,7 @@ export default function NPulsePage() {
                                 ))}
                             </div>
 
-                            {/* Result Step 4: Maintaining its status as the largest single element */}
+                            {/* Result Step 4 */}
                             <div className="w-full xl:w-[35%] flex-grow">
                                 <div className="relative group">
                                     <div className="aspect-[16/11] border-2 border-primary/40 bg-black/60 flex items-center justify-center overflow-hidden group-hover:border-primary transition-all duration-500 shadow-[0_0_40px_rgba(0,183,241,0.15)]">
