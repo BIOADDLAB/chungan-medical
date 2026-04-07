@@ -73,7 +73,7 @@ export default function UPulsePage() {
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:items-end">
 
             {/* 좌측: 텍스트 및 카드 (Revolutionary Header System) */}
             <motion.div
@@ -154,17 +154,21 @@ export default function UPulsePage() {
               viewport={{ once: true }}
               className="flex justify-center lg:justify-end relative"
             >
-              <div className="relative group">
-                {/* 배경 광채 */}
-                <div className="absolute inset-0 bg-primary/20 blur-[80px] rounded-full scale-110 opacity-30 group-hover:opacity-50 transition duration-1000" />
+              <div className="relative group lg:scale-[1.2] origin-bottom lg:translate-x-12 lg:translate-y-10 transition-all duration-1000">
+                {/* 배경 수직 광채 (확대된 크기에 맞춰 범위 확장) */}
+                <div className="absolute inset-y-0 -inset-x-20 bg-primary/10 blur-[120px] rounded-full opacity-40 group-hover:opacity-60 transition duration-1000" />
+
+                {/* 하단 바닥 글로우 (더 크게 확장) */}
+                <div className="absolute inset-x-0 bottom-0 h-16 bg-primary/20 blur-[80px] rounded-full scale-150 translate-y-8 opacity-50" />
+
                 <img
-                  src="images/machine/유펄스 사진.png"
+                  src="/images/machine/유펄스 사진1.png"
                   className="max-w-full h-auto relative z-10 drop-shadow-[0_45px_100px_rgba(0,0,0,0.7)] group-hover:scale-[1.03] transition duration-1000 cursor-zoom-in"
                   alt="U-Pulse 장비"
                 />
 
-                {/* 하단 그림자 */}
-                <div className="absolute inset-x-0 bottom-0 h-10 bg-black/40 blur-[40px] rounded-full translate-y-8" />
+                {/* 하단 그림자 강화 */}
+                <div className="absolute inset-x-0 bottom-0 h-8 bg-black/60 blur-[30px] rounded-full translate-y-6 opacity-80" />
               </div>
             </motion.div>
           </div>
@@ -234,7 +238,7 @@ export default function UPulsePage() {
                     strokeWidth="3"
                     initial={{ pathLength: 0, opacity: 0 }}
                     whileInView={{ pathLength: 1, opacity: 1 }}
-                    transition={{ duration: 1.5, delay: i * 0.15 + 0.5, ease: "easeInOut" }}
+                    transition={{ duration: 0.8, delay: i * 0.08 + 0.3, ease: "easeInOut" }}
                     viewport={{ once: true }}
                     className="drop-shadow-[0_0_20px_rgba(0,183,241,0.4)] saturate-150"
                   />
@@ -246,7 +250,7 @@ export default function UPulsePage() {
                     filter="url(#point-glow-large)"
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: i * 0.15 + 1.5 }}
+                    transition={{ duration: 0.4, delay: i * 0.08 + 0.8 }}
                     viewport={{ once: true }}
                   />
                 </motion.g>
@@ -255,7 +259,7 @@ export default function UPulsePage() {
               <motion.g
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ delay: 2.8 }}
+                transition={{ duration: 0.5, delay: 1.2 }}
                 viewport={{ once: true }}
               >
                 <path d="M 680 255 L 820 255" stroke="white" strokeWidth="1.5" strokeDasharray="6 6" opacity="0.3" />
@@ -271,7 +275,7 @@ export default function UPulsePage() {
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.8, delay: 1.5 }}
               viewport={{ once: true }}
               className="glass-panel p-12 relative overflow-hidden group border-primary/20"
             >
@@ -294,7 +298,7 @@ export default function UPulsePage() {
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.8, delay: 1.8 }}
               viewport={{ once: true }}
               className="flex flex-col gap-8"
             >
@@ -559,8 +563,8 @@ export default function UPulsePage() {
               viewport={{ once: true }}
               className="glass-panel p-10 flex flex-col items-center group hover:border-primary/40 transition-all duration-500"
             >
-              <div className="w-20 h-20 mb-8 flex items-center justify-center bg-white/5 rounded-2xl relative overflow-hidden">
-                <svg viewBox="0 0 40 40" className="w-12 h-12">
+              <div className="w-20 h-20 mb-8 flex items-center justify-center bg-white/5 rounded-2xl relative overflow-hidden group-hover:bg-white/10 transition-colors duration-500">
+                <svg viewBox="0 0 40 40" className="w-16 h-16">
                   <g stroke="#00B7F1" strokeWidth="1.5" fill="none">
                     <line x1="10" y1="5" x2="10" y2="35" opacity="0.3" />
                     <line x1="20" y1="5" x2="20" y2="35" opacity="0.3" />
@@ -584,8 +588,8 @@ export default function UPulsePage() {
               viewport={{ once: true }}
               className="glass-panel p-10 flex flex-col items-center group hover:border-primary/40 transition-all duration-500"
             >
-              <div className="w-20 h-20 mb-8 flex items-center justify-center bg-white/5 rounded-2xl relative overflow-hidden">
-                <svg viewBox="0 0 40 40" className="w-12 h-12">
+              <div className="w-20 h-20 mb-8 flex items-center justify-center bg-white/5 rounded-2xl relative overflow-hidden group-hover:bg-white/10 transition-colors duration-500">
+                <svg viewBox="0 0 40 40" className="w-16 h-16">
                   <rect x="8" y="8" width="24" height="24" stroke="white" strokeWidth="1.5" fill="none" opacity="0.4" />
                   <path d="M12,20 L18,26 L28,14" stroke="#00B7F1" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -603,8 +607,8 @@ export default function UPulsePage() {
               viewport={{ once: true }}
               className="glass-panel p-10 flex flex-col items-center group hover:border-primary/40 transition-all duration-500"
             >
-              <div className="w-20 h-20 mb-8 flex items-center justify-center bg-white/5 rounded-2xl relative overflow-hidden">
-                <svg viewBox="0 0 40 40" className="w-12 h-12">
+              <div className="w-20 h-20 mb-8 flex items-center justify-center bg-white/5 rounded-2xl relative overflow-hidden group-hover:bg-white/10 transition-colors duration-500">
+                <svg viewBox="0 0 40 40" className="w-16 h-16">
                   <circle cx="20" cy="20" r="16" stroke="white" strokeWidth="1.2" fill="none" opacity="0.3" />
                   <path d="M10,18 Q15,14 20,18 T30,18" stroke="#FB7185" strokeWidth="1.5" fill="none" />
                   <path d="M10,24 Q15,20 20,24 T30,24" stroke="#00B7F1" strokeWidth="1.5" fill="none" opacity="0.6" />
