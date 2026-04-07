@@ -505,8 +505,7 @@ export default function NPulsePage() {
                                                 <span className="text-primary/70 font-black text-[10px] tracking-[0.3em] uppercase">{item.title}</span>
                                             </div>
                                             <div className="relative">
-                                                <div className="absolute -left-4 top-0 bottom-0 w-[2px] bg-primary scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-500 shadow-[0_0_15px_#00B7F1]" />
-                                                <p className="text-white text-xl md:text-2xl font-black leading-tight tracking-tight whitespace-pre-line transition-all duration-500 group-hover:translate-x-2">
+                                                <p className="text-white text-xl md:text-2xl font-black leading-tight tracking-tight whitespace-pre-line transition-all duration-500">
                                                     {item.text}
                                                 </p>
                                             </div>
