@@ -4,6 +4,7 @@ export const dynamic = 'force-dynamic';
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function UPulsePage() {
   return (
@@ -709,25 +710,31 @@ export default function UPulsePage() {
               <div className="relative glass-panel-dark overflow-hidden border-[#ffffff15] group-hover:border-primary/50 transition-all duration-700 shadow-2xl">
                 <div className="absolute inset-0 bg-tech-grid opacity-25 group-hover:opacity-40 transition-opacity" />
                 <div className="grid grid-cols-3 relative">
-                  {[1, 2, 3].map((idx) => (
-                    <div key={idx} className="aspect-[4/5] border-r border-white/10 last:border-none flex items-center justify-center relative overflow-hidden group/slot">
-                      <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover/slot:opacity-100 transition-opacity duration-500" />
-                      <div className="absolute top-2 left-2 text-[8px] font-black text-white/20 tracking-widest uppercase">POS_0{idx}</div>
-                      <span className="text-white/10 font-bold text-[10px] tracking-[0.4em] uppercase z-10 group-hover:text-primary/40 transition-all duration-500 group-hover:scale-110">Image Data</span>
+                  {[
+                    { id: 1, src: '/images/upulse/cs1left.png', label: 'BEFORE' },
+                    { id: 2, src: '/images/upulse/cs1center.png', label: 'AFTER' },
+                    { id: 3, src: '/images/upulse/cs1right.png', label: 'AFTER' }
+                  ].map((img) => (
+                    <div key={img.id} className={`aspect-[4/5] border-[#ffffff15] flex items-center justify-center relative overflow-hidden group/slot cursor-pointer bg-black/40 ${img.id === 1 ? 'border-r-[2px] border-white/20' : 'border-r last:border-none'}`}>
+                      <Image 
+                        src={img.src} 
+                        alt={`Clinical Case Position ${img.id}`} 
+                        fill 
+                        className={`object-cover ${img.label === 'BEFORE' ? 'opacity-70' : 'opacity-85'} group-hover/slot:opacity-100 group-hover/slot:scale-110 transition-all duration-700 ease-out`}
+                      />
+                      
+                      {/* Before / After Badge */}
+                      <div className={`absolute top-4 left-4 px-2 py-0.5 text-[8px] font-black tracking-widest z-30 ${img.label === 'BEFORE' ? 'bg-white/10 text-white/60 border border-white/20' : 'bg-primary/20 text-primary border border-primary/40 shadow-[0_0_10px_rgba(0,183,241,0.2)]'}`}>
+                        {img.label}
+                      </div>
+
+                      <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover/slot:opacity-100 transition-opacity duration-500 z-10 mix-blend-overlay" />
+                      
                       {/* Corner Accents for Slot */}
-                      <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-white/10" />
-                      <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white/10" />
+                      <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-white/50 z-20" />
+                      <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-white/50 z-20" />
                     </div>
                   ))}
-                </div>
-              </div>
-              <div className="flex mt-8 px-4 justify-between items-end">
-                <div className="flex flex-col">
-                  <span className="text-lg font-black text-white/40 tracking-[0.1em] uppercase group-hover:text-white/60 transition-colors">Before Treatment</span>
-                </div>
-                <div className="w-12 h-px bg-primary/30 mb-2"></div>
-                <div className="flex flex-col text-right">
-                  <span className="text-lg font-black text-primary tracking-[0.1em] uppercase shadow-[0_0_20px_rgba(0,183,241,0.2)]">After Result</span>
                 </div>
               </div>
             </motion.div>
