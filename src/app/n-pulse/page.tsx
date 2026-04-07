@@ -375,7 +375,7 @@ export default function NPulsePage() {
                                 <div className="relative group flex-1">
                                     <div className="aspect-[4/3] bg-black border border-white/10 flex items-center justify-center overflow-hidden group-hover:border-primary/40 transition-all duration-500">
                                         <div className="absolute top-0 left-0 w-6 h-6 bg-white flex items-center justify-center text-[11px] font-black text-black z-20">1</div>
-                                        <img src="/images/npulse/treatment1.png" alt="Treatment Step 1" className="w-full h-full object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 scale-250 mt-25" />
+                                        <img src="/images/npulse/treatment1.png" alt="Treatment Step 1" className="w-full h-full object-contain opacity-90 group-hover:opacity-100 group-hover:scale-275 transition-all duration-700 scale-250 mt-25" />
                                     </div>
                                 </div>
 
@@ -387,7 +387,7 @@ export default function NPulsePage() {
                                 <div className="relative group flex-1">
                                     <div className="aspect-[4/3] bg-black border border-white/10 flex items-center justify-center overflow-hidden group-hover:border-primary/40 transition-all duration-500">
                                         <div className="absolute top-0 left-0 w-6 h-6 bg-white flex items-center justify-center text-[11px] font-black text-black z-20">2</div>
-                                        <img src="/images/npulse/treatment2.png" alt="Treatment Step 2" className="w-full h-full object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 scale-250 mt-25" />
+                                        <img src="/images/npulse/treatment2.png" alt="Treatment Step 2" className="w-full h-full object-contain opacity-90 group-hover:opacity-100 group-hover:scale-275 transition-all duration-700 scale-250 mt-25" />
                                     </div>
                                 </div>
 
@@ -456,17 +456,19 @@ export default function NPulsePage() {
                         </h2>
                         <div className="w-20 h-[2px] bg-primary mx-auto mb-20" />
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto mb-24">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-24">
                             {[
                                 {
                                     id: '01',
                                     title: 'ULTRA MICRO BEAM',
-                                    text: '정교하고 깊게 조사되어\n회복과 재생을 빠르게'
+                                    text: '정교하고 깊게 조사되어\n회복과 재생을 빠르게',
+                                    align: 'left'
                                 },
                                 {
                                     id: '02',
-                                    title: 'PATIENT COMFORT+',
-                                    text: '시술 횟수와 통증은 줄이고\n효과는 높게'
+                                    title: 'PATIENT COMFORT',
+                                    text: '시술 횟수와 통증은 줄이고\n효과는 높게',
+                                    align: 'right'
                                 }
                             ].map((item, i) => (
                                 <motion.div
@@ -477,7 +479,7 @@ export default function NPulsePage() {
                                     viewport={{ once: true }}
                                     className="relative group p-0"
                                 >
-                                    <div className="flex items-start gap-8">
+                                    <div className={`flex items-start gap-8 ${item.align === 'right' ? 'flex-row-reverse text-right' : 'flex-row text-left'}`}>
                                         {/* Step Indicator with Pulse Line */}
                                         <div className="flex flex-col items-center flex-shrink-0 w-10">
                                             <div className="w-10 h-10 rounded-lg border border-primary/30 flex items-center justify-center text-primary font-black text-xs bg-primary/5 shadow-[0_0_15px_rgba(0,183,241,0.2)] group-hover:bg-primary group-hover:text-black transition-all duration-500 relative z-10">
@@ -485,23 +487,18 @@ export default function NPulsePage() {
                                             </div>
 
                                             <div className="relative w-px h-16 mt-3 overflow-hidden">
-                                                {/* Background static line: Reduced height to match text */}
                                                 <div className="absolute inset-0 bg-white/10" />
-
-                                                {/* Internal energy pulse flowing */}
                                                 <motion.div
                                                     animate={{ y: ['-100%', '300%'] }}
                                                     transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
                                                     className="absolute inset-x-0 h-10 bg-gradient-to-b from-transparent via-primary to-transparent opacity-60"
                                                 />
-
-                                                {/* Glow effect on hover */}
                                                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                             </div>
                                         </div>
 
                                         <div className="flex-grow space-y-4 pt-1">
-                                            <div className="flex items-center justify-between border-b border-white/5 pb-2">
+                                            <div className={`flex items-center pb-1 ${item.align === 'right' ? 'justify-end' : 'justify-start'}`}>
                                                 <span className="text-primary/70 font-black text-[10px] tracking-[0.3em] uppercase">{item.title}</span>
                                             </div>
                                             <div className="relative">
@@ -509,7 +506,7 @@ export default function NPulsePage() {
                                                     {item.text}
                                                 </p>
                                             </div>
-                                            <div className="flex gap-1.5 opacity-20 group-hover:opacity-100 transition-opacity duration-700">
+                                            <div className={`flex gap-1.5 opacity-20 group-hover:opacity-100 transition-opacity duration-700 ${item.align === 'right' ? 'justify-end' : 'justify-start'}`}>
                                                 {[1, 2, 3, 4, 5].map((dot) => (
                                                     <div key={dot} className="w-1 h-1 rounded-full bg-primary" />
                                                 ))}
@@ -522,7 +519,7 @@ export default function NPulsePage() {
                     </motion.div>
 
                     {/* Bottom: Technical Visualizations side-by-side */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -531,27 +528,27 @@ export default function NPulsePage() {
                             className="space-y-6"
                         >
                             <div className="text-center group">
-                                <span className="text-primary/60 font-black text-[10px] tracking-[0.4em] uppercase block mb-1 group-hover:text-primary transition-colors">Micro Beam Technology</span>
-                                <span className="text-white font-bold text-lg tracking-widest">Min. 80~100um</span>
+                                <span className="text-primary/60 font-black text-[10px] tracking-[0.4em] uppercase block mb-1">Micro Beam Technology</span>
+                                <div className="flex items-center justify-center gap-2">
+                                    <span className="text-white font-bold text-lg tracking-widest">Min. Beam Size</span>
+                                    <span className="text-primary font-black text-xl tracking-tighter">80~100um</span>
+                                </div>
                             </div>
-                            <div className="aspect-square glass-panel bg-black/40 relative overflow-hidden flex items-center justify-center p-8 border-white/10">
+                            <div className="aspect-[1.65/1] glass-panel bg-black/40 relative overflow-hidden flex items-center justify-center p-3 border-white/10 group transition-all duration-500 cursor-pointer hover:border-primary/50 hover:shadow-[0_0_30px_rgba(0,183,241,0.2)]">
                                 <div className="absolute inset-0 bg-tech-grid opacity-20" />
-                                <div className="grid grid-cols-12 gap-2 opacity-80 scale-110">
-                                    {Array.from({ length: 144 }).map((_, i) => (
-                                        <div
-                                            key={i}
-                                            className="w-1.5 h-1.5 rounded-full bg-primary/30 shadow-[0_0_5px_rgba(0,183,241,0.3)] animate-pulse"
-                                            style={{
-                                                animationDelay: `${(i % 20) * 0.1}s`,
-                                                backgroundColor: i === 54 || i === 78 || i === 92 ? '#00B7F1' : '',
-                                                boxShadow: i === 54 || i === 78 || i === 92 ? '0 0 10px #00B7F1' : ''
-                                            }}
-                                        />
-                                    ))}
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="w-24 h-24 border border-primary/20 rounded-full animate-[spin_10s_linear_infinite]" />
-                                        <div className="w-16 h-16 border-2 border-primary/40 rounded-full animate-ping" />
+
+                                {/* Unified Content Wrapper (Scales together) */}
+                                <div className="relative w-full h-full flex items-center justify-center transition-all duration-700 scale-125 group-hover:scale-[1.45]">
+                                    {/* Focal Point Circle */}
+                                    <div className="absolute top-[34%] left-[53%] -translate-x-1/2 w-6 h-6 rounded-full border-2 border-primary z-20 shadow-[0_0_15px_rgba(0,183,241,0.4)]">
+                                        <div className="absolute inset-0 rounded-full border border-primary animate-ping opacity-30" />
                                     </div>
+
+                                    <img
+                                        src="/images/npulse/smaller.png"
+                                        alt="Micro Beam Technology"
+                                        className="w-full h-full object-contain relative z-10 opacity-90 group-hover:opacity-100 transition-all duration-700"
+                                    />
                                 </div>
                             </div>
                         </motion.div>
@@ -567,29 +564,13 @@ export default function NPulsePage() {
                                 <span className="text-primary/60 font-black text-[10px] tracking-[0.4em] uppercase block mb-1">Tissue Interaction</span>
                                 <span className="text-white font-bold text-lg tracking-widest">Deep Layer Delivery</span>
                             </div>
-                            <div className="flex-grow aspect-square md:aspect-auto glass-panel bg-black/40 relative overflow-hidden flex flex-col border-white/10 pt-10">
-                                <div className="absolute inset-x-0 bottom-0 h-[65%] opacity-50">
-                                    <div className="h-full w-full bg-gradient-to-b from-[#8B4444] via-[#5C2E2E] to-[#3D1F1F]" />
-                                    <div className="absolute top-0 inset-x-0 h-6 bg-[#C28282] rounded-full blur-[4px] opacity-40 shadow-[0_0_20px_rgba(194,130,130,0.3)]" />
-                                </div>
-                                <div className="flex justify-around items-start h-full px-8 relative z-10">
-                                    {[1, 2, 3, 4, 5].map((i) => (
-                                        <div key={i} className="flex flex-col items-center h-full">
-                                            <motion.div
-                                                initial={{ height: 0 }}
-                                                whileInView={{ height: '70%' }}
-                                                transition={{ duration: 1.5, delay: i * 0.2 }}
-                                                className="w-0.5 bg-gradient-to-b from-primary via-white to-transparent shadow-[0_0_15px_rgba(0,183,241,0.8)]"
-                                            />
-                                            <div className="w-5 h-5 rounded-full bg-orange-500/40 blur-[5px] -mt-2" />
-                                            <div className="w-2.5 h-2.5 rounded-full bg-orange-500 -mt-4 shadow-[0_0_20px_#f97316] animate-pulse" />
-                                        </div>
-                                    ))}
-                                </div>
-                                <div className="absolute bottom-6 left-8 flex items-center gap-3">
-                                    <div className="w-10 h-px bg-primary/40" />
-                                    <span className="text-[11px] text-primary/80 font-black uppercase tracking-[0.3em]">Vertical Energy Flow</span>
-                                </div>
+                            <div className="aspect-[1.65/1] glass-panel bg-black/40 relative overflow-hidden flex flex-col items-center justify-center border-white/10 p-3 group hover:border-primary/50 hover:shadow-[0_0_30px_rgba(0,183,241,0.2)] transition-all duration-500 cursor-pointer">
+                                <div className="absolute inset-0 bg-tech-grid opacity-20" />
+                                <img
+                                    src="/images/npulse/deeplayer.png"
+                                    alt="Deep Layer Delivery"
+                                    className="w-full h-full object-contain relative z-10 opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
+                                />
                             </div>
                         </motion.div>
                     </div>
@@ -665,35 +646,59 @@ export default function NPulsePage() {
                                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-primary/10 blur-3xl animate-pulse" />
 
                                 {/* 3개 코어 연결선 */}
-                                <svg viewBox="0 0 400 400" className="absolute inset-0 w-full h-full opacity-30">
+                                <svg viewBox="0 0 400 400" className="absolute inset-0 w-full h-full opacity-30 pointer-events-none">
                                     <path d="M200,80 L100,280 L300,280 Z" fill="none" stroke="#00B7F1" strokeWidth="1" strokeDasharray="5,5" />
                                     <circle cx="200" cy="80" r="4" fill="#00B7F1" />
                                     <circle cx="100" cy="280" r="4" fill="#00B7F1" />
                                     <circle cx="300" cy="280" r="4" fill="#00B7F1" />
                                 </svg>
 
-                                <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                                     {/* 상단: 파워보드 */}
-                                    <div className="absolute top-0 w-36 h-36 rounded-full glass-panel flex items-center justify-center text-center p-4 group hover:border-primary/50 transition-all duration-500 hover:-translate-y-2">
+                                    <motion.div
+                                        initial={{ borderColor: "rgba(0, 183, 241, 0.2)", boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)" }}
+                                        whileHover={{
+                                            borderColor: "#00B7F1",
+                                            boxShadow: "0 0 50px rgba(0, 183, 241, 0.6)"
+                                        }}
+                                        transition={{ duration: 0 }}
+                                        className="absolute -top-7 w-36 h-36 rounded-full glass-panel flex items-center justify-center text-center p-4 cursor-pointer pointer-events-auto z-30 border"
+                                    >
                                         <div className="space-y-1">
                                             <div className="text-primary font-black text-[10px] tracking-widest">UNIT 01</div>
                                             <div className="text-white font-black text-[15px]">파워보드</div>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                     {/* 좌하단: 글래스튜브 */}
-                                    <div className="absolute bottom-10 left-0 w-36 h-36 rounded-full glass-panel flex items-center justify-center text-center p-4 group hover:border-primary/50 transition-all duration-500 hover:-translate-x-2">
+                                    <motion.div
+                                        initial={{ borderColor: "rgba(0, 183, 241, 0.2)", boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)" }}
+                                        whileHover={{
+                                            borderColor: "#00B7F1",
+                                            boxShadow: "0 0 50px rgba(0, 183, 241, 0.6)"
+                                        }}
+                                        transition={{ duration: 0 }}
+                                        className="absolute bottom-10 left-0 w-36 h-36 rounded-full glass-panel flex items-center justify-center text-center p-4 cursor-pointer pointer-events-auto z-30 border"
+                                    >
                                         <div className="space-y-1">
                                             <div className="text-primary font-black text-[10px] tracking-widest">UNIT 02</div>
                                             <div className="text-white font-black text-[15px]">높은 파워의<br />글래스튜브</div>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                     {/* 우하단: 레귤레이터 */}
-                                    <div className="absolute bottom-10 right-0 w-36 h-36 rounded-full glass-panel flex items-center justify-center text-center p-4 group hover:border-primary/50 transition-all duration-500 hover:translate-x-2">
+                                    <motion.div
+                                        initial={{ borderColor: "rgba(0, 183, 241, 0.2)", boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)" }}
+                                        whileHover={{
+                                            borderColor: "#00B7F1",
+                                            boxShadow: "0 0 50px rgba(0, 183, 241, 0.6)"
+                                        }}
+                                        transition={{ duration: 0 }}
+                                        className="absolute bottom-10 right-0 w-36 h-36 rounded-full glass-panel flex items-center justify-center text-center p-4 cursor-pointer pointer-events-auto z-30 border"
+                                    >
                                         <div className="space-y-1">
                                             <div className="text-primary font-black text-[10px] tracking-widest">UNIT 03</div>
                                             <div className="text-white font-black text-[15px]">고성능의<br />레귤레이터</div>
                                         </div>
-                                    </div>
+                                    </motion.div>
 
                                     {/* 중앙 에너지 코어 노드 */}
                                     <div className="w-4 h-4 bg-primary rounded-full shadow-[0_0_20px_#00B7F1] animate-ping opacity-40" />
