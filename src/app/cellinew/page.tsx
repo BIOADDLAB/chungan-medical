@@ -119,13 +119,13 @@ export default function CellinewPage() {
               viewport={{ once: true }}
               className="relative flex justify-center lg:justify-end"
             >
-              <div className="relative w-full max-w-[500px]">
-                {/* Visual Glow behind the machine */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/10 blur-[120px] rounded-full animate-pulse-light" />
+              <div className="relative w-full max-w-[500px] group cursor-pointer">
+                {/* Visual Glow behind the machine (Hover only) */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/20 blur-[100px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
                 <img
                   src="images/cellinew/셀리뉴 사진.png"
                   alt="CELLINEW Machine"
-                  className="relative z-10 w-full h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
+                  className="relative z-10 w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] group-hover:drop-shadow-[0_0_40px_rgba(0,183,241,0.3)] group-hover:scale-105 transition-all duration-700 ease-out"
                 />
               </div>
             </motion.div>
@@ -225,12 +225,13 @@ export default function CellinewPage() {
                     </li>
                   </ul>
 
-                  <div className="flex justify-start pt-6">
-                    <div className="h-44 w-full bg-white/5 border border-white/10 rounded-2xl flex flex-col items-center justify-center gap-3 group/box hover:bg-white/[0.08] transition-colors duration-500">
-                      <div className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center">
-                        <span className="text-white/20 text-xs font-black">IMG</span>
-                      </div>
-                      <span className="text-white/20 text-[10px] tracking-[0.3em] font-black uppercase">Technical Visual Placeholder</span>
+                  <div className="flex justify-center pt-6 mt-4">
+                    <div className="relative w-full max-w-[460px] h-48 md:h-56 bg-white rounded-2xl overflow-hidden group/box hover:border-primary/50 hover:shadow-[0_0_25px_rgba(0,183,241,0.3)] border-2 border-transparent transition-all duration-500 p-2 flex items-center justify-center">
+                      <img
+                        src="/images/cellinew/mechanism.png"
+                        alt="Mechanism Diagram"
+                        className="w-full h-full object-contain transform group-hover/box:scale-110 transition-transform duration-700 ease-out scale-125 mt-3"
+                      />
                     </div>
                   </div>
                 </div>
