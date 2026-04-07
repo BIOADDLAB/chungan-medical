@@ -230,7 +230,7 @@ export default function CellinewPage() {
                       <img
                         src="/images/cellinew/mechanism.png"
                         alt="Mechanism Diagram"
-                        className="w-full h-full object-contain transform group-hover/box:scale-110 transition-transform duration-700 ease-out scale-125 mt-3"
+                        className="w-full h-full object-contain transform group-hover/box:scale-135 transition-transform duration-700 ease-out scale-125 mt-3"
                       />
                     </div>
                   </div>
