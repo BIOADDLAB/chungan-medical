@@ -656,7 +656,7 @@ export default function UPulsePage() {
         <div className="absolute inset-0 bg-tech-dots opacity-20 mix-blend-screen pointer-events-none" />
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
-        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+        <div className="max-w-5xl mx-auto px-6 relative z-10">
           {/* Header section with Tech Label - Exact Match to PICO-K TECH 01 */}
           <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
             <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap uppercase">CLINICAL DATA</span>
@@ -687,7 +687,7 @@ export default function UPulsePage() {
 
 
           {/* Grid Layout (Restored 6:4:5:5 structure with premium tech styling) */}
-          <div className="grid grid-cols-1 lg:grid-cols-11 gap-y-24 lg:gap-x-12 px-2 md:px-0">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-24 lg:gap-x-20 px-2 md:px-0">
 
             {/* Case 1: 점 제거, 흉터 개선 (6 Columns) */}
             <motion.div
@@ -709,32 +709,27 @@ export default function UPulsePage() {
               </h4>
               <div className="relative glass-panel-dark overflow-hidden border-[#ffffff15] group-hover:border-primary/50 transition-all duration-700 shadow-2xl">
                 <div className="absolute inset-0 bg-tech-grid opacity-25 group-hover:opacity-40 transition-opacity" />
-                <div className="grid grid-cols-3 relative">
+                <div className="grid grid-cols-2 relative h-full">
                   {[
                     { id: 1, src: '/images/upulse/cs1left.png', label: 'BEFORE' },
-                    { id: 2, src: '/images/upulse/cs1center.png', label: 'AFTER' },
                     { id: 3, src: '/images/upulse/cs1right.png', label: 'AFTER' }
                   ].map((img) => (
-                    <div key={img.id} className={`aspect-[4/5] border-[#ffffff15] flex items-center justify-center relative overflow-hidden group/slot cursor-pointer bg-black/40 ${img.id === 1 ? 'border-r-[2px] border-white/20' : 'border-r last:border-none'}`}>
-                      <Image 
-                        src={img.src} 
-                        alt={`Clinical Case Position ${img.id}`} 
-                        fill 
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 300px"
+                    <div key={img.id} className={`aspect-[4/5] border-[#ffffff15] flex items-center justify-center relative overflow-hidden group/slot cursor-pointer bg-black/40 ${img.id === 1 ? 'border-r border-white/20' : ''}`}>
+                      <Image
+                        src={img.src}
+                        alt={`Clinical Case Position ${img.id}`}
+                        fill
+                        sizes="(max-width: 768px) 50vw, 300px"
                         priority={img.id === 1}
                         className={`object-cover ${img.label === 'BEFORE' ? 'opacity-70' : 'opacity-85'} group-hover/slot:opacity-100 group-hover/slot:scale-110 transition-all duration-700 ease-out`}
                       />
-                      
+
                       {/* Before / After Badge */}
-                      <div className={`absolute top-4 left-4 px-2 py-0.5 text-[8px] font-black tracking-widest z-30 ${img.label === 'BEFORE' ? 'bg-white/10 text-white/60 border border-white/20' : 'bg-primary/20 text-primary border border-primary/40 shadow-[0_0_10px_rgba(0,183,241,0.2)]'}`}>
+                      <div className={`absolute top-0 left-0 p-3 text-[9px] font-black uppercase tracking-[0.2em] z-30 border-r border-b ${img.label === 'BEFORE' ? 'text-white bg-black/60 border-white/20' : 'text-primary bg-black/60 border-primary/40 shadow-[0_0_10px_rgba(0,183,241,0.2)]'}`}>
                         {img.label}
                       </div>
 
                       <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover/slot:opacity-100 transition-opacity duration-500 z-10 mix-blend-overlay" />
-                      
-                      {/* Corner Accents for Slot */}
-                      <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-white/50 z-20" />
-                      <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-white/50 z-20" />
                     </div>
                   ))}
                 </div>
@@ -747,7 +742,7 @@ export default function UPulsePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="lg:col-span-11 lg:mt-0 xl:col-span-4 xl:col-start-8 group"
+              className="lg:col-span-6 group"
             >
               <div className="mb-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -759,9 +754,9 @@ export default function UPulsePage() {
               <h4 className="text-2xl font-black mb-8 text-white tracking-tight group-hover:text-primary transition-colors duration-500">
                 점, 검버섯 제거
               </h4>
-              <div className="flex flex-col gap-10">
-                <div className="relative glass-panel-dark aspect-[3/1] border-[#ffffff15] group-hover:border-primary/40 transition-all duration-700 overflow-hidden flex items-center justify-center group/slot shadow-lg cursor-pointer">
-                  <Image 
+              <div className="flex flex-col gap-6">
+                <div className="relative glass-panel-dark aspect-[3.6/1] border-[#ffffff15] group-hover:border-primary/40 transition-all duration-700 overflow-hidden flex items-center justify-center group/slot shadow-lg cursor-pointer">
+                  <Image
                     src="/images/upulse/cs2top.png"
                     alt="Clinical Case - Before"
                     fill
@@ -770,16 +765,16 @@ export default function UPulsePage() {
                   />
                   <div className="absolute top-0 left-0 p-3 text-[9px] font-black text-white bg-black/60 uppercase tracking-[0.2em] border-r border-b border-white/20 z-20">BEFORE</div>
                 </div>
-                <div className="relative glass-panel-dark aspect-[3/1] border-primary/30 bg-primary/5 group-hover:border-primary transition-all duration-700 overflow-hidden flex items-center justify-center shadow-[0_0_40px_rgba(0,183,241,0.1)] group/slot cursor-pointer">
-                  <Image 
+                <div className="relative glass-panel-dark aspect-[3.6/1] border-primary/30 bg-primary/5 group-hover:border-primary transition-all duration-700 overflow-hidden flex items-center justify-center shadow-[0_0_40px_rgba(0,183,241,0.1)] group/slot cursor-pointer">
+                  <Image
                     src="/images/upulse/cs2bottom.png"
                     alt="Clinical Case - After"
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"
                     className="object-cover opacity-85 group-hover/slot:opacity-100 group-hover/slot:scale-105 transition-all duration-700 ease-out"
+                    priority
                   />
                   <div className="absolute top-0 left-0 p-3 text-[9px] font-black text-primary bg-black/60 uppercase tracking-[0.2em] border-r border-b border-primary/40 z-20">AFTER</div>
-
                 </div>
               </div>
             </motion.div>
@@ -790,11 +785,11 @@ export default function UPulsePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="lg:col-span-5 group"
+              className="lg:col-span-6 group"
             >
               <div className="mb-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full" />
+                  <div className="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_rgba(0,183,241,0.8)] animate-pulse" />
                   <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_03</span>
                 </div>
                 <div className="flex-1 mx-6 h-[1px] bg-gradient-to-r from-primary/30 to-transparent"></div>
@@ -806,7 +801,7 @@ export default function UPulsePage() {
                 <div className="absolute inset-0 bg-tech-grid opacity-15" />
                 <div className="grid grid-cols-2 relative h-full">
                   <div className="aspect-square border-r border-white/10 flex items-center justify-center relative group/slot overflow-hidden cursor-pointer">
-                    <Image 
+                    <Image
                       src="/images/upulse/cs3left.png"
                       alt="Clinical Case - Before"
                       fill
@@ -816,7 +811,7 @@ export default function UPulsePage() {
                     <div className="absolute top-0 left-0 p-3 text-[9px] font-black text-white bg-black/60 uppercase tracking-[0.2em] border-r border-b border-white/20 z-20">BEFORE</div>
                   </div>
                   <div className="aspect-square flex items-center justify-center relative group/slot overflow-hidden bg-primary/5 cursor-pointer">
-                    <Image 
+                    <Image
                       src="/images/upulse/cs3right.png"
                       alt="Clinical Case - After"
                       fill
@@ -835,7 +830,7 @@ export default function UPulsePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="lg:col-span-5 lg:col-start-7 group"
+              className="lg:col-span-6 group"
             >
               <div className="mb-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -851,7 +846,7 @@ export default function UPulsePage() {
                 <div className="absolute inset-0 bg-tech-dots opacity-15" />
                 <div className="grid grid-cols-2 relative h-full">
                   <div className="aspect-square border-r border-white/10 flex items-center justify-center relative group/slot overflow-hidden cursor-pointer">
-                    <Image 
+                    <Image
                       src="/images/upulse/cs4left.png"
                       alt="Clinical Case - Before"
                       fill
@@ -861,7 +856,7 @@ export default function UPulsePage() {
                     <div className="absolute top-0 left-0 p-3 text-[9px] font-black text-white bg-black/60 uppercase tracking-[0.2em] border-r border-b border-white/20 z-20">BEFORE</div>
                   </div>
                   <div className="aspect-square flex items-center justify-center relative group/slot overflow-hidden bg-primary/5 cursor-pointer">
-                    <Image 
+                    <Image
                       src="/images/upulse/cs4right.png"
                       alt="Clinical Case - After"
                       fill
