@@ -241,7 +241,7 @@ export default function NPulsePage() {
                         />
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
                         {/* 좌측: 기술 리스트 */}
                         <div className="lg:col-span-6 space-y-12">
                             <motion.h2
@@ -290,84 +290,33 @@ export default function NPulsePage() {
                             </div>
                         </div>
 
-                        {/* 우측: 비교 일러스트 패널 */}
+                        {/* 우측: 비교 일러스트 (투명 배경 PNG에 맞게 테두리 단순화 및 제거) */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
                             viewport={{ once: true }}
-                            className="lg:col-span-6 relative self-start"
+                            className="lg:col-span-6 relative flex justify-center lg:justify-start"
                         >
-                            <div className="glass-panel p-5 md:p-7 relative overflow-hidden bg-tech-grid/30">
-                                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-50" />
-
-                                <div className="relative z-10 space-y-4">
-                                    {/* Item 01: N-Pulse Pro */}
-                                    <div className="space-y-3 group">
-                                        <div className="flex justify-between items-center px-1">
-                                            <span className="text-slate-500 font-bold text-[9px] tracking-[0.4em] uppercase group-hover:text-primary/50 transition-colors">Pulse Analysis</span>
-                                            <span className="text-white font-black text-[10px] tracking-widest uppercase">N-PULSE PRO</span>
-                                        </div>
-                                        <div className="relative aspect-[21/10] glass-panel-dark bg-[#0a0f12] flex items-center justify-center p-2 border-white/5 group-hover:border-primary/20 transition-all duration-700 overflow-hidden">
-                                            <svg viewBox="0 0 500 200" className="w-full h-full opacity-90 group-hover:opacity-100 transition-opacity duration-700">
-                                                <text x="115" y="35" textAnchor="middle" className="fill-[#888888] text-[15px] font-medium tracking-wide">Other</text>
-                                                <text x="345" y="35" textAnchor="middle" className="fill-white text-[15px] font-bold tracking-wide">N-Pulse Pro</text>
-
-                                                {/* Left Side: Other (Light Grey) */}
-                                                <g transform="translate(80, 45)">
-                                                    {/* Body (Tilted Parallelogram) */}
-                                                    <polygon points="0,0 45,0 70,110 25,110" fill="#B3B3B3" />
-                                                    {/* Left thick tip */}
-                                                    <polygon points="37,110 47,110 56,150 46,150" fill="#B3B3B3" />
-                                                    {/* Right thin tip */}
-                                                    <polygon points="55,110 59,110 64,130 60,130" fill="#B3B3B3" />
-                                                    {/* Splattered energy trace */}
-                                                    <ellipse cx="51" cy="156" rx="16" ry="4" fill="#D4D4D4" />
-                                                </g>
-
-                                                {/* Right Side: N-Pulse Pro (Teal/Slate) */}
-                                                <g transform="translate(310, 45)">
-                                                    {/* Body */}
-                                                    <polygon points="0,0 45,0 70,110 25,110" fill="#446775" />
-                                                    {/* Left short thin tip */}
-                                                    <polygon points="36,110 40,110 45,130 41,130" fill="#446775" />
-                                                    {/* Main right beam (sharp, tapered point) */}
-                                                    <polygon points="46,110 56,110 62,155 60,155" fill="#446775" />
-                                                    {/* Precise target dot */}
-                                                    <ellipse cx="61" cy="158" rx="7" ry="2" fill="#6997A8" />
-                                                </g>
-                                            </svg>
-                                        </div>
-                                    </div>
-
-                                    <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-                                    {/* Item 02: N-Pulse FX */}
-                                    <div className="space-y-3 group">
-                                        <div className="flex justify-between items-center px-1">
-                                            <span className="text-slate-500 font-bold text-[9px] tracking-[0.4em] uppercase group-hover:text-primary/50 transition-colors">Depth Control</span>
-                                            <span className="text-white font-black text-[10px] tracking-widest uppercase">N-PULSE FX</span>
-                                        </div>
-                                        <div className="relative aspect-[21/10] glass-panel-dark bg-[#0a0f12] flex items-center justify-center p-2 border-white/5 group-hover:border-primary/20 transition-all duration-700">
-                                            <svg viewBox="0 0 500 200" className="w-full h-full opacity-90 group-hover:opacity-100 transition-opacity duration-700">
-                                                <text x="130" y="35" textAnchor="middle" className="fill-[#888888] text-[15px] font-medium tracking-wide">Other</text>
-                                                <text x="345" y="35" textAnchor="middle" className="fill-white text-[15px] font-bold tracking-wide">N-Pulse FX</text>
-
-                                                {/* Connecting Top Boundary Line */}
-                                                <line x1="50" y1="60" x2="450" y2="60" stroke="#777" strokeWidth="1.5" />
-
-                                                {/* Left Side: Other (Thick curved U-shape) */}
-                                                <path d="M 60,60 C 90,210 170,210 200,60 L 170,60 C 150,150 110,150 90,60 Z" fill="#B3B3B3" />
-
-                                                {/* Right Side: N-Pulse FX (Deep, narrow) */}
-                                                <g transform="translate(325, 60)">
-                                                    <path d="M 0,0 L 0,110 A 20,20 0 0 0 40,110 L 40,0 Z" fill="#548C9E" />
-                                                    <path d="M 16,0 L 16,108 A 4,4 0 0 0 24,108 L 24,0 Z" fill="white" />
-                                                </g>
-                                            </svg>
-                                        </div>
-                                    </div>
+                            {/* 푸른 빛의 이중 테두리/그라데이션 싹 제거, 깔끔한 단일 컨테이너로 통일 */}
+                            <div className="relative w-full max-w-sm lg:max-w-md lg:ml-6 group rounded-xl border border-white/10 bg-black/40 p-6 md:p-8 hover:border-primary/60 hover:shadow-[0_0_30px_rgba(0,183,241,0.25)] hover:scale-[1.02] transition-all duration-500 cursor-pointer overflow-hidden">
+                                {/* 텍스트 라벨 오버레이 (상단) */}
+                                <div className="absolute top-8 left-0 w-full z-20 pointer-events-none">
+                                    <span className="absolute left-[30%] -translate-x-1/2 text-[#888888] text-sm md:text-base font-medium tracking-tight">Other</span>
+                                    <span className="absolute left-[59%] -translate-x-1/2 text-white text-sm md:text-base font-black tracking-tight">N-Pulse Pro</span>
                                 </div>
+
+                                {/* 텍스트 라벨 오버레이 (하단) */}
+                                <div className="absolute top-[49%] left-0 w-full z-20 pointer-events-none">
+                                    <span className="absolute left-[37%] -translate-x-1/2 text-[#888888] text-sm md:text-base font-medium tracking-tight">Other</span>
+                                    <span className="absolute left-[66%] -translate-x-1/2 text-white text-sm md:text-base font-black tracking-tight">N-Pulse FX</span>
+                                </div>
+
+                                <img
+                                    src="/images/npulse/advanced.png"
+                                    alt="N-Pulse Advanced Technology"
+                                    className="w-full h-auto max-h-[480px] object-contain opacity-95 group-hover:opacity-100 transition-all duration-700 relative z-10"
+                                />
                             </div>
                         </motion.div>
                     </div>

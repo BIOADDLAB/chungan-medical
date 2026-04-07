@@ -931,7 +931,7 @@ export default function UPulsePage() {
                 {/* 30W Image Column */}
                 <div className="col-span-4 md:col-span-3">
                   <div className={`aspect-square relative overflow-hidden transition-all duration-500 ${idx === 4 ? '' : 'glass-panel-dark border-white/5 group-hover:border-white/20'}`}>
-                    <Image 
+                    <Image
                       src={row.img30}
                       alt={`30W Result - ${row.label}`}
                       fill
@@ -946,7 +946,7 @@ export default function UPulsePage() {
                     <div className="h-px flex-1 border-t border-dashed border-white" />
                     <div className="h-px flex-1 border-t border-dashed border-white" />
                   </div>
-                  
+
                   <div className="bg-white/5 border border-white/10 px-3 md:px-6 py-1 md:py-2 mb-2 group-hover:border-primary/40 group-hover:bg-primary/5 transition-all duration-300">
                     <span className="text-white font-black text-[11px] md:text-sm tracking-widest whitespace-nowrap group-hover:text-primary transition-colors">{row.label}</span>
                   </div>
@@ -956,7 +956,7 @@ export default function UPulsePage() {
                 {/* U-Pulse Image Column */}
                 <div className="col-span-4 md:col-span-3">
                   <div className={`aspect-square relative overflow-hidden transition-all duration-500 shadow-[0_10px_30px_rgba(0,0,0,0.5)] ${idx === 4 ? '' : 'glass-panel-dark border-white/5 group-hover:border-primary/40'}`}>
-                    <Image 
+                    <Image
                       src={row.imgUp}
                       alt={`U-Pulse Result - ${row.label}`}
                       fill
