@@ -207,55 +207,175 @@ export default function VRoAdvancePage() {
         </div>
       </section>
 
-      {/* ④ RM (RF-Microneedle) Mechanism Section */}
       <section id="rm-mechanism" className="py-28 bg-[#050810] relative overflow-hidden border-t border-white/5 leading-none">
         <div className="max-w-screen-xl mx-auto px-6 relative z-10 leading-none">
-          <div className="flex items-baseline gap-6 mb-20 relative leading-none">
-            <span className="text-[140px] md:text-[200px] font-black text-white/[0.03] leading-none select-none -ml-4 font-inter tracking-tighter block">01</span>
-            <div className="z-10 border-b border-white/10 w-full pb-10 ml-6 leading-none">
-              <h2 className="text-primary text-5xl md:text-7xl font-black leading-none mb-6 uppercase tracking-tighter font-inter font-inter">Multi & Micro</h2>
-              <h4 className="text-white/40 text-xl font-bold mb-6 tracking-tight uppercase font-inter leading-none">RM(RF-Microneedle) Handpiece</h4>
-              <p className="text-white text-2xl md:text-4xl font-black tracking-tighter break-keep leading-snug">
-                RM 핸드피스로 <span className="text-primary">피부 속까지 전달하는 RF 에너지</span>
-              </p>
+          {/* Header Title Area (PICO-K Style) */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-16 text-center flex flex-col items-center"
+          >
+            {/* 배지 */}
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">
+              HANDPIECE
             </div>
-          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center leading-none">
+            {/* 타이틀 */}
+            <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-4 uppercase font-inter leading-tight">
+              <span className="hero-title-main">MULTI & </span>
+              <span className="hero-title-highlight drop-shadow-[0_0_10px_rgba(0,183,241,0.3)]">MICRO</span>
+            </h2>
+
+            {/* 밑줄 */}
+            <div className="w-20 h-[2px] bg-primary mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+
+            {/* 설명 */}
+            <p className="text-slate-300 text-lg font-medium leading-relaxed max-w-xl break-keep drop-shadow-md text-center">
+              RM 핸드피스로 <span className="text-primary font-bold">피부 속까지 전달하는 RF 에너지</span>를 구현합니다.
+            </p>
+          </motion.div>
+
+          {/* Main Visual & Texts (Top) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center leading-none mb-16">
+
+            {/* Left: Main Handpiece Tip Image Space */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="aspect-square bg-white/[0.02] rounded-[40px] border border-white/10 flex items-center justify-center relative overflow-hidden group shadow-2xl"
+              className="lg:col-span-6 bg-white/[0.02] rounded-[32px] border border-white/10 hover:border-[#00B7F1]/50 hover:shadow-[0_0_30px_rgba(0,183,241,0.2)] transition-all duration-500 flex flex-col items-center justify-center relative overflow-hidden group shadow-2xl p-4 lg:p-6"
             >
               <div className="absolute inset-0 bg-tech-grid opacity-10" />
-              <div className="w-20 h-20 bg-primary/5 blur-[40px] rounded-full group-hover:scale-150 transition-transform duration-1000" />
-              <span className="text-primary/20 text-sm font-black uppercase tracking-[0.5em] z-10">Technical Illustration</span>
+              <div className="w-24 h-24 bg-primary/10 blur-[40px] rounded-full group-hover:scale-[1.5] transition-transform duration-1000" />
+
+              {/* 실제 이미지 */}
+              <div className="relative z-10 w-full h-[180px] md:h-[200px] flex items-center justify-center">
+                <img
+                  src="/images/vro_advance/micro.png"
+                  alt="V-RO Advance Micro Tip"
+                  className="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] group-hover:scale-165 transition-transform duration-500 scale-150 -mt-25"
+                />
+              </div>
             </motion.div>
 
-            <div className="space-y-8 leading-none">
-              {[
-                { title: '0.25Φ Microneedle', desc: '가장 얇은 니들로 자극 최소화 및 정밀 냉각 타겟팅' },
-                { title: 'Gold Plating System', desc: '순금 도금 니들을 통한 압도적인 에너지 전도 효율' }
-              ].map((box, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: idx * 0.2 }}
-                  viewport={{ once: true }}
-                  className="bg-white/[0.03] p-8 rounded-3xl border border-white/10 shadow-xl group hover:border-primary/30 transition-all leading-none text-left"
-                >
-                  <div className="inline-block bg-primary/10 border border-primary/40 text-primary px-6 py-2 text-lg font-black rounded-full mb-4 font-inter uppercase leading-none">
-                    {box.title}
+            {/* Right: Technical Texts */}
+            <div className="lg:col-span-6 flex flex-col justify-center gap-5 lg:pl-10">
+              {/* Feature 1 */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-[#050810] relative overflow-hidden rounded-[24px] border border-white/5 p-7 flex flex-col justify-center group hover:border-[#00B7F1]/30 transition-all duration-500 shadow-2xl w-full max-w-lg"
+              >
+                <div className="absolute top-0 right-0 w-24 h-24 bg-[#00B7F1]/5 blur-[30px] rounded-full transition-all duration-500 group-hover:bg-[#00B7F1]/10 group-hover:scale-150" />
+                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#00B7F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                <div className="flex items-center gap-3 mb-5 relative z-10">
+                  <div className="w-10 h-10 rounded-full bg-[#00B7F1]/10 flex items-center justify-center border border-[#00B7F1]/20 shadow-[0_0_15px_rgba(0,183,241,0.1)]">
+                    <span className="text-[#00B7F1] text-xs font-black tracking-widest">01</span>
                   </div>
-                  <p className="text-slate-400 text-lg font-bold tracking-tighter leading-snug break-keep leading-none">{box.desc}</p>
-                </motion.div>
-              ))}
-              <div className="text-right leading-none">
-                <span className="text-slate-600 text-sm font-bold tracking-tighter">* 최소 0.1mm 단위 조절 시스템 탑재</span>
+                  <h4 className="text-xs border-b border-[#00B7F1]/30 pb-0.5 font-black tracking-widest text-[#00B7F1] uppercase">0.25Φ Microneedle</h4>
+                </div>
+
+                <h3 className="text-white text-xl lg:text-2xl font-bold mb-3 tracking-tighter leading-tight relative z-10 break-keep">
+                  얇게 가공된 Microneelde 사용으로 정밀하게
+                </h3>
+              </motion.div>
+
+              {/* Feature 2 */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-[#050810] relative overflow-hidden rounded-[24px] border border-white/5 p-7 flex flex-col justify-center group hover:border-[#D8B490]/50 transition-all duration-500 shadow-2xl w-full max-w-lg"
+              >
+                <div className="absolute top-0 right-0 w-24 h-24 bg-[#D8B490]/5 blur-[30px] rounded-full transition-all duration-500 group-hover:bg-[#D8B490]/10 group-hover:scale-150" />
+                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#D8B490]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                <div className="flex items-center gap-3 mb-5 relative z-10">
+                  <div className="w-10 h-10 rounded-full bg-[#D8B490]/10 flex items-center justify-center border border-[#D8B490]/30 shadow-[0_0_15px_rgba(216,180,144,0.1)]">
+                    <span className="text-[#D8B490] text-xs font-black tracking-widest">02</span>
+                  </div>
+                  <h4 className="text-xs border-b border-[#D8B490]/40 pb-0.5 font-black tracking-widest text-[#D8B490] uppercase">Gold Plating</h4>
+                </div>
+
+                <h3 className="text-white text-xl lg:text-2xl font-bold mb-3 tracking-tighter leading-tight relative z-10 break-keep">
+                  Gold Plating Microneedle 사용 에너지 절연               </h3>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Type Diagrams (Bottom) */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          >
+            {/* INSULATED Type Diagram Panel */}
+            <div className="glass-panel bg-[#020B14] p-6 lg:p-8 rounded-3xl relative overflow-hidden group border border-[#00B7F1]/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00B7F1]/5 to-transparent pointer-events-none" />
+
+              <h5 className="text-[#00B7F1] text-xl font-black mb-6 uppercase tracking-widest text-center border-b border-[#00B7F1]/20 pb-4 relative z-10">
+                INSULATED Type
+              </h5>
+
+              <div className="flex flex-col xl:flex-row gap-6 items-stretch relative z-10">
+                {/* 25pin / 49pin Image Space */}
+                <div className="xl:w-[40%] flex flex-col items-center justify-center border border-[#00B7F1]/20 rounded-xl bg-black/40 p-4">
+                  <span className="text-[#00B7F1]/50 text-xs font-bold uppercase tracking-widest mb-2">Tips Image</span>
+                  <div className="w-full h-32 border-2 border-dashed border-[#00B7F1]/30 rounded-lg flex items-center justify-center">
+                    <span className="text-[#00B7F1]/40 text-[10px]">IMG 25/49pin</span>
+                  </div>
+                </div>
+
+                {/* Skin Penetration Diagram Space */}
+                <div className="xl:w-[60%] flex flex-col items-center justify-center border border-[#00B7F1]/20 rounded-xl bg-black/40 p-4">
+                  <span className="text-[#00B7F1]/50 text-xs font-bold uppercase tracking-widest mb-2">Depth Diagram</span>
+                  <div className="w-full h-32 border-2 border-dashed border-[#00B7F1]/30 rounded-lg flex items-center justify-center">
+                    <span className="text-[#00B7F1]/40 text-[10px]">IMG Skin Depth</span>
+                  </div>
+                </div>
               </div>
             </div>
+
+            {/* NON-INSULATED Type Diagram Panel */}
+            <div className="glass-panel bg-[#140202] p-6 lg:p-8 rounded-3xl relative overflow-hidden group border border-[#FF4B4B]/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#FF4B4B]/5 to-transparent pointer-events-none" />
+
+              <h5 className="text-[#FF4B4B] text-xl font-black mb-6 uppercase tracking-widest text-center border-b border-[#FF4B4B]/20 pb-4 relative z-10">
+                NON-INSULATED Type
+              </h5>
+
+              <div className="flex flex-col xl:flex-row gap-6 items-stretch relative z-10">
+                {/* 25pin / 49pin Image Space */}
+                <div className="xl:w-[40%] flex flex-col items-center justify-center border border-[#FF4B4B]/20 rounded-xl bg-black/40 p-4">
+                  <span className="text-[#FF4B4B]/50 text-xs font-bold uppercase tracking-widest mb-2">Tips Image</span>
+                  <div className="w-full h-32 border-2 border-dashed border-[#FF4B4B]/30 rounded-lg flex items-center justify-center">
+                    <span className="text-[#FF4B4B]/40 text-[10px]">IMG 25/49pin</span>
+                  </div>
+                </div>
+
+                {/* Skin Penetration Diagram Space */}
+                <div className="xl:w-[60%] flex flex-col items-center justify-center border border-[#FF4B4B]/20 rounded-xl bg-black/40 p-4">
+                  <span className="text-[#FF4B4B]/50 text-xs font-bold uppercase tracking-widest mb-2">Depth Diagram</span>
+                  <div className="w-full h-32 border-2 border-dashed border-[#FF4B4B]/30 rounded-lg flex items-center justify-center">
+                    <span className="text-[#FF4B4B]/40 text-[10px]">IMG Skin Depth</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          <div className="flex justify-end mt-6 pr-4">
+            <span className="text-slate-400 text-sm font-bold tracking-tighter bg-white/5 px-4 py-2 rounded-full border border-white/10">
+              * 최소 0.1mm 단위로 세밀한 깊이 조절 가능
+            </span>
           </div>
         </div>
       </section>
@@ -263,16 +383,33 @@ export default function VRoAdvancePage() {
       {/* ⑤ SD (Synergy Dotting) Combination Mechanism Section */}
       <section id="sd-combination" className="py-28 bg-[#050810] relative overflow-hidden border-t border-white/5 leading-none text-left">
         <div className="max-w-screen-xl mx-auto px-6 relative z-10 leading-none">
-          <div className="flex items-baseline gap-6 mb-20 relative leading-none">
-            <span className="text-[140px] md:text-[200px] font-black text-white/[0.03] leading-none select-none -ml-4 font-inter tracking-tighter block">02</span>
-            <div className="z-10 border-b border-white/10 w-full pb-10 ml-6 leading-none">
-              <h2 className="text-primary text-5xl md:text-7xl font-black leading-none mb-6 uppercase tracking-tighter font-inter font-inter">Combination</h2>
-              <h4 className="text-white/40 text-xl font-bold mb-6 tracking-tight uppercase font-inter leading-none">SD(Synergy Dotting) Handpiece</h4>
-              <p className="text-white text-2xl md:text-4xl font-black tracking-tighter break-keep leading-snug">
-                단 하나의 핸드피스로 <span className="text-primary uppercase font-inter">HIFU+RF를 동시에</span>
-              </p>
+          {/* Header Title Area (PICO-K Style) */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-16 text-center flex flex-col items-center"
+          >
+            {/* 배지 */}
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">
+              SD(SYNERGY DOTTING) HANDPIECE
             </div>
-          </div>
+
+            {/* 타이틀 */}
+            <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-4 uppercase font-inter leading-tight">
+              <span className="hero-title-main">02 COMPLETE</span><br />
+              <span className="hero-title-highlight drop-shadow-[0_0_10px_rgba(0,183,241,0.3)]">COMBINATION</span>
+            </h2>
+
+            {/* 밑줄 */}
+            <div className="w-20 h-[2px] bg-primary mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+
+            {/* 설명 */}
+            <p className="text-slate-300 text-lg font-medium leading-relaxed max-w-xl break-keep drop-shadow-md text-center">
+              단 하나의 핸드피스로 <span className="text-primary font-bold">HIFU와 RF를 동시에 구현</span>하여 최적의 시너지를 창출합니다.
+            </p>
+          </motion.div>
 
           <div className="flex flex-col lg:flex-row gap-16 items-stretch leading-none">
             <div className="lg:w-[60%] space-y-12 leading-none">
