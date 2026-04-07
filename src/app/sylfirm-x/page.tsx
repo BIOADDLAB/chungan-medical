@@ -214,11 +214,9 @@ export default function SylfirmXPage() {
                   </div>
 
                   <div className="p-8 space-y-6 flex-grow flex flex-col justify-center bg-black/20">
-                    <div className="aspect-[16/7] bg-primary/10 rounded-lg flex items-center justify-center relative overflow-hidden group shrink-0 border border-white/5">
-                      <div className="absolute inset-0 bg-[url('https://www.sylfirmx.com/img/img_sylfirmx01_01.jpg')] bg-cover bg-center opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700" />
-                      <div className="relative z-10 p-4 text-center">
-                        <span className="text-[10px] text-primary/40 font-black tracking-widest uppercase block leading-none">CW Energy visualization</span>
-                      </div>
+                    <div className="aspect-[16/7] bg-black/40 rounded-lg flex items-center justify-center relative overflow-hidden group shrink-0 border border-white/5">
+                      <img src="/images/sylfirmx/cw1.png" alt="CW Energy visualization" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                      <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                     </div>
                     <div className="text-center">
                       <p className="text-slate-200 text-[14px] md:text-[15px] font-bold mb-1 tracking-tight leading-relaxed">진피부터 표피까지 피부 층 전체에 열 에너지 전달</p>
@@ -266,11 +264,9 @@ export default function SylfirmXPage() {
                   </div>
 
                   <div className="p-8 space-y-6 flex-grow flex flex-col justify-center bg-black/20">
-                    <div className="aspect-[16/7] bg-primary/10 rounded-lg flex items-center justify-center relative overflow-hidden group shrink-0 border border-white/5">
-                      <div className="absolute inset-0 bg-[url('https://www.sylfirmx.com/img/img_sylfirmx01_02.jpg')] bg-cover bg-center opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700" />
-                      <div className="relative z-10 p-4 text-center">
-                        <span className="text-[10px] text-primary/40 font-black tracking-widest uppercase block leading-none">PW Energy visualization</span>
-                      </div>
+                    <div className="aspect-[16/7] bg-black/40 rounded-lg flex items-center justify-center relative overflow-hidden group shrink-0 border border-white/5">
+                      <img src="/images/sylfirmx/pw1.png" alt="PW Energy visualization" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                      <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                     </div>
                     <div className="text-center">
                       <p className="text-slate-200 text-[14px] md:text-[15px] font-bold mb-1 tracking-tight leading-relaxed">기저막, 혈관에만 열 에너지가 선택적으로 반응</p>

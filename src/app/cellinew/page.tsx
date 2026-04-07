@@ -123,7 +123,7 @@ export default function CellinewPage() {
                 {/* Visual Glow behind the machine */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/10 blur-[120px] rounded-full animate-pulse-light" />
                 <img
-                  src="images/machine/셀리뉴 임시.png"
+                  src="images/cellinew/셀리뉴 사진.png"
                   alt="CELLINEW Machine"
                   className="relative z-10 w-full h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
                 />
