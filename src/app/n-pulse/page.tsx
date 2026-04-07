@@ -740,19 +740,23 @@ export default function NPulsePage() {
                             {[
                                 { 
                                     ko: '점, 검버섯', 
-                                    en: 'Mole, Melasma'
+                                    en: 'Mole, Melasma',
+                                    img: '/images/npulse/indication1.png'
                                 },
                                 { 
                                     ko: '편평 사마귀, 사마귀, 쥐젖', 
-                                    en: 'Verruca Plana, Wart'
+                                    en: 'Verruca Plana, Wart',
+                                    img: '/images/npulse/indication2.png'
                                 },
                                 { 
                                     ko: '한관종, 비립종', 
-                                    en: 'Syringoma, Milium'
+                                    en: 'Syringoma, Milium',
+                                    img: '/images/npulse/indication3.png'
                                 },
                                 { 
                                     ko: '흉터 (화상, 모공, 여드름)', 
-                                    en: 'Scar (Burn, Pore, Acne)'
+                                    en: 'Scar (Burn, Pore, Acne)',
+                                    img: '/images/npulse/indication4.png'
                                 }
                             ].map((item, idx) => (
                                 <motion.div
@@ -764,9 +768,13 @@ export default function NPulsePage() {
                                     className="flex flex-col items-center group cursor-pointer"
                                 >
                                     <div className="w-full max-w-[160px] md:max-w-[190px] aspect-square relative rounded-full mb-6 p-1.5 bg-gradient-to-br from-white/10 via-transparent to-transparent flex items-center justify-center overflow-hidden border border-white/10 group-hover:border-primary/50 group-hover:shadow-[0_0_30px_rgba(0,183,241,0.3)] transition-all duration-500 bg-black/40">
-                                        {/* Image placeholder */}
+                                        {/* Image */}
                                         <div className="absolute inset-[3px] rounded-full overflow-hidden bg-[#0A0C10] flex items-center justify-center border border-white/5">
-                                            <div className="text-white/20 text-[10px] font-bold uppercase tracking-widest text-center px-2">Image Area</div>
+                                            {item.img ? (
+                                                <img src={item.img} alt={item.en} className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
+                                            ) : (
+                                                <div className="text-white/20 text-[10px] font-bold uppercase tracking-widest text-center px-2">Image Area</div>
+                                            )}
                                             <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
                                         </div>
                                     </div>

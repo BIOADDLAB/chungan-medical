@@ -88,9 +88,9 @@ export default function SylfirmXPage() {
               <div className="relative group">
                 <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full scale-125 opacity-40 group-hover:opacity-60 transition duration-1000" />
                 <img
-                  src="images/machine/실펌x 사진.png"
+                  src="images/machine/실펌x 사진1.png"
                   alt="SYLFIRM X Advanced System"
-                  className="relative z-10 w-full max-w-[420px] h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,183,241,0.2)] group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="relative z-10 w-full max-w-[200px] md:max-w-[250px] h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,183,241,0.2)] group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
             </motion.div>
@@ -307,9 +307,9 @@ export default function SylfirmXPage() {
           {/* Cleaned Horizontal Detailed Indication Features Block */}
           <div className="max-w-screen-xl mx-auto mt-24 px-6 pb-20">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-              
+
               {/* Card 1: 300 Mode */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
@@ -343,7 +343,7 @@ export default function SylfirmXPage() {
               </motion.div>
 
               {/* Card 2: Cell Mode (C) */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
@@ -377,7 +377,7 @@ export default function SylfirmXPage() {
               </motion.div>
 
               {/* Card 3: Repair Mode (P) */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
@@ -425,9 +425,9 @@ export default function SylfirmXPage() {
       <section id="pricing" className="relative py-28 bg-[#050810] overflow-hidden">
         <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
-          
+
           {/* Section Header */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -444,9 +444,9 @@ export default function SylfirmXPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            
+
             {/* Left: Highlight Card (Single Treatment) */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -464,7 +464,7 @@ export default function SylfirmXPage() {
             </motion.div>
 
             {/* Right: Detailed List Grid */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
