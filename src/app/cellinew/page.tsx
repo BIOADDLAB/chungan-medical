@@ -263,11 +263,31 @@ export default function CellinewPage() {
                       <div className="mt-[10px] w-2 h-2 bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)] rounded-full shrink-0" />
                       <span>2~6개월의 기간에 걸쳐 새로운 콜라겐 생성 및 리모델링</span>
                     </li>
-                    <li className="flex items-start gap-4 pt-6 border-t border-white/5 mt-6">
-                      <div className="flex flex-col w-full">
-                        <span className="text-white font-black text-[15px] md:text-lg border-l-2 border-primary pl-4 items-center flex gap-3 h-12 bg-primary/5">
-                          결과적으로, ① 콜라겐 밀도 증가 ② 진피층 두께 증가
+                    <li className="pt-6 border-t border-white/5 mt-6 w-full">
+                      <div className="flex items-center gap-3 mb-4">
+                        <span className="flex h-3 w-3 relative">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
                         </span>
+                        <h5 className="text-white font-black tracking-widest uppercase font-inter text-[13px] md:text-[15px]">FINAL RESULT</h5>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+                        <div className="bg-black/40 backdrop-blur-sm border border-primary/20 rounded-xl p-5 flex flex-col justify-center relative overflow-hidden group hover:bg-primary/5 transition-all duration-500 shadow-[0_5px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_0_20px_rgba(0,183,241,0.2)]">
+                          <div className="absolute -bottom-1 right-1 opacity-10 group-hover:opacity-20 group-hover:scale-110 transition-all duration-500">
+                            <span className="text-primary font-black text-6xl font-inter">01</span>
+                          </div>
+                          <p className="text-primary font-bold text-xs tracking-widest uppercase mb-1 drop-shadow-[0_0_8px_rgba(0,183,241,0.5)]">Effect</p>
+                          <p className="text-white font-bold text-[16px] md:text-[18px] relative z-10 break-keep">콜라겐 밀도 증가</p>
+                        </div>
+
+                        <div className="bg-black/40 backdrop-blur-sm border border-primary/20 rounded-xl p-5 flex flex-col justify-center relative overflow-hidden group hover:bg-primary/5 transition-all duration-500 shadow-[0_5px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_0_20px_rgba(0,183,241,0.2)]">
+                          <div className="absolute -bottom-1 right-1 opacity-10 group-hover:opacity-20 group-hover:scale-110 transition-all duration-500">
+                            <span className="text-primary font-black text-6xl font-inter">02</span>
+                          </div>
+                          <p className="text-primary font-bold text-xs tracking-widest uppercase mb-1 drop-shadow-[0_0_8px_rgba(0,183,241,0.5)]">Effect</p>
+                          <p className="text-white font-bold text-[16px] md:text-[18px] relative z-10 break-keep">진피층 두께 증가</p>
+                        </div>
                       </div>
                     </li>
                   </ul>
