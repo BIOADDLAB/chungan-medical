@@ -50,10 +50,10 @@ export default function ContactPage() {
             CONTACT US
           </h1>
           <div className="reveal-up delay-100">
-            <p className="text-[18px] md:text-[24px] font-bold text-white italic tracking-tight opacity-90">
+            <p className="text-[18px] md:text-[24px] font-bold text-white tracking-tight opacity-90">
               합리적인 피부미용 의료 장비,
             </p>
-            <p className="text-[18px] md:text-[24px] font-bold text-white italic tracking-tight opacity-90 mt-1">
+            <p className="text-[18px] md:text-[24px] font-bold text-white tracking-tight opacity-90 mt-1">
               그리고 최고의 선택
             </p>
           </div>
