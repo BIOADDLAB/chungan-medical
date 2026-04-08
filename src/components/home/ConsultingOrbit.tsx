@@ -43,10 +43,10 @@ export default function ConsultingOrbit() {
           {/* Central Logo: CN+ Tech Style */}
           <div className="consulting-center-logo z-10 transition-transform duration-500 hover:scale-105">
             <div className="cn-plus-symbol overflow-hidden border-0">
-              <img 
-                src="/images/청안turnkey 로고.png" 
-                alt="CHEONGAN TURNKEY" 
-                className="w-full h-full object-cover brightness-110" 
+              <img
+                src="/images/청안turnkey 로고1.png"
+                alt="CHEONGAN TURNKEY"
+                className="w-full h-full object-cover brightness-110"
               />
             </div>
           </div>
