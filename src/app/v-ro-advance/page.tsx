@@ -310,79 +310,75 @@ export default function VRoAdvancePage() {
           </div>
 
           {/* Type Diagrams (Bottom) */}
-          <div className="flex flex-col gap-12 lg:gap-16">
-            {/* INSULATED ROW */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto w-full">
+            {/* INSULATED SECTION (LEFT) */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
               viewport={{ once: true }}
-              className="grid grid-cols-1 xl:grid-cols-[1.3fr_1fr] gap-8 lg:gap-12 items-stretch"
+              className="flex flex-col gap-6 lg:gap-8"
             >
-              {/* 왼쪽 칸: Depth Diagram (우측과 동일한 박스 스타일 적용) */}
-              <div className="relative p-6 lg:p-10 rounded-[40px] border-2 border-[#00B7F1]/30 bg-gradient-to-b from-[#00B7F1]/5 to-transparent flex items-center justify-center">
-                <img src="/images/vro_advance/insulated.png" alt="Insulated Depth Diagram" className="w-[110%] max-w-3xl object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] hover:scale-[1.02] transition-transform duration-700" />
+              {/* Depth Diagram */}
+              <div className="relative overflow-hidden rounded-[24px] border-2 border-[#00B7F1]/30 bg-white flex items-center justify-center p-3 lg:p-5 h-[200px] lg:h-[250px]">
+                <img src="/images/vro_advance/insulated.png" alt="Insulated Depth Diagram" className="w-[105%] max-w-full object-cover hover:scale-[1.02] transition-transform duration-700" />
               </div>
 
-              {/* 오른쪽 칸: INSULATED Type Tips */}
-              <div className="relative p-8 lg:p-12 rounded-[40px] border-2 border-[#00B7F1]/30 bg-gradient-to-b from-[#00B7F1]/5 to-transparent flex flex-col items-center justify-center mt-6 xl:mt-0">
-                {/* 선을 끊고 들어가는 타이틀 */}
-                <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#050810] px-8 py-1">
-                  <h5 className="text-[#00B7F1] text-2xl font-black uppercase tracking-widest whitespace-nowrap drop-shadow-[0_0_10px_rgba(0,183,241,0.5)]">
+              {/* Type Tips */}
+              <div className="relative p-6 lg:p-8 rounded-[24px] border-2 border-[#00B7F1]/30 bg-gradient-to-b from-[#00B7F1]/5 to-transparent flex flex-col items-center justify-center mt-2">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#050810] px-4 py-1">
+                  <h5 className="text-[#00B7F1] text-base lg:text-lg font-black uppercase tracking-widest whitespace-nowrap drop-shadow-[0_0_10px_rgba(0,183,241,0.5)]">
                     INSULATED Type
                   </h5>
                 </div>
-
-                <div className="flex justify-center gap-10 mt-4 w-full">
+                <div className="flex justify-center gap-6 mt-3 w-full">
                   <div className="flex flex-col items-center group/tip w-full">
-                    <span className="text-white text-lg font-bold mb-4 tracking-widest">25pin</span>
-                    <img src="/images/vro_advance/I25.png" alt="Insulated 25pin Tip" className="h-[170px] lg:h-[210px] object-contain drop-shadow-[0_20px_30px_rgba(0,183,241,0.2)] group-hover/tip:-translate-y-2 group-hover/tip:scale-[1.1] transition-transform duration-500" />
+                    <span className="text-white/80 text-xs font-bold mb-2 tracking-widest">25pin</span>
+                    <img src="/images/vro_advance/I25.png" alt="Insulated 25pin Tip" className="h-[90px] lg:h-[120px] object-contain drop-shadow-[0_10px_15px_rgba(0,183,241,0.2)] group-hover/tip:-translate-y-2 group-hover/tip:scale-[1.05] transition-transform duration-500" />
                   </div>
                   <div className="flex flex-col items-center group/tip w-full">
-                    <span className="text-white text-lg font-bold mb-4 tracking-widest">49pin</span>
-                    <img src="/images/vro_advance/I49.png" alt="Insulated 49pin Tip" className="h-[170px] lg:h-[210px] object-contain drop-shadow-[0_20px_30px_rgba(0,183,241,0.2)] group-hover/tip:-translate-y-2 group-hover/tip:scale-[1.1] transition-transform duration-500" />
+                    <span className="text-white/80 text-xs font-bold mb-2 tracking-widest">49pin</span>
+                    <img src="/images/vro_advance/I49.png" alt="Insulated 49pin Tip" className="h-[90px] lg:h-[120px] object-contain drop-shadow-[0_10px_15px_rgba(0,183,241,0.2)] group-hover/tip:-translate-y-2 group-hover/tip:scale-[1.05] transition-transform duration-500" />
                   </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* NON-INSULATED ROW */}
+            {/* NON-INSULATED SECTION (RIGHT) */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5 }}
               viewport={{ once: true }}
-              className="grid grid-cols-1 xl:grid-cols-[1.3fr_1fr] gap-8 lg:gap-12 items-stretch"
+              className="flex flex-col gap-6 lg:gap-8"
             >
-              {/* 왼쪽 칸: Depth Diagram (우측과 동일한 박스 스타일 적용) */}
-              <div className="relative p-6 lg:p-10 rounded-[40px] border-2 border-[#FF4B4B]/30 bg-gradient-to-b from-[#FF4B4B]/5 to-transparent flex items-center justify-center">
-                <img src="/images/vro_advance/non_insulated.png" alt="Non-Insulated Depth Diagram" className="w-[110%] max-w-3xl object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] hover:scale-[1.02] transition-transform duration-700" />
+              {/* Depth Diagram */}
+              <div className="relative overflow-hidden rounded-[24px] border-2 border-[#FF4B4B]/30 bg-white flex items-center justify-center p-3 lg:p-5 h-[200px] lg:h-[250px]">
+                <img src="/images/vro_advance/non_insulated.png" alt="Non-Insulated Depth Diagram" className="w-[105%] max-w-full object-cover hover:scale-[1.02] transition-transform duration-700" />
               </div>
 
-              {/* 오른쪽 칸: NON-INSULATED Type Tips */}
-              <div className="relative p-8 lg:p-12 rounded-[40px] border-2 border-[#FF4B4B]/30 bg-gradient-to-b from-[#FF4B4B]/5 to-transparent flex flex-col items-center justify-center mt-6 xl:mt-0">
-                {/* 선을 끊고 들어가는 타이틀 */}
-                <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#050810] px-8 py-1">
-                  <h5 className="text-[#FF4B4B] text-2xl font-black uppercase tracking-widest whitespace-nowrap drop-shadow-[0_0_10px_rgba(255,75,75,0.5)]">
+              {/* Type Tips */}
+              <div className="relative p-6 lg:p-8 rounded-[24px] border-2 border-[#FF4B4B]/30 bg-gradient-to-b from-[#FF4B4B]/5 to-transparent flex flex-col items-center justify-center mt-2">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#050810] px-4 py-1">
+                  <h5 className="text-[#FF4B4B] text-base lg:text-lg font-black uppercase tracking-widest whitespace-nowrap drop-shadow-[0_0_10px_rgba(255,75,75,0.5)]">
                     NON-INSULATED Type
                   </h5>
                 </div>
-
-                <div className="flex justify-center gap-10 mt-4 w-full">
+                <div className="flex justify-center gap-6 mt-3 w-full">
                   <div className="flex flex-col items-center group/tip w-full">
-                    <span className="text-white text-lg font-bold mb-4 tracking-widest">25pin</span>
-                    <img src="/images/vro_advance/N25.png" alt="Non-Insulated 25pin Tip" className="h-[170px] lg:h-[210px] object-contain drop-shadow-[0_20px_30px_rgba(255,75,75,0.2)] group-hover/tip:-translate-y-2 group-hover/tip:scale-[1.1] transition-transform duration-500" />
+                    <span className="text-white/80 text-xs font-bold mb-2 tracking-widest">25pin</span>
+                    <img src="/images/vro_advance/N25.png" alt="Non-Insulated 25pin Tip" className="h-[90px] lg:h-[120px] object-contain drop-shadow-[0_10px_15px_rgba(255,75,75,0.2)] group-hover/tip:-translate-y-2 group-hover/tip:scale-[1.05] transition-transform duration-500" />
                   </div>
                   <div className="flex flex-col items-center group/tip w-full">
-                    <span className="text-white text-lg font-bold mb-4 tracking-widest">49pin</span>
-                    <img src="/images/vro_advance/N49.png" alt="Non-Insulated 49pin Tip" className="h-[170px] lg:h-[210px] object-contain drop-shadow-[0_20px_30px_rgba(255,75,75,0.2)] group-hover/tip:-translate-y-2 group-hover/tip:scale-[1.1] transition-transform duration-500" />
+                    <span className="text-white/80 text-xs font-bold mb-2 tracking-widest">49pin</span>
+                    <img src="/images/vro_advance/N49.png" alt="Non-Insulated 49pin Tip" className="h-[90px] lg:h-[120px] object-contain drop-shadow-[0_10px_15px_rgba(255,75,75,0.2)] group-hover/tip:-translate-y-2 group-hover/tip:scale-[1.05] transition-transform duration-500" />
                   </div>
                 </div>
               </div>
             </motion.div>
           </div>
 
-          <div className="flex justify-end mt-6 pr-4">
+          <div className="flex justify-end mt-4 max-w-6xl mx-auto w-full">
             <span className="text-slate-400 text-sm font-bold tracking-tighter bg-white/5 px-4 py-2 rounded-full border border-white/10">
               * 최소 0.1mm 단위로 세밀한 깊이 조절 가능
             </span>
