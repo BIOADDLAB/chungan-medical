@@ -525,46 +525,71 @@ export default function VRoAdvancePage() {
                 </div>
               </div>
 
-              {/* Performance Stats Area (Left Bottom) */}
-              <div className="flex flex-col gap-10 leading-none">
+              {/* Performance Stats Area (Left Bottom) - Catalog Refined Layout */}
+              <div className="flex flex-col gap-12 leading-none mt-4">
                 <div className="flex items-center gap-4">
-                  <h4 className="text-2xl lg:text-3xl font-black tracking-tighter text-white italic underline underline-offset-8 decoration-primary/50">
+                  <h4 className="text-2xl lg:text-3xl font-black tracking-tighter text-white underline underline-offset-8 decoration-primary/50">
                     빠르고, 안전하게, 강력하게
                   </h4>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 leading-none">
-                  {/* Shot Speed +43% */}
+                <div className="flex flex-col gap-14 lg:gap-16">
+                  {/* Shot Speed +43% Row */}
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    className="flex items-center gap-6 group leading-none"
+                    className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-12 group"
                   >
-                    <div className="text-center">
-                      <span className="text-primary text-6xl lg:text-7xl font-black font-inter tracking-tighter block mb-1 drop-shadow-[0_0_20px_rgba(0,183,241,0.4)] group-hover:scale-110 transition-transform">+43%</span>
+                    <div className="flex-shrink-0 min-w-[200px] lg:min-w-[240px]">
+                      <span className="text-primary text-7xl lg:text-8xl font-black font-inter tracking-tighter block drop-shadow-[0_0_25px_rgba(0,183,241,0.5)] group-hover:scale-105 transition-transform duration-500">+43%</span>
                     </div>
-                    <div className="flex flex-col text-left leading-tight">
-                      <div className="inline-block bg-primary px-3 py-1 text-[11px] font-black w-fit mb-2 uppercase font-inter text-[#050810]">Shot Speed</div>
-                      <p className="text-slate-300 font-bold text-base tracking-tighter mb-1">최대 10Hz의 속도 향상으로,<br />더 빨라진 시술 속도</p>
-                      <p className="text-slate-600 font-bold text-xs">*기존 자사 장비 대비</p>
+
+                    <div className="flex-1 space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className="bg-primary px-3 py-1 text-xs lg:text-sm font-black text-[#050810] uppercase tracking-wider">Shot Speed</div>
+                        {/* Stopwatch Icon */}
+                        <svg className="w-8 h-8 text-primary/40 group-hover:text-primary transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                          <circle cx="12" cy="13" r="8" />
+                          <path d="M12 9v4l2 2M12 2v3M12 2c4.4 0 8 3.6 8 8" />
+                          <path d="M19 4l-2 2" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <p className="text-white font-bold text-xl lg:text-2xl tracking-tighter leading-tight break-keep">
+                          최대 10Hz의 속도 향상으로, 더 빨라진 시술 속도
+                        </p>
+                        <p className="text-slate-500 font-bold text-sm tracking-tight">*기존 자사 장비 대비</p>
+                      </div>
                     </div>
                   </motion.div>
 
-                  {/* RF Value +93% */}
+                  {/* RF Value +93% Row */}
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 }}
                     viewport={{ once: true }}
-                    className="flex items-center gap-6 group leading-none"
+                    className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-12 group"
                   >
-                    <div className="text-center">
-                      <span className="text-primary text-6xl lg:text-7xl font-black font-inter tracking-tighter block mb-1 drop-shadow-[0_0_20px_rgba(0,183,241,0.4)] group-hover:scale-110 transition-transform">+93%</span>
+                    <div className="flex-shrink-0 min-w-[200px] lg:min-w-[240px]">
+                      <span className="text-primary text-7xl lg:text-8xl font-black font-inter tracking-tighter block drop-shadow-[0_0_25px_rgba(0,183,241,0.5)] group-hover:scale-105 transition-transform duration-500">+93%</span>
                     </div>
-                    <div className="flex flex-col text-left leading-tight">
-                      <div className="inline-block bg-primary px-3 py-1 text-[11px] font-black w-fit mb-2 uppercase font-inter text-[#050810]">RF Value</div>
-                      <p className="text-slate-300 font-bold text-base tracking-tighter mb-1">SD Type의 RF 출력 값 상승으로<br />더 높아진 열적 효과</p>
+
+                    <div className="flex-1 space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className="bg-primary px-3 py-1 text-xs lg:text-sm font-black text-[#050810] uppercase tracking-wider">RF Value</div>
+                        {/* Lightning Icon */}
+                        <svg className="w-8 h-8 text-primary/40 group-hover:text-primary transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                          <circle cx="12" cy="12" r="10" />
+                          <path d="M13 7l-4 6h4l-1 4 4-6h-4l1-4z" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <p className="text-white font-bold text-xl lg:text-2xl tracking-tighter leading-tight break-keep">
+                          SD Type의 RF 출력 값 상승으로 더 높아진 열적 효과
+                        </p>
+                      </div>
                     </div>
                   </motion.div>
                 </div>
