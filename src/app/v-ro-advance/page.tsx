@@ -463,7 +463,7 @@ export default function VRoAdvancePage() {
                         <motion.path
                           initial={{ pathLength: 0 }}
                           whileInView={{ pathLength: 1 }}
-                          d="M 65,37 L 100,26"
+                          d="M 65,37 L 100,17"
                           stroke="#00B7F1"
                           strokeWidth="1"
                           fill="none"
@@ -472,7 +472,7 @@ export default function VRoAdvancePage() {
                         <motion.path
                           initial={{ pathLength: 0 }}
                           whileInView={{ pathLength: 1 }}
-                          d="M 50,51 L 100,75"
+                          d="M 50,51 L 100,83"
                           stroke="#00B7F1"
                           strokeWidth="1"
                           fill="none"
@@ -481,38 +481,44 @@ export default function VRoAdvancePage() {
                     </div>
                   </div>
 
-                  {/* Right: Informational Callouts (Clean & Non-clipping) */}
-                  <div className="flex flex-col justify-center gap-10 lg:gap-20 z-20">
+                  {/* Right: Informational Callouts (Premium Card Style) */}
+                  <div className="absolute top-0 bottom-0 right-0 w-[48%] lg:w-[420px] z-20 pointer-events-none pr-4 lg:pr-8">
+                    {/* RF Card Aligned to y=26 */}
                     <motion.div
-                      initial={{ opacity: 0, x: 30 }}
+                      initial={{ opacity: 0, x: 40 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      className="flex items-center gap-6 group"
+                      className="absolute top-[13%] left-0 -translate-y-1/2 w-full lg:w-[380px] pointer-events-auto"
                     >
-                      <div className="flex flex-col items-center">
-                        <span className="text-primary text-4xl lg:text-5xl font-black tracking-tighter leading-none font-inter drop-shadow-[0_0_15px_rgba(0,183,241,0.5)] group-hover:scale-105 transition-transform">RF</span>
-                      </div>
-                      <div className="h-10 w-[2px] bg-primary/20 hidden lg:block" />
-                      <div className="flex flex-col">
-                        <span className="text-white text-base lg:text-xl font-bold tracking-tighter leading-tight whitespace-nowrap">
-                          피부와 피하조직의 열 발생
-                        </span>
+                      <div className="group bg-white/[0.03] backdrop-blur-xl border border-white/10 p-5 lg:p-6 rounded-[24px] flex items-center gap-5 hover:bg-white/[0.06] hover:border-primary/30 transition-all duration-500 shadow-2xl">
+                        <div className="flex flex-col items-center">
+                          <span className="text-primary text-4xl lg:text-5xl font-black tracking-tighter leading-none font-inter drop-shadow-[0_0_15px_rgba(0,183,241,0.5)] group-hover:scale-110 transition-transform">RF</span>
+                        </div>
+                        <div className="h-10 w-[1px] bg-white/10 mx-1" />
+                        <div className="flex flex-col">
+                          <span className="text-white text-base lg:text-lg font-bold tracking-tighter leading-tight break-keep">
+                            피부와 피하조직의<br />부드러운 열 발생
+                          </span>
+                        </div>
                       </div>
                     </motion.div>
 
+                    {/* HIFU Card Aligned to y=75 */}
                     <motion.div
-                      initial={{ opacity: 0, x: 30 }}
+                      initial={{ opacity: 0, x: 40 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.1 }}
-                      className="flex items-center gap-6 group"
+                      className="absolute top-[87%] left-0 -translate-y-1/2 w-full lg:w-[380px] pointer-events-auto"
                     >
-                      <div className="flex flex-col items-center">
-                        <span className="text-primary text-4xl lg:text-5xl font-black tracking-tighter leading-none font-inter drop-shadow-[0_0_15px_rgba(0,183,241,0.5)] group-hover:scale-105 transition-transform">HIFU</span>
-                      </div>
-                      <div className="h-10 w-[2px] bg-primary/20 hidden lg:block" />
-                      <div className="flex flex-col">
-                        <span className="text-white text-base lg:text-xl font-bold tracking-tighter leading-tight whitespace-nowrap">
-                          Target하는 깊이에만 열 집중
-                        </span>
+                      <div className="group bg-white/[0.03] backdrop-blur-xl border border-white/10 p-5 lg:p-6 rounded-[24px] flex items-center gap-5 hover:bg-white/[0.06] hover:border-primary/30 transition-all duration-500 shadow-2xl">
+                        <div className="flex flex-col items-center">
+                          <span className="text-primary text-4xl lg:text-5xl font-black tracking-tighter leading-none font-inter drop-shadow-[0_0_15px_rgba(0,183,241,0.5)] group-hover:scale-110 transition-transform">HIFU</span>
+                        </div>
+                        <div className="h-10 w-[1px] bg-white/10 mx-1" />
+                        <div className="flex flex-col">
+                          <span className="text-white text-base lg:text-lg font-bold tracking-tighter leading-tight break-keep">
+                            Target하는 깊이에만<br />강력한 열 집중
+                          </span>
+                        </div>
                       </div>
                     </motion.div>
                   </div>
