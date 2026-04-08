@@ -10,14 +10,20 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 const PRODUCTS = [
-  { id: 1, name: 'PICO-K' },
-  { id: 2, name: '유펄스' },
-  { id: 3, name: '유펄스듀얼' },
-  { id: 4, name: '앤펄스FX' },
-  { id: 5, name: '앤펄스 프라임' },
-  { id: 6, name: 'SYLFIRM X' },
-  { id: 7, name: 'CELLINEW' },
-  { id: 8, name: '브이로어드밴스' },
+  {
+    id: 1,
+    name: 'PICO-K',
+    image: '/images/machine/피코케이 사진1.png',
+    logo: '/images/machine/피코케이 로고.png',
+    makerLogo: '/images/machine/피코케이 제조사 로고.png'
+  },
+  { id: 2, name: '유펄스', image: '/images/machine/유펄스 사진.png', logo: '/images/machine/유펄스 로고.png', makerLogo: '/images/machine/유펄스 제조사 로고.png' },
+  { id: 3, name: '유펄스듀얼', image: '', logo: '', makerLogo: '' },
+  { id: 4, name: '엔펄스FX', image: '/images/machine/엔펄스fx 사진.png', logo: '', makerLogo: '' },
+  { id: 5, name: '엔펄스 프로', image: '/images/machine/엔펄스pro 사진.png', logo: '', makerLogo: '' },
+  { id: 6, name: 'SYLFIRM X', image: '', logo: '', makerLogo: '' },
+  { id: 7, name: 'CELLINEW', image: '', logo: '', makerLogo: '' },
+  { id: 8, name: '브이로어드밴스', image: '', logo: '', makerLogo: '' },
 ];
 
 export default function ProductLineup() {
@@ -110,12 +116,19 @@ export default function ProductLineup() {
               <SwiperSlide key={prod.id} className="py-12">
                 <div className="product-card group">
                   <div className="product-img-wrap">
-                    {/* Note: In a real environment, different images per product id should be used */}
-                    <img src="/images/machine/피코케이 사진.png" alt={`${prod.name} 장비`} className="product-machine-img" />
+                    <img
+                      src={prod.image || "/images/machine/피코케이 사진1.png"}
+                      alt={`${prod.name} 장비`}
+                      className={`product-machine-img ${!prod.image ? 'opacity-20 grayscale' : ''}`}
+                    />
                   </div>
                   <div className="product-card-footer">
-                    <img src="/images/machine/피코케이 로고.png" alt="제조사 로고" className="product-maker-logo-img" />
-                    <img src="/images/machine/피코케이 제조사 로고.png" alt="제품 로고" className="product-footer-logo-img" />
+                    {prod.logo && (
+                      <img src={prod.logo} alt="제품 로고" className="product-maker-logo-img" />
+                    )}
+                    {prod.makerLogo && (
+                      <img src={prod.makerLogo} alt="제조사 로고" className="product-footer-logo-img" />
+                    )}
                   </div>
                 </div>
               </SwiperSlide>
