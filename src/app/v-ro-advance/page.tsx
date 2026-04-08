@@ -596,30 +596,34 @@ export default function VRoAdvancePage() {
               </div>
             </div>
 
-            {/* Right Column: Cartridge Engineering Sidebar */}
-            <div className="lg:w-[42%] bg-white/[0.03] rounded-[40px] border border-white/10 p-8 lg:p-12 flex flex-col shadow-2xl relative overflow-hidden leading-none">
+            {/* Right Column: Cartridge Engineering Sidebar (More compact with better spacing) */}
+            <div className="lg:w-[42%] bg-white/[0.03] rounded-[40px] border border-white/10 p-6 lg:p-10 flex flex-col shadow-2xl relative overflow-hidden leading-none">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-[60px] opacity-20" />
 
-              <div className="space-y-12 relative z-10 leading-none text-left">
+              <div className="space-y-10 relative z-10 leading-none text-left">
                 {/* Pen Type */}
                 <div className="space-y-6 leading-none">
-                  <div className="flex items-center justify-center gap-3 mb-2 leading-none">
+                  <div className="flex items-center justify-center gap-3 mb-6 leading-none">
                     <span className="text-slate-500 font-medium">|</span>
                     <h5 className="text-white font-black text-xl lg:text-2xl tracking-tighter leading-none text-center">Pen Type 카트리지</h5>
                     <span className="text-slate-500 font-medium">|</span>
                   </div>
 
-                  {/* Cartridge Images Placeholder (Row) */}
-                  <div className="flex justify-center gap-4 py-8 bg-white/[0.02] rounded-3xl border border-white/5 leading-none">
-                    {/* Placeholder for P1.5, P3.0, P4.5 images */}
-                    {[1, 2, 3].map((i) => (
-                      <div key={i} className="w-20 h-32 lg:w-24 lg:h-40 bg-gradient-to-b from-white/10 to-transparent rounded-lg border border-white/10 flex items-center justify-center text-[10px] text-white/40 italic font-black">
-                        Cartridge Image
-                      </div>
-                    ))}
+                  {/* Cartridge Images (More compact vertical box) */}
+                  <div className="flex justify-center py-2 lg:py-3 bg-white/[0.01] rounded-3xl border border-white/5 relative group overflow-hidden leading-none">
+                    <div className="absolute inset-0 bg-primary/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl scale-150" />
+                    
+                    <motion.img 
+                      initial={{ opacity: 0, scale: 1.05 }}
+                      whileInView={{ opacity: 1, scale: 1.1 }}
+                      transition={{ duration: 0.8 }}
+                      src="/images/vro_advance/pentype.png" 
+                      alt="Pen Type Cartridges"
+                      className="relative z-10 w-full max-w-[460px] h-44 lg:h-72 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] group-hover:scale-115 transition-transform duration-700 mt-2"
+                    />
                   </div>
 
-                  <p className="text-slate-400 text-sm lg:text-base font-medium tracking-tighter leading-relaxed break-keep text-center">
+                  <p className="text-slate-400 text-sm lg:text-base font-medium tracking-tighter leading-relaxed break-keep text-center mt-3">
                     보다 작은 사이즈의 가벼운 카트리지로<br />시술 편의성을 높였습니다.
                   </p>
                 </div>
@@ -629,23 +633,27 @@ export default function VRoAdvancePage() {
 
                 {/* Long Type */}
                 <div className="space-y-6 leading-none">
-                  <div className="flex items-center justify-center gap-3 mb-2 leading-none">
+                  <div className="flex items-center justify-center gap-3 mb-6 leading-none">
                     <span className="text-slate-500 font-medium">|</span>
                     <h5 className="text-white font-black text-xl lg:text-2xl tracking-tighter leading-none text-center">Long Type 카트리지</h5>
                     <span className="text-slate-500 font-medium">|</span>
                   </div>
 
-                  {/* Cartridge Images Placeholder (Row) */}
-                  <div className="flex justify-center gap-4 py-8 bg-white/[0.02] rounded-3xl border border-white/5 leading-none">
-                    {/* Placeholder for L1.5, L3.0, L4.5 images */}
-                    {[1, 2, 3].map((i) => (
-                      <div key={i} className="w-20 h-32 lg:w-24 lg:h-40 bg-gradient-to-b from-white/10 to-transparent rounded-lg border border-white/10 flex items-center justify-center text-[10px] text-white/40 italic font-black">
-                        Cartridge Image
-                      </div>
-                    ))}
+                  {/* Cartridge Images (More compact vertical box) */}
+                  <div className="flex justify-center py-2 lg:py-3 bg-white/[0.01] rounded-3xl border border-white/5 relative group overflow-hidden leading-none">
+                    <div className="absolute inset-0 bg-primary/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl scale-150" />
+                    
+                    <motion.img 
+                      initial={{ opacity: 0, scale: 1.05 }}
+                      whileInView={{ opacity: 1, scale: 1.1 }}
+                      transition={{ duration: 0.8, delay: 0.2 }}
+                      src="/images/vro_advance/longtype.png" 
+                      alt="Long Type Cartridges"
+                      className="relative z-10 w-full max-w-[460px] h-48 lg:h-80 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] group-hover:scale-115 transition-transform duration-700 mt-2"
+                    />
                   </div>
 
-                  <p className="text-slate-400 text-sm lg:text-base font-medium tracking-tighter leading-relaxed break-keep text-center">
+                  <p className="text-slate-400 text-sm lg:text-base font-medium tracking-tighter leading-relaxed break-keep text-center mt-3">
                     40mm 길어진 카트리지의 증류수 양이 증대되어<br />장시간 사용 시에도 안정적인 시술을 제공합니다.
                   </p>
                 </div>
