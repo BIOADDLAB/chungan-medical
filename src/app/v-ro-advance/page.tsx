@@ -776,7 +776,7 @@ export default function VRoAdvancePage() {
                       <div className="flex flex-col items-center relative">
                         {/* Cartridge Image */}
                         <div className="w-32 lg:w-40 h-32 lg:h-36 flex items-center justify-center relative">
-                          <img src="/images/vro_advance/n4.5.png" alt="N4.5" className="max-w-full max-h-full object-contain opacity-50 grayscale" />
+                          <img src="/images/vro_advance/cart/n4.5.png" alt="N4.5" className="max-w-full max-h-full object-contain opacity-50 grayscale" />
                         </div>
 
                         {/* Simple Directional Line to Focus */}
@@ -808,7 +808,7 @@ export default function VRoAdvancePage() {
 
                         {/* Cartridge Image */}
                         <div className="w-32 lg:w-40 h-32 lg:h-36 flex items-center justify-center relative">
-                          <img src="/images/vro_advance/a4.5.png" alt="A4.5" className="max-w-full max-h-full object-contain relative z-10" />
+                          <img src="/images/vro_advance/cart/a4.5.png" alt="A4.5" className="max-w-full max-h-full object-contain relative z-10" />
                         </div>
 
                         {/* Simple Directional Line to Focus (Aligned to 183px) */}
@@ -854,29 +854,33 @@ export default function VRoAdvancePage() {
                     </div>
 
                     {/* 카트리지 그룹: S1.5 (대형) + S2, N3, N4.5 (소형) */}
-                    <div className="flex items-end justify-center gap-3">
+                    <div className="flex items-end justify-center gap-5">
                       {/* 피처드 S1.5 */}
                       <div className="flex flex-col items-center gap-2">
-                        <div
-                          className="w-[72px] h-24 bg-white/10 border border-white/20 flex flex-col items-center justify-center gap-2"
-                          style={{ clipPath: 'polygon(13% 0%, 87% 0%, 100% 13%, 100% 100%, 0% 100%, 0% 13%)' }}
-                        >
-                          <span className="text-[#4ade80] text-base font-black tracking-tighter font-inter">S1.5</span>
-                          <div className="w-8 h-px bg-white/20" />
-                          <div className="w-8 h-1.5 bg-white/10 rounded-sm" />
+                        <div className="w-[100px] h-[130px] flex items-center justify-center">
+                          <img
+                            src="/images/vro_advance/cart/S1.5-정면.png"
+                            alt="S1.5"
+                            className="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(255,255,255,0.1)] hover:scale-110 transition-transform duration-500"
+                          />
                         </div>
-                        <span className="text-slate-400 text-[11px] font-bold">S1.5</span>
+                        <span className="text-slate-400 text-[13px] font-bold">S1.5</span>
                       </div>
                       {/* 소형 S2, N3, N4.5 */}
-                      {(['S2', 'N3', 'N4.5'] as const).map((name) => (
-                        <div key={name} className="flex flex-col items-center gap-2">
-                          <div
-                            className="w-[54px] h-[72px] bg-white/5 border border-white/10 flex items-center justify-center"
-                            style={{ clipPath: 'polygon(13% 0%, 87% 0%, 100% 13%, 100% 100%, 0% 100%, 0% 13%)' }}
-                          >
-                            <span className="text-slate-400 text-[10px] font-black tracking-tighter font-inter">{name}</span>
+                      {[
+                        { name: 'S2', path: 'S2-정면.png' },
+                        { name: 'N3', path: 'N3-정면.png' },
+                        { name: 'N4.5', path: 'n4.5.png' }
+                      ].map((item) => (
+                        <div key={item.name} className="flex flex-col items-center gap-2">
+                          <div className="w-[80px] h-[100px] flex items-center justify-center">
+                            <img
+                              src={`/images/vro_advance/cart/${item.path}`}
+                              alt={item.name}
+                              className="w-full h-full object-contain opacity-85 hover:opacity-100 hover:scale-110 transition-all duration-500"
+                            />
                           </div>
-                          <span className="text-slate-500 text-[10px] font-bold">{name}</span>
+                          <span className="text-slate-500 text-[12px] font-bold">{item.name}</span>
                         </div>
                       ))}
                     </div>
@@ -898,29 +902,30 @@ export default function VRoAdvancePage() {
                     </div>
 
                     {/* 카트리지 그룹: A1.5 (대형 시안) + A2, A3, A4.5 (소형) */}
-                    <div className="flex items-end justify-center gap-3">
+                    <div className="flex items-end justify-center gap-5">
                       {/* 피처드 A1.5 */}
                       <div className="flex flex-col items-center gap-2">
-                        <div
-                          className="w-[72px] h-24 bg-primary/20 border border-primary/40 flex flex-col items-center justify-center gap-2 shadow-[0_0_20px_rgba(0,183,241,0.2)]"
-                          style={{ clipPath: 'polygon(13% 0%, 87% 0%, 100% 13%, 100% 100%, 0% 100%, 0% 13%)' }}
-                        >
-                          <span className="text-primary text-base font-black tracking-tighter font-inter">A1.5</span>
-                          <div className="w-8 h-px bg-primary/30" />
-                          <div className="w-8 h-1.5 bg-primary/15 rounded-sm" />
+                        <div className="w-[100px] h-[130px] flex items-center justify-center relative">
+                          <div className="absolute inset-0 bg-primary/10 blur-2xl opacity-50" />
+                          <img
+                            src="/images/vro_advance/cart/a1.5.png"
+                            alt="A1.5"
+                            className="w-full h-full object-contain relative z-10 drop-shadow-[0_10px_20px_rgba(0,183,241,0.2)] hover:scale-110 transition-transform duration-500"
+                          />
                         </div>
-                        <span className="text-primary text-[11px] font-bold">A1.5</span>
+                        <span className="text-primary text-[13px] font-bold">A1.5</span>
                       </div>
                       {/* 소형 A2, A3, A4.5 */}
                       {(['A2', 'A3', 'A4.5'] as const).map((name) => (
                         <div key={name} className="flex flex-col items-center gap-2">
-                          <div
-                            className="w-[54px] h-[72px] bg-primary/10 border border-primary/20 flex items-center justify-center"
-                            style={{ clipPath: 'polygon(13% 0%, 87% 0%, 100% 13%, 100% 100%, 0% 100%, 0% 13%)' }}
-                          >
-                            <span className="text-primary/60 text-[10px] font-black tracking-tighter font-inter">{name}</span>
+                          <div className="w-[80px] h-[100px] flex items-center justify-center">
+                            <img
+                              src={`/images/vro_advance/cart/${name.toLowerCase()}.png`}
+                              alt={name}
+                              className="w-full h-full object-contain hover:scale-110 transition-transform duration-500"
+                            />
                           </div>
-                          <span className="text-slate-500 text-[10px] font-bold">{name}</span>
+                          <span className="text-slate-500 text-[12px] font-bold">{name}</span>
                         </div>
                       ))}
                     </div>
