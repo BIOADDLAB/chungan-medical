@@ -54,8 +54,8 @@ const heroSlides = [
         />
       </>
     ),
-    title: '신뢰할 수 있는 기술력,',
-    highlight: '청안메디칼의 기준',
+    title: 'Do What is Right,',
+    highlight: 'Not what is easy',
   },
 ];
 
