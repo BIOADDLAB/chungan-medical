@@ -953,46 +953,54 @@ export default function VRoAdvancePage() {
       </section>
 
       {/* ⑥ Final Slogan Section */}
-      <section id="bottom-banner" className="relative py-48 bg-[#050810] overflow-hidden leading-none">
+      <section id="bottom-banner" className="relative pt-16 pb-0 bg-[#050810] overflow-hidden leading-none">
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
-        <div className="absolute bottom-[-50px] left-1/2 -translate-x-1/2 w-[1200px] h-[300px] bg-primary/[0.05] blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-[-100px] left-1/2 -translate-x-1/2 w-[1200px] h-[300px] bg-primary/[0.05] blur-[150px] rounded-full pointer-events-none" />
 
-        <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-20 relative z-10 leading-none">
-          <div className="md:w-1/2 flex justify-center items-center leading-none">
+        <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-20 relative z-10 leading-none">
+          {/* Machine Column: Tighter Cut */}
+          <div className="md:w-1/2 flex justify-center items-end leading-none">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2 }}
-              className="relative w-full max-w-[500px] group leading-none"
+              className="relative w-full max-w-[480px] h-[320px] md:h-[460px] overflow-hidden flex items-start group leading-none"
             >
               <div className="absolute inset-0 bg-primary/20 blur-[100px] opacity-10" />
               <img
                 src="images/machine/브이로어드밴스 사진.png"
                 alt="V-RO ADVANCE Footer"
-                className="w-full h-auto object-contain relative z-10 drop-shadow-[0_0_120px_rgba(0,183,241,0.15)] group-hover:scale-[1.02] transition-transform duration-1000"
+                style={{
+                  WebkitMaskImage: 'linear-gradient(to bottom, black 50%, transparent 80%)',
+                  maskImage: 'linear-gradient(to bottom, black 50%, transparent 80%)'
+                }}
+                className="w-full h-auto object-contain object-top relative z-10 drop-shadow-[0_0_120px_rgba(0,183,241,0.15)] group-hover:scale-[1.02] transition-transform duration-1000"
               />
             </motion.div>
           </div>
 
-          <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left leading-none">
+          <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left leading-none pb-12 md:pb-24">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="flex flex-col items-center md:items-start leading-none"
             >
-              {/* Sub-headline: Changed to Left Aligned */}
+              {/* Slogan: Italic & Left Aligned as per Logo style */}
               <p className="text-white text-2xl md:text-3xl font-bold tracking-tighter mb-4 md:mb-6">
                 두 가지 에너지로 강력한 맞춤 리프팅
               </p>
 
-              {/* Brand Logo Image Replacement */}
-              <div className="relative z-10 w-full max-w-[400px] md:max-w-[480px]">
-                <img
-                  src="/images/machine/브이로어드밴스 로고.png"
-                  alt="V-RO ADVANCE Logo"
-                  className="w-full h-auto object-contain"
-                />
+              {/* Brand Logo: CSS-based for precision to match the Photo */}
+              <div className="flex flex-row items-center gap-3 md:gap-5 leading-none">
+                <h2 className="text-[60px] md:text-[85px] lg:text-[100px] font-black tracking-tighter text-white leading-none font-inter uppercase">
+                  V-RO
+                </h2>
+                <div className="bg-primary text-[#050810] px-5 md:px-8 py-2 md:py-3 rounded-[10px] md:rounded-[20px] transform shadow-[0_0_40px_rgba(0,183,241,0.3)]">
+                  <span className="text-[26px] md:text-[40px] lg:text-[44px] font-black tracking-tighter uppercase leading-none block font-inter">
+                    ADVANCE
+                  </span>
+                </div>
               </div>
             </motion.div>
           </div>
