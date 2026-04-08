@@ -417,50 +417,206 @@ export default function VRoAdvancePage() {
             </p>
           </motion.div>
 
-          <div className="flex flex-col lg:flex-row gap-16 items-stretch leading-none">
-            <div className="lg:w-[60%] space-y-12 leading-none">
-              <div className="grid grid-cols-2 gap-8 leading-none">
-                <div className="bg-white/[0.03] p-10 rounded-3xl border border-white/10 flex flex-col items-center group hover:bg-primary/[0.02] transition-all leading-none">
-                  <div className="w-40 h-40 rounded-full border border-primary/20 flex items-center justify-center mb-6 shadow-[inset_0_0_30px_rgba(0,183,241,0.05)]">
-                    <span className="text-primary text-4xl font-black italic font-inter uppercase">RF</span>
-                  </div>
-                  <p className="text-white/60 text-base font-bold tracking-tighter leading-none text-center">진피층 열 자극</p>
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-stretch leading-none">
+            {/* Left Column: Concept & Stats */}
+            <div className="lg:w-[58%] flex flex-col gap-16 leading-none">
+              {/* Concept Diagram Area (Left Top) - Comprehensive Catalog Layout with Signature Blue */}
+              <div className="relative h-[480px] lg:h-[560px] bg-white/[0.02] rounded-[40px] border border-white/10 overflow-hidden flex flex-col items-stretch leading-none">
+                <div className="absolute inset-0 bg-tech-grid opacity-[0.05] pointer-events-none" />
+
+                {/* Refined Title Bar (Signature Integration) */}
+                <div className="w-full bg-primary/20 backdrop-blur-md py-3 lg:py-4 text-center relative z-20 border-b border-primary/20">
+                  <h4 className="text-primary text-lg lg:text-xl font-black tracking-tight px-4 drop-shadow-[0_0_10px_rgba(0,183,241,0.5)]">
+                    HIFU와 RF의 장점을 한 번의 Combination 시술로!
+                  </h4>
                 </div>
-                <div className="bg-white/[0.03] p-10 rounded-3xl border border-white/10 flex flex-col items-center group hover:bg-primary/[0.02] transition-all leading-none">
-                  <div className="w-40 h-40 rounded-full border border-primary/20 flex items-center justify-center mb-6 shadow-[inset_0_0_30px_rgba(0,183,241,0.05)]">
-                    <span className="text-primary text-4xl font-black italic font-inter uppercase">HIFU</span>
+
+                <div className="relative flex-1 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] items-center px-6 lg:px-12 gap-4 lg:gap-8 mt-2 leading-none">
+                  {/* Left: Enhanced Image with Highlights */}
+                  <div className="relative flex items-center justify-center h-full">
+                    <div className="relative w-72 h-72 lg:w-[380px] lg:h-[380px] flex items-center justify-center">
+                      {/* Artistic Blue Glow */}
+                      <div className="absolute inset-0 rounded-full bg-primary/10 blur-[100px] opacity-30" />
+
+                      {/* Enlarged Product Image */}
+                      <motion.img
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        src="/images/vro_advance/combination.png"
+                        alt="V-RO Combination"
+                        className="relative z-10 w-full h-full object-contain drop-shadow-[0_15px_45px_rgba(0,0,0,0.6)]"
+                      />
+
+                      {/* Explicit Interactive Dots (White highlights with Blue border) */}
+                      {/* RF Dot (Top Right Electrode Area) */}
+                      <div className="absolute top-[35%] right-[33%] z-20">
+                        <div className="w-4 h-4 bg-white rounded-full shadow-[0_0_15px_#00B7F1] border-2 border-primary animate-pulse" />
+                      </div>
+                      {/* HIFU Dot (Center) */}
+                      <div className="absolute top-[51%] left-[49.5%] z-20 -translate-x-1/2 -translate-y-1/2">
+                        <div className="w-5 h-5 bg-white rounded-full shadow-[0_0_20px_#00B7F1] border-2 border-primary animate-pulse scale-110" />
+                      </div>
+
+                      {/* SVG Lines (Signature Blue theme) */}
+                      <svg className="absolute inset-0 w-full h-full pointer-events-none z-30" viewBox="0 0 100 100">
+                        {/* Line to RF (Points to the new Top-Right location) */}
+                        <motion.path
+                          initial={{ pathLength: 0 }}
+                          whileInView={{ pathLength: 1 }}
+                          d="M 65,37 L 100,26"
+                          stroke="#00B7F1"
+                          strokeWidth="1"
+                          fill="none"
+                        />
+                        {/* Line to HIFU (Points to center) */}
+                        <motion.path
+                          initial={{ pathLength: 0 }}
+                          whileInView={{ pathLength: 1 }}
+                          d="M 50,51 L 100,75"
+                          stroke="#00B7F1"
+                          strokeWidth="1"
+                          fill="none"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                  <p className="text-white/60 text-base font-bold tracking-tighter leading-none text-center">SMAS층 응고점 형성</p>
+
+                  {/* Right: Informational Callouts (Clean & Non-clipping) */}
+                  <div className="flex flex-col justify-center gap-10 lg:gap-20 z-20">
+                    <motion.div
+                      initial={{ opacity: 0, x: 30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      className="flex items-center gap-6 group"
+                    >
+                      <div className="flex flex-col items-center">
+                        <span className="text-primary text-4xl lg:text-5xl font-black tracking-tighter leading-none font-inter drop-shadow-[0_0_15px_rgba(0,183,241,0.5)] group-hover:scale-105 transition-transform">RF</span>
+                      </div>
+                      <div className="h-10 w-[2px] bg-primary/20 hidden lg:block" />
+                      <div className="flex flex-col">
+                        <span className="text-white text-base lg:text-xl font-bold tracking-tighter leading-tight whitespace-nowrap">
+                          피부와 피하조직의 열 발생
+                        </span>
+                      </div>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: 30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1 }}
+                      className="flex items-center gap-6 group"
+                    >
+                      <div className="flex flex-col items-center">
+                        <span className="text-primary text-4xl lg:text-5xl font-black tracking-tighter leading-none font-inter drop-shadow-[0_0_15px_rgba(0,183,241,0.5)] group-hover:scale-105 transition-transform">HIFU</span>
+                      </div>
+                      <div className="h-10 w-[2px] bg-primary/20 hidden lg:block" />
+                      <div className="flex flex-col">
+                        <span className="text-white text-base lg:text-xl font-bold tracking-tighter leading-tight whitespace-nowrap">
+                          Target하는 깊이에만 열 집중
+                        </span>
+                      </div>
+                    </motion.div>
+                  </div>
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-8 lg:pt-8 leading-none">
-                <div className="text-center group leading-none">
-                  <span className="text-primary text-5xl md:text-6xl font-black font-inter tracking-tighter block mb-2 leading-none">+10Hz</span>
-                  <div className="inline-block bg-primary/10 text-primary px-3 py-1 text-[10px] font-black rounded-sm mb-4 uppercase font-inter tracking-widest leading-none">Speed Performance</div>
-                  <p className="text-slate-500 font-bold text-sm tracking-tighter leading-tight">압도적으로 빨라진 시술 시간</p>
+              {/* Performance Stats Area (Left Bottom) */}
+              <div className="flex flex-col gap-10 leading-none">
+                <div className="flex items-center gap-4">
+                  <h4 className="text-2xl lg:text-3xl font-black tracking-tighter text-white italic underline underline-offset-8 decoration-primary/50">
+                    빠르고, 안전하게, 강력하게
+                  </h4>
                 </div>
-                <div className="text-center group leading-none">
-                  <span className="text-primary text-5xl md:text-6xl font-black font-inter tracking-tighter block mb-2 leading-none">High-V</span>
-                  <div className="inline-block bg-primary/10 text-primary px-3 py-1 text-[10px] font-black rounded-sm mb-4 uppercase font-inter tracking-widest leading-none">Energy Output</div>
-                  <p className="text-slate-500 font-bold text-sm tracking-tighter leading-tight">SD 전용 RF 출력값 극대화</p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 leading-none">
+                  {/* Shot Speed +43% */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="flex items-center gap-6 group leading-none"
+                  >
+                    <div className="text-center">
+                      <span className="text-primary text-6xl lg:text-7xl font-black font-inter tracking-tighter block mb-1 drop-shadow-[0_0_20px_rgba(0,183,241,0.4)] group-hover:scale-110 transition-transform">+43%</span>
+                    </div>
+                    <div className="flex flex-col text-left leading-tight">
+                      <div className="inline-block bg-primary px-3 py-1 text-[11px] font-black w-fit mb-2 uppercase font-inter text-[#050810]">Shot Speed</div>
+                      <p className="text-slate-300 font-bold text-base tracking-tighter mb-1">최대 10Hz의 속도 향상으로,<br />더 빨라진 시술 속도</p>
+                      <p className="text-slate-600 font-bold text-xs">*기존 자사 장비 대비</p>
+                    </div>
+                  </motion.div>
+
+                  {/* RF Value +93% */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-center gap-6 group leading-none"
+                  >
+                    <div className="text-center">
+                      <span className="text-primary text-6xl lg:text-7xl font-black font-inter tracking-tighter block mb-1 drop-shadow-[0_0_20px_rgba(0,183,241,0.4)] group-hover:scale-110 transition-transform">+93%</span>
+                    </div>
+                    <div className="flex flex-col text-left leading-tight">
+                      <div className="inline-block bg-primary px-3 py-1 text-[11px] font-black w-fit mb-2 uppercase font-inter text-[#050810]">RF Value</div>
+                      <p className="text-slate-300 font-bold text-base tracking-tighter mb-1">SD Type의 RF 출력 값 상승으로<br />더 높아진 열적 효과</p>
+                    </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
 
-            <div className="lg:w-[40%] bg-white/[0.02] rounded-[40px] border border-white/10 p-10 flex flex-col justify-between shadow-2xl relative leading-none">
-              <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
-              <div className="space-y-4 group leading-none text-left">
-                <span className="text-primary/40 text-[10px] font-black tracking-[0.4em] uppercase block mb-4 leading-none">Cartridge Engineering</span>
-                <div className="flex flex-col gap-6 leading-none">
-                  <div className="bg-white/[0.03] p-6 rounded-2xl border border-white/5 hover:border-primary/20 transition-all leading-none">
-                    <h6 className="text-white font-black text-lg mb-2 uppercase leading-none">Pen Type</h6>
-                    <p className="text-slate-500 text-sm font-bold tracking-tighter leading-none">좁은 영역의 정밀 시술용 최적화</p>
+            {/* Right Column: Cartridge Engineering Sidebar */}
+            <div className="lg:w-[42%] bg-white/[0.03] rounded-[40px] border border-white/10 p-8 lg:p-12 flex flex-col shadow-2xl relative overflow-hidden leading-none">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-[60px] opacity-20" />
+
+              <div className="space-y-12 relative z-10 leading-none text-left">
+                {/* Pen Type */}
+                <div className="space-y-6 leading-none">
+                  <div className="flex items-center justify-center gap-3 mb-2 leading-none">
+                    <span className="text-slate-500 font-medium">|</span>
+                    <h5 className="text-white font-black text-xl lg:text-2xl tracking-tighter leading-none text-center">Pen Type 카트리지</h5>
+                    <span className="text-slate-500 font-medium">|</span>
                   </div>
-                  <div className="bg-white/[0.03] p-6 rounded-2xl border border-white/5 hover:border-primary/20 transition-all leading-none">
-                    <h6 className="text-white font-black text-lg mb-2 uppercase leading-none">Long Type</h6>
-                    <p className="text-slate-500 text-sm font-bold tracking-tighter leading-none">40mm 확장형 카트리지 시스템</p>
+
+                  {/* Cartridge Images Placeholder (Row) */}
+                  <div className="flex justify-center gap-4 py-8 bg-white/[0.02] rounded-3xl border border-white/5 leading-none">
+                    {/* Placeholder for P1.5, P3.0, P4.5 images */}
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="w-20 h-32 lg:w-24 lg:h-40 bg-gradient-to-b from-white/10 to-transparent rounded-lg border border-white/10 flex items-center justify-center text-[10px] text-white/40 italic font-black">
+                        Cartridge Image
+                      </div>
+                    ))}
                   </div>
+
+                  <p className="text-slate-400 text-sm lg:text-base font-medium tracking-tighter leading-relaxed break-keep text-center">
+                    보다 작은 사이즈의 가벼운 카트리지로<br />시술 편의성을 높였습니다.
+                  </p>
+                </div>
+
+                {/* Divider Line */}
+                <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+                {/* Long Type */}
+                <div className="space-y-6 leading-none">
+                  <div className="flex items-center justify-center gap-3 mb-2 leading-none">
+                    <span className="text-slate-500 font-medium">|</span>
+                    <h5 className="text-white font-black text-xl lg:text-2xl tracking-tighter leading-none text-center">Long Type 카트리지</h5>
+                    <span className="text-slate-500 font-medium">|</span>
+                  </div>
+
+                  {/* Cartridge Images Placeholder (Row) */}
+                  <div className="flex justify-center gap-4 py-8 bg-white/[0.02] rounded-3xl border border-white/5 leading-none">
+                    {/* Placeholder for L1.5, L3.0, L4.5 images */}
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="w-20 h-32 lg:w-24 lg:h-40 bg-gradient-to-b from-white/10 to-transparent rounded-lg border border-white/10 flex items-center justify-center text-[10px] text-white/40 italic font-black">
+                        Cartridge Image
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="text-slate-400 text-sm lg:text-base font-medium tracking-tighter leading-relaxed break-keep text-center">
+                    40mm 길어진 카트리지의 증류수 양이 증대되어<br />장시간 사용 시에도 안정적인 시술을 제공합니다.
+                  </p>
                 </div>
               </div>
             </div>
