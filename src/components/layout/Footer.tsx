@@ -4,10 +4,12 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-black pt-20 pb-12">
       <div className="max-w-screen-xl mx-auto px-6">
-        <div className="mb-12">
-          {/* Note: The image src should ideally be downloaded and put into public/images/ */}
-          {/* Actually the original points to https://addd.co.kr/assets/images/header_logo.png */}
-          <img src="https://addd.co.kr/assets/images/header_logo.png" alt="addd logo" className="w-28 opacity-90" />
+        <div className="mb-12 h-20 flex justify-start items-center">
+          <img
+            src="/images/청안로고.png"
+            alt="CHEONGAN"
+            className="w-100 opacity-100 brightness-0 invert object-contain object-left -ml-20"
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-24">

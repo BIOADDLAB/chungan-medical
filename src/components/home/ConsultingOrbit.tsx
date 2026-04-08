@@ -42,13 +42,12 @@ export default function ConsultingOrbit() {
         >
           {/* Central Logo: CN+ Tech Style */}
           <div className="consulting-center-logo z-10 transition-transform duration-500 hover:scale-105">
-            <div className="cn-plus-symbol">
-              <svg viewBox="0 0 120 120" className="w-20 h-20 drop-shadow-[0_0_15px_rgba(0,183,241,0.5)]">
-                <path d="M85,35 C85,20 60,15 45,20 C30,25 20,45 20,60 C20,75 35,95 55,90" fill="none" stroke="#00B7F1" strokeWidth="10" strokeLinecap="round" />
-                <path d="M55,35 L55,85" fill="none" stroke="#00B7F1" strokeWidth="10" strokeLinecap="round" />
-                <circle cx="100" cy="35" r="14" fill="#00B7F1" />
-                <path d="M100,28 v14 M93,35 h14" stroke="white" strokeWidth="4" strokeLinecap="round" />
-              </svg>
+            <div className="cn-plus-symbol overflow-hidden border-0">
+              <img 
+                src="/images/청안turnkey 로고.png" 
+                alt="CHEONGAN TURNKEY" 
+                className="w-full h-full object-cover brightness-110" 
+              />
             </div>
           </div>
 
