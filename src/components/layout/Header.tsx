@@ -49,7 +49,7 @@ export default function Header() {
                 href="/pico-k"
                 className="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]"
               >
-                피코K
+                PICO-K
               </Link>
               <Link
                 href="/u-pulse"
@@ -61,25 +61,25 @@ export default function Header() {
                 href="/n-pulse"
                 className="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]"
               >
-                N-Pulse, N-Pulse FX
+                N-Pulse PRO, N-Pulse FX
               </Link>
               <Link
                 href="/sylfirm-x"
                 className="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]"
               >
-                실펌엑스
+                SYLFIRM X
               </Link>
               <Link
                 href="/cellinew"
                 className="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm border-b border-[#222]"
               >
-                셀리뉴
+                CELLINEW
               </Link>
               <Link
                 href="/v-ro-advance"
                 className="px-6 py-4 hover:bg-[#222]/80 hover:text-primary transition duration-300 text-sm"
               >
-                브이로어드밴스
+                V-RO ADVANCE
               </Link>
             </div>
           </div>

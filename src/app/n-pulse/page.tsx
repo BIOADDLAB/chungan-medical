@@ -106,7 +106,7 @@ export default function NPulsePage() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight"
                     >
-                        <span className="hero-title-main block md:inline text-white">N - PULSE,</span>
+                        <span className="hero-title-main block md:inline text-white">N - PULSE PRO,</span>
                         <span className="hero-title-highlight ml-0 md:ml-4">N - PULSE FX</span>
                     </motion.h1>
 
@@ -738,23 +738,23 @@ export default function NPulsePage() {
 
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12 md:gap-8 max-w-5xl mx-auto">
                             {[
-                                { 
-                                    ko: '점, 검버섯', 
+                                {
+                                    ko: '점, 검버섯',
                                     en: 'Mole, Melasma',
                                     img: '/images/npulse/indication1.png'
                                 },
-                                { 
-                                    ko: '편평 사마귀, 사마귀, 쥐젖', 
+                                {
+                                    ko: '편평 사마귀, 사마귀, 쥐젖',
                                     en: 'Verruca Plana, Wart',
                                     img: '/images/npulse/indication2.png'
                                 },
-                                { 
-                                    ko: '한관종, 비립종', 
+                                {
+                                    ko: '한관종, 비립종',
                                     en: 'Syringoma, Milium',
                                     img: '/images/npulse/indication3.png'
                                 },
-                                { 
-                                    ko: '흉터 (화상, 모공, 여드름)', 
+                                {
+                                    ko: '흉터 (화상, 모공, 여드름)',
                                     en: 'Scar (Burn, Pore, Acne)',
                                     img: '/images/npulse/indication4.png'
                                 }

@@ -163,7 +163,7 @@ export default function UPulsePage() {
                 <div className="absolute inset-x-0 bottom-0 h-16 bg-primary/20 blur-[80px] rounded-full scale-150 translate-y-8 opacity-50" />
 
                 <img
-                  src="/images/machine/유펄스 사진1.png"
+                  src="/images/machine/유펄스 사진.png"
                   className="max-w-full h-auto relative z-10 drop-shadow-[0_45px_100px_rgba(0,0,0,0.7)] group-hover:scale-[1.03] transition duration-1000 cursor-zoom-in"
                   alt="U-Pulse 장비"
                 />
