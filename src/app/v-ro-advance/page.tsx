@@ -612,12 +612,12 @@ export default function VRoAdvancePage() {
                   {/* Cartridge Images (More compact vertical box) */}
                   <div className="flex justify-center py-2 lg:py-3 bg-white/[0.01] rounded-3xl border border-white/5 relative group overflow-hidden leading-none">
                     <div className="absolute inset-0 bg-primary/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl scale-150" />
-                    
-                    <motion.img 
+
+                    <motion.img
                       initial={{ opacity: 0, scale: 1.05 }}
                       whileInView={{ opacity: 1, scale: 1.1 }}
                       transition={{ duration: 0.8 }}
-                      src="/images/vro_advance/pentype.png" 
+                      src="/images/vro_advance/pentype.png"
                       alt="Pen Type Cartridges"
                       className="relative z-10 w-full max-w-[460px] h-44 lg:h-72 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] group-hover:scale-115 transition-transform duration-700 mt-2"
                     />
@@ -642,12 +642,12 @@ export default function VRoAdvancePage() {
                   {/* Cartridge Images (More compact vertical box) */}
                   <div className="flex justify-center py-2 lg:py-3 bg-white/[0.01] rounded-3xl border border-white/5 relative group overflow-hidden leading-none">
                     <div className="absolute inset-0 bg-primary/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl scale-150" />
-                    
-                    <motion.img 
+
+                    <motion.img
                       initial={{ opacity: 0, scale: 1.05 }}
                       whileInView={{ opacity: 1, scale: 1.1 }}
                       transition={{ duration: 0.8, delay: 0.2 }}
-                      src="/images/vro_advance/longtype.png" 
+                      src="/images/vro_advance/longtype.png"
                       alt="Long Type Cartridges"
                       className="relative z-10 w-full max-w-[460px] h-48 lg:h-80 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] group-hover:scale-115 transition-transform duration-700 mt-2"
                     />
@@ -659,6 +659,321 @@ export default function VRoAdvancePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ③ MFU Control Section - 카탈로그 2번 이미지 기준 재설계 */}
+      <section id="mfu-control" className="relative py-24 lg:py-32 bg-[#050810] border-t border-white/5 leading-none">
+        <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10 leading-none">
+          {/* Header Block — SD 섹션과 동일한 중앙 배지+대형 타이틀 패턴 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-16 text-center flex flex-col items-center"
+          >
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">
+              FL(FOCUSED LINEAR) HANDPIECE
+            </div>
+
+            <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-4 uppercase font-inter leading-tight">
+              <span className="hero-title-main">MFU </span>
+              <span className="hero-title-highlight drop-shadow-[0_0_10px_rgba(0,183,241,0.3)]">CONTROL</span>
+            </h2>
+
+            <div className="w-20 h-[2px] bg-primary mb-8" />
+
+            <p className="text-slate-300 text-lg font-medium leading-relaxed max-w-xl break-keep text-center">
+              다양하고 새로워진 <span className="text-primary font-bold">FL 카트리지</span>
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16 items-start leading-none">
+            {/* Left Content Area */}
+            <div className="flex flex-col space-y-14 leading-none">
+
+              {/* Dot & Line Mode 블록 */}
+              <div className="space-y-8 leading-none">
+                {/* 강조 배너 */}
+                <div className="bg-primary/15 border-l-4 border-primary px-6 py-4 rounded-r-2xl w-fit">
+                  <span className="text-white font-black text-xl lg:text-2xl tracking-tighter">
+                    하나의 카트리지로 Dot &amp; Line Mode를 한 번에!
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-5">
+                  {/* Dot Mode Card */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-[#0a0e1a] rounded-3xl border border-white/10 overflow-hidden relative"
+                  >
+                    <div className="absolute top-3 left-3 z-20 bg-black/50 backdrop-blur-md px-3 py-1 rounded-md text-[11px] font-bold text-white border border-white/10">
+                      · Dot Mode
+                    </div>
+                    <div className="aspect-[4/3] flex flex-col items-center justify-center relative overflow-hidden gap-3">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
+                      {/* 카트리지 하단부 */}
+                      <div className="w-28 h-2 bg-slate-700/80 rounded-sm relative z-10 shadow-lg" />
+                      {/* Dot 빔 */}
+                      <div className="flex gap-2.5 relative z-10">
+                        {[1, 2, 3, 4, 5].map((i) => (
+                          <div key={i} className="flex flex-col items-center gap-0.5">
+                            <div
+                              className="w-0.5 h-5 bg-gradient-to-b from-amber-400/70 to-transparent"
+                              style={{ animationDelay: `${i * 0.12}s` }}
+                            />
+                            <div
+                              className="w-2.5 h-2.5 bg-amber-400 rounded-full shadow-[0_0_8px_#fbbf24,0_0_16px_rgba(251,191,36,0.6)] animate-pulse"
+                              style={{ animationDelay: `${i * 0.12}s` }}
+                            />
+                          </div>
+                        ))}
+                      </div>
+                      <span className="absolute bottom-3 right-3 text-primary/30 text-[9px] font-black z-10 uppercase tracking-widest">Simulation</span>
+                    </div>
+                  </motion.div>
+
+                  {/* Line Mode Card */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="bg-[#0a0e1a] rounded-3xl border border-white/10 overflow-hidden relative"
+                  >
+                    <div className="absolute top-3 left-3 z-20 bg-black/50 backdrop-blur-md px-3 py-1 rounded-md text-[11px] font-bold text-white border border-white/10">
+                      · Line Mode
+                    </div>
+                    <div className="aspect-[4/3] flex flex-col items-center justify-center relative overflow-hidden gap-3">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
+                      {/* 카트리지 하단부 */}
+                      <div className="w-28 h-2 bg-slate-700/80 rounded-sm relative z-10 shadow-lg" />
+                      {/* Line 빔 */}
+                      <div className="relative z-10 w-[70%] flex flex-col items-center gap-0.5">
+                        <div className="w-full h-4 bg-gradient-to-b from-amber-400/50 to-transparent rounded-t-sm" />
+                        <div className="w-full h-3 bg-amber-400 rounded-full shadow-[0_0_12px_#fbbf24,0_0_28px_rgba(251,191,36,0.7),0_0_50px_rgba(251,191,36,0.3)]" />
+                      </div>
+                      <span className="absolute bottom-3 right-3 text-primary/30 text-[9px] font-black z-10 uppercase tracking-widest">Simulation</span>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+
+              {/* 에너지 집중도 비교 블록 */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="space-y-8 border-t border-white/5 pt-12 leading-none"
+              >
+                <h5 className="text-white font-black text-2xl lg:text-3xl tracking-tighter border-b-2 border-primary/40 pb-3 w-fit">
+                  에너지 집중도를 강화한 새로운 카트리지
+                </h5>
+
+                <div className="bg-white/[0.025] p-8 lg:p-10 rounded-[36px] border border-white/5 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-tech-dots opacity-5 pointer-events-none" />
+
+                  {/* 비교 다이어그램 */}
+                  <div className="flex items-end justify-center gap-8 lg:gap-16 relative z-10 pb-6">
+
+                    {/* 기존 카트리지 — N4.5 */}
+                    <div className="flex flex-col items-center gap-4">
+                      <span className="text-slate-400 font-bold text-sm bg-white/5 px-4 py-1.5 rounded-full border border-white/5">기존 카트리지</span>
+                      <div className="flex flex-col items-center">
+                        {/* 카트리지 오각형 형태 */}
+                        <div
+                          className="w-24 lg:w-28 h-32 lg:h-36 bg-white/8 border border-white/15 flex flex-col items-center justify-center gap-3"
+                          style={{ clipPath: 'polygon(12% 0%, 88% 0%, 100% 14%, 100% 100%, 0% 100%, 0% 14%)' }}
+                        >
+                          <span className="text-slate-300 text-xl font-black tracking-tighter font-inter">N4.5</span>
+                          <div className="w-10 h-[1px] bg-white/20" />
+                          <div className="flex gap-0.5">
+                            {[1,2,3].map(i => <div key={i} className="w-1 h-3 bg-white/15 rounded-sm" />)}
+                          </div>
+                        </div>
+                        {/* 넓은 빔 (에너지 분산) */}
+                        <div className="mt-1 flex flex-col items-center">
+                          <div className="w-14 h-0.5 bg-yellow-600/30" />
+                          <div
+                            className="w-10 h-5"
+                            style={{ background: 'radial-gradient(ellipse at top, rgba(202,138,4,0.35) 0%, transparent 80%)' }}
+                          />
+                          <div className="w-5 h-2 bg-yellow-700/30 rounded-full blur-sm" />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 화살표 */}
+                    <div className="flex items-center gap-1 pb-8 self-center">
+                      <svg className="w-8 h-5 text-primary/50" viewBox="0 0 28 16" fill="currentColor">
+                        <path d="M0 8 L6 2 L6 5.5 L14 5.5 L14 2 L20 8 L14 14 L14 10.5 L6 10.5 L6 14 Z" />
+                      </svg>
+                    </div>
+
+                    {/* 브이로 리프팅 카트리지 — A4.5 */}
+                    <div className="flex flex-col items-center gap-4">
+                      <span className="text-[#050810] font-black text-sm bg-primary px-4 py-1.5 rounded-full shadow-[0_0_15px_rgba(0,183,241,0.4)]">브이로 리프팅 카트리지</span>
+                      <div className="flex flex-col items-center">
+                        {/* 카트리지 오각형 형태 — 강조 */}
+                        <div
+                          className="w-24 lg:w-28 h-32 lg:h-36 bg-primary/15 border border-primary/35 flex flex-col items-center justify-center gap-3 shadow-[0_0_20px_rgba(0,183,241,0.15)]"
+                          style={{ clipPath: 'polygon(12% 0%, 88% 0%, 100% 14%, 100% 100%, 0% 100%, 0% 14%)' }}
+                        >
+                          <span className="text-primary text-xl font-black tracking-tighter font-inter">A4.5</span>
+                          <div className="w-10 h-[1px] bg-primary/30" />
+                          <div className="flex gap-0.5">
+                            {[1,2,3].map(i => <div key={i} className="w-1 h-3 bg-primary/25 rounded-sm" />)}
+                          </div>
+                        </div>
+                        {/* 집중된 빔 (에너지 집중) */}
+                        <div className="mt-1 flex flex-col items-center relative">
+                          <div className="w-8 h-0.5 bg-amber-400/60" />
+                          <div
+                            className="w-4 h-4"
+                            style={{ background: 'radial-gradient(ellipse at top, rgba(251,191,36,0.6) 0%, transparent 85%)' }}
+                          />
+                          <div className="w-2.5 h-2.5 bg-amber-400 rounded-full shadow-[0_0_8px_#fbbf24,0_0_18px_rgba(251,191,36,0.7)] animate-pulse" />
+                          {/* Target Depth 라벨 */}
+                          <div className="absolute left-[calc(100%+6px)] top-1/2 -translate-y-1/2 flex items-center gap-1.5 whitespace-nowrap">
+                            <div className="w-8 h-px bg-slate-500" />
+                            <span className="text-slate-500 text-[9px] font-bold uppercase tracking-wider">Target Depth</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-slate-400 text-sm lg:text-base font-medium tracking-tighter leading-relaxed break-keep text-center pt-4 border-t border-white/5">
+                    Transducer의 곡률 반경이 축소된 Advanced 카트리지는<br />
+                    열 초점이 보다 원에 가깝게 맺혀 <span className="text-white font-bold">에너지 집중도가 강화</span>되었습니다.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Right Side — 카트리지 선택 패널 */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="flex flex-col leading-none"
+            >
+              <div className="bg-white/[0.055] backdrop-blur-2xl rounded-[44px] border border-white/15 p-8 lg:p-12 flex flex-col h-full shadow-2xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-primary/8 blur-[80px] opacity-40 pointer-events-none" />
+
+                <h5 className="text-white font-black text-xl lg:text-2xl tracking-tighter leading-snug text-center break-keep mb-10 relative z-10">
+                  원하는 카트리지로<br />
+                  <span className="text-primary">개인별 맞춤형 시술 제공</span> 가능
+                </h5>
+
+                <div className="space-y-10 relative z-10">
+                  {/* Slim & Normal Type */}
+                  <div className="space-y-5">
+                    <div className="flex items-center justify-center gap-3">
+                      <div className="flex-1 h-px bg-white/15" />
+                      <span className="text-slate-300 font-bold text-sm whitespace-nowrap">Slim &amp; Normal Type 카트리지</span>
+                      <div className="flex-1 h-px bg-white/15" />
+                    </div>
+
+                    {/* 카트리지 그룹: S1.5 (대형) + S2, N3, N4.5 (소형) */}
+                    <div className="flex items-end justify-center gap-3">
+                      {/* 피처드 S1.5 */}
+                      <div className="flex flex-col items-center gap-2">
+                        <div
+                          className="w-[72px] h-24 bg-white/10 border border-white/20 flex flex-col items-center justify-center gap-2"
+                          style={{ clipPath: 'polygon(13% 0%, 87% 0%, 100% 13%, 100% 100%, 0% 100%, 0% 13%)' }}
+                        >
+                          <span className="text-[#4ade80] text-base font-black tracking-tighter font-inter">S1.5</span>
+                          <div className="w-8 h-px bg-white/20" />
+                          <div className="w-8 h-1.5 bg-white/10 rounded-sm" />
+                        </div>
+                        <span className="text-slate-400 text-[11px] font-bold">S1.5</span>
+                      </div>
+                      {/* 소형 S2, N3, N4.5 */}
+                      {(['S2', 'N3', 'N4.5'] as const).map((name) => (
+                        <div key={name} className="flex flex-col items-center gap-2">
+                          <div
+                            className="w-[54px] h-[72px] bg-white/5 border border-white/10 flex items-center justify-center"
+                            style={{ clipPath: 'polygon(13% 0%, 87% 0%, 100% 13%, 100% 100%, 0% 100%, 0% 13%)' }}
+                          >
+                            <span className="text-slate-400 text-[10px] font-black tracking-tighter font-inter">{name}</span>
+                          </div>
+                          <span className="text-slate-500 text-[10px] font-bold">{name}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <p className="text-slate-500 text-xs font-medium text-center break-keep leading-relaxed">
+                      기존 자사 제품과 동일한 카트리지로<br />편리한 시술이 가능합니다.
+                    </p>
+                  </div>
+
+                  {/* 구분선 */}
+                  <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+                  {/* 브이로 리프팅 Type */}
+                  <div className="space-y-5">
+                    <div className="flex items-center justify-center gap-3">
+                      <div className="flex-1 h-px bg-white/15" />
+                      <span className="text-slate-300 font-bold text-sm whitespace-nowrap">브이로 리프팅 Type 카트리지</span>
+                      <div className="flex-1 h-px bg-white/15" />
+                    </div>
+
+                    {/* 카트리지 그룹: A1.5 (대형 시안) + A2, A3, A4.5 (소형) */}
+                    <div className="flex items-end justify-center gap-3">
+                      {/* 피처드 A1.5 */}
+                      <div className="flex flex-col items-center gap-2">
+                        <div
+                          className="w-[72px] h-24 bg-primary/20 border border-primary/40 flex flex-col items-center justify-center gap-2 shadow-[0_0_20px_rgba(0,183,241,0.2)]"
+                          style={{ clipPath: 'polygon(13% 0%, 87% 0%, 100% 13%, 100% 100%, 0% 100%, 0% 13%)' }}
+                        >
+                          <span className="text-primary text-base font-black tracking-tighter font-inter">A1.5</span>
+                          <div className="w-8 h-px bg-primary/30" />
+                          <div className="w-8 h-1.5 bg-primary/15 rounded-sm" />
+                        </div>
+                        <span className="text-primary text-[11px] font-bold">A1.5</span>
+                      </div>
+                      {/* 소형 A2, A3, A4.5 */}
+                      {(['A2', 'A3', 'A4.5'] as const).map((name) => (
+                        <div key={name} className="flex flex-col items-center gap-2">
+                          <div
+                            className="w-[54px] h-[72px] bg-primary/10 border border-primary/20 flex items-center justify-center"
+                            style={{ clipPath: 'polygon(13% 0%, 87% 0%, 100% 13%, 100% 100%, 0% 100%, 0% 13%)' }}
+                          >
+                            <span className="text-primary/60 text-[10px] font-black tracking-tighter font-inter">{name}</span>
+                          </div>
+                          <span className="text-slate-500 text-[10px] font-bold">{name}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <p className="text-slate-500 text-xs font-medium text-center break-keep leading-relaxed">
+                      Transducer 곡률 반경 축소로<br />에너지 집중도가 향상된 시술이 가능합니다.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 하단 CTA 텍스트 */}
+                <div className="mt-auto pt-10 text-center leading-none relative z-10">
+                  <p className="text-slate-400 text-sm lg:text-base font-medium tracking-tight break-keep leading-relaxed">
+                    시술 강도 및 통증의 정도에 따른<br />시술 유형을 선택하여
+                  </p>
+                  <div className="mt-3 inline-block px-5 py-2.5 bg-primary/10 border border-primary/30 rounded-xl shadow-[0_0_20px_rgba(0,183,241,0.15)]">
+                    <span className="text-primary font-black text-lg lg:text-xl tracking-tighter">개인별 맞춤형 시술 제공</span>
+                  </div>
+                  <p className="text-slate-400 text-sm font-medium mt-1.5">이 가능합니다.</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
