@@ -219,7 +219,7 @@ export default function VRoAdvancePage() {
           >
             {/* 배지 */}
             <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">
-              HANDPIECE
+              RM(RF-Microneedle) HANDPIECE
             </div>
 
             {/* 타이틀 */}
@@ -233,7 +233,7 @@ export default function VRoAdvancePage() {
 
             {/* 설명 */}
             <p className="text-slate-300 text-lg font-medium leading-relaxed max-w-xl break-keep drop-shadow-md text-center">
-              RM 핸드피스로 <span className="text-primary font-bold">피부 속까지 전달하는 RF 에너지</span>를 구현합니다.
+              RM 핸드피스로 <span className="text-primary font-bold">피부 속까지 전달하는 RF 에너지</span>
             </p>
           </motion.div>
 
@@ -404,8 +404,8 @@ export default function VRoAdvancePage() {
 
             {/* 타이틀 */}
             <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-4 uppercase font-inter leading-tight">
-              <span className="hero-title-main">02 COMPLETE</span><br />
-              <span className="hero-title-highlight drop-shadow-[0_0_10px_rgba(0,183,241,0.3)]">COMBINATION</span>
+              <span className="hero-title-main">COMBINATION of </span>
+              <span className="hero-title-highlight drop-shadow-[0_0_10px_rgba(0,183,241,0.3)]">HIFU + RF</span>
             </h2>
 
             {/* 밑줄 */}
@@ -413,7 +413,7 @@ export default function VRoAdvancePage() {
 
             {/* 설명 */}
             <p className="text-slate-300 text-lg font-medium leading-relaxed max-w-xl break-keep drop-shadow-md text-center">
-              단 하나의 핸드피스로 <span className="text-primary font-bold">HIFU와 RF를 동시에 구현</span>하여 최적의 시너지를 창출합니다.
+              단 하나의 핸드피스로 <span className="text-primary font-bold">HIFU + RF를 한 번에</span>
             </p>
           </motion.div>
 
