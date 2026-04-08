@@ -986,16 +986,13 @@ export default function VRoAdvancePage() {
                 두 가지 에너지로 강력한 맞춤 리프팅
               </p>
 
-              {/* Brand Logo Group */}
-              <div className="flex flex-row items-center gap-4 md:gap-6 leading-none">
-                <h2 className="text-[80px] md:text-[130px] font-black tracking-tighter text-white leading-none font-inter uppercase relative z-10">
-                  V-RO
-                </h2>
-                <div className="bg-primary text-[#050810] px-6 md:px-10 py-3 md:py-4 rounded-[15px] md:rounded-[24px] shadow-[0_0_40px_rgba(0,183,241,0.3)]">
-                  <span className="text-[36px] md:text-[58px] font-black tracking-tighter uppercase leading-none block font-inter">
-                    ADVANCE
-                  </span>
-                </div>
+              {/* Brand Logo Image Replacement */}
+              <div className="relative z-10 w-full max-w-[400px] md:max-w-[480px]">
+                <img
+                  src="/images/machine/브이로어드밴스 로고.png"
+                  alt="V-RO ADVANCE Logo"
+                  className="w-full h-auto object-contain"
+                />
               </div>
             </motion.div>
           </div>
