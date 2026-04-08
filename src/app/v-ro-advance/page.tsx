@@ -664,7 +664,7 @@ export default function VRoAdvancePage() {
       </section>
 
       {/* ③ MFU Control Section - 카탈로그 2번 이미지 기준 재설계 */}
-      <section id="mfu-control" className="relative py-24 lg:py-32 bg-[#050810] border-t border-white/5 leading-none">
+      <section id="mfu-control" className="relative py-24 lg:py-32 bg-[#050810] leading-none">
         <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10 leading-none">
@@ -756,7 +756,7 @@ export default function VRoAdvancePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="space-y-8 border-t border-white/5 pt-12 leading-none"
+                className="space-y-8 pt-12 leading-none"
               >
                 <h5 className="text-white font-black text-2xl lg:text-3xl tracking-tighter border-b-2 border-primary/40 pb-3 w-fit">
                   에너지 집중도를 강화한 새로운 카트리지
@@ -953,7 +953,7 @@ export default function VRoAdvancePage() {
       </section>
 
       {/* ⑥ Final Slogan Section */}
-      <section id="bottom-banner" className="relative py-48 bg-[#050810] overflow-hidden border-t border-white/5 leading-none">
+      <section id="bottom-banner" className="relative py-48 bg-[#050810] overflow-hidden leading-none">
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
         <div className="absolute bottom-[-50px] left-1/2 -translate-x-1/2 w-[1200px] h-[300px] bg-primary/[0.05] blur-[150px] rounded-full pointer-events-none" />
 
@@ -982,8 +982,7 @@ export default function VRoAdvancePage() {
               className="space-y-10 leading-none"
             >
               <p className="text-primary text-3xl md:text-5xl font-black tracking-tighter break-keep leading-tight">
-                강력한 시너지가 만드는<br />
-                <span className="text-white">리프팅의 압도적 진화</span>
+                두 가지 에너지로 강력한 맞춤 리프팅<br />
               </p>
               <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row md:items-end md:gap-8 leading-none">
                 <h2 className="text-[100px] md:text-[140px] font-black tracking-tighter text-white leading-none font-inter uppercase relative z-10">
