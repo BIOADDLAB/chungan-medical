@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary: #00B7F1;
+  --color-primary: #00B3E4;
   --color-dark: #050810;
   /* Deep tech dark blue-black */
   --color-light: #F9F9F9;
@@ -14,8 +14,8 @@
   --background: #050810;
   --foreground: #e2e8f0;
   /* Soft slate for text */
-  --primary-glow: 0 0 20px rgba(0, 183, 241, 0.5), 0 0 40px rgba(0, 183, 241, 0.2);
-  --tech-border: 1px solid rgba(0, 183, 241, 0.3);
+  --primary-glow: 0 0 20px rgba(0, 179, 228, 0.5), 0 0 40px rgba(0, 179, 228, 0.2);
+  --tech-border: 1px solid rgba(0, 179, 228, 0.3);
 }
 
 /* Base Body styles */
