@@ -266,7 +266,7 @@ export default function ContactPage() {
             </motion.div>
 
             {/* Submit Button */}
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -276,8 +276,10 @@ export default function ContactPage() {
                 type="submit"
                 className="relative group bg-primary hover:bg-white text-[#050810] text-[16px] md:text-[18px] font-black py-5 px-16 md:px-24 rounded-full shadow-[0_10px_30px_rgba(0,183,241,0.3)] hover:shadow-[0_10px_40px_rgba(255,255,255,0.2)] transition-all duration-500 transform hover:-translate-y-1 uppercase tracking-widest font-inter"
               >
-                Send Message
-                <div className="absolute inset-0 rounded-full border-2 border-primary group-hover:scale-110 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                <span className="relative z-10 transition-colors duration-500">Send Message</span>
+                {/* Fixed Uniform Hover Outline */}
+                <div className="absolute inset-0 rounded-full border-2 border-primary opacity-0 group-hover:opacity-100 group-hover:inset-[-6px] transition-all duration-500 pointer-events-none" />
+                <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </button>
             </motion.div>
           </form>
