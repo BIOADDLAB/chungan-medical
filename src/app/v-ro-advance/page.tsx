@@ -735,7 +735,7 @@ export default function VRoAdvancePage() {
                     viewport={{ once: true }}
                     className="bg-[#0a0e1a] rounded-2xl border border-white/10 overflow-hidden relative group"
                   >
-                    <div className="absolute top-3 left-3 z-20 bg-black/50 backdrop-blur-md px-3 py-1 rounded-md text-[11px] font-bold text-white border border-white/10">
+                  <div className="absolute top-3 left-3 z-20 bg-black/50 backdrop-blur-md px-3 py-1 rounded-md text-[11px] font-bold text-white border border-white/10">
                       · Line Mode
                     </div>
                     <div className="aspect-[4/3] flex items-center justify-center relative overflow-hidden">
@@ -765,71 +765,75 @@ export default function VRoAdvancePage() {
                 <div className="bg-white/[0.025] p-8 lg:p-10 rounded-[36px] border border-white/5 relative overflow-hidden">
                   <div className="absolute inset-0 bg-tech-dots opacity-5 pointer-events-none" />
 
-                  {/* 비교 다이어그램 */}
-                  <div className="flex items-end justify-center gap-8 lg:gap-16 relative z-10 pb-6">
+                  {/* 비교 다이어그램 (Standardized Alignment) */}
+                  <div className="flex items-start justify-center gap-4 lg:gap-6 relative z-10 pb-6">
 
                     {/* 기존 카트리지 — N4.5 */}
-                    <div className="flex flex-col items-center gap-4">
-                      <span className="text-slate-400 font-bold text-sm bg-white/5 px-4 py-1.5 rounded-full border border-white/5">기존 카트리지</span>
-                      <div className="flex flex-col items-center">
-                        {/* 카트리지 오각형 형태 */}
-                        <div
-                          className="w-24 lg:w-28 h-32 lg:h-36 bg-white/8 border border-white/15 flex flex-col items-center justify-center gap-3"
-                          style={{ clipPath: 'polygon(12% 0%, 88% 0%, 100% 14%, 100% 100%, 0% 100%, 0% 14%)' }}
-                        >
-                          <span className="text-slate-300 text-xl font-black tracking-tighter font-inter">N4.5</span>
-                          <div className="w-10 h-[1px] bg-white/20" />
-                          <div className="flex gap-0.5">
-                            {[1, 2, 3].map(i => <div key={i} className="w-1 h-3 bg-white/15 rounded-sm" />)}
+                    <div className="flex flex-col items-center">
+                      <div className="px-4 py-1.5 mb-6"> {/* Invisible spacer for alignment */}
+                        <span className="text-white font-black text-sm">기존 카트리지</span>
+                      </div>
+                      <div className="flex flex-col items-center relative">
+                        {/* Cartridge Image with Technical Drawing */}
+                        <div className="w-32 lg:w-40 h-32 lg:h-36 flex items-center justify-center relative">
+                          <img src="/images/vro_advance/n4.5.png" alt="N4.5" className="max-w-full max-h-full object-contain opacity-50 grayscale" />
+                          
+                          {/* Inner Technical Box & Curve */}
+                          <div className="absolute bottom-4 w-16 h-8 border-x-2 border-b-2 border-primary/60 rounded-b-sm flex items-end justify-center pb-2">
+                            <div className="w-full h-4 border-b-4 border-primary rounded-[50%] absolute -bottom-1" />
                           </div>
                         </div>
-                        {/* 넓은 빔 (에너지 분산) */}
-                        <div className="mt-1 flex flex-col items-center">
-                          <div className="w-14 h-0.5 bg-yellow-600/30" />
-                          <div
-                            className="w-10 h-5"
-                            style={{ background: 'radial-gradient(ellipse at top, rgba(202,138,4,0.35) 0%, transparent 80%)' }}
-                          />
-                          <div className="w-5 h-2 bg-yellow-700/30 rounded-full blur-sm" />
+
+                        {/* Energy Focus (Aligned to 183px Target Line) */}
+                        <div className="relative h-20 w-32 flex flex-col items-center">
+                          <svg className="absolute top-[-4px] w-14 h-20 text-amber-500/40" viewBox="0 0 100 100">
+                            <line x1="15" y1="0" x2="50" y2="62" stroke="currentColor" strokeWidth="1" />
+                            <line x1="50" y1="0" x2="50" y2="62" stroke="currentColor" strokeWidth="1" />
+                            <line x1="85" y1="0" x2="50" y2="62" stroke="currentColor" strokeWidth="1" />
+                          </svg>
+                          <div className="absolute top-[33px] w-2.5 h-7 bg-amber-500/80 rounded-full blur-[2px] border border-amber-400/30 shadow-[0_0_8px_rgba(245,158,11,0.5)]" />
                         </div>
                       </div>
                     </div>
 
-                    {/* 화살표 */}
-                    <div className="flex items-center gap-1 pb-8 self-center">
-                      <svg className="w-8 h-5 text-primary/50" viewBox="0 0 28 16" fill="currentColor">
-                        <path d="M0 8 L6 2 L6 5.5 L14 5.5 L14 2 L20 8 L14 14 L14 10.5 L6 10.5 L6 14 Z" />
-                      </svg>
+                    {/* Central Arrow Decoration (Aligned with Labels height) */}
+                    <div className="flex items-center self-start pt-16 px-1 lg:px-2">
+                      <div className="flex gap-1 text-primary/40 scale-110">
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+                      </div>
                     </div>
 
                     {/* 브이로 리프팅 카트리지 — A4.5 */}
-                    <div className="flex flex-col items-center gap-4">
-                      <span className="text-[#050810] font-black text-sm bg-primary px-4 py-1.5 rounded-full shadow-[0_0_15px_rgba(0,183,241,0.4)]">브이로 리프팅 카트리지</span>
-                      <div className="flex flex-col items-center">
-                        {/* 카트리지 오각형 형태 — 강조 */}
-                        <div
-                          className="w-24 lg:w-28 h-32 lg:h-36 bg-primary/15 border border-primary/35 flex flex-col items-center justify-center gap-3 shadow-[0_0_20px_rgba(0,183,241,0.15)]"
-                          style={{ clipPath: 'polygon(12% 0%, 88% 0%, 100% 14%, 100% 100%, 0% 100%, 0% 14%)' }}
-                        >
-                          <span className="text-primary text-xl font-black tracking-tighter font-inter">A4.5</span>
-                          <div className="w-10 h-[1px] bg-primary/30" />
-                          <div className="flex gap-0.5">
-                            {[1, 2, 3].map(i => <div key={i} className="w-1 h-3 bg-primary/25 rounded-sm" />)}
+                    <div className="flex flex-col items-center">
+                      <div className="bg-primary px-4 py-1.5 rounded-sm mb-6 shadow-[0_4px_12px_rgba(0,183,241,0.2)]">
+                        <span className="text-white font-black text-xs lg:text-sm tracking-tight whitespace-nowrap">브이로 리프팅 카트리지</span>
+                      </div>
+                      
+                      <div className="flex flex-col items-center relative">
+                        {/* Persistent Target Depth Line (183px from wrapper start) */}
+                        <div className="absolute top-[183px] right-[-100px] left-[-350px] h-px border-t border-dashed border-white/20 z-0 pointer-events-none" />
+                        <span className="absolute top-[176px] left-[calc(100%+24px)] text-slate-500 text-[10px] font-bold tracking-widest whitespace-nowrap">Target Depth</span>
+
+                        {/* Cartridge Image with Technical Drawing */}
+                        <div className="w-32 lg:w-40 h-32 lg:h-36 flex items-center justify-center relative">
+                          <img src="/images/vro_advance/a4.5.png" alt="A4.5" className="max-w-full max-h-full object-contain relative z-10" />
+                          
+                          {/* Inner Technical Box & Curve */}
+                          <div className="absolute bottom-4 w-14 h-8 border-x-2 border-b-2 border-primary rounded-b-sm flex items-end justify-center pb-2 z-20">
+                            <div className="w-full h-5 border-b-4 border-primary rounded-[50%] absolute -bottom-1 shadow-[0_2px_6px_#00B7F1]" />
                           </div>
                         </div>
-                        {/* 집중된 빔 (에너지 집중) */}
-                        <div className="mt-1 flex flex-col items-center relative">
-                          <div className="w-8 h-0.5 bg-amber-400/60" />
-                          <div
-                            className="w-4 h-4"
-                            style={{ background: 'radial-gradient(ellipse at top, rgba(251,191,36,0.6) 0%, transparent 85%)' }}
-                          />
-                          <div className="w-2.5 h-2.5 bg-amber-400 rounded-full shadow-[0_0_8px_#fbbf24,0_0_18px_rgba(251,191,36,0.7)] animate-pulse" />
-                          {/* Target Depth 라벨 */}
-                          <div className="absolute left-[calc(100%+6px)] top-1/2 -translate-y-1/2 flex items-center gap-1.5 whitespace-nowrap">
-                            <div className="w-8 h-px bg-slate-500" />
-                            <span className="text-slate-500 text-[9px] font-bold uppercase tracking-wider">Target Depth</span>
-                          </div>
+
+                        {/* Energy Focus (Closer to Cartridge) */}
+                        <div className="relative h-16 w-32 flex flex-col items-center">
+                          <svg className="absolute top-[-4px] w-12 h-14 text-amber-500/60" viewBox="0 0 100 100">
+                            <line x1="20" y1="0" x2="50" y2="40" stroke="currentColor" strokeWidth="1.2" />
+                            <line x1="50" y1="0" x2="50" y2="40" stroke="currentColor" strokeWidth="1.2" />
+                            <line x1="80" y1="0" x2="50" y2="40" stroke="currentColor" strokeWidth="1.2" />
+                          </svg>
+                          {/* Focal Point (Tiny Dot) */}
+                          <div className="absolute top-[34px] w-2.5 h-2.5 bg-amber-400 rounded-full shadow-[0_0_10px_#fbbf24,0_0_20px_rgba(251,191,36,0.6)] animate-pulse" />
                         </div>
                       </div>
                     </div>
