@@ -18,17 +18,20 @@ export default function Header() {
   return (
     <header
       id="header"
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'site-header-scrolled' : ''
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'site-header-scrolled' : ''
+        }`}
     >
       <div className="max-w-screen-xl mx-auto px-6 h-20 flex justify-between items-center">
         {/* Logo Text */}
         <Link
           href="/#home"
-          className="text-2xl font-bold tracking-widest text-white hover:text-primary transition duration-300 w-32 flex-shrink-0"
+          className="hover:opacity-100 transition-all duration-500 w-64 flex-shrink-0 group flex items-center"
         >
-          CHEONGAN
+          <img
+            src="/images/청안로고.png"
+            alt="CHEONGAN"
+            className="h-16 w-auto object-contain brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-500"
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -92,7 +95,7 @@ export default function Header() {
           </Link>
         </nav>
 
-        <div className="flex items-center space-x-2 font-bold cursor-pointer hover:text-primary transition w-32 justify-end flex-shrink-0 text-white">
+        <div className="flex items-center space-x-2 font-bold cursor-pointer hover:text-primary transition w-64 justify-end flex-shrink-0 text-white">
           <span>KOR</span>
           <span className="text-xs">▾</span>
         </div>
