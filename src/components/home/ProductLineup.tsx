@@ -15,15 +15,15 @@ const PRODUCTS = [
     name: 'PICO-K',
     image: '/images/machine/피코케이 사진1.png',
     logo: '/images/machine/피코케이 로고.png',
-    makerLogo: '/images/machine/피코케이 제조사 로고.png'
+    makerLogo: '/images/machine/specliose로고.png'
   },
-  { id: 2, name: '유펄스', image: '/images/machine/유펄스 사진.png', logo: '/images/machine/유펄스 로고.png', makerLogo: '/images/machine/유펄스 제조사 로고.png' },
-  { id: 3, name: '유펄스듀얼', image: '', logo: '', makerLogo: '' },
-  { id: 4, name: '엔펄스FX', image: '/images/machine/엔펄스fx 사진.png', logo: '', makerLogo: '' },
-  { id: 5, name: '엔펄스 프로', image: '/images/machine/엔펄스pro 사진.png', logo: '', makerLogo: '' },
-  { id: 6, name: 'SYLFIRM X', image: '', logo: '', makerLogo: '' },
-  { id: 7, name: 'CELLINEW', image: '', logo: '', makerLogo: '' },
-  { id: 8, name: '브이로어드밴스', image: '', logo: '', makerLogo: '' },
+  { id: 2, name: '유펄스', image: '/images/machine/유펄스 사진.png', logo: '/images/machine/유펄스 로고.png', makerLogo: '/images/machine/snj로고.png' },
+  { id: 3, name: '유펄스듀얼', image: '/images/machine/유펄스듀얼 사진.png', logo: '/images/machine/유펄스듀얼 로고.png', makerLogo: '/images/machine/snj로고.png' },
+  { id: 4, name: '엔펄스FX', image: '/images/machine/N-Pulse FX 01.png', logo: '', makerLogo: '/images/machine/snj로고.png' },
+  { id: 5, name: '엔펄스 프로', image: '/images/machine/N-Pulse Pro 01.png', logo: '', makerLogo: '/images/machine/snj로고.png' },
+  { id: 6, name: 'SYLFIRM X', image: '/images/machine/실펌x 사진1.png', logo: '/images/machine/실펌 로고.png', makerLogo: '/images/machine/비올 로고.png' },
+  { id: 7, name: 'CELLINEW', image: '/images/machine/셀리뉴_수정.png', logo: '/images/machine/셀리뉴 로고.png', makerLogo: '/images/machine/비올 로고.png' },
+  { id: 8, name: '브이로어드밴스', image: '/images/machine/브이로어드밴스 사진.png', logo: '/images/machine/브이로어드밴스 로고.png', makerLogo: '/images/machine/하이로닉 로고.png' },
 ];
 
 export default function ProductLineup() {
