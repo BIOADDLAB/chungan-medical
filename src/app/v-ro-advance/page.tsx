@@ -974,22 +974,25 @@ export default function VRoAdvancePage() {
             </motion.div>
           </div>
 
-          <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-12 leading-none">
+          <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left leading-none">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-10 leading-none"
+              className="flex flex-col items-center md:items-start leading-none"
             >
-              <p className="text-primary text-3xl md:text-5xl font-black tracking-tighter break-keep leading-tight">
-                두 가지 에너지로 강력한 맞춤 리프팅<br />
+              {/* Sub-headline: Changed to Left Aligned */}
+              <p className="text-white text-2xl md:text-3xl font-bold tracking-tighter mb-4 md:mb-6">
+                두 가지 에너지로 강력한 맞춤 리프팅
               </p>
-              <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row md:items-end md:gap-8 leading-none">
-                <h2 className="text-[100px] md:text-[140px] font-black tracking-tighter text-white leading-none font-inter uppercase relative z-10">
+
+              {/* Brand Logo Group */}
+              <div className="flex flex-row items-center gap-4 md:gap-6 leading-none">
+                <h2 className="text-[80px] md:text-[130px] font-black tracking-tighter text-white leading-none font-inter uppercase relative z-10">
                   V-RO
                 </h2>
-                <div className="bg-primary text-[#050810] px-10 py-5 rounded-[20px] transform md:translate-y-4 shadow-[0_0_50px_rgba(0,183,241,0.4)]">
-                  <span className="text-[40px] md:text-[60px] font-black tracking-tighter uppercase leading-none block font-inter">
+                <div className="bg-primary text-[#050810] px-6 md:px-10 py-3 md:py-4 rounded-[15px] md:rounded-[24px] shadow-[0_0_40px_rgba(0,183,241,0.3)]">
+                  <span className="text-[36px] md:text-[58px] font-black tracking-tighter uppercase leading-none block font-inter">
                     ADVANCE
                   </span>
                 </div>
