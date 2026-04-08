@@ -781,14 +781,14 @@ export default function VRoAdvancePage() {
 
                         {/* Simple Directional Line to Focus */}
                         <div className="relative h-20 w-32 flex flex-col items-center">
-                          <div className="absolute top-0 w-px h-[41px] bg-gradient-to-b from-amber-500/20 to-amber-500/80" />
-                          <div className="absolute top-[41px] w-2.5 h-7 bg-amber-500/80 rounded-full blur-[2px] border border-amber-400/30 shadow-[0_0_8px_rgba(245,158,11,0.5)]" />
+                          <div className="absolute top-0 w-px h-[41px] bg-gradient-to-b from-amber-500/20 to-amber-500/80 right-13.5" />
+                          <div className="absolute top-[41px] right-12.5 w-2.5 h-7 bg-amber-500/80 rounded-full blur-[2px] border border-amber-400/30 shadow-[0_0_8px_rgba(245,158,11,0.5)]" />
                         </div>
                       </div>
                     </div>
 
                     {/* Central Arrow Decoration */}
-                    <div className="flex items-center self-start pt-16 px-1 lg:px-2">
+                    <div className="flex items-center self-start pt-[115px] px-1 lg:px-2">
                       <div className="flex gap-1 text-primary/40 scale-110">
                         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
                         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
@@ -813,8 +813,8 @@ export default function VRoAdvancePage() {
 
                         {/* Simple Directional Line to Focus (Aligned to 183px) */}
                         <div className="relative h-20 w-32 flex flex-col items-center">
-                          <div className="absolute top-0 w-px h-[50px] bg-gradient-to-b from-primary/20 to-amber-400" />
-                          <div className="absolute top-[50px] w-2.5 h-2.5 bg-amber-400 rounded-full shadow-[0_0_10px_#fbbf24,0_0_20px_rgba(251,191,36,0.6)] animate-pulse" />
+                          <div className="absolute top-0 w-px h-[50px] bg-gradient-to-b from-primary/20 to-amber-400 right-14" />
+                          <div className="absolute top-[50px] w-2.5 h-2.5 right-13 bg-amber-400 rounded-full shadow-[0_0_10px_#fbbf24,0_0_20px_rgba(251,191,36,0.6)] animate-pulse" />
                         </div>
                       </div>
                     </div>
