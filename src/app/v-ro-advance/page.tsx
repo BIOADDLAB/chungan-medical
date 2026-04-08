@@ -712,31 +712,18 @@ export default function VRoAdvancePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-[#0a0e1a] rounded-3xl border border-white/10 overflow-hidden relative"
+                    className="bg-[#0a0e1a] rounded-2xl border border-white/10 overflow-hidden relative group"
                   >
                     <div className="absolute top-3 left-3 z-20 bg-black/50 backdrop-blur-md px-3 py-1 rounded-md text-[11px] font-bold text-white border border-white/10">
                       · Dot Mode
                     </div>
-                    <div className="aspect-[4/3] flex flex-col items-center justify-center relative overflow-hidden gap-3">
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
-                      {/* 카트리지 하단부 */}
-                      <div className="w-28 h-2 bg-slate-700/80 rounded-sm relative z-10 shadow-lg" />
-                      {/* Dot 빔 */}
-                      <div className="flex gap-2.5 relative z-10">
-                        {[1, 2, 3, 4, 5].map((i) => (
-                          <div key={i} className="flex flex-col items-center gap-0.5">
-                            <div
-                              className="w-0.5 h-5 bg-gradient-to-b from-amber-400/70 to-transparent"
-                              style={{ animationDelay: `${i * 0.12}s` }}
-                            />
-                            <div
-                              className="w-2.5 h-2.5 bg-amber-400 rounded-full shadow-[0_0_8px_#fbbf24,0_0_16px_rgba(251,191,36,0.6)] animate-pulse"
-                              style={{ animationDelay: `${i * 0.12}s` }}
-                            />
-                          </div>
-                        ))}
-                      </div>
-                      <span className="absolute bottom-3 right-3 text-primary/30 text-[9px] font-black z-10 uppercase tracking-widest">Simulation</span>
+                    <div className="aspect-[4/3] flex items-center justify-center relative overflow-hidden">
+                      <img
+                        src="/images/vro_advance/dotmode.png"
+                        alt="Dot Mode Illustration"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
                     </div>
                   </motion.div>
 
@@ -746,21 +733,18 @@ export default function VRoAdvancePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="bg-[#0a0e1a] rounded-3xl border border-white/10 overflow-hidden relative"
+                    className="bg-[#0a0e1a] rounded-2xl border border-white/10 overflow-hidden relative group"
                   >
                     <div className="absolute top-3 left-3 z-20 bg-black/50 backdrop-blur-md px-3 py-1 rounded-md text-[11px] font-bold text-white border border-white/10">
                       · Line Mode
                     </div>
-                    <div className="aspect-[4/3] flex flex-col items-center justify-center relative overflow-hidden gap-3">
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
-                      {/* 카트리지 하단부 */}
-                      <div className="w-28 h-2 bg-slate-700/80 rounded-sm relative z-10 shadow-lg" />
-                      {/* Line 빔 */}
-                      <div className="relative z-10 w-[70%] flex flex-col items-center gap-0.5">
-                        <div className="w-full h-4 bg-gradient-to-b from-amber-400/50 to-transparent rounded-t-sm" />
-                        <div className="w-full h-3 bg-amber-400 rounded-full shadow-[0_0_12px_#fbbf24,0_0_28px_rgba(251,191,36,0.7),0_0_50px_rgba(251,191,36,0.3)]" />
-                      </div>
-                      <span className="absolute bottom-3 right-3 text-primary/30 text-[9px] font-black z-10 uppercase tracking-widest">Simulation</span>
+                    <div className="aspect-[4/3] flex items-center justify-center relative overflow-hidden">
+                      <img
+                        src="/images/vro_advance/linemode.png"
+                        alt="Line Mode Illustration"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
                     </div>
                   </motion.div>
                 </div>
@@ -796,7 +780,7 @@ export default function VRoAdvancePage() {
                           <span className="text-slate-300 text-xl font-black tracking-tighter font-inter">N4.5</span>
                           <div className="w-10 h-[1px] bg-white/20" />
                           <div className="flex gap-0.5">
-                            {[1,2,3].map(i => <div key={i} className="w-1 h-3 bg-white/15 rounded-sm" />)}
+                            {[1, 2, 3].map(i => <div key={i} className="w-1 h-3 bg-white/15 rounded-sm" />)}
                           </div>
                         </div>
                         {/* 넓은 빔 (에너지 분산) */}
@@ -830,7 +814,7 @@ export default function VRoAdvancePage() {
                           <span className="text-primary text-xl font-black tracking-tighter font-inter">A4.5</span>
                           <div className="w-10 h-[1px] bg-primary/30" />
                           <div className="flex gap-0.5">
-                            {[1,2,3].map(i => <div key={i} className="w-1 h-3 bg-primary/25 rounded-sm" />)}
+                            {[1, 2, 3].map(i => <div key={i} className="w-1 h-3 bg-primary/25 rounded-sm" />)}
                           </div>
                         </div>
                         {/* 집중된 빔 (에너지 집중) */}
