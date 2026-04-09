@@ -98,7 +98,7 @@ export default function UPulsePage() {
 
               <p className="text-slate-400 text-lg font-medium leading-relaxed mb-12 max-w-xl">
                 최첨단 High-Peak-Power 기술을 통해 피부 깊숙이 정밀한<br className="hidden md:block" />
-                에너지를 전달하여 탁월한 치료 효과와 빠른 회복을 선사합니다.
+                에너지를 전달하여 탁월한 치료 효과, 빠른 회복을 선사합니다.
               </p>
 
               {/* 특징 카드 그리드 (세로 리스트 배치) */}
