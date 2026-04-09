@@ -470,16 +470,16 @@ export default function UPulsePage() {
             >
               <div className="group">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)] transition-all duration-500" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary md:bg-primary/20 md:group-hover:bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)] transition-all duration-500" />
                   <h5 className="text-white font-bold text-2xl">안정적인 울트라펄스</h5>
                 </div>
                 <p className="text-primary/70 text-[10px] font-bold mb-4 tracking-[0.2em] uppercase pl-4">Patent Registration: No.10-XXXXXX</p>
-                <div className="space-y-4 pl-4 border-l border-white/5 group-hover:border-primary/30 transition-colors duration-500">
-                  <p className="text-slate-400 text-lg leading-relaxed font-medium">
+                <div className="space-y-4 pl-4 border-l border-primary/30 md:border-white/5 md:group-hover:border-primary/30 transition-colors duration-500">
+                  <p className="text-white md:text-slate-400 text-lg leading-relaxed font-medium md:group-hover:text-white transition-colors duration-500">
                     SNJ만의 <span className="text-white font-bold">파워보드, 높은 파워의 글래스 튜브,<br className="hidden md:block" /> 높은 볼트의 레귤레이터</span> 3박자가 어우러진<br className="hidden md:block" />
                     안정적인 울트라펄스 기술입니다.
                   </p>
-                  <p className="text-slate-500 text-base leading-relaxed">
+                  <p className="text-slate-400 md:text-slate-500 text-base leading-relaxed md:group-hover:text-slate-400 transition-colors duration-500">
                     타사와는 차별화된 균일한 에너지를 투광하여 <br className="hidden md:block" />
                     정교하고 일관적인 치료 효과를 실현합니다.
                   </p>
