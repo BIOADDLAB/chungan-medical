@@ -8,7 +8,7 @@ export default function Footer() {
           <img
             src="/images/청안로고.png"
             alt="CHEONGAN"
-            className="w-100 opacity-100 brightness-0 invert object-contain object-left -ml-20"
+            className="w-48 md:w-80 opacity-100 brightness-0 invert object-contain object-left md:-ml-20"
           />
         </div>
 
@@ -29,7 +29,7 @@ export default function Footer() {
             </div>
             <div className="flex mt-2">
               <span className="w-24 font-bold text-gray-500 shrink-0">주소</span>
-              <div className="text-gray-400 leading-[1.8] flex flex-col gap-1 whitespace-nowrap">
+              <div className="text-gray-400 leading-[1.8] flex flex-col gap-1 md:whitespace-nowrap">
                 <p><strong className="text-gray-300 font-medium">본사</strong> 서울특별시 강남구 테헤란로 70길 12 H타워 148,302-1호</p>
                 <p><strong className="text-gray-300 font-medium">영업본부</strong> 경기도 수원시 영통구 광교중앙로 170 광교효성해링턴타워 A동 1802호</p>
                 <p><strong className="text-gray-300 font-medium">전라제주지사</strong> 전라북도 전주시 덕진구 동부대로 1229 메가월드 B동 322호</p>

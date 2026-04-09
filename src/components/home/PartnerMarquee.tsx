@@ -73,8 +73,8 @@ export default function PartnerMarquee() {
           viewport={{ once: true }}
           className="py-4 relative"
         >
-          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#020408] to-transparent z-20 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#020408] to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#020408] to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#020408] to-transparent z-20 pointer-events-none" />
           
           <Swiper
             modules={[Autoplay]}
@@ -109,8 +109,8 @@ export default function PartnerMarquee() {
           viewport={{ once: true }}
           className="py-4 relative flex"
         >
-          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#020408] to-transparent z-20 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#020408] to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#020408] to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#020408] to-transparent z-20 pointer-events-none" />
 
           <Swiper
             modules={[Autoplay]}

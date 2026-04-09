@@ -19,11 +19,13 @@
 }
 
 /* Base Body styles */
+html,
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
   overflow-x: hidden;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -461,6 +463,18 @@ header {
 @media (max-width: 1024px) {
   .consulting-diagram-wrap {
     transform: scale(0.75);
+  }
+}
+
+@media (max-width: 768px) {
+  .consulting-diagram-wrap {
+    transform: scale(0.6);
+  }
+}
+
+@media (max-width: 480px) {
+  .consulting-diagram-wrap {
+    transform: scale(0.45);
   }
 }
 

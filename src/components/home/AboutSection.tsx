@@ -20,7 +20,7 @@ export default function AboutSection() {
         viewport={{ once: true, margin: "-100px" }}
         className="relative z-10 w-full lg:w-[40%] flex flex-col justify-start min-h-screen"
       >
-        <div className="glass-panel w-full h-full flex flex-col justify-start p-12 md:p-16 lg:p-20 pt-24 md:pt-32 relative overflow-hidden">
+        <div className="glass-panel w-full h-full flex flex-col justify-start p-8 md:p-16 lg:p-20 pt-24 md:pt-32 relative overflow-hidden">
           {/* Tech Accent Elements inside panel */}
           <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#00B7F1] to-transparent opacity-70" />
           <div className="absolute top-0 left-0 w-[4px] h-[100px] bg-[#00B7F1] shadow-[0_0_15px_#00B7F1]" />
