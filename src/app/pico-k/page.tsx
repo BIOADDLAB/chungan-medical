@@ -531,7 +531,8 @@ export default function PicoKPage() {
               </div>
 
               {/* 암(Arm) 일러스트 및 빔 테스트 영역 (Empty Slot) */}
-              <div className="grid grid-cols-2 gap-8 mt-auto">
+              <div className="grid grid-cols-2 gap-4 md:gap-8 mt-auto items-start">
+                {/* 왼쪽: 암 시스템 (박스 내부 캡션 스타일) */}
                 <div className="glass-panel aspect-square bg-tech-dots/10 flex items-center justify-center border-white/5 relative overflow-hidden group/arm cursor-help">
                   <img
                     src="/images/picok/arm.png"
@@ -539,67 +540,49 @@ export default function PicoKPage() {
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover/arm:scale-105"
                   />
 
-                  {/* 테두리 강조 레이어 */}
-                  <div className="absolute inset-0 border border-primary/10 group-hover/arm:border-primary/40 transition-colors pointer-events-none" />
-
-                  {/* 360도 회전 인디케이터 (상단 팔 관절 기둥에 맞춤) */}
+                  {/* 360도 회전 인디케이터 */}
                   <div className="absolute top-[28%] left-[42%] -translate-x-1/2 -translate-y-1/2 pointer-events-none z-20">
                     <div className="relative flex items-center justify-center">
-                      <svg
-                        viewBox="0 0 200 100"
-                        className="w-40 h-auto opacity-90 drop-shadow-[0_0_15px_rgba(255,62,62,0.4)] transition-all duration-700 group-hover/arm:opacity-100 group-hover/arm:scale-110 text-[#FF3E3E]"
-                      >
-                        <path
-                          d="M40,50 C40,70 160,70 160,50 C160,30 40,30 40,50"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="4"
-                          strokeDasharray="12 6"
-                          className="animate-[pulse_3s_infinite]"
-                        />
+                      <svg viewBox="0 0 200 100" className="w-24 sm:w-32 md:w-40 h-auto text-[#FF3E3E] opacity-90">
+                        <path d="M40,50 C40,70 160,70 160,50 C160,30 40,30 40,50" fill="none" stroke="currentColor" strokeWidth="4" strokeDasharray="12 6" className="animate-[pulse_3s_infinite]" />
                         <path d="M155,50 L165,50 L160,60 Z" fill="currentColor" />
                       </svg>
-
-                      <div className="absolute -right-16 -top-2 group-hover/arm:translate-x-3 transition-transform duration-700">
-                        <span className="text-4xl md:text-5xl font-black text-[#FF3E3E] tracking-tighter italic drop-shadow-[0_0_25px_rgba(255,62,62,0.7)]">360°</span>
+                      <div className="absolute -right-10 md:-right-16 -top-2">
+                        <span className="text-2xl md:text-5xl font-black text-[#FF3E3E] tracking-tighter italic italic drop-shadow-[0_0_20px_rgba(255,62,62,0.5)]">360°</span>
                       </div>
                     </div>
                   </div>
 
-                  {/* 하단 캡션 (최종 밸런스 레이아웃) */}
-                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center bg-black/60 backdrop-blur-md border border-white/10 px-6 py-2 shadow-2xl pointer-events-none w-fit">
-                    <div className="w-[3px] h-10 bg-primary mr-5 shadow-[0_0_12px_rgba(0,183,241,0.8)]" />
-                    <div className="flex flex-col gap-1.5">
-                      <span className="text-[14px] font-black text-white tracking-[0.2em] uppercase leading-none whitespace-nowrap">
+                  {/* 하단 캡션 오버레이 (이미지 위에 겹침) */}
+                  <div className="absolute bottom-2 md:bottom-6 left-1/2 -translate-x-1/2 flex items-center bg-black/80 backdrop-blur-md border border-white/10 px-3 md:px-6 py-1.5 md:py-2 shadow-2xl pointer-events-none w-[90%] md:w-fit">
+                    <div className="w-[2px] md:w-[3px] h-6 md:h-10 bg-primary mr-3 md:mr-5" />
+                    <div className="flex flex-col text-left">
+                      <span className="text-[10px] md:text-[14px] font-black text-white tracking-[0.1em] md:tracking-[0.2em] uppercase leading-none whitespace-nowrap">
                         FULL ROTATION
                       </span>
-                      <span className="text-[14px] font-black text-white tracking-[0.2em] uppercase leading-none mt-0.5 whitespace-nowrap">
+                      <span className="text-[10px] md:text-[14px] font-black text-white tracking-[0.1em] md:tracking-[0.2em] uppercase leading-none mt-1 md:mt-0.5 whitespace-nowrap">
                         ARM SYSTEM
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col justify-center items-center text-center gap-6">
-                  {/* 정밀 빔 테스트 시각화 (circle.png 확대 버전) */}
-                  <div className="relative w-48 h-48 flex items-center justify-center group/beam">
-                    {/* 회전하는 은은한 빛의 링 */}
-                    <div className="absolute inset-0 rounded-full border border-primary/20 animate-[spin_20s_linear_infinite] opacity-50" />
 
-                    {/* 메인 빔 테스트 이미지 */}
+                {/* 오른쪽: 빔 테스트 (이미지 아래 텍스트 스타일) */}
+                <div className="flex flex-col justify-center items-center text-center gap-3 md:gap-6 pt-1 md:pt-2">
+                  <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 flex items-center justify-center group/beam">
+                    <div className="absolute inset-0 rounded-full border border-primary/20 animate-[spin_20s_linear_infinite] opacity-50" />
                     <img
                       src="/images/picok/circle.png"
                       alt="Beam Test Visualization"
-                      className="w-full h-full object-contain drop-shadow-[0_0_20px_rgba(0,183,241,0.5)] transition-all duration-700 group-hover/beam:scale-110 group-hover/beam:rotate-6"
+                      className="w-full h-full object-contain drop-shadow-[0_0_20px_rgba(0,183,241,0.5)] transition-all duration-700 group-hover/beam:scale-110"
                     />
-
-                    {/* 중앙 포인트 (동적 연출) */}
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-1 h-1 bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,1)] group-hover/beam:scale-150 transition-transform" />
+                      <div className="w-1 h-1 bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,1)]" />
                     </div>
                   </div>
-                  <div className="space-y-1">
-                    <span className="text-2xl font-black text-white tracking-widest uppercase">PICO-K</span><br />
-                    <span className="text-lg font-black text-primary/80 uppercase tracking-tighter">BEAM TEST</span>
+                  <div className="flex flex-col items-center">
+                    <span className="text-lg md:text-2xl font-black text-white tracking-widest uppercase">PICO-K</span>
+                    <span className="text-sm md:text-lg font-black text-primary uppercase tracking-tighter">BEAM TEST</span>
                   </div>
                 </div>
               </div>
