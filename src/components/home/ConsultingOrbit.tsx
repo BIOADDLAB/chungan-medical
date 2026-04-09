@@ -34,49 +34,51 @@ export default function ConsultingOrbit() {
         </motion.div>
 
         {/* Orbit Diagram Container (HUD Style) */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="consulting-diagram-wrap relative mx-auto flex justify-center items-center"
-        >
-          {/* Central Logo: CN+ Tech Style */}
-          <div className="consulting-center-logo z-10 transition-transform duration-500 hover:scale-105">
-            <div className="cn-plus-symbol overflow-hidden border-0">
-              <img
-                src="/images/청안turnkey 로고1.png"
-                alt="CHEONGAN TURNKEY"
-                className="w-full h-full object-cover brightness-110"
-              />
+        <div className="consulting-diagram-responsive-wrapper flex justify-center items-center w-full">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="consulting-diagram-wrap relative mx-auto flex justify-center items-center"
+          >
+            {/* Central Logo: CN+ Tech Style */}
+            <div className="consulting-center-logo z-10 transition-transform duration-500 hover:scale-105">
+              <div className="cn-plus-symbol overflow-hidden border-0">
+                <img
+                  src="/images/청안turnkey 로고1.png"
+                  alt="CHEONGAN TURNKEY"
+                  className="w-full h-full object-cover brightness-110"
+                />
+              </div>
             </div>
-          </div>
 
-          {/* HUD Orbiting Circles */}
-          <div className="consulting-orbit-path"></div>
-          <div className="orbit-items-wrap">
-            <div className="orbit-item item-1">
-              <div className="absolute -top-2 -right-2 w-6 h-6 border-t border-r border-primary opacity-50" />
-              <span>병의원 전문<br /><strong className="text-primary">MSO 운영/관리</strong></span>
+            {/* HUD Orbiting Circles */}
+            <div className="consulting-orbit-path"></div>
+            <div className="orbit-items-wrap">
+              <div className="orbit-item item-1">
+                <div className="absolute -top-2 -right-2 w-6 h-6 border-t border-r border-primary opacity-50" />
+                <span>병의원 전문<br /><strong className="text-primary">MSO 운영/관리</strong></span>
+              </div>
+              <div className="orbit-item item-2">
+                <div className="absolute -top-2 -left-2 w-6 h-6 border-t border-l border-primary opacity-50" />
+                <span>국 · 내외<br /><strong className="text-primary">환자유치</strong></span>
+              </div>
+              <div className="orbit-item item-3">
+                <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b border-l border-primary opacity-50" />
+                <span>병의원 전문<br /><strong className="text-primary">온라인 마케팅</strong></span>
+              </div>
+              <div className="orbit-item item-4">
+                <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b border-r border-primary opacity-50" />
+                <span>병의원 전문<br /><strong className="text-primary">인테리어</strong></span>
+              </div>
+              <div className="orbit-item item-5">
+                <div className="absolute -top-2 -right-2 w-6 h-6 border-t border-r border-primary opacity-50" />
+                <span>병의원 전문<br /><strong className="text-primary">세무사/노무사</strong></span>
+              </div>
             </div>
-            <div className="orbit-item item-2">
-              <div className="absolute -top-2 -left-2 w-6 h-6 border-t border-l border-primary opacity-50" />
-              <span>국 · 내외<br /><strong className="text-primary">환자유치</strong></span>
-            </div>
-            <div className="orbit-item item-3">
-              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b border-l border-primary opacity-50" />
-              <span>병의원 전문<br /><strong className="text-primary">온라인 마케팅</strong></span>
-            </div>
-            <div className="orbit-item item-4">
-              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b border-r border-primary opacity-50" />
-              <span>병의원 전문<br /><strong className="text-primary">인테리어</strong></span>
-            </div>
-            <div className="orbit-item item-5">
-              <div className="absolute -top-2 -right-2 w-6 h-6 border-t border-r border-primary opacity-50" />
-              <span>병의원 전문<br /><strong className="text-primary">세무사/노무사</strong></span>
-            </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
