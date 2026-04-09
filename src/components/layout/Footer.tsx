@@ -60,20 +60,20 @@ export default function Footer() {
 
         {/* Footer Bottom */}
         <div className="mt-24 pt-8 border-t border-[#222] flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-          <div className="flex space-x-12 mb-6 md:mb-0">
-            <Link href="https://pf.kakao.com/_nEETxj" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 group">
+          <div className="flex flex-wrap justify-center md:justify-start gap-6 md:gap-12 mb-8 md:mb-0">
+            <Link href="https://pf.kakao.com/_nEETxj" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 group shrink-0">
               <div className="w-8 h-8 rounded-full bg-[#222] flex items-center justify-center group-hover:bg-yellow-500 transition-colors">
                 <svg className="w-4 h-4 text-gray-400 group-hover:text-black fill-current" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 3.185-9 7.115 0 2.557 1.707 4.8 4.27 6.054-.188.702-.68 2.531-.777 2.89-.112.411.139.405.293.303.119-.078 1.884-1.282 2.646-1.791.84.12 1.696.183 2.568.183 4.97 0 9-3.185 9-7.115S16.97 3 12 3z" /></svg>
               </div>
               <span className="font-bold tracking-wider text-[0.7rem] group-hover:text-white transition-colors">KAKAO</span>
             </Link>
-            <Link href="https://www.instagram.com/chungan_medical_corporation" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 group">
+            <Link href="https://www.instagram.com/chungan_medical_corporation" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 group shrink-0">
               <div className="w-8 h-8 rounded-full bg-[#222] flex items-center justify-center group-hover:bg-pink-600 transition-colors">
                 <svg className="w-4 h-4 text-gray-400 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
               </div>
               <span className="font-bold tracking-wider text-[0.7rem] group-hover:text-white transition-colors">INSTAGRAM</span>
             </Link>
-            <Link href="https://blog.naver.com/hwangh6293" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 group">
+            <Link href="https://blog.naver.com/hwangh6293" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 group shrink-0">
               <div className="w-8 h-8 rounded-full bg-[#222] flex items-center justify-center group-hover:bg-green-600 transition-colors">
                 <span className="text-[10px] font-black text-gray-400 group-hover:text-white">b</span>
               </div>
