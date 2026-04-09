@@ -344,14 +344,14 @@ export default function UPulsePage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 1.5 }}
               viewport={{ once: true }}
-              className="glass-panel p-12 relative overflow-hidden group border-primary/20"
+              className="glass-panel p-8 md:p-12 relative overflow-hidden group border-primary/20"
             >
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 blur-[60px] rounded-full group-hover:bg-primary/20 transition-all duration-700" />
               <div className="relative z-10">
-                <span className="text-primary/60 text-[11px] font-bold tracking-[0.4em] uppercase mb-4 block">Engineered Precision</span>
+                <span className="text-primary/60 text-[11px] font-bold tracking-[0.2em] md:tracking-[0.4em] uppercase mb-4 block whitespace-nowrap">Engineered Precision</span>
                 <div className="flex flex-col gap-2">
                   <span className="text-white/40 text-lg font-medium tracking-tight">Peak Power</span>
-                  <h4 className="text-[44px] md:text-[56px] font-black text-white tracking-tighter leading-none mb-4">
+                  <h4 className="text-[34px] md:text-[56px] font-black text-white tracking-tighter leading-none mb-4 whitespace-nowrap">
                     800 ~ 1000 W
                   </h4>
                   <div className="inline-flex items-center gap-2">
