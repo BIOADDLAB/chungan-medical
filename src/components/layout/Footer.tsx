@@ -38,8 +38,8 @@ export default function Footer() {
           </div>
 
           {/* Footer Right */}
-          <div className="md:text-right">
-            <p className="text-gray-500 mb-8 font-medium space-x-4 text-sm">
+          <div className="text-center md:text-right flex flex-col items-center md:items-end">
+            <p className="text-gray-500 mb-8 font-medium space-x-4 text-sm flex justify-center md:justify-end w-full">
               <Link href="/#about" className="hover:text-white transition duration-300">회사소개</Link>
               <span>|</span>
               <Link href="/#customers" className="hover:text-white transition duration-300">미래비전</Link>
