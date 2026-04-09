@@ -429,7 +429,7 @@ export default function PicoKPage() {
               </div>
 
               <h3 className="text-4xl md:text-5xl font-black tracking-tight mb-12">
-                <span className="hero-title-main">국내최초 300PS 실명제</span>
+                <span className="hero-title-main">국내 최초 300PS <br className="md:hidden" /> 실명제</span>
               </h3>
 
               {/* 오실로스코프 파형 영역 (Empty Slot) */}
