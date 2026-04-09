@@ -313,8 +313,8 @@ export default function PicoKPage() {
                   특허기술이 적용된 파워서플라이 채용
                 </p>
                 <p className="text-slate-400 font-medium leading-relaxed max-w-md">
-                  PFC(Power Factor Correction)를 통합하여 일정하고<br />
-                  안정적인 에너지 출력을 제공하는 데 도움을 줍니다.
+                  PFC(Power Factor Correction)를 통합하여 일정하고 <br className="hidden md:block" />
+                  안정적인 에너지 출력을 제공하는데 도움을 줍니다.
                 </p>
               </div>
 
@@ -357,11 +357,11 @@ export default function PicoKPage() {
 
               <div className="mb-10">
                 <p className="text-slate-200 font-bold text-xl leading-snug mb-6">
-                  순수 자체 기술을 통한 개발과 생산으로<br />
+                  순수 자체 기술을 통한 개발과 생산으로 <br className="hidden md:block" />
                   핵심 부품 간의 정밀한 매칭을 구현했습니다.
                 </p>
                 <p className="text-slate-400 font-medium leading-relaxed max-w-md">
-                  부적합을 줄이고 최상의 퍼포먼스를 실현하여<br />
+                  부적합을 줄이고 최상의 퍼포먼스를 실현하여<br className="hidden md:block" />
                   신뢰할 수 있는 안정성을 제공합니다.
                 </p>
               </div>
