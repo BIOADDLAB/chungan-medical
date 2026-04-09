@@ -543,5 +543,19 @@ header {
 
 .partner-marquee-1 .swiper-slide:hover img,
 .partner-marquee-2 .swiper-slide:hover img {
-  filter: brightness(0) invert(1) opacity(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+  filter: brightness(0) invert(1) opacity(1);
+  drop-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .partner-marquee-1 .swiper-slide:active span,
+  .partner-marquee-2 .swiper-slide:active span {
+    background-image: linear-gradient(to bottom, #ffffff, #00B3E4) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    text-shadow: 0 0 15px rgba(0, 183, 241, 0.8) !important;
+    opacity: 1 !important;
+    transition: all 0.1s ease;
+  }
 }
