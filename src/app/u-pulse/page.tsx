@@ -645,7 +645,7 @@ export default function UPulsePage() {
             </div>
             <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-8">
               <span className="hero-title-main">높은 출력만 가능한</span><br />
-              <span className="hero-title-highlight uppercase">Thermal-Free 멀티핀홀 기법</span>
+              <span className="hero-title-highlight uppercase">Thermal-Free <br className="block md:hidden" />멀티핀홀 기법</span>
             </h3>
             <div className="w-20 h-[2px] bg-primary" />
           </motion.div>
