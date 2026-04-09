@@ -155,7 +155,7 @@ export default function UPulsePage() {
               viewport={{ once: true }}
               className="flex justify-center lg:justify-end relative"
             >
-              <div className="relative group lg:scale-[1.2] origin-bottom lg:translate-x-12 lg:translate-y-10 transition-all duration-1000">
+              <div className="relative group scale-[2] lg:scale-[1.2] pt-12 lg:pt-0 origin-bottom lg:translate-x-12 lg:translate-y-10 transition-all duration-1000">
                 {/* 배경 수직 광채 (확대된 크기에 맞춰 범위 확장) */}
                 <div className="absolute inset-y-0 -inset-x-20 bg-primary/10 blur-[120px] rounded-full opacity-40 group-hover:opacity-60 transition duration-1000" />
 
@@ -177,7 +177,7 @@ export default function UPulsePage() {
       </section>
 
       {/* ③ High-Peak-Power Pulsed Technology (Full Stable Container) */}
-      <section id="u-pulse-tech" className="relative py-32 bg-[#020408] overflow-hidden">
+      <section id="u-pulse-tech" className="relative py-32 bg-[#020408] overflow-x-clip">
         {/* 배경 장식 요소 */}
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
@@ -197,79 +197,145 @@ export default function UPulsePage() {
             </div>
 
             {/* 타이틀 */}
-            <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-6 text-left">
+            <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-6 text-center md:text-left">
               <span className="hero-title-main uppercase">REVOLUTIONARY</span><br />
               <span className="hero-title-highlight uppercase">HIGH - PEAK POWER</span>
             </h3>
             <div className="w-20 h-[2px] bg-primary mb-8" />
           </motion.div>
 
-          {/* 중앙: 대형 펄스 그래프 */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            className="relative w-full max-w-7xl mx-auto aspect-[16/6] md:aspect-[21/9] overflow-visible mb-16 -mt-40"
-          >
-            <svg viewBox="0 0 1000 300" className="w-full h-full overflow-visible">
-              <defs>
-                <linearGradient id="pulse-gradient-premium" x1="0" y1="1" x2="0" y2="0">
-                  <stop offset="0%" stopColor="#00B7F1" stopOpacity="0.05" />
-                  <stop offset="50%" stopColor="#00B7F1" stopOpacity="0.5" />
-                  <stop offset="100%" stopColor="#00B7F1" stopOpacity="1" />
-                </linearGradient>
-                <filter id="point-glow-large">
-                  <feGaussianBlur stdDeviation="8" result="blur" />
-                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                </filter>
-              </defs>
+          {/* 중앙: 대형 펄스 그래프 (데스크톱/모바일 분리) */}
+          <div className="relative w-full max-w-7xl mx-auto mb-16 mt-8 md:-mt-40 overflow-visible">
+            {/* 데스크톱 버전 (6 Waves) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="hidden md:block aspect-[21/9] w-full"
+            >
+              <svg viewBox="0 0 1000 300" className="w-full h-full overflow-visible">
+                <defs>
+                  <linearGradient id="pulse-gradient-premium" x1="0" y1="1" x2="0" y2="0">
+                    <stop offset="0%" stopColor="#00B7F1" stopOpacity="0.05" />
+                    <stop offset="50%" stopColor="#00B7F1" stopOpacity="0.5" />
+                    <stop offset="100%" stopColor="#00B7F1" stopOpacity="1" />
+                  </linearGradient>
+                  <filter id="point-glow-large">
+                    <feGaussianBlur stdDeviation="8" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
+                </defs>
 
-              <line x1="50" y1="230" x2="950" y2="230" stroke="white" strokeOpacity="0.1" strokeWidth="1" />
-              <line x1="50" y1="30" x2="50" y2="230" stroke="white" strokeOpacity="0.1" strokeWidth="1" />
-              <text x="35" y="45" className="fill-white/40 text-[12px] font-bold tracking-widest" textAnchor="end">W</text>
-              <text x="145" y="25" className="fill-white font-black text-[14px] tracking-tight">100 W</text>
+                <line x1="80" y1="230" x2="920" y2="230" stroke="white" strokeOpacity="0.1" strokeWidth="1" />
+                <line x1="80" y1="30" x2="80" y2="230" stroke="white" strokeOpacity="0.1" strokeWidth="1" />
+                <text x="65" y="45" className="fill-white/40 text-[12px] font-bold tracking-widest" textAnchor="end">W</text>
+                <text x="175" y="25" className="fill-white font-black text-[14px] tracking-tight">100 W</text>
 
-              {[...Array(6)].map((_, i) => (
-                <motion.g key={i}>
-                  <motion.path
-                    d={`M ${120 + i * 140} 230 C ${150 + i * 140} 230 ${165 + i * 140} 40 ${185 + i * 140} 40 C ${205 + i * 140} 40 ${220 + i * 140} 230 ${250 + i * 140} 230`}
-                    fill="url(#pulse-gradient-premium)"
-                    stroke="#00B7F1"
-                    strokeWidth="3"
-                    initial={{ pathLength: 0, opacity: 0 }}
-                    whileInView={{ pathLength: 1, opacity: 1 }}
-                    transition={{ duration: 0.8, delay: i * 0.08 + 0.3, ease: "easeInOut" }}
-                    viewport={{ once: true }}
-                    className="drop-shadow-[0_0_20px_rgba(0,183,241,0.4)] saturate-150"
-                  />
-                  <motion.circle
-                    cx={185 + i * 140}
-                    cy={40}
-                    r="4"
-                    fill="white"
-                    filter="url(#point-glow-large)"
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4, delay: i * 0.08 + 0.8 }}
-                    viewport={{ once: true }}
-                  />
+                {[...Array(6)].map((_, i) => (
+                  <motion.g key={i}>
+                    <motion.path
+                      d={`M ${150 + i * 140} 230 C ${180 + i * 140} 230 ${195 + i * 140} 40 ${215 + i * 140} 40 C ${235 + i * 140} 40 ${250 + i * 140} 230 ${280 + i * 140} 230`}
+                      fill="url(#pulse-gradient-premium)"
+                      stroke="#00B7F1"
+                      strokeWidth="3"
+                      initial={{ pathLength: 0, opacity: 0 }}
+                      whileInView={{ pathLength: 1, opacity: 1 }}
+                      transition={{ duration: 0.8, delay: i * 0.08 + 0.3, ease: "easeInOut" }}
+                      viewport={{ once: true }}
+                      className="drop-shadow-[0_0_20px_rgba(0,183,241,0.4)] saturate-150"
+                    />
+                    <motion.circle
+                      cx={215 + i * 140}
+                      cy={40}
+                      r="4"
+                      fill="white"
+                      filter="url(#point-glow-large)"
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4, delay: i * 0.08 + 0.8 }}
+                      viewport={{ once: true }}
+                    />
+                  </motion.g>
+                ))}
+
+                <motion.g
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 1.2 }}
+                  viewport={{ once: true }}
+                >
+                  <path d="M 710 255 L 850 255" stroke="white" strokeWidth="1.5" strokeDasharray="6 6" opacity="0.3" />
+                  <path d="M 710 245 L 710 265 M 850 245 L 850 265" stroke="#00B7F1" strokeWidth="3" opacity="1" />
+                  <text x="780" y="295" className="fill-primary font-black text-[20px] tracking-tight" textAnchor="middle">100 ~ 200 us</text>
+                  <text x="780" y="320" className="fill-white/30 text-[12px] font-bold uppercase tracking-[0.4em]" textAnchor="middle">Duration</text>
                 </motion.g>
-              ))}
+              </svg>
+            </motion.div>
 
-              <motion.g
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 1.2 }}
-                viewport={{ once: true }}
-              >
-                <path d="M 680 255 L 820 255" stroke="white" strokeWidth="1.5" strokeDasharray="6 6" opacity="0.3" />
-                <path d="M 680 245 L 680 265 M 820 245 L 820 265" stroke="#00B7F1" strokeWidth="3" opacity="1" />
-                <text x="750" y="295" className="fill-primary font-black text-[20px] tracking-tight" textAnchor="middle">100 ~ 200 us</text>
-                <text x="750" y="320" className="fill-white/30 text-[12px] font-bold uppercase tracking-[0.4em]" textAnchor="middle">Duration</text>
-              </motion.g>
-            </svg>
-          </motion.div>
+            {/* 모바일 버전 (3 Waves) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="md:hidden w-full mx-auto aspect-square flex items-center justify-center p-2 h-[350px]"
+            >
+              <svg viewBox="0 0 500 400" className="w-full h-full overflow-visible">
+                {/* 폰트 및 필터 공유용 정의 */}
+                <defs>
+                  <linearGradient id="pulse-gradient-mobile" x1="0" y1="1" x2="0" y2="0">
+                    <stop offset="0%" stopColor="#00B7F1" stopOpacity="0.05" />
+                    <stop offset="50%" stopColor="#00B7F1" stopOpacity="0.5" />
+                    <stop offset="100%" stopColor="#00B7F1" stopOpacity="1" />
+                  </linearGradient>
+                </defs>
+
+                <line x1="40" y1="280" x2="460" y2="280" stroke="white" strokeOpacity="0.1" strokeWidth="1.5" />
+                <line x1="40" y1="80" x2="40" y2="280" stroke="white" strokeOpacity="0.1" strokeWidth="1.5" />
+                <text x="30" y="100" className="fill-white/40 text-[14px] font-bold tracking-widest" textAnchor="end">W</text>
+                <text x="90" y="70" className="fill-white font-black text-[16px] tracking-tight">100 W</text>
+
+                {[...Array(3)].map((_, i) => (
+                  <motion.g key={i}>
+                    <motion.path
+                      d={`M ${45 + i * 140} 280 C ${75 + i * 140} 280 ${90 + i * 140} 90 ${110 + i * 140} 90 C ${130 + i * 140} 90 ${145 + i * 140} 280 ${175 + i * 140} 280`}
+                      fill="url(#pulse-gradient-mobile)"
+                      stroke="#00B7F1"
+                      strokeWidth="4"
+                      initial={{ pathLength: 0, opacity: 0 }}
+                      whileInView={{ pathLength: 1, opacity: 1 }}
+                      transition={{ duration: 0.8, delay: i * 0.15 + 0.3 }}
+                      viewport={{ once: true }}
+                    />
+                    <motion.circle
+                      cx={110 + i * 140}
+                      cy={90}
+                      r="5"
+                      fill="white"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 0.3, delay: i * 0.15 + 0.8 }}
+                      viewport={{ once: true }}
+                    />
+                  </motion.g>
+                ))}
+
+                {/* 모바일 듀레이션 정보 (파동 바로 아래 중앙) */}
+                <motion.g
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 1.2 }}
+                  viewport={{ once: true }}
+                >
+                  <path d="M 180 320 L 320 320" stroke="white" strokeWidth="1.5" strokeDasharray="6 6" opacity="0.3" />
+                  <path d="M 180 310 L 180 330 M 320 310 L 320 330" stroke="#00B7F1" strokeWidth="3" />
+                  <text x="250" y="360" className="fill-primary font-black text-[24px] tracking-tight" textAnchor="middle">100 ~ 200 us</text>
+                  <text x="250" y="385" className="fill-white/30 text-[14px] font-bold uppercase tracking-[0.4em]" textAnchor="middle">Duration</text>
+                </motion.g>
+              </svg>
+            </motion.div>
+          </div>
 
           {/* 하단: 상세 정보 블록 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto -mt-16">
