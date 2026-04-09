@@ -418,7 +418,7 @@ export default function UPulsePage() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="relative aspect-square w-full max-w-[440px] mx-auto flex items-center justify-center p-4 h-[440px]"
+              className="relative aspect-square w-full max-w-[440px] mx-auto flex items-center justify-center p-4 h-[440px] scale-[1.05] md:scale-100 origin-center"
             >
               <div className="relative w-full h-full flex items-center justify-center">
                 {/* 상단 원 (파워보드) */}
@@ -426,9 +426,9 @@ export default function UPulsePage() {
                   initial={{ y: -20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.3, duration: 0.8 }}
-                  className="absolute top-4 w-[240px] h-[240px] rounded-full bg-gradient-to-b from-[#00B7F1]/40 to-[#00B7F1]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen shadow-[0_0_40px_rgba(0,183,241,0.1)]"
+                  className="absolute top-[16%] md:top-4 w-[180px] h-[180px] md:w-[240px] md:h-[240px] rounded-full bg-gradient-to-b from-[#00B7F1]/40 to-[#00B7F1]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen shadow-[0_0_40px_rgba(0,183,241,0.1)]"
                 >
-                  <span className="font-bold text-white text-lg tracking-tighter">파워보드</span>
+                  <span className="font-bold text-white text-[14px] md:text-lg tracking-tighter">파워보드</span>
                 </motion.div>
 
                 {/* 좌측 하단 (글래스튜브) */}
@@ -436,9 +436,9 @@ export default function UPulsePage() {
                   initial={{ x: -20, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.5, duration: 0.8 }}
-                  className="absolute bottom-4 left-0 w-[240px] h-[240px] rounded-full bg-gradient-to-tr from-[#3B6B98]/40 to-[#3B6B98]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen shadow-[0_0_40px_rgba(59,107,152,0.1)]"
+                  className="absolute bottom-[16%] md:bottom-4 left-[-4%] md:left-0 w-[180px] h-[180px] md:w-[240px] md:h-[240px] rounded-full bg-gradient-to-tr from-[#3B6B98]/40 to-[#3B6B98]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen shadow-[0_0_40px_rgba(59,107,152,0.1)]"
                 >
-                  <span className="font-bold text-white/90 text-center leading-tight tracking-tighter">
+                  <span className="font-bold text-white/90 text-center leading-tight text-[13px] md:text-lg tracking-tighter">
                     높은 파워의<br />글래스튜브
                   </span>
                 </motion.div>
@@ -448,9 +448,9 @@ export default function UPulsePage() {
                   initial={{ x: 20, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.7, duration: 0.8 }}
-                  className="absolute bottom-4 right-0 w-[240px] h-[240px] rounded-full bg-gradient-to-tl from-[#00B7F1]/30 to-[#00B7F1]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen shadow-[0_0_40px_rgba(0,183,241,0.1)]"
+                  className="absolute bottom-[16%] md:bottom-4 right-[-4%] md:right-0 w-[180px] h-[180px] md:w-[240px] md:h-[240px] rounded-full bg-gradient-to-tl from-[#00B7F1]/30 to-[#00B7F1]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen shadow-[0_0_40px_rgba(0,183,241,0.1)]"
                 >
-                  <span className="font-bold text-white/90 text-center leading-tight tracking-tighter">
+                  <span className="font-bold text-white/90 text-center leading-tight text-[13px] md:text-lg tracking-tighter">
                     높은 볼트의<br />레귤레이터
                   </span>
                 </motion.div>
