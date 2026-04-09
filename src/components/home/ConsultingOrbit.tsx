@@ -26,9 +26,10 @@ export default function ConsultingOrbit() {
             <span className="hero-title-main">병의원 개원컨설팅</span> / <span className="hero-title-highlight">TURN-KEY</span>
           </h2>
           <div className="w-20 h-[2px] bg-primary mx-auto mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-          <p className="text-slate-400 text-lg font-medium max-w-2xl mx-auto leading-relaxed">
-            청안의 원팀 서비스는 원장님의 불안 요소를 줄이고<br />
-            <span className="text-white">시간 가치는 극대화</span>해 드리는 정밀 솔루션입니다.
+          <p className="text-slate-400 text-lg font-medium max-w-2xl mx-auto leading-relaxed break-keep px-4">
+            청안의 원팀 서비스는 원장님의 불안 <br className="md:hidden" />
+            요소를 줄이고 <span className="text-white">시간 가치는 극대화</span> <br className="md:hidden" />
+            해드리는 정밀 솔루션입니다.
           </p>
         </motion.div>
 
