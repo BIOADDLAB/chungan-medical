@@ -525,10 +525,10 @@ export default function UPulsePage() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className="group relative flex items-center justify-center p-12 glass-panel bg-tech-dots/5 overflow-visible min-h-[320px] transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:shadow-[0_0_40px_rgba(244,114,182,0.15)] hover:border-pink-500/20 cursor-crosshair"
+              className="group relative flex items-center justify-center p-4 md:p-12 glass-panel bg-tech-dots/5 overflow-visible min-h-[320px] transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:shadow-[0_0_40px_rgba(244,114,182,0.15)] hover:border-pink-500/20 cursor-crosshair"
             >
               {/* 2번째 이미지 스타일: 흰색 두꺼운 외벽 + 어두운 내부 + 긴 테이퍼 + 빨간 레이저 */}
-              <svg viewBox="0 0 880 240" className="w-full h-auto overflow-visible transition-transform duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] group-hover:scale-[1.05]">
+              <svg viewBox="0 0 880 240" className="w-full h-auto overflow-visible transition-transform duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] scale-110 md:scale-100 group-hover:scale-[1.1] md:group-hover:scale-[1.05]">
                 <defs>
                   <filter id="z2-glow">
                     <feGaussianBlur stdDeviation="2.5" result="b" />
