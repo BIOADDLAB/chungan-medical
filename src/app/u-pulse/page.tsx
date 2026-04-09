@@ -512,8 +512,11 @@ export default function UPulsePage() {
               </h3>
               <div className="w-20 h-[2px] bg-primary mb-8" />
               <div className="text-lg md:text-xl font-medium leading-relaxed text-slate-400 space-y-2 pl-4 border-l border-white/5">
-                <p>1단계 (0.2mm) 부터 5단계 (1.3mm) 까지 핸드피스 하나로</p>
-                <p>다양한 스팟사이즈 변동 가능</p>
+                <p>
+                  1단계 (0.2mm)부터 5단계 (1.3mm)
+                  <br className="block md:hidden" /> 까지 핸드피스 하나로 다양한
+                  <br className="block md:hidden" /> 스팟사이즈 변동 가능
+                </p>
               </div>
             </motion.div>
 
