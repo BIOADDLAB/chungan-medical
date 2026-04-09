@@ -59,8 +59,8 @@ export default function PartnerMarquee() {
           viewport={{ once: true }}
           className="text-slate-400 text-lg font-medium max-w-2xl mx-auto leading-relaxed"
         >
-          병원 분과 별 맞춤 세팅 시스템. 당신의 브랜드가 가장 주목받는 의료 공간에서<br className="hidden md:block" />
-          최적의 솔루션과 만나는 혁신적인 네트워크를 경험하세요.
+          병원 분과별 맞춤 세팅 시스템. 당신의<br className="md:hidden" /> 브랜드가 가장 주목받는 의료 공간에서<br />
+          최적의 솔루션과 만나는 혁신적인<br className="md:hidden" /> 네트워크를 경험하세요.
         </motion.p>
       </div>
 
@@ -75,7 +75,7 @@ export default function PartnerMarquee() {
         >
           <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#020408] to-transparent z-20 pointer-events-none" />
           <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#020408] to-transparent z-20 pointer-events-none" />
-          
+
           <Swiper
             modules={[Autoplay]}
             slidesPerView="auto"

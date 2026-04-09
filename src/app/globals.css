@@ -497,7 +497,12 @@ header {
   .orbit-item.item-4 { transform: translate(calc(-50% - 76px), calc(-50% + 105px)) !important; }
   .orbit-item.item-5 { transform: translate(calc(-50% - 124px), calc(-50% - 40px)) !important; }
 
-  .orbit-item:hover { transform: scale(1) !important; }
+  /* 모바일 호버 효과 (제자리에서 확대) */
+  .orbit-item.item-1:hover { transform: translate(-50%, calc(-50% - 130px)) scale(1.1) !important; }
+  .orbit-item.item-2:hover { transform: translate(calc(-50% + 124px), calc(-50% - 40px)) scale(1.1) !important; }
+  .orbit-item.item-3:hover { transform: translate(calc(-50% + 76px), calc(-50% + 105px)) scale(1.1) !important; }
+  .orbit-item.item-4:hover { transform: translate(calc(-50% - 76px), calc(-50% + 105px)) scale(1.1) !important; }
+  .orbit-item.item-5:hover { transform: translate(calc(-50% - 124px), calc(-50% - 40px)) scale(1.1) !important; }
 }
 
 /* Partners Marquee (Digital Display) */
