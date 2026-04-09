@@ -543,8 +543,7 @@ header {
 
 .partner-marquee-1 .swiper-slide:hover img,
 .partner-marquee-2 .swiper-slide:hover img {
-  filter: brightness(0) invert(1) opacity(1);
-  drop-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  filter: brightness(0) invert(1) opacity(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
 }
 
 @media (max-width: 768px) {
