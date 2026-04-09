@@ -249,7 +249,7 @@ export default function PicoKPage() {
                   />
 
                   {/* 과열 및 부풀어오름 지시선 및 라벨 (포인트 기준 왼쪽으로 배치) */}
-                  <div className="absolute top-[40%] left-[5.5%] z-20 pointer-events-none flex items-center flex-row">
+                  <div className="absolute top-[38.5%] md:top-[40%] left-[-4%] md:left-[5.5%] z-20 pointer-events-none flex items-center flex-row">
                     {/* 설명 텍스트 (우측 정렬) */}
                     <div className="flex flex-col items-end text-right mr-2 transition-all duration-700">
                       <span className="text-[11px] md:text-sm font-black text-[#FF4D4D] tracking-tighter leading-none drop-shadow-md group-hover:scale-110 group-hover:text-[#FF6666] origin-right transition-all">
@@ -260,7 +260,7 @@ export default function PicoKPage() {
                       </span>
                     </div>
                     {/* 지시선 (텍스트 우측에서 포인트로 연결) - 길이를 고정하여 포인트 지점을 명확히 유지 */}
-                    <div className="w-16 h-[1px] bg-white/40 mr-1.5 shadow-sm transition-opacity duration-700 group-hover:bg-white/60" />
+                    <div className="w-8 md:w-16 h-[1px] bg-white/40 mr-1.5 shadow-sm transition-opacity duration-700 group-hover:bg-white/60" />
                     {/* 지점 포인트 (노란색 펄스) */}
                     <div className="relative transition-transform duration-700 group-hover:scale-125">
                       <div className="w-2.5 h-2.5 bg-yellow-400 rounded-full shadow-[0_0_10px_rgba(250,204,21,1)]" />
