@@ -504,27 +504,27 @@ export default function PicoKPage() {
               </p>
 
               {/* 프로세스 아이콘 영역 */}
-              <div className="glass-panel p-8 bg-tech-grid/30 mb-12 border-t border-primary/20">
-                <div className="flex justify-between items-center gap-4">
+              <div className="glass-panel p-4 md:p-8 bg-tech-grid/30 mb-12 border-t border-primary/20">
+                <div className="flex justify-around md:justify-between items-center gap-2 md:gap-4">
                   {[
                     { label: '항공/해상\n운송 테스트', img: '/images/picok/imo1.png' },
                     { label: '변성방지 솔루션\n개발 및 적용', img: '/images/picok/imo2.png' },
                     { label: '스위스제\n철도 부품 사용', img: '/images/picok/imo3.png' }
                   ].map((step, idx) => (
                     <React.Fragment key={idx}>
-                      <div className="flex flex-col items-center text-center gap-3 group cursor-pointer">
-                        <div className="w-24 h-24 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:scale-110 group-hover:border-primary/60 group-hover:bg-primary/20 group-hover:shadow-[0_0_25px_rgba(0,183,241,0.3)]">
+                      <div className="flex flex-col items-center text-center gap-2 md:gap-3 group cursor-pointer">
+                        <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:scale-110 group-hover:border-primary/60 group-hover:bg-primary/20 group-hover:shadow-[0_0_25px_rgba(0,183,241,0.3)]">
                           {step.img && (
                             <img
                               src={step.img}
                               alt={step.label}
-                              className="w-[80%] h-[80%] object-contain brightness-0 invert opacity-80 transition-transform duration-500 group-hover:scale-110"
+                              className="w-[70%] h-[70%] md:w-[80%] md:h-[80%] object-contain brightness-0 invert opacity-80 transition-transform duration-500 group-hover:scale-110"
                             />
                           )}
                         </div>
-                        <span className="text-[12px] text-slate-300 font-bold whitespace-pre-line leading-tight transition-colors duration-500 group-hover:text-primary">{step.label}</span>
+                        <span className="text-[10px] md:text-[12px] text-slate-300 font-bold whitespace-pre-line leading-tight transition-colors duration-500 group-hover:text-primary">{step.label}</span>
                       </div>
-                      {idx < 2 && <div className="text-primary/40 font-black text-xl">+</div>}
+                      {idx < 2 && <div className="text-primary/40 font-black text-sm md:text-xl">+</div>}
                     </React.Fragment>
                   ))}
                 </div>
