@@ -155,7 +155,7 @@ export default function UPulsePage() {
               viewport={{ once: true }}
               className="flex justify-center lg:justify-end relative"
             >
-              <div className="relative group scale-[2] lg:scale-[1.2] pt-12 lg:pt-0 origin-bottom lg:translate-x-12 lg:translate-y-10 transition-all duration-1000">
+              <div className="relative group scale-[1.2] lg:scale-[1.2] pt-12 lg:pt-0 origin-bottom lg:translate-x-12 lg:translate-y-10 transition-all duration-1000">
                 {/* 배경 수직 광채 (확대된 크기에 맞춰 범위 확장) */}
                 <div className="absolute inset-y-0 -inset-x-20 bg-primary/10 blur-[120px] rounded-full opacity-40 group-hover:opacity-60 transition duration-1000" />
 
@@ -189,7 +189,7 @@ export default function UPulsePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mb-16 flex flex-col items-center"
+            className="mb-6 md:mb-16 flex flex-col items-center"
           >
             {/* 배지 */}
             <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
@@ -205,7 +205,7 @@ export default function UPulsePage() {
           </motion.div>
 
           {/* 중앙: 대형 펄스 그래프 (데스크톱/모바일 분리) */}
-          <div className="relative w-full max-w-7xl mx-auto mb-16 mt-8 md:-mt-40 overflow-visible">
+          <div className="relative w-full max-w-7xl mx-auto mb-16 mt-0 md:-mt-40 overflow-visible">
             {/* 데스크톱 버전 (6 Waves) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
