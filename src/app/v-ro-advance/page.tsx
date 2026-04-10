@@ -751,20 +751,20 @@ export default function VRoAdvancePage() {
                   에너지 집중도를 강화한 새로운 카트리지
                 </h5>
 
-                <div className="bg-white/[0.025] p-8 lg:p-10 rounded-[36px] border border-white/5 relative overflow-hidden">
+                <div className="bg-white/[0.025] p-3 lg:p-10 rounded-[36px] border border-white/5 relative overflow-hidden">
                   <div className="absolute inset-0 bg-tech-dots opacity-5 pointer-events-none" />
 
                   {/* 비교 다이어그램 (Simplified One-Arrow Layout) */}
-                  <div className="flex items-start justify-center gap-4 lg:gap-6 relative z-10 pb-6">
+                  <div className="flex items-start justify-center gap-1 lg:gap-6 relative z-10 pb-6">
 
                     {/* 기존 카트리지 — N4.5 (Simplified) */}
                     <div className="flex flex-col items-center">
-                      <div className="px-4 py-1.5 mb-6">
-                        <span className="text-white font-black text-sm">기존 카트리지</span>
+                      <div className="px-1.5 lg:px-4 py-1.5 mb-6">
+                        <span className="text-white font-black text-[10px] lg:text-sm tracking-tighter whitespace-nowrap">기존 카트리지</span>
                       </div>
                       <div className="flex flex-col items-center relative">
                         {/* Cartridge Image */}
-                        <div className="w-32 lg:w-40 h-32 lg:h-36 flex items-center justify-center relative">
+                        <div className="w-24 lg:w-40 h-24 lg:h-36 flex items-center justify-center relative">
                           <img src="/images/vro_advance/cart/n4.5.png" alt="N4.5" className="max-w-full max-h-full object-contain opacity-50 grayscale" />
                         </div>
 
@@ -786,17 +786,17 @@ export default function VRoAdvancePage() {
 
                     {/* 브이로 리프팅 카트리지 — A4.5 (Simplified) */}
                     <div className="flex flex-col items-center">
-                      <div className="bg-primary px-4 py-1.5 rounded-sm mb-6 shadow-[0_4px_12px_rgba(0,183,241,0.2)]">
-                        <span className="text-white font-black text-xs lg:text-sm tracking-tight whitespace-nowrap">브이로 리프팅 카트리지</span>
+                      <div className="bg-primary px-1.5 lg:px-4 py-1.5 rounded-sm mb-6 shadow-[0_4px_12px_rgba(0,183,241,0.2)]">
+                        <span className="text-white font-black text-[10px] lg:text-sm tracking-tighter lg:tracking-tight whitespace-nowrap">브이로 리프팅 카트리지</span>
                       </div>
 
                       <div className="flex flex-col items-center relative">
                         {/* Persistent Target Depth Line */}
-                        <div className="absolute top-[199px] right-[-100px] left-[-350px] h-px border-t border-dashed border-white/20 z-0 pointer-events-none" />
+                        <div className="absolute top-[151px] lg:top-[199px] right-[-100px] left-[-350px] h-px border-t border-dashed border-white/20 z-0 pointer-events-none" />
                         <span className="absolute top-[176px] left-[calc(100%+24px)] text-slate-500 text-[10px] font-bold tracking-widest whitespace-nowrap">Target Depth</span>
 
                         {/* Cartridge Image */}
-                        <div className="w-32 lg:w-40 h-32 lg:h-36 flex items-center justify-center relative">
+                        <div className="w-24 lg:w-40 h-24 lg:h-36 flex items-center justify-center relative">
                           <img src="/images/vro_advance/cart/a4.5.png" alt="A4.5" className="max-w-full max-h-full object-contain relative z-10" />
                         </div>
 
