@@ -47,7 +47,7 @@ export default function ContactPage() {
         </div>
 
         <div className="relative z-20 max-w-screen-xl mx-auto flex flex-col items-center px-6 w-full text-center">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -55,8 +55,8 @@ export default function ContactPage() {
           >
             CONTACT <span className="text-primary drop-shadow-[0_0_20px_rgba(0,183,241,0.4)]">US</span>
           </motion.h1>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -259,14 +259,14 @@ export default function ContactPage() {
             >
               <label className="flex items-center gap-3 cursor-pointer group">
                 <input type="checkbox" required className="appearance-none w-5 h-5 border border-white/20 rounded bg-white/5 checked:bg-primary checked:border-primary transition-all cursor-pointer" />
-                <span className="text-[13px] font-bold text-slate-400 group-hover:text-white transition tracking-tight">
+                <span className="text-[12px] sm:text-[13px] font-bold text-slate-400 group-hover:text-white transition tracking-tight whitespace-nowrap">
                   기재하신 개인정보의 수집 및 이용에 동의합니다. (필수)
                 </span>
               </label>
             </motion.div>
 
             {/* Submit Button */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
