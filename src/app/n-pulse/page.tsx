@@ -259,15 +259,15 @@ export default function NPulsePage() {
                                 {[
                                     {
                                         title: 'Technology',
-                                        desc: '에스앤제이만의 기술력을 바탕으로 비교불가\n하이 피크 파워 울트라 펄스 구현'
+                                        desc: <>에스앤제이만의 기술력을 바탕으로 비교불가 <br className="hidden md:block" /> 하이 피크 파워 울트라 펄스 구현</>
                                     },
                                     {
                                         title: 'Safe & Effective',
-                                        desc: '열 손상 최소화 및 다양한 스팟 사이즈로\n시술 효과 극대화'
+                                        desc: <>열 손상 최소화 및 다양한 스팟 사이즈로 <br className="hidden md:block" /> 시술 효과 극대화</>
                                     },
                                     {
                                         title: 'Convenient',
-                                        desc: '3가지 핸드피스로 다양한 스팟사이즈 구현\n사용자 중심의 인체공학적 디자인 & GUI'
+                                        desc: <>3가지 핸드피스로 다양한 스팟사이즈 구현 <br className="hidden md:block" /> 사용자 중심의 인체공학적 디자인 & GUI</>
                                     }
                                 ].map((item, idx) => (
                                     <motion.div
@@ -282,7 +282,7 @@ export default function NPulsePage() {
                                             <div className="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary transition-all duration-500 shadow-[0_0_10px_rgba(0,183,241,0)] group-hover:shadow-[0_0_10px_rgba(0,183,241,1)]" />
                                             <h3 className="text-white font-black text-2xl tracking-tight group-hover:text-primary transition-colors duration-500">{item.title}</h3>
                                         </div>
-                                        <p className="text-slate-400 text-lg font-medium leading-relaxed pl-6.5 whitespace-pre-line border-l border-white/5 group-hover:border-primary/20 transition-colors duration-500">
+                                        <p className="text-slate-400 text-lg font-medium leading-relaxed pl-6.5 break-keep border-l border-white/5 group-hover:border-primary/20 transition-colors duration-500">
                                             {item.desc}
                                         </p>
                                     </motion.div>
