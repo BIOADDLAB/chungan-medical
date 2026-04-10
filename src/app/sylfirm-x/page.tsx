@@ -190,8 +190,8 @@ export default function SylfirmXPage() {
               viewport={{ once: true }}
               className="max-w-4xl mx-auto space-y-1 text-slate-400 text-[15px] md:text-[16px] font-medium leading-relaxed tracking-tight text-center"
             >
-              <p>SYLFIRM X는 Continuous(CW) 방식만 가능한 타 Needle RF와 달리 <span className="text-white font-bold">Pulsed(PW)방식도 완벽히 구현</span> 가능합니다.</p>
-              <p>PW모드 사용으로 기저막과 혈관벽의 선택적 열 반응을 통해 <span className="text-primary font-black">기미, 홍조, PIH</span> 치료에 탁월한 성과를 보입니다.</p>
+              <p>SYLFIRM X는 Continuous(CW) 방식만 가능한 타 Needle RF와 달리 <span className="text-white font-bold">Pulsed(PW)방식도 완벽히 <br className="md:hidden" />구현</span> 가능합니다.</p>
+              <p>PW모드 사용으로 기저막과 혈관벽의 선택적 열 반응을 통해 <span className="text-primary font-black">기미, 홍조, PIH</span> 치료에 탁월한 성과를 <br className="md:hidden" />보입니다.</p>
             </motion.div>
           </div>
 
@@ -219,7 +219,7 @@ export default function SylfirmXPage() {
                       <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                     </div>
                     <div className="text-center">
-                      <p className="text-slate-200 text-[14px] md:text-[15px] font-bold mb-1 tracking-tight leading-relaxed">진피부터 표피까지 피부 층 전체에 열 에너지 전달</p>
+                      <p className="text-slate-200 text-[14px] md:text-[15px] font-bold mb-1 tracking-tight leading-relaxed">진피부터 표피까지 피부 층 전체에 <br className="md:hidden" />열 에너지 전달</p>
                       <p className="text-slate-500 text-[11px] font-medium tracking-tight leading-none">기존의 모든 Needle RF device의 에너지 방식</p>
                     </div>
                   </div>
@@ -235,7 +235,7 @@ export default function SylfirmXPage() {
                       <span className="text-primary text-xs font-black font-inter tracking-widest text-center">CW1</span>
                     </div>
                     <div className="flex items-center justify-center bg-transparent px-6">
-                      <span className="text-slate-300 text-[14px] md:text-[15px] font-medium tracking-tight text-center">두피 시술 (리프팅 / 순환 등)</span>
+                      <span className="text-slate-300 text-[14px] md:text-[15px] font-medium tracking-tight text-center">두피 시술 <br className="md:hidden" />(리프팅 / 순환 등)</span>
                     </div>
                   </div>
                   <div className="grid grid-cols-[120px_1fr] h-[240px] shrink-0">
@@ -248,7 +248,7 @@ export default function SylfirmXPage() {
                     </div>
                     <div className="flex items-center justify-center text-center bg-transparent p-6">
                       <span className="text-slate-300 text-[14px] md:text-[15px] font-medium leading-relaxed tracking-tight">
-                        타이트닝 / 리프팅<br />모공 / 흉터 / 여드름 / 이중턱
+                        타이트닝 / 리프팅<br />모공 / 흉터 / 여드름 / <br className="md:hidden" />이중턱
                       </span>
                     </div>
                   </div>
@@ -269,7 +269,7 @@ export default function SylfirmXPage() {
                       <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                     </div>
                     <div className="text-center">
-                      <p className="text-slate-200 text-[14px] md:text-[15px] font-bold mb-1 tracking-tight leading-relaxed">기저막, 혈관에만 열 에너지가 선택적으로 반응</p>
+                      <p className="text-slate-200 text-[14px] md:text-[15px] font-bold mb-1 tracking-tight leading-relaxed">기저막, 혈관에만 열 에너지가 <br className="md:hidden" />선택적으로 반응</p>
                       <p className="text-slate-500 text-[11px] font-medium tracking-tight leading-none">SYLFIRM에서부터 사용하던 비올의 기술력</p>
                     </div>
                   </div>
