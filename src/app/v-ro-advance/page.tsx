@@ -27,7 +27,7 @@ export default function VRoAdvancePage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white"
           >
-            <span className="hero-title-main block md:inline">V-RO - </span>
+            <span className="hero-title-main">V-RO - </span>
             <span className="hero-title-highlight ml-0 md:ml-4">ADVANCE</span>
           </motion.h1>
 

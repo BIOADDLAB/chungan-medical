@@ -29,7 +29,7 @@ export default function CellinewPage() {
             className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight"
           >
             <span className="hero-title-main">CELLI - </span>
-            <span className="hero-title-highlight ml-1 md:ml-4">NEW</span>
+            <span className="hero-title-highlight ml-0 md:ml-4">NEW</span>
           </motion.h1>
 
           <motion.div
