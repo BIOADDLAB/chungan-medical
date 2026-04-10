@@ -972,17 +972,17 @@ export default function VRoAdvancePage() {
               className="flex flex-col items-center md:items-start leading-none"
             >
               {/* Slogan: Italic & Left Aligned as per Logo style */}
-              <p className="text-white text-2xl md:text-3xl font-bold tracking-tighter mb-4 md:mb-6">
+              <p className="text-white text-xl md:text-3xl font-bold tracking-tighter mb-4 md:mb-6 whitespace-nowrap">
                 두 가지 에너지로 강력한 맞춤 리프팅
               </p>
 
               {/* Brand Logo: CSS-based for precision to match the Photo */}
-              <div className="flex flex-row items-center gap-3 md:gap-5 leading-none">
-                <h2 className="text-[60px] md:text-[85px] lg:text-[100px] font-black tracking-tighter text-white leading-none font-inter uppercase">
+              <div className="flex flex-row flex-nowrap items-center gap-3 md:gap-5 leading-none">
+                <h2 className="text-[48px] md:text-[85px] lg:text-[100px] font-black tracking-tighter text-white leading-none font-inter uppercase whitespace-nowrap">
                   V-RO
                 </h2>
-                <div className="bg-primary text-[#050810] px-5 md:px-8 py-2 md:py-3 rounded-[10px] md:rounded-[20px] transform shadow-[0_0_40px_rgba(0,183,241,0.3)]">
-                  <span className="text-[26px] md:text-[40px] lg:text-[44px] font-black tracking-tighter uppercase leading-none block font-inter">
+                <div className="bg-primary text-[#050810] px-4 md:px-8 py-2 md:py-3 rounded-[10px] md:rounded-[20px] transform shadow-[0_0_40px_rgba(0,183,241,0.3)] whitespace-nowrap">
+                  <span className="text-[20px] md:text-[40px] lg:text-[44px] font-black tracking-tighter uppercase leading-none block font-inter">
                     ADVANCE
                   </span>
                 </div>
