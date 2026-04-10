@@ -953,16 +953,12 @@ export default function VRoAdvancePage() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2 }}
-              className="relative w-full max-w-[480px] h-[320px] md:h-[460px] overflow-hidden flex items-start group leading-none"
+              className="relative w-full max-w-[480px] h-[320px] md:h-[460px] overflow-hidden flex items-start group leading-none [mask-image:linear-gradient(to_bottom,black_50%,transparent_95%)]"
             >
               <div className="absolute inset-0 bg-primary/20 blur-[100px] opacity-10" />
               <img
                 src="images/machine/브이로어드밴스 사진.png"
                 alt="V-RO ADVANCE Footer"
-                style={{
-                  WebkitMaskImage: 'linear-gradient(to bottom, black 50%, transparent 80%)',
-                  maskImage: 'linear-gradient(to bottom, black 50%, transparent 80%)'
-                }}
                 className="w-full h-auto object-contain object-top relative z-10 drop-shadow-[0_0_120px_rgba(0,183,241,0.15)] group-hover:scale-[1.02] transition-transform duration-1000"
               />
             </motion.div>
