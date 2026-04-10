@@ -233,7 +233,7 @@ export default function VRoAdvancePage() {
 
             {/* 설명 */}
             <p className="text-slate-300 text-lg font-medium leading-relaxed max-w-xl break-keep drop-shadow-md text-center">
-              RM 핸드피스로 <span className="text-primary font-bold">피부 속까지 전달하는 RF 에너지</span>
+              RM 핸드피스로 <span className="text-primary font-bold">피부 속까지 전달하는<br className="md:hidden" /> RF 에너지</span>
             </p>
           </motion.div>
 
@@ -413,7 +413,7 @@ export default function VRoAdvancePage() {
 
             {/* 설명 */}
             <p className="text-slate-300 text-lg font-medium leading-relaxed max-w-xl break-keep drop-shadow-md text-center">
-              단 하나의 핸드피스로 <span className="text-primary font-bold">HIFU + RF를 한 번에</span>
+              단 하나의 핸드피스로 <span className="text-primary font-bold">HIFU + RF를 <br className="md:hidden" />한 번에</span>
             </p>
           </motion.div>
 
