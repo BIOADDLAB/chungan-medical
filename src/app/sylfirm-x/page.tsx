@@ -317,12 +317,12 @@ export default function SylfirmXPage() {
                 </div>
                 <div className="text-center mb-8 h-[70px] flex items-center justify-center">
                   <h4 className="text-[17px] md:text-[18px] font-black text-white leading-tight break-keep">
-                    최소 통증, 최소 마취 시술이 가능한<br />
-                    <span className="text-primary whitespace-nowrap">300마이크론(μm) 모드</span>
+                    최소 통증, 최소 마취 시술이 <br className="md:hidden" />
+                    <span className="whitespace-nowrap">가능한 <span className="text-primary">300마이크론(μm) 모드</span></span>
                   </h4>
                 </div>
                 <div className="w-10 h-[1px] bg-primary/30 mb-8" />
-                <ul className="space-y-4 text-slate-400 text-[14px] font-medium leading-relaxed tracking-tight text-left w-full">
+                <ul className="space-y-4 text-slate-300 text-[14px] font-medium leading-relaxed tracking-tight text-left w-full">
                   <li className="flex items-start gap-3">
                     <div className="flex items-center h-[21px] shrink-0">
                       <span className="text-primary text-[8px]">●</span>
@@ -351,8 +351,8 @@ export default function SylfirmXPage() {
                 </div>
                 <div className="text-center mb-8 h-[70px] flex items-center justify-center">
                   <h4 className="text-[17px] md:text-[18px] font-black text-white leading-tight break-keep">
-                    피부 탄력&리프팅&흉터 개선에<br />
-                    <span className="text-primary whitespace-nowrap">최적화 된 셀모드(CW)</span>
+                    피부 탄력&리프팅&흉터 <br className="md:hidden" />
+                    <span className="whitespace-nowrap">개선에 <span className="text-primary">최적화 된 셀모드(CW)</span></span>
                   </h4>
                 </div>
                 <div className="w-10 h-[1px] bg-primary/30 mb-8" />
@@ -385,12 +385,12 @@ export default function SylfirmXPage() {
                 </div>
                 <div className="text-center mb-8 h-[70px] flex items-center justify-center">
                   <h4 className="text-[17px] md:text-[18px] font-black text-white leading-tight break-keep">
-                    기미&홍조&색소침착에<br />
+                    기미&홍조&색소침착에 <br className="md:hidden" />
                     <span className="text-primary whitespace-nowrap">최적화 된 리페어(PW)</span>
                   </h4>
                 </div>
                 <div className="w-10 h-[1px] bg-primary/30 mb-8" />
-                <ul className="space-y-4 text-slate-400 text-[14px] font-medium leading-relaxed tracking-tight text-left w-full">
+                <ul className="space-y-4 text-slate-300 text-[14px] font-medium leading-relaxed tracking-tight text-left w-full">
                   <li className="flex items-start gap-3">
                     <div className="flex items-center h-[21px] shrink-0">
                       <span className="text-primary text-[8px]">●</span>
