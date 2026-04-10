@@ -464,8 +464,8 @@ export default function VRoAdvancePage() {
                       </svg>
                       {/* Mobile Lines (Pointing Up/Down) */}
                       <svg className="absolute inset-0 w-full h-full pointer-events-none z-30 lg:hidden" viewBox="0 0 100 100">
-                        <motion.path initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} d="M 65,37 L 50,33" stroke="#00B7F1" strokeWidth="1.5" fill="none" />
-                        <motion.path initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} d="M 50,51 L 50,75" stroke="#00B7F1" strokeWidth="1.5" fill="none" />
+                        <motion.path initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} d="M 65,37 L 50,12" stroke="#00B7F1" strokeWidth="1.5" fill="none" />
+                        <motion.path initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} d="M 50,51 L 50,88" stroke="#00B7F1" strokeWidth="1.5" fill="none" />
                       </svg>
                     </div>
                   </div>
@@ -476,7 +476,7 @@ export default function VRoAdvancePage() {
                     <motion.div
                       initial={{ opacity: 0, x: 40 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      className="absolute top-[33%] lg:top-[13%] left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 -translate-y-1/2 w-[90%] lg:w-[380px] pointer-events-auto"
+                      className="absolute top-[17%] lg:top-[13%] left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 -translate-y-1/2 w-[90%] lg:w-[380px] pointer-events-auto"
                     >
                       <div className="group bg-white/[0.03] backdrop-blur-xl border border-white/10 p-5 lg:p-6 rounded-[24px] flex items-center gap-5 hover:bg-white/[0.06] hover:border-primary/30 transition-all duration-500 shadow-2xl">
                         <div className="flex flex-col items-center">
@@ -496,7 +496,7 @@ export default function VRoAdvancePage() {
                       initial={{ opacity: 0, x: 40 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.1 }}
-                      className="absolute top-[75%] lg:top-[87%] left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 -translate-y-1/2 w-[90%] lg:w-[380px] pointer-events-auto"
+                      className="absolute top-[84%] lg:top-[87%] left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 -translate-y-1/2 w-[90%] lg:w-[380px] pointer-events-auto"
                     >
                       <div className="group bg-white/[0.03] backdrop-blur-xl border border-white/10 p-5 lg:p-6 rounded-[24px] flex items-center gap-5 hover:bg-white/[0.06] hover:border-primary/30 transition-all duration-500 shadow-2xl">
                         <div className="flex flex-col items-center">
