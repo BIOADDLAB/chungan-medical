@@ -421,7 +421,7 @@ export default function VRoAdvancePage() {
             {/* Left Column: Concept & Stats */}
             <div className="lg:w-[58%] flex flex-col gap-16 leading-none">
               {/* Concept Diagram Area (Left Top) - Comprehensive Catalog Layout with Signature Blue */}
-              <div className="relative h-[480px] lg:h-[560px] bg-white/[0.02] rounded-[40px] border border-white/10 overflow-hidden flex flex-col items-stretch leading-none">
+              <div className="relative h-[580px] lg:h-[560px] bg-white/[0.02] rounded-[40px] border border-white/10 overflow-hidden flex flex-col items-stretch leading-none">
                 <div className="absolute inset-0 bg-tech-grid opacity-[0.05] pointer-events-none" />
 
                 {/* Refined Title Bar (Signature Integration) */}
@@ -431,7 +431,7 @@ export default function VRoAdvancePage() {
                   </h4>
                 </div>
 
-                <div className="relative flex-1 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] items-center px-6 lg:px-12 gap-4 lg:gap-8 mt-2 leading-none">
+                <div className="relative flex-1 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] items-center px-6 lg:px-12 gap-4 lg:gap-8 mt-24 lg:mt-2 leading-none">
                   {/* Left: Enhanced Image with Highlights */}
                   <div className="relative flex items-center justify-center h-full">
                     <div className="relative w-72 h-72 lg:w-[380px] lg:h-[380px] flex items-center justify-center">
@@ -457,37 +457,26 @@ export default function VRoAdvancePage() {
                         <div className="w-5 h-5 bg-white rounded-full shadow-[0_0_20px_#00B7F1] border-2 border-primary animate-pulse scale-110" />
                       </div>
 
-                      {/* SVG Lines (Signature Blue theme) */}
-                      <svg className="absolute inset-0 w-full h-full pointer-events-none z-30" viewBox="0 0 100 100">
-                        {/* Line to RF (Points to the new Top-Right location) */}
-                        <motion.path
-                          initial={{ pathLength: 0 }}
-                          whileInView={{ pathLength: 1 }}
-                          d="M 65,37 L 100,17"
-                          stroke="#00B7F1"
-                          strokeWidth="1"
-                          fill="none"
-                        />
-                        {/* Line to HIFU (Points to center) */}
-                        <motion.path
-                          initial={{ pathLength: 0 }}
-                          whileInView={{ pathLength: 1 }}
-                          d="M 50,51 L 100,83"
-                          stroke="#00B7F1"
-                          strokeWidth="1"
-                          fill="none"
-                        />
+                      {/* Desktop Lines */}
+                      <svg className="absolute inset-0 w-full h-full pointer-events-none z-30 hidden lg:block" viewBox="0 0 100 100">
+                        <motion.path initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} d="M 65,37 L 100,17" stroke="#00B7F1" strokeWidth="1" fill="none" />
+                        <motion.path initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} d="M 50,51 L 100,83" stroke="#00B7F1" strokeWidth="1" fill="none" />
+                      </svg>
+                      {/* Mobile Lines (Pointing Up/Down) */}
+                      <svg className="absolute inset-0 w-full h-full pointer-events-none z-30 lg:hidden" viewBox="0 0 100 100">
+                        <motion.path initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} d="M 65,37 L 50,10" stroke="#00B7F1" strokeWidth="1.5" fill="none" />
+                        <motion.path initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} d="M 50,51 L 50,90" stroke="#00B7F1" strokeWidth="1.5" fill="none" />
                       </svg>
                     </div>
                   </div>
 
                   {/* Right: Informational Callouts (Premium Card Style) */}
-                  <div className="absolute top-0 bottom-0 right-0 w-[48%] lg:w-[420px] z-20 pointer-events-none pr-4 lg:pr-8">
+                  <div className="absolute top-0 bottom-0 left-0 right-0 lg:left-auto lg:right-0 w-full lg:w-[420px] z-20 pointer-events-none px-4 lg:pr-8">
                     {/* RF Card Aligned to y=26 */}
                     <motion.div
                       initial={{ opacity: 0, x: 40 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      className="absolute top-[13%] left-0 -translate-y-1/2 w-full lg:w-[380px] pointer-events-auto"
+                      className="absolute top-[18%] lg:top-[13%] left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 -translate-y-1/2 w-[90%] lg:w-[380px] pointer-events-auto"
                     >
                       <div className="group bg-white/[0.03] backdrop-blur-xl border border-white/10 p-5 lg:p-6 rounded-[24px] flex items-center gap-5 hover:bg-white/[0.06] hover:border-primary/30 transition-all duration-500 shadow-2xl">
                         <div className="flex flex-col items-center">
@@ -496,7 +485,7 @@ export default function VRoAdvancePage() {
                         <div className="h-10 w-[1px] bg-white/10 mx-1" />
                         <div className="flex flex-col">
                           <span className="text-white text-base lg:text-lg font-bold tracking-tighter leading-tight break-keep">
-                            피부와 피하조직의<br />부드러운 열 발생
+                            피부와 피하조직의<br className="lg:hidden" /> 부드러운 <br />열 발생
                           </span>
                         </div>
                       </div>
@@ -507,7 +496,7 @@ export default function VRoAdvancePage() {
                       initial={{ opacity: 0, x: 40 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.1 }}
-                      className="absolute top-[87%] left-0 -translate-y-1/2 w-full lg:w-[380px] pointer-events-auto"
+                      className="absolute top-[88%] lg:top-[87%] left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 -translate-y-1/2 w-[90%] lg:w-[380px] pointer-events-auto"
                     >
                       <div className="group bg-white/[0.03] backdrop-blur-xl border border-white/10 p-5 lg:p-6 rounded-[24px] flex items-center gap-5 hover:bg-white/[0.06] hover:border-primary/30 transition-all duration-500 shadow-2xl">
                         <div className="flex flex-col items-center">
@@ -516,7 +505,7 @@ export default function VRoAdvancePage() {
                         <div className="h-10 w-[1px] bg-white/10 mx-1" />
                         <div className="flex flex-col">
                           <span className="text-white text-base lg:text-lg font-bold tracking-tighter leading-tight break-keep">
-                            Target하는 깊이에만<br />강력한 열 집중
+                            Target하는 깊이에만<br className="lg:hidden" /> 강력한 열 집중
                           </span>
                         </div>
                       </div>
