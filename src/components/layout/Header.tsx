@@ -34,7 +34,7 @@ export default function Header() {
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'site-header-scrolled border-b border-white/5' : ''
           }`}
       >
-        <div className="max-w-screen-xl mx-auto px-6 h-20 flex justify-between items-center relative z-20">
+        <div className="max-w-screen-xl mx-auto px-6 h-20 md:h-28 flex justify-between items-center relative z-20">
           {/* Logo */}
           <div className="md:w-64 flex-shrink-0">
             <Link
@@ -45,7 +45,7 @@ export default function Header() {
               <img
                 src="/images/청안로고.png"
                 alt="CHEONGAN"
-                className="h-10 md:h-16 w-auto object-contain brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-500"
+                className="h-12 md:h-20 w-auto object-contain brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-500"
               />
             </Link>
           </div>
@@ -101,9 +101,9 @@ export default function Header() {
             >
               <AnimatePresence mode="wait">
                 {isMenuOpen ? (
-                  <motion.svg key="close" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></motion.svg>
+                  <motion.svg key="close" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></motion.svg>
                 ) : (
-                  <motion.svg key="menu" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></motion.svg>
+                  <motion.svg key="menu" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></motion.svg>
                 )}
               </AnimatePresence>
             </button>
@@ -122,14 +122,14 @@ export default function Header() {
             className="fixed inset-0 bg-[#050810] z-[60] md:hidden flex flex-col pt-20"
           >
             {/* Top Bar Logo & Close Button */}
-            <div className="absolute top-0 left-0 w-full h-20 flex items-center justify-between px-6 border-b border-white/5">
-              <img src="/images/청안로고.png" alt="CHEONGAN" className="h-10 w-auto brightness-0 invert" />
+            <div className="absolute top-0 left-0 w-full h-20 md:h-28 flex items-center justify-between px-6 border-b border-white/5">
+              <img src="/images/청안로고.png" alt="CHEONGAN" className="h-12 w-auto brightness-0 invert" />
               <button
                 onClick={() => setIsMenuOpen(false)}
                 className="p-2 text-white hover:text-primary transition-colors focus:outline-none"
                 aria-label="Close Menu"
               >
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="18" y1="6" x2="6" y2="18"></line>
                   <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>

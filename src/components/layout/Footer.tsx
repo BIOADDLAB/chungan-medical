@@ -4,11 +4,11 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-black pt-20 pb-12">
       <div className="max-w-screen-xl mx-auto px-6">
-        <div className="mb-12 h-20 flex justify-start items-center">
+        <div className="mb-12 h-24 md:h-36 flex justify-start items-center">
           <img
             src="/images/청안로고.png"
             alt="CHEONGAN"
-            className="w-48 md:w-80 opacity-100 brightness-0 invert object-contain object-left md:-ml-20"
+            className="w-64 md:w-[420px] opacity-100 brightness-0 invert object-contain object-left md:-ml-20"
           />
         </div>
 
