@@ -810,7 +810,7 @@ export default function VRoAdvancePage() {
                   </div>
 
                   <p className="text-slate-400 text-sm lg:text-base font-medium tracking-tighter leading-relaxed break-keep text-center">
-                    Transducer의 곡률 반경이 축소된 Advanced 카트리지는<br />
+                    Transducer의 곡률 반경이 축소된 Advanced 카트리지는<br className="hidden md:block" />
                     열 초점이 보다 원에 가깝게 맺혀 <span className="text-white font-bold">에너지 집중도가 강화</span>되었습니다.
                   </p>
                 </div>
