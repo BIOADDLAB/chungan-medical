@@ -26,10 +26,10 @@ export default function SylfirmXPage() {
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight"
+            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight whitespace-nowrap"
           >
-            <span className="hero-title-main block md:inline">SYLFIRM - </span>
-            <span className="hero-title-highlight ml-0 md:ml-4">X</span>
+            <span className="hero-title-main">SYLFIRM - </span>
+            <span className="hero-title-highlight ml-1 md:ml-4">X</span>
           </motion.h1>
 
           <motion.div
