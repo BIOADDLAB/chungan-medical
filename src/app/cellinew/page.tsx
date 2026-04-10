@@ -79,7 +79,7 @@ export default function CellinewPage() {
               </div>
 
               <h2 className="text-3xl md:text-5xl font-black mb-6 uppercase text-white leading-[1.1] tracking-tighter">
-                RENEW YOUR SKIN :<br />
+                RENEW YOUR SKIN<br />
                 <span className="text-primary tracking-tighter font-sans uppercase">피부를 리뉴얼하다</span>
               </h2>
               <div className="w-20 h-[2px] bg-primary mb-14 shadow-[0_0_10px_rgba(0,183,241,0.5)]" />
@@ -137,7 +137,7 @@ export default function CellinewPage() {
       <section id="mechanism" className="relative py-28 bg-[#050810] overflow-hidden">
         <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
 
-        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+        <div className="max-w-screen-xl mx-auto px-4 md:px-6 relative z-10">
           {/* Section Header */}
           <div className="flex items-center gap-4 mb-20 relative overflow-hidden">
             <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap uppercase leading-none">THEORY & MECHANISM</span>
@@ -175,7 +175,7 @@ export default function CellinewPage() {
               <div className="space-y-6 text-white/90 text-[17px] md:text-[21px] font-bold leading-relaxed tracking-tighter break-keep">
                 <p>셀리뉴는 <span className="text-primary">6.78MHz Monopolar RF</span>로 진피층에 열을 발생시켜<br />노화의 근본적인 원인이 되는 콜라겐 셀을 리뉴얼 시켜줍니다.</p>
                 <p className="text-slate-400 font-medium text-sm md:text-lg tracking-tight">
-                  피부 속부터 탄력있고 건강하게 가꾸어 주름, 피부결 뿐 아니라<br />
+                  피부 속부터 탄력있고 건강하게 가꾸어 주름, 피부결 뿐 아니라  <br className="hidden md:block" />
                   종합적인 피부 개선 효과를 기대할 수 있습니다.
                 </p>
               </div>
@@ -188,14 +188,14 @@ export default function CellinewPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mt-20 px-4 md:px-0"
+            className="mt-20 px-1 md:px-0"
           >
             {/* HUD Style Mechanism Tab */}
             <div className="inline-block bg-primary rounded-t-xl px-10 py-3 relative z-20 shadow-[0_-5px_20px_rgba(0,183,241,0.3)]">
               <span className="text-[#050810] font-black text-lg tracking-widest uppercase font-inter">Mechanism</span>
             </div>
 
-            <div className="bg-[#0A0D14]/80 backdrop-blur-md rounded-b-[30px] rounded-tr-[30px] p-10 md:p-16 relative z-10 shadow-2xl border border-white/10 overflow-hidden">
+            <div className="bg-[#0A0D14]/80 backdrop-blur-md rounded-b-[30px] rounded-tr-[30px] px-6 py-10 md:p-16 relative z-10 shadow-2xl border border-white/10 overflow-hidden">
               {/* Background ambient glow inside the card */}
               <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-primary/5 blur-[100px] rounded-full pointer-events-none" />
 
@@ -207,9 +207,9 @@ export default function CellinewPage() {
                       <span className="text-primary font-black text-xl font-inter">1ST</span>
                     </div>
                     <div>
-                      <h4 className="text-xl md:text-2xl font-black text-white tracking-tighter leading-tight">
-                        열로 인한 콜라겐 수축<br />
-                        <span className="text-primary text-glow-primary">→ 즉각 타이트닝</span>
+                      <h4 className="text-xl md:text-2xl font-black text-white tracking-tighter leading-tight break-keep">
+                        <span className="whitespace-nowrap">열로 인한 콜라겐 수축</span><br />
+                        <span className="text-primary text-glow-primary whitespace-nowrap">→ 즉각 타이트닝</span>
                       </h4>
                     </div>
                   </div>
@@ -243,9 +243,9 @@ export default function CellinewPage() {
                       <span className="text-primary font-black text-xl font-inter">2ND</span>
                     </div>
                     <div>
-                      <h4 className="text-xl md:text-2xl font-black text-white tracking-tighter leading-tight">
-                        운드힐링 콜라겐 생성<br />
-                        <span className="text-primary text-glow-primary">→ 진피 리모델링</span>
+                      <h4 className="text-xl md:text-2xl font-black text-white tracking-tighter leading-tight break-keep">
+                        <span className="whitespace-nowrap">운드힐링 콜라겐 생성</span><br />
+                        <span className="text-primary text-glow-primary whitespace-nowrap">→ 진피 리모델링</span>
                       </h4>
                     </div>
                   </div>
