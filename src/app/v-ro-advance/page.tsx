@@ -643,7 +643,7 @@ export default function VRoAdvancePage() {
                   </div>
 
                   <p className="text-slate-400 text-sm lg:text-base font-medium tracking-tighter leading-relaxed break-keep text-center mt-3">
-                    40mm 길어진 카트리지의 증류수 양이 증대되어<br />장시간 사용 시에도 안정적인 시술을 제공합니다.
+                    40mm 길어진 카트리지의 증류수 양이 증대되어<br className="hidden md:block" /> 장시간 사용 시에도 안정적인 시술을 제공합니다.
                   </p>
                 </div>
               </div>
