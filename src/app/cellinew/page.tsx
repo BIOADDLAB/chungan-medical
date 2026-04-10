@@ -336,7 +336,7 @@ export default function CellinewPage() {
               viewport={{ once: true }}
               className="text-slate-400 text-base md:text-lg font-medium leading-relaxed max-w-2xl mx-auto tracking-tight break-keep"
             >
-              셀리뉴는 개인 피부특성에 최적화된 에너지를 더욱 효과적으로 전달하여<br />
+              셀리뉴는 개인 피부특성에 최적화된 에너지를 더욱 효과적으로 전달하여<br className="hidden md:block" />
               탄력 효과를 최대한 오랜기간 유지시켜 줍니다.
             </motion.div>
           </div>
@@ -371,7 +371,7 @@ export default function CellinewPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 + idx * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative bg-white/[0.03] backdrop-blur-md rounded-[40px] p-10 md:p-14 flex flex-col items-center border border-white/10 hover:border-primary/30 transition-all duration-500 shadow-2xl hover:shadow-primary/5 min-h-[520px]"
+                className="group relative bg-white/[0.03] backdrop-blur-md rounded-[30px] md:rounded-[40px] p-8 md:p-14 flex flex-col items-center border border-white/10 hover:border-primary/30 transition-all duration-500 shadow-2xl hover:shadow-primary/5 min-h-[400px] md:min-h-[520px]"
               >
                 <span className="text-primary/40 font-black text-xl mb-3 font-inter group-hover:text-primary transition-colors duration-500">
                   {feature.num}
@@ -379,11 +379,11 @@ export default function CellinewPage() {
                 <h5 className="text-white text-2xl md:text-3xl font-black mb-2 tracking-tighter uppercase font-inter group-hover:text-glow-primary transition-all duration-500">
                   {feature.title}
                 </h5>
-                <p className="text-primary text-sm font-bold tracking-tight mb-10 opacity-70">
+                <p className="text-primary text-sm font-bold tracking-tight mb-6 md:mb-10 opacity-70">
                   {feature.subTitle}
                 </p>
 
-                <div className="w-12 h-[1px] bg-white/10 mb-10 group-hover:w-full group-hover:bg-primary/20 transition-all duration-700" />
+                <div className="w-12 h-[1px] bg-white/10 mb-6 md:mb-10 group-hover:w-full group-hover:bg-primary/20 transition-all duration-700" />
 
                 <div className="flex-1 flex flex-col items-center justify-center text-center space-y-6">
                   <h6 className="text-white text-[20px] md:text-[24px] font-black leading-tight tracking-tighter break-keep">
