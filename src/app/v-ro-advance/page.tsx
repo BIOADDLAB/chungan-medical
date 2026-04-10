@@ -825,7 +825,7 @@ export default function VRoAdvancePage() {
               viewport={{ once: true }}
               className="flex flex-col leading-none"
             >
-              <div className="bg-white/[0.055] backdrop-blur-2xl rounded-[44px] border border-white/15 p-8 lg:p-12 flex flex-col h-full shadow-2xl relative overflow-hidden">
+              <div className="bg-white/[0.055] backdrop-blur-2xl rounded-[44px] border border-white/15 p-4 lg:p-12 flex flex-col h-full shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-primary/8 blur-[80px] opacity-40 pointer-events-none" />
 
                 <h5 className="text-white font-black text-xl lg:text-2xl tracking-tighter leading-snug text-center break-keep mb-10 relative z-10">
@@ -843,10 +843,10 @@ export default function VRoAdvancePage() {
                     </div>
 
                     {/* 카트리지 그룹: S1.5 (대형) + S2, N3, N4.5 (소형) */}
-                    <div className="flex items-end justify-center gap-5">
+                    <div className="flex items-end justify-center gap-2 lg:gap-5">
                       {/* 피처드 S1.5 */}
                       <div className="flex flex-col items-center gap-2">
-                        <div className="w-[100px] h-[130px] flex items-center justify-center">
+                        <div className="w-[80px] lg:w-[100px] h-[100px] lg:h-[130px] flex items-center justify-center">
                           <img
                             src="/images/vro_advance/cart/S1.5-정면.png"
                             alt="S1.5"
@@ -862,7 +862,7 @@ export default function VRoAdvancePage() {
                         { name: 'N4.5', path: 'n4.5.png' }
                       ].map((item) => (
                         <div key={item.name} className="flex flex-col items-center gap-2">
-                          <div className="w-[80px] h-[100px] flex items-center justify-center">
+                          <div className="w-[60px] lg:w-[80px] h-[75px] lg:h-[100px] flex items-center justify-center">
                             <img
                               src={`/images/vro_advance/cart/${item.path}`}
                               alt={item.name}
@@ -891,10 +891,10 @@ export default function VRoAdvancePage() {
                     </div>
 
                     {/* 카트리지 그룹: A1.5 (대형 시안) + A2, A3, A4.5 (소형) */}
-                    <div className="flex items-end justify-center gap-5">
+                    <div className="flex items-end justify-center gap-2 lg:gap-5">
                       {/* 피처드 A1.5 */}
                       <div className="flex flex-col items-center gap-2">
-                        <div className="w-[100px] h-[130px] flex items-center justify-center relative">
+                        <div className="w-[80px] lg:w-[100px] h-[100px] lg:h-[130px] flex items-center justify-center relative">
                           <div className="absolute inset-0 bg-primary/10 blur-2xl opacity-50" />
                           <img
                             src="/images/vro_advance/cart/a1.5.png"
@@ -907,7 +907,7 @@ export default function VRoAdvancePage() {
                       {/* 소형 A2, A3, A4.5 */}
                       {(['A2', 'A3', 'A4.5'] as const).map((name) => (
                         <div key={name} className="flex flex-col items-center gap-2">
-                          <div className="w-[80px] h-[100px] flex items-center justify-center">
+                          <div className="w-[60px] lg:w-[80px] h-[75px] lg:h-[100px] flex items-center justify-center">
                             <img
                               src={`/images/vro_advance/cart/${name.toLowerCase()}.png`}
                               alt={name}
