@@ -434,7 +434,7 @@ export default function SylfirmXPage() {
             <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-8 uppercase text-white">SYLFIRM X 시술 수가</h2>
             <div className="w-20 h-[2px] bg-primary mx-auto mb-8 shadow-[0_0_10px_rgba(0,183,241,0.5)]" />
             <div className="text-slate-400 text-sm md:text-base font-medium leading-relaxed max-w-3xl mx-auto break-keep opacity-80">
-              서울, 경기 평균 수가로 지역 및 원내 구비 장비에 따라 상이합니다.<br />
+              서울, 경기 평균 수가로 지역 및 원내 구비 장비에 따라 상이합니다.<br className="hidden md:block" />
               아래 사항은 예시로 병원에 맞는 장비 및 횟수로 조정하시면 됩니다.
             </div>
           </motion.div>
