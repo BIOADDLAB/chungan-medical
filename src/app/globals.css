@@ -430,7 +430,8 @@ header {
   background: rgba(0, 183, 241, 0.15);
   border-color: var(--color-primary);
   box-shadow: 0 0 10px rgba(0, 183, 241, 0.35);
-  transform: scale(1.1); /* This will be handled by individual item classes to avoid conflict */
+  transform: scale(1.1);
+  /* This will be handled by individual item classes to avoid conflict */
   color: var(--color-primary);
   text-shadow: 0 0 5px rgba(0, 183, 241, 0.5);
 }
@@ -440,20 +441,45 @@ header {
   transform: scale(0.9);
 }
 
-.orbit-item.item-1 { transform: translate(-50%, calc(-50% - 230px)); }
-.orbit-item.item-1:hover { transform: translate(-50%, calc(-50% - 230px)) scale(1.1); }
+.orbit-item.item-1 {
+  transform: translate(-50%, calc(-50% - 230px));
+}
 
-.orbit-item.item-2 { transform: translate(calc(-50% + 219px), calc(-50% - 71px)); }
-.orbit-item.item-2:hover { transform: translate(calc(-50% + 219px), calc(-50% - 71px)) scale(1.1); }
+.orbit-item.item-1:hover {
+  transform: translate(-50%, calc(-50% - 230px)) scale(1.1);
+}
 
-.orbit-item.item-3 { transform: translate(calc(-50% + 135px), calc(-50% + 186px)); }
-.orbit-item.item-3:hover { transform: translate(calc(-50% + 135px), calc(-50% + 186px)) scale(1.1); }
+.orbit-item.item-2 {
+  transform: translate(calc(-50% + 219px), calc(-50% - 71px));
+}
 
-.orbit-item.item-4 { transform: translate(calc(-50% - 135px), calc(-50% + 186px)); }
-.orbit-item.item-4:hover { transform: translate(calc(-50% - 135px), calc(-50% + 186px)) scale(1.1); }
+.orbit-item.item-2:hover {
+  transform: translate(calc(-50% + 219px), calc(-50% - 71px)) scale(1.1);
+}
 
-.orbit-item.item-5 { transform: translate(calc(-50% - 219px), calc(-50% - 71px)); }
-.orbit-item.item-5:hover { transform: translate(calc(-50% - 219px), calc(-50% - 71px)) scale(1.1); }
+.orbit-item.item-3 {
+  transform: translate(calc(-50% + 135px), calc(-50% + 186px));
+}
+
+.orbit-item.item-3:hover {
+  transform: translate(calc(-50% + 135px), calc(-50% + 186px)) scale(1.1);
+}
+
+.orbit-item.item-4 {
+  transform: translate(calc(-50% - 135px), calc(-50% + 186px));
+}
+
+.orbit-item.item-4:hover {
+  transform: translate(calc(-50% - 135px), calc(-50% + 186px)) scale(1.1);
+}
+
+.orbit-item.item-5 {
+  transform: translate(calc(-50% - 219px), calc(-50% - 71px));
+}
+
+.orbit-item.item-5:hover {
+  transform: translate(calc(-50% - 219px), calc(-50% - 71px)) scale(1.1);
+}
 
 @media (max-width: 1024px) {
   .consulting-diagram-responsive-wrapper {
@@ -491,18 +517,46 @@ header {
   }
 
   /* 모바일 점선 궤도(반지름 130px)에 일치 */
-  .orbit-item.item-1 { transform: translate(-50%, calc(-50% - 130px)) !important; }
-  .orbit-item.item-2 { transform: translate(calc(-50% + 124px), calc(-50% - 40px)) !important; }
-  .orbit-item.item-3 { transform: translate(calc(-50% + 76px), calc(-50% + 105px)) !important; }
-  .orbit-item.item-4 { transform: translate(calc(-50% - 76px), calc(-50% + 105px)) !important; }
-  .orbit-item.item-5 { transform: translate(calc(-50% - 124px), calc(-50% - 40px)) !important; }
+  .orbit-item.item-1 {
+    transform: translate(-50%, calc(-50% - 130px)) !important;
+  }
+
+  .orbit-item.item-2 {
+    transform: translate(calc(-50% + 124px), calc(-50% - 40px)) !important;
+  }
+
+  .orbit-item.item-3 {
+    transform: translate(calc(-50% + 76px), calc(-50% + 105px)) !important;
+  }
+
+  .orbit-item.item-4 {
+    transform: translate(calc(-50% - 76px), calc(-50% + 105px)) !important;
+  }
+
+  .orbit-item.item-5 {
+    transform: translate(calc(-50% - 124px), calc(-50% - 40px)) !important;
+  }
 
   /* 모바일 호버 효과 (제자리에서 확대) */
-  .orbit-item.item-1:hover { transform: translate(-50%, calc(-50% - 130px)) scale(1.1) !important; }
-  .orbit-item.item-2:hover { transform: translate(calc(-50% + 124px), calc(-50% - 40px)) scale(1.1) !important; }
-  .orbit-item.item-3:hover { transform: translate(calc(-50% + 76px), calc(-50% + 105px)) scale(1.1) !important; }
-  .orbit-item.item-4:hover { transform: translate(calc(-50% - 76px), calc(-50% + 105px)) scale(1.1) !important; }
-  .orbit-item.item-5:hover { transform: translate(calc(-50% - 124px), calc(-50% - 40px)) scale(1.1) !important; }
+  .orbit-item.item-1:hover {
+    transform: translate(-50%, calc(-50% - 130px)) scale(1.1) !important;
+  }
+
+  .orbit-item.item-2:hover {
+    transform: translate(calc(-50% + 124px), calc(-50% - 40px)) scale(1.1) !important;
+  }
+
+  .orbit-item.item-3:hover {
+    transform: translate(calc(-50% + 76px), calc(-50% + 105px)) scale(1.1) !important;
+  }
+
+  .orbit-item.item-4:hover {
+    transform: translate(calc(-50% - 76px), calc(-50% + 105px)) scale(1.1) !important;
+  }
+
+  .orbit-item.item-5:hover {
+    transform: translate(calc(-50% - 124px), calc(-50% - 40px)) scale(1.1) !important;
+  }
 }
 
 /* Partners Marquee (Digital Display) */
@@ -547,6 +601,7 @@ header {
 }
 
 @media (max-width: 768px) {
+
   .partner-marquee-1 .swiper-slide:active span,
   .partner-marquee-2 .swiper-slide:active span {
     background-image: linear-gradient(to bottom, #ffffff, #00B3E4) !important;
