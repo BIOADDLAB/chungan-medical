@@ -16,16 +16,16 @@ export default function Footer() {
           {/* Footer Left */}
           <div className="space-y-4 text-[0.9rem]">
             <div className="flex">
-              <span className="w-24 font-bold text-gray-500">대표명</span>
-              <span className="text-gray-300 font-medium">황현</span>
+              <span className="w-24 font-bold text-gray-500">회사명</span>
+              <span className="text-gray-300 font-medium">(주)청안메디컬코퍼레이션</span>
             </div>
             <div className="flex">
               <span className="w-24 font-bold text-gray-500">이메일</span>
-              <span className="text-gray-300 font-medium">chungan@naver.co.kr</span>
+              <span className="text-gray-300 font-medium">hwangh6293@naver.com</span>
             </div>
             <div className="flex">
               <span className="w-24 font-bold text-gray-500">사업자번호</span>
-              <span className="text-gray-300 font-medium">733-20-01131</span>
+              <span className="text-gray-300 font-medium">842-87-03421</span>
             </div>
             <div className="flex mt-2">
               <span className="w-24 font-bold text-gray-500 shrink-0">주소</span>
