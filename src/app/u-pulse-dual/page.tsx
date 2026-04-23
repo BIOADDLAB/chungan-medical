@@ -463,6 +463,107 @@ export default function UPulsePage() {
 
       <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
+      {/* NEW SECTION: SOL Mode Advantages & Benefits (Horizontal Layout) */}
+      <section id="sol-mode-benefits" className="relative py-28 bg-[#020408] overflow-hidden">
+        <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+        
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-20 flex flex-col items-center text-center"
+          >
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
+              Clinical Performance
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight uppercase">
+              SOL Mode <span className="text-primary">Key Features</span>
+            </h2>
+            <div className="w-20 h-[2px] bg-primary mt-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+          </motion.div>
+
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+            
+            {/* Left Column: Key Advantages Checklist */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="w-full lg:w-[40%] space-y-5"
+            >
+              {[
+                '적은 통증',
+                '시술 후 높은 만족도',
+                'PIH 걱정 제로',
+                '부작용 최소화',
+                '다양한 피부 타입에 적용 가능',
+                '유지 비용 없음'
+              ].map((text, idx) => (
+                <div key={idx} className="flex items-center gap-5 group">
+                  <div className="flex-shrink-0 w-7 h-7 rounded border border-white/20 bg-white/5 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/5 transition-all duration-300">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-white group-hover:text-primary transition-colors">
+                      <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <span className="text-lg md:text-xl font-bold text-slate-300 group-hover:text-white transition-colors">{text}</span>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Right Column: Core Benefits Circular Cards */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="w-full lg:w-[60%]"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4">
+                {[
+                  { 
+                    title: <>약물 침투<br />피부 재생</>, 
+                    code: 'DDS' 
+                  },
+                  { 
+                    title: <>피부톤 개선<br />피부장벽 개선</>, 
+                    code: 'TONE' 
+                  },
+                  { 
+                    title: <>주름 감소<br />탄력 증가</>, 
+                    code: 'LIFT' 
+                  }
+                ].map((item, idx) => (
+                  <div key={idx} className="flex flex-col items-center group">
+                    {/* Circle Image Slot (Empty for now) */}
+                    <div className="w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full border border-primary/30 bg-primary/[0.02] flex items-center justify-center mb-8 relative group-hover:border-primary group-hover:scale-105 transition-all duration-700 overflow-hidden shadow-[0_0_25px_rgba(0,183,241,0.05)]">
+                      <div className="absolute inset-0 bg-tech-dots opacity-20" />
+                      <span className="text-primary/10 font-black text-xl tracking-widest group-hover:text-primary/30 transition-colors uppercase select-none">{item.code}</span>
+                      {/* Placeholder for actual image */}
+                      {/* <Image src={`/images/benefits/${item.code}.png`} fill className="object-cover" /> */}
+                    </div>
+                    
+                    {/* Title Text */}
+                    <div className="text-center">
+                      <h4 className="text-base md:text-lg font-black text-white tracking-tight leading-snug group-hover:text-primary transition-colors">
+                        {item.title}
+                      </h4>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+
 
 
       {/* ③ U-Pulse Overview (PICO-K Style) */}
