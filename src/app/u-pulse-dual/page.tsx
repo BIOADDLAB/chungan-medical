@@ -308,7 +308,7 @@ export default function UPulsePage() {
                           <Image src={item.img} alt={item.label} fill className="object-cover" />
                         ) : (
                           <div className="w-full h-full bg-slate-800/50 flex items-center justify-center">
-                            <div className="w-8 h-8 rounded-full border border-white/10" />
+                            {/* Inner circle removed for image clarity */}
                           </div>
                         )}
                       </div>
@@ -351,7 +351,7 @@ export default function UPulsePage() {
                           <Image src={item.img} alt={item.label} fill className="object-cover" />
                         ) : (
                           <div className="w-full h-full bg-primary/5 flex items-center justify-center">
-                            <div className="w-8 h-8 rounded-full border border-primary/20" />
+                            {/* Inner circle removed for image clarity */}
                           </div>
                         )}
                       </div>
