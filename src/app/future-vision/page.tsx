@@ -216,14 +216,14 @@ export default function FutureVisionPage() {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            <div className="inline-block px-4 py-1.5 border border-primary/40 text-primary text-[10px] font-black tracking-[0.4em] uppercase mb-8 bg-black/40 backdrop-blur-md">
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">
               Future Landmark
             </div>
-            <h2 className="text-3xl md:text-6xl font-black tracking-tighter text-white mb-8 drop-shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white mb-8 drop-shadow-[0_0_30px_rgba(0,0,0,0.5)]">
               AI 관련 제조 및 연구소 <br className="hidden md:block" />
               <span className="text-primary">설립 예정</span>
             </h2>
-            <div className="w-24 h-[1px] bg-primary/50 mx-auto" />
+            <div className="w-24 h-[2px] bg-primary mx-auto" />
           </motion.div>
         </div>
 
