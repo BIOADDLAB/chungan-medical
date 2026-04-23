@@ -172,20 +172,28 @@ export default function UPulsePage() {
             </div>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-              {['50 mm', '100 mm', 'ZOOM', 'Fractional'].map((title, idx) => (
+              {[
+                { title: '50 mm', img: 'dual50mm.png' },
+                { title: '100 mm', img: 'dual100mm.png' },
+                { title: 'ZOOM', img: 'dualzoom.png' },
+                { title: 'Fractional', img: 'dualfractional.png' }
+              ].map((item, idx) => (
                 <div key={idx} className="group">
                   <div className="relative aspect-[3/4] bg-[#0A0D14] border border-primary/20 overflow-hidden flex items-center justify-center mb-4 transition-all duration-500 hover:border-primary/50">
-                    <div className="absolute inset-0 bg-tech-grid opacity-5" />
-                    <div className="w-16 h-16 border border-primary/10 rounded-full flex items-center justify-center">
-                      <div className="w-1 h-1 bg-primary/30 rounded-full" />
-                    </div>
+                    <Image
+                      src={`/images/upulse_dual/${item.img}`}
+                      alt={item.title}
+                      fill
+                      className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                    />
+                    <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
                     {/* Corner Accents */}
                     <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-white/30" />
                     <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-white/30" />
                   </div>
                   <div className="py-3 bg-white/5 border-t border-white/10 text-center transition-colors group-hover:bg-primary/5">
                     <span className="text-base font-bold text-white tracking-tight uppercase group-hover:text-primary transition duration-300">
-                      {title}
+                      {item.title}
                     </span>
                   </div>
                 </div>
