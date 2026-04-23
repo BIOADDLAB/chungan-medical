@@ -110,12 +110,16 @@ export default function UPulsePage() {
                 <h3 className="text-xl md:text-2xl font-black text-white tracking-tight uppercase leading-none relative -top-[2px]">COS, PIN, FRX, SOL</h3>
               </div>
 
-              {/* Image Placeholder (Matched to Photo) */}
-              <div className="relative aspect-[16/9] bg-[#0A0D14] border border-primary/20 overflow-hidden flex items-center justify-center group">
-                <div className="absolute inset-0 bg-tech-grid opacity-5" />
-                <div className="w-20 h-20 border border-primary/10 rounded-full flex items-center justify-center">
-                  <div className="w-1 h-1 bg-primary/30 rounded-full" />
-                </div>
+              {/* Image Container (Matched to Photo Style) */}
+              <div className="relative aspect-[16/9] bg-[#0A0D14] border border-primary/20 overflow-hidden group">
+                <Image
+                  src="/images/upulse_dual/dualmode.png"
+                  alt="Mode: COS, PIN, FRX, SOL"
+                  fill
+                  className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+                
                 {/* Corner Accents (L-Shapes) */}
                 <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-white/30" />
                 <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-white/30" />
@@ -136,12 +140,16 @@ export default function UPulsePage() {
                 <h3 className="text-xl md:text-2xl font-black text-white tracking-tight uppercase leading-none relative -top-[2px]">Black</h3>
               </div>
 
-              {/* Image Placeholder (Matched to Photo) */}
-              <div className="relative aspect-[16/9] bg-[#0A0D14] border border-primary/20 overflow-hidden flex items-center justify-center group">
-                <div className="absolute inset-0 bg-tech-grid opacity-5" />
-                <div className="w-20 h-20 border border-primary/10 rounded-full flex items-center justify-center">
-                  <div className="w-1 h-1 bg-primary/30 rounded-full" />
-                </div>
+              {/* Image Container (Matched to Photo Style) */}
+              <div className="relative aspect-[16/9] bg-[#0A0D14] border border-primary/20 overflow-hidden group">
+                <Image
+                  src="/images/upulse_dual/dualhand.png"
+                  alt="Handle: Black"
+                  fill
+                  className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+                
                 {/* Corner Accents (L-Shapes) */}
                 <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-white/30" />
                 <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-white/30" />
