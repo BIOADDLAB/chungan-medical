@@ -129,6 +129,70 @@ export default function FutureVisionPage() {
           </div>
         </div>
       </section>
+
+      {/* ③ Vision Content Section - AI Data Visualization (Style 3) */}
+      <section id="data-vision" className="relative py-28 bg-[#050810] overflow-hidden border-t border-white/5">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+        {/* 우측 상단 블루 글로우 */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
+
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            {/* 좌측: 데이터 시각화 이미지 (lg:col-span-7) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              className="lg:col-span-7 relative group"
+            >
+              <div className="relative glass-panel aspect-video overflow-hidden border-white/5 group-hover:border-primary/40 transition-all duration-1000 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                <img
+                  src="/images/ai_data_vision.png"
+                  alt="AI Data Visualization Dashboard"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent opacity-40" />
+                
+                {/* 스캔 라인 애니메이션 효과 */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/10 to-transparent h-1/2 w-full -translate-y-full animate-[scan_4s_linear_infinite] pointer-events-none" />
+              </div>
+              {/* 장식용 테크 요소 */}
+              <div className="absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-primary/30 pointer-events-none" />
+              <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-primary/30 pointer-events-none" />
+            </motion.div>
+
+            {/* 우측: 설명 텍스트 (lg:col-span-5) */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="lg:col-span-5"
+            >
+              <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">
+                Data Integration
+              </div>
+              <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-8">
+                <span className="text-white uppercase">지능형</span><br />
+                <span className="text-primary font-black uppercase">데이터 솔루션</span>
+              </h2>
+              <div className="w-16 h-[2px] bg-primary mb-8" />
+              
+              <div className="space-y-6">
+                <p className="text-slate-200 font-bold text-xl leading-snug">
+                  빅데이터 기반의 정밀 의료 알고리즘
+                </p>
+                <p className="text-slate-400 text-lg font-medium leading-relaxed max-w-xl break-keep">
+                  수만 건의 임상 데이터를 분석하여 최적의 에너지를 제안하는 스마트 알고리즘을 개발합니다. 청안메디칼의 모든 장비는 스스로 학습하고 진화하며 의료진에게 최상의 파트너가 될 것입니다.
+                </p>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
     </>
   );
 }
