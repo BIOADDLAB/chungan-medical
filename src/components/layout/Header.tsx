@@ -22,6 +22,7 @@ export default function Header() {
     { name: 'PICO-K', href: '/pico-k' },
     { name: 'U-Pulse', href: '/u-pulse' },
     { name: 'U-Pulse DUAL', href: '/u-pulse-dual' },
+    { name: 'N-Pulse Prime', href: '/n-pulse-prime' },
     { name: 'N-Pulse PRO, N-Pulse FX', href: '/n-pulse' },
     { name: 'SYLFIRM X', href: '/sylfirm-x' },
     { name: 'CELLINEW', href: '/cellinew' },
