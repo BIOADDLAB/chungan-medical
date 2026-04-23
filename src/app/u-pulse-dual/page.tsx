@@ -34,7 +34,8 @@ export default function UPulsePage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight"
           >
-            <span className="hero-title-main block md:inline text-white">U - PULSE</span>
+            <span className="hero-title-main block md:inline">U - PULSE</span>
+            <span className="hero-title-highlight ml-0 md:ml-4">DUAL</span>
           </motion.h1>
 
           {/* 부제 */}

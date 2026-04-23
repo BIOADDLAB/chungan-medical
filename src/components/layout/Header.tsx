@@ -20,7 +20,8 @@ export default function Header() {
 
   const products = [
     { name: 'PICO-K', href: '/pico-k' },
-    { name: 'U-Pulse, U-Pulse DUAL', href: '/u-pulse' },
+    { name: 'U-Pulse', href: '/u-pulse' },
+    { name: 'U-Pulse DUAL', href: '/u-pulse-dual' },
     { name: 'N-Pulse PRO, N-Pulse FX', href: '/n-pulse' },
     { name: 'SYLFIRM X', href: '/sylfirm-x' },
     { name: 'CELLINEW', href: '/cellinew' },
