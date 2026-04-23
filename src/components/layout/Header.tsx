@@ -78,7 +78,7 @@ export default function Header() {
               </div>
             </div>
 
-            <Link href="/#customers" className="nav-link hover:text-primary transition duration-300 py-6 block whitespace-nowrap">
+            <Link href="/future-vision" className="nav-link hover:text-primary transition duration-300 py-6 block whitespace-nowrap">
               미래비전
             </Link>
             <Link
@@ -160,7 +160,7 @@ export default function Header() {
                     )}
                   </AnimatePresence>
                 </div>
-                <Link href="/#customers" className="px-8 py-8 flex justify-between items-center text-xl font-bold text-white border-b border-white/5 hover:bg-white/5 transition" onClick={() => setIsMenuOpen(false)}>
+                <Link href="/future-vision" className="px-8 py-8 flex justify-between items-center text-xl font-bold text-white border-b border-white/5 hover:bg-white/5 transition" onClick={() => setIsMenuOpen(false)}>
                   <span>미래비전</span>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-40"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </Link>
