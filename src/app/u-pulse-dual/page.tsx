@@ -66,7 +66,92 @@ export default function UPulsePage() {
         </div>
       </section>
 
-      {/* ② U-Pulse Overview (PICO-K Style) */}
+      {/* ② U-Pulse Dual: Dual System Overview (Refined Design) */}
+      <section id="dual-system" className="relative py-28 bg-[#050810] overflow-hidden border-b border-white/5">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+
+          {/* Main Title Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-14"
+          >
+            {/* 배지 (네모박스 스타일) */}
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">
+              Fractional CO2 Laser
+            </div>
+
+            {/* 타이틀 (REVOLUTIONARY 스타일) - 크기 조정 (text-3xl md:text-5xl) */}
+            <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-tight">
+              <span className="hero-title-main">REVOLUTIONARY</span><br />
+              <span className="hero-title-highlight">U-PULSE DUAL</span>
+            </h2>
+            <div className="w-20 h-[2px] bg-primary mt-8" />
+          </motion.div>
+
+          {/* 2 Column Content Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+
+            {/* Mode Section */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center gap-6 mb-8 h-10">
+                <div className="flex items-center justify-center h-7 px-4 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase bg-primary/5 leading-none shrink-0">
+                  Mode
+                </div>
+                <h3 className="text-xl md:text-2xl font-black text-white tracking-tight uppercase leading-none relative -top-[2px]">COS, PIN, FRX, SOL</h3>
+              </div>
+
+              {/* Image Placeholder (Empty Stylized Box) */}
+              <div className="relative aspect-[16/9] glass-panel bg-tech-dots/5 overflow-hidden border border-white/5 flex items-center justify-center group">
+                <div className="absolute inset-0 bg-tech-grid opacity-10" />
+                <div className="w-16 h-16 border border-primary/20 rounded-full flex items-center justify-center">
+                  <div className="w-1 h-1 bg-primary/40 rounded-full animate-ping" />
+                </div>
+                {/* corner accents */}
+                <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-primary/30" />
+                <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-primary/30" />
+              </div>
+            </motion.div>
+
+            {/* Handle Section */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center gap-6 mb-8 h-10">
+                <div className="flex items-center justify-center h-7 px-4 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase bg-primary/5 leading-none shrink-0">
+                  Handle
+                </div>
+                <h3 className="text-xl md:text-2xl font-black text-white tracking-tight uppercase leading-none relative -top-[2px]">Black</h3>
+              </div>
+
+              {/* Image Placeholder (Empty Stylized Box) */}
+              <div className="relative aspect-[16/9] glass-panel bg-tech-dots/5 overflow-hidden border border-white/5 flex items-center justify-center group">
+                <div className="absolute inset-0 bg-tech-grid opacity-10" />
+                <div className="w-16 h-16 border border-primary/20 rounded-full flex items-center justify-center">
+                  <div className="w-1 h-1 bg-primary/40 rounded-full animate-ping" />
+                </div>
+                {/* corner accents */}
+                <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-primary/30" />
+                <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-primary/30" />
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ③ U-Pulse Overview (PICO-K Style) */}
       <section id="u-pulse-difference" className="relative py-28 bg-[#020408] overflow-hidden">
         {/* 배경 장식: 테크 도트 및 블루 블러 */}
         <div className="absolute inset-0 bg-tech-dots opacity-20 mix-blend-screen pointer-events-none" />
