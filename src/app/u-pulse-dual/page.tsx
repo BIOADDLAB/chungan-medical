@@ -67,7 +67,7 @@ export default function UPulsePage() {
       </section>
 
       {/* ② U-Pulse Dual: Dual System Overview (Refined Design) */}
-      <section id="dual-system" className="relative py-28 bg-[#050810] overflow-hidden border-b border-white/5">
+      <section id="dual-system" className="relative py-28 bg-[#020408] overflow-hidden">
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
 
@@ -226,7 +226,7 @@ export default function UPulsePage() {
               <div className="inline-block px-6 py-2 border border-primary/30 text-primary text-[11px] md:text-xs font-bold tracking-[0.5em] uppercase mb-10 bg-primary/5 leading-none">
                 Fractional CO2 Laser
               </div>
-              
+
               {/* 타이틀: text-3xl md:text-5xl */}
               <h2 className="text-3xl md:text-5xl font-black text-white mb-8 tracking-tighter uppercase leading-tight">
                 SOL <span className="text-primary">Mode</span>
@@ -259,7 +259,7 @@ export default function UPulsePage() {
                   </div>
                 </div>
 
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5 }}
