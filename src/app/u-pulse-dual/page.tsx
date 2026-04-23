@@ -208,61 +208,71 @@ export default function UPulsePage() {
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
 
-          {/* Part 1: SOL Mode Text Description */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 items-center">
+          {/* Part 1: SOL Mode Text Description (Redesigned with Typography Consistency) */}
+          <div className="relative mb-32 py-20 overflow-hidden">
+            {/* Background Decorative Element (Subtle) */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none select-none opacity-[0.015]">
+              <span className="text-[12vw] font-black tracking-tighter text-white uppercase leading-none block">SOL TECHNOLOGY</span>
+            </div>
+
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className="max-w-2xl"
+              className="max-w-screen-lg mx-auto text-center relative z-10"
             >
-              <div className="w-16 h-[2px] bg-primary mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-10 tracking-tight uppercase">
-                SOL Mode
+              {/* 배지 (Fractional CO2 Laser) */}
+              <div className="inline-block px-6 py-2 border border-primary/30 text-primary text-[11px] md:text-xs font-bold tracking-[0.5em] uppercase mb-10 bg-primary/5 leading-none">
+                Fractional CO2 Laser
+              </div>
+              
+              {/* 타이틀: text-3xl md:text-5xl */}
+              <h2 className="text-3xl md:text-5xl font-black text-white mb-8 tracking-tighter uppercase leading-tight">
+                SOL <span className="text-primary">Mode</span>
               </h2>
 
-              <div className="space-y-8 text-slate-300">
-                <p className="text-xl md:text-2xl font-bold leading-relaxed">
-                  SOL 모드는 <span className="text-white">CO2 Fractional Laser</span>를 기반으로<br />
+              {/* 밑줄 효과 (타이틀 아래로 이동) */}
+              <div className="flex justify-center mb-12">
+                <div className="w-16 h-[2px] bg-primary shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+              </div>
+
+              <div className="space-y-10">
+                {/* 본문 텍스트 크기 규칙: text-xl md:text-2xl */}
+                <p className="text-xl md:text-2xl font-bold leading-relaxed text-white/90">
+                  SOL 모드는 <span className="text-primary">CO2 Fractional Laser</span>를 기반으로<br />
                   피부 내 <span className="text-primary">Micro Hole</span>을 만들어주는 피부 재생 장비입니다.
                 </p>
 
-                <p className="text-lg md:text-xl font-medium leading-relaxed opacity-80">
-                  높은 Peak Power와 낮은 Pulse Duration이 열 손상을<br />
-                  최소화하고 부작용이 거의 없는 새로운 <span className="text-white border-b border-primary/50">DDS</span>입니다.
-                </p>
-
-                <p className="text-lg md:text-xl font-medium leading-relaxed opacity-80">
-                  Micro Hole은 유효 성분 전달 통로 역할은 하면서<br />
-                  동시에 섬유아세포를 활성화해 콜라겐과<br />
-                  엘라스틴 생성을 촉진하고 피부 재생을 유도합니다.
-                </p>
-
-                <div className="pt-6 border-t border-white/10">
-                  <p className="text-xl font-bold text-white leading-relaxed">
-                    피부 손상과 부작용은 <span className="text-primary">최소화</span> 하고<br />
-                    약물 전달의 기능은 <span className="text-primary">최대화</span> 했습니다.
-                  </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mt-16 px-4">
+                  <div className="glass-panel p-8 border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-all group">
+                    <p className="text-base md:text-lg font-medium leading-relaxed text-slate-400 group-hover:text-slate-200 transition-colors">
+                      높은 Peak Power와 낮은 Pulse Duration이 열 손상을
+                      최소화하고 부작용이 거의 없는 새로운 <span className="text-white font-bold">DDS</span>입니다.
+                    </p>
+                  </div>
+                  <div className="glass-panel p-8 border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-all group">
+                    <p className="text-base md:text-lg font-medium leading-relaxed text-slate-400 group-hover:text-slate-200 transition-colors">
+                      Micro Hole은 유효 성분 전달 통로 역할은 하면서
+                      동시에 섬유아세포를 활성화해 콜라겐 생성을 유도합니다.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
 
-            {/* Placeholder for an image or graphic related to SOL Mode */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="relative aspect-square glass-panel border-primary/20 flex items-center justify-center group"
-            >
-              <div className="text-primary/20 font-black text-4xl uppercase tracking-widest group-hover:text-primary/40 transition-colors">
-                SOL MODE IMAGE
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.5 }}
+                  className="pt-10 inline-block"
+                >
+                  <div className="px-8 py-6 border-l-4 border-primary bg-primary/5 backdrop-blur-sm">
+                    <p className="text-xl md:text-2xl font-black text-white leading-relaxed tracking-tight">
+                      피부 손상과 부작용은 <span className="text-primary">최소화</span> 하고<br className="md:hidden" />
+                      약물 전달의 기능은 <span className="text-primary">최대화</span> 했습니다.
+                    </p>
+                  </div>
+                </motion.div>
               </div>
-              <div className="absolute inset-0 bg-tech-dots opacity-20" />
-              {/* Corner Accents */}
-              <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-primary/30" />
-              <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-primary/30" />
             </motion.div>
           </div>
 
@@ -466,7 +476,7 @@ export default function UPulsePage() {
       {/* NEW SECTION: SOL Mode Advantages & Benefits (Horizontal Layout) */}
       <section id="sol-mode-benefits" className="relative py-28 bg-[#020408] overflow-hidden">
         <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
-        
+
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           {/* Section Header */}
           <motion.div
@@ -486,7 +496,7 @@ export default function UPulsePage() {
           </motion.div>
 
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
-            
+
             {/* Left Column: Key Advantages Checklist */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -506,7 +516,7 @@ export default function UPulsePage() {
                 <div key={idx} className="flex items-center gap-5 group">
                   <div className="flex-shrink-0 w-7 h-7 rounded border border-white/20 bg-white/5 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/5 transition-all duration-300">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-white group-hover:text-primary transition-colors">
-                      <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                   <span className="text-lg md:text-xl font-bold text-slate-300 group-hover:text-white transition-colors">{text}</span>
@@ -524,17 +534,17 @@ export default function UPulsePage() {
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4">
                 {[
-                  { 
-                    title: <>약물 침투<br />피부 재생</>, 
-                    code: 'DDS' 
+                  {
+                    title: <>약물 침투<br />피부 재생</>,
+                    code: 'DDS'
                   },
-                  { 
-                    title: <>피부톤 개선<br />피부장벽 개선</>, 
-                    code: 'TONE' 
+                  {
+                    title: <>피부톤 개선<br />피부장벽 개선</>,
+                    code: 'TONE'
                   },
-                  { 
-                    title: <>주름 감소<br />탄력 증가</>, 
-                    code: 'LIFT' 
+                  {
+                    title: <>주름 감소<br />탄력 증가</>,
+                    code: 'LIFT'
                   }
                 ].map((item, idx) => (
                   <div key={idx} className="flex flex-col items-center group">
@@ -545,7 +555,7 @@ export default function UPulsePage() {
                       {/* Placeholder for actual image */}
                       {/* <Image src={`/images/benefits/${item.code}.png`} fill className="object-cover" /> */}
                     </div>
-                    
+
                     {/* Title Text */}
                     <div className="text-center">
                       <h4 className="text-base md:text-lg font-black text-white tracking-tight leading-snug group-hover:text-primary transition-colors">
