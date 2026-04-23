@@ -47,7 +47,7 @@ export default function Footer() {
               <Link href="/contact" className="hover:text-white transition duration-300 uppercase">CONTACT</Link>
             </p>
             <h3 className="text-2xl md:text-4xl font-bold font-inter mb-6 hover:text-primary transition duration-300 cursor-pointer text-white">
-              chungan@naver.co.kr
+              hwangh6293@naver.com
             </h3>
             <p className="text-gray-400 mb-2 font-inter text-sm">
               <span className="text-gray-500 mr-2">TEL</span> 010-5115-6293
