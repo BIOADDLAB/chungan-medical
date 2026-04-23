@@ -92,8 +92,9 @@ export default function UPulsePage() {
             <div className="w-20 h-[2px] bg-primary mt-8" />
           </motion.div>
 
-          {/* 2 Column Content Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+
+          {/* 2 Column Content Section (Mode & Handle) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-20">
 
             {/* Mode Section */}
             <motion.div
@@ -109,15 +110,15 @@ export default function UPulsePage() {
                 <h3 className="text-xl md:text-2xl font-black text-white tracking-tight uppercase leading-none relative -top-[2px]">COS, PIN, FRX, SOL</h3>
               </div>
 
-              {/* Image Placeholder (Empty Stylized Box) */}
-              <div className="relative aspect-[16/9] glass-panel bg-tech-dots/5 overflow-hidden border border-white/5 flex items-center justify-center group">
-                <div className="absolute inset-0 bg-tech-grid opacity-10" />
-                <div className="w-16 h-16 border border-primary/20 rounded-full flex items-center justify-center">
-                  <div className="w-1 h-1 bg-primary/40 rounded-full animate-ping" />
+              {/* Image Placeholder (Matched to Photo) */}
+              <div className="relative aspect-[16/9] bg-[#0A0D14] border border-primary/20 overflow-hidden flex items-center justify-center group">
+                <div className="absolute inset-0 bg-tech-grid opacity-5" />
+                <div className="w-20 h-20 border border-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-1 h-1 bg-primary/30 rounded-full" />
                 </div>
-                {/* corner accents */}
-                <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-primary/30" />
-                <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-primary/30" />
+                {/* Corner Accents (L-Shapes) */}
+                <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-white/30" />
+                <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-white/30" />
               </div>
             </motion.div>
 
@@ -135,19 +136,54 @@ export default function UPulsePage() {
                 <h3 className="text-xl md:text-2xl font-black text-white tracking-tight uppercase leading-none relative -top-[2px]">Black</h3>
               </div>
 
-              {/* Image Placeholder (Empty Stylized Box) */}
-              <div className="relative aspect-[16/9] glass-panel bg-tech-dots/5 overflow-hidden border border-white/5 flex items-center justify-center group">
-                <div className="absolute inset-0 bg-tech-grid opacity-10" />
-                <div className="w-16 h-16 border border-primary/20 rounded-full flex items-center justify-center">
-                  <div className="w-1 h-1 bg-primary/40 rounded-full animate-ping" />
+              {/* Image Placeholder (Matched to Photo) */}
+              <div className="relative aspect-[16/9] bg-[#0A0D14] border border-primary/20 overflow-hidden flex items-center justify-center group">
+                <div className="absolute inset-0 bg-tech-grid opacity-5" />
+                <div className="w-20 h-20 border border-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-1 h-1 bg-primary/30 rounded-full" />
                 </div>
-                {/* corner accents */}
-                <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-primary/30" />
-                <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-primary/30" />
+                {/* Corner Accents (L-Shapes) */}
+                <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-white/30" />
+                <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-white/30" />
               </div>
             </motion.div>
-
           </div>
+
+          {/* Handpiece System Section (Row 2) */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center gap-6 mb-8 h-10">
+              <div className="flex items-center justify-center h-7 px-4 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase bg-primary/5 leading-none shrink-0">
+                Handpiece
+              </div>
+              <h3 className="text-xl md:text-2xl font-black text-white tracking-tight uppercase leading-none relative -top-[2px]">50mm, 100mm, ZOOM, Fractional</h3>
+            </div>
+
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+              {['50 mm', '100 mm', 'ZOOM', 'Fractional'].map((title, idx) => (
+                <div key={idx} className="group">
+                  <div className="relative aspect-[3/4] bg-[#0A0D14] border border-primary/20 overflow-hidden flex items-center justify-center mb-4 transition-all duration-500 hover:border-primary/50">
+                    <div className="absolute inset-0 bg-tech-grid opacity-5" />
+                    <div className="w-16 h-16 border border-primary/10 rounded-full flex items-center justify-center">
+                      <div className="w-1 h-1 bg-primary/30 rounded-full" />
+                    </div>
+                    {/* Corner Accents */}
+                    <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-white/30" />
+                    <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-white/30" />
+                  </div>
+                  <div className="py-3 bg-white/5 border-t border-white/10 text-center transition-colors group-hover:bg-primary/5">
+                    <span className="text-base font-bold text-white tracking-tight uppercase group-hover:text-primary transition duration-300">
+                      {title}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
