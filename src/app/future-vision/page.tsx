@@ -65,26 +65,68 @@ export default function FutureVisionPage() {
         </div>
       </section>
 
-      {/* ② Vision Content Section */}
+      {/* ② Vision Content Section - AI Research Lab */}
       <section id="vision-content" className="relative py-28 bg-[#020408] overflow-hidden">
+        {/* 배경 장식 */}
+        <div className="absolute inset-0 bg-tech-dots opacity-20 mix-blend-screen pointer-events-none" />
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-[140px] rounded-full pointer-events-none" />
+
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
-              Our Vision
-            </div>
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-8">
-              준비 중인 페이지입니다.
-            </h2>
-            <p className="text-slate-400 text-lg font-medium leading-relaxed max-w-2xl mx-auto">
-              청안메디칼의 미래 비전과 혁신적인 가치를 담은 콘텐츠가 곧 업데이트될 예정입니다.
-            </p>
-          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* 좌측: 설명 텍스트 (Orchestration Standard 적용) */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">
+                Next-Gen R&D
+              </div>
+              <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
+                <span className="text-primary font-black uppercase">AI 기반</span><br />
+                <span className="text-white uppercase">의료 제조 및 연구소</span>
+              </h2>
+              <div className="w-20 h-[2px] bg-primary mb-8" />
+              
+              <div className="space-y-6">
+                <p className="text-slate-200 font-bold text-xl leading-snug">
+                  청안메디칼 AI 통합 연구소 설립 예정
+                </p>
+                <p className="text-slate-400 text-lg font-medium leading-relaxed max-w-xl break-keep">
+                  단순한 제조를 넘어 인공지능 기술을 결합한 지능형 의료 장비 연구를 위해 전용 R&D 센터 설립을 준비하고 있습니다. 더 정밀하고 안전한 내일의 의료 환경을 청안메디칼이 선도하겠습니다.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* 우측: 연구소 이미지 (Generated Image 적용) */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="relative group"
+            >
+              <div className="relative glass-panel aspect-[4/3] overflow-hidden border-white/10 group-hover:border-primary/50 transition-all duration-1000">
+                <img
+                  src="/images/ai_medical_lab_vision.png"
+                  alt="AI Medical Research Lab Vision"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                />
+                {/* 오버레이 글로우 */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
+                <div className="absolute bottom-6 left-6 z-20">
+                  <span className="text-primary font-black text-xs tracking-widest uppercase bg-black/40 backdrop-blur-md px-3 py-1 border border-primary/30">
+                    Proposed R&D Center
+                  </span>
+                </div>
+              </div>
+              {/* 이미지 하단 그림자/글로우 효과 */}
+              <div className="absolute -bottom-6 inset-x-10 h-10 bg-primary/20 blur-[60px] opacity-50" />
+            </motion.div>
+
+          </div>
         </div>
       </section>
     </>
