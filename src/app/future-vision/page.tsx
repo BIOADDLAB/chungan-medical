@@ -73,7 +73,7 @@ export default function FutureVisionPage() {
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
+
             {/* 좌측: 설명 텍스트 (Orchestration Standard 적용) */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
@@ -89,7 +89,7 @@ export default function FutureVisionPage() {
                 <span className="text-white uppercase">의료 제조 및 연구소</span>
               </h2>
               <div className="w-20 h-[2px] bg-primary mb-8" />
-              
+
               <div className="space-y-6">
                 <p className="text-slate-200 font-bold text-xl leading-snug">
                   청안메디칼 AI 통합 연구소 설립 예정
@@ -138,7 +138,7 @@ export default function FutureVisionPage() {
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            
+
             {/* 좌측: 데이터 시각화 이미지 (lg:col-span-7) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -154,7 +154,7 @@ export default function FutureVisionPage() {
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent opacity-40" />
-                
+
                 {/* 스캔 라인 애니메이션 효과 */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/10 to-transparent h-1/2 w-full -translate-y-full animate-[scan_4s_linear_infinite] pointer-events-none" />
               </div>
@@ -179,7 +179,7 @@ export default function FutureVisionPage() {
                 <span className="text-primary font-black uppercase">데이터 솔루션</span>
               </h2>
               <div className="w-16 h-[2px] bg-primary mb-8" />
-              
+
               <div className="space-y-6">
                 <p className="text-slate-200 font-bold text-xl leading-snug">
                   빅데이터 기반의 정밀 의료 알고리즘
@@ -192,6 +192,43 @@ export default function FutureVisionPage() {
 
           </div>
         </div>
+      </section>
+
+      {/* ④ Vision Content Section - Full Width Announcement */}
+      <section id="full-announcement" className="relative h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+        {/* 전체 배경 이미지 */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/images/ai_center_exterior.png"
+            alt="AI Research Center Exterior"
+            className="w-full h-full object-cover"
+          />
+          {/* 어두운 오버레이 및 틴트 */}
+          <div className="absolute inset-0 bg-[#050810]/60 backdrop-blur-[2px]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#050810] via-transparent to-[#050810]" />
+        </div>
+
+        {/* 중앙 텍스트 */}
+        <div className="relative z-10 max-w-screen-xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-block px-4 py-1.5 border border-primary/40 text-primary text-[10px] font-black tracking-[0.4em] uppercase mb-8 bg-black/40 backdrop-blur-md">
+              Future Landmark
+            </div>
+            <h2 className="text-3xl md:text-6xl font-black tracking-tighter text-white mb-8 drop-shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+              AI 관련 제조 및 연구소 <br className="hidden md:block" />
+              <span className="text-primary">설립 예정</span>
+            </h2>
+            <div className="w-24 h-[1px] bg-primary/50 mx-auto" />
+          </motion.div>
+        </div>
+
+        {/* 테크 그리드 오버레이 (희미하게) */}
+        <div className="absolute inset-0 bg-tech-grid opacity-20 pointer-events-none" />
       </section>
     </>
   );
