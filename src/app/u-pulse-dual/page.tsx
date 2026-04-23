@@ -119,7 +119,7 @@ export default function UPulsePage() {
                   className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
-                
+
                 {/* Corner Accents (L-Shapes) */}
                 <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-white/30" />
                 <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-white/30" />
@@ -149,7 +149,7 @@ export default function UPulsePage() {
                   className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
-                
+
                 {/* Corner Accents (L-Shapes) */}
                 <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-white/30" />
                 <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-white/30" />
@@ -202,6 +202,165 @@ export default function UPulsePage() {
           </motion.div>
         </div>
       </section>
+
+      {/* NEW SECTION: SOL Mode Description & Indications Grid */}
+      <section id="sol-mode-detail" className="relative py-28 bg-[#020408] overflow-hidden">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+
+          {/* Part 1: SOL Mode Text Description */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="max-w-2xl"
+            >
+              <div className="w-16 h-[2px] bg-primary mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-10 tracking-tight uppercase">
+                SOL Mode
+              </h2>
+
+              <div className="space-y-8 text-slate-300">
+                <p className="text-xl md:text-2xl font-bold leading-relaxed">
+                  SOL 모드는 <span className="text-white">CO2 Fractional Laser</span>를 기반으로<br />
+                  피부 내 <span className="text-primary">Micro Hole</span>을 만들어주는 피부 재생 장비입니다.
+                </p>
+
+                <p className="text-lg md:text-xl font-medium leading-relaxed opacity-80">
+                  높은 Peak Power와 낮은 Pulse Duration이 열 손상을<br />
+                  최소화하고 부작용이 거의 없는 새로운 <span className="text-white border-b border-primary/50">DDS</span>입니다.
+                </p>
+
+                <p className="text-lg md:text-xl font-medium leading-relaxed opacity-80">
+                  Micro Hole은 유효 성분 전달 통로 역할은 하면서<br />
+                  동시에 섬유아세포를 활성화해 콜라겐과<br />
+                  엘라스틴 생성을 촉진하고 피부 재생을 유도합니다.
+                </p>
+
+                <div className="pt-6 border-t border-white/10">
+                  <p className="text-xl font-bold text-white leading-relaxed">
+                    피부 손상과 부작용은 <span className="text-primary">최소화</span> 하고<br />
+                    약물 전달의 기능은 <span className="text-primary">최대화</span> 했습니다.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Placeholder for an image or graphic related to SOL Mode */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="relative aspect-square glass-panel border-primary/20 flex items-center justify-center group"
+            >
+              <div className="text-primary/20 font-black text-4xl uppercase tracking-widest group-hover:text-primary/40 transition-colors">
+                SOL MODE IMAGE
+              </div>
+              <div className="absolute inset-0 bg-tech-dots opacity-20" />
+              {/* Corner Accents */}
+              <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-primary/30" />
+              <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-primary/30" />
+            </motion.div>
+          </div>
+
+          {/* Part 2: Indications Comparison Grid (FRX vs SOL) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+
+            {/* FRX Mode Indications */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center gap-4 mb-8">
+                <h3 className="text-2xl font-black text-white tracking-tight uppercase">FRX <span className="font-light text-slate-400">mode</span></h3>
+                <div className="h-px flex-1 bg-gradient-to-r from-white/20 to-transparent" />
+              </div>
+
+              <div className="glass-panel border-white/5 bg-white/[0.02] p-8 md:p-12 relative overflow-hidden">
+                <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+                <div className="grid grid-cols-2 gap-x-8 gap-y-12 relative z-10">
+                  {[
+                    { label: '눈 밑 리프팅', img: '' },
+                    { label: '잔주름 박피', img: '' },
+                    { label: '나비존(코) 모공', img: '' },
+                    { label: '여드름 흉터', img: '' },
+                    { label: '패인 흉터', img: '' },
+                    { label: '흉터', img: '' }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex flex-col items-center group/item">
+                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#1A1D25] border border-white/10 flex items-center justify-center mb-4 group-hover/item:border-primary/50 group-hover/item:bg-primary/5 transition-all duration-500 overflow-hidden relative">
+                        {item.img ? (
+                          <Image src={item.img} alt={item.label} fill className="object-cover" />
+                        ) : (
+                          <div className="w-full h-full bg-slate-800/50 flex items-center justify-center">
+                            <div className="w-8 h-8 rounded-full border border-white/10" />
+                          </div>
+                        )}
+                      </div>
+                      <span className="text-sm md:text-base font-bold text-slate-300 group-hover/item:text-white transition-colors">{item.label}</span>
+                    </div>
+                  ))}
+
+                  {/* Vertical Divider Line (Visual style from image) */}
+                  <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/5 border-l border-dashed border-white/10 -translate-x-1/2" />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* SOL Mode Indications */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center gap-4 mb-8">
+                <h3 className="text-2xl font-black text-white tracking-tight uppercase">SOL <span className="font-light text-slate-400">mode</span></h3>
+                <div className="h-px flex-1 bg-gradient-to-r from-white/20 to-transparent" />
+              </div>
+
+              <div className="glass-panel border-primary/20 bg-primary/[0.02] p-8 md:p-12 relative overflow-hidden">
+                <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+                <div className="grid grid-cols-2 gap-x-8 gap-y-12 relative z-10">
+                  {[
+                    { label: '약물 침투', img: '' },
+                    { label: '피부 재생', img: '' },
+                    { label: '피부톤 개선', img: '' },
+                    { label: '피부장벽 개선', img: ' ' },
+                    { label: '주름 감소', img: '' },
+                    { label: '탄력 증가', img: '' }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex flex-col items-center group/item">
+                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#1A1D25] border border-primary/20 flex items-center justify-center mb-4 group-hover/item:border-primary group-hover/item:bg-primary/10 transition-all duration-500 overflow-hidden relative shadow-[0_0_20px_rgba(0,183,241,0.1)]">
+                        {item.img.trim() ? (
+                          <Image src={item.img} alt={item.label} fill className="object-cover" />
+                        ) : (
+                          <div className="w-full h-full bg-primary/5 flex items-center justify-center">
+                            <div className="w-8 h-8 rounded-full border border-primary/20" />
+                          </div>
+                        )}
+                      </div>
+                      <span className="text-sm md:text-base font-bold text-slate-300 group-hover/item:text-primary transition-colors">{item.label}</span>
+                    </div>
+                  ))}
+
+                  {/* Vertical Divider Line */}
+                  <div className="absolute left-1/2 top-0 bottom-0 w-px bg-primary/10 border-l border-dashed border-primary/20 -translate-x-1/2" />
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
 
       {/* ③ U-Pulse Overview (PICO-K Style) */}
       <section id="u-pulse-difference" className="relative py-28 bg-[#020408] overflow-hidden">
