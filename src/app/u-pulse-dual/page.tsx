@@ -86,8 +86,8 @@ export default function UPulsePage() {
 
             {/* 타이틀 (REVOLUTIONARY 스타일) - 크기 조정 (text-3xl md:text-5xl) */}
             <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-tight">
-              <span className="hero-title-main">REVOLUTIONARY</span><br />
-              <span className="hero-title-highlight">U-PULSE DUAL</span>
+              <span className="hero-title-main">U-PULSE</span>{" "}
+              <span className="hero-title-highlight">DUAL</span>
             </h2>
             <div className="w-20 h-[2px] bg-primary mt-8" />
           </motion.div>
