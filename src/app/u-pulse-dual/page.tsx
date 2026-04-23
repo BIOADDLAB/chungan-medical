@@ -361,6 +361,109 @@ export default function UPulsePage() {
 
       <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
+      {/* NEW SECTION: Skin Rejuvenation Process Flow */}
+      <section id="skin-rejuvenation" className="relative py-28 bg-[#020408] overflow-hidden">
+        <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none" />
+
+        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-16 flex flex-col items-center text-center"
+          >
+            <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
+              Dermal Regeneration
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight uppercase">
+              Skin <span className="text-primary">Rejuvenation</span>
+            </h2>
+            <div className="w-20 h-[2px] bg-primary mt-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+          </motion.div>
+
+          {/* Flow Cards Container */}
+          <div className="max-w-5xl mx-auto flex flex-col items-center">
+
+            {/* Step 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="w-full glass-panel border-primary/20 bg-primary/[0.02] p-8 md:p-10 relative group"
+            >
+              <div className="absolute top-0 left-0 w-1 h-full bg-primary/30 group-hover:bg-primary transition-colors" />
+              <p className="text-lg md:text-xl font-bold text-slate-200 leading-relaxed text-center">
+                SOL Mode는 피부에 <span className="text-white border-b border-primary/40">Micro Hole</span>을 만들고 기계적인 자극을 주어 섬유아세포를 활성화시켜<br className="hidden md:block" />
+                콜라겐과 엘라스틴의 생성을 증가시켜 피부 재생을 유도합니다.
+              </p>
+            </motion.div>
+
+            {/* Down Arrow 1 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="py-8 flex flex-col items-center opacity-40"
+            >
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" className="text-primary animate-pulse">
+                <path d="M7 10L12 15L17 10" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </motion.div>
+
+            {/* Step 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="w-full glass-panel border-white/10 bg-white/[0.01] p-8 md:p-10 relative group"
+            >
+              <div className="absolute top-0 left-0 w-1 h-full bg-white/10 group-hover:bg-white/30 transition-colors" />
+              <p className="text-lg md:text-xl font-bold text-slate-300 leading-relaxed text-center">
+                SOL Mode는 주변 조직에 <span className="text-white font-black underline decoration-primary/40 decoration-2 underline-offset-4">열 손상을 주지 않고</span>,<br className="hidden md:block" />
+                적절한 열에너지를 피부에 전달해주어 섬유아세포를 활성화시키고 피부 재생을 유도합니다.
+              </p>
+            </motion.div>
+
+            {/* Down Arrow 2 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="py-8 flex flex-col items-center opacity-40"
+            >
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" className="text-primary animate-pulse">
+                <path d="M7 10L12 15L17 10" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </motion.div>
+
+            {/* Step 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="w-full glass-panel border-primary/20 bg-primary/[0.02] p-8 md:p-10 relative group"
+            >
+              <div className="absolute top-0 left-0 w-1 h-full bg-primary/30 group-hover:bg-primary transition-colors" />
+              <p className="text-lg md:text-xl font-bold text-slate-200 leading-relaxed text-center">
+                SOL Mode로 뚫은 섬세한 Micro Hole은 <span className="text-white">상부 진피층(Papillary layer)</span> 내의<br className="hidden md:block" />
+                섬유아세포까지 유효 물질을 전달시켜주는 <span className="text-primary font-black border-b border-primary/60">통로</span>로 사용될 수 있습니다.
+              </p>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+
 
       {/* ③ U-Pulse Overview (PICO-K Style) */}
       <section id="u-pulse-difference" className="relative py-28 bg-[#020408] overflow-hidden">
