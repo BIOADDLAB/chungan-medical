@@ -293,7 +293,7 @@ export default function UPulsePage() {
 
               <div className="glass-panel border-white/5 bg-white/[0.02] p-8 md:p-12 relative overflow-hidden">
                 <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
-                <div className="grid grid-cols-2 gap-x-8 gap-y-12 relative z-10">
+                <div className="grid grid-cols-2 gap-x-6 gap-y-10 relative z-10">
                   {[
                     { label: '눈 밑 리프팅', img: '/images/upulse_dual/frx_mode/눈밑리프팅.png' },
                     { label: '잔주름 박피', img: '/images/upulse_dual/frx_mode/잔주름박피.png' },
@@ -302,21 +302,25 @@ export default function UPulsePage() {
                     { label: '패인 흉터', img: '/images/upulse_dual/frx_mode/패인흉터.png' },
                     { label: '흉터', img: '/images/upulse_dual/frx_mode/흉터.png' }
                   ].map((item, idx) => (
-                    <div key={idx} className="flex flex-col items-center group/item">
-                      <div className="w-28 h-28 md:w-32 md:h-32 flex items-center justify-center mb-4 transition-all duration-500 relative">
+                    <motion.div 
+                      key={idx} 
+                      whileHover={{ scale: 1.05 }}
+                      className="flex flex-col items-center justify-center bg-white rounded-full aspect-square p-4 w-full max-w-[160px] md:max-w-[200px] mx-auto shadow-xl group/item transition-all duration-300"
+                    >
+                      <div className="w-20 h-20 md:w-24 md:h-24 flex items-center justify-center mb-4 transition-all duration-500 relative">
                         {item.img ? (
-                          <Image src={item.img} alt={item.label} fill className="object-contain p-0 opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all duration-700" />
+                          <Image src={item.img} alt={item.label} fill className="object-contain p-0" />
                         ) : (
                           <div className="w-full h-full flex items-center justify-center">
-                            {/* Inner circle removed for image clarity */}
+                            {/* Placeholder removed */}
                           </div>
                         )}
                       </div>
-                      <span className="text-sm md:text-base font-bold text-slate-300 group-hover/item:text-white transition-colors">{item.label}</span>
-                    </div>
+                      <span className="text-sm md:text-base font-black text-slate-900 group-hover/item:text-primary transition-colors text-center leading-tight px-2">{item.label}</span>
+                    </motion.div>
                   ))}
 
-                  {/* Vertical Divider Line (Visual style from image) */}
+                  {/* Vertical Divider Line */}
                   <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/5 border-l border-dashed border-white/10 -translate-x-1/2" />
                 </div>
               </div>
@@ -336,7 +340,7 @@ export default function UPulsePage() {
 
               <div className="glass-panel border-primary/20 bg-primary/[0.02] p-8 md:p-12 relative overflow-hidden">
                 <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
-                <div className="grid grid-cols-2 gap-x-8 gap-y-12 relative z-10">
+                <div className="grid grid-cols-2 gap-x-6 gap-y-10 relative z-10">
                   {[
                     { label: '약물 침투', img: '/images/upulse_dual/sol_mode/약물침투.png' },
                     { label: '피부 재생', img: '/images/upulse_dual/sol_mode/피부재생.png' },
@@ -345,18 +349,22 @@ export default function UPulsePage() {
                     { label: '주름 감소', img: '/images/upulse_dual/sol_mode/주름감소.png' },
                     { label: '탄력 증가', img: '/images/upulse_dual/sol_mode/탄력증가.png' }
                   ].map((item, idx) => (
-                    <div key={idx} className="flex flex-col items-center group/item">
-                      <div className="w-28 h-28 md:w-32 md:h-32 flex items-center justify-center mb-4 transition-all duration-500 relative">
+                    <motion.div 
+                      key={idx} 
+                      whileHover={{ scale: 1.05 }}
+                      className="flex flex-col items-center justify-center bg-white rounded-full aspect-square p-4 w-full max-w-[160px] md:max-w-[200px] mx-auto shadow-xl group/item transition-all duration-300"
+                    >
+                      <div className="w-20 h-20 md:w-24 md:h-24 flex items-center justify-center mb-4 transition-all duration-500 relative">
                         {item.img ? (
-                          <Image src={item.img} alt={item.label} fill className="object-contain p-0 opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all duration-700" />
+                          <Image src={item.img} alt={item.label} fill className="object-contain p-0" />
                         ) : (
                           <div className="w-full h-full flex items-center justify-center">
-                            {/* Inner circle removed for image clarity */}
+                            {/* Placeholder removed */}
                           </div>
                         )}
                       </div>
-                      <span className="text-sm md:text-base font-bold text-slate-300 group-hover/item:text-primary transition-colors">{item.label}</span>
-                    </div>
+                      <span className="text-sm md:text-base font-black text-slate-900 group-hover/item:text-primary transition-colors text-center leading-tight px-2">{item.label}</span>
+                    </motion.div>
                   ))}
 
                   {/* Vertical Divider Line */}
@@ -550,19 +558,19 @@ export default function UPulsePage() {
                     img: '/images/upulse_dual/key3.png'
                   }
                 ].map((item, idx) => (
-                  <motion.div 
-                    key={idx} 
+                  <motion.div
+                    key={idx}
                     whileHover={{ y: -10 }}
                     className="flex flex-col items-center bg-white rounded-[40px] p-10 md:p-12 shadow-[0_20px_50px_rgba(255,255,255,0.05)] border border-white/10 group transition-all duration-500"
                   >
                     {/* Square Image Slot */}
-                    <div className="w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 flex items-center justify-center mb-8 relative group-hover:scale-110 transition-all duration-700">
+                    <div className="w-40 h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 flex items-center justify-center mb-8 relative group-hover:scale-110 transition-all duration-700">
                       {item.img ? (
-                        <Image 
-                          src={item.img} 
-                          alt={item.code} 
-                          fill 
-                          className="object-contain" 
+                        <Image
+                          src={item.img}
+                          alt={item.code}
+                          fill
+                          className="object-contain"
                         />
                       ) : (
                         <div className="w-full h-full bg-slate-100 flex items-center justify-center rounded-2xl">
