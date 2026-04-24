@@ -295,19 +295,19 @@ export default function UPulsePage() {
                 <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
                 <div className="grid grid-cols-2 gap-x-8 gap-y-12 relative z-10">
                   {[
-                    { label: '눈 밑 리프팅', img: '' },
-                    { label: '잔주름 박피', img: '' },
-                    { label: '나비존(코) 모공', img: '' },
-                    { label: '여드름 흉터', img: '' },
-                    { label: '패인 흉터', img: '' },
-                    { label: '흉터', img: '' }
+                    { label: '눈 밑 리프팅', img: '/images/upulse_dual/frx_mode/눈밑리프팅.png' },
+                    { label: '잔주름 박피', img: '/images/upulse_dual/frx_mode/잔주름박피.png' },
+                    { label: '나비존(코) 모공', img: '/images/upulse_dual/frx_mode/나비존모공.png' },
+                    { label: '여드름 흉터', img: '/images/upulse_dual/frx_mode/여드름흉터.png' },
+                    { label: '패인 흉터', img: '/images/upulse_dual/frx_mode/패인흉터.png' },
+                    { label: '흉터', img: '/images/upulse_dual/frx_mode/흉터.png' }
                   ].map((item, idx) => (
                     <div key={idx} className="flex flex-col items-center group/item">
-                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#1A1D25] border border-white/10 flex items-center justify-center mb-4 group-hover/item:border-primary/50 group-hover/item:bg-primary/5 transition-all duration-500 overflow-hidden relative">
+                      <div className="w-28 h-28 md:w-32 md:h-32 flex items-center justify-center mb-4 transition-all duration-500 relative">
                         {item.img ? (
-                          <Image src={item.img} alt={item.label} fill className="object-cover" />
+                          <Image src={item.img} alt={item.label} fill className="object-contain p-0 opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all duration-700" />
                         ) : (
-                          <div className="w-full h-full bg-slate-800/50 flex items-center justify-center">
+                          <div className="w-full h-full flex items-center justify-center">
                             {/* Inner circle removed for image clarity */}
                           </div>
                         )}
@@ -338,19 +338,19 @@ export default function UPulsePage() {
                 <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
                 <div className="grid grid-cols-2 gap-x-8 gap-y-12 relative z-10">
                   {[
-                    { label: '약물 침투', img: '' },
-                    { label: '피부 재생', img: '' },
-                    { label: '피부톤 개선', img: '' },
-                    { label: '피부장벽 개선', img: ' ' },
-                    { label: '주름 감소', img: '' },
-                    { label: '탄력 증가', img: '' }
+                    { label: '약물 침투', img: '/images/upulse_dual/sol_mode/약물침투.png' },
+                    { label: '피부 재생', img: '/images/upulse_dual/sol_mode/피부재생.png' },
+                    { label: '피부톤 개선', img: '/images/upulse_dual/sol_mode/피부톤개선.png' },
+                    { label: '피부장벽 개선', img: '/images/upulse_dual/sol_mode/피부장벽개선.png' },
+                    { label: '주름 감소', img: '/images/upulse_dual/sol_mode/주름감소.png' },
+                    { label: '탄력 증가', img: '/images/upulse_dual/sol_mode/탄력증가.png' }
                   ].map((item, idx) => (
                     <div key={idx} className="flex flex-col items-center group/item">
-                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#1A1D25] border border-primary/20 flex items-center justify-center mb-4 group-hover/item:border-primary group-hover/item:bg-primary/10 transition-all duration-500 overflow-hidden relative shadow-[0_0_20px_rgba(0,183,241,0.1)]">
-                        {item.img.trim() ? (
-                          <Image src={item.img} alt={item.label} fill className="object-cover" />
+                      <div className="w-28 h-28 md:w-32 md:h-32 flex items-center justify-center mb-4 transition-all duration-500 relative">
+                        {item.img ? (
+                          <Image src={item.img} alt={item.label} fill className="object-contain p-0 opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all duration-700" />
                         ) : (
-                          <div className="w-full h-full bg-primary/5 flex items-center justify-center">
+                          <div className="w-full h-full flex items-center justify-center">
                             {/* Inner circle removed for image clarity */}
                           </div>
                         )}
@@ -536,33 +536,48 @@ export default function UPulsePage() {
                 {[
                   {
                     title: <>약물 침투<br />피부 재생</>,
-                    code: 'DDS'
+                    code: 'DDS',
+                    img: '/images/upulse_dual/key1.png'
                   },
                   {
                     title: <>피부톤 개선<br />피부장벽 개선</>,
-                    code: 'TONE'
+                    code: 'TONE',
+                    img: '/images/upulse_dual/key2.png'
                   },
                   {
                     title: <>주름 감소<br />탄력 증가</>,
-                    code: 'LIFT'
+                    code: 'LIFT',
+                    img: '/images/upulse_dual/key3.png'
                   }
                 ].map((item, idx) => (
-                  <div key={idx} className="flex flex-col items-center group">
-                    {/* Circle Image Slot (Empty for now) */}
-                    <div className="w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full border border-primary/30 bg-primary/[0.02] flex items-center justify-center mb-8 relative group-hover:border-primary group-hover:scale-105 transition-all duration-700 overflow-hidden shadow-[0_0_25px_rgba(0,183,241,0.05)]">
-                      <div className="absolute inset-0 bg-tech-dots opacity-20" />
-                      <span className="text-primary/10 font-black text-xl tracking-widest group-hover:text-primary/30 transition-colors uppercase select-none">{item.code}</span>
-                      {/* Placeholder for actual image */}
-                      {/* <Image src={`/images/benefits/${item.code}.png`} fill className="object-cover" /> */}
+                  <motion.div 
+                    key={idx} 
+                    whileHover={{ y: -10 }}
+                    className="flex flex-col items-center bg-white rounded-[40px] p-10 md:p-12 shadow-[0_20px_50px_rgba(255,255,255,0.05)] border border-white/10 group transition-all duration-500"
+                  >
+                    {/* Square Image Slot */}
+                    <div className="w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 flex items-center justify-center mb-8 relative group-hover:scale-110 transition-all duration-700">
+                      {item.img ? (
+                        <Image 
+                          src={item.img} 
+                          alt={item.code} 
+                          fill 
+                          className="object-contain" 
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-slate-100 flex items-center justify-center rounded-2xl">
+                          <span className="text-slate-300 font-black text-xl tracking-widest uppercase select-none">{item.code}</span>
+                        </div>
+                      )}
                     </div>
 
                     {/* Title Text */}
                     <div className="text-center">
-                      <h4 className="text-base md:text-lg font-black text-white tracking-tight leading-snug group-hover:text-primary transition-colors">
+                      <h4 className="text-lg md:text-xl font-black text-[#1A1D25] tracking-tight leading-snug group-hover:text-primary transition-colors">
                         {item.title}
                       </h4>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
