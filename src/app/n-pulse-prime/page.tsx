@@ -267,10 +267,12 @@ export default function NPulsePage() {
                                     viewport={{ once: true }}
                                     className="md:col-span-5"
                                 >
-                                    <div className="aspect-[1.5/1] glass-panel border-white/10 bg-black/40 relative overflow-hidden group hover:border-primary/50 transition-all duration-500 flex flex-col items-center justify-center p-2">
-                                        <div className="absolute top-4 left-4 text-[10px] font-black text-primary/40 uppercase tracking-widest leading-none">GUI 01</div>
-                                        <div className="text-white/20 font-black text-xl uppercase tracking-tighter group-hover:text-primary/40 transition-colors select-none">CW Mode Image</div>
-                                        {/* <Image src="/images/npulse_prime/gui/cw.png" fill className="object-contain" /> */}
+                                    <div className="aspect-[1.5/1] relative overflow-hidden group flex flex-col items-center justify-center p-2">
+                                        <img 
+                                            src="/images/npulse_prime/cw.png" 
+                                            alt="CW Mode" 
+                                            className="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700" 
+                                        />
                                     </div>
                                 </motion.div>
 
@@ -293,10 +295,12 @@ export default function NPulsePage() {
                                     viewport={{ once: true }}
                                     className="md:col-span-5"
                                 >
-                                    <div className="aspect-[1.5/1] glass-panel border-white/10 bg-black/40 relative overflow-hidden group hover:border-primary/50 transition-all duration-500 flex flex-col items-center justify-center p-2">
-                                        <div className="absolute top-4 right-4 text-[10px] font-black text-primary/40 uppercase tracking-widest leading-none">GUI 02</div>
-                                        <div className="text-white/20 font-black text-xl uppercase tracking-tighter group-hover:text-primary/40 transition-colors select-none">ULTRA Mode Image</div>
-                                        {/* <Image src="/images/npulse_prime/gui/ultra.png" fill className="object-contain" /> */}
+                                    <div className="aspect-[1.5/1] relative overflow-hidden group flex flex-col items-center justify-center p-2">
+                                        <img 
+                                            src="/images/npulse_prime/ultra.png" 
+                                            alt="ULTRA Mode" 
+                                            className="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700" 
+                                        />
                                     </div>
                                 </motion.div>
                             </div>
@@ -313,10 +317,12 @@ export default function NPulsePage() {
                                     viewport={{ once: true }}
                                     className="md:col-span-5"
                                 >
-                                    <div className="aspect-[1.5/1] glass-panel border-white/10 bg-black/40 relative overflow-hidden group hover:border-primary/50 transition-all duration-500 flex flex-col items-center justify-center p-2">
-                                        <div className="absolute top-4 left-4 text-[10px] font-black text-primary/40 uppercase tracking-widest leading-none">GUI 03</div>
-                                        <div className="text-white/20 font-black text-xl uppercase tracking-tighter group-hover:text-primary/40 transition-colors select-none">Single Mode Image</div>
-                                        {/* <Image src="/images/npulse_prime/gui/single.png" fill className="object-contain" /> */}
+                                    <div className="aspect-[1.5/1] relative overflow-hidden group flex flex-col items-center justify-center p-2">
+                                        <img 
+                                            src="/images/npulse_prime/pin1.png" 
+                                            alt="Single Mode" 
+                                            className="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700" 
+                                        />
                                     </div>
                                 </motion.div>
 
@@ -339,10 +345,12 @@ export default function NPulsePage() {
                                     viewport={{ once: true }}
                                     className="md:col-span-5"
                                 >
-                                    <div className="aspect-[1.5/1] glass-panel border-white/10 bg-black/40 relative overflow-hidden group hover:border-primary/50 transition-all duration-500 flex flex-col items-center justify-center p-2">
-                                        <div className="absolute top-4 right-4 text-[10px] font-black text-primary/40 uppercase tracking-widest leading-none">GUI 04</div>
-                                        <div className="text-white/20 font-black text-xl uppercase tracking-tighter group-hover:text-primary/40 transition-colors select-none">Repeat Mode Image</div>
-                                        {/* <Image src="/images/npulse_prime/gui/repeat.png" fill className="object-contain" /> */}
+                                    <div className="aspect-[1.5/1] relative overflow-hidden group flex flex-col items-center justify-center p-2">
+                                        <img 
+                                            src="/images/npulse_prime/pin2.png" 
+                                            alt="Repeat Mode" 
+                                            className="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700" 
+                                        />
                                     </div>
                                 </motion.div>
                             </div>
