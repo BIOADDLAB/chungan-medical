@@ -246,61 +246,136 @@ export default function NPulsePage() {
                         <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">
                             User Experience
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-8 uppercase leading-tight">
+                        <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6 uppercase leading-tight">
                             <span className="hero-title-main">SMART INTERFACE</span><br />
-                            <span className="hero-title-highlight text-primary">& INTUITIVE GUI</span>
+                            <span className="text-primary">& INTUITIVE GUI</span>
                         </h2>
-                        <div className="w-20 h-[2px] bg-primary mx-auto mb-10 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+                        <div className="w-20 h-[2px] bg-primary mx-auto mb-14" />
                     </motion.div>
 
+                               
                     {/* GUI Layout Grid */}
-                    <div className="space-y-24 max-w-5xl mx-auto">
+                    <div className="space-y-40 max-w-6xl mx-auto">
                         
                         {/* 1. COS Mode Row */}
                         <div className="relative">
-                            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                                {/* Left GUI Image Placeholder */}
+                            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative">
+                                
+                                {/* Background Accent Line */}
+                                <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent -translate-y-1/2 -z-10 hidden md:block" />
+
+                                {/* Left GUI: CW */}
                                 <motion.div 
-                                    initial={{ opacity: 0, x: -30 }}
+                                    initial={{ opacity: 0, x: -50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.8 }}
+                                    transition={{ duration: 1 }}
                                     viewport={{ once: true }}
-                                    className="md:col-span-5"
+                                    className="md:col-span-5 relative group"
                                 >
-                                    <div className="aspect-[1.5/1] relative overflow-hidden group flex flex-col items-center justify-center p-2">
+                                    {/* Tech Frame Decoration */}
+                                    <div className="absolute -inset-2 border border-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                                    <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-primary/50 z-20" />
+                                    <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-primary/50 z-20" />
+                                    
+                                    <div className="aspect-[1.5/1] relative overflow-hidden flex items-center justify-center bg-[#050810] border border-white/10 group-hover:border-primary/40 transition-all duration-700 shadow-2xl">
                                         <img 
                                             src="/images/npulse_prime/cw.png" 
                                             alt="CW Mode" 
-                                            className="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700" 
+                                            className="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-1000 ease-out brightness-110" 
                                         />
+                                        
+                                        {/* Scanning Effect (Framer Motion) */}
+                                        <motion.div 
+                                            className="absolute left-0 w-full h-1/3 bg-gradient-to-b from-transparent via-primary/10 to-transparent z-20 pointer-events-none"
+                                            animate={{ top: ['-100%', '100%'] }}
+                                            transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
+                                        />
+                                        
+                                        {/* Corner Accents */}
+                                        <div className="absolute top-4 left-4 w-10 h-[1px] bg-primary/30 z-20" />
+                                        <div className="absolute top-4 left-4 w-[1px] h-10 bg-primary/30 z-20" />
+                                    </div>
+                                    
+                                    <div className="mt-6 flex flex-col items-start">
+                                        <span className="text-[10px] font-black text-primary/60 tracking-[0.4em] uppercase mb-1">Module Alpha 01</span>
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                                            <h4 className="text-white font-black text-lg tracking-widest uppercase">CW CONTROL GUI</h4>
+                                        </div>
                                     </div>
                                 </motion.div>
 
-                                {/* Center Circle Label */}
-                                <div className="md:col-span-2 flex justify-center py-8 md:py-0 relative z-20">
-                                    <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border border-primary/30 bg-[#020408] flex flex-col items-center justify-center text-center p-4 shadow-[0_0_30px_rgba(0,183,241,0.1)] relative group">
-                                        <div className="absolute inset-0 rounded-full border border-primary animate-pulse opacity-10 group-hover:opacity-30 transition-opacity" />
-                                        <span className="text-primary font-black text-lg md:text-xl leading-tight mb-1">COS <span className="font-light">Mode</span></span>
-                                        <span className="text-slate-400 text-[10px] md:text-xs font-medium uppercase tracking-widest leading-none">(CW, Ultra)</span>
+                                {/* Center: HUD Orbit */}
+                                <div className="md:col-span-2 flex justify-center py-16 md:py-0 relative z-30">
+                                    <div className="relative">
+                                        {/* Animated HUD Rings */}
+                                        <motion.div 
+                                            animate={{ rotate: 360 }}
+                                            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                                            className="absolute inset-[-25px] border border-dashed border-primary/20 rounded-full" 
+                                        />
+                                        <motion.div 
+                                            animate={{ rotate: -360 }}
+                                            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                                            className="absolute inset-[-12px] border border-primary/30 rounded-full" 
+                                        />
+                                        <div className="absolute inset-[-8px] border border-primary/10 rounded-full animate-pulse" />
+                                        
+                                        <div className="w-40 h-40 md:w-48 md:h-48 rounded-full border-2 border-primary/60 bg-[#020408] flex flex-col items-center justify-center text-center p-6 shadow-[0_0_60px_rgba(0,183,241,0.25)] relative overflow-hidden group">
+                                            {/* HUD Scanning Light */}
+                                            <motion.div 
+                                                animate={{ top: ['-100%', '200%'] }}
+                                                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                                                className="absolute left-0 w-full h-full bg-gradient-to-b from-transparent via-primary/20 to-transparent -z-10"
+                                            />
+                                            
+                                            <span className="text-primary font-black text-2xl md:text-3xl leading-none mb-2 tracking-tighter uppercase text-glow-primary italic">
+                                                COS <span className="font-light text-slate-400 block text-[10px] mt-1 tracking-[0.4em] not-italic">MODE</span>
+                                            </span>
+                                            <div className="w-10 h-[2px] bg-primary/40 my-3" />
+                                            <span className="text-slate-400 text-[9px] font-black uppercase tracking-[0.3em] leading-none">CW · ULTRA</span>
+                                        </div>
                                     </div>
-                                    {/* Connecting Lines (Desktop only) */}
-                                    <div className="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-primary/20 via-transparent to-primary/20 -translate-y-1/2 -z-10" />
                                 </div>
 
-                                {/* Right GUI Image Placeholder */}
+                                {/* Right GUI: ULTRA */}
                                 <motion.div 
-                                    initial={{ opacity: 0, x: 30 }}
+                                    initial={{ opacity: 0, x: 50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.8 }}
+                                    transition={{ duration: 1 }}
                                     viewport={{ once: true }}
-                                    className="md:col-span-5"
+                                    className="md:col-span-5 relative group"
                                 >
-                                    <div className="aspect-[1.5/1] relative overflow-hidden group flex flex-col items-center justify-center p-2">
+                                    {/* Tech Frame Decoration */}
+                                    <div className="absolute -inset-2 border border-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                                    <div className="absolute -top-1 -right-1 w-6 h-6 border-t-2 border-r-2 border-primary/50 z-20" />
+                                    <div className="absolute -bottom-1 -left-1 w-6 h-6 border-b-2 border-l-2 border-primary/50 z-20" />
+
+                                    <div className="aspect-[1.5/1] relative overflow-hidden flex items-center justify-center bg-[#050810] border border-white/10 group-hover:border-primary/40 transition-all duration-700 shadow-2xl">
                                         <img 
                                             src="/images/npulse_prime/ultra.png" 
                                             alt="ULTRA Mode" 
-                                            className="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700" 
+                                            className="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-1000 ease-out brightness-110" 
                                         />
+                                        
+                                        {/* Scanning Effect (Framer Motion) */}
+                                        <motion.div 
+                                            className="absolute left-0 w-full h-1/3 bg-gradient-to-b from-transparent via-primary/10 to-transparent z-20 pointer-events-none"
+                                            animate={{ top: ['-100%', '100%'] }}
+                                            transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
+                                        />
+
+                                        {/* Corner Accents */}
+                                        <div className="absolute top-4 right-4 w-10 h-[1px] bg-primary/30 z-20" />
+                                        <div className="absolute top-4 right-4 w-[1px] h-10 bg-primary/30 z-20" />
+                                    </div>
+
+                                    <div className="mt-6 flex flex-col items-end text-right">
+                                        <span className="text-[10px] font-black text-primary/60 tracking-[0.4em] uppercase mb-1">Module Alpha 02</span>
+                                        <div className="flex items-center gap-3">
+                                            <h4 className="text-white font-black text-lg tracking-widest uppercase">ULTRA CONTROL GUI</h4>
+                                            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                                        </div>
                                     </div>
                                 </motion.div>
                             </div>
@@ -308,49 +383,123 @@ export default function NPulsePage() {
 
                         {/* 2. PIN Mode Row */}
                         <div className="relative">
-                            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                                {/* Left GUI Image Placeholder */}
+                            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative">
+                                
+                                {/* Background Accent Line */}
+                                <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent -translate-y-1/2 -z-10 hidden md:block" />
+
+                                {/* Left GUI: SINGLE */}
                                 <motion.div 
-                                    initial={{ opacity: 0, x: -30 }}
+                                    initial={{ opacity: 0, x: -50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.8 }}
+                                    transition={{ duration: 1, delay: 0.2 }}
                                     viewport={{ once: true }}
-                                    className="md:col-span-5"
+                                    className="md:col-span-5 relative group"
                                 >
-                                    <div className="aspect-[1.5/1] relative overflow-hidden group flex flex-col items-center justify-center p-2">
+                                    {/* Tech Frame Decoration */}
+                                    <div className="absolute -inset-2 border border-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                                    <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-primary/50 z-20" />
+                                    <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-primary/50 z-20" />
+
+                                    <div className="aspect-[1.5/1] relative overflow-hidden flex items-center justify-center bg-[#050810] border border-white/10 group-hover:border-primary/40 transition-all duration-700 shadow-2xl">
                                         <img 
                                             src="/images/npulse_prime/pin1.png" 
                                             alt="Single Mode" 
-                                            className="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700" 
+                                            className="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-1000 ease-out brightness-110" 
                                         />
+                                        
+                                        {/* Scanning Effect (Framer Motion) */}
+                                        <motion.div 
+                                            className="absolute left-0 w-full h-1/3 bg-gradient-to-b from-transparent via-primary/10 to-transparent z-20 pointer-events-none"
+                                            animate={{ top: ['-100%', '100%'] }}
+                                            transition={{ repeat: Infinity, duration: 3.5, ease: "linear" }}
+                                        />
+
+                                        {/* Corner Accents */}
+                                        <div className="absolute top-4 left-4 w-10 h-[1px] bg-primary/30 z-20" />
+                                        <div className="absolute top-4 left-4 w-[1px] h-10 bg-primary/30 z-20" />
+                                    </div>
+
+                                    <div className="mt-6 flex flex-col items-start">
+                                        <span className="text-[10px] font-black text-primary/60 tracking-[0.4em] uppercase mb-1">Module Beta 01</span>
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                                            <h4 className="text-white font-black text-lg tracking-widest uppercase">SINGLE PULSE GUI</h4>
+                                        </div>
                                     </div>
                                 </motion.div>
 
-                                {/* Center Circle Label */}
-                                <div className="md:col-span-2 flex justify-center py-8 md:py-0 relative z-20">
-                                    <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border border-primary/30 bg-[#020408] flex flex-col items-center justify-center text-center p-4 shadow-[0_0_30px_rgba(0,183,241,0.1)] relative group">
-                                        <div className="absolute inset-0 rounded-full border border-primary animate-pulse opacity-10 group-hover:opacity-30 transition-opacity" />
-                                        <span className="text-primary font-black text-lg md:text-xl leading-tight mb-1">PIN <span className="font-light">Mode</span></span>
-                                        <span className="text-slate-400 text-[10px] md:text-xs font-medium uppercase tracking-widest leading-none">(Single, Repeat)</span>
+                                {/* Center: HUD Orbit */}
+                                <div className="md:col-span-2 flex justify-center py-16 md:py-0 relative z-30">
+                                    <div className="relative">
+                                        {/* Animated HUD Rings */}
+                                        <motion.div 
+                                            animate={{ rotate: 360 }}
+                                            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                                            className="absolute inset-[-25px] border border-dashed border-primary/20 rounded-full" 
+                                        />
+                                        <motion.div 
+                                            animate={{ rotate: -360 }}
+                                            transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                                            className="absolute inset-[-12px] border border-primary/30 rounded-full" 
+                                        />
+                                        <div className="absolute inset-[-8px] border border-primary/10 rounded-full animate-pulse" />
+
+                                        <div className="w-40 h-40 md:w-48 md:h-48 rounded-full border-2 border-primary/60 bg-[#020408] flex flex-col items-center justify-center text-center p-6 shadow-[0_0_60px_rgba(0,183,241,0.25)] relative overflow-hidden group">
+                                            {/* HUD Scanning Light */}
+                                            <motion.div 
+                                                animate={{ top: ['-100%', '200%'] }}
+                                                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                                                className="absolute left-0 w-full h-full bg-gradient-to-b from-transparent via-primary/20 to-transparent -z-10"
+                                            />
+
+                                            <span className="text-primary font-black text-2xl md:text-3xl leading-none mb-2 tracking-tighter uppercase text-glow-primary italic">
+                                                PIN <span className="font-light text-slate-400 block text-[10px] mt-1 tracking-[0.4em] not-italic">MODE</span>
+                                            </span>
+                                            <div className="w-10 h-[2px] bg-primary/40 my-3" />
+                                            <span className="text-slate-400 text-[9px] font-black uppercase tracking-[0.3em] leading-none">SINGLE · REPEAT</span>
+                                        </div>
                                     </div>
-                                    {/* Connecting Lines (Desktop only) */}
-                                    <div className="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-primary/20 via-transparent to-primary/20 -translate-y-1/2 -z-10" />
                                 </div>
 
-                                {/* Right GUI Image Placeholder */}
+                                {/* Right GUI: REPEAT */}
                                 <motion.div 
-                                    initial={{ opacity: 0, x: 30 }}
+                                    initial={{ opacity: 0, x: 50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.8 }}
+                                    transition={{ duration: 1, delay: 0.2 }}
                                     viewport={{ once: true }}
-                                    className="md:col-span-5"
+                                    className="md:col-span-5 relative group"
                                 >
-                                    <div className="aspect-[1.5/1] relative overflow-hidden group flex flex-col items-center justify-center p-2">
+                                    {/* Tech Frame Decoration */}
+                                    <div className="absolute -inset-2 border border-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                                    <div className="absolute -top-1 -right-1 w-6 h-6 border-t-2 border-r-2 border-primary/50 z-20" />
+                                    <div className="absolute -bottom-1 -left-1 w-6 h-6 border-b-2 border-l-2 border-primary/50 z-20" />
+
+                                    <div className="aspect-[1.5/1] relative overflow-hidden flex items-center justify-center bg-[#050810] border border-white/10 group-hover:border-primary/40 transition-all duration-700 shadow-2xl">
                                         <img 
                                             src="/images/npulse_prime/pin2.png" 
                                             alt="Repeat Mode" 
-                                            className="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700" 
+                                            className="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-1000 ease-out brightness-110" 
                                         />
+                                        
+                                        {/* Scanning Effect (Framer Motion) */}
+                                        <motion.div 
+                                            className="absolute left-0 w-full h-1/3 bg-gradient-to-b from-transparent via-primary/10 to-transparent z-20 pointer-events-none"
+                                            animate={{ top: ['-100%', '100%'] }}
+                                            transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
+                                        />
+
+                                        {/* Corner Accents */}
+                                        <div className="absolute top-4 right-4 w-10 h-[1px] bg-primary/30 z-20" />
+                                        <div className="absolute top-4 right-4 w-[1px] h-10 bg-primary/30 z-20" />
+                                    </div>
+
+                                    <div className="mt-6 flex flex-col items-end text-right">
+                                        <span className="text-[9px] font-black text-primary/60 tracking-[0.4em] uppercase mb-1">Module Beta 02</span>
+                                        <div className="flex items-center gap-3">
+                                            <h4 className="text-white font-black text-lg tracking-widest uppercase">REPEAT PULSE GUI</h4>
+                                            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                                        </div>
                                     </div>
                                 </motion.div>
                             </div>
