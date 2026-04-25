@@ -147,9 +147,9 @@ export default function NPulsePage() {
 
                 <div className="max-w-screen-xl mx-auto px-6 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-center">
-                        
+
                         {/* 좌측: 제품 정보 (6 Columns) */}
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1, ease: "easeOut" }}
@@ -167,7 +167,7 @@ export default function NPulsePage() {
                                     <span className="hero-title-main block mb-2">N - PULSE</span>
                                     <span className="hero-title-highlight text-primary">PRIME</span>
                                 </h2>
-                                
+
                                 {/* 발광 막대 */}
                                 <div className="w-20 h-[2px] bg-primary shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
                             </div>
@@ -179,7 +179,7 @@ export default function NPulsePage() {
                             </p>
 
                             <p className="text-slate-400 text-base md:text-lg leading-relaxed max-w-lg break-keep font-medium opacity-80">
-                                N-PULSE PRIME은 기존 시리즈의 성능을 뛰어넘는 압도적인 Peak Power와 
+                                N-PULSE PRIME은 기존 시리즈의 성능을 뛰어넘는 압도적인 Peak Power와
                                 정교한 빔 컨트롤을 통해 시술의 효율성과 환자의 만족도를 동시에 충족시킵니다.
                             </p>
 
@@ -197,7 +197,7 @@ export default function NPulsePage() {
                         </motion.div>
 
                         {/* 우측: 제품 이미지 (6 Columns) */}
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, scale: 0.9, x: 50 }}
                             whileInView={{ opacity: 1, scale: 1, x: 0 }}
                             transition={{ duration: 1.2, ease: "easeOut" }}
@@ -207,12 +207,12 @@ export default function NPulsePage() {
                             <div className="relative group">
                                 {/* 후면 글로우 오라 */}
                                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/10 blur-[120px] rounded-full scale-150 opacity-40 group-hover:opacity-70 transition-opacity duration-1000" />
-                                
+
                                 {/* 제품 이미지: prime.png */}
                                 {/* 팁: 아래 className의 max-w-[440px] 숫자를 조절하면 이미지 크기를 변경할 수 있습니다. */}
-                                <img 
-                                    src="/images/npulse_prime/prime.png" 
-                                    alt="N-PULSE PRIME" 
+                                <img
+                                    src="/images/npulse_prime/prime.png"
+                                    alt="N-PULSE PRIME"
                                     className="w-full max-w-[340px] md:max-w-[440px] h-auto relative z-10 drop-shadow-[0_40px_80px_rgba(0,0,0,0.8)] group-hover:scale-105 transition-transform duration-1000 ease-out brightness-110 contrast-105"
                                 />
 
@@ -253,19 +253,19 @@ export default function NPulsePage() {
                         <div className="w-20 h-[2px] bg-primary mx-auto mb-14" />
                     </motion.div>
 
-                               
+
                     {/* GUI Layout Grid */}
                     <div className="space-y-40 max-w-6xl mx-auto">
-                        
+
                         {/* 1. COS Mode Row */}
                         <div className="relative">
                             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative">
-                                
+
                                 {/* Background Accent Line */}
                                 <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent -translate-y-1/2 -z-10 hidden md:block" />
 
                                 {/* Left GUI: CW */}
-                                <motion.div 
+                                <motion.div
                                     initial={{ opacity: 0, x: -50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 1 }}
@@ -276,26 +276,26 @@ export default function NPulsePage() {
                                     <div className="absolute -inset-2 border border-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
                                     <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-primary/50 z-20" />
                                     <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-primary/50 z-20" />
-                                    
+
                                     <div className="aspect-[1.5/1] relative overflow-hidden flex items-center justify-center bg-[#050810] border border-white/10 group-hover:border-primary/40 transition-all duration-700 shadow-2xl">
-                                        <img 
-                                            src="/images/npulse_prime/cw.png" 
-                                            alt="CW Mode" 
-                                            className="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-1000 ease-out brightness-110" 
+                                        <img
+                                            src="/images/npulse_prime/cw.png"
+                                            alt="CW Mode"
+                                            className="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-1000 ease-out brightness-110"
                                         />
-                                        
+
                                         {/* Scanning Effect (Framer Motion) */}
-                                        <motion.div 
+                                        <motion.div
                                             className="absolute left-0 w-full h-1/3 bg-gradient-to-b from-transparent via-primary/10 to-transparent z-20 pointer-events-none"
                                             animate={{ top: ['-100%', '100%'] }}
                                             transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
                                         />
-                                        
+
                                         {/* Corner Accents */}
                                         <div className="absolute top-4 left-4 w-10 h-[1px] bg-primary/30 z-20" />
                                         <div className="absolute top-4 left-4 w-[1px] h-10 bg-primary/30 z-20" />
                                     </div>
-                                    
+
                                     <div className="mt-6 flex flex-col items-start">
                                         <span className="text-[10px] font-black text-primary/60 tracking-[0.4em] uppercase mb-1">Module Alpha 01</span>
                                         <div className="flex items-center gap-3">
@@ -309,37 +309,38 @@ export default function NPulsePage() {
                                 <div className="md:col-span-2 flex justify-center py-16 md:py-0 relative z-30">
                                     <div className="relative">
                                         {/* Animated HUD Rings */}
-                                        <motion.div 
+                                        <motion.div
                                             animate={{ rotate: 360 }}
                                             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                                            className="absolute inset-[-25px] border border-dashed border-primary/20 rounded-full" 
+                                            className="absolute inset-[-25px] border border-dashed border-primary/20 rounded-full"
                                         />
-                                        <motion.div 
+                                        <motion.div
                                             animate={{ rotate: -360 }}
                                             transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                                            className="absolute inset-[-12px] border border-primary/30 rounded-full" 
+                                            className="absolute inset-[-12px] border border-primary/30 rounded-full"
                                         />
                                         <div className="absolute inset-[-8px] border border-primary/10 rounded-full animate-pulse" />
-                                        
+
                                         <div className="w-40 h-40 md:w-48 md:h-48 rounded-full border-2 border-primary/60 bg-[#020408] flex flex-col items-center justify-center text-center p-6 shadow-[0_0_60px_rgba(0,183,241,0.25)] relative overflow-hidden group">
                                             {/* HUD Scanning Light */}
-                                            <motion.div 
+                                            <motion.div
                                                 animate={{ top: ['-100%', '200%'] }}
                                                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                                                 className="absolute left-0 w-full h-full bg-gradient-to-b from-transparent via-primary/20 to-transparent -z-10"
                                             />
-                                            
-                                            <span className="text-primary font-black text-2xl md:text-3xl leading-none mb-2 tracking-tighter uppercase text-glow-primary italic">
-                                                COS <span className="font-light text-slate-400 block text-[10px] mt-1 tracking-[0.4em] not-italic">MODE</span>
+
+                                            <span className="text-primary font-black text-2xl md:text-3xl leading-none mb-1 tracking-tighter uppercase text-glow-primary">
+                                                COS 
+                                                <span className="font-light text-slate-400 block text-[10px] mt-2 tracking-[0.4em] indent-[0.4em]">MODE</span>
                                             </span>
-                                            <div className="w-10 h-[2px] bg-primary/40 my-3" />
-                                            <span className="text-slate-400 text-[9px] font-black uppercase tracking-[0.3em] leading-none">CW · ULTRA</span>
+                                            <div className="w-10 h-[1px] bg-primary/30 my-4" />
+                                            <span className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em] indent-[0.3em] leading-none opacity-80">CW · ULTRA</span>
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* Right GUI: ULTRA */}
-                                <motion.div 
+                                <motion.div
                                     initial={{ opacity: 0, x: 50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 1 }}
@@ -352,14 +353,14 @@ export default function NPulsePage() {
                                     <div className="absolute -bottom-1 -left-1 w-6 h-6 border-b-2 border-l-2 border-primary/50 z-20" />
 
                                     <div className="aspect-[1.5/1] relative overflow-hidden flex items-center justify-center bg-[#050810] border border-white/10 group-hover:border-primary/40 transition-all duration-700 shadow-2xl">
-                                        <img 
-                                            src="/images/npulse_prime/ultra.png" 
-                                            alt="ULTRA Mode" 
-                                            className="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-1000 ease-out brightness-110" 
+                                        <img
+                                            src="/images/npulse_prime/ultra.png"
+                                            alt="ULTRA Mode"
+                                            className="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-1000 ease-out brightness-110"
                                         />
-                                        
+
                                         {/* Scanning Effect (Framer Motion) */}
-                                        <motion.div 
+                                        <motion.div
                                             className="absolute left-0 w-full h-1/3 bg-gradient-to-b from-transparent via-primary/10 to-transparent z-20 pointer-events-none"
                                             animate={{ top: ['-100%', '100%'] }}
                                             transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
@@ -384,12 +385,12 @@ export default function NPulsePage() {
                         {/* 2. PIN Mode Row */}
                         <div className="relative">
                             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative">
-                                
+
                                 {/* Background Accent Line */}
                                 <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent -translate-y-1/2 -z-10 hidden md:block" />
 
                                 {/* Left GUI: SINGLE */}
-                                <motion.div 
+                                <motion.div
                                     initial={{ opacity: 0, x: -50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 1, delay: 0.2 }}
@@ -402,14 +403,14 @@ export default function NPulsePage() {
                                     <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-primary/50 z-20" />
 
                                     <div className="aspect-[1.5/1] relative overflow-hidden flex items-center justify-center bg-[#050810] border border-white/10 group-hover:border-primary/40 transition-all duration-700 shadow-2xl">
-                                        <img 
-                                            src="/images/npulse_prime/pin1.png" 
-                                            alt="Single Mode" 
-                                            className="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-1000 ease-out brightness-110" 
+                                        <img
+                                            src="/images/npulse_prime/pin1.png"
+                                            alt="Single Mode"
+                                            className="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-1000 ease-out brightness-110"
                                         />
-                                        
+
                                         {/* Scanning Effect (Framer Motion) */}
-                                        <motion.div 
+                                        <motion.div
                                             className="absolute left-0 w-full h-1/3 bg-gradient-to-b from-transparent via-primary/10 to-transparent z-20 pointer-events-none"
                                             animate={{ top: ['-100%', '100%'] }}
                                             transition={{ repeat: Infinity, duration: 3.5, ease: "linear" }}
@@ -433,37 +434,38 @@ export default function NPulsePage() {
                                 <div className="md:col-span-2 flex justify-center py-16 md:py-0 relative z-30">
                                     <div className="relative">
                                         {/* Animated HUD Rings */}
-                                        <motion.div 
+                                        <motion.div
                                             animate={{ rotate: 360 }}
                                             transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                                            className="absolute inset-[-25px] border border-dashed border-primary/20 rounded-full" 
+                                            className="absolute inset-[-25px] border border-dashed border-primary/20 rounded-full"
                                         />
-                                        <motion.div 
+                                        <motion.div
                                             animate={{ rotate: -360 }}
                                             transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-                                            className="absolute inset-[-12px] border border-primary/30 rounded-full" 
+                                            className="absolute inset-[-12px] border border-primary/30 rounded-full"
                                         />
                                         <div className="absolute inset-[-8px] border border-primary/10 rounded-full animate-pulse" />
 
                                         <div className="w-40 h-40 md:w-48 md:h-48 rounded-full border-2 border-primary/60 bg-[#020408] flex flex-col items-center justify-center text-center p-6 shadow-[0_0_60px_rgba(0,183,241,0.25)] relative overflow-hidden group">
                                             {/* HUD Scanning Light */}
-                                            <motion.div 
+                                            <motion.div
                                                 animate={{ top: ['-100%', '200%'] }}
                                                 transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
                                                 className="absolute left-0 w-full h-full bg-gradient-to-b from-transparent via-primary/20 to-transparent -z-10"
                                             />
 
-                                            <span className="text-primary font-black text-2xl md:text-3xl leading-none mb-2 tracking-tighter uppercase text-glow-primary italic">
-                                                PIN <span className="font-light text-slate-400 block text-[10px] mt-1 tracking-[0.4em] not-italic">MODE</span>
+                                            <span className="text-primary font-black text-2xl md:text-3xl leading-none mb-1 tracking-tighter uppercase text-glow-primary">
+                                                PIN 
+                                                <span className="font-light text-slate-400 block text-[10px] mt-2 tracking-[0.4em] indent-[0.4em]">MODE</span>
                                             </span>
-                                            <div className="w-10 h-[2px] bg-primary/40 my-3" />
-                                            <span className="text-slate-400 text-[9px] font-black uppercase tracking-[0.3em] leading-none">SINGLE · REPEAT</span>
+                                            <div className="w-10 h-[1px] bg-primary/30 my-4" />
+                                            <span className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em] indent-[0.3em] leading-none opacity-80">SINGLE · REPEAT</span>
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* Right GUI: REPEAT */}
-                                <motion.div 
+                                <motion.div
                                     initial={{ opacity: 0, x: 50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 1, delay: 0.2 }}
@@ -476,14 +478,14 @@ export default function NPulsePage() {
                                     <div className="absolute -bottom-1 -left-1 w-6 h-6 border-b-2 border-l-2 border-primary/50 z-20" />
 
                                     <div className="aspect-[1.5/1] relative overflow-hidden flex items-center justify-center bg-[#050810] border border-white/10 group-hover:border-primary/40 transition-all duration-700 shadow-2xl">
-                                        <img 
-                                            src="/images/npulse_prime/pin2.png" 
-                                            alt="Repeat Mode" 
-                                            className="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-1000 ease-out brightness-110" 
+                                        <img
+                                            src="/images/npulse_prime/pin2.png"
+                                            alt="Repeat Mode"
+                                            className="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-1000 ease-out brightness-110"
                                         />
-                                        
+
                                         {/* Scanning Effect (Framer Motion) */}
-                                        <motion.div 
+                                        <motion.div
                                             className="absolute left-0 w-full h-1/3 bg-gradient-to-b from-transparent via-primary/10 to-transparent z-20 pointer-events-none"
                                             animate={{ top: ['-100%', '100%'] }}
                                             transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
@@ -519,7 +521,7 @@ export default function NPulsePage() {
                                     { size: '50 mm', label: 'Precise Targeting' },
                                     { size: '100 mm', label: 'Deep Reach' }
                                 ].map((item, idx) => (
-                                    <motion.div 
+                                    <motion.div
                                         key={idx}
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
@@ -532,7 +534,7 @@ export default function NPulsePage() {
                                             {/* Background Circle */}
                                             <div className="absolute inset-0 rounded-full bg-white opacity-[0.03] group-hover:opacity-[0.07] transition-opacity duration-500" />
                                             <div className="absolute inset-4 rounded-full border border-white/5 group-hover:border-primary/20 transition-all duration-500" />
-                                            
+
                                             {/* Handpiece Image Placeholder (Horizontal) */}
                                             <div className="relative w-[120%] h-24 flex items-center justify-center z-10">
                                                 <div className="w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent flex items-center justify-center overflow-hidden border-y border-white/5 group-hover:border-primary/20 transition-all duration-500">
@@ -562,7 +564,7 @@ export default function NPulsePage() {
                         {/* Features & Benefits (Attached below Handpieces) */}
                         <div className="mt-32 pt-24 border-t border-white/5">
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-                                
+
                                 {/* 주요 특징 (Key Features) */}
                                 <motion.div
                                     initial={{ opacity: 0, x: -30 }}
@@ -579,17 +581,17 @@ export default function NPulsePage() {
 
                                     <div className="space-y-6">
                                         {[
-                                            { 
-                                                title: '정교한 타겟 시술', 
-                                                desc: '주변 조직의 열 손상을 최소화하면서 타겟 부위만 아주 정교하게 깎아냅니다. 시술 후 흉터 걱정을 줄여줍니다.' 
+                                            {
+                                                title: '정교한 타겟 시술',
+                                                desc: '주변 조직의 열 손상을 최소화하면서 타겟 부위만 아주 정교하게 깎아냅니다. 시술 후 흉터 걱정을 줄여줍니다.'
                                             },
-                                            { 
-                                                title: '빠르고 균일한 결과', 
-                                                desc: '일정한 에너지를 조사하여 시술 시간이 짧고, 결과가 균일합니다.' 
+                                            {
+                                                title: '빠르고 균일한 결과',
+                                                desc: '일정한 에너지를 조사하여 시술 시간이 짧고, 결과가 균일합니다.'
                                             },
-                                            { 
-                                                title: '맞춤형 솔루션', 
-                                                desc: '점, 잡티 제거뿐만 아니라 흉터 복원, 미세 박피 등 목적에 맞는 맞춤형 시술이 가능합니다.' 
+                                            {
+                                                title: '맞춤형 솔루션',
+                                                desc: '점, 잡티 제거뿐만 아니라 흉터 복원, 미세 박피 등 목적에 맞는 맞춤형 시술이 가능합니다.'
                                             }
                                         ].map((item, idx) => (
                                             <div key={idx} className="glass-panel p-6 border-white/5 bg-white/[0.02] hover:border-primary/30 transition-all duration-500 group min-h-[140px] flex flex-col justify-center">
@@ -621,17 +623,17 @@ export default function NPulsePage() {
 
                                     <div className="space-y-6">
                                         {[
-                                            { 
-                                                title: '통증 및 부기 감소', 
-                                                desc: '열 전달 범위를 좁혀 시술 시 통증이 적고 회복이 빠릅니다.' 
+                                            {
+                                                title: '통증 및 부기 감소',
+                                                desc: '열 전달 범위를 좁혀 시술 시 통증이 적고 회복이 빠릅니다.'
                                             },
-                                            { 
-                                                title: '빠른 일상 복귀', 
-                                                desc: '주변 피부 손상이 적어 딱지가 생기는 기간이 단축됩니다.' 
+                                            {
+                                                title: '빠른 일상 복귀',
+                                                desc: '주변 피부 손상이 적어 딱지가 생기는 기간이 단축됩니다.'
                                             },
-                                            { 
-                                                title: '정밀한 시술 결과', 
-                                                desc: '아주 작은 점이나 깊은 흉터도 정밀하게 치료하여 만족도가 높습니다.' 
+                                            {
+                                                title: '정밀한 시술 결과',
+                                                desc: '아주 작은 점이나 깊은 흉터도 정밀하게 치료하여 만족도가 높습니다.'
                                             }
                                         ].map((item, idx) => (
                                             <div key={idx} className="glass-panel p-6 border-white/5 bg-white/[0.02] hover:border-primary/30 transition-all duration-500 group min-h-[140px] flex flex-col justify-center">
