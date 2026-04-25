@@ -508,53 +508,98 @@ export default function NPulsePage() {
                         </div>
 
                         {/* Handpiece Lineup (Attached below GUI) */}
-                        <div className="mt-32 pt-24 border-t border-white/5 max-w-4xl mx-auto">
-                            <div className="text-center mb-16">
-                                <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-white uppercase mb-4">
-                                    Precise <span className="text-primary">Handpieces</span>
-                                </h3>
-                                <div className="w-12 h-[1px] bg-primary/50 mx-auto shadow-[0_0_10px_rgba(0,183,241,0.5)]" />
-                            </div>
+                        <div className="mt-40 pt-32 border-t border-white/5 relative overflow-hidden">
+                            {/* Background Tech Grid for this section */}
+                            <div className="absolute inset-0 bg-tech-grid opacity-5 -z-10" />
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+                            <motion.div 
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8 }}
+                                viewport={{ once: true }}
+                                className="text-center mb-24"
+                            >
+                                <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">
+                                    Module Extension
+                                </div>
+                                <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6 uppercase leading-tight">
+                                    <span className="hero-title-main">PRECISE</span><br />
+                                    <span className="text-primary">HANDPIECE LINEUP</span>
+                                </h2>
+                                <div className="w-20 h-[2px] bg-primary mx-auto mb-14" />
+                            </motion.div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 max-w-5xl mx-auto px-6">
                                 {[
-                                    { size: '50 mm', label: 'Precise Targeting' },
-                                    { size: '100 mm', label: 'Deep Reach' }
+                                    { size: '50 mm', label: 'Precise Targeting', id: 'HP-ALPHA-01' },
+                                    { size: '100 mm', label: 'Deep Reach', id: 'HP-BETA-01' }
                                 ].map((item, idx) => (
                                     <motion.div
                                         key={idx}
-                                        initial={{ opacity: 0, y: 20 }}
+                                        initial={{ opacity: 0, y: 40 }}
                                         whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.8, delay: idx * 0.2 }}
+                                        transition={{ duration: 1, delay: idx * 0.2 }}
                                         viewport={{ once: true }}
-                                        className="group flex flex-col items-center"
+                                        className="group flex flex-col items-center relative"
                                     >
-                                        {/* Circle Container with Image Placeholder */}
-                                        <div className="relative w-64 h-64 md:w-72 md:h-72 flex items-center justify-center mb-8">
+                                        {/* Technical Label behind */}
+                                        <div className="absolute -top-10 text-[60px] font-black text-white/[0.02] tracking-tighter select-none pointer-events-none group-hover:text-primary/[0.05] transition-colors duration-700">
+                                            {item.size.split(' ')[0]}
+                                        </div>
+
+                                        {/* HUD Container */}
+                                        <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center mb-12">
+                                            {/* Rotating Rings */}
+                                            <motion.div 
+                                                animate={{ rotate: 360 }}
+                                                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                                                className="absolute inset-0 border border-dashed border-primary/20 rounded-full"
+                                            />
+                                            <motion.div 
+                                                animate={{ rotate: -360 }}
+                                                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                                                className="absolute inset-8 border border-primary/10 rounded-full"
+                                            />
+                                            
+                                            {/* Glow Aura */}
+                                            <div className="absolute inset-12 rounded-full bg-primary/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                                            
                                             {/* Background Circle */}
-                                            <div className="absolute inset-0 rounded-full bg-white opacity-[0.03] group-hover:opacity-[0.07] transition-opacity duration-500" />
-                                            <div className="absolute inset-4 rounded-full border border-white/5 group-hover:border-primary/20 transition-all duration-500" />
+                                            <div className="absolute inset-4 rounded-full bg-[#050810] border border-white/5 shadow-2xl group-hover:border-primary/30 transition-colors duration-500" />
 
                                             {/* Handpiece Image */}
                                             <div className="relative w-[130%] h-48 flex items-center justify-center z-10">
                                                 <img 
                                                     src={`/images/npulse_prime/${idx === 0 ? '주사1.png' : '주사2.png'}`}
                                                     alt={item.size}
-                                                    className="w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-700"
+                                                    className="w-full h-full object-contain relative z-20 group-hover:scale-110 group-hover:-rotate-2 transition-all duration-1000 ease-out"
                                                 />
-                                                {/* Subtle Glow */}
-                                                <div className="absolute inset-0 bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                                                
+                                                {/* Tech Scan Line */}
+                                                <motion.div 
+                                                    animate={{ left: ['-10%', '110%'] }}
+                                                    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                                                    className="absolute top-0 bottom-0 w-[1px] bg-primary/50 shadow-[0_0_15px_rgba(0,183,241,0.8)] z-30 opacity-0 group-hover:opacity-100 transition-opacity"
+                                                />
+                                            </div>
+
+                                            {/* ID Badge */}
+                                            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-[#020408] text-[8px] font-black tracking-[0.3em] rounded-full z-30 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+                                                {item.id}
                                             </div>
                                         </div>
 
-                                        {/* Label */}
+                                        {/* Info Block */}
                                         <div className="text-center">
-                                            <div className="text-white font-black text-3xl md:text-4xl tracking-tight mb-2 group-hover:text-primary transition-colors">
-                                                {item.size}
+                                            <div className="relative inline-block mb-3">
+                                                <h4 className="text-white font-black text-4xl md:text-5xl tracking-tighter group-hover:text-primary transition-colors duration-500">
+                                                    {item.size}
+                                                </h4>
+                                                <div className="absolute -right-4 -top-1 w-2 h-2 bg-primary rounded-full animate-pulse" />
                                             </div>
-                                            <div className="text-slate-500 text-xs md:text-sm font-bold tracking-widest uppercase leading-none">
+                                            <p className="text-slate-400 text-[10px] md:text-xs font-black uppercase tracking-[0.5em] indent-[0.5em] leading-none opacity-60 group-hover:opacity-100 transition-opacity">
                                                 {item.label}
-                                            </div>
+                                            </p>
                                         </div>
                                     </motion.div>
                                 ))}
