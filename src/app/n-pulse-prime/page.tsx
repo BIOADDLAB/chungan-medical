@@ -535,15 +535,15 @@ export default function NPulsePage() {
                                             <div className="absolute inset-0 rounded-full bg-white opacity-[0.03] group-hover:opacity-[0.07] transition-opacity duration-500" />
                                             <div className="absolute inset-4 rounded-full border border-white/5 group-hover:border-primary/20 transition-all duration-500" />
 
-                                            {/* Handpiece Image Placeholder (Horizontal) */}
-                                            <div className="relative w-[120%] h-24 flex items-center justify-center z-10">
-                                                <div className="w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent flex items-center justify-center overflow-hidden border-y border-white/5 group-hover:border-primary/20 transition-all duration-500">
-                                                    <span className="text-[10px] font-black text-white/20 uppercase tracking-[0.3em] group-hover:text-primary/40 transition-colors">
-                                                        Handpiece Image ({item.size})
-                                                    </span>
-                                                </div>
+                                            {/* Handpiece Image */}
+                                            <div className="relative w-[130%] h-48 flex items-center justify-center z-10">
+                                                <img 
+                                                    src={`/images/npulse_prime/${idx === 0 ? '주사1.png' : '주사2.png'}`}
+                                                    alt={item.size}
+                                                    className="w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-700"
+                                                />
                                                 {/* Subtle Glow */}
-                                                <div className="absolute inset-0 bg-primary/5 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                                                <div className="absolute inset-0 bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
                                             </div>
                                         </div>
 
