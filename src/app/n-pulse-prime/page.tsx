@@ -584,7 +584,7 @@ export default function NPulsePage() {
                                             </div>
 
                                             {/* ID Badge */}
-                                            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-[#020408] text-[8px] font-black tracking-[0.3em] rounded-full z-30 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+                                            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-[#020408] text-[8px] font-black tracking-[0.3em] indent-[0.3em] rounded-full z-30 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0 whitespace-nowrap shadow-[0_0_20px_rgba(0,183,241,0.4)]">
                                                 {item.id}
                                             </div>
                                         </div>
