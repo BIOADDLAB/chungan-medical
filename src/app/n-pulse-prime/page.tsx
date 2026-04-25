@@ -330,7 +330,7 @@ export default function NPulsePage() {
                                             />
 
                                             <span className="text-primary font-black text-2xl md:text-3xl leading-none mb-1 tracking-tighter uppercase text-glow-primary">
-                                                COS 
+                                                COS
                                                 <span className="font-light text-slate-400 block text-[10px] mt-2 tracking-[0.4em] indent-[0.4em]">MODE</span>
                                             </span>
                                             <div className="w-10 h-[1px] bg-primary/30 my-4" />
@@ -455,7 +455,7 @@ export default function NPulsePage() {
                                             />
 
                                             <span className="text-primary font-black text-2xl md:text-3xl leading-none mb-1 tracking-tighter uppercase text-glow-primary">
-                                                PIN 
+                                                PIN
                                                 <span className="font-light text-slate-400 block text-[10px] mt-2 tracking-[0.4em] indent-[0.4em]">MODE</span>
                                             </span>
                                             <div className="w-10 h-[1px] bg-primary/30 my-4" />
@@ -512,7 +512,7 @@ export default function NPulsePage() {
                             {/* Background Tech Grid for this section */}
                             <div className="absolute inset-0 bg-tech-grid opacity-5 -z-10" />
 
-                            <motion.div 
+                            <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8 }}
@@ -531,8 +531,8 @@ export default function NPulsePage() {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 max-w-5xl mx-auto px-6">
                                 {[
-                                    { size: '50 mm', label: 'Precise Targeting', id: 'HP-ALPHA-01' },
-                                    { size: '100 mm', label: 'Deep Reach', id: 'HP-BETA-01' }
+                                    { size: '50 mm', label: 'Precise Targeting', id: 'N-PULSE PRIME 50mm' },
+                                    { size: '100 mm', label: 'Deep Reach', id: 'N-PULSE PRIME 100mm' }
                                 ].map((item, idx) => (
                                     <motion.div
                                         key={idx}
@@ -550,33 +550,33 @@ export default function NPulsePage() {
                                         {/* HUD Container */}
                                         <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center mb-12">
                                             {/* Rotating Rings */}
-                                            <motion.div 
+                                            <motion.div
                                                 animate={{ rotate: 360 }}
                                                 transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                                                 className="absolute inset-0 border border-dashed border-primary/20 rounded-full"
                                             />
-                                            <motion.div 
+                                            <motion.div
                                                 animate={{ rotate: -360 }}
                                                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                                                 className="absolute inset-8 border border-primary/10 rounded-full"
                                             />
-                                            
+
                                             {/* Glow Aura */}
                                             <div className="absolute inset-12 rounded-full bg-primary/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                                            
+
                                             {/* Background Circle */}
                                             <div className="absolute inset-4 rounded-full bg-[#050810] border border-white/5 shadow-2xl group-hover:border-primary/30 transition-colors duration-500" />
 
                                             {/* Handpiece Image */}
                                             <div className="relative w-[130%] h-48 flex items-center justify-center z-10">
-                                                <img 
+                                                <img
                                                     src={`/images/npulse_prime/${idx === 0 ? '주사1.png' : '주사2.png'}`}
                                                     alt={item.size}
                                                     className="w-full h-full object-contain relative z-20 group-hover:scale-110 group-hover:-rotate-2 transition-all duration-1000 ease-out"
                                                 />
-                                                
+
                                                 {/* Tech Scan Line */}
-                                                <motion.div 
+                                                <motion.div
                                                     animate={{ left: ['-10%', '110%'] }}
                                                     transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
                                                     className="absolute top-0 bottom-0 w-[1px] bg-primary/50 shadow-[0_0_15px_rgba(0,183,241,0.8)] z-30 opacity-0 group-hover:opacity-100 transition-opacity"
