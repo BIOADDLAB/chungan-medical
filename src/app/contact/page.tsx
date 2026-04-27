@@ -71,12 +71,12 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section id="contact-form" className="pb-32 bg-white text-slate-900 leading-none">
+      <section id="contact-form" className="pt-24 md:pt-32 pb-32 bg-white text-slate-900 leading-none">
         <div className="max-w-[1000px] mx-auto px-6">
           <form onSubmit={handleSubmit} className="space-y-12 leading-none">
 
             {/* Form Header Info */}
-            <div className="flex justify-between items-end border-b border-sky-100 pb-4 mb-2">
+            <div className="flex justify-between items-end border-b border-sky-100 pb-4 mb-10 md:mb-14">
               <h2 className="text-xl md:text-2xl font-black tracking-tighter uppercase font-inter text-slate-900">Inquiry Details</h2>
               <span className="text-slate-500 text-[10px] font-bold tracking-widest uppercase">* Required Fields</span>
             </div>
@@ -156,13 +156,13 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="glass-panel border-slate-200 bg-white p-8 md:p-10 relative overflow-hidden"
+              className="border border-slate-200 bg-white p-8 md:p-10 relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-tech-dots opacity-10 mix-blend-multiply pointer-events-none" />
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-[50px] rounded-full pointer-events-none" />
+              <div className="absolute top-0 right-0 w-32 h-32 pointer-events-none" />
 
               <label className="block text-[14px] font-black text-primary mb-8 flex items-center gap-3 uppercase tracking-widest leading-none">
-                <span className="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_rgba(0,183,241,0.5)]"></span>
+                <span className="w-2 h-2 bg-primary rounded-full"></span>
                 관심 제품 (INTERESTED PRODUCTS)
               </label>
 
@@ -183,7 +183,7 @@ export default function ContactPage() {
                     <input type="checkbox" className="peer appearance-none w-5 h-5 border border-primary/40 rounded bg-primary/5 checked:bg-primary checked:border-primary transition-all cursor-pointer" />
                     <svg className="absolute w-3 h-3 text-white opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
-                  <span className="text-[13px] font-black text-primary drop-shadow-[0_0_5px_rgba(0,183,241,0.1)]">개원 문의</span>
+                  <span className="text-[13px] font-black text-primary">개원 문의</span>
                 </label>
               </div>
             </motion.div>
@@ -274,7 +274,7 @@ export default function ContactPage() {
             >
               <button
                 type="submit"
-                className="relative group bg-primary hover:bg-white text-white hover:text-primary text-[16px] md:text-[18px] font-black py-5 px-16 md:px-24 rounded-full shadow-[0_10px_30px_rgba(0,183,241,0.3)] hover:shadow-[0_10px_40px_rgba(0,183,241,0.4)] transition-all duration-500 transform hover:-translate-y-1 uppercase tracking-widest font-inter border-2 border-transparent hover:border-primary"
+                className="relative group bg-primary hover:bg-white text-white hover:text-primary text-[16px] md:text-[18px] font-black py-5 px-16 md:px-24 rounded-full shadow-sm transition-all duration-500 transform hover:-translate-y-1 uppercase tracking-widest font-inter border-2 border-transparent hover:border-primary"
               >
                 <span className="relative z-10 transition-colors duration-500">Send Message</span>
               </button>

@@ -69,7 +69,7 @@ export default function FutureVisionPage() {
       <section id="vision-content" className="relative py-28 bg-white overflow-hidden">
         {/* 배경 장식 */}
         <div className="absolute inset-0 bg-tech-dots opacity-10 mix-blend-multiply pointer-events-none" />
-        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -81,7 +81,7 @@ export default function FutureVisionPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="inline-block px-4 py-1.5 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-slate-50 shadow-sm leading-none">
+              <div className="inline-block px-4 py-1.5 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-slate-50 leading-none">
                 Next-Gen R&D
               </div>
               <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
@@ -108,22 +108,22 @@ export default function FutureVisionPage() {
               viewport={{ once: true }}
               className="relative group"
             >
-              <div className="relative glass-panel aspect-[4/3] overflow-hidden border border-slate-200 shadow-sm group-hover:border-primary/40 transition-all duration-1000">
+              <div className="relative aspect-[4/3] overflow-hidden border border-slate-200 bg-white transition-all duration-1000">
                 <img
                   src="/images/ai_medical_lab_vision.png"
                   alt="AI Medical Research Lab Vision"
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
                 {/* 오버레이 글로우 */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-transparent" />
                 <div className="absolute bottom-6 left-6 z-20">
-                  <span className="text-primary font-black text-xs tracking-widest uppercase bg-white/90 backdrop-blur-md px-3 py-1 border border-slate-200 shadow-sm">
+                  <span className="text-primary font-black text-xs tracking-widest uppercase bg-white/90 px-3 py-1 border border-slate-200">
                     Proposed R&D Center
                   </span>
                 </div>
               </div>
               {/* 이미지 하단 그림자/글로우 효과 */}
-              <div className="absolute -bottom-6 inset-x-10 h-10 bg-primary/20 blur-[60px] opacity-50" />
+              <div className="absolute -bottom-6 inset-x-10 h-10 pointer-events-none" />
             </motion.div>
 
           </div>
@@ -131,10 +131,9 @@ export default function FutureVisionPage() {
       </section>
 
       {/* ③ Vision Content Section - AI Data Visualization (Style 3) */}
-      <section id="data-vision" className="relative py-28 bg-sky-50 overflow-hidden border-t border-sky-100">
-        <div className="absolute inset-0 bg-tech-grid opacity-10 mix-blend-multiply pointer-events-none" />
+      <section id="data-vision" className="relative py-28 bg-white overflow-hidden border-t border-sky-100">
         {/* 우측 상단 블루 글로우 */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] pointer-events-none" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
@@ -147,20 +146,19 @@ export default function FutureVisionPage() {
               viewport={{ once: true }}
               className="lg:col-span-7 relative group"
             >
-              <div className="relative glass-panel aspect-video overflow-hidden border border-slate-200 bg-white group-hover:border-primary/40 transition-all duration-1000 shadow-[0_20px_50px_rgba(0,183,241,0.1)]">
+              <div className="relative aspect-video overflow-hidden border border-slate-200 bg-white transition-all duration-1000">
                 <img
                   src="/images/ai_data_vision.png"
                   alt="AI Data Visualization Dashboard"
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent opacity-40" />
+                <div className="absolute inset-0 bg-transparent" />
 
                 {/* 스캔 라인 애니메이션 효과 */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/10 to-transparent h-1/2 w-full -translate-y-full animate-[scan_4s_linear_infinite] pointer-events-none" />
+                <div className="absolute inset-0 pointer-events-none" />
               </div>
               {/* 장식용 테크 요소 */}
-              <div className="absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-primary/30 pointer-events-none" />
-              <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-primary/30 pointer-events-none" />
+              <div className="absolute inset-0 pointer-events-none" />
             </motion.div>
 
             {/* 우측: 설명 텍스트 (lg:col-span-5) */}
@@ -171,14 +169,14 @@ export default function FutureVisionPage() {
               viewport={{ once: true }}
               className="lg:col-span-5"
             >
-              <div className="inline-block px-4 py-1.5 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-white shadow-sm leading-none">
+              <div className="inline-block px-4 py-1.5 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-white leading-none">
                 Data Integration
               </div>
               <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-8">
                 <span className="text-slate-900 uppercase">지능형</span><br />
-                <span className="text-primary font-black uppercase">데이터 솔루션</span>
+                <span className="text-primary font-black uppercase shadow-none">데이터 솔루션</span>
               </h2>
-              <div className="w-16 h-[2px] bg-primary mb-8" />
+              <div className="w-16 h-[2px] bg-primary mb-8 shadow-none" />
 
               <div className="space-y-6">
                 <p className="text-slate-800 font-bold text-xl leading-snug">
@@ -204,8 +202,8 @@ export default function FutureVisionPage() {
             className="w-full h-full object-cover"
           />
           {/* 밝은 오버레이 및 틴트 */}
-          <div className="absolute inset-0 bg-white/60 backdrop-blur-[2px]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-sky-50 via-transparent to-white" />
+          <div className="absolute inset-0 bg-white/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white/80" />
         </div>
 
         {/* 중앙 텍스트 */}
@@ -216,19 +214,19 @@ export default function FutureVisionPage() {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            <div className="inline-block px-4 py-1.5 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-white shadow-sm leading-none">
+            <div className="inline-block px-4 py-1.5 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-white leading-none">
               Future Landmark
             </div>
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 mb-8 drop-shadow-sm">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 mb-8">
               AI 관련 제조 및 연구소 <br className="hidden md:block" />
-              <span className="text-primary">설립 예정</span>
+              <span className="text-primary shadow-none">설립 예정</span>
             </h2>
-            <div className="w-24 h-[2px] bg-primary mx-auto" />
+            <div className="w-24 h-[2px] bg-primary mx-auto shadow-none" />
           </motion.div>
         </div>
 
-        {/* 테크 그리드 오버레이 (희미하게) */}
-        <div className="absolute inset-0 bg-tech-grid opacity-10 mix-blend-multiply pointer-events-none" />
+        {/* 테크 그리드 오버레이 제거 */}
+        <div className="absolute inset-0 pointer-events-none" />
       </section>
     </>
   );
