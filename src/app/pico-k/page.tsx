@@ -69,7 +69,7 @@ export default function PicoKPage() {
       <section id="overview" className="relative py-28 bg-white overflow-hidden">
         {/* 배경 장식 */}
         <div className="absolute inset-0 bg-tech-dots opacity-25 mix-blend-multiply pointer-events-none" />
-        <div className="absolute top-1/2 right-[5%] -translate-y-1/2 w-[500px] h-[500px] bg-primary/8 blur-[130px] rounded-full pointer-events-none" />
+
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -92,7 +92,7 @@ export default function PicoKPage() {
                 <span className="hero-title-highlight">PICO-K</span>
                 <span className="hero-title-main"> TECHNOLOGY</span>
               </h2>
-              <div className="w-20 h-[2px] bg-primary mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+              <div className="w-20 h-[2px] bg-primary mb-8" />
 
               <p className="text-slate-600 text-lg font-medium leading-relaxed mb-12 max-w-xl">
                 최첨단 피코 레이저 기술을 통해 더욱 빠르고 정밀한 색소 치료와<br className="hidden md:block" />
@@ -139,10 +139,10 @@ export default function PicoKPage() {
               <div className="relative group">
                 <img
                   src="/images/machine/피코케이 사진.png"
-                  className="max-w-full h-auto relative z-10 drop-shadow-[0_45px_100px_rgba(0,0,0,0.7)] group-hover:scale-[1.02] transition duration-1000"
+                  className="max-w-full h-auto relative z-10 group-hover:scale-[1.02] transition duration-1000"
                   alt="PICO-K 장비"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-20 bg-primary/15 blur-[80px] rounded-full scale-150 translate-y-4 opacity-50" />
+
               </div>
             </motion.div>
           </div>
@@ -163,13 +163,13 @@ export default function PicoKPage() {
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
               viewport={{ once: true }}
               style={{ originX: 0 }}
-              className="h-[1px] w-[500%] bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none shadow-[0_0_15px_rgba(0,183,241,0.2)]"
+              className="h-[1px] w-[500%] bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none"
             />
           </div>
 
           <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 relative">
             {/* 배경 테크 글로우 포인트 */}
-            <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none z-0" />
+
 
             {/* 좌측: 설명 (Technical Blueprint Style) */}
             <motion.div
@@ -198,7 +198,7 @@ export default function PicoKPage() {
                 {/* 기술 01 */}
                 <div className="group">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary shadow-[0_0_8px_rgba(0,183,241,0)] group-hover:shadow-[0_0_8px_rgba(0,183,241,1)] transition-all duration-500" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary transition-all duration-500" />
                     <h5 className="text-slate-900 font-bold text-xl">단일 챔버 레이저 발진 장치</h5>
                   </div>
                   <p className="text-primary/70 text-[10px] font-bold mb-4 tracking-[0.2em] uppercase pl-4">Patent Registration: No.10-165288</p>
@@ -210,7 +210,7 @@ export default function PicoKPage() {
                 {/* 기술 02 */}
                 <div className="group">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary shadow-[0_0_8px_rgba(0,183,241,0)] group-hover:shadow-[0_0_8px_rgba(0,183,241,1)] transition-all duration-500" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary transition-all duration-500" />
                     <h5 className="text-slate-900 font-bold text-xl">의료용 레이저 열 렌즈 효과 제어 시스템</h5>
                   </div>
                   <p className="text-primary/70 text-[10px] font-bold mb-4 tracking-[0.2em] uppercase pl-4">Patent Registration: No.10-2333260</p>
@@ -232,10 +232,10 @@ export default function PicoKPage() {
               <div className="relative w-full h-auto mt-12 group perspective-1000">
                 {/* 상단 라벨 오버레이 (이미지 밖 상단으로 이동) */}
                 <div className="absolute -top-12 left-0 w-full px-4 flex justify-between z-20 pointer-events-none transition-transform duration-1000 ease-out group-hover:translate-y-[-10px]">
-                  <span className="text-slate-600 font-extrabold text-sm md:text-lg tracking-tight drop-shadow-lg">
+                    <span className="text-slate-600 font-extrabold text-sm md:text-lg tracking-tight">
                     [ 특허기술 미적용 ]
                   </span>
-                  <span className="text-primary font-black text-sm md:text-lg tracking-tight drop-shadow-[0_0_10px_rgba(0,183,241,0.5)]">
+                    <span className="text-primary font-black text-sm md:text-lg tracking-tight">
                     [ 특허기술 적용 ]
                   </span>
                 </div>
@@ -252,20 +252,19 @@ export default function PicoKPage() {
                   <div className="absolute top-[38.5%] md:top-[40%] left-[-4%] md:left-[5.5%] z-20 pointer-events-none flex items-center flex-row">
                     {/* 설명 텍스트 (우측 정렬) */}
                     <div className="flex flex-col items-end text-right mr-2 transition-all duration-700">
-                      <span className="text-[11px] md:text-sm font-black text-[#FF4D4D] tracking-tighter leading-none drop-shadow-md group-hover:scale-110 group-hover:text-[#FF6666] origin-right transition-all">
+                      <span className="text-[11px] md:text-sm font-black text-[#FF4D4D] tracking-tighter leading-none group-hover:scale-110 group-hover:text-[#FF6666] origin-right transition-all">
                         과열되어
                       </span>
-                      <span className="text-[11px] md:text-sm font-black text-[#FF4D4D] tracking-tighter leading-none mt-1 drop-shadow-md group-hover:scale-110 group-hover:text-[#FF6666] origin-right transition-all">
+                      <span className="text-[11px] md:text-sm font-black text-[#FF4D4D] tracking-tighter leading-none mt-1 group-hover:scale-110 group-hover:text-[#FF6666] origin-right transition-all">
                         부풀어 오름
                       </span>
                     </div>
                     {/* 지시선 (텍스트 우측에서 포인트로 연결) - 길이를 고정하여 포인트 지점을 명확히 유지 */}
                     <div className="w-8 md:w-16 h-[1px] bg-slate-400/40 mr-1.5 shadow-sm transition-opacity duration-700 group-hover:bg-slate-400/60" />
                     {/* 지점 포인트 (노란색 펄스) */}
-                    <div className="relative transition-transform duration-700 group-hover:scale-125">
-                      <div className="w-2.5 h-2.5 bg-yellow-400 rounded-full shadow-[0_0_10px_rgba(250,204,21,1)]" />
-                      <div className="absolute inset-0 w-2.5 h-2.5 bg-yellow-400 rounded-full animate-ping opacity-75" />
-                    </div>
+                      <div className="relative transition-transform duration-700 group-hover:scale-125">
+                        <div className="w-2.5 h-2.5 bg-yellow-400 rounded-full shadow-none" />
+                      </div>
                   </div>
                 </div>
               </div>
@@ -326,7 +325,7 @@ export default function PicoKPage() {
                   className="w-[95%] h-[95%] object-contain z-10 transition-transform duration-700 group-hover:scale-105"
                 />
                 {/* 하단 강조 글로우 */}
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-primary/10 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+
               </div>
             </motion.div>
 
@@ -387,7 +386,7 @@ export default function PicoKPage() {
                           className="w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-110"
                           alt={item.label}
                         />
-                        <div className="absolute inset-0 bg-primary/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       </div>
                       <span className="text-[10px] text-slate-900 font-black tracking-widest group-hover:text-primary transition-colors uppercase">{item.label}</span>
                     </div>
@@ -513,7 +512,7 @@ export default function PicoKPage() {
                   ].map((step, idx) => (
                     <React.Fragment key={idx}>
                       <div className="flex flex-col items-center text-center gap-2 md:gap-3 group cursor-pointer">
-                        <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:scale-110 group-hover:border-primary/60 group-hover:bg-primary/20 group-hover:shadow-[0_0_25px_rgba(0,183,241,0.3)]">
+                        <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:scale-110 group-hover:border-primary/60 group-hover:bg-primary/20">
                           {step.img && (
                             <img
                               src={step.img}
@@ -548,13 +547,13 @@ export default function PicoKPage() {
                         <path d="M155,50 L165,50 L160,60 Z" fill="currentColor" />
                       </svg>
                       <div className="absolute -right-10 md:-right-16 -top-2">
-                        <span className="text-2xl md:text-5xl font-black text-[#FF3E3E] tracking-tighter italic italic drop-shadow-[0_0_20px_rgba(255,62,62,0.5)]">360°</span>
+                        <span className="text-2xl md:text-5xl font-black text-[#FF3E3E] tracking-tighter italic italic">360°</span>
                       </div>
                     </div>
                   </div>
 
                   {/* 하단 캡션 오버레이 (이미지 위에 겹침) */}
-                  <div className="absolute bottom-2 md:bottom-6 left-1/2 -translate-x-1/2 flex items-center bg-white/90 backdrop-blur-md border border-sky-100 px-3 md:px-6 py-1.5 md:py-2 shadow-2xl pointer-events-none w-[90%] md:w-fit">
+                  <div className="absolute bottom-2 md:bottom-6 left-1/2 -translate-x-1/2 flex items-center bg-white/90 backdrop-blur-md border border-sky-100 px-3 md:px-6 py-1.5 md:py-2 pointer-events-none w-[90%] md:w-fit">
                     <div className="w-[2px] md:w-[3px] h-6 md:h-10 bg-primary mr-3 md:mr-5" />
                     <div className="flex flex-col text-left">
                       <span className="text-[10px] md:text-[14px] font-black text-slate-900 tracking-[0.1em] md:tracking-[0.2em] uppercase leading-none whitespace-nowrap">
@@ -574,10 +573,10 @@ export default function PicoKPage() {
                     <img
                       src="/images/picok/circle.png"
                       alt="Beam Test Visualization"
-                      className="w-full h-full object-contain drop-shadow-[0_0_20px_rgba(0,183,241,0.5)] transition-all duration-700 group-hover/beam:scale-110"
+                      className="w-full h-full object-contain transition-all duration-700 group-hover/beam:scale-110"
                     />
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-1 h-1 bg-primary rounded-full shadow-[0_0_15px_rgba(0,183,241,1)]" />
+                      <div className="w-1 h-1 bg-primary rounded-full shadow-none" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center">

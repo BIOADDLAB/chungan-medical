@@ -13,8 +13,6 @@
 :root {
   --background: #FFFFFF;
   --foreground: #1E293B;
-  /* Soft slate for text */
-  --primary-glow: 0 0 20px rgba(0, 179, 228, 0.5), 0 0 40px rgba(0, 179, 228, 0.2);
   --tech-border: 1px solid rgba(0, 179, 228, 0.3);
 }
 
@@ -66,20 +64,11 @@ body {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(0, 183, 241, 0.15);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* Neon Text Glow */
-.text-glow {
-  text-shadow: 0 0 5px rgba(0, 183, 241, 0.15);
-}
-
-.text-glow-primary {
-  text-shadow: 0 0 8px rgba(0, 183, 241, 0.2), 0 0 15px rgba(0, 183, 241, 0.1);
-}
-
-.text-glow-white {
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.1);
+/* Neon Text Glow Removed */
+.text-glow, .text-glow-primary, .text-glow-white {
+  text-shadow: none !important;
 }
 
 .hero-accent-line {
@@ -168,7 +157,6 @@ body {
 
     50% {
       opacity: 1;
-      box-shadow: var(--primary-glow);
     }
   }
 
@@ -198,12 +186,10 @@ header {
   background-color: rgba(240, 249, 255, 0.92);
   backdrop-filter: blur(12px);
   border: none !important;
-  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08) !important;
 }
 
 .nav-link.is-active {
   color: var(--color-primary);
-  text-shadow: 0 0 8px rgba(0, 183, 241, 0.6);
 }
 
 /* Hardware acceleration */
@@ -226,7 +212,6 @@ header {
 .swiper-pagination-bullet-active {
   opacity: 1;
   background: var(--color-primary) !important;
-  box-shadow: 0 0 10px rgba(0, 183, 241, 0.35);
   width: 12px;
   height: 12px;
   border: 1px solid var(--color-primary);
@@ -509,7 +494,6 @@ header {
     width: 110px;
     height: 110px;
     font-size: 11px;
-    box-shadow: 0 0 10px rgba(0, 183, 241, 0.2);
   }
 
   /* 모바일 점선 궤도(반지름 130px)에 일치 */

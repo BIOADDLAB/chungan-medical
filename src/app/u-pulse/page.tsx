@@ -69,7 +69,7 @@ export default function UPulsePage() {
       <section id="u-pulse-difference" className="relative py-28 bg-white overflow-hidden">
         {/* 배경 장식: 테크 도트 및 블루 블러 */}
         <div className="absolute inset-0 bg-tech-dots opacity-20 mix-blend-multiply pointer-events-none" />
-        <div className="absolute top-1/2 right-[5%] -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 blur-[130px] rounded-full pointer-events-none" />
+
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
@@ -93,7 +93,7 @@ export default function UPulsePage() {
                 <span className="hero-title-highlight">U - PULSE</span>
                 <span className="hero-title-main"> TECHNOLOGY</span>
               </h2>
-              <div className="w-20 h-[2px] bg-primary mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+              <div className="w-20 h-[2px] bg-primary mb-8" />
 
               <p className="text-slate-600 text-lg font-medium leading-relaxed mb-12 max-w-xl">
                 최첨단 High-Peak-Power 기술을 통해 피부 깊숙이 정밀한<br className="hidden md:block" />
@@ -155,20 +155,16 @@ export default function UPulsePage() {
               className="flex justify-center lg:justify-end relative"
             >
               <div className="relative group scale-[1.2] lg:scale-[1.2] pt-12 lg:pt-0 origin-bottom lg:translate-x-12 lg:translate-y-10 transition-all duration-1000">
-                {/* 배경 수직 광채 (확대된 크기에 맞춰 범위 확장) */}
-                <div className="absolute inset-y-0 -inset-x-20 bg-primary/10 blur-[120px] rounded-full opacity-40 group-hover:opacity-60 transition duration-1000" />
 
-                {/* 하단 바닥 글로우 (더 크게 확장) */}
-                <div className="absolute inset-x-0 bottom-0 h-16 bg-primary/20 blur-[80px] rounded-full scale-150 translate-y-8 opacity-50" />
 
                 <img
                   src="/images/machine/유펄스 사진.png"
-                  className="max-w-full h-auto relative z-10 drop-shadow-[0_45px_100px_rgba(0,0,0,0.7)] group-hover:scale-[1.03] transition duration-1000 cursor-zoom-in"
+                  className="max-w-full h-auto relative z-10 group-hover:scale-[1.03] transition duration-1000 cursor-zoom-in"
                   alt="U-Pulse 장비"
                 />
 
                 {/* 하단 그림자 강화 */}
-                <div className="absolute inset-x-0 bottom-0 h-8 bg-black/60 blur-[30px] rounded-full translate-y-6 opacity-80" />
+
               </div>
             </motion.div>
           </div>
@@ -179,7 +175,7 @@ export default function UPulsePage() {
       <section id="u-pulse-tech" className="relative py-32 bg-sky-50 overflow-x-clip">
         {/* 배경 장식 요소 */}
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
+
 
         <div className="max-w-screen-2xl mx-auto px-6 relative z-10">
           {/* 상단: 대형 타이틀 디자인 */}
@@ -242,14 +238,13 @@ export default function UPulsePage() {
                       whileInView={{ pathLength: 1, opacity: 1 }}
                       transition={{ duration: 0.8, delay: i * 0.08 + 0.3, ease: "easeInOut" }}
                       viewport={{ once: true }}
-                      className="drop-shadow-[0_0_20px_rgba(0,183,241,0.4)] saturate-150"
+                      className="saturate-150"
                     />
                     <motion.circle
                       cx={215 + i * 140}
                       cy={40}
                       r="4"
                       fill="#00B7F1"
-                      filter="url(#point-glow-large)"
                       initial={{ opacity: 0, scale: 0 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: i * 0.08 + 0.8 }}
@@ -345,7 +340,7 @@ export default function UPulsePage() {
               viewport={{ once: true }}
               className="glass-panel p-8 md:p-12 relative overflow-hidden group border-primary/20"
             >
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 blur-[60px] rounded-full group-hover:bg-primary/20 transition-all duration-700" />
+
               <div className="relative z-10">
                 <span className="text-primary/60 text-[11px] font-bold tracking-[0.2em] md:tracking-[0.4em] uppercase mb-4 block whitespace-nowrap">Engineered Precision</span>
                 <div className="flex flex-col gap-2">
@@ -425,7 +420,7 @@ export default function UPulsePage() {
                   initial={{ y: -20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.3, duration: 0.8 }}
-                  className="absolute top-[16%] md:top-4 w-[180px] h-[180px] md:w-[240px] md:h-[240px] rounded-full bg-gradient-to-b from-[#00B7F1]/40 to-[#00B7F1]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen shadow-[0_0_40px_rgba(0,183,241,0.1)]"
+                  className="absolute top-[16%] md:top-4 w-[180px] h-[180px] md:w-[240px] md:h-[240px] rounded-full bg-gradient-to-b from-[#00B7F1]/40 to-[#00B7F1]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen"
                 >
                   <span className="font-bold text-slate-900 text-[14px] md:text-lg tracking-tighter">파워보드</span>
                 </motion.div>
@@ -435,7 +430,7 @@ export default function UPulsePage() {
                   initial={{ x: -20, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.5, duration: 0.8 }}
-                  className="absolute bottom-[16%] md:bottom-4 left-[-4%] md:left-0 w-[180px] h-[180px] md:w-[240px] md:h-[240px] rounded-full bg-gradient-to-tr from-[#3B6B98]/40 to-[#3B6B98]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen shadow-[0_0_40px_rgba(59,107,152,0.1)]"
+                  className="absolute bottom-[16%] md:bottom-4 left-[-4%] md:left-0 w-[180px] h-[180px] md:w-[240px] md:h-[240px] rounded-full bg-gradient-to-tr from-[#3B6B98]/40 to-[#3B6B98]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen"
                 >
                   <span className="font-bold text-slate-900 text-center leading-tight text-[13px] md:text-lg tracking-tighter">
                     높은 파워의<br />글래스튜브
@@ -447,7 +442,7 @@ export default function UPulsePage() {
                   initial={{ x: 20, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.7, duration: 0.8 }}
-                  className="absolute bottom-[16%] md:bottom-4 right-[-4%] md:right-0 w-[180px] h-[180px] md:w-[240px] md:h-[240px] rounded-full bg-gradient-to-tl from-[#00B7F1]/30 to-[#00B7F1]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen shadow-[0_0_40px_rgba(0,183,241,0.1)]"
+                  className="absolute bottom-[16%] md:bottom-4 right-[-4%] md:right-0 w-[180px] h-[180px] md:w-[240px] md:h-[240px] rounded-full bg-gradient-to-tl from-[#00B7F1]/30 to-[#00B7F1]/5 backdrop-blur-xl border border-white/10 flex items-center justify-center mix-blend-screen"
                 >
                   <span className="font-bold text-slate-900 text-center leading-tight text-[13px] md:text-lg tracking-tighter">
                     높은 볼트의<br />레귤레이터
@@ -455,7 +450,7 @@ export default function UPulsePage() {
                 </motion.div>
 
                 {/* 중심 글로우 코어 */}
-                <div className="absolute w-24 h-24 bg-primary/20 blur-[60px] rounded-full z-0" />
+
               </div>
             </motion.div>
 
@@ -469,7 +464,7 @@ export default function UPulsePage() {
             >
               <div className="group">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary md:bg-primary/20 md:group-hover:bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)] transition-all duration-500" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary md:bg-primary/20 md:group-hover:bg-primary transition-all duration-500" />
                   <h5 className="text-slate-900 font-bold text-2xl">안정적인 울트라펄스</h5>
                 </div>
                 <p className="text-primary/70 text-[10px] font-bold mb-4 tracking-[0.2em] uppercase pl-4">Patent Registration: No.10-XXXXXX</p>
@@ -524,7 +519,7 @@ export default function UPulsePage() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className="group relative flex items-center justify-center p-4 md:p-12 glass-panel bg-tech-dots/5 overflow-visible min-h-[320px] transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:shadow-[0_0_40px_rgba(244,114,182,0.15)] hover:border-pink-500/20 cursor-crosshair"
+              className="group relative flex items-center justify-center p-4 md:p-12 glass-panel bg-tech-dots/5 overflow-visible min-h-[320px] transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:border-sky-500/20 cursor-crosshair"
             >
               {/* 2번째 이미지 스타일: 흰색 두꺼운 외벽 + 어두운 내부 + 긴 테이퍼 + 빨간 레이저 */}
               <svg viewBox="0 0 880 240" className="w-full h-auto overflow-visible transition-transform duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] scale-110 md:scale-100 group-hover:scale-[1.1] md:group-hover:scale-[1.05]">
@@ -579,9 +574,9 @@ export default function UPulsePage() {
                 <rect x="95" y="158" width="200" height="8" fill="#4a5568" opacity="0.8" />
 
                 {/* --- 렌즈 1, 2, 3 --- */}
-                <ellipse cx="108" cy="120" rx="8" ry="28" fill="#b6d9ef" opacity="0.9" filter="url(#z2-glow)" />
-                <ellipse cx="194" cy="120" rx="8" ry="28" fill="#b6d9ef" opacity="0.9" filter="url(#z2-glow)" />
-                <ellipse cx="280" cy="120" rx="8" ry="28" fill="#b6d9ef" opacity="0.9" filter="url(#z2-glow)" />
+                <ellipse cx="108" cy="120" rx="8" ry="28" fill="#b6d9ef" opacity="0.9" />
+                <ellipse cx="194" cy="120" rx="8" ry="28" fill="#b6d9ef" opacity="0.9" />
+                <ellipse cx="280" cy="120" rx="8" ry="28" fill="#b6d9ef" opacity="0.9" />
 
                 {/* --- 줌 가이드 화살표 --- */}
                 <line
@@ -595,7 +590,7 @@ export default function UPulsePage() {
                 ============================================================ */}
                 <line x1="108" y1="120" x2="762" y2="120" stroke="#f472b6" strokeWidth="2.5" className="opacity-90 group-hover:opacity-100 transition-opacity duration-700" />
                 {/* 호버 시 점등되는 레이저 글로우 효과 */}
-                <line x1="108" y1="120" x2="762" y2="120" stroke="#f472b6" strokeWidth="8" className="opacity-0 group-hover:opacity-50 blur-[3px] transition-opacity duration-700 pointer-events-none" />
+
 
                 {/* ============================================================
                     동심원 타겟 (중심: 762, 120 / 반지름: 82, 63, 44, 26)
@@ -656,7 +651,7 @@ export default function UPulsePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="glass-panel bg-white border-sky-100 p-10 flex flex-col items-center group hover:border-primary/40 transition-all duration-500 shadow-sm"
+              className="glass-panel bg-white border-sky-100 p-10 flex flex-col items-center group hover:border-primary/40 transition-all duration-500"
             >
               <div className="w-20 h-20 mb-8 flex items-center justify-center bg-sky-50 rounded-2xl relative overflow-hidden group-hover:bg-sky-100 transition-colors duration-500">
                 <svg viewBox="0 0 40 40" className="w-16 h-16">
@@ -669,7 +664,7 @@ export default function UPulsePage() {
                     <circle cx="30" cy="10" r="3" fill="#00B7F1" />
                   </g>
                 </svg>
-                <div className="absolute inset-0 bg-primary/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+
               </div>
               <h4 className="text-slate-900 font-bold text-xl mb-1">Easy Control</h4>
               <p className="text-slate-600 text-sm font-medium">깊이 조절 가능</p>
@@ -681,14 +676,14 @@ export default function UPulsePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="glass-panel bg-white border-sky-100 p-10 flex flex-col items-center group hover:border-primary/40 transition-all duration-500 shadow-sm"
+              className="glass-panel bg-white border-sky-100 p-10 flex flex-col items-center group hover:border-primary/40 transition-all duration-500"
             >
               <div className="w-20 h-20 mb-8 flex items-center justify-center bg-sky-50 rounded-2xl relative overflow-hidden group-hover:bg-sky-100 transition-colors duration-500">
                 <svg viewBox="0 0 40 40" className="w-16 h-16">
                   <rect x="8" y="8" width="24" height="24" stroke="#475569" strokeWidth="1.5" fill="none" opacity="0.4" />
                   <path d="M12,20 L18,26 L28,14" stroke="#00B7F1" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                <div className="absolute inset-0 bg-primary/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+
               </div>
               <h4 className="text-slate-900 font-bold text-xl mb-1">표준화된 임상으로</h4>
               <p className="text-slate-600 text-sm font-medium">쉽고 정확하게</p>
@@ -700,7 +695,7 @@ export default function UPulsePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="glass-panel bg-white border-sky-100 p-10 flex flex-col items-center group hover:border-primary/40 transition-all duration-500 shadow-sm"
+              className="glass-panel bg-white border-sky-100 p-10 flex flex-col items-center group hover:border-primary/40 transition-all duration-500"
             >
               <div className="w-20 h-20 mb-8 flex items-center justify-center bg-sky-50 rounded-2xl relative overflow-hidden group-hover:bg-sky-100 transition-colors duration-500">
                 <svg viewBox="0 0 40 40" className="w-16 h-16">
@@ -709,7 +704,7 @@ export default function UPulsePage() {
                   <path d="M10,24 Q15,20 20,24 T30,24" stroke="#00B7F1" strokeWidth="1.5" fill="none" opacity="0.6" />
                   <path d="M20,10 L20,30 M15,25 L20,30 L25,25" stroke="#475569" strokeWidth="1.5" fill="none" />
                 </svg>
-                <div className="absolute inset-0 bg-primary/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+
               </div>
               <h4 className="text-slate-900 font-bold text-xl mb-1">Thermal Damage</h4>
               <p className="text-slate-600 text-sm font-medium">없이 깊게</p>
@@ -734,7 +729,7 @@ export default function UPulsePage() {
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
               viewport={{ once: true }}
               style={{ originX: 0 }}
-              className="h-[1px] w-[500%] bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none shadow-[0_0_15px_rgba(0,183,241,0.2)]"
+              className="h-[1px] w-[500%] bg-gradient-to-r from-primary/60 via-primary/10 to-transparent pointer-events-none"
             />
           </div>
 
@@ -767,7 +762,7 @@ export default function UPulsePage() {
             >
               <div className="mb-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_rgba(0,183,241,0.8)] animate-pulse" />
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                   <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_01</span>
                 </div>
                 <span className="h-px w-16 bg-gradient-to-r from-primary/40 to-transparent"></span>
@@ -775,7 +770,7 @@ export default function UPulsePage() {
               <h4 className="text-2xl font-black mb-8 text-slate-900 tracking-tight group-hover:text-primary transition-colors duration-500">
                 점 제거, 흉터 개선
               </h4>
-              <div className="relative glass-panel bg-white overflow-hidden border-sky-100 group-hover:border-primary/50 transition-all duration-700 shadow-2xl">
+              <div className="relative glass-panel bg-white overflow-hidden border-sky-100 group-hover:border-primary/50 transition-all duration-700">
                 <div className="absolute inset-0 bg-tech-grid opacity-25 group-hover:opacity-40 transition-opacity" />
                 <div className="grid grid-cols-2 relative h-full">
                   {[
@@ -793,7 +788,7 @@ export default function UPulsePage() {
                       />
 
                       {/* Before / After Badge */}
-                      <div className={`absolute top-0 left-0 p-3 text-[9px] font-black uppercase tracking-[0.2em] z-30 border-r border-b ${img.label === 'BEFORE' ? 'text-slate-900 bg-white/90 border-sky-100' : 'text-primary bg-white/90 border-primary/40 shadow-[0_0_10px_rgba(0,183,241,0.2)]'}`}>
+                      <div className={`absolute top-0 left-0 p-3 text-[9px] font-black uppercase tracking-[0.2em] z-30 border-r border-b ${img.label === 'BEFORE' ? 'text-slate-900 bg-white/90 border-sky-100' : 'text-primary bg-white/90 border-primary/40'}`}>
                         {img.label}
                       </div>
 
@@ -814,7 +809,7 @@ export default function UPulsePage() {
             >
               <div className="mb-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_rgba(0,183,241,0.8)] animate-pulse" />
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                   <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_02</span>
                 </div>
                 <span className="h-px w-16 bg-gradient-to-r from-primary/40 to-transparent"></span>
@@ -823,7 +818,7 @@ export default function UPulsePage() {
                 점, 검버섯 제거
               </h4>
               <div className="flex flex-col gap-6">
-                <div className="relative glass-panel bg-white aspect-[3.6/1] border-sky-100 group-hover:border-primary/40 transition-all duration-700 overflow-hidden flex items-center justify-center group/slot shadow-lg cursor-pointer">
+                <div className="relative glass-panel bg-white aspect-[3.6/1] border-sky-100 group-hover:border-primary/40 transition-all duration-700 overflow-hidden flex items-center justify-center group/slot cursor-pointer">
                   <Image
                     src="/images/upulse/cs2top.png"
                     alt="Clinical Case - Before"
@@ -833,7 +828,7 @@ export default function UPulsePage() {
                   />
                   <div className="absolute top-0 left-0 p-3 text-[9px] font-black text-slate-900 bg-white/90 uppercase tracking-[0.2em] border-r border-b border-sky-100 z-20">BEFORE</div>
                 </div>
-                <div className="relative glass-panel bg-white aspect-[3.6/1] border-primary/30 bg-primary/5 group-hover:border-primary transition-all duration-700 overflow-hidden flex items-center justify-center shadow-[0_0_40px_rgba(0,183,241,0.1)] group/slot cursor-pointer">
+                <div className="relative glass-panel bg-white aspect-[3.6/1] border-primary/30 bg-primary/5 group-hover:border-primary transition-all duration-700 overflow-hidden flex items-center justify-center group/slot cursor-pointer">
                   <Image
                     src="/images/upulse/cs2bottom.png"
                     alt="Clinical Case - After"
@@ -857,7 +852,7 @@ export default function UPulsePage() {
             >
               <div className="mb-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_rgba(0,183,241,0.8)] animate-pulse" />
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                   <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_03</span>
                 </div>
                 <div className="flex-1 mx-6 h-[1px] bg-gradient-to-r from-primary/30 to-transparent"></div>
@@ -865,7 +860,7 @@ export default function UPulsePage() {
               <h4 className="text-2xl font-black mb-8 text-slate-900 tracking-tight group-hover:text-primary transition-colors duration-500">
                 사마귀 제거
               </h4>
-              <div className="relative glass-panel bg-white overflow-hidden border-sky-100 group-hover:border-primary/50 transition-all duration-700 shadow-xl">
+              <div className="relative glass-panel bg-white overflow-hidden border-sky-100 group-hover:border-primary/50 transition-all duration-700">
                 <div className="absolute inset-0 bg-tech-grid opacity-15" />
                 <div className="grid grid-cols-2 relative h-full">
                   <div className="aspect-square border-r border-sky-100 flex items-center justify-center relative group/slot overflow-hidden cursor-pointer">
@@ -902,7 +897,7 @@ export default function UPulsePage() {
             >
               <div className="mb-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_rgba(0,183,241,0.8)] animate-pulse" />
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                   <span className="text-primary font-black text-[10px] tracking-[0.3em] uppercase">CS_04</span>
                 </div>
                 <div className="flex-1 mx-6 h-[1px] bg-gradient-to-r from-primary/30 to-transparent"></div>
@@ -910,7 +905,7 @@ export default function UPulsePage() {
               <h4 className="text-2xl font-black mb-8 text-slate-900 tracking-tight uppercase group-hover:text-primary transition-colors duration-500">
                 Congenital Melanocytic Nevus
               </h4>
-              <div className="relative glass-panel bg-white overflow-hidden border-sky-100 group-hover:border-primary/50 transition-all duration-700 shadow-xl">
+              <div className="relative glass-panel bg-white overflow-hidden border-sky-100 group-hover:border-primary/50 transition-all duration-700">
                 <div className="absolute inset-0 bg-tech-dots opacity-15" />
                 <div className="grid grid-cols-2 relative h-full">
                   <div className="aspect-square border-r border-sky-100 flex items-center justify-center relative group/slot overflow-hidden cursor-pointer">
@@ -1023,7 +1018,7 @@ export default function UPulsePage() {
 
                 {/* U-Pulse Image Column */}
                 <div className="col-span-4 md:col-span-3">
-                  <div className={`aspect-square relative overflow-hidden transition-all duration-500 shadow-[0_10px_30px_rgba(0,0,0,0.5)] ${idx === 4 ? '' : 'glass-panel bg-white border-sky-100 group-hover:border-primary/40'}`}>
+                  <div className={`aspect-square relative overflow-hidden transition-all duration-500 ${idx === 4 ? '' : 'glass-panel bg-white border-sky-100 group-hover:border-primary/40'}`}>
                     <Image
                       src={row.imgUp}
                       alt={`U-Pulse Result - ${row.label}`}
@@ -1067,7 +1062,7 @@ export default function UPulsePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             viewport={{ once: true }}
-            className="max-w-5xl mx-auto glass-panel p-0 overflow-hidden border-sky-100 bg-white shadow-[0_30px_60px_rgba(0,0,0,0.08)]"
+            className="max-w-5xl mx-auto glass-panel p-0 overflow-hidden border-sky-100 bg-white"
           >
             <div className="grid grid-cols-1 md:grid-cols-2">
               {[
