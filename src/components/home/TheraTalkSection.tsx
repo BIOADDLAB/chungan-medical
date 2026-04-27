@@ -78,7 +78,7 @@ const TheraTalkSection = () => {
 
 
                         <div className="relative z-10 max-w-4xl mx-auto text-center">
-                            <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-8 leading-tight break-keep">
+                            <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-8 leading-relaxed break-keep">
                                 "상담의 누락은 곧 환자의 이탈입니다.<br />
                                 테라톡은 단순한 알림톡을 넘어 <span className="text-primary">상담의 전 과정</span>을<br />
                                 데이터화하는 <span className="text-primary">통합 솔루션</span>입니다."
