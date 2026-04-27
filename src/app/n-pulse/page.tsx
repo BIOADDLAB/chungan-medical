@@ -350,7 +350,7 @@ export default function NPulsePage() {
                                 '피부 재생을 위한\n콜라겐 형성을 유도',
                                 '콜라겐 재생을 통해\n흉터, 주름 등을 개선'
                             ].map((text, idx) => (
-                                <div key={idx} className="bg-slate-50 border border-slate-200 rounded-2xl p-8 group hover:border-primary/40 transition-all duration-500 shadow-sm">
+                                <div key={idx} className="bg-slate-50 border border-slate-200 rounded-2xl p-8 group hover:border-primary/40 transition-all duration-500">
                                     <div className="text-primary font-black text-4xl mb-6 opacity-40 group-hover:opacity-100 transition-opacity">0{idx + 1}</div>
                                     <p className="text-slate-900 text-lg md:text-xl font-bold leading-relaxed whitespace-pre-line">
                                         {text}
@@ -366,7 +366,7 @@ export default function NPulsePage() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1 }}
                         viewport={{ once: true }}
-                        className="bg-sky-50 border border-sky-100 p-4 md:p-8 shadow-sm rounded-2xl"
+                        className="bg-sky-50 border border-sky-100 p-4 md:p-8 rounded-2xl"
                     >
                         <div className="flex flex-col xl:flex-row items-center gap-4 xl:gap-6">
                             {/* Steps 1-3 Cluster: Unrolled for individual control */}
@@ -416,7 +416,7 @@ export default function NPulsePage() {
                             {/* Result Step 4 */}
                             <div className="w-full xl:w-[35%] flex-grow">
                                 <div className="relative group">
-                                    <div className="aspect-[16/11] border-2 border-primary/20 bg-white flex items-center justify-center overflow-hidden group-hover:border-primary transition-all duration-500 shadow-sm rounded-xl">
+                                    <div className="aspect-[16/11] border-2 border-primary/20 bg-white flex items-center justify-center overflow-hidden group-hover:border-primary transition-all duration-500 rounded-xl">
                                         <div className="absolute top-0 left-0 px-5 py-1.5 bg-primary/10 backdrop-blur-md border-r border-b border-primary/20 flex items-center justify-center text-sm font-black text-primary z-20">
                                             4
                                         </div>
