@@ -31,8 +31,8 @@ export default function Footer() {
               <span className="w-24 font-bold text-slate-500 shrink-0">주소</span>
               <div className="text-slate-600 leading-[1.8] flex flex-col gap-1 md:whitespace-nowrap">
                 <p><strong className="text-slate-800 font-medium">본사</strong> 서울특별시 강남구 테헤란로 70길 12 H타워 148,302-1호</p>
-                <p><strong className="text-slate-800 font-medium">영업본부</strong> 경기도 수원시 영통구 광교중앙로 170 광교효성해링턴타워 A동 1802호</p>
-                <p><strong className="text-slate-800 font-medium">전라제주지사</strong> 전라북도 전주시 덕진구 동부대로 1229 메가월드 B동 322호</p>
+                <p><strong className="text-slate-800 font-medium">영업본부</strong> 경기도 수원시 영통구 광교중앙로 170 광교효성해링턴타워 A동 1306호</p>
+                <p><strong className="text-slate-800 font-medium">전라제주지사</strong> 전북특별자치도 전주시 덕진구 오송1길 37-17 103호</p>
               </div>
             </div>
           </div>

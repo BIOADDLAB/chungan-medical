@@ -38,7 +38,7 @@ export default function Header() {
       >
         <div className="max-w-screen-xl mx-auto px-6 h-20 md:h-28 flex justify-between items-center relative z-20">
           {/* Logo */}
-          <div className="md:w-64 flex-shrink-0">
+          <div className="md:w-80 flex-shrink-0">
             <Link
               href="/#home"
               className="hover:opacity-100 transition-all duration-500 group flex items-center"
@@ -47,19 +47,19 @@ export default function Header() {
               <img
                 src="/images/청안로고.png"
                 alt="CHEONGAN"
-                className={`h-12 md:h-20 w-auto object-contain transition-all duration-500 ${scrolled ? 'brightness-0' : 'brightness-0 invert'}`}
+                className={`h-[70px] md:h-[100px] w-auto object-contain transition-all duration-500 ${scrolled ? 'brightness-0' : 'brightness-0 invert'}`}
               />
             </Link>
           </div>
 
-          <nav className="hidden md:flex items-center gap-12 lg:gap-16 font-semibold text-slate-800 h-full px-4">
-            <Link href="/#about" className={`nav-link hover:text-primary transition duration-300 py-6 block whitespace-nowrap ${!scrolled && 'text-white'}`}>
+          <nav className="hidden md:flex items-center gap-12 lg:gap-16 font-semibold text-slate-800 h-full">
+            <Link href="/#about" className={`nav-link hover:text-primary transition duration-300 flex items-center h-full whitespace-nowrap ${!scrolled && 'text-white'}`}>
               회사소개
             </Link>
 
             {/* Products Dropdown - Reverted to Simple Compact Box */}
             <div className="relative h-full flex items-center group cursor-pointer">
-              <span className={`nav-link hover:text-primary transition duration-300 py-6 block whitespace-nowrap ${!scrolled && 'text-white'}`}>
+              <span className={`nav-link hover:text-primary transition duration-300 flex items-center h-full whitespace-nowrap ${!scrolled && 'text-white'}`}>
                 제품소개
               </span>
 
@@ -77,19 +77,19 @@ export default function Header() {
               </div>
             </div>
 
-            <Link href="/future-vision" className={`nav-link hover:text-primary transition duration-300 py-6 block whitespace-nowrap ${!scrolled && 'text-white'}`}>
+            <Link href="/future-vision" className={`nav-link hover:text-primary transition duration-300 flex items-center h-full whitespace-nowrap ${!scrolled && 'text-white'}`}>
               미래비전
             </Link>
             <Link
               href="/contact"
-              className={`nav-link hover:text-primary transition duration-300 py-6 block uppercase whitespace-nowrap ${!scrolled && 'text-white'}`}
+              className={`nav-link hover:text-primary transition duration-300 flex items-center h-full uppercase whitespace-nowrap ${!scrolled && 'text-white'}`}
             >
               contact
             </Link>
           </nav>
 
           {/* Right Area */}
-          <div className="md:w-64 flex justify-end flex-shrink-0">
+          <div className="md:w-80 flex justify-end flex-shrink-0">
             <div className={`hidden md:flex items-center space-x-2 font-bold cursor-pointer hover:text-primary transition ${scrolled ? 'text-slate-800' : 'text-white'}`}>
               <span>KOR</span>
               <span className="text-xs">▾</span>
@@ -124,7 +124,7 @@ export default function Header() {
           >
             {/* Top Bar Logo & Close Button */}
             <div className="absolute top-0 left-0 w-full h-20 md:h-28 flex items-center justify-between px-6 border-b border-sky-100">
-              <img src="/images/청안로고.png" alt="CHEONGAN" className="h-12 w-auto brightness-0" />
+              <img src="/images/청안로고.png" alt="CHEONGAN" className="h-[70px] w-auto brightness-0" />
               <button
                 onClick={() => setIsMenuOpen(false)}
                 className="p-2 text-slate-800 hover:text-primary transition-colors focus:outline-none"
