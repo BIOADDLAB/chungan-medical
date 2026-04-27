@@ -231,7 +231,7 @@ export default function NPulsePage() {
             {/* ③ Smart Interface & GUI Section (Intuitive Control) */}
             <section id="smart-interface" className="relative py-28 bg-sky-50 overflow-hidden border-t border-sky-100">
                 <div className="absolute inset-0 bg-tech-dots opacity-10 mix-blend-multiply pointer-events-none" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-primary/5 blur-[160px] rounded-full pointer-events-none" />
+
 
                 <div className="max-w-screen-xl mx-auto px-6 relative z-10">
                     <motion.div
@@ -241,7 +241,7 @@ export default function NPulsePage() {
                         viewport={{ once: true }}
                         className="text-center mb-20"
                     >
-                        <div className="inline-block px-4 py-1.5 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-white shadow-sm leading-none">
+                        <div className="inline-block px-4 py-1.5 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-white leading-none">
                             User Experience
                         </div>
                         <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6 uppercase leading-tight">
@@ -275,7 +275,7 @@ export default function NPulsePage() {
                                     <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-primary/50 z-20" />
                                     <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-primary/50 z-20" />
 
-                                    <div className="aspect-[1.5/1] relative overflow-hidden flex items-center justify-center bg-white border border-slate-200 group-hover:border-primary/40 transition-all duration-700 shadow-sm rounded-xl">
+                                    <div className="aspect-[1.5/1] relative overflow-hidden flex items-center justify-center bg-white border border-slate-200 group-hover:border-primary/40 transition-all duration-700 rounded-xl">
                                         <img
                                             src="/images/npulse_prime/cw.png"
                                             alt="CW Mode"
@@ -289,6 +289,8 @@ export default function NPulsePage() {
                                             transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
                                         />
 
+
+
                                         {/* Corner Accents */}
                                         <div className="absolute top-4 left-4 w-10 h-[1px] bg-primary/30 z-20" />
                                         <div className="absolute top-4 left-4 w-[1px] h-10 bg-primary/30 z-20" />
@@ -296,10 +298,7 @@ export default function NPulsePage() {
 
                                     <div className="mt-6 flex flex-col items-start">
                                         <span className="text-[10px] font-black text-primary/60 tracking-[0.4em] uppercase mb-1">Module Alpha 01</span>
-                                        <div className="flex items-center gap-3">
-                                            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                                             <h4 className="text-slate-900 font-black text-lg tracking-widest uppercase">CW CONTROL GUI</h4>
-                                        </div>
                                     </div>
                                 </motion.div>
 
@@ -317,17 +316,12 @@ export default function NPulsePage() {
                                             transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
                                             className="absolute inset-[-12px] border border-primary/30 rounded-full"
                                         />
-                                        <div className="absolute inset-[-8px] border border-primary/10 rounded-full animate-pulse" />
 
-                                        <div className="w-40 h-40 md:w-48 md:h-48 rounded-full border-2 border-primary/30 bg-white flex flex-col items-center justify-center text-center p-6 shadow-sm relative overflow-hidden group">
-                                            {/* HUD Scanning Light */}
-                                            <motion.div
-                                                animate={{ top: ['-100%', '200%'] }}
-                                                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                                                className="absolute left-0 w-full h-full bg-gradient-to-b from-transparent via-primary/20 to-transparent -z-10"
-                                            />
 
-                                            <span className="text-primary font-black text-2xl md:text-3xl leading-none mb-1 tracking-tighter uppercase text-glow-primary">
+                                        <div className="w-40 h-40 md:w-48 md:h-48 rounded-full border-2 border-primary/30 bg-white flex flex-col items-center justify-center text-center p-6 relative overflow-hidden group">
+
+
+                                            <span className="text-primary font-black text-2xl md:text-3xl leading-none mb-1 tracking-tighter uppercase">
                                                 COS
                                                 <span className="font-light text-slate-500 block text-[10px] mt-2 tracking-[0.4em] indent-[0.4em]">MODE</span>
                                             </span>
@@ -350,7 +344,7 @@ export default function NPulsePage() {
                                     <div className="absolute -top-1 -right-1 w-6 h-6 border-t-2 border-r-2 border-primary/50 z-20" />
                                     <div className="absolute -bottom-1 -left-1 w-6 h-6 border-b-2 border-l-2 border-primary/50 z-20" />
 
-                                    <div className="aspect-[1.5/1] relative overflow-hidden flex items-center justify-center bg-white border border-slate-200 group-hover:border-primary/40 transition-all duration-700 shadow-sm rounded-xl">
+                                    <div className="aspect-[1.5/1] relative overflow-hidden flex items-center justify-center bg-white border border-slate-200 group-hover:border-primary/40 transition-all duration-700 rounded-xl">
                                         <img
                                             src="/images/npulse_prime/ultra.png"
                                             alt="ULTRA Mode"
@@ -364,6 +358,8 @@ export default function NPulsePage() {
                                             transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
                                         />
 
+
+
                                         {/* Corner Accents */}
                                         <div className="absolute top-4 right-4 w-10 h-[1px] bg-primary/30 z-20" />
                                         <div className="absolute top-4 right-4 w-[1px] h-10 bg-primary/30 z-20" />
@@ -371,10 +367,7 @@ export default function NPulsePage() {
 
                                     <div className="mt-6 flex flex-col items-end text-right">
                                         <span className="text-[10px] font-black text-primary/60 tracking-[0.4em] uppercase mb-1">Module Alpha 02</span>
-                                        <div className="flex items-center gap-3">
                                             <h4 className="text-slate-900 font-black text-lg tracking-widest uppercase">ULTRA CONTROL GUI</h4>
-                                            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                                        </div>
                                     </div>
                                 </motion.div>
                             </div>
@@ -400,7 +393,7 @@ export default function NPulsePage() {
                                     <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-primary/50 z-20" />
                                     <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-primary/50 z-20" />
 
-                                    <div className="aspect-[1.5/1] relative overflow-hidden flex items-center justify-center bg-white border border-slate-200 group-hover:border-primary/40 transition-all duration-700 shadow-sm rounded-xl">
+                                    <div className="aspect-[1.5/1] relative overflow-hidden flex items-center justify-center bg-white border border-slate-200 group-hover:border-primary/40 transition-all duration-700 rounded-xl">
                                         <img
                                             src="/images/npulse_prime/pin1.png"
                                             alt="Single Mode"
@@ -414,6 +407,8 @@ export default function NPulsePage() {
                                             transition={{ repeat: Infinity, duration: 3.5, ease: "linear" }}
                                         />
 
+
+
                                         {/* Corner Accents */}
                                         <div className="absolute top-4 left-4 w-10 h-[1px] bg-primary/30 z-20" />
                                         <div className="absolute top-4 left-4 w-[1px] h-10 bg-primary/30 z-20" />
@@ -421,10 +416,7 @@ export default function NPulsePage() {
 
                                     <div className="mt-6 flex flex-col items-start">
                                         <span className="text-[10px] font-black text-primary/60 tracking-[0.4em] uppercase mb-1">Module Beta 01</span>
-                                        <div className="flex items-center gap-3">
-                                            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                                             <h4 className="text-slate-900 font-black text-lg tracking-widest uppercase">SINGLE PULSE GUI</h4>
-                                        </div>
                                     </div>
                                 </motion.div>
 
@@ -442,17 +434,12 @@ export default function NPulsePage() {
                                             transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
                                             className="absolute inset-[-12px] border border-primary/30 rounded-full"
                                         />
-                                        <div className="absolute inset-[-8px] border border-primary/10 rounded-full animate-pulse" />
 
-                                        <div className="w-40 h-40 md:w-48 md:h-48 rounded-full border-2 border-primary/30 bg-white flex flex-col items-center justify-center text-center p-6 shadow-sm relative overflow-hidden group">
-                                            {/* HUD Scanning Light */}
-                                            <motion.div
-                                                animate={{ top: ['-100%', '200%'] }}
-                                                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-                                                className="absolute left-0 w-full h-full bg-gradient-to-b from-transparent via-primary/20 to-transparent -z-10"
-                                            />
 
-                                            <span className="text-primary font-black text-2xl md:text-3xl leading-none mb-1 tracking-tighter uppercase text-glow-primary">
+                                        <div className="w-40 h-40 md:w-48 md:h-48 rounded-full border-2 border-primary/30 bg-white flex flex-col items-center justify-center text-center p-6 relative overflow-hidden group">
+
+
+                                            <span className="text-primary font-black text-2xl md:text-3xl leading-none mb-1 tracking-tighter uppercase">
                                                 PIN
                                                 <span className="font-light text-slate-500 block text-[10px] mt-2 tracking-[0.4em] indent-[0.4em]">MODE</span>
                                             </span>
@@ -475,7 +462,7 @@ export default function NPulsePage() {
                                     <div className="absolute -top-1 -right-1 w-6 h-6 border-t-2 border-r-2 border-primary/50 z-20" />
                                     <div className="absolute -bottom-1 -left-1 w-6 h-6 border-b-2 border-l-2 border-primary/50 z-20" />
 
-                                    <div className="aspect-[1.5/1] relative overflow-hidden flex items-center justify-center bg-white border border-slate-200 group-hover:border-primary/40 transition-all duration-700 shadow-sm rounded-xl">
+                                    <div className="aspect-[1.5/1] relative overflow-hidden flex items-center justify-center bg-white border border-slate-200 group-hover:border-primary/40 transition-all duration-700 rounded-xl">
                                         <img
                                             src="/images/npulse_prime/pin2.png"
                                             alt="Repeat Mode"
@@ -489,6 +476,8 @@ export default function NPulsePage() {
                                             transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
                                         />
 
+
+
                                         {/* Corner Accents */}
                                         <div className="absolute top-4 right-4 w-10 h-[1px] bg-primary/30 z-20" />
                                         <div className="absolute top-4 right-4 w-[1px] h-10 bg-primary/30 z-20" />
@@ -496,10 +485,7 @@ export default function NPulsePage() {
 
                                     <div className="mt-6 flex flex-col items-end text-right">
                                         <span className="text-[9px] font-black text-primary/60 tracking-[0.4em] uppercase mb-1">Module Beta 02</span>
-                                        <div className="flex items-center gap-3">
                                             <h4 className="text-slate-900 font-black text-lg tracking-widest uppercase">REPEAT PULSE GUI</h4>
-                                            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                                        </div>
                                     </div>
                                 </motion.div>
                             </div>
@@ -517,7 +503,7 @@ export default function NPulsePage() {
                                 viewport={{ once: true }}
                                 className="text-center mb-24"
                             >
-                                <div className="inline-block px-4 py-1.5 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-white shadow-sm leading-none">
+                                <div className="inline-block px-4 py-1.5 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-white leading-none">
                                     Module Extension
                                 </div>
                                 <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6 uppercase leading-tight">
@@ -540,10 +526,7 @@ export default function NPulsePage() {
                                         viewport={{ once: true }}
                                         className="group flex flex-col items-center relative"
                                     >
-                                        {/* Technical Label behind */}
-                                        <div className="absolute -top-10 text-[60px] font-black text-slate-900/[0.03] tracking-tighter select-none pointer-events-none group-hover:text-primary/[0.05] transition-colors duration-700">
-                                            {item.size.split(' ')[0]}
-                                        </div>
+
 
                                         {/* HUD Container */}
                                         <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center mb-12">
@@ -563,7 +546,7 @@ export default function NPulsePage() {
                                             <div className="absolute inset-12 rounded-full bg-primary/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
                                             {/* Background Circle */}
-                                            <div className="absolute inset-4 rounded-full bg-white border border-slate-200 shadow-sm group-hover:border-primary/30 transition-colors duration-500" />
+                                            <div className="absolute inset-4 rounded-full bg-white border border-slate-200 group-hover:border-primary/30 transition-colors duration-500" />
 
                                             {/* Handpiece Image */}
                                             <div className="relative w-[130%] h-48 flex items-center justify-center z-10">
@@ -582,7 +565,7 @@ export default function NPulsePage() {
                                             </div>
 
                                             {/* ID Badge */}
-                                            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-white text-[8px] font-black tracking-[0.3em] indent-[0.3em] rounded-full z-30 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0 whitespace-nowrap shadow-sm">
+                                            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-white text-[8px] font-black tracking-[0.3em] indent-[0.3em] rounded-full z-30 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0 whitespace-nowrap">
                                                 {item.id}
                                             </div>
                                         </div>
@@ -604,8 +587,14 @@ export default function NPulsePage() {
                             </div>
                         </div>
 
-                        {/* Features & Benefits (Attached below Handpieces) */}
-                        <div className="mt-32 pt-24 border-t border-slate-200">
+                    </div>
+                </div>
+            </section>
+
+            {/* ④ Features & Benefits Section */}
+            <section className="relative py-32 bg-white overflow-hidden">
+                <div className="max-w-screen-xl mx-auto px-6 relative z-10">
+                    <div className="pt-24 border-t border-slate-200">
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
 
                                 {/* 주요 특징 (Key Features) */}
@@ -637,9 +626,9 @@ export default function NPulsePage() {
                                                 desc: '점, 잡티 제거뿐만 아니라 흉터 복원, 미세 박피 등 목적에 맞는 맞춤형 시술이 가능합니다.'
                                             }
                                         ].map((item, idx) => (
-                                            <div key={idx} className="bg-slate-50 border border-slate-200 shadow-sm p-6 hover:border-primary/30 transition-all duration-500 group min-h-[140px] flex flex-col justify-center rounded-xl">
+                                            <div key={idx} className="bg-slate-50 border border-slate-200 p-6 hover:border-primary/30 transition-all duration-500 group min-h-[140px] flex flex-col justify-center rounded-xl">
                                                 <h4 className="text-slate-900 font-bold text-lg mb-2 group-hover:text-primary transition-colors flex items-center gap-3">
-                                                    <span className="w-1 h-4 bg-primary/40 rounded-full" />
+                                                    <span className="w-1 h-4 bg-primary/40 rounded-full group-hover:bg-primary transition-colors duration-500" />
                                                     {item.title}
                                                 </h4>
                                                 <p className="text-slate-600 text-base leading-relaxed break-keep">
@@ -679,9 +668,9 @@ export default function NPulsePage() {
                                                 desc: '아주 작은 점이나 깊은 흉터도 정밀하게 치료하여 만족도가 높습니다.'
                                             }
                                         ].map((item, idx) => (
-                                            <div key={idx} className="bg-slate-50 border border-slate-200 shadow-sm p-6 hover:border-primary/30 transition-all duration-500 group min-h-[140px] flex flex-col justify-center rounded-xl">
+                                            <div key={idx} className="bg-slate-50 border border-slate-200 p-6 hover:border-primary/30 transition-all duration-500 group min-h-[140px] flex flex-col justify-center rounded-xl">
                                                 <h4 className="text-slate-900 font-bold text-lg mb-2 group-hover:text-primary transition-colors flex items-center gap-3">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-all shadow-none" />
+                                                    <span className="w-1 h-4 bg-primary/40 rounded-full group-hover:bg-primary transition-colors duration-500" />
                                                     {item.title}
                                                 </h4>
                                                 <p className="text-slate-600 text-base leading-relaxed break-keep">
@@ -696,7 +685,6 @@ export default function NPulsePage() {
                         </div>
 
                     </div>
-                </div>
             </section>
 
 
