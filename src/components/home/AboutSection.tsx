@@ -23,12 +23,12 @@ export default function AboutSection() {
         <div className="glass-panel w-full h-full flex flex-col justify-start p-8 md:p-16 lg:p-20 pt-24 md:pt-32 relative overflow-hidden">
           {/* Tech Accent Elements inside panel */}
           <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#00B7F1] to-transparent opacity-70" />
-          <div className="absolute top-0 left-0 w-[4px] h-[100px] bg-[#00B7F1] shadow-[0_0_15px_#00B7F1]" />
+          <div className="absolute top-0 left-0 w-[4px] h-[100px] bg-[#00B7F1]" />
 
           {/* Main Header Text (Top) */}
           <div className="w-full max-w-4xl">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight mb-20 tracking-tight tech-border-l pl-6 whitespace-normal md:whitespace-nowrap">
-              다년간의 업적은 청안의<br /><span className="text-primary text-glow">신뢰성</span>과 진실성을 말해줍니다.
+              다년간의 업적은 청안의<br /><span className="text-primary">신뢰성</span>과 진실성을 말해줍니다.
             </h2>
           </div>
 
@@ -60,9 +60,9 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="relative"
         >
-          <div className="absolute -inset-4 bg-[#00B7F1]/5 blur-2xl rounded-full" />
-          <h3 className="text-transparent bg-clip-text bg-gradient-to-b from-slate-800 via-slate-600 to-slate-400 text-4xl md:text-6xl font-black tracking-tighter leading-[1] drop-shadow-[0_0_30px_rgba(0,183,241,0.2)]">
-            DO WHAT IS <span className="text-primary text-glow font-inter">RIGHT</span>,<br />NOT WHAT IS EASY.
+
+          <h3 className="text-transparent bg-clip-text bg-gradient-to-b from-slate-800 via-slate-600 to-slate-400 text-4xl md:text-6xl font-black tracking-tighter leading-[1]">
+            DO WHAT IS <span className="text-primary font-inter">RIGHT</span>,<br />NOT WHAT IS EASY.
           </h3>
           <div className="mt-6 flex justify-end gap-2">
             {[...Array(5)].map((_, i) => (
