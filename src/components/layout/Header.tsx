@@ -36,18 +36,18 @@ export default function Header() {
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'site-header-scrolled border-b border-sky-100' : 'bg-transparent'
           }`}
       >
-        <div className="max-w-screen-xl mx-auto px-6 h-20 md:h-28 flex justify-between items-center relative z-20">
+        <div className="max-w-screen-xl mx-auto px-4 md:px-6 h-20 md:h-28 flex justify-between items-center relative z-20">
           {/* Logo */}
-          <div className="md:w-80 flex-shrink-0">
+          <div className="flex-1 flex justify-start items-center min-w-0">
             <Link
               href="/#home"
-              className="hover:opacity-100 transition-all duration-500 group flex items-center"
+              className="hover:opacity-100 transition-all duration-500 group flex items-center p-1 -ml-12"
               onClick={() => setIsMenuOpen(false)}
             >
               <img
                 src="/images/청안로고.png"
                 alt="CHEONGAN"
-                className={`h-[70px] md:h-[100px] w-auto object-contain transition-all duration-500 ${scrolled ? 'brightness-0' : 'brightness-0 invert'}`}
+                className={`h-[56px] md:h-[100px] w-auto object-contain transition-all duration-500 ${scrolled ? 'brightness-0' : 'brightness-0 invert'}`}
               />
             </Link>
           </div>
@@ -89,22 +89,22 @@ export default function Header() {
           </nav>
 
           {/* Right Area */}
-          <div className="md:w-80 flex justify-end flex-shrink-0">
+          <div className="flex-shrink-0 md:w-80 flex justify-end items-center ml-4">
             <div className={`hidden md:flex items-center space-x-2 font-bold cursor-pointer hover:text-primary transition ${scrolled ? 'text-slate-800' : 'text-white'}`}>
               <span>KOR</span>
-              <span className="text-xs">▾</span>
+              <span>▾</span>
             </div>
 
             <button
-              className={`md:hidden p-2 focus:outline-none z-[70] ${scrolled ? 'text-slate-800' : 'text-white'}`}
+              className={`md:hidden p-2 -mr-2 focus:outline-none z-[70] ${scrolled ? 'text-slate-800' : 'text-white'}`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle Menu"
             >
               <AnimatePresence mode="wait">
                 {isMenuOpen ? (
-                  <motion.svg key="close" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></motion.svg>
+                  <motion.svg key="close" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></motion.svg>
                 ) : (
-                  <motion.svg key="menu" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></motion.svg>
+                  <motion.svg key="menu" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></motion.svg>
                 )}
               </AnimatePresence>
             </button>
@@ -124,7 +124,7 @@ export default function Header() {
           >
             {/* Top Bar Logo & Close Button */}
             <div className="absolute top-0 left-0 w-full h-20 md:h-28 flex items-center justify-between px-6 border-b border-sky-100">
-              <img src="/images/청안로고.png" alt="CHEONGAN" className="h-[70px] w-auto brightness-0" />
+              <img src="/images/청안로고.png" alt="CHEONGAN" className="h-[56px] w-auto brightness-0" />
               <button
                 onClick={() => setIsMenuOpen(false)}
                 className="p-2 text-slate-800 hover:text-primary transition-colors focus:outline-none"
