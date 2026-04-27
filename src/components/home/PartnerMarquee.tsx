@@ -51,7 +51,7 @@ export default function PartnerMarquee() {
         >
           <span className="hero-title-main">Our</span> <span className="hero-title-highlight">Partners</span> <span className="hero-title-main">& Clients</span>
         </motion.h2>
-        <div className="w-20 h-[2px] bg-primary mx-auto mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+        <div className="w-20 h-[2px] bg-primary mx-auto mb-8" />
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -129,7 +129,7 @@ export default function PartnerMarquee() {
             {[...PARTNERS_ROW_2, ...PARTNERS_ROW_2, ...PARTNERS_ROW_2].map((partner, idx) => (
               <SwiperSlide key={`row2-${idx}`} className="!w-auto px-12">
                 <div className={`text-xl md:text-3xl font-black tracking-tighter transition-all duration-500 hover:text-slate-900 group relative ${partner.className}`}>
-                  <span className="bg-clip-text text-transparent bg-gradient-to-b from-slate-400/40 to-slate-400/10 group-hover:from-slate-800 group-hover:to-primary group-hover:text-glow transition-all duration-500">
+                  <span className="bg-clip-text text-transparent bg-gradient-to-b from-slate-400/40 to-slate-400/10 group-hover:from-slate-800 group-hover:to-primary transition-all duration-500">
                     {partner.name}
                   </span>
                 </div>

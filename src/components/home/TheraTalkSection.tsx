@@ -7,8 +7,7 @@ const TheraTalkSection = () => {
         <section className="relative py-28 bg-sky-50 overflow-hidden border-t border-sky-100">
             {/* 배경 데코레이션 */}
             <div className="absolute inset-0 bg-tech-dots opacity-30 mix-blend-multiply pointer-events-none" />
-            <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
-            <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
+
 
             <div className="max-w-screen-xl mx-auto px-6 relative z-10">
                 {/* 상단 헤더 */}
@@ -26,7 +25,7 @@ const TheraTalkSection = () => {
                         <span className="hero-title-main">Perfect Consultation Environment</span><br />
                         <span className="hero-title-highlight text-primary">TheraTalk Solution</span>
                     </h2>
-                    <div className="w-20 h-[2px] bg-primary mx-auto mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+                    <div className="w-20 h-[2px] bg-primary mx-auto mb-8" />
                 </motion.div>
 
                 {/* (1) Pain Points Section */}
@@ -38,7 +37,7 @@ const TheraTalkSection = () => {
                         className="mb-12"
                     >
                         <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 flex items-center gap-3">
-                            <span className="w-1.5 h-1.5 rounded-full bg-red-500/60 shadow-[0_0_10px_rgba(239,68,68,0.5)]" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-red-500/60" />
                             병원의 현실적인 고민 (Pain Points)
                         </h3>
                     </motion.div>
@@ -74,9 +73,9 @@ const TheraTalkSection = () => {
                     viewport={{ once: true }}
                     className="relative mb-32 p-1 md:p-1.5 rounded-2xl bg-gradient-to-br from-primary/20 via-sky-100 to-transparent"
                 >
-                    <div className="bg-white rounded-2xl p-8 md:p-16 relative overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-sky-100">
+                    <div className="bg-white rounded-2xl p-8 md:p-16 relative overflow-hidden border border-sky-100">
                         {/* 장식용 글로우 */}
-                        <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 blur-[100px] rounded-full" />
+
 
                         <div className="relative z-10 max-w-4xl mx-auto text-center">
                             <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-8 leading-tight break-keep">
@@ -117,7 +116,7 @@ const TheraTalkSection = () => {
                         className="mb-12"
                     >
                         <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 flex items-center gap-3">
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary/60 shadow-[0_0_10px_rgba(0,183,241,0.5)]" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary/60" />
                             기대 효과 (Benefits)
                         </h3>
                     </motion.div>
@@ -144,7 +143,7 @@ const TheraTalkSection = () => {
                                 viewport={{ once: true }}
                                 className="group"
                             >
-                                <div className="p-8 h-full border border-sky-100 bg-white hover:bg-sky-50 hover:border-primary/30 shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-500 rounded-xl flex flex-col justify-between">
+                                <div className="p-8 h-full border border-sky-100 bg-white hover:bg-sky-50 hover:border-primary/30 transition-all duration-500 rounded-xl flex flex-col justify-between">
                                     <h4 className="text-slate-900 font-bold text-lg md:text-xl mb-4 group-hover:text-primary transition-colors">
                                         {item.title}
                                     </h4>
