@@ -580,7 +580,7 @@ export default function NPulsePage() {
             {/* ⑥ Ultra Pulse Technology Section (Standardized Tech Style) */}
             <section id="ultra-pulse-tech" className="relative py-28 bg-white overflow-hidden border-t border-sky-100">
                 <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none mix-blend-multiply" />
-                <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
+
 
                 <div className="max-w-screen-xl mx-auto px-6 relative z-10">
                     {/* 상단 라벨 */}
@@ -619,7 +619,7 @@ export default function NPulsePage() {
                                         { title: 'ELITE BEAM QUALITY', desc: '주변 조직 결손 없이 샤프하게 조사되는\n최상급 퀄리티의 레이저 빔' },
                                         { title: 'PRECISION CONTROL', desc: 'Frequency와 Duration 조절을 통한\n차원이 다른 섬세한 에너지 전달' }
                                     ].map((item, i) => (
-                                        <div key={i} className="bg-slate-50 border border-slate-200 shadow-sm rounded-2xl p-6 group hover:border-primary/20 transition-all duration-500">
+                                        <div key={i} className="bg-slate-50 border border-slate-200 rounded-2xl p-6 group hover:border-primary/20 transition-all duration-500">
                                             <div className="flex items-center gap-3 mb-4">
                                                 <div className="w-1 h-3 bg-primary/40 group-hover:bg-primary transition-all duration-500" />
                                                 <h4 className="text-primary/70 font-black text-[11px] tracking-widest uppercase">{item.title}</h4>
@@ -643,7 +643,7 @@ export default function NPulsePage() {
                                 className="relative aspect-square max-w-[500px] mx-auto"
                             >
                                 {/* 중앙 코어 에너지 효과 */}
-                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-primary/10 blur-3xl animate-pulse" />
+
 
                                 {/* 3개 코어 연결선 */}
                                 <svg viewBox="0 0 400 400" className="absolute inset-0 w-full h-full opacity-30 pointer-events-none">
@@ -656,13 +656,12 @@ export default function NPulsePage() {
                                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                                     {/* 상단: 파워보드 */}
                                     <motion.div
-                                        initial={{ borderColor: "rgba(0, 183, 241, 0.2)", boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)" }}
+                                        initial={{ borderColor: "rgba(0, 183, 241, 0.2)" }}
                                         whileHover={{
                                             borderColor: "#00B7F1",
-                                            boxShadow: "0 0 50px rgba(0, 183, 241, 0.6)"
                                         }}
                                         transition={{ duration: 0 }}
-                                        className="absolute -top-7 w-36 h-36 rounded-full bg-white border-slate-200 shadow-sm flex items-center justify-center text-center p-4 cursor-pointer pointer-events-auto z-30 border"
+                                        className="absolute -top-7 w-36 h-36 rounded-full bg-white border-slate-200 flex items-center justify-center text-center p-4 cursor-pointer pointer-events-auto z-30 border"
                                     >
                                         <div className="space-y-1">
                                             <div className="text-primary font-black text-[10px] tracking-widest">UNIT 01</div>
@@ -671,13 +670,12 @@ export default function NPulsePage() {
                                     </motion.div>
                                     {/* 좌하단: 글래스튜브 */}
                                     <motion.div
-                                        initial={{ borderColor: "rgba(0, 183, 241, 0.2)", boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)" }}
+                                        initial={{ borderColor: "rgba(0, 183, 241, 0.2)" }}
                                         whileHover={{
                                             borderColor: "#00B7F1",
-                                            boxShadow: "0 0 50px rgba(0, 183, 241, 0.6)"
                                         }}
                                         transition={{ duration: 0 }}
-                                        className="absolute bottom-10 left-0 w-36 h-36 rounded-full bg-white border-slate-200 shadow-sm flex items-center justify-center text-center p-4 cursor-pointer pointer-events-auto z-30 border"
+                                        className="absolute bottom-10 left-0 w-36 h-36 rounded-full bg-white border-slate-200 flex items-center justify-center text-center p-4 cursor-pointer pointer-events-auto z-30 border"
                                     >
                                         <div className="space-y-1">
                                             <div className="text-primary font-black text-[10px] tracking-widest">UNIT 02</div>
@@ -686,13 +684,12 @@ export default function NPulsePage() {
                                     </motion.div>
                                     {/* 우하단: 레귤레이터 */}
                                     <motion.div
-                                        initial={{ borderColor: "rgba(0, 183, 241, 0.2)", boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)" }}
+                                        initial={{ borderColor: "rgba(0, 183, 241, 0.2)" }}
                                         whileHover={{
                                             borderColor: "#00B7F1",
-                                            boxShadow: "0 0 50px rgba(0, 183, 241, 0.6)"
                                         }}
                                         transition={{ duration: 0 }}
-                                        className="absolute bottom-10 right-0 w-36 h-36 rounded-full bg-white border-slate-200 shadow-sm flex items-center justify-center text-center p-4 cursor-pointer pointer-events-auto z-30 border"
+                                        className="absolute bottom-10 right-0 w-36 h-36 rounded-full bg-white border-slate-200 flex items-center justify-center text-center p-4 cursor-pointer pointer-events-auto z-30 border"
                                     >
                                         <div className="space-y-1">
                                             <div className="text-primary font-black text-[10px] tracking-widest">UNIT 03</div>
@@ -701,8 +698,8 @@ export default function NPulsePage() {
                                     </motion.div>
 
                                     {/* 중앙 에너지 코어 노드 */}
-                                    <div className="w-4 h-4 bg-primary rounded-full shadow-[0_0_20px_#00B7F1] animate-ping opacity-40" />
-                                    <div className="absolute w-2 h-2 bg-white rounded-full shadow-[0_0_10px_#fff] z-20" />
+                                    <div className="w-4 h-4 bg-primary rounded-full animate-ping opacity-40" />
+                                    <div className="absolute w-2 h-2 bg-white rounded-full z-20" />
                                 </div>
                             </motion.div>
                         </div>
@@ -713,7 +710,7 @@ export default function NPulsePage() {
             {/* ⑦ Indication Section */}
             <section id="indication" className="relative py-28 bg-sky-50 overflow-hidden border-t border-sky-100">
                 <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none mix-blend-multiply" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
+
 
                 <div className="max-w-screen-xl mx-auto px-6 relative z-10 text-center">
                     <motion.div
@@ -767,7 +764,7 @@ export default function NPulsePage() {
                                     viewport={{ once: true }}
                                     className="flex flex-col items-center group cursor-pointer"
                                 >
-                                    <div className="w-full max-w-[160px] md:max-w-[190px] aspect-square relative rounded-full mb-6 p-1.5 bg-gradient-to-br from-slate-200 via-transparent to-transparent flex items-center justify-center overflow-hidden border border-slate-200 group-hover:border-primary/50 group-hover:shadow-[0_10px_40px_rgba(0,0,0,0.05)] transition-all duration-500 bg-white shadow-sm">
+                                    <div className="w-full max-w-[160px] md:max-w-[190px] aspect-square relative rounded-full mb-6 p-1.5 bg-gradient-to-br from-slate-200 via-transparent to-transparent flex items-center justify-center overflow-hidden border border-slate-200 group-hover:border-primary/50 transition-all duration-500 bg-white">
                                         {/* Image */}
                                         <div className="absolute inset-[3px] rounded-full overflow-hidden bg-slate-50 flex items-center justify-center border border-slate-200">
                                             {item.img ? (
@@ -794,7 +791,7 @@ export default function NPulsePage() {
             {/* Specification Section - Premium HUD 리뉴얼 */}
             <section className="py-32 bg-white overflow-hidden relative">
                 {/* 배경 네온 글로우 */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
+
 
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-7xl mx-auto">
@@ -823,7 +820,7 @@ export default function NPulsePage() {
                                 <img
                                     src="images/machine/엔펄스pro 사진.png"
                                     alt="N-Pulse Pro"
-                                    className="absolute bottom-0 -right-[390px] w-[1100px] max-w-none object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,183,241,0.2)] z-20 hover:scale-105 transition-transform duration-700 ease-out origin-bottom"
+                                    className="absolute bottom-0 -right-[390px] w-[1100px] max-w-none object-contain object-bottom z-20 hover:scale-105 transition-transform duration-700 ease-out origin-bottom"
                                 />
                             </motion.div>
 
@@ -834,7 +831,7 @@ export default function NPulsePage() {
                                 transition={{ duration: 0.8, delay: 0.2 }}
                                 className="w-full lg:w-1/2 order-2 overflow-x-auto self-center z-30"
                             >
-                                <div className="shadow-sm active-table-container">
+                                <div className="active-table-container">
                                     <table className="w-full border-collapse text-[14px] md:text-[15px] border border-slate-200 text-center min-w-[500px] bg-white backdrop-blur-md">
                                         <thead>
                                             <tr className="h-16">
@@ -863,7 +860,7 @@ export default function NPulsePage() {
                                                 {/* 사진과 똑같은 Energy (FRX) 강조 디자인 - 프리미엄 블루 박스 */}
                                                 <td className="border border-slate-200 p-0 bg-white">
                                                     <div className="flex h-16 w-full items-stretch">
-                                                        <div className="flex-1 bg-primary text-white flex items-center justify-center font-black text-[12px] uppercase tracking-tighter px-2 shadow-sm">
+                                                        <div className="flex-1 bg-primary text-white flex items-center justify-center font-black text-[12px] uppercase tracking-tighter px-2">
                                                             Energy (FRX)
                                                         </div>
                                                         <div className="flex-1 flex items-center justify-center px-2 font-black text-slate-900">
@@ -903,7 +900,7 @@ export default function NPulsePage() {
                                 <img
                                     src="images/machine/엔펄스fx 사진.png"
                                     alt="N-Pulse FX"
-                                    className="absolute bottom-0 -left-12 h-[102%] max-w-none object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,183,241,0.2)] z-20 hover:scale-105 transition-transform duration-700 ease-out origin-bottom"
+                                    className="absolute bottom-0 -left-12 h-[102%] max-w-none object-contain object-bottom z-20 hover:scale-105 transition-transform duration-700 ease-out origin-bottom"
                                 />
                             </motion.div>
                         </div>

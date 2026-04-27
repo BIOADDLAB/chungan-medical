@@ -61,7 +61,7 @@ export default function SylfirmXPage() {
       {/* ② Sylfirm-X Overview Section (Orchestration Standard) */}
       <section id="content" className="relative py-28 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none mix-blend-multiply" />
-        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
+
         <div className="absolute bottom-0 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
@@ -86,11 +86,11 @@ export default function SylfirmXPage() {
               className="relative order-2 lg:order-1 flex justify-center"
             >
               <div className="relative group">
-                <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full scale-125 opacity-40 group-hover:opacity-60 transition duration-1000" />
+
                 <img
                   src="images/machine/실펌x 사진1.png"
                   alt="SYLFIRM X Advanced System"
-                  className="relative z-10 w-full max-w-[200px] md:max-w-[250px] h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,183,241,0.2)] group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="relative z-10 w-full max-w-[200px] md:max-w-[250px] h-auto object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
             </motion.div>
@@ -107,13 +107,13 @@ export default function SylfirmXPage() {
                     <span className="hero-title-main">WHAT IS</span><br />
                     <span className="hero-title-main text-primary">SYLFIRM - X</span>
                   </h2>
-                  <div className="w-20 h-[2px] bg-primary mb-8 shadow-[0_0_10px_rgba(0,183,241,0.5)]" />
+                  <div className="w-20 h-[2px] bg-primary mb-8" />
                 </div>
 
                 <div className="space-y-10">
                   <div className="flex gap-6 items-start">
                     <div className="shrink-0 w-2 h-7 md:h-8 flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)]" />
+                      <div className="w-2 h-2 rounded-full bg-primary" />
                     </div>
                     <div>
                       <p className="text-slate-900 text-lg md:text-xl font-black tracking-tight mb-2 uppercase font-inter leading-none h-7 md:h-8 flex items-center">PRECISION RF DELIVERY</p>
@@ -124,7 +124,7 @@ export default function SylfirmXPage() {
                   </div>
                   <div className="flex gap-6 items-start">
                     <div className="shrink-0 w-2 h-7 md:h-8 flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)]" />
+                      <div className="w-2 h-2 rounded-full bg-primary" />
                     </div>
                     <div>
                       <p className="text-slate-900 text-lg md:text-xl font-black tracking-tight mb-2 uppercase font-inter leading-none h-7 md:h-8 flex items-center">VERSATILE SOLUTIONS</p>
@@ -135,7 +135,7 @@ export default function SylfirmXPage() {
                   </div>
                   <div className="flex gap-6 items-start">
                     <div className="shrink-0 w-2 h-7 md:h-8 flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)]" />
+                      <div className="w-2 h-2 rounded-full bg-primary" />
                     </div>
                     <div>
                       <p className="text-slate-900 text-lg md:text-xl font-black tracking-tight mb-2 uppercase font-inter leading-none h-7 md:h-8 flex items-center">8 CUSTOM MODES</p>
@@ -181,7 +181,7 @@ export default function SylfirmXPage() {
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               viewport={{ once: true }}
               style={{ originX: 0.5 }}
-              className="w-20 h-[2px] bg-primary mx-auto mb-8 shadow-[0_0_10px_rgba(0,183,241,0.5)]"
+              className="w-20 h-[2px] bg-primary mx-auto mb-8"
             />
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -201,7 +201,7 @@ export default function SylfirmXPage() {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.2 }}
-            className="max-w-screen-xl mx-auto border border-sky-100 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.05)] rounded-2xl overflow-hidden"
+            className="max-w-screen-xl mx-auto border border-sky-100 bg-white rounded-2xl overflow-hidden"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-slate-200 items-stretch">
 
@@ -310,9 +310,9 @@ export default function SylfirmXPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
                 viewport={{ once: true }}
-                className="bg-white border border-sky-100 shadow-sm p-8 md:p-10 flex flex-col items-center group hover:bg-sky-50 transition-all duration-500 rounded-3xl"
+                className="bg-white border border-sky-100 p-8 md:p-10 flex flex-col items-center group hover:bg-sky-50 transition-all duration-500 rounded-3xl"
               >
-                <div className="shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-[#D1D9F0] to-[#E2E8F7] flex items-center justify-center shadow-[0_10px_30px_rgba(209,217,240,0.2)] mb-10 group-hover:scale-110 transition-transform duration-500">
+                <div className="shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-[#D1D9F0] to-[#E2E8F7] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500">
                   <span className="text-4xl font-black text-[#1A1C23] font-inter leading-none">300</span>
                 </div>
                 <div className="text-center mb-8 h-[70px] flex items-center justify-center">
@@ -344,9 +344,9 @@ export default function SylfirmXPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-sky-50 border border-sky-100 shadow-sm p-8 md:p-10 flex flex-col items-center group hover:bg-sky-100 transition-all duration-500 rounded-3xl"
+                className="bg-white border border-sky-100 p-8 md:p-10 flex flex-col items-center group hover:bg-sky-50 transition-all duration-500 rounded-3xl"
               >
-                <div className="shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-[#D1D9F0] to-[#E2E8F7] flex items-center justify-center shadow-[0_10px_30px_rgba(209,217,240,0.2)] mb-10 group-hover:scale-110 transition-transform duration-500">
+                <div className="shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-[#D1D9F0] to-[#E2E8F7] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500">
                   <span className="text-6xl font-black text-[#1A1C23] font-inter leading-none">C</span>
                 </div>
                 <div className="text-center mb-8 h-[70px] flex items-center justify-center">
@@ -378,9 +378,9 @@ export default function SylfirmXPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="bg-white border border-sky-100 shadow-sm p-8 md:p-10 flex flex-col items-center group hover:bg-sky-50 transition-all duration-500 rounded-3xl"
+                className="bg-white border border-sky-100 p-8 md:p-10 flex flex-col items-center group hover:bg-sky-50 transition-all duration-500 rounded-3xl"
               >
-                <div className="shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-[#D1D9F0] to-[#E2E8F7] flex items-center justify-center shadow-[0_10px_30px_rgba(209,217,240,0.2)] mb-10 group-hover:scale-110 transition-transform duration-500">
+                <div className="shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-[#D1D9F0] to-[#E2E8F7] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500">
                   <span className="text-6xl font-black text-[#1A1C23] font-inter leading-none">P</span>
                 </div>
                 <div className="text-center mb-8 h-[70px] flex items-center justify-center">
