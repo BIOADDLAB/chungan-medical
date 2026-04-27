@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 
 export default function ConsultingOrbit() {
   return (
-    <section id="consulting" className="consulting-section items-center flex flex-col pt-12 pb-16 relative overflow-hidden bg-white">
-      {/* Background Decorative Tech Elements */}
-      <div className="absolute top-0 left-0 w-full h-full bg-tech-grid opacity-10 pointer-events-none" />
+    <section id="consulting" className="consulting-section items-center flex flex-col pt-24 md:pt-32 pb-24 md:pb-32 relative overflow-hidden bg-white">
+      {/* Background Decorative Tech Elements 제거 */}
+      <div className="absolute inset-0 pointer-events-none" />
 
 
       <div className="max-w-screen-xl mx-auto px-6 w-full text-center relative z-10">
@@ -18,13 +18,13 @@ export default function ConsultingOrbit() {
           viewport={{ once: true }}
           className="mb-6"
         >
-          <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
+          <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-white">
             Service Protocol
           </div>
           <h2 className="text-slate-900 text-3xl md:text-5xl font-black mb-6 tracking-tight">
             <span className="hero-title-main">병의원 개원컨설팅</span> / <span className="hero-title-highlight">TURN-KEY</span>
           </h2>
-          <div className="w-20 h-[2px] bg-primary mx-auto mb-8" />
+          <div className="w-20 h-[2px] bg-primary mx-auto mb-8 shadow-none" />
           <p className="text-slate-600 text-lg font-medium max-w-2xl mx-auto leading-relaxed break-keep px-4">
             청안의 원팀 서비스는 원장님의 불안 <br className="md:hidden" />
             요소를 줄이고 <span className="text-slate-900">시간 가치는 극대화</span> <br className="md:hidden" />
