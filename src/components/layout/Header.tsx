@@ -123,14 +123,16 @@ export default function Header() {
             className="fixed inset-0 bg-white z-[60] md:hidden flex flex-col pt-20"
           >
             {/* Top Bar Logo & Close Button */}
-            <div className="absolute top-0 left-0 w-full h-20 md:h-28 flex items-center justify-between px-6 border-b border-sky-100">
-              <img src="/images/청안로고.png" alt="CHEONGAN" className="h-[56px] w-auto brightness-0" />
+            <div className="absolute top-0 left-0 w-full h-20 md:h-28 flex items-center justify-between px-4 border-b border-sky-100">
+              <div className="p-1 -ml-12">
+                <img src="/images/청안로고.png" alt="CHEONGAN" className="h-[56px] w-auto brightness-0" />
+              </div>
               <button
                 onClick={() => setIsMenuOpen(false)}
-                className="p-2 text-slate-800 hover:text-primary transition-colors focus:outline-none"
+                className="p-2 -mr-4 text-slate-800 hover:text-primary transition-colors focus:outline-none"
                 aria-label="Close Menu"
               >
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="18" y1="6" x2="6" y2="18"></line>
                   <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
