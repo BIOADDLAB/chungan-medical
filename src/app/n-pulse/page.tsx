@@ -225,7 +225,7 @@ export default function NPulsePage() {
             <section id="advanced-tech" className="relative py-28 bg-sky-50 overflow-hidden">
                 {/* 테크 배경 장식 */}
                 <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none mix-blend-multiply" />
-                <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-[130px] rounded-full pointer-events-none" />
+
 
                 <div className="max-w-screen-xl mx-auto px-6 relative z-10">
                     {/* 상단 라벨 */}
@@ -279,7 +279,7 @@ export default function NPulsePage() {
                                         className="group"
                                     >
                                         <div className="flex items-center gap-5 mb-4">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary transition-all duration-500 shadow-[0_0_10px_rgba(0,183,241,0)] group-hover:shadow-[0_0_10px_rgba(0,183,241,1)]" />
+                                            <div className="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary transition-all duration-500" />
                                             <h3 className="text-slate-900 font-black text-2xl tracking-tight group-hover:text-primary transition-colors duration-500">{item.title}</h3>
                                         </div>
                                         <p className="text-slate-600 text-lg font-medium leading-relaxed pl-6.5 break-keep border-l border-slate-200 group-hover:border-primary/20 transition-colors duration-500">
@@ -299,7 +299,7 @@ export default function NPulsePage() {
                             className="lg:col-span-6 relative flex justify-center lg:justify-start"
                         >
                             {/* 푸른 빛의 이중 테두리/그라데이션 싹 제거, 깔끔한 단일 컨테이너로 통일 */}
-                            <div className="relative w-full max-w-sm lg:max-w-md lg:ml-6 group rounded-xl border border-slate-200 bg-white p-6 md:p-8 hover:border-primary/30 hover:shadow-[0_10px_40px_rgba(0,0,0,0.05)] hover:scale-[1.02] transition-all duration-500 cursor-pointer overflow-hidden">
+                            <div className="relative w-full max-w-sm lg:max-w-md lg:ml-6 group rounded-xl border border-slate-200 bg-white p-6 md:p-8 hover:border-primary/30 hover:scale-[1.02] transition-all duration-500 cursor-pointer overflow-hidden">
                                 {/* 텍스트 라벨 오버레이 (상단) */}
                                 <div className="absolute top-8 left-0 w-full z-20 pointer-events-none">
                                     <span className="absolute left-[30%] -translate-x-1/2 text-slate-500 text-sm md:text-base font-medium tracking-tight">Other</span>
