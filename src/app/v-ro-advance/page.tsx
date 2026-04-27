@@ -25,7 +25,7 @@ export default function VRoAdvancePage() {
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white drop-shadow-xl"
+            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white"
           >
             <span className="hero-title-main !text-white">V-RO - </span>
             <span className="hero-title-highlight ml-0 md:ml-4">ADVANCE</span>
@@ -37,8 +37,8 @@ export default function VRoAdvancePage() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col items-center"
           >
-            <div className="w-16 h-[2px] bg-primary mb-6 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-            <p className="text-white/90 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-3xl drop-shadow-md">
+            <div className="w-16 h-[2px] bg-primary mb-6" />
+            <p className="text-white/90 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-3xl">
               합리적인 피부미용 의료 장비, <span className="text-primary font-bold">정확한 기술의 시작</span>
             </p>
           </motion.div>
@@ -48,7 +48,7 @@ export default function VRoAdvancePage() {
           <Link
             href="#overview"
             aria-label="Scroll down"
-            className="inline-flex justify-center items-center w-12 h-12 border border-slate-300 rounded-full hover:bg-slate-100 hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-white/50 backdrop-blur-sm"
+            className="inline-flex justify-center items-center w-12 h-12 border border-slate-300 rounded-full hover:bg-slate-100 hover:text-black transition duration-300 animate-bounce group bg-white/50 backdrop-blur-sm"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-slate-700 group-hover:text-black transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -60,8 +60,7 @@ export default function VRoAdvancePage() {
       {/* ② + ③ MERGED: V-RO Lifting Solution × Hybrid Core System */}
       <section id="overview" className="relative py-28 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-tech-grid opacity-8 pointer-events-none" />
-        <div className="absolute top-1/3 left-1/4 w-[800px] h-[800px] bg-primary/[0.04] blur-[160px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-primary/[0.03] blur-[120px] rounded-full pointer-events-none" />
+
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
 

@@ -51,9 +51,9 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white drop-shadow-xl font-inter"
+            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white font-inter"
           >
-            CONTACT <span className="text-primary drop-shadow-sm">US</span>
+            CONTACT <span className="text-primary">US</span>
           </motion.h1>
 
           <motion.div
@@ -62,8 +62,8 @@ export default function ContactPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col items-center"
           >
-            <div className="w-16 h-[2px] bg-primary mb-6 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-            <p className="text-white/90 text-lg md:text-xl font-medium tracking-[0.15em] md:tracking-[0.2em] uppercase max-w-3xl leading-relaxed break-keep drop-shadow-md">
+            <div className="w-16 h-[2px] bg-primary mb-6" />
+            <p className="text-white/90 text-lg md:text-xl font-medium tracking-[0.15em] md:tracking-[0.2em] uppercase max-w-3xl leading-relaxed break-keep">
               합리적인 피부미용 의료 장비, <span className="text-primary font-bold">그리고 최고의 선택</span>
             </p>
           </motion.div>

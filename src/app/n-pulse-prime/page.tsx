@@ -104,7 +104,7 @@ export default function NPulsePage() {
                         initial={{ opacity: 0, y: 30, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white drop-shadow-xl"
+                        className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white"
                     >
                         <span className="hero-title-main block md:inline !text-white">N - PULSE</span>
                         <span className="hero-title-highlight ml-0 md:ml-4">PRIME</span>
@@ -117,8 +117,8 @@ export default function NPulsePage() {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="flex flex-col items-center"
                     >
-                        <div className="w-16 h-[2px] bg-primary mb-6 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-                        <p className="text-white/90 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl drop-shadow-md">
+                        <div className="w-16 h-[2px] bg-primary mb-6" />
+                        <p className="text-white/90 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl">
                             합리적인 피부미용 의료 장비, <span className="text-primary font-bold">정확한 기술의 시작</span>
                         </p>
                     </motion.div>
@@ -129,7 +129,7 @@ export default function NPulsePage() {
                     <Link
                         href="#prime-overview"
                         aria-label="Scroll down"
-                        className="inline-flex justify-center items-center w-12 h-12 border border-slate-300 rounded-full hover:bg-slate-100 hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-white/50 backdrop-blur-sm"
+                        className="inline-flex justify-center items-center w-12 h-12 border border-slate-300 rounded-full hover:bg-slate-100 hover:text-black transition duration-300 animate-bounce group bg-white/50 backdrop-blur-sm"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-slate-700 group-hover:text-black transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -169,7 +169,7 @@ export default function NPulsePage() {
                                 </h2>
 
                                 {/* 발광 막대 */}
-                                <div className="w-20 h-[2px] bg-primary shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
+                                <div className="w-20 h-[2px] bg-primary" />
                             </div>
 
                             {/* 설명 문구 */}
@@ -206,18 +206,18 @@ export default function NPulsePage() {
                         >
                             <div className="relative group">
                                 {/* 후면 글로우 오라 */}
-                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/10 blur-[120px] rounded-full scale-150 opacity-40 group-hover:opacity-70 transition-opacity duration-1000" />
+
 
                                 {/* 제품 이미지: prime.png */}
                                 {/* 팁: 아래 className의 max-w-[440px] 숫자를 조절하면 이미지 크기를 변경할 수 있습니다. */}
                                 <img
                                     src="/images/npulse_prime/prime.png"
                                     alt="N-PULSE PRIME"
-                                    className="w-full max-w-[340px] md:max-w-[440px] h-auto relative z-10 drop-shadow-[0_40px_80px_rgba(0,0,0,0.8)] group-hover:scale-105 transition-transform duration-1000 ease-out brightness-110 contrast-105"
+                                    className="w-full max-w-[340px] md:max-w-[440px] h-auto relative z-10 group-hover:scale-105 transition-transform duration-1000 ease-out brightness-110 contrast-105"
                                 />
 
                                 {/* 하단 반사 효과 */}
-                                <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-4/5 h-20 bg-primary/10 blur-[60px] rounded-full opacity-50" />
+
                             </div>
 
                             {/* 장식용 텍스트 오버레이 */}
@@ -579,7 +579,7 @@ export default function NPulsePage() {
                                                 <motion.div
                                                     animate={{ left: ['-10%', '110%'] }}
                                                     transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                                                    className="absolute top-0 bottom-0 w-[1px] bg-primary/50 shadow-[0_0_15px_rgba(0,183,241,0.8)] z-30 opacity-0 group-hover:opacity-100 transition-opacity"
+                                                    className="absolute top-0 bottom-0 w-[1px] bg-primary/50 z-30 opacity-0 group-hover:opacity-100 transition-opacity"
                                                 />
                                             </div>
 
@@ -621,7 +621,7 @@ export default function NPulsePage() {
                                     <div className="space-y-4">
                                         <div className="text-primary font-bold text-xs tracking-widest uppercase">Technology Focus</div>
                                         <h3 className="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-tight">주요 <span className="text-primary">특징</span></h3>
-                                        <div className="w-12 h-[2px] bg-primary shadow-[0_0_10px_rgba(0,183,241,0.5)]" />
+                                        <div className="w-12 h-[2px] bg-primary" />
                                     </div>
 
                                     <div className="space-y-6">
@@ -663,7 +663,7 @@ export default function NPulsePage() {
                                     <div className="space-y-4">
                                         <div className="text-primary font-bold text-xs tracking-widest uppercase">Patient Value</div>
                                         <h3 className="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-tight">Prime <span className="text-primary">Benefits</span></h3>
-                                        <div className="w-12 h-[2px] bg-primary shadow-[0_0_10px_rgba(0,183,241,0.5)]" />
+                                        <div className="w-12 h-[2px] bg-primary" />
                                     </div>
 
                                     <div className="space-y-6">
@@ -683,7 +683,7 @@ export default function NPulsePage() {
                                         ].map((item, idx) => (
                                             <div key={idx} className="bg-slate-50 border border-slate-200 shadow-sm p-6 hover:border-primary/30 transition-all duration-500 group min-h-[140px] flex flex-col justify-center rounded-xl">
                                                 <h4 className="text-slate-900 font-bold text-lg mb-2 group-hover:text-primary transition-colors flex items-center gap-3">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-all shadow-[0_0_10px_rgba(0,183,241,0)] group-hover:shadow-[0_0_10px_rgba(0,183,241,1)]" />
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-all shadow-none" />
                                                     {item.title}
                                                 </h4>
                                                 <p className="text-slate-600 text-base leading-relaxed break-keep">
