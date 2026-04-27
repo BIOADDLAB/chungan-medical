@@ -12,18 +12,18 @@ export default function UPulsePage() {
       {/* ① Hero Section (PICO-K Style) */}
       <section
         id="hero"
-        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-[#020408]"
+        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-50"
       >
         {/* 배경 이미지 레이어 */}
         <img
-          src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1920&q=80"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-70 brightness-[0.5] contrast-[1.1]"
+          src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1920&q=80"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-80 brightness-[0.85] contrast-[1.05]"
           alt="medical background"
         />
         {/* 그라디언트 오버레이 */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050810]/30 via-transparent to-[#050810]/70 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/40 z-10" />
         {/* Tech Grid 오버레이 */}
-        <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-screen z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-multiply z-10 pointer-events-none" />
 
         {/* 콘텐츠 */}
         <div className="relative z-20 flex flex-col items-center max-w-screen-xl mx-auto px-6 w-full">
@@ -32,9 +32,9 @@ export default function UPulsePage() {
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight"
+            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white drop-shadow-xl"
           >
-            <span className="hero-title-main block md:inline">U - PULSE</span>
+            <span className="hero-title-main !text-white block md:inline">U - PULSE</span>
             <span className="hero-title-highlight ml-0 md:ml-4">DUAL</span>
           </motion.h1>
 
@@ -46,8 +46,8 @@ export default function UPulsePage() {
             className="flex flex-col items-center"
           >
             <div className="w-16 h-[2px] bg-primary mb-6 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-            <p className="text-slate-300 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl">
-              합리적인 피부미용 의료 장비, <span className="text-primary font-bold">그리고 최고의 선택</span>
+            <p className="text-white/90 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl drop-shadow-md">
+              합리적인 피부미용 의료 장비, <span className="text-primary font-bold">정확한 기술의 시작</span>
             </p>
           </motion.div>
         </div>
@@ -57,9 +57,9 @@ export default function UPulsePage() {
           <Link
             href="#u-pulse-difference"
             aria-label="Scroll down"
-            className="inline-flex justify-center items-center w-12 h-12 border border-white/20 rounded-full hover:bg-white hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-black/10 backdrop-blur-sm"
+            className="inline-flex justify-center items-center w-12 h-12 border border-slate-300 rounded-full hover:bg-slate-100 hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-white/50 backdrop-blur-sm"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white group-hover:text-black transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-slate-700 group-hover:text-black transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </Link>
@@ -67,8 +67,8 @@ export default function UPulsePage() {
       </section>
 
       {/* ② U-Pulse Dual: Dual System Overview (Refined Design) */}
-      <section id="dual-system" className="relative py-28 bg-[#020408] overflow-hidden">
-        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+      <section id="dual-system" className="relative py-28 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none mix-blend-multiply" />
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
 
           {/* Main Title Section */}
@@ -107,22 +107,22 @@ export default function UPulsePage() {
                 <div className="flex items-center justify-center h-7 px-4 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase bg-primary/5 leading-none shrink-0">
                   Mode
                 </div>
-                <h3 className="text-xl md:text-2xl font-black text-white tracking-tight uppercase leading-none relative -top-[2px]">COS, PIN, FRX, SOL</h3>
+                <h3 className="text-xl md:text-2xl font-black text-slate-900 tracking-tight uppercase leading-none relative -top-[2px]">COS, PIN, FRX, SOL</h3>
               </div>
 
               {/* Image Container (Matched to Photo Style) */}
-              <div className="relative aspect-[16/9] bg-[#0A0D14] border border-primary/20 overflow-hidden group">
+              <div className="relative aspect-[16/9] bg-sky-50 border border-sky-100 shadow-sm overflow-hidden group">
                 <Image
                   src="/images/upulse_dual/dualmode.png"
                   alt="Mode: COS, PIN, FRX, SOL"
                   fill
                   className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+                <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none mix-blend-multiply" />
 
                 {/* Corner Accents (L-Shapes) */}
-                <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-white/30" />
-                <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-white/30" />
+                <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-slate-300" />
+                <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-slate-300" />
               </div>
             </motion.div>
 
@@ -137,22 +137,22 @@ export default function UPulsePage() {
                 <div className="flex items-center justify-center h-7 px-4 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase bg-primary/5 leading-none shrink-0">
                   Handle
                 </div>
-                <h3 className="text-xl md:text-2xl font-black text-white tracking-tight uppercase leading-none relative -top-[2px]">Black</h3>
+                <h3 className="text-xl md:text-2xl font-black text-slate-900 tracking-tight uppercase leading-none relative -top-[2px]">Black</h3>
               </div>
 
               {/* Image Container (Matched to Photo Style) */}
-              <div className="relative aspect-[16/9] bg-[#0A0D14] border border-primary/20 overflow-hidden group">
+              <div className="relative aspect-[16/9] bg-sky-50 border border-sky-100 shadow-sm overflow-hidden group">
                 <Image
                   src="/images/upulse_dual/dualhand.png"
                   alt="Handle: Black"
                   fill
                   className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+                <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none mix-blend-multiply" />
 
                 {/* Corner Accents (L-Shapes) */}
-                <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-white/30" />
-                <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-white/30" />
+                <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-slate-300" />
+                <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-slate-300" />
               </div>
             </motion.div>
           </div>
@@ -168,7 +168,7 @@ export default function UPulsePage() {
               <div className="flex items-center justify-center h-7 px-4 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase bg-primary/5 leading-none shrink-0">
                 Handpiece
               </div>
-              <h3 className="text-xl md:text-2xl font-black text-white tracking-tight uppercase leading-none relative -top-[2px]">50mm, 100mm, ZOOM, Fractional</h3>
+              <h3 className="text-xl md:text-2xl font-black text-slate-900 tracking-tight uppercase leading-none relative -top-[2px]">50mm, 100mm, ZOOM, Fractional</h3>
             </div>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
@@ -179,20 +179,20 @@ export default function UPulsePage() {
                 { title: 'Fractional', img: 'dualfractional.png' }
               ].map((item, idx) => (
                 <div key={idx} className="group">
-                  <div className="relative aspect-[3/4] bg-[#0A0D14] border border-primary/20 overflow-hidden flex items-center justify-center mb-4 transition-all duration-500 hover:border-primary/50">
+                  <div className="relative aspect-[3/4] bg-sky-50 border border-sky-100 shadow-sm overflow-hidden flex items-center justify-center mb-4 transition-all duration-500 hover:border-primary/40">
                     <Image
                       src={`/images/upulse_dual/${item.img}`}
                       alt={item.title}
                       fill
                       className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                     />
-                    <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+                    <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none mix-blend-multiply" />
                     {/* Corner Accents */}
-                    <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-white/30" />
-                    <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-white/30" />
+                    <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-slate-300" />
+                    <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-slate-300" />
                   </div>
-                  <div className="py-3 bg-white/5 border-t border-white/10 text-center transition-colors group-hover:bg-primary/5">
-                    <span className="text-base font-bold text-white tracking-tight uppercase group-hover:text-primary transition duration-300">
+                  <div className="py-3 bg-white border-t border-sky-100 text-center transition-colors group-hover:bg-primary/5">
+                    <span className="text-base font-bold text-slate-900 tracking-tight uppercase group-hover:text-primary transition duration-300">
                       {item.title}
                     </span>
                   </div>
@@ -204,15 +204,15 @@ export default function UPulsePage() {
       </section>
 
       {/* NEW SECTION: SOL Mode Description & Indications Grid */}
-      <section id="sol-mode-detail" className="relative py-28 bg-[#020408] overflow-hidden">
-        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+      <section id="sol-mode-detail" className="relative py-28 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none mix-blend-multiply" />
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
 
           {/* Part 1: SOL Mode Text Description (Redesigned with Typography Consistency) */}
           <div className="relative mb-32 py-20 overflow-hidden">
             {/* Background Decorative Element (Subtle) */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none select-none opacity-[0.015]">
-              <span className="text-[12vw] font-black tracking-tighter text-white uppercase leading-none block">SOL TECHNOLOGY</span>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none select-none opacity-[0.05]">
+              <span className="text-[12vw] font-black tracking-tighter text-slate-300 uppercase leading-none block">SOL TECHNOLOGY</span>
             </div>
 
             <motion.div
@@ -228,7 +228,7 @@ export default function UPulsePage() {
               </div>
 
               {/* 타이틀: text-3xl md:text-5xl */}
-              <h2 className="text-3xl md:text-5xl font-black text-white mb-8 tracking-tighter uppercase leading-tight">
+              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-8 tracking-tighter uppercase leading-tight">
                 SOL <span className="text-primary">Mode</span>
               </h2>
 
@@ -239,20 +239,20 @@ export default function UPulsePage() {
 
               <div className="space-y-10">
                 {/* 본문 텍스트 크기 규칙: text-xl md:text-2xl */}
-                <p className="text-xl md:text-2xl font-bold leading-relaxed text-white/90">
+                <p className="text-xl md:text-2xl font-bold leading-relaxed text-slate-700">
                   SOL 모드는 <span className="text-primary">CO2 Fractional Laser</span>를 기반으로<br />
                   피부 내 <span className="text-primary">Micro Hole</span>을 만들어주는 피부 재생 장비입니다.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mt-16 px-4">
-                  <div className="glass-panel p-8 border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-all group">
-                    <p className="text-base md:text-lg font-medium leading-relaxed text-slate-400 group-hover:text-slate-200 transition-colors">
+                  <div className="glass-panel p-8 border-sky-100 bg-sky-50 hover:bg-sky-100 transition-all group shadow-sm">
+                    <p className="text-base md:text-lg font-medium leading-relaxed text-slate-600 group-hover:text-slate-900 transition-colors">
                       높은 Peak Power와 낮은 Pulse Duration이 열 손상을
-                      최소화하고 부작용이 거의 없는 새로운 <span className="text-white font-bold">DDS</span>입니다.
+                      최소화하고 부작용이 거의 없는 새로운 <span className="text-slate-900 font-bold">DDS</span>입니다.
                     </p>
                   </div>
-                  <div className="glass-panel p-8 border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-all group">
-                    <p className="text-base md:text-lg font-medium leading-relaxed text-slate-400 group-hover:text-slate-200 transition-colors">
+                  <div className="glass-panel p-8 border-sky-100 bg-sky-50 hover:bg-sky-100 transition-all group shadow-sm">
+                    <p className="text-base md:text-lg font-medium leading-relaxed text-slate-600 group-hover:text-slate-900 transition-colors">
                       Micro Hole은 유효 성분 전달 통로 역할은 하면서
                       동시에 섬유아세포를 활성화해 콜라겐 생성을 유도합니다.
                     </p>
@@ -265,8 +265,8 @@ export default function UPulsePage() {
                   transition={{ delay: 0.5 }}
                   className="pt-10 inline-block"
                 >
-                  <div className="px-8 py-6 border-l-4 border-primary bg-primary/5 backdrop-blur-sm">
-                    <p className="text-xl md:text-2xl font-black text-white leading-relaxed tracking-tight">
+                  <div className="px-8 py-6 border-l-4 border-primary bg-primary/5 backdrop-blur-sm shadow-sm">
+                    <p className="text-xl md:text-2xl font-black text-slate-900 leading-relaxed tracking-tight">
                       피부 손상과 부작용은 <span className="text-primary">최소화</span> 하고<br className="md:hidden" />
                       약물 전달의 기능은 <span className="text-primary">최대화</span> 했습니다.
                     </p>
@@ -287,12 +287,12 @@ export default function UPulsePage() {
               viewport={{ once: true }}
             >
               <div className="flex items-center gap-4 mb-8">
-                <h3 className="text-2xl font-black text-white tracking-tight uppercase">FRX <span className="font-light text-slate-400">mode</span></h3>
-                <div className="h-px flex-1 bg-gradient-to-r from-white/20 to-transparent" />
+                <h3 className="text-2xl font-black text-slate-900 tracking-tight uppercase">FRX <span className="font-light text-slate-500">mode</span></h3>
+                <div className="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent" />
               </div>
 
-              <div className="glass-panel border-white/5 bg-white/[0.02] p-8 md:p-12 relative overflow-hidden">
-                <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+              <div className="glass-panel border-sky-100 bg-white shadow-md p-8 md:p-12 relative overflow-hidden">
+                <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none mix-blend-multiply" />
                 <div className="grid grid-cols-2 gap-x-6 gap-y-10 relative z-10">
                   {[
                     { label: '눈 밑 리프팅', img: '/images/upulse_dual/frx_mode/눈밑리프팅.png' },
@@ -305,7 +305,7 @@ export default function UPulsePage() {
                     <motion.div 
                       key={idx} 
                       whileHover={{ scale: 1.05 }}
-                      className="flex flex-col items-center justify-center bg-white rounded-full aspect-square p-4 w-full max-w-[160px] md:max-w-[200px] mx-auto shadow-xl group/item transition-all duration-300"
+                      className="flex flex-col items-center justify-center bg-white rounded-full aspect-square p-4 w-full max-w-[160px] md:max-w-[200px] mx-auto shadow-sm border border-sky-100 group/item transition-all duration-300"
                     >
                       <div className="w-20 h-20 md:w-24 md:h-24 flex items-center justify-center mb-4 transition-all duration-500 relative">
                         {item.img ? (
@@ -321,7 +321,7 @@ export default function UPulsePage() {
                   ))}
 
                   {/* Vertical Divider Line */}
-                  <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/5 border-l border-dashed border-white/10 -translate-x-1/2" />
+                  <div className="absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 border-l border-dashed border-slate-300 -translate-x-1/2" />
                 </div>
               </div>
             </motion.div>
@@ -334,12 +334,12 @@ export default function UPulsePage() {
               viewport={{ once: true }}
             >
               <div className="flex items-center gap-4 mb-8">
-                <h3 className="text-2xl font-black text-white tracking-tight uppercase">SOL <span className="font-light text-slate-400">mode</span></h3>
-                <div className="h-px flex-1 bg-gradient-to-r from-white/20 to-transparent" />
+                <h3 className="text-2xl font-black text-slate-900 tracking-tight uppercase">SOL <span className="font-light text-slate-500">mode</span></h3>
+                <div className="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent" />
               </div>
 
-              <div className="glass-panel border-primary/20 bg-primary/[0.02] p-8 md:p-12 relative overflow-hidden">
-                <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+              <div className="glass-panel border-sky-100 bg-white shadow-md p-8 md:p-12 relative overflow-hidden">
+                <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none mix-blend-multiply" />
                 <div className="grid grid-cols-2 gap-x-6 gap-y-10 relative z-10">
                   {[
                     { label: '약물 침투', img: '/images/upulse_dual/sol_mode/약물침투.png' },
@@ -352,7 +352,7 @@ export default function UPulsePage() {
                     <motion.div 
                       key={idx} 
                       whileHover={{ scale: 1.05 }}
-                      className="flex flex-col items-center justify-center bg-white rounded-full aspect-square p-4 w-full max-w-[160px] md:max-w-[200px] mx-auto shadow-xl group/item transition-all duration-300"
+                      className="flex flex-col items-center justify-center bg-white rounded-full aspect-square p-4 w-full max-w-[160px] md:max-w-[200px] mx-auto shadow-sm border border-sky-100 group/item transition-all duration-300"
                     >
                       <div className="w-20 h-20 md:w-24 md:h-24 flex items-center justify-center mb-4 transition-all duration-500 relative">
                         {item.img ? (
@@ -377,11 +377,11 @@ export default function UPulsePage() {
         </div>
       </section>
 
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
       {/* NEW SECTION: Skin Rejuvenation Process Flow */}
-      <section id="skin-rejuvenation" className="relative py-28 bg-[#020408] overflow-hidden">
-        <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none" />
+      <section id="skin-rejuvenation" className="relative py-28 bg-sky-50 overflow-hidden">
+        <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none mix-blend-multiply" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           {/* Section Header */}
@@ -395,7 +395,7 @@ export default function UPulsePage() {
             <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
               Dermal Regeneration
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight uppercase">
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight uppercase">
               Skin <span className="text-primary">Rejuvenation</span>
             </h2>
             <div className="w-20 h-[2px] bg-primary mt-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
@@ -410,11 +410,11 @@ export default function UPulsePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="w-full glass-panel border-primary/20 bg-primary/[0.02] p-8 md:p-10 relative group"
+              className="w-full glass-panel border-sky-100 bg-white shadow-sm p-8 md:p-10 relative group"
             >
               <div className="absolute top-0 left-0 w-1 h-full bg-primary/30 group-hover:bg-primary transition-colors" />
-              <p className="text-lg md:text-xl font-bold text-slate-200 leading-relaxed text-center">
-                SOL Mode는 피부에 <span className="text-white border-b border-primary/40">Micro Hole</span>을 만들고 기계적인 자극을 주어 섬유아세포를 활성화시켜<br className="hidden md:block" />
+              <p className="text-lg md:text-xl font-bold text-slate-700 leading-relaxed text-center">
+                SOL Mode는 피부에 <span className="text-slate-900 border-b border-primary/40">Micro Hole</span>을 만들고 기계적인 자극을 주어 섬유아세포를 활성화시켜<br className="hidden md:block" />
                 콜라겐과 엘라스틴의 생성을 증가시켜 피부 재생을 유도합니다.
               </p>
             </motion.div>
@@ -438,11 +438,11 @@ export default function UPulsePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="w-full glass-panel border-white/10 bg-white/[0.01] p-8 md:p-10 relative group"
+              className="w-full glass-panel border-sky-100 bg-white shadow-sm p-8 md:p-10 relative group"
             >
-              <div className="absolute top-0 left-0 w-1 h-full bg-white/10 group-hover:bg-white/30 transition-colors" />
-              <p className="text-lg md:text-xl font-bold text-slate-300 leading-relaxed text-center">
-                SOL Mode는 주변 조직에 <span className="text-white font-black underline decoration-primary/40 decoration-2 underline-offset-4">열 손상을 주지 않고</span>,<br className="hidden md:block" />
+              <div className="absolute top-0 left-0 w-1 h-full bg-sky-100 group-hover:bg-sky-200 transition-colors" />
+              <p className="text-lg md:text-xl font-bold text-slate-700 leading-relaxed text-center">
+                SOL Mode는 주변 조직에 <span className="text-slate-900 font-black underline decoration-primary/40 decoration-2 underline-offset-4">열 손상을 주지 않고</span>,<br className="hidden md:block" />
                 적절한 열에너지를 피부에 전달해주어 섬유아세포를 활성화시키고 피부 재생을 유도합니다.
               </p>
             </motion.div>
@@ -466,11 +466,11 @@ export default function UPulsePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
-              className="w-full glass-panel border-primary/20 bg-primary/[0.02] p-8 md:p-10 relative group"
+              className="w-full glass-panel border-sky-100 bg-white shadow-sm p-8 md:p-10 relative group"
             >
               <div className="absolute top-0 left-0 w-1 h-full bg-primary/30 group-hover:bg-primary transition-colors" />
-              <p className="text-lg md:text-xl font-bold text-slate-200 leading-relaxed text-center">
-                SOL Mode로 뚫은 섬세한 Micro Hole은 <span className="text-white">상부 진피층(Papillary layer)</span> 내의<br className="hidden md:block" />
+              <p className="text-lg md:text-xl font-bold text-slate-700 leading-relaxed text-center">
+                SOL Mode로 뚫은 섬세한 Micro Hole은 <span className="text-slate-900">상부 진피층(Papillary layer)</span> 내의<br className="hidden md:block" />
                 섬유아세포까지 유효 물질을 전달시켜주는 <span className="text-primary font-black border-b border-primary/60">통로</span>로 사용될 수 있습니다.
               </p>
             </motion.div>
@@ -479,11 +479,11 @@ export default function UPulsePage() {
         </div>
       </section>
 
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
       {/* NEW SECTION: SOL Mode Advantages & Benefits (Horizontal Layout) */}
-      <section id="sol-mode-benefits" className="relative py-28 bg-[#020408] overflow-hidden">
-        <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+      <section id="sol-mode-benefits" className="relative py-28 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none mix-blend-multiply" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           {/* Section Header */}
@@ -497,7 +497,7 @@ export default function UPulsePage() {
             <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
               Clinical Performance
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight uppercase">
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight uppercase">
               SOL Mode <span className="text-primary">Key Features</span>
             </h2>
             <div className="w-20 h-[2px] bg-primary mt-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
@@ -522,12 +522,12 @@ export default function UPulsePage() {
                 '유지 비용 없음'
               ].map((text, idx) => (
                 <div key={idx} className="flex items-center gap-5 group">
-                  <div className="flex-shrink-0 w-7 h-7 rounded border border-white/20 bg-white/5 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/5 transition-all duration-300">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-white group-hover:text-primary transition-colors">
+                  <div className="flex-shrink-0 w-7 h-7 rounded border border-sky-100 bg-sky-50 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/5 transition-all duration-300">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-slate-600 group-hover:text-primary transition-colors">
                       <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
-                  <span className="text-lg md:text-xl font-bold text-slate-300 group-hover:text-white transition-colors">{text}</span>
+                  <span className="text-lg md:text-xl font-bold text-slate-700 group-hover:text-slate-900 transition-colors">{text}</span>
                 </div>
               ))}
             </motion.div>
@@ -561,7 +561,7 @@ export default function UPulsePage() {
                   <motion.div
                     key={idx}
                     whileHover={{ y: -10 }}
-                    className="flex flex-col items-center bg-white rounded-[40px] p-10 md:p-12 shadow-[0_20px_50px_rgba(255,255,255,0.05)] border border-white/10 group transition-all duration-500"
+                    className="flex flex-col items-center bg-white rounded-[40px] p-10 md:p-12 shadow-[0_10px_30px_rgba(0,0,0,0.08)] border border-sky-100 group transition-all duration-500"
                   >
                     {/* Square Image Slot */}
                     <div className="w-40 h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 flex items-center justify-center mb-8 relative group-hover:scale-110 transition-all duration-700">
@@ -574,7 +574,7 @@ export default function UPulsePage() {
                         />
                       ) : (
                         <div className="w-full h-full bg-slate-100 flex items-center justify-center rounded-2xl">
-                          <span className="text-slate-300 font-black text-xl tracking-widest uppercase select-none">{item.code}</span>
+                          <span className="text-slate-500 font-black text-xl tracking-widest uppercase select-none">{item.code}</span>
                         </div>
                       )}
                     </div>
@@ -594,7 +594,7 @@ export default function UPulsePage() {
         </div>
       </section>
 
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
 
 

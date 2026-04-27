@@ -32,7 +32,7 @@ export default function ProductLineup() {
 
   return (
     <section id="services" className="product-section py-16 md:py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-tech-dots opacity-30 mix-blend-screen pointer-events-none" />
+      <div className="absolute inset-0 bg-tech-dots opacity-30 mix-blend-multiply pointer-events-none" />
       <div className="max-w-screen-xl mx-auto px-6 relative z-10">
         {/* Header */}
         <motion.div
@@ -43,7 +43,7 @@ export default function ProductLineup() {
           className="mb-14"
         >
           <div className="flex justify-center mb-8">
-            <div className="flex items-center gap-4 bg-[#050810]/80 border border-[#00B7F1]/30 py-2 px-6 backdrop-blur-md rounded-full shadow-[0_0_15px_rgba(0,183,241,0.15)]">
+            <div className="flex items-center gap-4 bg-white/80 border border-[#00B7F1]/30 py-2 px-6 backdrop-blur-md rounded-full shadow-[0_0_15px_rgba(0,183,241,0.15)]">
               <svg width="24" height="24" viewBox="0 0 120 120" className="animate-[spin_10s_linear_infinite]">
                 <circle cx="60" cy="60" r="50" fill="none" stroke="#00B7F1" strokeWidth="8" strokeDasharray="10 20" />
                 <circle cx="60" cy="60" r="30" fill="none" stroke="#00B7F1" strokeWidth="4" />
@@ -60,7 +60,7 @@ export default function ProductLineup() {
               <span className="hero-title-main">CHUNGAN</span> <span className="hero-title-highlight">LINE-UP</span>
             </h2>
             <div className="w-20 h-[2px] bg-primary mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-            <p className="text-slate-400 font-medium max-w-2xl mx-auto leading-relaxed text-lg">
+            <p className="text-slate-600 font-medium max-w-2xl mx-auto leading-relaxed text-lg">
               (주)청안 메디칼 코퍼레이션은 병의원용 피부미용 장비의 새로운 기준을 제시합니다.<br className="hidden md:block" />
               정밀한 제어와 최상의 결과를 위한 청안의 하이엔드 라인업을 만나보세요.
             </p>
@@ -123,7 +123,7 @@ export default function ProductLineup() {
                     />
                   </div>
                   <div className="product-card-footer">
-                    <span className="text-white text-xl font-bold tracking-tight uppercase">
+                    <span className="text-slate-900 text-xl font-bold tracking-tight uppercase">
                       {prod.name}
                     </span>
                     {prod.makerLogo && (

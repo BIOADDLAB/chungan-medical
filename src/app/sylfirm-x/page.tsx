@@ -7,28 +7,28 @@ import Link from 'next/link';
 
 export default function SylfirmXPage() {
   return (
-    <main className="bg-[#050810] min-h-screen">
+    <main className="bg-white min-h-screen">
       {/* ① Hero Section (Standard Tech Style) */}
       <section
         id="hero"
-        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-[#050810]"
+        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-50"
       >
         <img
           src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1920&q=80"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-70 brightness-[0.5] contrast-[1.1]"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-80 brightness-[0.85] contrast-[1.05]"
           alt="medical background"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050810]/30 via-transparent to-[#050810]/70 z-10" />
-        <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-screen z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/40 z-10" />
+        <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-multiply z-10 pointer-events-none" />
 
         <div className="relative z-20 flex flex-col items-center max-w-screen-xl mx-auto px-6 w-full">
           <motion.h1
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight whitespace-nowrap"
+            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight whitespace-nowrap text-white drop-shadow-xl"
           >
-            <span className="hero-title-main">SYLFIRM - </span>
+            <span className="hero-title-main !text-white">SYLFIRM - </span>
             <span className="hero-title-highlight ml-1 md:ml-4">X</span>
           </motion.h1>
 
@@ -39,19 +39,19 @@ export default function SylfirmXPage() {
             className="flex flex-col items-center"
           >
             <div className="w-16 h-[2px] bg-primary mb-6 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-            <p className="text-slate-300 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl">
-              합리적인 피부미용 의료 장비, <span className="text-primary font-bold">그리고 최고의 선택</span>
+            <p className="text-white/90 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl drop-shadow-md">
+              합리적인 피부미용 의료 장비, <span className="text-primary font-bold">정확한 기술의 시작</span>
             </p>
           </motion.div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center text-white">
+        <div className="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center">
           <Link
             href="#content"
             aria-label="Scroll down"
-            className="inline-flex justify-center items-center w-12 h-12 border border-white/20 rounded-full hover:bg-white hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-black/10 backdrop-blur-sm"
+            className="inline-flex justify-center items-center w-12 h-12 border border-slate-300 rounded-full hover:bg-slate-100 hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-white/50 backdrop-blur-sm"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-slate-700 group-hover:text-black transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </Link>
@@ -59,10 +59,10 @@ export default function SylfirmXPage() {
       </section>
 
       {/* ② Sylfirm-X Overview Section (Orchestration Standard) */}
-      <section id="content" className="relative py-28 bg-[#050810] overflow-hidden">
-        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+      <section id="content" className="relative py-28 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none mix-blend-multiply" />
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        <div className="absolute bottom-0 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           <div className="flex items-center gap-4 mb-14 relative overflow-hidden">
@@ -116,8 +116,8 @@ export default function SylfirmXPage() {
                       <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)]" />
                     </div>
                     <div>
-                      <p className="text-slate-200 text-lg md:text-xl font-black tracking-tight mb-2 uppercase font-inter leading-none h-7 md:h-8 flex items-center">PRECISION RF DELIVERY</p>
-                      <p className="text-slate-400 text-[15px] md:text-[16px] font-medium leading-relaxed tracking-tight">
+                      <p className="text-slate-900 text-lg md:text-xl font-black tracking-tight mb-2 uppercase font-inter leading-none h-7 md:h-8 flex items-center">PRECISION RF DELIVERY</p>
+                      <p className="text-slate-600 text-[15px] md:text-[16px] font-medium leading-relaxed tracking-tight">
                         SYLFIRM X는 Needle RF장비로 피부 속 원하는 깊이에 바늘(Needle)이 침습(Invasive)해 피부 속에서 고주파 열을 전달해 효과를 내는 장비입니다.
                       </p>
                     </div>
@@ -127,8 +127,8 @@ export default function SylfirmXPage() {
                       <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)]" />
                     </div>
                     <div>
-                      <p className="text-slate-200 text-lg md:text-xl font-black tracking-tight mb-2 uppercase font-inter leading-none h-7 md:h-8 flex items-center">VERSATILE SOLUTIONS</p>
-                      <p className="text-slate-400 text-[15px] md:text-[16px] font-medium leading-relaxed tracking-tight">
+                      <p className="text-slate-900 text-lg md:text-xl font-black tracking-tight mb-2 uppercase font-inter leading-none h-7 md:h-8 flex items-center">VERSATILE SOLUTIONS</p>
+                      <p className="text-slate-600 text-[15px] md:text-[16px] font-medium leading-relaxed tracking-tight">
                         레이저와 달리 피부 타입, 피부 컬러에 상관없이 시술 가능하며, 민감해 레이저 시술이 불가능한 환자도 시술 가능합니다.
                       </p>
                     </div>
@@ -138,8 +138,8 @@ export default function SylfirmXPage() {
                       <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)]" />
                     </div>
                     <div>
-                      <p className="text-slate-200 text-lg md:text-xl font-black tracking-tight mb-2 uppercase font-inter leading-none h-7 md:h-8 flex items-center">8 CUSTOM MODES</p>
-                      <p className="text-slate-400 text-[15px] md:text-[16px] font-medium leading-relaxed tracking-tight">
+                      <p className="text-slate-900 text-lg md:text-xl font-black tracking-tight mb-2 uppercase font-inter leading-none h-7 md:h-8 flex items-center">8 CUSTOM MODES</p>
+                      <p className="text-slate-600 text-[15px] md:text-[16px] font-medium leading-relaxed tracking-tight">
                         8가지 모드로 환자의 피부 상태 및 원하는 효과에 따라 모드를 선택해 시술합니다.
                       </p>
                     </div>
@@ -152,8 +152,8 @@ export default function SylfirmXPage() {
       </section>
 
       {/* ③ Sylfirm-X Indication Section (Orchestration Standard) */}
-      <section id="indication" className="relative py-28 bg-[#050810] overflow-hidden border-t border-white/5">
-        <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none" />
+      <section id="indication" className="relative py-28 bg-sky-50 overflow-hidden border-t border-sky-100">
+        <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none mix-blend-multiply" />
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           <div className="text-center mb-14">
             <motion.div
@@ -188,9 +188,9 @@ export default function SylfirmXPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="max-w-4xl mx-auto space-y-1 text-slate-400 text-[15px] md:text-[16px] font-medium leading-relaxed tracking-tight text-center"
+              className="max-w-4xl mx-auto space-y-1 text-slate-600 text-[15px] md:text-[16px] font-medium leading-relaxed tracking-tight text-center"
             >
-              <p>SYLFIRM X는 Continuous(CW) 방식만 가능한 타 Needle RF와 달리 <span className="text-white font-bold">Pulsed(PW)방식도 완벽히 <br className="md:hidden" />구현</span> 가능합니다.</p>
+              <p>SYLFIRM X는 Continuous(CW) 방식만 가능한 타 Needle RF와 달리 <span className="text-slate-900 font-bold">Pulsed(PW)방식도 완벽히 <br className="md:hidden" />구현</span> 가능합니다.</p>
               <p>PW모드 사용으로 기저막과 혈관벽의 선택적 열 반응을 통해 <span className="text-primary font-black">기미, 홍조, PIH</span> 치료에 탁월한 성과를 <br className="md:hidden" />보입니다.</p>
             </motion.div>
           </div>
@@ -201,45 +201,45 @@ export default function SylfirmXPage() {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.2 }}
-            className="max-w-screen-xl mx-auto border border-primary/20 bg-slate-900/40 backdrop-blur-xl rounded-2xl overflow-hidden"
+            className="max-w-screen-xl mx-auto border border-sky-100 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.05)] rounded-2xl overflow-hidden"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-primary/20 items-stretch">
+            <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-slate-200 items-stretch">
 
               {/* LEFT COLUMN: CW MODE */}
               <div className="flex flex-col">
                 <div className="flex flex-col flex-grow">
-                  <div className="p-6 text-center border-b border-primary/20 bg-primary/5 shrink-0 h-[100px] flex flex-col justify-center">
-                    <h3 className="text-xl font-black text-white font-inter tracking-[0.2em] mb-1 leading-none uppercase">CW MODE</h3>
+                  <div className="p-6 text-center border-b border-slate-200 bg-slate-50 shrink-0 h-[100px] flex flex-col justify-center">
+                    <h3 className="text-xl font-black text-slate-900 font-inter tracking-[0.2em] mb-1 leading-none uppercase">CW MODE</h3>
                     <p className="text-primary text-[10px] font-black uppercase tracking-widest leading-none mt-2">(Continuous Wave)</p>
                   </div>
 
-                  <div className="p-8 space-y-6 flex-grow flex flex-col justify-center bg-black/20">
-                    <div className="aspect-[16/7] bg-black/40 rounded-lg flex items-center justify-center relative overflow-hidden group shrink-0 border border-white/5">
+                  <div className="p-8 space-y-6 flex-grow flex flex-col justify-center bg-white">
+                    <div className="aspect-[16/7] bg-sky-50 rounded-lg flex items-center justify-center relative overflow-hidden group shrink-0 border border-sky-100">
                       <img src="/images/sylfirmx/cw1.png" alt="CW Energy visualization" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
                       <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                     </div>
                     <div className="text-center">
-                      <p className="text-slate-200 text-[14px] md:text-[15px] font-bold mb-1 tracking-tight leading-relaxed">진피부터 표피까지 피부 층 전체에 <br className="md:hidden" />열 에너지 전달</p>
+                      <p className="text-slate-900 text-[14px] md:text-[15px] font-bold mb-1 tracking-tight leading-relaxed">진피부터 표피까지 피부 층 전체에 <br className="md:hidden" />열 에너지 전달</p>
                       <p className="text-slate-500 text-[11px] font-medium tracking-tight leading-none">기존의 모든 Needle RF device의 에너지 방식</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="border-t border-primary/20 flex flex-col shrink-0">
-                  <div className="grid grid-cols-[120px_1fr] bg-primary/5 border-b border-primary/10 h-[50px] shrink-0">
-                    <div className="text-center text-slate-300 text-[10px] font-black uppercase font-inter border-r border-primary/10 flex items-center justify-center">Mode (Duration)</div>
-                    <div className="text-center text-slate-300 text-[10px] font-black uppercase font-inter flex items-center justify-center tracking-[0.2em]">Indication</div>
+                <div className="border-t border-slate-200 flex flex-col shrink-0">
+                  <div className="grid grid-cols-[120px_1fr] bg-slate-50 border-b border-slate-200 h-[50px] shrink-0">
+                    <div className="text-center text-slate-600 text-[10px] font-black uppercase font-inter border-r border-slate-200 flex items-center justify-center">Mode (Duration)</div>
+                    <div className="text-center text-slate-600 text-[10px] font-black uppercase font-inter flex items-center justify-center tracking-[0.2em]">Indication</div>
                   </div>
-                  <div className="grid grid-cols-[120px_1fr] border-b border-primary/10 h-[80px] shrink-0">
-                    <div className="flex items-center justify-center bg-primary/5 border-r border-primary/10">
+                  <div className="grid grid-cols-[120px_1fr] border-b border-slate-200 h-[80px] shrink-0">
+                    <div className="flex items-center justify-center bg-slate-50 border-r border-slate-200">
                       <span className="text-primary text-xs font-black font-inter tracking-widest text-center">CW1</span>
                     </div>
                     <div className="flex items-center justify-center bg-transparent px-6">
-                      <span className="text-slate-300 text-[14px] md:text-[15px] font-medium tracking-tight text-center">두피 시술 <br className="md:hidden" />(리프팅 / 순환 등)</span>
+                      <span className="text-slate-700 text-[14px] md:text-[15px] font-medium tracking-tight text-center">두피 시술 <br className="md:hidden" />(리프팅 / 순환 등)</span>
                     </div>
                   </div>
                   <div className="grid grid-cols-[120px_1fr] h-[240px] shrink-0">
-                    <div className="flex flex-col divide-y divide-primary/10 border-r border-primary/10 bg-primary/5">
+                    <div className="flex flex-col divide-y divide-slate-200 border-r border-slate-200 bg-slate-50">
                       {['CW2', 'CW3', 'CW4'].map(mode => (
                         <div key={mode} className="flex-1 flex items-center justify-center">
                           <span className="text-primary text-xs font-black font-inter tracking-widest text-center">{mode}</span>
@@ -247,7 +247,7 @@ export default function SylfirmXPage() {
                       ))}
                     </div>
                     <div className="flex items-center justify-center text-center bg-transparent p-6">
-                      <span className="text-slate-300 text-[14px] md:text-[15px] font-medium leading-relaxed tracking-tight">
+                      <span className="text-slate-700 text-[14px] md:text-[15px] font-medium leading-relaxed tracking-tight">
                         타이트닝 / 리프팅<br />모공 / 흉터 / 여드름 / <br className="md:hidden" />이중턱
                       </span>
                     </div>
@@ -258,30 +258,30 @@ export default function SylfirmXPage() {
               {/* RIGHT COLUMN: PW MODE */}
               <div className="flex flex-col">
                 <div className="flex flex-col flex-grow">
-                  <div className="p-6 text-center border-b border-primary/20 bg-primary/5 shrink-0 h-[100px] flex flex-col justify-center">
-                    <h3 className="text-xl font-black text-white font-inter tracking-[0.2em] mb-1 leading-none uppercase">PW MODE</h3>
+                  <div className="p-6 text-center border-b border-slate-200 bg-slate-50 shrink-0 h-[100px] flex flex-col justify-center">
+                    <h3 className="text-xl font-black text-slate-900 font-inter tracking-[0.2em] mb-1 leading-none uppercase">PW MODE</h3>
                     <p className="text-primary text-[10px] font-black uppercase tracking-widest leading-none mt-2">(Pulsed Wave)</p>
                   </div>
 
-                  <div className="p-8 space-y-6 flex-grow flex flex-col justify-center bg-black/20">
-                    <div className="aspect-[16/7] bg-black/40 rounded-lg flex items-center justify-center relative overflow-hidden group shrink-0 border border-white/5">
+                  <div className="p-8 space-y-6 flex-grow flex flex-col justify-center bg-white">
+                    <div className="aspect-[16/7] bg-sky-50 rounded-lg flex items-center justify-center relative overflow-hidden group shrink-0 border border-sky-100">
                       <img src="/images/sylfirmx/pw1.png" alt="PW Energy visualization" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
                       <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                     </div>
                     <div className="text-center">
-                      <p className="text-slate-200 text-[14px] md:text-[15px] font-bold mb-1 tracking-tight leading-relaxed">기저막, 혈관에만 열 에너지가 <br className="md:hidden" />선택적으로 반응</p>
+                      <p className="text-slate-900 text-[14px] md:text-[15px] font-bold mb-1 tracking-tight leading-relaxed">기저막, 혈관에만 열 에너지가 <br className="md:hidden" />선택적으로 반응</p>
                       <p className="text-slate-500 text-[11px] font-medium tracking-tight leading-none">SYLFIRM에서부터 사용하던 비올의 기술력</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="border-t border-primary/20 flex flex-col shrink-0">
-                  <div className="grid grid-cols-[120px_1fr] bg-primary/5 border-b border-primary/10 h-[50px] shrink-0">
-                    <div className="text-center text-slate-300 text-[10px] font-black uppercase font-inter border-r border-primary/10 flex items-center justify-center">Mode (Duration)</div>
-                    <div className="text-center text-slate-300 text-[10px] font-black uppercase font-inter flex items-center justify-center tracking-[0.2em]">Indication</div>
+                <div className="border-t border-slate-200 flex flex-col shrink-0">
+                  <div className="grid grid-cols-[120px_1fr] bg-slate-50 border-b border-slate-200 h-[50px] shrink-0">
+                    <div className="text-center text-slate-600 text-[10px] font-black uppercase font-inter border-r border-slate-200 flex items-center justify-center">Mode (Duration)</div>
+                    <div className="text-center text-slate-600 text-[10px] font-black uppercase font-inter flex items-center justify-center tracking-[0.2em]">Indication</div>
                   </div>
                   <div className="grid grid-cols-[120px_1fr] h-[320px] shrink-0">
-                    <div className="flex flex-col divide-y divide-primary/10 border-r border-primary/10 bg-primary/5">
+                    <div className="flex flex-col divide-y divide-slate-200 border-r border-slate-200 bg-slate-50">
                       {['PW1', 'PW2', 'PW3', 'PW4'].map(mode => (
                         <div key={mode} className="flex-1 flex items-center justify-center">
                           <span className="text-primary text-xs font-black font-inter tracking-widest text-center">{mode}</span>
@@ -289,7 +289,7 @@ export default function SylfirmXPage() {
                       ))}
                     </div>
                     <div className="flex items-center justify-center text-center bg-transparent p-6">
-                      <span className="text-slate-300 text-[14px] md:text-[15px] font-medium leading-relaxed tracking-tight">
+                      <span className="text-slate-700 text-[14px] md:text-[15px] font-medium leading-relaxed tracking-tight">
                         기미 / 홍조<br />염증성 여드름
                       </span>
                     </div>
@@ -310,19 +310,19 @@ export default function SylfirmXPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
                 viewport={{ once: true }}
-                className="glass-panel p-8 md:p-10 flex flex-col items-center group hover:bg-primary/10 transition-all duration-500"
+                className="bg-white border border-sky-100 shadow-sm p-8 md:p-10 flex flex-col items-center group hover:bg-sky-50 transition-all duration-500 rounded-3xl"
               >
                 <div className="shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-[#D1D9F0] to-[#E2E8F7] flex items-center justify-center shadow-[0_10px_30px_rgba(209,217,240,0.2)] mb-10 group-hover:scale-110 transition-transform duration-500">
                   <span className="text-4xl font-black text-[#1A1C23] font-inter leading-none">300</span>
                 </div>
                 <div className="text-center mb-8 h-[70px] flex items-center justify-center">
-                  <h4 className="text-[17px] md:text-[18px] font-black text-white leading-tight break-keep">
+                  <h4 className="text-[17px] md:text-[18px] font-black text-slate-900 leading-tight break-keep">
                     최소 통증, 최소 마취 시술이 <br className="md:hidden" />
                     <span className="whitespace-nowrap">가능한 <span className="text-primary">300마이크론(μm) 모드</span></span>
                   </h4>
                 </div>
                 <div className="w-10 h-[1px] bg-primary/30 mb-8" />
-                <ul className="space-y-4 text-slate-300 text-[14px] font-medium leading-relaxed tracking-tight text-left w-full">
+                <ul className="space-y-4 text-slate-600 text-[14px] font-medium leading-relaxed tracking-tight text-left w-full">
                   <li className="flex items-start gap-3">
                     <div className="flex items-center h-[21px] shrink-0">
                       <span className="text-primary text-[8px]">●</span>
@@ -344,19 +344,19 @@ export default function SylfirmXPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="glass-panel p-8 md:p-10 flex flex-col items-center group hover:bg-primary/10 transition-all duration-500 border-primary/30 bg-primary/5"
+                className="bg-sky-50 border border-sky-100 shadow-sm p-8 md:p-10 flex flex-col items-center group hover:bg-sky-100 transition-all duration-500 rounded-3xl"
               >
                 <div className="shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-[#D1D9F0] to-[#E2E8F7] flex items-center justify-center shadow-[0_10px_30px_rgba(209,217,240,0.2)] mb-10 group-hover:scale-110 transition-transform duration-500">
                   <span className="text-6xl font-black text-[#1A1C23] font-inter leading-none">C</span>
                 </div>
                 <div className="text-center mb-8 h-[70px] flex items-center justify-center">
-                  <h4 className="text-[17px] md:text-[18px] font-black text-white leading-tight break-keep">
+                  <h4 className="text-[17px] md:text-[18px] font-black text-slate-900 leading-tight break-keep">
                     피부 탄력&리프팅&흉터 <br className="md:hidden" />
                     <span className="whitespace-nowrap">개선에 <span className="text-primary">최적화 된 셀모드(CW)</span></span>
                   </h4>
                 </div>
                 <div className="w-10 h-[1px] bg-primary/30 mb-8" />
-                <ul className="space-y-4 text-slate-300 text-[14px] font-medium leading-relaxed tracking-tight text-left w-full">
+                <ul className="space-y-4 text-slate-600 text-[14px] font-medium leading-relaxed tracking-tight text-left w-full">
                   <li className="flex items-start gap-3">
                     <div className="flex items-center h-[21px] shrink-0">
                       <span className="text-primary text-[8px]">●</span>
@@ -378,19 +378,19 @@ export default function SylfirmXPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="glass-panel p-8 md:p-10 flex flex-col items-center group hover:bg-primary/10 transition-all duration-500"
+                className="bg-white border border-sky-100 shadow-sm p-8 md:p-10 flex flex-col items-center group hover:bg-sky-50 transition-all duration-500 rounded-3xl"
               >
                 <div className="shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-[#D1D9F0] to-[#E2E8F7] flex items-center justify-center shadow-[0_10px_30px_rgba(209,217,240,0.2)] mb-10 group-hover:scale-110 transition-transform duration-500">
                   <span className="text-6xl font-black text-[#1A1C23] font-inter leading-none">P</span>
                 </div>
                 <div className="text-center mb-8 h-[70px] flex items-center justify-center">
-                  <h4 className="text-[17px] md:text-[18px] font-black text-white leading-tight break-keep">
+                  <h4 className="text-[17px] md:text-[18px] font-black text-slate-900 leading-tight break-keep">
                     기미&홍조&색소침착에 <br className="md:hidden" />
                     <span className="text-primary whitespace-nowrap">최적화 된 리페어(PW)</span>
                   </h4>
                 </div>
                 <div className="w-10 h-[1px] bg-primary/30 mb-8" />
-                <ul className="space-y-4 text-slate-300 text-[14px] font-medium leading-relaxed tracking-tight text-left w-full">
+                <ul className="space-y-4 text-slate-600 text-[14px] font-medium leading-relaxed tracking-tight text-left w-full">
                   <li className="flex items-start gap-3">
                     <div className="flex items-center h-[21px] shrink-0">
                       <span className="text-primary text-[8px]">●</span>

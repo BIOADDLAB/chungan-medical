@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 
 const TheraTalkSection = () => {
     return (
-        <section className="relative py-28 bg-[#020408] overflow-hidden border-t border-white/5">
+        <section className="relative py-28 bg-sky-50 overflow-hidden border-t border-sky-100">
             {/* 배경 데코레이션 */}
-            <div className="absolute inset-0 bg-tech-dots opacity-5 pointer-events-none" />
+            <div className="absolute inset-0 bg-tech-dots opacity-30 mix-blend-multiply pointer-events-none" />
             <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
 
@@ -37,7 +37,7 @@ const TheraTalkSection = () => {
                         viewport={{ once: true }}
                         className="mb-12"
                     >
-                        <h3 className="text-xl md:text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                        <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 flex items-center gap-3">
                             <span className="w-1.5 h-1.5 rounded-full bg-red-500/60 shadow-[0_0_10px_rgba(239,68,68,0.5)]" />
                             병원의 현실적인 고민 (Pain Points)
                         </h3>
@@ -54,11 +54,11 @@ const TheraTalkSection = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: idx * 0.1 }}
                                 viewport={{ once: true }}
-                                className="glass-panel p-8 border-white/5 bg-white/[0.01] hover:border-red-500/20 transition-all duration-500 group"
+                                className="glass-panel p-8 border-sky-100 bg-white/90 hover:border-red-500/20 transition-all duration-500 group"
                             >
                                 <div className="text-red-500/40 font-black text-3xl mb-4 group-hover:text-red-500 transition-colors">0{idx + 1}</div>
-                                <h4 className="text-white font-bold text-lg mb-3">{item.title}</h4>
-                                <p className="text-slate-400 text-sm md:text-base leading-relaxed break-keep">
+                                <h4 className="text-slate-900 font-bold text-lg mb-3">{item.title}</h4>
+                                <p className="text-slate-600 text-sm md:text-base leading-relaxed break-keep">
                                     {item.desc}
                                 </p>
                             </motion.div>
@@ -72,14 +72,14 @@ const TheraTalkSection = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
-                    className="relative mb-32 p-1 md:p-1.5 rounded-2xl bg-gradient-to-br from-primary/30 via-white/5 to-transparent"
+                    className="relative mb-32 p-1 md:p-1.5 rounded-2xl bg-gradient-to-br from-primary/20 via-sky-100 to-transparent"
                 >
-                    <div className="bg-[#05080f] rounded-2xl p-8 md:p-16 relative overflow-hidden">
+                    <div className="bg-white rounded-2xl p-8 md:p-16 relative overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-sky-100">
                         {/* 장식용 글로우 */}
                         <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 blur-[100px] rounded-full" />
 
                         <div className="relative z-10 max-w-4xl mx-auto text-center">
-                            <h3 className="text-2xl md:text-3xl font-black text-white mb-8 leading-tight break-keep">
+                            <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-8 leading-tight break-keep">
                                 "상담의 누락은 곧 환자의 이탈입니다.<br />
                                 테라톡은 단순한 알림톡을 넘어 <span className="text-primary">상담의 전 과정</span>을<br />
                                 데이터화하는 <span className="text-primary">통합 솔루션</span>입니다."
@@ -96,9 +96,9 @@ const TheraTalkSection = () => {
                                             <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20">
                                                 <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                                             </div>
-                                            <h4 className="text-white font-bold text-base md:text-lg">{item.title}</h4>
+                                            <h4 className="text-slate-900 font-bold text-base md:text-lg">{item.title}</h4>
                                         </div>
-                                        <p className="text-slate-400 text-sm md:text-base leading-relaxed break-keep pl-11">
+                                        <p className="text-slate-600 text-sm md:text-base leading-relaxed break-keep pl-11">
                                             {item.desc}
                                         </p>
                                     </div>
@@ -116,7 +116,7 @@ const TheraTalkSection = () => {
                         viewport={{ once: true }}
                         className="mb-12"
                     >
-                        <h3 className="text-xl md:text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                        <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 flex items-center gap-3">
                             <span className="w-1.5 h-1.5 rounded-full bg-primary/60 shadow-[0_0_10px_rgba(0,183,241,0.5)]" />
                             기대 효과 (Benefits)
                         </h3>
@@ -144,11 +144,11 @@ const TheraTalkSection = () => {
                                 viewport={{ once: true }}
                                 className="group"
                             >
-                                <div className="p-8 h-full border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] hover:border-primary/30 transition-all duration-500 rounded-xl flex flex-col justify-between">
-                                    <h4 className="text-white font-bold text-lg md:text-xl mb-4 group-hover:text-primary transition-colors">
+                                <div className="p-8 h-full border border-sky-100 bg-white hover:bg-sky-50 hover:border-primary/30 shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-500 rounded-xl flex flex-col justify-between">
+                                    <h4 className="text-slate-900 font-bold text-lg md:text-xl mb-4 group-hover:text-primary transition-colors">
                                         {item.title}
                                     </h4>
-                                    <p className="text-slate-400 text-sm md:text-base leading-relaxed break-keep">
+                                    <p className="text-slate-600 text-sm md:text-base leading-relaxed break-keep">
                                         {item.desc}
                                     </p>
                                 </div>

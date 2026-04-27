@@ -6,28 +6,28 @@ import Link from 'next/link';
 
 export default function VRoAdvancePage() {
   return (
-    <main className="bg-[#050810] min-h-screen lowercase-titles overflow-x-hidden">
+    <main className="bg-sky-50 min-h-screen lowercase-titles overflow-x-hidden">
       {/* ① Hero Section */}
       <section
         id="hero"
-        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-[#050810]"
+        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-50"
       >
         <img
           src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1920&q=80"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-50 brightness-[0.5] contrast-[1.1]"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-80 brightness-[0.85] contrast-[1.05]"
           alt="medical background"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050810]/30 via-transparent to-[#050810]/70 z-10" />
-        <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-screen z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/40 z-10" />
+        <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-multiply z-10 pointer-events-none" />
 
         <div className="relative z-20 flex flex-col items-center max-w-screen-xl mx-auto px-6 w-full">
           <motion.h1
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white"
+            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white drop-shadow-xl"
           >
-            <span className="hero-title-main">V-RO - </span>
+            <span className="hero-title-main !text-white">V-RO - </span>
             <span className="hero-title-highlight ml-0 md:ml-4">ADVANCE</span>
           </motion.h1>
 
@@ -38,19 +38,19 @@ export default function VRoAdvancePage() {
             className="flex flex-col items-center"
           >
             <div className="w-16 h-[2px] bg-primary mb-6 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-            <p className="text-slate-300 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-3xl">
-              합리적인 피부미용 의료 장비, <span className="text-primary font-bold">그리고 최고의 선택</span>
+            <p className="text-white/90 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-3xl drop-shadow-md">
+              합리적인 피부미용 의료 장비, <span className="text-primary font-bold">정확한 기술의 시작</span>
             </p>
           </motion.div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center text-white">
+        <div className="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center text-slate-700">
           <Link
             href="#overview"
             aria-label="Scroll down"
-            className="inline-flex justify-center items-center w-12 h-12 border border-white/20 rounded-full hover:bg-white hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-black/10 backdrop-blur-sm"
+            className="inline-flex justify-center items-center w-12 h-12 border border-slate-300 rounded-full hover:bg-slate-100 hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-white/50 backdrop-blur-sm"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-slate-700 group-hover:text-black transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </Link>
@@ -58,7 +58,7 @@ export default function VRoAdvancePage() {
       </section>
 
       {/* ② + ③ MERGED: V-RO Lifting Solution × Hybrid Core System */}
-      <section id="overview" className="relative py-28 bg-[#050810] overflow-hidden">
+      <section id="overview" className="relative py-28 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-tech-grid opacity-8 pointer-events-none" />
         <div className="absolute top-1/3 left-1/4 w-[800px] h-[800px] bg-primary/[0.04] blur-[160px] rounded-full pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-primary/[0.03] blur-[120px] rounded-full pointer-events-none" />
@@ -82,7 +82,7 @@ export default function VRoAdvancePage() {
               <span className="hero-title-main"> ADVANCE</span>
             </h2>
             <div className="w-20 h-[2px] bg-primary mb-6" />
-            <p className="text-slate-400 text-lg font-medium leading-relaxed max-w-xl">
+            <p className="text-slate-600 text-lg font-medium leading-relaxed max-w-xl">
               혁신적인 고주파와 하이푸의 결합으로
               리프팅의 새로운 기준을 제시합니다.
             </p>
@@ -111,9 +111,9 @@ export default function VRoAdvancePage() {
                 >
                   <div className="flex items-center gap-3 mb-2 leading-none">
                     <span className="text-primary text-xl font-black font-inter leading-none">{feature.id}</span>
-                    <h4 className="text-white text-sm font-black tracking-tighter uppercase leading-none">{feature.title}</h4>
+                    <h4 className="text-slate-900 text-sm font-black tracking-tighter uppercase leading-none">{feature.title}</h4>
                   </div>
-                  <p className="text-slate-500 text-xs font-bold tracking-tighter leading-tight break-keep">{feature.desc}</p>
+                  <p className="text-slate-600 text-xs font-bold tracking-tighter leading-tight break-keep">{feature.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -166,8 +166,8 @@ export default function VRoAdvancePage() {
                     viewport={{ once: true }}
                     className="group leading-none"
                   >
-                    <h5 className="text-white font-black text-sm mb-1.5 tracking-tighter group-hover:text-primary transition-colors leading-none">{item.title}</h5>
-                    <p className="text-slate-500 text-xs font-bold tracking-tighter leading-tight break-keep">{item.desc}</p>
+                    <h5 className="text-slate-900 font-black text-sm mb-1.5 tracking-tighter group-hover:text-primary transition-colors leading-none">{item.title}</h5>
+                    <p className="text-slate-600 text-xs font-bold tracking-tighter leading-tight break-keep">{item.desc}</p>
                   </motion.div>
                 ))}
               </div>
@@ -187,16 +187,16 @@ export default function VRoAdvancePage() {
                     viewport={{ once: true }}
                     className="group leading-none"
                   >
-                    <h5 className="text-white font-black text-sm mb-1.5 tracking-tighter group-hover:text-primary transition-colors leading-none">{item.title}</h5>
-                    <p className="text-slate-500 text-xs font-bold tracking-tighter leading-tight break-keep">{item.desc}</p>
+                    <h5 className="text-slate-900 font-black text-sm mb-1.5 tracking-tighter group-hover:text-primary transition-colors leading-none">{item.title}</h5>
+                    <p className="text-slate-600 text-xs font-bold tracking-tighter leading-tight break-keep">{item.desc}</p>
                   </motion.div>
                 ))}
               </div>
 
               {/* 수직 구분 라인 + 통합 슬로건 */}
               <div className="glass-panel p-6 relative overflow-hidden group">
-                <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none" />
-                <p className="text-slate-400 text-xs font-bold tracking-tighter break-keep leading-relaxed relative z-10">
+                <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none mix-blend-multiply" />
+                <p className="text-slate-600 text-xs font-bold tracking-tighter break-keep leading-relaxed relative z-10">
                   단 하나의 시스템으로<br />
                   <span className="text-primary font-black">고주파 × 하이푸의 완전한 시너지</span>를<br />
                   실현합니다
@@ -208,7 +208,7 @@ export default function VRoAdvancePage() {
       </section>
 
       {/* ⑤ SD (Synergy Dotting) Combination Mechanism Section */}
-      <section id="sd-combination" className="py-28 bg-[#050810] relative overflow-hidden border-t border-white/5 leading-none text-left">
+      <section id="sd-combination" className="py-28 bg-sky-50 relative overflow-hidden border-t border-sky-100 leading-none text-left">
         <div className="max-w-screen-xl mx-auto px-6 relative z-10 leading-none">
           {/* Header Title Area (PICO-K Style) */}
           <motion.div
@@ -233,7 +233,7 @@ export default function VRoAdvancePage() {
             <div className="w-20 h-[2px] bg-primary mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
 
             {/* 설명 */}
-            <p className="text-slate-300 text-lg font-medium leading-relaxed max-w-xl break-keep drop-shadow-md text-center">
+            <p className="text-slate-600 text-lg font-medium leading-relaxed max-w-xl break-keep drop-shadow-md text-center">
               단 하나의 핸드피스로 <span className="text-primary font-bold">HIFU + RF를 <br className="md:hidden" />한 번에</span>
             </p>
           </motion.div>
@@ -242,7 +242,7 @@ export default function VRoAdvancePage() {
             {/* Left Column: Concept & Stats */}
             <div className="lg:w-[58%] flex flex-col gap-16 leading-none">
               {/* Concept Diagram Area (Left Top) - Comprehensive Catalog Layout with Signature Blue */}
-              <div className="relative h-[500px] lg:h-[560px] bg-white/[0.02] rounded-[40px] border border-white/10 overflow-hidden flex flex-col items-stretch leading-none">
+              <div className="relative h-[500px] lg:h-[560px] bg-white rounded-[40px] border border-sky-100 shadow-[0_10px_30px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col items-stretch leading-none">
                 <div className="absolute inset-0 bg-tech-grid opacity-[0.05] pointer-events-none" />
 
                 {/* Refined Title Bar (Signature Integration) */}
@@ -299,13 +299,13 @@ export default function VRoAdvancePage() {
                       whileInView={{ opacity: 1, x: 0 }}
                       className="absolute top-[17%] lg:top-[13%] left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 -translate-y-1/2 w-[90%] lg:w-[380px] pointer-events-auto"
                     >
-                      <div className="group bg-white/[0.03] backdrop-blur-xl border border-white/10 p-5 lg:p-6 rounded-[24px] flex items-center gap-5 hover:bg-white/[0.06] hover:border-primary/30 transition-all duration-500 shadow-2xl">
+                      <div className="group bg-white backdrop-blur-xl border border-sky-100 p-5 lg:p-6 rounded-[24px] flex items-center gap-5 hover:bg-sky-50 hover:border-primary/30 transition-all duration-500 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
                         <div className="flex flex-col items-center">
                           <span className="text-primary text-4xl lg:text-5xl font-black tracking-tighter leading-none font-inter drop-shadow-[0_0_15px_rgba(0,183,241,0.5)] group-hover:scale-110 transition-transform">RF</span>
                         </div>
                         <div className="h-10 w-[1px] bg-white/10 mx-1" />
                         <div className="flex flex-col">
-                          <span className="text-white text-base lg:text-lg font-bold tracking-tighter leading-tight break-keep">
+                          <span className="text-slate-900 text-base lg:text-lg font-bold tracking-tighter leading-tight break-keep">
                             피부와 피하조직의<br />부드러운 열 발생
                           </span>
                         </div>
@@ -319,13 +319,13 @@ export default function VRoAdvancePage() {
                       transition={{ delay: 0.1 }}
                       className="absolute top-[84%] lg:top-[87%] left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 -translate-y-1/2 w-[90%] lg:w-[380px] pointer-events-auto"
                     >
-                      <div className="group bg-white/[0.03] backdrop-blur-xl border border-white/10 p-5 lg:p-6 rounded-[24px] flex items-center gap-5 hover:bg-white/[0.06] hover:border-primary/30 transition-all duration-500 shadow-2xl">
+                      <div className="group bg-white backdrop-blur-xl border border-sky-100 p-5 lg:p-6 rounded-[24px] flex items-center gap-5 hover:bg-sky-50 hover:border-primary/30 transition-all duration-500 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
                         <div className="flex flex-col items-center">
                           <span className="text-primary text-4xl lg:text-5xl font-black tracking-tighter leading-none font-inter drop-shadow-[0_0_15px_rgba(0,183,241,0.5)] group-hover:scale-110 transition-transform">HIFU</span>
                         </div>
                         <div className="h-10 w-[1px] bg-white/10 mx-1" />
                         <div className="flex flex-col">
-                          <span className="text-white text-base lg:text-lg font-bold tracking-tighter leading-tight break-keep">
+                          <span className="text-slate-900 text-base lg:text-lg font-bold tracking-tighter leading-tight break-keep">
                             Target하는 깊이에만<br />강력한 열 집중
                           </span>
                         </div>
@@ -338,7 +338,7 @@ export default function VRoAdvancePage() {
               {/* Performance Stats Area (Left Bottom) - Catalog Refined Layout */}
               <div className="flex flex-col gap-12 leading-none mt-4">
                 <div className="flex items-center gap-4">
-                  <h4 className="text-2xl lg:text-3xl font-black tracking-tighter text-white underline underline-offset-8 decoration-primary/50">
+                  <h4 className="text-2xl lg:text-3xl font-black tracking-tighter text-slate-900 underline underline-offset-8 decoration-primary/50">
                     빠르고, 안전하게, 강력하게
                   </h4>
                 </div>
@@ -366,10 +366,10 @@ export default function VRoAdvancePage() {
                         </svg>
                       </div>
                       <div className="flex flex-col gap-1">
-                        <p className="text-white font-bold text-xl lg:text-2xl tracking-tighter leading-tight break-keep">
+                        <p className="text-slate-900 font-bold text-xl lg:text-2xl tracking-tighter leading-tight break-keep">
                           최대 10Hz의 속도 향상으로, 더 빨라진 시술 속도
                         </p>
-                        <p className="text-slate-500 font-bold text-sm tracking-tight">*기존 자사 장비 대비</p>
+                        <p className="text-slate-600 font-bold text-sm tracking-tight">*기존 자사 장비 대비</p>
                       </div>
                     </div>
                   </motion.div>
@@ -396,7 +396,7 @@ export default function VRoAdvancePage() {
                         </svg>
                       </div>
                       <div className="flex flex-col gap-1">
-                        <p className="text-white font-bold text-xl lg:text-2xl tracking-tighter leading-tight break-keep">
+                        <p className="text-slate-900 font-bold text-xl lg:text-2xl tracking-tighter leading-tight break-keep">
                           SD Type의 RF 출력 값 상승으로 더 높아진 열적 효과
                         </p>
                       </div>
@@ -407,7 +407,7 @@ export default function VRoAdvancePage() {
             </div>
 
             {/* Right Column: Cartridge Engineering Sidebar (More compact with better spacing) */}
-            <div className="lg:w-[42%] bg-white/[0.03] rounded-[40px] border border-white/10 p-6 lg:p-10 flex flex-col shadow-2xl relative overflow-hidden leading-none">
+            <div className="lg:w-[42%] bg-white rounded-[40px] border border-sky-100 p-6 lg:p-10 flex flex-col shadow-2xl relative overflow-hidden leading-none">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-[60px] opacity-20" />
 
               <div className="space-y-10 relative z-10 leading-none text-left">
@@ -415,12 +415,12 @@ export default function VRoAdvancePage() {
                 <div className="space-y-6 leading-none">
                   <div className="flex items-center justify-center gap-3 mb-6 leading-none">
                     <span className="text-slate-500 font-medium">|</span>
-                    <h5 className="text-white font-black text-xl lg:text-2xl tracking-tighter leading-none text-center">Pen Type 카트리지</h5>
+                    <h5 className="text-slate-900 font-black text-xl lg:text-2xl tracking-tighter leading-none text-center">Pen Type 카트리지</h5>
                     <span className="text-slate-500 font-medium">|</span>
                   </div>
 
                   {/* Cartridge Images (More compact vertical box) */}
-                  <div className="flex justify-center py-2 lg:py-3 bg-white/[0.01] rounded-3xl border border-white/5 relative group overflow-hidden leading-none">
+                  <div className="flex justify-center py-2 lg:py-3 bg-sky-50 rounded-3xl border border-sky-100 relative group overflow-hidden leading-none">
                     <div className="absolute inset-0 bg-primary/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl scale-150" />
 
                     <motion.img
@@ -433,24 +433,24 @@ export default function VRoAdvancePage() {
                     />
                   </div>
 
-                  <p className="text-slate-400 text-sm lg:text-base font-medium tracking-tighter leading-relaxed break-keep text-center mt-3">
+                  <p className="text-slate-600 text-sm lg:text-base font-medium tracking-tighter leading-relaxed break-keep text-center mt-3">
                     보다 작은 사이즈의 가벼운 카트리지로<br />시술 편의성을 높였습니다.
                   </p>
                 </div>
 
                 {/* Divider Line */}
-                <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
                 {/* Long Type */}
                 <div className="space-y-6 leading-none">
                   <div className="flex items-center justify-center gap-3 mb-6 leading-none">
                     <span className="text-slate-500 font-medium">|</span>
-                    <h5 className="text-white font-black text-xl lg:text-2xl tracking-tighter leading-none text-center">Long Type 카트리지</h5>
+                    <h5 className="text-slate-900 font-black text-xl lg:text-2xl tracking-tighter leading-none text-center">Long Type 카트리지</h5>
                     <span className="text-slate-500 font-medium">|</span>
                   </div>
 
                   {/* Cartridge Images (More compact vertical box) */}
-                  <div className="flex justify-center py-2 lg:py-3 bg-white/[0.01] rounded-3xl border border-white/5 relative group overflow-hidden leading-none">
+                  <div className="flex justify-center py-2 lg:py-3 bg-sky-50 rounded-3xl border border-sky-100 relative group overflow-hidden leading-none">
                     <div className="absolute inset-0 bg-primary/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl scale-150" />
 
                     <motion.img
@@ -463,7 +463,7 @@ export default function VRoAdvancePage() {
                     />
                   </div>
 
-                  <p className="text-slate-400 text-sm lg:text-base font-medium tracking-tighter leading-relaxed break-keep text-center mt-3">
+                  <p className="text-slate-600 text-sm lg:text-base font-medium tracking-tighter leading-relaxed break-keep text-center mt-3">
                     40mm 길어진 카트리지의 증류수 양이 증대되어<br className="hidden md:block" /> 장시간 사용 시에도 안정적인 시술을 제공합니다.
                   </p>
                 </div>
@@ -474,7 +474,7 @@ export default function VRoAdvancePage() {
       </section>
 
       {/* ③ MFU Control Section - 카탈로그 2번 이미지 기준 재설계 */}
-      <section id="mfu-control" className="relative py-24 lg:py-32 bg-[#050810] leading-none">
+      <section id="mfu-control" className="relative py-24 lg:py-32 bg-white leading-none">
         <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10 leading-none">
@@ -497,7 +497,7 @@ export default function VRoAdvancePage() {
 
             <div className="w-20 h-[2px] bg-primary mb-8" />
 
-            <p className="text-slate-300 text-lg font-medium leading-relaxed max-w-xl break-keep text-center">
+            <p className="text-slate-600 text-lg font-medium leading-relaxed max-w-xl break-keep text-center">
               다양하고 새로워진 <span className="text-primary font-bold">FL 카트리지</span>
             </p>
           </motion.div>
@@ -510,7 +510,7 @@ export default function VRoAdvancePage() {
               <div className="space-y-8 leading-none">
                 {/* 강조 배너 */}
                 <div className="bg-primary/15 border-l-4 border-primary px-6 py-4 rounded-r-2xl w-fit">
-                  <span className="text-white font-black text-xl lg:text-2xl tracking-tighter">
+                  <span className="text-slate-900 font-black text-xl lg:text-2xl tracking-tighter">
                     하나의 카트리지로 Dot &amp; Line Mode를 한 번에!
                   </span>
                 </div>
@@ -522,9 +522,9 @@ export default function VRoAdvancePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-[#0a0e1a] rounded-2xl border border-white/10 overflow-hidden relative group"
+                    className="bg-sky-50 rounded-2xl border border-sky-100 overflow-hidden relative group"
                   >
-                    <div className="absolute top-3 left-3 z-20 bg-black/50 backdrop-blur-md px-3 py-1 rounded-md text-[11px] font-bold text-white border border-white/10">
+                    <div className="absolute top-3 left-3 z-20 bg-white/90 backdrop-blur-md px-3 py-1 rounded-md text-[11px] font-bold text-slate-900 border border-sky-100">
                       · Dot Mode
                     </div>
                     <div className="aspect-[4/3] flex items-center justify-center relative overflow-hidden">
@@ -543,9 +543,9 @@ export default function VRoAdvancePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="bg-[#0a0e1a] rounded-2xl border border-white/10 overflow-hidden relative group"
+                    className="bg-sky-50 rounded-2xl border border-sky-100 overflow-hidden relative group"
                   >
-                    <div className="absolute top-3 left-3 z-20 bg-black/50 backdrop-blur-md px-3 py-1 rounded-md text-[11px] font-bold text-white border border-white/10">
+                    <div className="absolute top-3 left-3 z-20 bg-white/90 backdrop-blur-md px-3 py-1 rounded-md text-[11px] font-bold text-slate-900 border border-sky-100">
                       · Line Mode
                     </div>
                     <div className="aspect-[4/3] flex items-center justify-center relative overflow-hidden">
@@ -568,11 +568,11 @@ export default function VRoAdvancePage() {
                 viewport={{ once: true }}
                 className="space-y-8 pt-12 leading-none"
               >
-                <h5 className="text-white font-black text-2xl lg:text-3xl tracking-tighter border-b-2 border-primary/40 pb-3 w-fit">
+                <h5 className="text-slate-900 font-black text-2xl lg:text-3xl tracking-tighter border-b-2 border-primary/40 pb-3 w-fit">
                   에너지 집중도를 강화한 새로운 카트리지
                 </h5>
 
-                <div className="bg-white/[0.025] p-3 lg:p-10 rounded-[36px] border border-white/5 relative overflow-hidden">
+                <div className="bg-white p-3 lg:p-10 rounded-[36px] border border-sky-100 shadow-[0_10px_40px_rgba(0,0,0,0.05)] relative overflow-hidden">
                   <div className="absolute inset-0 bg-tech-dots opacity-5 pointer-events-none" />
 
                   {/* 비교 다이어그램 (Simplified One-Arrow Layout) */}
@@ -581,7 +581,7 @@ export default function VRoAdvancePage() {
                     {/* 기존 카트리지 — N4.5 (Simplified) */}
                     <div className="flex flex-col items-center">
                       <div className="px-1.5 lg:px-4 py-1.5 mb-6">
-                        <span className="text-white font-black text-[10px] lg:text-sm tracking-tighter whitespace-nowrap">기존 카트리지</span>
+                        <span className="text-slate-900 font-black text-[10px] lg:text-sm tracking-tighter whitespace-nowrap">기존 카트리지</span>
                       </div>
                       <div className="flex flex-col items-center relative">
                         {/* Cartridge Image */}
@@ -613,7 +613,7 @@ export default function VRoAdvancePage() {
 
                       <div className="flex flex-col items-center relative">
                         {/* Persistent Target Depth Line */}
-                        <div className="absolute top-[151px] lg:top-[199px] right-[-100px] left-[-350px] h-px border-t border-dashed border-white/20 z-0 pointer-events-none" />
+                        <div className="absolute top-[151px] lg:top-[199px] right-[-100px] left-[-350px] h-px border-t border-dashed border-slate-300 z-0 pointer-events-none" />
                         <span className="absolute top-[176px] left-[calc(100%+24px)] text-slate-500 text-[10px] font-bold tracking-widest whitespace-nowrap">Target Depth</span>
 
                         {/* Cartridge Image */}
@@ -630,9 +630,9 @@ export default function VRoAdvancePage() {
                     </div>
                   </div>
 
-                  <p className="text-slate-400 text-sm lg:text-base font-medium tracking-tighter leading-relaxed break-keep text-center">
+                  <p className="text-slate-600 text-sm lg:text-base font-medium tracking-tighter leading-relaxed break-keep text-center">
                     Transducer의 곡률 반경이 축소된 Advanced 카트리지는<br className="hidden md:block" />
-                    열 초점이 보다 원에 가깝게 맺혀 <span className="text-white font-bold">에너지 집중도가 강화</span>되었습니다.
+                    열 초점이 보다 원에 가깝게 맺혀 <span className="text-slate-900 font-bold">에너지 집중도가 강화</span>되었습니다.
                   </p>
                 </div>
               </motion.div>
@@ -646,10 +646,10 @@ export default function VRoAdvancePage() {
               viewport={{ once: true }}
               className="flex flex-col leading-none"
             >
-              <div className="bg-white/[0.055] backdrop-blur-2xl rounded-[44px] border border-white/15 p-4 lg:p-12 flex flex-col h-full shadow-2xl relative overflow-hidden">
+              <div className="bg-white rounded-[44px] border border-sky-100 p-4 lg:p-12 flex flex-col h-full shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-primary/8 blur-[80px] opacity-40 pointer-events-none" />
 
-                <h5 className="text-white font-black text-xl lg:text-2xl tracking-tighter leading-snug text-center break-keep mb-10 relative z-10">
+                <h5 className="text-slate-900 font-black text-xl lg:text-2xl tracking-tighter leading-snug text-center break-keep mb-10 relative z-10">
                   원하는 카트리지로<br />
                   <span className="text-primary">개인별 맞춤형 시술 제공</span> 가능
                 </h5>
@@ -658,9 +658,9 @@ export default function VRoAdvancePage() {
                   {/* Slim & Normal Type */}
                   <div className="space-y-5">
                     <div className="flex items-center justify-center gap-3">
-                      <div className="flex-1 h-px bg-white/15" />
-                      <span className="text-slate-300 font-bold text-sm whitespace-nowrap">Slim &amp; Normal Type 카트리지</span>
-                      <div className="flex-1 h-px bg-white/15" />
+                      <div className="flex-1 h-px bg-sky-100" />
+                      <span className="text-slate-700 font-bold text-sm whitespace-nowrap">Slim &amp; Normal Type 카트리지</span>
+                      <div className="flex-1 h-px bg-sky-100" />
                     </div>
 
                     {/* 카트리지 그룹: S1.5 (대형) + S2, N3, N4.5 (소형) */}
@@ -671,10 +671,10 @@ export default function VRoAdvancePage() {
                           <img
                             src="/images/vro_advance/cart/S1.5-정면.png"
                             alt="S1.5"
-                            className="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(255,255,255,0.1)] hover:scale-110 transition-transform duration-500"
+                            className="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.05)] hover:scale-110 transition-transform duration-500"
                           />
                         </div>
-                        <span className="text-slate-400 text-[13px] font-bold">S1.5</span>
+                        <span className="text-slate-600 text-[13px] font-bold">S1.5</span>
                       </div>
                       {/* 소형 S2, N3, N4.5 */}
                       {[
@@ -695,20 +695,20 @@ export default function VRoAdvancePage() {
                       ))}
                     </div>
 
-                    <p className="text-slate-500 text-xs font-medium text-center break-keep leading-relaxed">
+                    <p className="text-slate-600 text-xs font-medium text-center break-keep leading-relaxed">
                       기존 자사 제품과 동일한 카트리지로<br />편리한 시술이 가능합니다.
                     </p>
                   </div>
 
                   {/* 구분선 */}
-                  <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                  <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
                   {/* 브이로 리프팅 Type */}
                   <div className="space-y-5">
                     <div className="flex items-center justify-center gap-3">
-                      <div className="flex-1 h-px bg-white/15" />
-                      <span className="text-slate-300 font-bold text-sm whitespace-nowrap">브이로 리프팅 Type 카트리지</span>
-                      <div className="flex-1 h-px bg-white/15" />
+                      <div className="flex-1 h-px bg-sky-100" />
+                      <span className="text-slate-700 font-bold text-sm whitespace-nowrap">브이로 리프팅 Type 카트리지</span>
+                      <div className="flex-1 h-px bg-sky-100" />
                     </div>
 
                     {/* 카트리지 그룹: A1.5 (대형 시안) + A2, A3, A4.5 (소형) */}
@@ -740,7 +740,7 @@ export default function VRoAdvancePage() {
                       ))}
                     </div>
 
-                    <p className="text-slate-500 text-xs font-medium text-center break-keep leading-relaxed">
+                    <p className="text-slate-600 text-xs font-medium text-center break-keep leading-relaxed">
                       Transducer 곡률 반경 축소로<br />에너지 집중도가 향상된 시술이 가능합니다.
                     </p>
                   </div>
@@ -748,13 +748,13 @@ export default function VRoAdvancePage() {
 
                 {/* 하단 CTA 텍스트 */}
                 <div className="mt-auto pt-10 text-center leading-none relative z-10">
-                  <p className="text-slate-400 text-sm lg:text-base font-medium tracking-tight break-keep leading-relaxed">
+                  <p className="text-slate-600 text-sm lg:text-base font-medium tracking-tight break-keep leading-relaxed">
                     시술 강도 및 통증의 정도에 따른<br />시술 유형을 선택하여
                   </p>
                   <div className="mt-3 inline-block px-5 py-2.5 bg-primary/10 border border-primary/30 rounded-xl shadow-[0_0_20px_rgba(0,183,241,0.15)]">
                     <span className="text-primary font-black text-lg lg:text-xl tracking-tighter">개인별 맞춤형 시술 제공</span>
                   </div>
-                  <p className="text-slate-400 text-sm font-medium mt-1.5">이 가능합니다.</p>
+                  <p className="text-slate-600 text-sm font-medium mt-1.5">이 가능합니다.</p>
                 </div>
               </div>
             </motion.div>
@@ -763,8 +763,8 @@ export default function VRoAdvancePage() {
       </section>
 
       {/* ⑥ Final Slogan Section */}
-      <section id="bottom-banner" className="relative pt-16 pb-0 bg-[#050810] overflow-hidden leading-none">
-        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+      <section id="bottom-banner" className="relative pt-16 pb-0 bg-sky-50 overflow-hidden leading-none">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none mix-blend-multiply" />
         <div className="absolute bottom-[-100px] left-1/2 -translate-x-1/2 w-[1200px] h-[300px] bg-primary/[0.05] blur-[150px] rounded-full pointer-events-none" />
 
         <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-20 relative z-10 leading-none">
@@ -793,16 +793,16 @@ export default function VRoAdvancePage() {
               className="flex flex-col items-center md:items-start leading-none"
             >
               {/* Slogan: Italic & Left Aligned as per Logo style */}
-              <p className="text-white text-xl md:text-3xl font-bold tracking-tighter mb-4 md:mb-6 whitespace-nowrap">
+              <p className="text-slate-900 text-xl md:text-3xl font-bold tracking-tighter mb-4 md:mb-6 whitespace-nowrap">
                 두 가지 에너지로 강력한 맞춤 리프팅
               </p>
 
               {/* Brand Logo: CSS-based for precision to match the Photo */}
               <div className="flex flex-row flex-nowrap items-center gap-3 md:gap-5 leading-none">
-                <h2 className="text-[48px] md:text-[85px] lg:text-[100px] font-black tracking-tighter text-white leading-none font-inter uppercase whitespace-nowrap">
+                <h2 className="text-[48px] md:text-[85px] lg:text-[100px] font-black tracking-tighter text-slate-900 leading-none font-inter uppercase whitespace-nowrap">
                   V-RO
                 </h2>
-                <div className="bg-primary text-[#050810] px-4 md:px-8 py-2 md:py-3 rounded-[10px] md:rounded-[20px] transform shadow-[0_0_40px_rgba(0,183,241,0.3)] whitespace-nowrap">
+                <div className="bg-primary text-white px-4 md:px-8 py-2 md:py-3 rounded-[10px] md:rounded-[20px] transform shadow-[0_0_40px_rgba(0,183,241,0.3)] whitespace-nowrap">
                   <span className="text-[20px] md:text-[40px] lg:text-[44px] font-black tracking-tighter uppercase leading-none block font-inter">
                     ADVANCE
                   </span>

@@ -31,7 +31,7 @@ const PARTNERS_ROW_2 = [
 
 export default function PartnerMarquee() {
   return (
-    <section id="partners" className="partners-section pt-24 pb-0 bg-[#020408] overflow-hidden">
+    <section id="partners" className="partners-section pt-24 pb-0 bg-white overflow-hidden">
       <div className="max-w-screen-xl mx-auto px-6 mb-16 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30, scale: 0.9 }}
@@ -47,7 +47,7 @@ export default function PartnerMarquee() {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-white text-3xl md:text-5xl font-black mb-6 tracking-tight uppercase"
+          className="text-slate-900 text-3xl md:text-5xl font-black mb-6 tracking-tight uppercase"
         >
           <span className="hero-title-main">Our</span> <span className="hero-title-highlight">Partners</span> <span className="hero-title-main">& Clients</span>
         </motion.h2>
@@ -57,14 +57,14 @@ export default function PartnerMarquee() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-slate-400 text-lg font-medium max-w-2xl mx-auto leading-relaxed"
+          className="text-slate-600 text-lg font-medium max-w-2xl mx-auto leading-relaxed"
         >
           병원 분과별 맞춤 세팅 시스템. 당신의<br className="md:hidden" /> 브랜드가 가장 주목받는 의료 공간에서<br />
           최적의 솔루션과 만나는 혁신적인<br className="md:hidden" /> 네트워크를 경험하세요.
         </motion.p>
       </div>
 
-      <div className="partners-marquee-container space-y-12 py-16 bg-black/20 backdrop-blur-sm border-y border-primary/10">
+      <div className="partners-marquee-container space-y-12 py-16 bg-sky-50/60 backdrop-blur-sm border-y border-sky-100">
         {/* Row 1: Left to Right */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -73,8 +73,8 @@ export default function PartnerMarquee() {
           viewport={{ once: true }}
           className="py-4 relative"
         >
-          <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#020408] to-transparent z-20 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#020408] to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#F0F9FF] to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#F0F9FF] to-transparent z-20 pointer-events-none" />
 
           <Swiper
             modules={[Autoplay]}
@@ -91,8 +91,8 @@ export default function PartnerMarquee() {
           >
             {[...PARTNERS_ROW_1, ...PARTNERS_ROW_1, ...PARTNERS_ROW_1].map((partner, idx) => (
               <SwiperSlide key={`row1-${idx}`} className="!w-auto px-12">
-                <div className={`text-xl md:text-3xl font-black tracking-tighter transition-all duration-500 hover:text-white group relative ${partner.className}`}>
-                  <span className="bg-clip-text text-transparent bg-gradient-to-b from-white/20 to-white/5 group-hover:from-white group-hover:to-primary group-hover:text-glow transition-all duration-500">
+                <div className={`text-xl md:text-3xl font-black tracking-tighter transition-all duration-500 hover:text-slate-900 group relative ${partner.className}`}>
+                  <span className="bg-clip-text text-transparent bg-gradient-to-b from-slate-400/40 to-slate-400/10 group-hover:from-slate-800 group-hover:to-primary group-hover:text-glow transition-all duration-500">
                     {partner.name}
                   </span>
                 </div>
@@ -109,8 +109,8 @@ export default function PartnerMarquee() {
           viewport={{ once: true }}
           className="py-4 relative flex"
         >
-          <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#020408] to-transparent z-20 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#020408] to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#F0F9FF] to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#F0F9FF] to-transparent z-20 pointer-events-none" />
 
           <Swiper
             modules={[Autoplay]}
@@ -128,8 +128,8 @@ export default function PartnerMarquee() {
           >
             {[...PARTNERS_ROW_2, ...PARTNERS_ROW_2, ...PARTNERS_ROW_2].map((partner, idx) => (
               <SwiperSlide key={`row2-${idx}`} className="!w-auto px-12">
-                <div className={`text-xl md:text-3xl font-black tracking-tighter transition-all duration-500 hover:text-white group relative ${partner.className}`}>
-                  <span className="bg-clip-text text-transparent bg-gradient-to-b from-white/20 to-white/5 group-hover:from-white group-hover:to-primary group-hover:text-glow transition-all duration-500">
+                <div className={`text-xl md:text-3xl font-black tracking-tighter transition-all duration-500 hover:text-slate-900 group relative ${partner.className}`}>
+                  <span className="bg-clip-text text-transparent bg-gradient-to-b from-slate-400/40 to-slate-400/10 group-hover:from-slate-800 group-hover:to-primary group-hover:text-glow transition-all duration-500">
                     {partner.name}
                   </span>
                 </div>

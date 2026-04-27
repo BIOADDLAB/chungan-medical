@@ -11,18 +11,18 @@ export default function PicoKPage() {
       {/* ① Hero Section */}
       <section
         id="hero"
-        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-[#020408]"
+        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-50"
       >
         {/* 배경 이미지 레이어 (선명도 상향된 그레이 톤) */}
         <img
           src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-70 brightness-[0.6] contrast-[1.05]"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-80 brightness-[0.85] contrast-[1.05]"
           alt="medical background"
         />
         {/* 그라디언트 오버레이 (Clear Matte Effect) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050810]/30 via-transparent to-[#050810]/70 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/40 z-10" />
         {/* Tech Grid 오버레이 */}
-        <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-screen z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-multiply z-10 pointer-events-none" />
 
         {/* 콘텐츠 */}
         <div className="relative z-20 flex flex-col items-center max-w-screen-xl mx-auto px-6 w-full">
@@ -31,9 +31,9 @@ export default function PicoKPage() {
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight"
+            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white drop-shadow-xl"
           >
-            <span className="hero-title-main block md:inline">PICO - </span>
+            <span className="hero-title-main !text-white block md:inline">PICO - </span>
             <span className="hero-title-highlight ml-0 md:ml-4">K</span>
           </motion.h1>
 
@@ -45,7 +45,7 @@ export default function PicoKPage() {
             className="flex flex-col items-center"
           >
             <div className="w-16 h-[2px] bg-primary mb-6 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-            <p className="text-slate-300 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl">
+            <p className="text-white/90 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl drop-shadow-md">
               합리적인 피부미용 의료 장비, <span className="text-primary font-bold">정확한 기술의 시작</span>
             </p>
           </motion.div>
@@ -56,9 +56,9 @@ export default function PicoKPage() {
           <Link
             href="#overview"
             aria-label="Scroll down"
-            className="inline-flex justify-center items-center w-12 h-12 border border-white/20 rounded-full hover:bg-white hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-black/10 backdrop-blur-sm"
+            className="inline-flex justify-center items-center w-12 h-12 border border-slate-300 rounded-full hover:bg-slate-100 hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-white/50 backdrop-blur-sm"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white group-hover:text-black transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-slate-700 group-hover:text-black transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </Link>
@@ -66,9 +66,9 @@ export default function PicoKPage() {
       </section>
 
       {/* ② Product Overview Section */}
-      <section id="overview" className="relative py-28 bg-[#020408] overflow-hidden">
+      <section id="overview" className="relative py-28 bg-white overflow-hidden">
         {/* 배경 장식 */}
-        <div className="absolute inset-0 bg-tech-dots opacity-25 mix-blend-screen pointer-events-none" />
+        <div className="absolute inset-0 bg-tech-dots opacity-25 mix-blend-multiply pointer-events-none" />
         <div className="absolute top-1/2 right-[5%] -translate-y-1/2 w-[500px] h-[500px] bg-primary/8 blur-[130px] rounded-full pointer-events-none" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
@@ -94,7 +94,7 @@ export default function PicoKPage() {
               </h2>
               <div className="w-20 h-[2px] bg-primary mb-8 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
 
-              <p className="text-slate-400 text-lg font-medium leading-relaxed mb-12 max-w-xl">
+              <p className="text-slate-600 text-lg font-medium leading-relaxed mb-12 max-w-xl">
                 최첨단 피코 레이저 기술을 통해 더욱 빠르고 정밀한 색소 치료와<br className="hidden md:block" />
                 피부 재생의 새로운 기준을 제시합니다.
               </p>
@@ -104,24 +104,24 @@ export default function PicoKPage() {
                 <div className="glass-panel p-6 flex items-center gap-5 hover:border-primary/50 transition duration-500 group">
                   <div className="flex flex-col flex-shrink-0">
                     <span className="text-[10px] font-bold text-slate-500 tracking-[0.2em] uppercase mb-1">Product</span>
-                    <span className="text-sm font-bold text-white">로고</span>
+                    <span className="text-sm font-bold text-slate-900">로고</span>
                   </div>
                   <div className="w-[1px] h-8 bg-primary/20" />
                   <img
                     src="/images/machine/피코케이 로고.png"
-                    className="h-6 w-auto brightness-0 invert opacity-60 group-hover:opacity-100 transition"
+                    className="h-6 w-auto brightness-0 opacity-60 group-hover:opacity-100 transition"
                     alt="PICO-K 로고"
                   />
                 </div>
                 <div className="glass-panel p-6 flex items-center gap-5 hover:border-primary/50 transition duration-500 group">
                   <div className="flex flex-col flex-shrink-0">
                     <span className="text-[10px] font-bold text-slate-500 tracking-[0.2em] uppercase mb-1">Manufacturer</span>
-                    <span className="text-sm font-bold text-white">제조사</span>
+                    <span className="text-sm font-bold text-slate-900">제조사</span>
                   </div>
                   <div className="w-[1px] h-8 bg-primary/20" />
                   <img
                     src="/images/machine/피코케이 제조사 로고.png"
-                    className="h-6 w-auto brightness-0 invert opacity-60 group-hover:opacity-100 transition"
+                    className="h-6 w-auto brightness-0 opacity-60 group-hover:opacity-100 transition"
                     alt="Speclipse"
                   />
                 </div>
@@ -150,8 +150,8 @@ export default function PicoKPage() {
       </section>
 
       {/* ④ Key Benefits / Features Section */}
-      <section id="features" className="relative py-24 bg-[#05070a] overflow-hidden">
-        <div className="absolute inset-0 bg-tech-dots opacity-20 mix-blend-screen pointer-events-none" />
+      <section id="features" className="relative py-24 bg-sky-50 overflow-hidden">
+        <div className="absolute inset-0 bg-tech-dots opacity-20 mix-blend-multiply pointer-events-none" />
         <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           {/* TECH.01 라벨 — HUEMEDICAL과 동일하게 플렉스 외부에 배치 */}
@@ -190,7 +190,7 @@ export default function PicoKPage() {
               {/* 부제 및 기본 설명 */}
               <div className="mb-14 pl-4 border-l-2 border-primary/20">
                 <h4 className="text-primary font-black text-xl md:text-2xl mb-2 tracking-tight">Thermal Lens Effect</h4>
-                <p className="text-slate-400 font-medium leading-relaxed">렌즈의 과열로 부풀어올라 초점의 깊이가 변하는 현상</p>
+                <p className="text-slate-600 font-medium leading-relaxed">렌즈의 과열로 부풀어올라 초점의 깊이가 변하는 현상</p>
               </div>
 
               {/* 기술 설명 상세 (도면 스타일) */}
@@ -199,10 +199,10 @@ export default function PicoKPage() {
                 <div className="group">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary shadow-[0_0_8px_rgba(0,183,241,0)] group-hover:shadow-[0_0_8px_rgba(0,183,241,1)] transition-all duration-500" />
-                    <h5 className="text-white font-bold text-xl">단일 챔버 레이저 발진 장치</h5>
+                    <h5 className="text-slate-900 font-bold text-xl">단일 챔버 레이저 발진 장치</h5>
                   </div>
                   <p className="text-primary/70 text-[10px] font-bold mb-4 tracking-[0.2em] uppercase pl-4">Patent Registration: No.10-165288</p>
-                  <p className="text-slate-400 leading-relaxed max-w-lg pl-4 border-l border-white/5 group-hover:border-primary/30 transition-colors duration-500">
+                  <p className="text-slate-600 leading-relaxed max-w-lg pl-4 border-l border-sky-100 group-hover:border-primary/30 transition-colors duration-500">
                     이중 챔버를 사용하는 기존 Q-switch레이저와 달리, 단일 챔버를 활용하여 기존 대비 효율은 10%이상 높이고, 제작 단가를 줄일 수 있는 기술입니다.
                   </p>
                 </div>
@@ -211,10 +211,10 @@ export default function PicoKPage() {
                 <div className="group">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary shadow-[0_0_8px_rgba(0,183,241,0)] group-hover:shadow-[0_0_8px_rgba(0,183,241,1)] transition-all duration-500" />
-                    <h5 className="text-white font-bold text-xl">의료용 레이저 열 렌즈 효과 제어 시스템</h5>
+                    <h5 className="text-slate-900 font-bold text-xl">의료용 레이저 열 렌즈 효과 제어 시스템</h5>
                   </div>
                   <p className="text-primary/70 text-[10px] font-bold mb-4 tracking-[0.2em] uppercase pl-4">Patent Registration: No.10-2333260</p>
-                  <p className="text-slate-400 leading-relaxed max-w-lg pl-4 border-l border-white/5 group-hover:border-primary/30 transition-colors duration-500">
+                  <p className="text-slate-600 leading-relaxed max-w-lg pl-4 border-l border-sky-100 group-hover:border-primary/30 transition-colors duration-500">
                     열 렌즈 효과 제어를 위해 기계 스위치와 마이크로 컨트롤러를 활용하여 안정적인 출력에너지와 일관된 빔 크기를 유지합니다.
                   </p>
                 </div>
@@ -232,7 +232,7 @@ export default function PicoKPage() {
               <div className="relative w-full h-auto mt-12 group perspective-1000">
                 {/* 상단 라벨 오버레이 (이미지 밖 상단으로 이동) */}
                 <div className="absolute -top-12 left-0 w-full px-4 flex justify-between z-20 pointer-events-none transition-transform duration-1000 ease-out group-hover:translate-y-[-10px]">
-                  <span className="text-slate-400 font-extrabold text-sm md:text-lg tracking-tight drop-shadow-lg">
+                  <span className="text-slate-600 font-extrabold text-sm md:text-lg tracking-tight drop-shadow-lg">
                     [ 특허기술 미적용 ]
                   </span>
                   <span className="text-primary font-black text-sm md:text-lg tracking-tight drop-shadow-[0_0_10px_rgba(0,183,241,0.5)]">
@@ -260,7 +260,7 @@ export default function PicoKPage() {
                       </span>
                     </div>
                     {/* 지시선 (텍스트 우측에서 포인트로 연결) - 길이를 고정하여 포인트 지점을 명확히 유지 */}
-                    <div className="w-8 md:w-16 h-[1px] bg-white/40 mr-1.5 shadow-sm transition-opacity duration-700 group-hover:bg-white/60" />
+                    <div className="w-8 md:w-16 h-[1px] bg-slate-400/40 mr-1.5 shadow-sm transition-opacity duration-700 group-hover:bg-slate-400/60" />
                     {/* 지점 포인트 (노란색 펄스) */}
                     <div className="relative transition-transform duration-700 group-hover:scale-125">
                       <div className="w-2.5 h-2.5 bg-yellow-400 rounded-full shadow-[0_0_10px_rgba(250,204,21,1)]" />
@@ -275,7 +275,7 @@ export default function PicoKPage() {
       </section>
 
       {/* ⑤ Technical Detail 02 & 03: Integrated Layout */}
-      <section id="tech-integrated-detail" className="relative py-28 bg-[#020408] overflow-hidden">
+      <section id="tech-integrated-detail" className="relative py-28 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
         <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
 
@@ -308,18 +308,18 @@ export default function PicoKPage() {
               </h3>
 
               <div className="mb-10">
-                <p className="text-slate-200 font-bold text-xl leading-snug mb-6">
+                <p className="text-slate-700 font-bold text-xl leading-snug mb-6">
                   피코의 성능을 완성하는 출력안정성<br />
                   특허기술이 적용된 파워서플라이 채용
                 </p>
-                <p className="text-slate-400 font-medium leading-relaxed max-w-md">
+                <p className="text-slate-600 font-medium leading-relaxed max-w-md">
                   PFC(Power Factor Correction)를 통합하여 일정하고 <br className="hidden md:block" />
                   안정적인 에너지 출력을 제공하는데 도움을 줍니다.
                 </p>
               </div>
 
               {/* 파워 서플라이 장치 이미지 - 내부 테두리 제거 및 고정 비율 적용 */}
-              <div className="relative glass-panel aspect-video bg-tech-grid/10 overflow-hidden mt-auto group flex items-center justify-center border-white/5">
+              <div className="relative glass-panel aspect-video bg-tech-grid/10 overflow-hidden mt-auto group flex items-center justify-center border-sky-100">
                 <img
                   src="/images/picok/pfc.png"
                   alt="PFC Power Supply Unit"
@@ -356,11 +356,11 @@ export default function PicoKPage() {
               </h3>
 
               <div className="mb-10">
-                <p className="text-slate-200 font-bold text-xl leading-snug mb-6">
+                <p className="text-slate-700 font-bold text-xl leading-snug mb-6">
                   순수 자체 기술을 통한 개발과 생산으로 <br className="hidden md:block" />
-                  핵심 부품 간의 정밀한 매칭을 구현했습니다.
+                  핵심 부품 간의 정밀 매칭을 구현했습니다.
                 </p>
-                <p className="text-slate-400 font-medium leading-relaxed max-w-md">
+                <p className="text-slate-600 font-medium leading-relaxed max-w-md">
                   부적합을 줄이고 최상의 퍼포먼스를 실현하여<br className="hidden md:block" />
                   신뢰할 수 있는 안정성을 제공합니다.
                 </p>
@@ -381,7 +381,7 @@ export default function PicoKPage() {
                     { label: 'CONTROLER', img: 'core3.png' }
                   ].map((item, idx) => (
                     <div key={idx} className="text-center group">
-                      <div className="aspect-square rounded-xl border border-white/10 bg-white/5 overflow-hidden mb-2 group-hover:border-primary/50 transition-all duration-500 flex items-center justify-center relative">
+                      <div className="aspect-square rounded-xl border border-sky-100 bg-sky-50 overflow-hidden mb-2 group-hover:border-primary/50 transition-all duration-500 flex items-center justify-center relative">
                         <img
                           src={`/images/picok/${item.img}`}
                           className="w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-110"
@@ -389,7 +389,7 @@ export default function PicoKPage() {
                         />
                         <div className="absolute inset-0 bg-primary/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       </div>
-                      <span className="text-[10px] text-white font-black tracking-widest group-hover:text-primary transition-colors uppercase">{item.label}</span>
+                      <span className="text-[10px] text-slate-900 font-black tracking-widest group-hover:text-primary transition-colors uppercase">{item.label}</span>
                     </div>
                   ))}
                   {/* 연결 라인 장식 제거됨 */}
@@ -401,7 +401,7 @@ export default function PicoKPage() {
       </section>
 
       {/* ⑥ Technical Detail 04 & 05: Performance Standards */}
-      <section id="tech-performance-standards" className="relative py-28 bg-[#020408] overflow-hidden border-t border-white/5">
+      <section id="tech-performance-standards" className="relative py-28 bg-sky-50 overflow-hidden border-t border-sky-100">
         <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
@@ -433,39 +433,39 @@ export default function PicoKPage() {
               </h3>
 
               {/* 오실로스코프 파형 영역 (Empty Slot) */}
-              <div className="relative glass-panel aspect-[16/10] bg-tech-grid/30 border border-white/10 rounded-sm mb-12 overflow-hidden flex items-center justify-center group/wave">
+              <div className="relative glass-panel aspect-[16/10] bg-tech-grid/30 border border-sky-100 rounded-sm mb-12 overflow-hidden flex items-center justify-center group/wave">
                 <img
                   src="/images/picok/300ps.png"
                   alt="300ps Waveform"
                   className="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover/wave:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#020408]/40 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-sky-50/40 to-transparent pointer-events-none" />
               </div>
 
               {/* 핵심 스펙 타이포그래피 */}
               <div className="space-y-8 mb-12">
                 <div className="flex items-start gap-8 border-l-2 border-primary/40 pl-6 group">
                   <div className="flex flex-col">
-                    <span className="text-5xl md:text-6xl font-black text-white tracking-tighter group-hover:text-primary transition-colors">300ps</span>
+                    <span className="text-5xl md:text-6xl font-black text-slate-900 tracking-tighter group-hover:text-primary transition-colors">300ps</span>
                   </div>
                   <div className="flex flex-col justify-center pt-2">
-                    <span className="text-slate-200 font-bold text-lg leading-tight mb-1">펄스 지속 시간</span>
-                    <span className="text-slate-400 text-sm font-medium">표준편차 약 2% 이내 유지</span>
+                    <span className="text-slate-700 font-bold text-lg leading-tight mb-1">펄스 지속 시간</span>
+                    <span className="text-slate-600 text-sm font-medium">표준편차 약 2% 이내 유지</span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-8 border-l-2 border-primary/40 pl-6 group">
                   <div className="flex flex-col">
-                    <span className="text-5xl md:text-6xl font-black text-white tracking-tighter group-hover:text-primary transition-colors">2.0GW</span>
+                    <span className="text-5xl md:text-6xl font-black text-slate-900 tracking-tighter group-hover:text-primary transition-colors">2.0GW</span>
                   </div>
                   <div className="flex flex-col justify-center pt-2">
-                    <span className="text-slate-200 font-bold text-lg leading-tight mb-1">최대 출력 보장</span>
-                    <span className="text-slate-400 text-sm font-medium">일관된 고품질 빔 프로필 유지</span>
+                    <span className="text-slate-700 font-bold text-lg leading-tight mb-1">최대 출력 보장</span>
+                    <span className="text-slate-600 text-sm font-medium">일관된 고품질 빔 프로필 유지</span>
                   </div>
                 </div>
               </div>
 
-              <p className="text-slate-400 font-medium text-lg leading-relaxed mt-auto max-w-xl">
+              <p className="text-slate-600 font-medium text-lg leading-relaxed mt-auto max-w-xl">
                 부작용을 최소화하며 정확하고 일관된 레이저 치료를 제공받을 수 있도록 <br className="hidden md:block" />
                 300PS 실명제를 운영하여 구매 고객들 대상으로 본사의 QC자료(PULSE DURATION)를
                 투명하게 제공해드립니다.
@@ -498,7 +498,7 @@ export default function PicoKPage() {
                 <span className="hero-title-highlight">변성방지 기술 적용</span>
               </h3>
 
-              <p className="text-slate-300 font-medium text-lg leading-relaxed mb-12 max-w-md">
+              <p className="text-slate-600 font-medium text-lg leading-relaxed mb-12 max-w-md">
                 운송 또는 사용 중 내부 얼라인먼트 변형으로 장비출력 및 빔 품질에 영향을 줄 수 있는
                 <span className="text-primary/90 font-bold"> [외부충격]</span>에 취약한 광학레이저의 특성을 고려하여 솔루션을 개발, 적용하였습니다.
               </p>
@@ -518,11 +518,11 @@ export default function PicoKPage() {
                             <img
                               src={step.img}
                               alt={step.label}
-                              className="w-[70%] h-[70%] md:w-[80%] md:h-[80%] object-contain brightness-0 invert opacity-80 transition-transform duration-500 group-hover:scale-110"
+                              className="w-[70%] h-[70%] md:w-[80%] md:h-[80%] object-contain brightness-0 opacity-60 transition-transform duration-500 group-hover:scale-110"
                             />
                           )}
                         </div>
-                        <span className="text-[10px] md:text-[12px] text-slate-300 font-bold whitespace-pre-line leading-tight transition-colors duration-500 group-hover:text-primary">{step.label}</span>
+                        <span className="text-[10px] md:text-[12px] text-slate-600 font-bold whitespace-pre-line leading-tight transition-colors duration-500 group-hover:text-primary">{step.label}</span>
                       </div>
                       {idx < 2 && <div className="text-primary/40 font-black text-sm md:text-xl">+</div>}
                     </React.Fragment>
@@ -533,7 +533,7 @@ export default function PicoKPage() {
               {/* 암(Arm) 일러스트 및 빔 테스트 영역 (Empty Slot) */}
               <div className="grid grid-cols-2 gap-4 md:gap-8 mt-auto items-start">
                 {/* 왼쪽: 암 시스템 (박스 내부 캡션 스타일) */}
-                <div className="glass-panel aspect-square bg-tech-dots/10 flex items-center justify-center border-white/5 relative overflow-hidden group/arm cursor-help">
+                <div className="glass-panel aspect-square bg-tech-dots/10 flex items-center justify-center border-sky-100 relative overflow-hidden group/arm cursor-help">
                   <img
                     src="/images/picok/arm.png"
                     alt="Robot Arm Alignment"
@@ -554,13 +554,13 @@ export default function PicoKPage() {
                   </div>
 
                   {/* 하단 캡션 오버레이 (이미지 위에 겹침) */}
-                  <div className="absolute bottom-2 md:bottom-6 left-1/2 -translate-x-1/2 flex items-center bg-black/80 backdrop-blur-md border border-white/10 px-3 md:px-6 py-1.5 md:py-2 shadow-2xl pointer-events-none w-[90%] md:w-fit">
+                  <div className="absolute bottom-2 md:bottom-6 left-1/2 -translate-x-1/2 flex items-center bg-white/90 backdrop-blur-md border border-sky-100 px-3 md:px-6 py-1.5 md:py-2 shadow-2xl pointer-events-none w-[90%] md:w-fit">
                     <div className="w-[2px] md:w-[3px] h-6 md:h-10 bg-primary mr-3 md:mr-5" />
                     <div className="flex flex-col text-left">
-                      <span className="text-[10px] md:text-[14px] font-black text-white tracking-[0.1em] md:tracking-[0.2em] uppercase leading-none whitespace-nowrap">
+                      <span className="text-[10px] md:text-[14px] font-black text-slate-900 tracking-[0.1em] md:tracking-[0.2em] uppercase leading-none whitespace-nowrap">
                         FULL ROTATION
                       </span>
-                      <span className="text-[10px] md:text-[14px] font-black text-white tracking-[0.1em] md:tracking-[0.2em] uppercase leading-none mt-1 md:mt-0.5 whitespace-nowrap">
+                      <span className="text-[10px] md:text-[14px] font-black text-slate-900 tracking-[0.1em] md:tracking-[0.2em] uppercase leading-none mt-1 md:mt-0.5 whitespace-nowrap">
                         ARM SYSTEM
                       </span>
                     </div>
@@ -577,11 +577,11 @@ export default function PicoKPage() {
                       className="w-full h-full object-contain drop-shadow-[0_0_20px_rgba(0,183,241,0.5)] transition-all duration-700 group-hover/beam:scale-110"
                     />
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-1 h-1 bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,1)]" />
+                      <div className="w-1 h-1 bg-primary rounded-full shadow-[0_0_15px_rgba(0,183,241,1)]" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center">
-                    <span className="text-lg md:text-2xl font-black text-white tracking-widest uppercase">PICO-K</span>
+                    <span className="text-lg md:text-2xl font-black text-slate-900 tracking-widest uppercase">PICO-K</span>
                     <span className="text-sm md:text-lg font-black text-primary uppercase tracking-tighter">BEAM TEST</span>
                   </div>
                 </div>

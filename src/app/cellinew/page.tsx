@@ -7,28 +7,28 @@ import Link from 'next/link';
 
 export default function CellinewPage() {
   return (
-    <main className="bg-[#050810] min-h-screen lowercase-titles">
+    <main className="bg-white min-h-screen lowercase-titles">
       {/* ① Hero Section (Standard Tech Style) */}
       <section
         id="hero"
-        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-[#050810]"
+        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-50"
       >
         <img
           src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1920&q=80"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-50 brightness-[0.5] contrast-[1.1]"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-80 brightness-[0.85] contrast-[1.05]"
           alt="medical background"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050810]/30 via-transparent to-[#050810]/70 z-10" />
-        <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-screen z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/40 z-10" />
+        <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-multiply z-10 pointer-events-none" />
 
         <div className="relative z-20 flex flex-col items-center max-w-screen-xl mx-auto px-6 w-full">
           <motion.h1
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight"
+            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white drop-shadow-xl"
           >
-            <span className="hero-title-main">CELLI</span>
+            <span className="hero-title-main !text-white">CELLI</span>
             <span className="hero-title-highlight">NEW</span>
           </motion.h1>
 
@@ -39,19 +39,19 @@ export default function CellinewPage() {
             className="flex flex-col items-center"
           >
             <div className="w-16 h-[2px] bg-primary mb-6 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-            <p className="text-slate-300 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl">
-              합리적인 피부미용 의료 장비, <span className="text-primary font-bold">그리고 최고의 선택</span>
+            <p className="text-white/90 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl drop-shadow-md">
+              합리적인 피부미용 의료 장비, <span className="text-primary font-bold">정확한 기술의 시작</span>
             </p>
           </motion.div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center text-white">
+        <div className="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center">
           <Link
             href="#overview"
             aria-label="Scroll down"
-            className="inline-flex justify-center items-center w-12 h-12 border border-white/20 rounded-full hover:bg-white hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-black/10 backdrop-blur-sm"
+            className="inline-flex justify-center items-center w-12 h-12 border border-slate-300 rounded-full hover:bg-slate-100 hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-white/50 backdrop-blur-sm"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-slate-700 group-hover:text-black transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </Link>
@@ -59,10 +59,10 @@ export default function CellinewPage() {
       </section>
 
       {/* ② CELLINEW Overview Section (Orchestration Standard) */}
-      <section id="overview" className="relative py-28 bg-[#050810] overflow-hidden">
-        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+      <section id="overview" className="relative py-28 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 mix-blend-multiply pointer-events-none" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/[0.03] blur-[180px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        <div className="absolute bottom-0 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -74,22 +74,22 @@ export default function CellinewPage() {
               viewport={{ once: true }}
               className="flex flex-col items-center lg:items-start text-center lg:text-left"
             >
-              <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">
+              <div className="inline-block px-4 py-1.5 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-slate-50 shadow-sm leading-none">
                 PREMIUM RF ENERGY
               </div>
 
-              <h2 className="text-3xl md:text-5xl font-black mb-6 uppercase text-white leading-[1.1] tracking-tighter">
+              <h2 className="text-3xl md:text-5xl font-black mb-6 uppercase text-slate-900 leading-[1.1] tracking-tighter">
                 RENEW YOUR SKIN<br />
                 <span className="text-primary tracking-tighter font-sans uppercase">피부를 리뉴얼하다</span>
               </h2>
               <div className="w-20 h-[2px] bg-primary mb-14 shadow-[0_0_10px_rgba(0,183,241,0.5)]" />
 
               <div className="space-y-12">
-                <h3 className="text-white text-[18px] md:text-xl font-bold leading-tight tracking-tighter break-keep opacity-95">
+                <h3 className="text-slate-900 text-[18px] md:text-xl font-bold leading-tight tracking-tighter break-keep opacity-95">
                   매순간 변화하는 당신의 피부를 위한<br />프리미엄 고주파 에너지, 셀리뉴
                 </h3>
 
-                <div className="space-y-6 text-slate-300 text-sm md:text-[17px] font-medium tracking-tight leading-relaxed break-keep">
+                <div className="space-y-6 text-slate-600 text-sm md:text-[17px] font-medium tracking-tight leading-relaxed break-keep">
                   <p>셀리뉴만의 <span className="text-primary font-black">Auto Fit</span>은</p>
                   <p>피부 부위별 특성에 맞춰 자동으로 에너지를 전달하는 시스템으로</p>
                   <p>매순간 변화하는 피부에 실시간으로<br />최적화된 에너지를 전달시켜줍니다.</p>
@@ -134,8 +134,8 @@ export default function CellinewPage() {
       </section>
 
       {/* ③ CELLINEW Monopolar RF & Mechanism Section (Standard Tech Style) */}
-      <section id="mechanism" className="relative py-28 bg-[#050810] overflow-hidden">
-        <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+      <section id="mechanism" className="relative py-28 bg-sky-50 overflow-hidden border-t border-sky-100">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 mix-blend-multiply pointer-events-none" />
 
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 relative z-10">
           {/* Section Header */}
@@ -160,7 +160,7 @@ export default function CellinewPage() {
               className="flex items-center gap-5 mb-10"
             >
               <div className="w-[6px] h-10 bg-primary shrink-0 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-              <h2 className="text-white text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] uppercase">
+              <h2 className="text-slate-900 text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] uppercase">
                 6.78MHz <span className="text-primary font-inter">Monopolar RF</span>
               </h2>
             </motion.div>
@@ -172,9 +172,9 @@ export default function CellinewPage() {
               viewport={{ once: true }}
               className="text-center w-full max-w-4xl"
             >
-              <div className="space-y-6 text-white/90 text-[17px] md:text-[21px] font-bold leading-relaxed tracking-tighter break-keep">
+              <div className="space-y-6 text-slate-800 text-[17px] md:text-[21px] font-bold leading-relaxed tracking-tighter break-keep">
                 <p>셀리뉴는 <span className="text-primary">6.78MHz Monopolar RF</span>로 진피층에 열을 발생시켜<br />노화의 근본적인 원인이 되는 콜라겐 셀을 리뉴얼 시켜줍니다.</p>
-                <p className="text-slate-400 font-medium text-sm md:text-lg tracking-tight">
+                <p className="text-slate-600 font-medium text-sm md:text-lg tracking-tight">
                   피부 속부터 탄력있고 건강하게 가꾸어 주름, 피부결 뿐 아니라  <br className="hidden md:block" />
                   종합적인 피부 개선 효과를 기대할 수 있습니다.
                 </p>
@@ -195,11 +195,11 @@ export default function CellinewPage() {
               <span className="text-[#050810] font-black text-lg tracking-widest uppercase font-inter">Mechanism</span>
             </div>
 
-            <div className="bg-[#0A0D14]/80 backdrop-blur-md rounded-b-[30px] rounded-tr-[30px] px-6 py-10 md:p-16 relative z-10 shadow-2xl border border-white/10 overflow-hidden">
+            <div className="bg-white/90 backdrop-blur-md rounded-b-[30px] rounded-tr-[30px] px-6 py-10 md:p-16 relative z-10 shadow-sm border border-slate-200 overflow-hidden">
               {/* Background ambient glow inside the card */}
               <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-primary/5 blur-[100px] rounded-full pointer-events-none" />
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-0 lg:divide-x lg:divide-white/10">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-0 lg:divide-x lg:divide-slate-200">
                 {/* Step 1 */}
                 <div className="lg:pr-16 space-y-10 relative">
                   <div className="flex items-center gap-6">
@@ -207,17 +207,17 @@ export default function CellinewPage() {
                       <span className="text-primary font-black text-xl font-inter">1ST</span>
                     </div>
                     <div>
-                      <h4 className="text-xl md:text-2xl font-black text-white tracking-tighter leading-tight break-keep">
+                      <h4 className="text-xl md:text-2xl font-black text-slate-900 tracking-tighter leading-tight break-keep">
                         <span className="whitespace-nowrap">열로 인한 콜라겐 수축</span><br />
                         <span className="text-primary text-glow-primary whitespace-nowrap">→ 즉각 타이트닝</span>
                       </h4>
                     </div>
                   </div>
 
-                  <ul className="space-y-6 text-slate-400 text-sm md:text-[17px] font-medium tracking-tight leading-relaxed">
+                  <ul className="space-y-6 text-slate-600 text-sm md:text-[17px] font-medium tracking-tight leading-relaxed">
                     <li className="flex items-start gap-4">
                       <div className="mt-[10px] w-2 h-2 bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)] rounded-full shrink-0" />
-                      <span>열이 가해지면 콜라겐의 <span className="text-white font-bold">실타래모양</span>을 유지하게 하는 연결고리가 끊어지며 리모델링이 시작됨</span>
+                      <span>열이 가해지면 콜라겐의 <span className="text-slate-900 font-bold">실타래모양</span>을 유지하게 하는 연결고리가 끊어지며 리모델링이 시작됨</span>
                     </li>
                     <li className="flex items-start gap-4">
                       <div className="mt-[10px] w-2 h-2 bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)] rounded-full shrink-0" />
@@ -243,14 +243,14 @@ export default function CellinewPage() {
                       <span className="text-primary font-black text-xl font-inter">2ND</span>
                     </div>
                     <div>
-                      <h4 className="text-xl md:text-2xl font-black text-white tracking-tighter leading-tight break-keep">
+                      <h4 className="text-xl md:text-2xl font-black text-slate-900 tracking-tighter leading-tight break-keep">
                         <span className="whitespace-nowrap">운드힐링 콜라겐 생성</span><br />
                         <span className="text-primary text-glow-primary whitespace-nowrap">→ 진피 리모델링</span>
                       </h4>
                     </div>
                   </div>
 
-                  <ul className="space-y-6 text-slate-400 text-sm md:text-[17px] font-medium tracking-tight leading-relaxed">
+                  <ul className="space-y-6 text-slate-600 text-sm md:text-[17px] font-medium tracking-tight leading-relaxed">
                     <li className="flex items-start gap-4">
                       <div className="mt-[10px] w-2 h-2 bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)] rounded-full shrink-0" />
                       <span>진피와 섬유격막에 변성이 일어나 섬유아세포 활동 증가로 신생 콜라겐 생성</span>
@@ -269,24 +269,24 @@ export default function CellinewPage() {
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                           <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
                         </span>
-                        <h5 className="text-white font-black tracking-widest uppercase font-inter text-[13px] md:text-[15px]">FINAL RESULT</h5>
+                        <h5 className="text-slate-900 font-black tracking-widest uppercase font-inter text-[13px] md:text-[15px]">FINAL RESULT</h5>
                       </div>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-                        <div className="bg-black/40 backdrop-blur-sm border border-primary/20 rounded-xl p-5 flex flex-col justify-center relative overflow-hidden group hover:bg-primary/5 transition-all duration-500 shadow-[0_5px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_0_20px_rgba(0,183,241,0.2)]">
+                        <div className="bg-slate-50 border border-slate-200 shadow-sm rounded-xl p-5 flex flex-col justify-center relative overflow-hidden group hover:border-primary/30 transition-all duration-500">
                           <div className="absolute -bottom-1 right-1 opacity-10 group-hover:opacity-20 group-hover:scale-110 transition-all duration-500">
                             <span className="text-primary font-black text-6xl font-inter">01</span>
                           </div>
-                          <p className="text-primary font-bold text-xs tracking-widest uppercase mb-1 drop-shadow-[0_0_8px_rgba(0,183,241,0.5)]">Effect</p>
-                          <p className="text-white font-bold text-[16px] md:text-[18px] relative z-10 break-keep">콜라겐 밀도 증가</p>
+                          <p className="text-primary font-bold text-xs tracking-widest uppercase mb-1 drop-shadow-sm">Effect</p>
+                          <p className="text-slate-900 font-bold text-[16px] md:text-[18px] relative z-10 break-keep">콜라겐 밀도 증가</p>
                         </div>
 
-                        <div className="bg-black/40 backdrop-blur-sm border border-primary/20 rounded-xl p-5 flex flex-col justify-center relative overflow-hidden group hover:bg-primary/5 transition-all duration-500 shadow-[0_5px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_0_20px_rgba(0,183,241,0.2)]">
+                        <div className="bg-slate-50 border border-slate-200 shadow-sm rounded-xl p-5 flex flex-col justify-center relative overflow-hidden group hover:border-primary/30 transition-all duration-500">
                           <div className="absolute -bottom-1 right-1 opacity-10 group-hover:opacity-20 group-hover:scale-110 transition-all duration-500">
                             <span className="text-primary font-black text-6xl font-inter">02</span>
                           </div>
-                          <p className="text-primary font-bold text-xs tracking-widest uppercase mb-1 drop-shadow-[0_0_8px_rgba(0,183,241,0.5)]">Effect</p>
-                          <p className="text-white font-bold text-[16px] md:text-[18px] relative z-10 break-keep">진피층 두께 증가</p>
+                          <p className="text-primary font-bold text-xs tracking-widest uppercase mb-1 drop-shadow-sm">Effect</p>
+                          <p className="text-slate-900 font-bold text-[16px] md:text-[18px] relative z-10 break-keep">진피층 두께 증가</p>
                         </div>
                       </div>
                     </li>
@@ -299,8 +299,8 @@ export default function CellinewPage() {
       </section>
 
       {/* ③ CELLINEW Main Features Section (Tech-Premium Standard) */}
-      <section id="features" className="relative py-28 bg-[#050810] overflow-hidden">
-        <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+      <section id="features" className="relative py-28 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 mix-blend-multiply pointer-events-none" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/[0.02] blur-[150px] rounded-full pointer-events-none" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
@@ -324,7 +324,7 @@ export default function CellinewPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-white text-3xl md:text-5xl font-black mb-10 leading-[1.1] tracking-tighter"
+              className="text-slate-900 text-3xl md:text-5xl font-black mb-10 leading-[1.1] tracking-tighter"
             >
               오랜기간 지속되는 <span className="text-primary tracking-tighter">탄력</span>
             </motion.h2>
@@ -334,7 +334,7 @@ export default function CellinewPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-slate-400 text-base md:text-lg font-medium leading-relaxed max-w-2xl mx-auto tracking-tight break-keep"
+              className="text-slate-600 text-base md:text-lg font-medium leading-relaxed max-w-2xl mx-auto tracking-tight break-keep"
             >
               셀리뉴는 개인 피부특성에 최적화된 에너지를 더욱 효과적으로 전달하여<br className="hidden md:block" />
               탄력 효과를 최대한 오랜기간 유지시켜 줍니다.
@@ -371,25 +371,25 @@ export default function CellinewPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 + idx * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative bg-white/[0.03] backdrop-blur-md rounded-[30px] md:rounded-[40px] p-8 md:p-14 flex flex-col items-center border border-white/10 hover:border-primary/30 transition-all duration-500 shadow-2xl hover:shadow-primary/5 min-h-[400px] md:min-h-[520px]"
+                className="group relative bg-slate-50 border border-slate-200 rounded-[30px] md:rounded-[40px] p-8 md:p-14 flex flex-col items-center hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-md min-h-[400px] md:min-h-[520px]"
               >
                 <span className="text-primary/40 font-black text-xl mb-3 font-inter group-hover:text-primary transition-colors duration-500">
                   {feature.num}
                 </span>
-                <h5 className="text-white text-2xl md:text-3xl font-black mb-2 tracking-tighter uppercase font-inter group-hover:text-glow-primary transition-all duration-500">
+                <h5 className="text-slate-900 text-2xl md:text-3xl font-black mb-2 tracking-tighter uppercase font-inter group-hover:text-primary transition-all duration-500">
                   {feature.title}
                 </h5>
                 <p className="text-primary text-sm font-bold tracking-tight mb-6 md:mb-10 opacity-70">
                   {feature.subTitle}
                 </p>
 
-                <div className="w-12 h-[1px] bg-white/10 mb-6 md:mb-10 group-hover:w-full group-hover:bg-primary/20 transition-all duration-700" />
+                <div className="w-12 h-[1px] bg-slate-200 mb-6 md:mb-10 group-hover:w-full group-hover:bg-primary/20 transition-all duration-700" />
 
                 <div className="flex-1 flex flex-col items-center justify-center text-center space-y-6">
-                  <h6 className="text-white text-[20px] md:text-[24px] font-black leading-tight tracking-tighter break-keep">
+                  <h6 className="text-slate-900 text-[20px] md:text-[24px] font-black leading-tight tracking-tighter break-keep">
                     {feature.mainTitle}
                   </h6>
-                  <div className="text-slate-400 text-sm md:text-base font-medium leading-relaxed whitespace-pre-line tracking-tight px-4">
+                  <div className="text-slate-600 text-sm md:text-base font-medium leading-relaxed whitespace-pre-line tracking-tight px-4">
                     {feature.desc}
                   </div>
                 </div>
@@ -408,8 +408,8 @@ export default function CellinewPage() {
       </section>
 
       {/* ④ CELLINEW Safe Monitoring & Control Section (Tech-Premium Dark) */}
-      <section id="safety-detail" className="relative py-28 bg-[#050810] overflow-hidden border-t border-white/5">
-        <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+      <section id="safety-detail" className="relative py-28 bg-sky-50 overflow-hidden border-t border-sky-100">
+        <div className="absolute inset-0 bg-tech-grid opacity-10 mix-blend-multiply pointer-events-none" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
@@ -432,7 +432,7 @@ export default function CellinewPage() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-white text-3xl md:text-5xl font-black mb-10 leading-tight tracking-tighter"
+              className="text-slate-900 text-3xl md:text-5xl font-black mb-10 leading-tight tracking-tighter"
             >
               CELLINEW's<br />
               <span className="text-primary tracking-tighter">Safe Monitoring & Control</span>
@@ -444,11 +444,11 @@ export default function CellinewPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            className="group relative bg-white/[0.03] backdrop-blur-md py-10 px-8 md:px-16 rounded-2xl mb-24 max-w-5xl mx-auto shadow-2xl border-l-4 border-primary shadow-primary/5"
+            className="group relative bg-white py-10 px-8 md:px-16 rounded-2xl mb-24 max-w-5xl mx-auto shadow-sm border border-slate-200 border-l-4 border-l-primary"
           >
-            <p className="text-white text-[16px] md:text-[21px] font-bold tracking-tighter leading-relaxed break-keep">
+            <p className="text-slate-800 text-[16px] md:text-[21px] font-bold tracking-tighter leading-relaxed break-keep">
               안전한 시술환경을 제공하기 위해 <span className="text-primary font-black">피부 온도, 시술자의 압력, 냉각시스템</span>을<br />
-              <span className="text-glow-primary font-black underline underline-offset-8 decoration-primary/30">
+              <span className="text-primary font-black underline underline-offset-8 decoration-primary/30">
                 실시간으로 모니터링하고 정밀하게 제어
               </span>합니다.
             </p>
@@ -460,15 +460,15 @@ export default function CellinewPage() {
                 icon: (
                   <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.4" className="w-full h-full">
                     {/* Thermometer */}
-                    <path d="M24 12a6 6 0 0 1 12 0v20.5a10 10 0 1 1-12 0V12z" className="text-white/40" />
+                    <path d="M24 12a6 6 0 0 1 12 0v20.5a10 10 0 1 1-12 0V12z" className="text-slate-300" />
                     <path d="M30 38V14" className="text-primary" strokeWidth="3" strokeLinecap="round" />
                     <circle cx="30" cy="44" r="4" fill="currentColor" className="text-primary" />
                     {/* Checkmark Circle */}
-                    <circle cx="46" cy="24" r="10" className="text-primary/20" fill="currentColor" />
+                    <circle cx="46" cy="24" r="10" className="text-primary/10" fill="currentColor" />
                     <circle cx="46" cy="24" r="10" className="text-primary" />
                     <path d="M41 24l3.5 3.5 6.5-6.5" className="text-primary" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                     {/* Wave lines */}
-                    <path d="M12 40h4M12 46h4M12 52h4" className="text-white/20" strokeLinecap="round" />
+                    <path d="M12 40h4M12 46h4M12 52h4" className="text-slate-200" strokeLinecap="round" />
                   </svg>
                 ),
                 title: "Skin Temperature",
@@ -481,8 +481,8 @@ export default function CellinewPage() {
                     {/* Downward Arrow */}
                     <path d="M32 8v20M24 20l8 8 8-8" className="text-primary" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
                     {/* Skin Layers */}
-                    <path d="M12 36c4-2 8-2 12 0s8 2 12 0 8-2 12 0" className="text-white" strokeLinecap="round" />
-                    <path d="M12 44h40M12 52h40" className="text-white/30" strokeDasharray="4 4" />
+                    <path d="M12 36c4-2 8-2 12 0s8 2 12 0 8-2 12 0" className="text-slate-400" strokeLinecap="round" />
+                    <path d="M12 44h40M12 52h40" className="text-slate-300" strokeDasharray="4 4" />
                     {/* Checkmark in circle */}
                     <circle cx="50" cy="18" r="8" className="text-primary/10" fill="currentColor" />
                     <circle cx="50" cy="18" r="8" className="text-primary" />
@@ -497,15 +497,15 @@ export default function CellinewPage() {
                 icon: (
                   <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.4" className="w-full h-full">
                     {/* Slider Control */}
-                    <rect x="10" y="24" width="44" height="12" rx="6" className="text-white/20" fill="currentColor" stroke="none" />
-                    <rect x="10" y="24" width="44" height="12" rx="6" className="text-white/40" />
+                    <rect x="10" y="24" width="44" height="12" rx="6" className="text-slate-200" fill="currentColor" stroke="none" />
+                    <rect x="10" y="24" width="44" height="12" rx="6" className="text-slate-300" />
                     <circle cx="28" cy="30" r="4" fill="currentColor" className="text-primary" />
                     {/* Snowflake Circle */}
-                    <circle cx="50" cy="18" r="10" className="text-primary/20" fill="currentColor" />
+                    <circle cx="50" cy="18" r="10" className="text-primary/10" fill="currentColor" />
                     <circle cx="50" cy="18" r="10" className="text-primary" />
                     <path d="M50 12v12M44 18h12M46 14l8 8M54 14l-8 8" className="text-primary" strokeWidth="2" />
                     {/* Interacting Hand */}
-                    <path d="M30 35l6 14c1 2 4 1 3-2l-4-9 4 1 3-1-1-3-6-2" className="text-white" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M30 35l6 14c1 2 4 1 3-2l-4-9 4 1 3-1-1-3-6-2" className="text-slate-400" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 ),
                 title: "Internal Cooling System",
@@ -524,11 +524,11 @@ export default function CellinewPage() {
                 <div className="w-24 h-24 mb-10 transform group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_15px_rgba(0,183,241,0.3)]">
                   {item.icon}
                 </div>
-                <h5 className="text-white text-xl md:text-2xl font-black mb-1 tracking-tighter group-hover:text-primary transition-colors">
+                <h5 className="text-slate-900 text-xl md:text-2xl font-black mb-1 tracking-tighter group-hover:text-primary transition-colors">
                   {item.title}
                 </h5>
-                <p className="text-white text-sm md:text-base font-bold mb-8 tracking-tight">{item.subTitle}</p>
-                <div className="text-slate-400 text-sm md:text-[17px] font-medium leading-relaxed space-y-1 text-center break-keep">
+                <p className="text-slate-700 text-sm md:text-base font-bold mb-8 tracking-tight">{item.subTitle}</p>
+                <div className="text-slate-600 text-sm md:text-[17px] font-medium leading-relaxed space-y-1 text-center break-keep">
                   {item.lines.map((line, lidx) => (
                     <p key={lidx}>{line}</p>
                   ))}

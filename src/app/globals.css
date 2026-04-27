@@ -11,8 +11,8 @@
 }
 
 :root {
-  --background: #050810;
-  --foreground: #e2e8f0;
+  --background: #FFFFFF;
+  --foreground: #1E293B;
   /* Soft slate for text */
   --primary-glow: 0 0 20px rgba(0, 179, 228, 0.5), 0 0 40px rgba(0, 179, 228, 0.2);
   --tech-border: 1px solid rgba(0, 179, 228, 0.3);
@@ -43,32 +43,40 @@ body {
 .bg-tech-grid {
   background-size: 40px 40px;
   background-image:
-    linear-gradient(to right, rgba(0, 183, 241, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 183, 241, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 183, 241, 0.10) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 183, 241, 0.10) 1px, transparent 1px);
 }
 
 /* Subtle dot pattern */
 .bg-tech-dots {
-  background-image: radial-gradient(rgba(0, 183, 241, 0.15) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(0, 183, 241, 0.12) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
 /* Glassmorphism Panel */
 .glass-panel {
-  background: rgba(5, 8, 16, 0.6);
+  background: rgba(255, 255, 255, 0.80);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(0, 183, 241, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.glass-panel-dark {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 183, 241, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 /* Neon Text Glow */
 .text-glow {
-  text-shadow: 0 0 10px rgba(0, 183, 241, 0.35);
+  text-shadow: 0 0 5px rgba(0, 183, 241, 0.15);
 }
 
 .text-glow-primary {
-  text-shadow: 0 0 15px rgba(0, 183, 241, 0.6), 0 0 30px rgba(0, 183, 241, 0.2);
+  text-shadow: 0 0 8px rgba(0, 183, 241, 0.2), 0 0 15px rgba(0, 183, 241, 0.1);
 }
 
 .text-glow-white {
@@ -78,7 +86,6 @@ body {
 .hero-accent-line {
   height: 2px;
   background: #00b7f1;
-  box-shadow: 0 0 10px rgba(0, 183, 241, 0.35);
 }
 
 .hero-title {
@@ -92,13 +99,11 @@ body {
 }
 
 .hero-title-main {
-  color: #ffffff;
-  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  color: #0F172A;
 }
 
 .hero-title-highlight {
   color: #00b3e4;
-  text-shadow: 0 0 10px rgba(0, 179, 228, 0.35);
 }
 
 @media (max-width: 768px) {
@@ -192,10 +197,10 @@ header {
 }
 
 .site-header-scrolled {
-  background-color: rgba(5, 8, 16, 0.85);
+  background-color: rgba(240, 249, 255, 0.92);
   backdrop-filter: blur(12px);
   border: none !important;
-  box-shadow: none !important;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08) !important;
 }
 
 .nav-link.is-active {
@@ -212,12 +217,12 @@ header {
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  background: rgba(255, 255, 255, 0.25) !important;
+  background: rgba(0, 183, 241, 0.25) !important;
   opacity: 1;
   transition: all 0.4s ease;
   margin: 0 6px !important;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 183, 241, 0.2);
 }
 
 .swiper-pagination-bullet-active {
@@ -231,8 +236,8 @@ header {
 
 /* Product Section */
 .product-section {
-  background: #020408;
-  /* Very dark */
+  background: #f0f9ff;
+  /* Light sky */
   position: relative;
 }
 
@@ -249,8 +254,8 @@ header {
 
 /* Product Card - Tech Glass Hover */
 .product-card {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 183, 241, 0.15);
   border-radius: 4px;
   padding: 20px;
   transition: all 0.4s ease;
@@ -259,7 +264,7 @@ header {
 
 .product-card:hover {
   border-color: #00B7F1;
-  box-shadow: 0 0 20px rgba(0, 183, 241, 0.2), 0 10px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(0, 183, 241, 0.15), 0 10px 30px rgba(0, 0, 0, 0.06);
   transform: translateY(-5px);
 }
 
@@ -268,7 +273,7 @@ header {
   height: 240px;
   object-fit: contain;
   transition: transform 0.5s ease;
-  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.10));
 }
 
 .product-card:hover .product-machine-img {
@@ -281,31 +286,31 @@ header {
   align-items: center;
   margin-top: 20px;
   padding-top: 15px;
-  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  border-top: 1px dashed rgba(0, 183, 241, 0.2);
 }
 
 .product-maker-logo-img {
   height: 20px;
   object-fit: contain;
-  filter: brightness(0) invert(1) opacity(0.6);
+  filter: brightness(0) opacity(0.5);
 }
 
 .product-footer-logo-img {
   height: 16px;
   object-fit: contain;
-  filter: brightness(0) invert(1) opacity(0.9);
+  filter: brightness(0) opacity(0.7);
 }
 
 /* Custom Nav Buttons for Swiper */
 .product-nav-btn {
   width: 48px;
   height: 48px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 183, 241, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  background: rgba(255, 255, 255, 0.05);
+  color: #1E293B;
+  background: rgba(0, 183, 241, 0.08);
   transition: all 0.3s ease;
   transform: skewX(-10deg);
 }
@@ -339,7 +344,7 @@ header {
 .cn-plus-symbol {
   width: 150px;
   height: 150px;
-  background: rgba(5, 8, 16, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -380,7 +385,7 @@ header {
   content: '';
   position: absolute;
   inset: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 183, 241, 0.08);
   border-radius: 50%;
 }
 
@@ -397,14 +402,14 @@ header {
   position: absolute;
   width: 140px;
   height: 140px;
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(8px);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #fff;
+  color: #1E293B;
   font-size: 15px;
   font-weight: 500;
   line-height: 1.4;
@@ -562,7 +567,7 @@ header {
 /* Partners Marquee (Digital Display) */
 .partners-marquee-container {
   position: relative;
-  background-color: #020408;
+  background-color: #F0F9FF;
   background-image: linear-gradient(rgba(0, 183, 241, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 183, 241, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -570,14 +575,13 @@ header {
   margin-bottom: 0;
   border-top: 1px solid rgba(0, 183, 241, 0.2);
   border-bottom: 1px solid rgba(0, 183, 241, 0.2);
-  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8);
 }
 
 .partners-marquee-container::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #030508 0%, transparent 15%, transparent 85%, #030508 100%);
+  background: linear-gradient(90deg, #F0F9FF 0%, transparent 15%, transparent 85%, #F0F9FF 100%);
   z-index: 10;
   pointer-events: none;
 }
@@ -591,13 +595,13 @@ header {
 .partner-marquee-2 .swiper-slide img {
   max-height: 40px;
   width: auto;
-  filter: brightness(0) invert(1) opacity(0.4);
+  filter: brightness(0) opacity(0.35);
   transition: 0.3s;
 }
 
 .partner-marquee-1 .swiper-slide:hover img,
 .partner-marquee-2 .swiper-slide:hover img {
-  filter: brightness(0) invert(1) opacity(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+  filter: brightness(0) opacity(0.8) drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
 }
 
 @media (max-width: 768px) {
