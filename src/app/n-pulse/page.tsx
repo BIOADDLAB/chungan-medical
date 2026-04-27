@@ -143,13 +143,13 @@ export default function NPulsePage() {
                 {/* 테크 배경 장식 */}
                 <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none mix-blend-multiply" />
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
+
 
                 <div className="max-w-[1350px] mx-auto px-6 relative z-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 relative min-h-[600px] md:min-h-[850px]">
                         {/* 중앙 테크 수직 구분선 */}
                         <div className="hidden md:block absolute left-1/2 top-10 bottom-32 w-[1px] bg-gradient-to-b from-transparent via-primary/40 to-transparent -translate-x-1/2 z-10">
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-primary rounded-full shadow-[0_0_10px_rgba(0,183,241,1)]" />
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-primary rounded-full" />
                         </div>
 
                         {/* Left Model: N-Pulse Pro */}
@@ -171,7 +171,7 @@ export default function NPulsePage() {
                                 </h2>
                                 <div className="space-y-2">
                                     <p className="text-slate-700 text-lg md:text-xl font-bold tracking-tight flex items-center gap-3">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40" />
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)] animate-pulse" />
                                         CO2 (Surgical)
                                     </p>
                                 </div>
@@ -179,7 +179,7 @@ export default function NPulsePage() {
                             <img
                                 src="images/machine/엔펄스pro 사진.png"
                                 alt="N-Pulse Pro"
-                                className="absolute right-[-140px] sm:right-[-180px] md:right-[-280px] lg:right-[-440px] bottom-6 md:bottom-20 h-[75%] md:h-[85%] lg:h-[90%] max-w-none object-contain object-bottom drop-shadow-[0_20px_60px_rgba(0,0,0,0.9)] z-20 pointer-events-auto hover:scale-105 transition-transform duration-1000 ease-out origin-bottom brightness-[1.1] contrast-[1.05]"
+                                className="absolute right-[-140px] sm:right-[-180px] md:right-[-280px] lg:right-[-440px] bottom-6 md:bottom-20 h-[75%] md:h-[85%] lg:h-[90%] max-w-none object-contain object-bottom z-20 pointer-events-auto hover:scale-105 transition-transform duration-1000 ease-out origin-bottom brightness-[1.1] contrast-[1.05]"
                             />
                         </motion.div>
 
@@ -202,11 +202,11 @@ export default function NPulsePage() {
                                 </h2>
                                 <div className="space-y-2">
                                     <p className="text-slate-700 text-lg md:text-xl font-bold tracking-tight flex items-center gap-3">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40" />
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)] animate-pulse" />
                                         CO2 (Surgical)
                                     </p>
                                     <p className="text-slate-700 text-lg md:text-xl font-bold tracking-tight flex items-center gap-3">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40" />
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(0,183,241,0.6)] animate-pulse" />
                                         FRX (Fractional)
                                     </p>
                                 </div>
@@ -214,7 +214,7 @@ export default function NPulsePage() {
                             <img
                                 src="images/machine/엔펄스fx 사진.png"
                                 alt="N-Pulse FX"
-                                className="absolute right-[-50px] lg:right-[-100px] bottom-6 md:bottom-20 h-[75%] md:h-[85%] lg:h-[90%] max-w-none object-contain object-bottom drop-shadow-[0_20px_60px_rgba(0,0,0,0.9)] z-20 pointer-events-auto hover:scale-105 transition-transform duration-1000 ease-out origin-bottom brightness-[1.1] contrast-[1.05]"
+                                className="absolute right-[-50px] lg:right-[-100px] bottom-6 md:bottom-20 h-[75%] md:h-[85%] lg:h-[90%] max-w-none object-contain object-bottom z-20 pointer-events-auto hover:scale-105 transition-transform duration-1000 ease-out origin-bottom brightness-[1.1] contrast-[1.05]"
                             />
                         </motion.div>
                     </div>
