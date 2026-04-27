@@ -143,7 +143,7 @@ export default function NPulsePage() {
                 {/* 테크니컬 배경 요소 */}
                 <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none mix-blend-multiply" />
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
-                <div className="absolute -right-[10%] top-1/4 w-[600px] h-[600px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
+
 
                 <div className="max-w-screen-xl mx-auto px-6 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-center">
@@ -158,7 +158,7 @@ export default function NPulsePage() {
                         >
                             <div className="space-y-6">
                                 {/* 배지 */}
-                                <div className="inline-block px-4 py-1.5 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase bg-white shadow-sm leading-none">
+                                <div className="inline-block px-4 py-1.5 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase bg-white leading-none">
                                     The Next Generation Fractional CO2
                                 </div>
 
@@ -185,11 +185,11 @@ export default function NPulsePage() {
 
                             {/* 핵심 사양 미니 그리드 */}
                             <div className="grid grid-cols-2 gap-4 max-w-md pt-4">
-                                <div className="bg-slate-50 p-6 border border-slate-200 shadow-sm group hover:border-primary/30 transition-all duration-500 rounded-xl">
+                                <div className="bg-slate-50 p-6 border border-slate-200 group hover:border-primary/30 transition-all duration-500 rounded-xl">
                                     <span className="text-[10px] font-bold text-primary/60 tracking-widest uppercase block mb-2">Output Mode</span>
                                     <span className="text-lg font-black text-slate-900 tracking-tight uppercase">Ultra Pulse</span>
                                 </div>
-                                <div className="bg-slate-50 p-6 border border-slate-200 shadow-sm group hover:border-primary/30 transition-all duration-500 rounded-xl">
+                                <div className="bg-slate-50 p-6 border border-slate-200 group hover:border-primary/30 transition-all duration-500 rounded-xl">
                                     <span className="text-[10px] font-bold text-primary/60 tracking-widest uppercase block mb-2">Core Tech</span>
                                     <span className="text-lg font-black text-slate-900 tracking-tight uppercase">Prime Beam</span>
                                 </div>
@@ -221,9 +221,7 @@ export default function NPulsePage() {
                             </div>
 
                             {/* 장식용 텍스트 오버레이 */}
-                            <div className="absolute -bottom-10 right-0 pointer-events-none select-none opacity-5">
-                                <span className="text-[120px] font-black tracking-tighter text-slate-900 uppercase leading-none">PRIME</span>
-                            </div>
+
                         </motion.div>
 
                     </div>
