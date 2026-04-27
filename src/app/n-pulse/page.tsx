@@ -436,7 +436,7 @@ export default function NPulsePage() {
             {/* ⑤ Beam Size Section (Standardized Tech Style) */}
             <section className="relative py-28 bg-sky-50 overflow-hidden">
                 <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none mix-blend-multiply" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[130px] rounded-full pointer-events-none" />
+
 
                 <div className="max-w-screen-xl mx-auto px-6 relative z-10">
                     <motion.div
@@ -482,7 +482,7 @@ export default function NPulsePage() {
                                     <div className={`flex items-start gap-8 ${item.align === 'right' ? 'flex-row-reverse text-right' : 'flex-row text-left'}`}>
                                         {/* Step Indicator with Pulse Line */}
                                         <div className="flex flex-col items-center flex-shrink-0 w-10">
-                                            <div className="w-10 h-10 rounded-lg border border-primary/30 flex items-center justify-center text-primary font-black text-xs bg-white shadow-sm group-hover:bg-primary group-hover:text-black transition-all duration-500 relative z-10">
+                                            <div className="w-10 h-10 rounded-lg border border-primary/30 flex items-center justify-center text-primary font-black text-xs bg-white group-hover:bg-primary group-hover:text-black transition-all duration-500 relative z-10">
                                                 {item.id}
                                             </div>
 
@@ -534,13 +534,13 @@ export default function NPulsePage() {
                                     <span className="text-primary font-black text-xl tracking-tighter">80~100um</span>
                                 </div>
                             </div>
-                            <div className="aspect-[1.65/1] bg-white border border-slate-200 shadow-sm relative overflow-hidden flex items-center justify-center p-3 group transition-all duration-500 cursor-pointer hover:border-primary/50 hover:shadow-[0_0_30px_rgba(0,183,241,0.2)] rounded-xl">
+                            <div className="aspect-[1.65/1] bg-white border border-slate-200 relative overflow-hidden flex items-center justify-center p-3 group transition-all duration-500 cursor-pointer hover:border-primary/50 rounded-xl">
                                 <div className="absolute inset-0 bg-tech-grid opacity-10 mix-blend-multiply" />
 
                                 {/* Unified Content Wrapper (Scales together) */}
                                 <div className="relative w-full h-full flex items-center justify-center transition-all duration-700 scale-125 group-hover:scale-[1.45]">
                                     {/* Focal Point Circle */}
-                                    <div className="absolute top-[34%] left-[53%] -translate-x-1/2 w-6 h-6 rounded-full border-2 border-primary z-20 shadow-[0_0_15px_rgba(0,183,241,0.4)]">
+                                    <div className="absolute top-[34%] left-[53%] -translate-x-1/2 w-6 h-6 rounded-full border-2 border-primary z-20">
                                         <div className="absolute inset-0 rounded-full border border-primary animate-ping opacity-30" />
                                     </div>
 
@@ -564,7 +564,7 @@ export default function NPulsePage() {
                                 <span className="text-primary/60 font-black text-[10px] tracking-[0.4em] uppercase block mb-1">Tissue Interaction</span>
                                 <span className="text-slate-900 font-bold text-lg tracking-widest">Deep Layer Delivery</span>
                             </div>
-                            <div className="aspect-[1.65/1] bg-white border border-slate-200 shadow-sm relative overflow-hidden flex flex-col items-center justify-center p-3 group hover:border-primary/50 hover:shadow-[0_0_30px_rgba(0,183,241,0.2)] transition-all duration-500 cursor-pointer rounded-xl">
+                            <div className="aspect-[1.65/1] bg-white border border-slate-200 relative overflow-hidden flex flex-col items-center justify-center p-3 group hover:border-primary/50 transition-all duration-500 cursor-pointer rounded-xl">
                                 <div className="absolute inset-0 bg-tech-grid opacity-10 mix-blend-multiply" />
                                 <img
                                     src="/images/npulse/deeplayer.png"
