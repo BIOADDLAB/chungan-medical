@@ -36,12 +36,12 @@ export default function Header() {
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'site-header-scrolled border-b border-sky-100' : 'bg-transparent'
           }`}
       >
-        <div className="max-w-screen-xl mx-auto px-4 md:px-6 h-20 md:h-28 flex justify-between items-center relative z-20">
+        <div className="w-full px-4 md:px-12 lg:px-16 h-20 md:h-28 flex justify-between items-center relative z-20">
           {/* Logo */}
           <div className="flex-1 flex justify-start items-center min-w-0">
             <Link
               href="/#home"
-              className="hover:opacity-100 transition-all duration-500 group flex items-center p-1 -ml-12"
+              className="hover:opacity-100 transition-all duration-500 group flex items-center p-1 -ml-12 md:-ml-12"
               onClick={() => setIsMenuOpen(false)}
             >
               <img
@@ -89,7 +89,7 @@ export default function Header() {
           </nav>
 
           {/* Right Area */}
-          <div className="flex-shrink-0 md:w-80 flex justify-end items-center ml-4">
+          <div className="flex-1 flex justify-end items-center ml-4 md:ml-0">
             <div className={`hidden md:flex items-center space-x-2 font-bold cursor-pointer hover:text-primary transition ${scrolled ? 'text-slate-800' : 'text-white'}`}>
               <span>KOR</span>
               <span>▾</span>
