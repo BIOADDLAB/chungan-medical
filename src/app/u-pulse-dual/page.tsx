@@ -34,8 +34,8 @@ export default function UPulsePage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white"
           >
-            <span className="hero-title-main !text-white block md:inline">U - PULSE</span>
-            <span className="hero-title-highlight ml-0 md:ml-4">DUAL</span>
+            <span className="hero-title-main !text-white inline">U - PULSE</span>
+            <span className="hero-title-highlight ml-2 md:ml-4">DUAL</span>
           </motion.h1>
 
           {/* 부제 */}
@@ -168,7 +168,7 @@ export default function UPulsePage() {
               <div className="flex items-center justify-center h-7 px-4 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase bg-primary/5 leading-none shrink-0">
                 Handpiece
               </div>
-              <h3 className="text-xl md:text-2xl font-black text-slate-900 tracking-tight uppercase leading-none relative -top-[2px]">50mm, 100mm, ZOOM, Fractional</h3>
+              <h3 className="text-xl md:text-2xl font-black text-slate-900 tracking-tight uppercase leading-none relative -top-[2px]">VERSATILE HANDPIECE SYSTEM</h3>
             </div>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">

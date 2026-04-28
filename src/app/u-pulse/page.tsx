@@ -380,7 +380,7 @@ export default function UPulsePage() {
       </section>
 
       {/* Technical Detail 02: Stable Ultra-Pulse Secret */}
-      <section id="tech-social-secret" className="py-28 bg-white text-slate-900 overflow-hidden relative">
+      <section id="tech-social-secret" className="py-16 md:py-28 bg-white text-slate-900 overflow-hidden relative">
         {/* 테크 배경 텍스처 */}
         <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
         <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none" />
@@ -392,7 +392,7 @@ export default function UPulsePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mb-12 flex flex-col items-center"
+            className="mb-4 md:mb-12 flex flex-col items-center"
           >
             <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
               Stable Tech Secret
@@ -402,7 +402,7 @@ export default function UPulsePage() {
               <span className="hero-title-main">STABLE</span><br />
               <span className="hero-title-highlight uppercase">Ultra - Pulse</span>
             </h3>
-            <div className="w-20 h-[2px] bg-primary mb-8" />
+            <div className="w-20 h-[2px] bg-primary mb-4 md:mb-8" />
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center max-w-5xl mx-auto">
