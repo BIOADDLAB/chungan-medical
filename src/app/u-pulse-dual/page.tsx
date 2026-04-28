@@ -297,10 +297,10 @@ export default function UPulsePage() {
                 <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none mix-blend-multiply" />
                 <div className="grid grid-cols-2 gap-x-6 gap-y-10 relative z-10">
                   {[
-                    { label: '눈 밑 리프팅', img: '/images/upulse_dual/frx_mode/눈밑리프팅.png' },
-                    { label: '잔주름 박피', img: '/images/upulse_dual/frx_mode/잔주름박피.png' },
+                    { label: <>눈 밑 <br className="md:hidden" />리프팅</>, img: '/images/upulse_dual/frx_mode/눈밑리프팅.png' },
+                    { label: <>잔주름 <br className="md:hidden" />박피</>, img: '/images/upulse_dual/frx_mode/잔주름박피.png' },
                     { label: '나비존(코) 모공', img: '/images/upulse_dual/frx_mode/나비존모공.png' },
-                    { label: '여드름 흉터', img: '/images/upulse_dual/frx_mode/여드름흉터.png' },
+                    { label: <>여드름 <br className="md:hidden" />흉터</>, img: '/images/upulse_dual/frx_mode/여드름흉터.png' },
                     { label: '패인 흉터', img: '/images/upulse_dual/frx_mode/패인흉터.png' },
                     { label: '흉터', img: '/images/upulse_dual/frx_mode/흉터.png' }
                   ].map((item, idx) => (
@@ -346,8 +346,8 @@ export default function UPulsePage() {
                   {[
                     { label: '약물 침투', img: '/images/upulse_dual/sol_mode/약물침투.png' },
                     { label: '피부 재생', img: '/images/upulse_dual/sol_mode/피부재생.png' },
-                    { label: '피부톤 개선', img: '/images/upulse_dual/sol_mode/피부톤개선.png' },
-                    { label: '피부장벽 개선', img: '/images/upulse_dual/sol_mode/피부장벽개선.png' },
+                    { label: <>피부톤 <br className="md:hidden" />개선</>, img: '/images/upulse_dual/sol_mode/피부톤개선.png' },
+                    { label: <>피부장벽 <br className="md:hidden" />개선</>, img: '/images/upulse_dual/sol_mode/피부장벽개선.png' },
                     { label: '주름 감소', img: '/images/upulse_dual/sol_mode/주름감소.png' },
                     { label: '탄력 증가', img: '/images/upulse_dual/sol_mode/탄력증가.png' }
                   ].map((item, idx) => (
