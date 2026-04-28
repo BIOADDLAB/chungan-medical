@@ -38,7 +38,7 @@ export default function Header() {
       >
         <div className="w-full px-4 md:px-12 lg:px-16 h-20 md:h-28 flex justify-between items-center relative z-20">
           {/* Logo */}
-          <div className="flex-1 flex justify-start items-center min-w-0">
+          <div className="flex-shrink-0 md:flex-1 flex justify-start items-center md:min-w-0">
             <Link
               href="/#home"
               className="hover:opacity-100 transition-all duration-500 group flex items-center p-1 -ml-12 md:-ml-12"
@@ -89,7 +89,7 @@ export default function Header() {
           </nav>
 
           {/* Right Area */}
-          <div className="flex-1 flex justify-end items-center ml-4 md:ml-0">
+          <div className="flex-shrink-0 md:flex-1 flex justify-end items-center ml-4 md:ml-0">
             <div className={`hidden md:flex items-center space-x-2 font-bold cursor-pointer hover:text-primary transition ${scrolled ? 'text-slate-800' : 'text-white'}`}>
               <span>KOR</span>
               <span>▾</span>
