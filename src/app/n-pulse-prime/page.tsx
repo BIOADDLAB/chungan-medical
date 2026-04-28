@@ -163,9 +163,9 @@ export default function NPulsePage() {
                                 </div>
 
                                 {/* 타이틀: N-PULSE PRIME */}
-                                <h2 className="text-3xl md:text-5xl font-black tracking-tight uppercase leading-none">
-                                    <span className="hero-title-main block mb-2 text-slate-900">N - PULSE</span>
-                                    <span className="hero-title-highlight text-primary">PRIME</span>
+                                <h2 className="text-3xl md:text-5xl font-black tracking-tight uppercase leading-none md:whitespace-normal whitespace-nowrap">
+                                    <span className="hero-title-main md:block md:mb-2 inline text-slate-900">N - PULSE</span>
+                                    <span className="hero-title-highlight text-primary ml-2 md:ml-0">PRIME</span>
                                 </h2>
 
                                 {/* 발광 막대 */}
@@ -184,14 +184,14 @@ export default function NPulsePage() {
                             </p>
 
                             {/* 핵심 사양 미니 그리드 */}
-                            <div className="grid grid-cols-2 gap-4 max-w-md pt-4">
-                                <div className="bg-slate-50 p-6 border border-slate-200 group hover:border-primary/30 transition-all duration-500 rounded-xl">
+                            <div className="grid grid-cols-2 gap-3 md:gap-4 max-w-md pt-4">
+                                <div className="bg-slate-50 p-4 md:p-6 border border-slate-200 group hover:border-primary/30 transition-all duration-500 rounded-xl">
                                     <span className="text-[10px] font-bold text-primary/60 tracking-widest uppercase block mb-2">Output Mode</span>
-                                    <span className="text-lg font-black text-slate-900 tracking-tight uppercase">Ultra Pulse</span>
+                                    <span className="text-base md:text-lg font-black text-slate-900 tracking-tight uppercase whitespace-nowrap">Ultra Pulse</span>
                                 </div>
-                                <div className="bg-slate-50 p-6 border border-slate-200 group hover:border-primary/30 transition-all duration-500 rounded-xl">
+                                <div className="bg-slate-50 p-4 md:p-6 border border-slate-200 group hover:border-primary/30 transition-all duration-500 rounded-xl">
                                     <span className="text-[10px] font-bold text-primary/60 tracking-widest uppercase block mb-2">Core Tech</span>
-                                    <span className="text-lg font-black text-slate-900 tracking-tight uppercase">Prime Beam</span>
+                                    <span className="text-base md:text-lg font-black text-slate-900 tracking-tight uppercase whitespace-nowrap">Prime Beam</span>
                                 </div>
                             </div>
                         </motion.div>
@@ -253,11 +253,11 @@ export default function NPulsePage() {
 
 
                     {/* GUI Layout Grid */}
-                    <div className="space-y-40 max-w-6xl mx-auto">
+                    <div className="space-y-28 md:space-y-40 max-w-6xl mx-auto">
 
                         {/* 1. COS Mode Row */}
                         <div className="relative">
-                            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative">
+                            <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center relative">
 
                                 {/* Background Accent Line */}
                                 <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent -translate-y-1/2 -z-10 hidden md:block" />
@@ -296,14 +296,14 @@ export default function NPulsePage() {
                                         <div className="absolute top-4 left-4 w-[1px] h-10 bg-primary/30 z-20" />
                                     </div>
 
-                                    <div className="mt-6 flex flex-col items-start">
+                                    <div className="mt-4 flex flex-col items-start">
                                         <span className="text-[10px] font-black text-primary/60 tracking-[0.4em] uppercase mb-1">Module Alpha 01</span>
-                                            <h4 className="text-slate-900 font-black text-lg tracking-widest uppercase">CW CONTROL GUI</h4>
+                                        <h4 className="text-slate-900 font-black text-lg tracking-widest uppercase">CW CONTROL GUI</h4>
                                     </div>
                                 </motion.div>
 
                                 {/* Center: HUD Orbit */}
-                                <div className="md:col-span-2 flex justify-center py-16 md:py-0 relative z-30">
+                                <div className="md:col-span-2 flex justify-center py-10 md:py-0 relative z-30">
                                     <div className="relative">
                                         {/* Animated HUD Rings */}
                                         <motion.div
@@ -365,9 +365,9 @@ export default function NPulsePage() {
                                         <div className="absolute top-4 right-4 w-[1px] h-10 bg-primary/30 z-20" />
                                     </div>
 
-                                    <div className="mt-6 flex flex-col items-end text-right">
+                                    <div className="mt-4 flex flex-col items-end text-right">
                                         <span className="text-[10px] font-black text-primary/60 tracking-[0.4em] uppercase mb-1">Module Alpha 02</span>
-                                            <h4 className="text-slate-900 font-black text-lg tracking-widest uppercase">ULTRA CONTROL GUI</h4>
+                                        <h4 className="text-slate-900 font-black text-lg tracking-widest uppercase">ULTRA CONTROL GUI</h4>
                                     </div>
                                 </motion.div>
                             </div>
@@ -375,7 +375,7 @@ export default function NPulsePage() {
 
                         {/* 2. PIN Mode Row */}
                         <div className="relative">
-                            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative">
+                            <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center relative">
 
                                 {/* Background Accent Line */}
                                 <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent -translate-y-1/2 -z-10 hidden md:block" />
@@ -414,14 +414,14 @@ export default function NPulsePage() {
                                         <div className="absolute top-4 left-4 w-[1px] h-10 bg-primary/30 z-20" />
                                     </div>
 
-                                    <div className="mt-6 flex flex-col items-start">
+                                    <div className="mt-4 flex flex-col items-start">
                                         <span className="text-[10px] font-black text-primary/60 tracking-[0.4em] uppercase mb-1">Module Beta 01</span>
-                                            <h4 className="text-slate-900 font-black text-lg tracking-widest uppercase">SINGLE PULSE GUI</h4>
+                                        <h4 className="text-slate-900 font-black text-lg tracking-widest uppercase">SINGLE PULSE GUI</h4>
                                     </div>
                                 </motion.div>
 
                                 {/* Center: HUD Orbit */}
-                                <div className="md:col-span-2 flex justify-center py-16 md:py-0 relative z-30">
+                                <div className="md:col-span-2 flex justify-center py-10 md:py-0 relative z-30">
                                     <div className="relative">
                                         {/* Animated HUD Rings */}
                                         <motion.div
@@ -483,9 +483,9 @@ export default function NPulsePage() {
                                         <div className="absolute top-4 right-4 w-[1px] h-10 bg-primary/30 z-20" />
                                     </div>
 
-                                    <div className="mt-6 flex flex-col items-end text-right">
+                                    <div className="mt-4 flex flex-col items-end text-right">
                                         <span className="text-[9px] font-black text-primary/60 tracking-[0.4em] uppercase mb-1">Module Beta 02</span>
-                                            <h4 className="text-slate-900 font-black text-lg tracking-widest uppercase">REPEAT PULSE GUI</h4>
+                                        <h4 className="text-slate-900 font-black text-lg tracking-widest uppercase">REPEAT PULSE GUI</h4>
                                     </div>
                                 </motion.div>
                             </div>
@@ -595,96 +595,96 @@ export default function NPulsePage() {
             <section className="relative py-32 bg-white overflow-hidden">
                 <div className="max-w-screen-xl mx-auto px-6 relative z-10">
                     <div className="pt-24 border-t border-slate-200">
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
 
-                                {/* 주요 특징 (Key Features) */}
-                                <motion.div
-                                    initial={{ opacity: 0, x: -30 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.8 }}
-                                    viewport={{ once: true }}
-                                    className="space-y-10"
-                                >
-                                    <div className="space-y-4">
-                                        <div className="text-primary font-bold text-xs tracking-widest uppercase">Technology Focus</div>
-                                        <h3 className="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-tight">주요 <span className="text-primary">특징</span></h3>
-                                        <div className="w-12 h-[2px] bg-primary" />
-                                    </div>
+                            {/* 주요 특징 (Key Features) */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8 }}
+                                viewport={{ once: true }}
+                                className="space-y-10"
+                            >
+                                <div className="space-y-4">
+                                    <div className="text-primary font-bold text-xs tracking-widest uppercase">Technology Focus</div>
+                                    <h3 className="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-tight">주요 <span className="text-primary">특징</span></h3>
+                                    <div className="w-12 h-[2px] bg-primary" />
+                                </div>
 
-                                    <div className="space-y-6">
-                                        {[
-                                            {
-                                                title: '정교한 타겟 시술',
-                                                desc: '주변 조직의 열 손상을 최소화하면서 타겟 부위만 아주 정교하게 깎아냅니다. 시술 후 흉터 걱정을 줄여줍니다.'
-                                            },
-                                            {
-                                                title: '빠르고 균일한 결과',
-                                                desc: '일정한 에너지를 조사하여 시술 시간이 짧고, 결과가 균일합니다.'
-                                            },
-                                            {
-                                                title: '맞춤형 솔루션',
-                                                desc: '점, 잡티 제거뿐만 아니라 흉터 복원, 미세 박피 등 목적에 맞는 맞춤형 시술이 가능합니다.'
-                                            }
-                                        ].map((item, idx) => (
-                                            <div key={idx} className="bg-slate-50 border border-slate-200 p-6 hover:border-primary/30 transition-all duration-500 group min-h-[140px] flex flex-col justify-center rounded-xl">
-                                                <h4 className="text-slate-900 font-bold text-lg mb-2 group-hover:text-primary transition-colors flex items-center gap-3">
-                                                    <span className="w-1 h-4 bg-primary/40 rounded-full group-hover:bg-primary transition-colors duration-500" />
-                                                    {item.title}
-                                                </h4>
-                                                <p className="text-slate-600 text-base leading-relaxed break-keep">
-                                                    {item.desc}
-                                                </p>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </motion.div>
+                                <div className="space-y-6">
+                                    {[
+                                        {
+                                            title: '정교한 타겟 시술',
+                                            desc: '주변 조직의 열 손상을 최소화하면서 타겟 부위만 아주 정교하게 깎아냅니다. 시술 후 흉터 걱정을 줄여줍니다.'
+                                        },
+                                        {
+                                            title: '빠르고 균일한 결과',
+                                            desc: '일정한 에너지를 조사하여 시술 시간이 짧고, 결과가 균일합니다.'
+                                        },
+                                        {
+                                            title: '맞춤형 솔루션',
+                                            desc: '점, 잡티 제거뿐만 아니라 흉터 복원, 미세 박피 등 목적에 맞는 맞춤형 시술이 가능합니다.'
+                                        }
+                                    ].map((item, idx) => (
+                                        <div key={idx} className="bg-slate-50 border border-slate-200 p-6 hover:border-primary/30 transition-all duration-500 group min-h-[140px] flex flex-col justify-center rounded-xl">
+                                            <h4 className="text-slate-900 font-bold text-lg mb-2 group-hover:text-primary transition-colors flex items-center gap-3">
+                                                <span className="w-1 h-4 bg-primary/40 rounded-full group-hover:bg-primary transition-colors duration-500" />
+                                                {item.title}
+                                            </h4>
+                                            <p className="text-slate-600 text-base leading-relaxed break-keep">
+                                                {item.desc}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </motion.div>
 
-                                {/* Benefits (이점) */}
-                                <motion.div
-                                    initial={{ opacity: 0, x: 30 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.8 }}
-                                    viewport={{ once: true }}
-                                    className="space-y-10"
-                                >
-                                    <div className="space-y-4">
-                                        <div className="text-primary font-bold text-xs tracking-widest uppercase">Patient Value</div>
-                                        <h3 className="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-tight">Prime <span className="text-primary">Benefits</span></h3>
-                                        <div className="w-12 h-[2px] bg-primary" />
-                                    </div>
+                            {/* Benefits (이점) */}
+                            <motion.div
+                                initial={{ opacity: 0, x: 30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8 }}
+                                viewport={{ once: true }}
+                                className="space-y-10"
+                            >
+                                <div className="space-y-4">
+                                    <div className="text-primary font-bold text-xs tracking-widest uppercase">Patient Value</div>
+                                    <h3 className="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-tight">Prime <span className="text-primary">Benefits</span></h3>
+                                    <div className="w-12 h-[2px] bg-primary" />
+                                </div>
 
-                                    <div className="space-y-6">
-                                        {[
-                                            {
-                                                title: '통증 및 부기 감소',
-                                                desc: '열 전달 범위를 좁혀 시술 시 통증이 적고 회복이 빠릅니다.'
-                                            },
-                                            {
-                                                title: '빠른 일상 복귀',
-                                                desc: '주변 피부 손상이 적어 딱지가 생기는 기간이 단축됩니다.'
-                                            },
-                                            {
-                                                title: '정밀한 시술 결과',
-                                                desc: '아주 작은 점이나 깊은 흉터도 정밀하게 치료하여 만족도가 높습니다.'
-                                            }
-                                        ].map((item, idx) => (
-                                            <div key={idx} className="bg-slate-50 border border-slate-200 p-6 hover:border-primary/30 transition-all duration-500 group min-h-[140px] flex flex-col justify-center rounded-xl">
-                                                <h4 className="text-slate-900 font-bold text-lg mb-2 group-hover:text-primary transition-colors flex items-center gap-3">
-                                                    <span className="w-1 h-4 bg-primary/40 rounded-full group-hover:bg-primary transition-colors duration-500" />
-                                                    {item.title}
-                                                </h4>
-                                                <p className="text-slate-600 text-base leading-relaxed break-keep">
-                                                    {item.desc}
-                                                </p>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </motion.div>
+                                <div className="space-y-6">
+                                    {[
+                                        {
+                                            title: '통증 및 부기 감소',
+                                            desc: '열 전달 범위를 좁혀 시술 시 통증이 적고 회복이 빠릅니다.'
+                                        },
+                                        {
+                                            title: '빠른 일상 복귀',
+                                            desc: '주변 피부 손상이 적어 딱지가 생기는 기간이 단축됩니다.'
+                                        },
+                                        {
+                                            title: '정밀한 시술 결과',
+                                            desc: '아주 작은 점이나 깊은 흉터도 정밀하게 치료하여 만족도가 높습니다.'
+                                        }
+                                    ].map((item, idx) => (
+                                        <div key={idx} className="bg-slate-50 border border-slate-200 p-6 hover:border-primary/30 transition-all duration-500 group min-h-[140px] flex flex-col justify-center rounded-xl">
+                                            <h4 className="text-slate-900 font-bold text-lg mb-2 group-hover:text-primary transition-colors flex items-center gap-3">
+                                                <span className="w-1 h-4 bg-primary/40 rounded-full group-hover:bg-primary transition-colors duration-500" />
+                                                {item.title}
+                                            </h4>
+                                            <p className="text-slate-600 text-base leading-relaxed break-keep">
+                                                {item.desc}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </motion.div>
 
-                            </div>
                         </div>
-
                     </div>
+
+                </div>
             </section>
 
 
