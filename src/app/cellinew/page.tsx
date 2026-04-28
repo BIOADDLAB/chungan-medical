@@ -91,7 +91,7 @@ export default function CellinewPage() {
 
                 <div className="space-y-6 text-slate-600 text-sm md:text-[17px] font-medium tracking-tight leading-relaxed break-keep">
                   <p>셀리뉴만의 <span className="text-primary font-black">Auto Fit</span>은</p>
-                  <p>피부 부위별 특성에 맞춰 자동으로 에너지를 전달하는 시스템으로</p>
+                  <p>피부 부위별 특성에 맞춰 자동으로 에너지를 <br className="block md:hidden" />전달하는 시스템으로</p>
                   <p>매순간 변화하는 피부에 실시간으로<br />최적화된 에너지를 전달시켜줍니다.</p>
                 </div>
 
@@ -173,7 +173,7 @@ export default function CellinewPage() {
               className="text-center w-full max-w-4xl"
             >
               <div className="space-y-6 text-slate-800 text-[17px] md:text-[21px] font-bold leading-relaxed tracking-tighter break-keep">
-                <p>셀리뉴는 <span className="text-primary">6.78MHz Monopolar RF</span>로 진피층에 열을 발생시켜<br />노화의 근본적인 원인이 되는 콜라겐 셀을 리뉴얼 시켜줍니다.</p>
+                <p>셀리뉴는 <span className="text-primary">6.78MHz Monopolar RF</span>로 진피층에 <br className="block md:hidden" />열을 발생시켜 <br className="hidden md:block" />노화의 근본적인 원인이 되는 <br className="block md:hidden" />콜라겐 셀을 리뉴얼 시켜줍니다.</p>
                 <p className="text-slate-600 font-medium text-sm md:text-lg tracking-tight">
                   피부 속부터 탄력있고 건강하게 가꾸어 주름, 피부결 뿐 아니라  <br className="hidden md:block" />
                   종합적인 피부 개선 효과를 기대할 수 있습니다.
