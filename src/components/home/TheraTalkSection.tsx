@@ -37,7 +37,7 @@ const TheraTalkSection = () => {
                     >
                         <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 flex items-center gap-3">
                             <span className="w-1.5 h-1.5 rounded-full bg-red-500/60" />
-                            병원의 현실적인 고민 (Pain Points)
+                            병원의 현실적인 고민 <br className="md:hidden" /> (Pain Points)
                         </h3>
                     </motion.div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
