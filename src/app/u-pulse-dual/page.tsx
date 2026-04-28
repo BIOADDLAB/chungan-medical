@@ -238,8 +238,10 @@ export default function UPulsePage() {
               <div className="space-y-10">
                 {/* 본문 텍스트 크기 규칙: text-xl md:text-2xl */}
                 <p className="text-xl md:text-2xl font-bold leading-relaxed text-slate-700">
-                  SOL 모드는 <span className="text-primary">CO2 Fractional Laser</span>를 기반으로<br />
-                  피부 내 <span className="text-primary">Micro Hole</span>을 만들어주는 피부 재생 장비입니다.
+                  SOL 모드는 <span className="text-primary">CO2 Fractional Laser</span><br className="md:hidden" />
+                  를 기반으로 <span className="hidden md:inline"><br /></span>
+                  피부 내 <span className="text-primary">Micro Hole</span>을 <br className="md:hidden" />
+                  만들어주는 피부 재생 장비입니다.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mt-16 px-4">
@@ -265,8 +267,10 @@ export default function UPulsePage() {
                 >
                   <div className="px-8 py-6 border-l-4 border-primary bg-primary/5 backdrop-blur-sm">
                     <p className="text-xl md:text-2xl font-black text-slate-900 leading-relaxed tracking-tight">
-                      피부 손상과 부작용은 <span className="text-primary">최소화</span> 하고<br className="md:hidden" />
-                      약물 전달의 기능은 <span className="text-primary">최대화</span> 했습니다.
+                      피부 손상과 부작용은 <span className="text-primary">최소화</span><br className="md:hidden" />
+                      하고 <span className="hidden md:inline"><br /></span>
+                      약물 전달의 기능은 <br className="md:hidden" />
+                      <span className="text-primary">최대화</span> 했습니다.
                     </p>
                   </div>
                 </motion.div>
