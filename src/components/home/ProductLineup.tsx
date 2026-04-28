@@ -19,6 +19,7 @@ const PRODUCTS = [
   },
   { id: 2, name: 'U-Pulse', image: '/images/machine/유펄스 사진.png', logo: '/images/machine/유펄스 로고.png', makerLogo: '/images/machine/snj로고.png' },
   { id: 3, name: 'U-Pulse DUAL', image: '/images/machine/유펄스듀얼 사진.png', logo: '/images/machine/유펄스듀얼 로고.png', makerLogo: '/images/machine/snj로고.png' },
+  { id: 9, name: 'N-PULSE PRIME', image: '/images/machine/엔펄스 프라임.png', logo: '', makerLogo: '/images/machine/snj로고.png' },
   { id: 4, name: 'N-Pulse FX', image: '/images/machine/N-Pulse FX 01.png', logo: '', makerLogo: '/images/machine/snj로고.png' },
   { id: 5, name: 'N-Pulse Pro', image: '/images/machine/N-Pulse Pro 01.png', logo: '', makerLogo: '/images/machine/snj로고.png' },
   { id: 6, name: 'SYLFIRM X', image: '/images/machine/실펌x 사진1.png', logo: '/images/machine/실펌 로고.png', makerLogo: '/images/machine/비올 로고.png' },
