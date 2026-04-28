@@ -31,10 +31,10 @@ export default function FutureVisionPage() {
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white"
+            className="text-[30px] md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white whitespace-nowrap"
           >
-            <span className="hero-title-main block md:inline !text-white">FUTURE - </span>
-            <span className="hero-title-highlight ml-0 md:ml-4">VISION</span>
+            <span className="hero-title-main !text-white">FUTURE - </span>
+            <span className="hero-title-highlight ml-2 md:ml-4">VISION</span>
           </motion.h1>
 
           {/* 부제 */}
@@ -46,7 +46,7 @@ export default function FutureVisionPage() {
           >
             <div className="w-16 h-[2px] bg-primary mb-6" />
             <p className="text-white/90 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl">
-              청안메디칼이 그리는 <span className="text-primary font-bold">내일의 가치</span>
+              청안메디칼이 그리는 <br className="block md:hidden" /> <span className="text-primary font-bold">내일의 가치</span>
             </p>
           </motion.div>
         </div>
@@ -218,7 +218,7 @@ export default function FutureVisionPage() {
               Future Landmark
             </div>
             <h2 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 mb-8">
-              AI 관련 제조 및 연구소 <br className="hidden md:block" />
+              AI 관련 제조 및 연구소 <br />
               <span className="text-primary shadow-none">설립 예정</span>
             </h2>
             <div className="w-24 h-[2px] bg-primary mx-auto shadow-none" />
