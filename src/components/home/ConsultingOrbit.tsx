@@ -33,7 +33,7 @@ export default function ConsultingOrbit() {
         </motion.div>
 
         {/* Orbit Diagram Container (HUD Style) */}
-        <div className="consulting-diagram-responsive-wrapper flex justify-center items-center w-full">
+        <div className="consulting-diagram-responsive-wrapper flex justify-center items-center w-full mt-12 md:mt-24">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -47,7 +47,7 @@ export default function ConsultingOrbit() {
                 <img
                   src="/images/청안turnkey 로고1.png"
                   alt="CHEONGAN TURNKEY"
-                  className="w-full h-full object-cover brightness-110"
+                  className="w-full h-full object-cover [filter:invert(56%)_sepia(95%)_saturate(1831%)_hue-rotate(160deg)_brightness(94%)_contrast(101%)]"
                 />
               </div>
             </div>
