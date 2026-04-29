@@ -36,7 +36,7 @@ const TheraTalkSection = () => {
                         className="mb-12"
                     >
                         <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 flex items-center gap-3">
-                            <span className="w-1.5 h-1.5 rounded-full bg-red-500/60" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary/60" />
                             병원의 현실적인 고민 <br className="md:hidden" /> (Pain Points)
                         </h3>
                     </motion.div>
@@ -52,9 +52,9 @@ const TheraTalkSection = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: idx * 0.1 }}
                                 viewport={{ once: true }}
-                                className="glass-panel p-8 border-sky-100 bg-white/90 hover:border-red-500/20 transition-all duration-500 group"
+                                className="glass-panel p-8 border-sky-100 bg-white/90 hover:border-primary/20 transition-all duration-500 group"
                             >
-                                <div className="text-red-500/40 font-black text-3xl mb-4 group-hover:text-red-500 transition-colors">0{idx + 1}</div>
+                                <div className="text-primary/40 font-black text-3xl mb-4 group-hover:text-primary transition-colors">0{idx + 1}</div>
                                 <h4 className="text-slate-900 font-bold text-lg mb-3">{item.title}</h4>
                                 <p className="text-slate-600 text-sm md:text-base leading-relaxed break-keep">
                                     {item.desc}
