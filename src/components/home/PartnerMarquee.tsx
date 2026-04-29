@@ -59,8 +59,8 @@ export default function PartnerMarquee() {
         </motion.p>
       </div>
 
-      {/* 로고가 흐르는 영역: 이미지와 동일한 배경색 및 그리드 */}
-      <div className="relative py-20 bg-[#F0F9FF] border-y border-[#00B3E4]/10">
+      {/* 로고가 흐르는 영역: 1층 구조로 통합 및 이미지 로고 적용 */}
+      <div className="relative py-24 bg-[#F0F9FF] border-y border-[#00B3E4]/10 overflow-hidden group">
         {/* 아주 은은한 배경 그리드 라인 */}
         <div className="absolute inset-0 bg-tech-grid opacity-[0.03] pointer-events-none" />
         
@@ -68,32 +68,56 @@ export default function PartnerMarquee() {
         <div className="absolute inset-y-0 left-0 w-32 md:w-64 bg-gradient-to-r from-[#F0F9FF] to-transparent z-10 pointer-events-none" />
         <div className="absolute inset-y-0 right-0 w-32 md:w-64 bg-gradient-to-l from-[#F0F9FF] to-transparent z-10 pointer-events-none" />
 
-        {/* 첫 번째 줄 흐름 */}
-        <div className="flex mb-12 overflow-hidden select-none">
+        <div className="flex select-none">
           <motion.div 
-            animate={{ x: [0, -1000] }}
-            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-            className="flex flex-nowrap gap-24 items-center"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ 
+              duration: 25, 
+              repeat: Infinity, 
+              ease: "linear" 
+            }}
+            className="flex flex-nowrap gap-20 md:gap-24 items-center"
           >
-            {[...PARTNERS_ROW_1, ...PARTNERS_ROW_1, ...PARTNERS_ROW_1].map((partner, idx) => (
-              <span key={`p1-${idx}`} className="text-3xl md:text-5xl font-black text-[#1E293B]/10 hover:text-[#00B3E4] transition-colors duration-500 cursor-default whitespace-nowrap">
-                {partner.name}
-              </span>
-            ))}
-          </motion.div>
-        </div>
-
-        {/* 두 번째 줄 흐름 (반대 방향) */}
-        <div className="flex overflow-hidden select-none">
-          <motion.div 
-            animate={{ x: [-1000, 0] }}
-            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-            className="flex flex-nowrap gap-24 items-center"
-          >
-            {[...PARTNERS_ROW_2, ...PARTNERS_ROW_2, ...PARTNERS_ROW_2].map((partner, idx) => (
-              <span key={`p2-${idx}`} className="text-3xl md:text-5xl font-black text-[#1E293B]/10 hover:text-[#00B3E4] transition-colors duration-500 cursor-default whitespace-nowrap">
-                {partner.name}
-              </span>
+            {/* Seamless Infinite Loop를 위해 로고 세트를 두 번 반복 (50% 지점에서 리셋) */}
+            {[
+              { name: 'SSES Studio', src: 'SSES_Studio.png' },
+              { name: '디자인큼', src: '디자인큼.png' },
+              { name: '바이오애드랩', src: '바이오애드랩.png' },
+              { name: '상상하다', src: '상상하다3.png' },
+              { name: '스마트브랜딩', src: '스마트브랜딩.png' },
+              { name: '유노택스', src: '유노택스.png' },
+            ].concat([
+              { name: 'SSES Studio', src: 'SSES_Studio.png' },
+              { name: '디자인큼', src: '디자인큼.png' },
+              { name: '바이오애드랩', src: '바이오애드랩.png' },
+              { name: '상상하다', src: '상상하다3.png' },
+              { name: '스마트브랜딩', src: '스마트브랜딩.png' },
+              { name: '유노택스', src: '유노택스.png' },
+            ]).concat([
+              { name: 'SSES Studio', src: 'SSES_Studio.png' },
+              { name: '디자인큼', src: '디자인큼.png' },
+              { name: '바이오애드랩', src: '바이오애드랩.png' },
+              { name: '상상하다', src: '상상하다3.png' },
+              { name: '스마트브랜딩', src: '스마트브랜딩.png' },
+              { name: '유노택스', src: '유노택스.png' },
+            ]).concat([
+              { name: 'SSES Studio', src: 'SSES_Studio.png' },
+              { name: '디자인큼', src: '디자인큼.png' },
+              { name: '바이오애드랩', src: '바이오애드랩.png' },
+              { name: '상상하다', src: '상상하다3.png' },
+              { name: '스마트브랜딩', src: '스마트브랜딩.png' },
+              { name: '유노택스', src: '유노택스.png' },
+            ]).map((logo, idx) => (
+              <div 
+                key={idx} 
+                className="flex-shrink-0 flex items-center justify-center grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer px-4"
+              >
+                <img
+                  src={`/images/down_logo/${logo.src}`}
+                  alt={logo.name}
+                  className="h-16 md:h-20 w-auto object-contain"
+                />
+              </div>
             ))}
           </motion.div>
         </div>
