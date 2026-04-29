@@ -8,7 +8,7 @@ export default function AboutSection() {
       {/* Full Height & Width Background with Tech Overlay */}
       <div className="absolute inset-0 w-full h-full z-0">
         <img src="/images/backgrounds/medical_tech_bg.png" className="w-full h-full object-cover mix-blend-luminosity opacity-60" alt="medical tech background" />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/30 to-white/50" />
+
         <div className="absolute inset-0 bg-tech-dots opacity-40 mix-blend-multiply" />
       </div>
 
