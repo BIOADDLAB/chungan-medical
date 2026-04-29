@@ -8,7 +8,7 @@ export default function Footer() {
           <img
             src="/images/청안로고.png"
             alt="CHEONGAN"
-            className="w-80 md:w-[520px] opacity-100 brightness-0 object-contain object-left md:-ml-20"
+            className="w-80 md:w-[520px] opacity-100 brightness-0 object-contain object-left"
           />
         </div>
 
