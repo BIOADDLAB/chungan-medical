@@ -177,6 +177,21 @@ body {
   }
 }
 
+@keyframes partnerLogoMarquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(calc(var(--marquee-distance, 0px) * -1), 0, 0);
+  }
+}
+
+.partner-logo-track {
+  animation: partnerLogoMarquee 25s linear infinite;
+  will-change: transform;
+}
+
 /* Header states */
 header {
   border: none !important;

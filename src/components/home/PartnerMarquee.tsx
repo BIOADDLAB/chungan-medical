@@ -1,30 +1,49 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import type { CSSProperties } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-const PARTNERS_ROW_1 = [
-  { name: 'REJURAN' },
-  { name: 'Olive Young' },
-  { name: 'ISOI' },
-  { name: 'Dr.Plus' },
-  { name: 'MEDI HUB' },
-  { name: '애경' },
-];
-
-const PARTNERS_ROW_2 = [
-  { name: 'Cynosure' },
-  { name: 'Alma' },
-  { name: 'Lumenis' },
-  { name: 'CANDELA' },
-  { name: 'hironic' },
-  { name: 'SNJ' },
+const PARTNER_LOGOS = [
+  { name: 'SSES Studio', src: 'SSES_Studio.png', width: 4167, height: 2084 },
+  { name: '디자인큼', src: '디자인큼.png', width: 5906, height: 5906 },
+  { name: '바이오애드랩', src: '바이오애드랩.png', width: 7166, height: 1891 },
+  { name: '상상하다', src: '상상하다3.png', width: 2078, height: 821 },
+  { name: '스마트브랜딩', src: '스마트브랜딩.png', width: 4167, height: 4167 },
+  { name: '유노택스', src: '유노택스.png', width: 10779, height: 2457 },
 ];
 
 export default function PartnerMarquee() {
+  const firstSetRef = useRef<HTMLDivElement>(null);
+  const [setWidth, setSetWidth] = useState(0);
+
+  useEffect(() => {
+    const firstSet = firstSetRef.current;
+
+    if (!firstSet) {
+      return;
+    }
+
+    const updateSetWidth = () => {
+      setSetWidth(firstSet.getBoundingClientRect().width);
+    };
+
+    updateSetWidth();
+
+    const resizeObserver = new ResizeObserver(updateSetWidth);
+    resizeObserver.observe(firstSet);
+    window.addEventListener('resize', updateSetWidth);
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener('resize', updateSetWidth);
+    };
+  }, []);
+
   return (
     <section id="partners" className="partners-section pt-24 pb-0 bg-white overflow-hidden">
       <div className="max-w-screen-xl mx-auto px-6 mb-16 text-center">
-        {/* 이미지와 동일한 배지 디자인 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,8 +52,7 @@ export default function PartnerMarquee() {
         >
           Global Network
         </motion.div>
-        
-        {/* 이미지와 동일한 타이틀 스타일 */}
+
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,9 +62,9 @@ export default function PartnerMarquee() {
         >
           OUR <span className="text-[#00B3E4]">PARTNERS</span> & CLIENTS
         </motion.h2>
-        
+
         <div className="w-16 h-[2px] bg-[#00B3E4]/40 mx-auto mb-10" />
-        
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,72 +72,47 @@ export default function PartnerMarquee() {
           viewport={{ once: true }}
           className="text-slate-500 text-lg font-medium max-w-2xl mx-auto leading-relaxed"
         >
-          병원 분과별 맞춤 세팅 시스템. 당신의 브랜드가 가장 주목받는 의료 공간에서<br className="hidden md:block" />
+          병원 분과별 맞춤 세팅 시스템. 당신의 브랜드가 가장 주목받는 의료 공간에서
+          <br className="hidden md:block" />
           최적의 솔루션과 만나는 혁신적인 네트워크를 경험하세요.
         </motion.p>
       </div>
 
-      {/* 로고가 흐르는 영역: 1층 구조로 통합 및 이미지 로고 적용 */}
       <div className="relative py-24 bg-[#F0F9FF] border-y border-[#00B3E4]/10 overflow-hidden group">
-        {/* 아주 은은한 배경 그리드 라인 */}
         <div className="absolute inset-0 bg-tech-grid opacity-[0.03] pointer-events-none" />
-        
-        {/* 사이드 페이드 효과 */}
+
         <div className="absolute inset-y-0 left-0 w-32 md:w-64 bg-gradient-to-r from-[#F0F9FF] to-transparent z-10 pointer-events-none" />
         <div className="absolute inset-y-0 right-0 w-32 md:w-64 bg-gradient-to-l from-[#F0F9FF] to-transparent z-10 pointer-events-none" />
 
-        <div className="flex select-none">
-          <motion.div 
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ 
-              duration: 25, 
-              repeat: Infinity, 
-              ease: "linear" 
-            }}
-            className="flex flex-nowrap gap-20 md:gap-24 items-center"
+        <div className="flex select-none overflow-hidden">
+          <div
+            className="partner-logo-track flex w-max flex-nowrap items-center"
+            style={{ '--marquee-distance': `${setWidth}px` } as CSSProperties}
           >
-            {/* Seamless Infinite Loop를 위해 로고 세트를 두 번 반복 (50% 지점에서 리셋) */}
-            {[
-              { name: 'SSES Studio', src: 'SSES_Studio.png' },
-              { name: '디자인큼', src: '디자인큼.png' },
-              { name: '바이오애드랩', src: '바이오애드랩.png' },
-              { name: '상상하다', src: '상상하다3.png' },
-              { name: '스마트브랜딩', src: '스마트브랜딩.png' },
-              { name: '유노택스', src: '유노택스.png' },
-            ].concat([
-              { name: 'SSES Studio', src: 'SSES_Studio.png' },
-              { name: '디자인큼', src: '디자인큼.png' },
-              { name: '바이오애드랩', src: '바이오애드랩.png' },
-              { name: '상상하다', src: '상상하다3.png' },
-              { name: '스마트브랜딩', src: '스마트브랜딩.png' },
-              { name: '유노택스', src: '유노택스.png' },
-            ]).concat([
-              { name: 'SSES Studio', src: 'SSES_Studio.png' },
-              { name: '디자인큼', src: '디자인큼.png' },
-              { name: '바이오애드랩', src: '바이오애드랩.png' },
-              { name: '상상하다', src: '상상하다3.png' },
-              { name: '스마트브랜딩', src: '스마트브랜딩.png' },
-              { name: '유노택스', src: '유노택스.png' },
-            ]).concat([
-              { name: 'SSES Studio', src: 'SSES_Studio.png' },
-              { name: '디자인큼', src: '디자인큼.png' },
-              { name: '바이오애드랩', src: '바이오애드랩.png' },
-              { name: '상상하다', src: '상상하다3.png' },
-              { name: '스마트브랜딩', src: '스마트브랜딩.png' },
-              { name: '유노택스', src: '유노택스.png' },
-            ]).map((logo, idx) => (
-              <div 
-                key={idx} 
-                className="flex-shrink-0 flex items-center justify-center grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer px-4"
+            {[0, 1, 2, 3].map((setIndex) => (
+              <div
+                key={setIndex}
+                ref={setIndex === 0 ? firstSetRef : undefined}
+                aria-hidden={setIndex > 0}
+                className="flex flex-none items-center gap-20 pr-20 md:gap-24 md:pr-24"
               >
-                <img
-                  src={`/images/down_logo/${logo.src}`}
-                  alt={logo.name}
-                  className="h-16 md:h-20 w-auto object-contain"
-                />
+                {PARTNER_LOGOS.map((logo) => (
+                  <div
+                    key={`${setIndex}-${logo.src}`}
+                    className="flex-shrink-0 flex items-center justify-center grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer px-4"
+                  >
+                    <Image
+                      src={`/images/down_logo/${logo.src}`}
+                      alt={logo.name}
+                      width={logo.width}
+                      height={logo.height}
+                      className="h-16 md:h-20 w-auto object-contain"
+                    />
+                  </div>
+                ))}
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
