@@ -7,7 +7,7 @@ export default function AboutSection() {
     <section id="about" className="relative w-full min-h-screen overflow-hidden flex flex-col lg:flex-row bg-white">
       {/* Full Height & Width Background with Tech Overlay */}
       <div className="absolute inset-0 w-full h-full z-0">
-        <img src="/images/backgrounds/medical_tech_bg.png" className="w-full h-full object-cover mix-blend-luminosity opacity-60" alt="medical tech background" />
+        <img src="/images/backgrounds/medical_tech_bg.png" className="w-full h-full object-cover" alt="medical tech background" />
 
         <div className="absolute inset-0 bg-tech-dots opacity-40 mix-blend-multiply" />
       </div>
@@ -61,7 +61,7 @@ export default function AboutSection() {
           className="relative"
         >
 
-          <h3 className="text-transparent bg-clip-text bg-gradient-to-b from-slate-800 via-slate-600 to-slate-400 text-4xl md:text-6xl font-black tracking-tighter leading-[1]">
+          <h3 className="text-white text-4xl md:text-6xl font-black tracking-tighter leading-[1] drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
             DO WHAT IS <span className="text-primary font-inter">RIGHT</span>,<br />NOT WHAT IS EASY.
           </h3>
           <div className="mt-6 flex justify-end gap-2">
