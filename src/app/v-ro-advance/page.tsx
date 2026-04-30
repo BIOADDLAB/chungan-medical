@@ -21,11 +21,11 @@ function Counter({ value, duration = 2 }: { value: number; duration?: number }) 
 
 export default function VRoAdvancePage() {
   return (
-    <main className="bg-sky-50 min-h-screen lowercase-titles overflow-x-hidden">
+    <main className="bg-sky-100 min-h-screen lowercase-titles overflow-x-hidden">
       {/* ① Hero Section */}
       <section
         id="hero"
-        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-50"
+        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-100"
       >
         <img
           src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1920&q=80"
@@ -222,7 +222,7 @@ export default function VRoAdvancePage() {
       </section>
 
       {/* ⑤ SD (Synergy Dotting) Combination Mechanism Section */}
-      <section id="sd-combination" className="py-28 bg-sky-50 relative overflow-hidden border-t border-sky-100 leading-none text-left">
+      <section id="sd-combination" className="py-28 bg-sky-100 relative overflow-hidden border-t border-sky-100 leading-none text-left">
         <div className="max-w-screen-xl mx-auto px-6 relative z-10 leading-none">
           {/* Header Title Area (PICO-K Style) */}
           <motion.div
@@ -259,7 +259,7 @@ export default function VRoAdvancePage() {
               <div className="relative h-[500px] lg:h-[560px] bg-white rounded-[40px] border-2 border-sky-100 overflow-hidden flex flex-col items-stretch leading-none">
                 <div className="absolute inset-0 bg-tech-grid opacity-[0.05] pointer-events-none" />
 
-                <div className="bg-sky-50/50 border-b border-sky-100 px-8 py-5 relative z-10 text-center">
+                <div className="bg-sky-100/50 border-b border-sky-100 px-8 py-5 relative z-10 text-center">
                   <h4 className="text-primary text-lg lg:text-xl font-black tracking-tight">
                     HIFU와 RF의 장점을 한 번의 Combination 시술로!
                   </h4>
@@ -437,7 +437,7 @@ export default function VRoAdvancePage() {
                   </div>
 
                   {/* Cartridge Images (More compact vertical box) */}
-                  <div className="flex justify-center py-2 lg:py-3 bg-sky-50 rounded-3xl border border-sky-100 relative group overflow-hidden leading-none">
+                  <div className="flex justify-center py-2 lg:py-3 bg-sky-100 rounded-3xl border border-sky-100 relative group overflow-hidden leading-none">
                     <div className="absolute inset-0 bg-primary/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700 scale-150" />
 
                     <motion.img
@@ -467,7 +467,7 @@ export default function VRoAdvancePage() {
                   </div>
 
                   {/* Cartridge Images (More compact vertical box) */}
-                  <div className="flex justify-center py-2 lg:py-3 bg-sky-50 rounded-3xl border border-sky-100 relative group overflow-hidden leading-none">
+                  <div className="flex justify-center py-2 lg:py-3 bg-sky-100 rounded-3xl border border-sky-100 relative group overflow-hidden leading-none">
                     <div className="absolute inset-0 bg-primary/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700 scale-150" />
 
                     <motion.img
@@ -539,7 +539,7 @@ export default function VRoAdvancePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-sky-50 rounded-2xl border border-sky-100 overflow-hidden relative group"
+                    className="bg-sky-100 rounded-2xl border border-sky-100 overflow-hidden relative group"
                   >
                     <div className="absolute top-3 left-3 z-20 bg-white/90 px-3 py-1 rounded-md text-[11px] font-bold text-slate-900 border border-sky-100">
                       · Dot Mode
@@ -560,7 +560,7 @@ export default function VRoAdvancePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="bg-sky-50 rounded-2xl border border-sky-100 overflow-hidden relative group"
+                    className="bg-sky-100 rounded-2xl border border-sky-100 overflow-hidden relative group"
                   >
                     <div className="absolute top-3 left-3 z-20 bg-white/90 px-3 py-1 rounded-md text-[11px] font-bold text-slate-900 border border-sky-100">
                       · Line Mode
