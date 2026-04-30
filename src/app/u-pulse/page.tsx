@@ -953,7 +953,7 @@ export default function UPulsePage() {
               Efficiency Test
             </div>
             <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-6 text-center leading-tight">
-              <span className="text-rose-400">High Power</span> <span className="text-slate-400 font-medium">makes</span> <br className="md:hidden" />
+              <span className="text-[#3EDFDA]">High Power</span> <span className="text-slate-400 font-medium">makes</span> <br className="md:hidden" />
               <span className="hero-title-highlight">Big Difference</span>
             </h3>
             <div className="w-20 h-[2px] bg-primary/50 mb-8" />
@@ -961,8 +961,8 @@ export default function UPulsePage() {
 
           {/* Comparison Header Table */}
           <div className="grid grid-cols-12 gap-0 mb-12">
-            <div className="col-span-3 h-12 bg-rose-500/20 flex items-center justify-center">
-              <span className="text-rose-400 font-black text-sm tracking-widest">30W</span>
+            <div className="col-span-3 h-12 bg-[#3EDFDA]/20 flex items-center justify-center">
+              <span className="text-[#3EDFDA] font-black text-sm tracking-widest">30W</span>
             </div>
             <div className="col-span-6 h-12 bg-sky-50 flex items-center justify-center">
               <span className="text-slate-600 font-bold text-xs tracking-[0.2em] uppercase">Time (Hour)</span>
@@ -1032,7 +1032,7 @@ export default function UPulsePage() {
           </div>
 
           {/* Bottom Gradient Bar */}
-          <div className="mt-20 h-2 w-full bg-gradient-to-r from-rose-500 via-slate-500 to-primary opacity-50 rounded-full" />
+          <div className="mt-20 h-2 w-full bg-gradient-to-r from-[#3EDFDA] via-slate-500 to-primary opacity-50 rounded-full" />
         </div>
       </section>
 
