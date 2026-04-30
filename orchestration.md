@@ -10,116 +10,86 @@
 
 - **프로젝트**: 청안병원 의료장비 소개 웹사이트
 - **기술 스택**: Next.js + Tailwind CSS v4 + Framer Motion + TypeScript
-- **브랜드 컨셉**: _"Tech-Premium Dark"_ — 고급스러운 어두운 배경에 테크니컬한 청색 포인트
-- **참조 페이지 (기준)**: 
-  - `src/app/pico-k/page.tsx` → **황금 표준 01** (전체 레이아웃 및 톤앤매너)
-  - `src/app/u-pulse/page.tsx` → **황금 표준 02** (복합 그리드 및 스펙 표 최적화 버전)
+- **브랜드 컨셉**: 
+  - **Main**: _"Tech-Premium Dark"_ — 고급스러운 어두운 배경 (메인, 브랜드 페이지 등)
+  - **Product**: _"Bright Tech-Medical"_ — 투명하고 밝은 `sky-100` 배경 (제품 상세 페이지 공통)
+- **참조 페이지 (황금 표준)**: 
+  - `src/app/pico-k/page.tsx` → **다크 모드 표준** (레이아웃 및 톤앤매너)
+  - `src/app/cellinew/page.tsx` → **브라이트 모드 표준** (제품 상세 배경 및 히어로 표준)
 
 ---
 
 ## 🎨 디자인 시스템 (Design Tokens)
 
-### 색상
+### 색상 (Colors)
 | 토큰 | 값 | 용도 |
 |---|---|---|
-| `bg-[#020408]` or `bg-[#050810]` | 극히 어두운 네이비-블랙 | 모든 섹션 배경 |
-| `text-primary` / `bg-primary` | `#00B7F1` (시안 블루) | 강조 텍스트, 배지, 발광 바, 아이콘 |
-| `text-white` | `#FFFFFF` | 제목 메인 텍스트 |
-| `text-slate-200` / `text-slate-300` | 고대비 회색 | 기술 정보, 스펙 데이터 |
-| `text-slate-400` | 중채도 회색 | 본문 설명 텍스트 |
-| `border-primary/30` | 연한 블루 테두리 | 배지, 패널 테두리 |
+| `bg-[#020408]` | 다크 네이비-블랙 | 메인/다크 섹션 배경 |
+| `bg-sky-100` | `#E0F2FE` (표준 블루) | **제품 페이지 공통 배경** (표준 채택) |
+| `bg-sky-50` | `#F0F9FF` (연한 블루) | 호버 상태, 포인트 배경 |
+| `text-primary` | `#00B7F1` (시안 블루) | 강조 텍스트, 포인트 요소 |
+| `text-[#5D5D5D]` | 다크 그레이 | 스크롤 후 헤더 텍스트, 본문 텍스트 |
+| `text-white` | `#FFFFFF` | 스크롤 전 히어로 위 헤더 텍스트, 제목 |
 
-### 타이포그래피 클래스
-- **메인 제목**: `<span className="hero-title-main uppercase">`
-- **강조 제목**: `<span className="hero-title-highlight uppercase">` (Hero 전용)
-- **섹션 강조 파란색**: `<span className="text-primary font-black">` (일반 섹션 타이틀용)
-- **기술 데이터**: **`text-base font-black tracking-tight`** (스펙 표 내부 규격)
-
-### 배경 텍스처
-- **테크 그리드**: `<div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />`
-- **테크 닷**: `<div className="absolute inset-0 bg-tech-dots opacity-20 mix-blend-screen pointer-events-none" />`
-
----
-
-## 🧱 컴포넌트 패턴 (재사용 규격)
-
-### 1. 섹션 배지 (Standard Badge)
-```tsx
-<div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5 leading-none">
-  SECTION LABEL
-</div>
-```
-
-### 2. 하이테크 발광 막대 (Accent Bar)
-```tsx
-<div className="w-20 h-[2px] bg-primary mb-8" />
-```
-- ⚠️ **섹션 타이틀 하단용: Shadow 없음.** (Hero 전용에만 `shadow` 사용)
-
-### 3. TECH 0X 스캔 라인 (PICO-K 표준)
-```tsx
-<div className="flex items-center gap-4 mb-14 relative overflow-hidden">
-  <span className="text-primary font-black text-sm tracking-widest font-inter whitespace-nowrap">TECH 0X</span>
-  <motion.div className="h-[1px] w-[500%] bg-gradient-to-r from-primary/60 via-primary/10 to-transparent" />
-</div>
-```
-
-### 4. Specification Table (U-PULSE 최적화 표준)
-- **규칙**: 반드시 **`whitespace-nowrap`**을 사용하여 모든 데이터가 **한 줄**로 표시되어야 함.
-- **모바일 대응**: 컨테이너에 **`overflow-x-auto no-scrollbar`** 필수 적용.
-- **레이블 규격**: `text-[10px] font-black tracking-[0.4em] text-primary/70`
-
-### 5. Detailed Feature Cards (Sylfirm-X 표준)
-- **헤더 고정 높이**: `<div className="h-[70px] flex items-center justify-center">`
-  - ⚠️ 문장 길이에 상관없이 모든 카드의 구분선 위치를 수평으로 일치시키기 위해 필수 적용.
-- **불렛 도트 정렬**: 텍스트 첫 줄 중앙 정렬을 위해 `<div className="flex items-center h-[21px] shrink-0">` 래퍼 사용.
-
-### 6. Modern Pricing Table (Sylfirm-X 표준)
-- **레이아웃**: `lg:grid-cols-12` (왼쪽 4: 오른쪽 8 비율).
-- **왼쪽**: 단독 시술 하이라이트 카드 (`glass-panel` + 강조 가격).
-- **오른쪽**: 상세 수가 리스트 (2열 그리드 + `border-b` 구분선).
+### 헤더/푸터 공통 표준 (Header & Footer)
+- **Header**: 
+  - **스크롤 전**: 배경 투명, 텍스트/로고 **하얀색(`white`)**
+  - **스크롤 후**: 배경 `sky-100` (rgba(224, 242, 254, 0.92)) + 블러 효과, 텍스트/로고 **다크그레이(`#5D5D5D`)**
+- **Footer**: 
+  - 배경색: **`bg-[#5D5D5D]`**
+  - 텍스트: 하얀색 (`text-white`)
+  - 로고: 모바일에서는 **중앙 정렬**, 데스크탑에서는 왼쪽 정렬.
 
 ---
 
-## 📐 스페이싱 규칙 (Spacing Rules)
+## 🧱 히어로 섹션 표준 (Bright Hero Standard)
 
-### 섹션 패딩
-- **대형 섹션**: `py-28` (표준)
-- **중형 섹션**: `py-24`
+모든 제품 페이지의 히어로 섹션은 아래의 규격을 엄격히 따릅니다.
 
-### 타이틀 블록 간격
-- **배지 → 타이틀**: `mb-6`
-- **타이틀 → 발광 막대**: `mb-6`
-- **발광 막대 → 본문**: `mb-8`
-- **전체 타이틀 블록 → 하단 컨텐츠**: **`mb-14`** (PICO-K/U-PULSE 공통 표준)
+### 1. 배경 이미지 및 오버레이
+```tsx
+<img
+  src="/images/cover/제품명_cover.jpg"
+  className="absolute inset-0 w-full h-full object-cover z-0 brightness-[0.95]"
+  alt="Cover Image"
+/>
+{/* 어두운 오버레이: 숫자가 작을수록 밝음 */}
+<div className="absolute inset-0 bg-black/10 z-10" />
+{/* 그라디언트: 상하단 가독성 확보 */}
+<div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50 z-10" />
+```
+- **규칙 01**: 이미지 밝기는 `brightness-[0.95]` 유지.
+- **규칙 02**: 오버레이는 **`bg-black/10`** 표준 (이미지 선명도 우선).
 
 ---
 
-## 🎬 애니메이션 & 기타 가이드
+## 📏 스페이싱 & 컴포넌트 패턴
 
-### 등장 애니메이션
-- 모든 섹션 컨텐츠는 **`initial={{ opacity: 0, y: 30 }}`** 표준을 따름.
-- **스크롤 감지**: 모든 주요 섹션에 `whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}` 적용 필수.
+### 섹션 패딩 & 간격
+- **표준 섹션 패딩**: `py-28`
+- **배경색 전환**: 제품 상세 섹션은 기본적으로 `bg-white`와 `bg-sky-100`을 교차 사용.
+- **버튼/호버**: `bg-sky-50`을 활용하여 부드러운 인터랙션 제공.
 
 ### ❌ 절대 금지 (Anti-Patterns)
-1. **기울임꼴(italic) 금지** — 모든 텍스트는 정체(upright) 사용.
-2. **border-t 금지** — 섹션 구분은 여백과 배경색으로만 처리. (단, 리스트 내부 아이템 구분선 제외)
-3. **그림자 아티팩트 금지** — 텍스트에 직접적인 강한 `box-shadow` 처리는 사각형 잔상을 유발하므로 금지.
+1. **히어로 배경에 임의의 Unsplash 이미지 금지** — 반드시 `images/cover/` 내 전용 이미지 사용.
+2. **회색선(`border-t`) 사용 지양** — 섹션 구분은 여백과 배경색(`white` vs `sky-100`)으로만 처리.
+3. **히어로 어둡게 처리 금지** — `bg-black/50` 등 과도한 오버레이 금지 (`/10` 표준).
 
 ---
 
-## 🔧 프로젝트 현황
+## 🔧 프로젝트 현황 (Status)
 
 | 파일 경로 | 상태 | 비고 |
 |---|---|---|
-| `src/app/pico-k/page.tsx` | **Finalized** | 황금 표준 01 |
-| `src/app/u-pulse/page.tsx` | **Finalized** | 황금 표준 02 (복합 그리드) |
-| `src/app/sylfirm-x/page.tsx` | **Finalized** | 황금 표준 03 (상세 카드 & 수가 리스트) |
-| `src/app/n-pulse/page.tsx` | **Finalized** | Canvas 가우시안 애니메이션 포함 |
-| `src/app/v-ro-advance/page.tsx` | **Finalized** | |
-| `src/app/cellinew/page.tsx` | **Finalized** | |
+| `src/app/n-pulse/page.tsx` | **Finalized** | Bright Hero 표준 반영 (`npulse_pro_fx_cover.jpg`) |
+| `src/app/cellinew/page.tsx` | **Finalized** | Bright Hero 표준 반영 (`cellinew_cover.jpg`) |
+| `src/app/sylfirm-x/page.tsx` | **Finalized** | Bright Hero 표준 반영 (`sylfirmx_cover.jpg`) |
+| `src/app/v-ro-advance/page.tsx` | **Finalized** | Bright Hero 표준 반영 (`vro_advance_cover.jpg`) |
+| `src/components/layout/Header.tsx` | **Updated** | 스크롤 반응형 색상 로직 (White ↔ DarkGrey) 완료 |
+| `src/app/globals.css` | **Updated** | `.site-header-scrolled` 배경색 `sky-100` 적용 완료 |
 
 ---
 
-_Last Updated: 2026-04-08 | 버전 1.3 (All Pages Finalized)_
+_Last Updated: 2026-04-30 | 버전 1.4 (Product Hero & Header Logic Standardized)_
+
 

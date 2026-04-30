@@ -20,6 +20,10 @@ export default function Footer() {
               <span className="text-white font-medium">(주)청안메디컬코퍼레이션</span>
             </div>
             <div className="flex">
+              <span className="w-24 font-bold text-white/50">대표자</span>
+              <span className="text-white font-medium">황현</span>
+            </div>
+            <div className="flex">
               <span className="w-24 font-bold text-white/50">이메일</span>
               <span className="text-white font-medium">hwangh6293@naver.com</span>
             </div>
