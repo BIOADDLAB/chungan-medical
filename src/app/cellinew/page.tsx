@@ -11,7 +11,7 @@ export default function CellinewPage() {
       {/* ① Hero Section (Standard Tech Style) */}
       <section
         id="hero"
-        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-50"
+        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-100"
       >
         <img
           src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1920&q=80"
@@ -134,7 +134,7 @@ export default function CellinewPage() {
       </section>
 
       {/* ③ CELLINEW Monopolar RF & Mechanism Section (Standard Tech Style) */}
-      <section id="mechanism" className="relative py-28 bg-sky-50 overflow-hidden border-t border-sky-100">
+      <section id="mechanism" className="relative py-28 bg-sky-100 overflow-hidden border-t border-sky-100">
         <div className="absolute inset-0 bg-tech-grid opacity-10 mix-blend-multiply pointer-events-none" />
 
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 relative z-10">
@@ -408,7 +408,7 @@ export default function CellinewPage() {
       </section>
 
       {/* ④ CELLINEW Safe Monitoring & Control Section (Tech-Premium Dark) */}
-      <section id="safety-detail" className="relative py-28 bg-sky-50 overflow-hidden border-t border-sky-100">
+      <section id="safety-detail" className="relative py-28 bg-sky-100 overflow-hidden border-t border-sky-100">
         <div className="absolute inset-0 bg-tech-grid opacity-10 mix-blend-multiply pointer-events-none" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
