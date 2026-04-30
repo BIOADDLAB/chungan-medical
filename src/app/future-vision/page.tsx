@@ -54,7 +54,7 @@ export default function FutureVisionPage() {
         {/* 스크롤 유도 버튼 */}
         <div className="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center">
           <Link
-            href="#vision-content"
+            href="#full-announcement"
             aria-label="Scroll down"
             className="inline-flex justify-center items-center w-12 h-12 border border-slate-300 rounded-full hover:bg-slate-100 hover:text-black transition duration-300 animate-bounce group bg-white/50 backdrop-blur-sm"
           >
@@ -65,135 +65,12 @@ export default function FutureVisionPage() {
         </div>
       </section>
 
-      {/* ② Vision Content Section - AI Research Lab */}
-      <section id="vision-content" className="relative py-28 bg-white overflow-hidden">
-        {/* 배경 장식 */}
-        <div className="absolute inset-0 bg-tech-dots opacity-10 mix-blend-multiply pointer-events-none" />
-        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none" />
 
-        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-            {/* 좌측: 설명 텍스트 (Orchestration Standard 적용) */}
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="inline-block px-4 py-1.5 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-slate-50 leading-none">
-                Next-Gen R&D
-              </div>
-              <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
-                <span className="text-primary font-black uppercase">AI 기반</span><br />
-                <span className="text-slate-900 uppercase">의료 제조 및 연구소</span>
-              </h2>
-              <div className="w-20 h-[2px] bg-primary mb-8" />
 
-              <div className="space-y-6">
-                <p className="text-slate-800 font-bold text-xl leading-snug">
-                  청안메디칼 AI 통합 연구소 설립 예정
-                </p>
-                <p className="text-slate-600 text-lg font-medium leading-relaxed max-w-xl break-keep">
-                  단순한 제조를 넘어 인공지능 기술을 결합한 지능형 의료 장비 연구를 위해 전용 R&D 센터 설립을 준비하고 있습니다. 더 정밀하고 안전한 내일의 의료 환경을 청안메디칼이 선도하겠습니다.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* 우측: 연구소 이미지 (Generated Image 적용) */}
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="relative group"
-            >
-              <div className="relative aspect-[4/3] overflow-hidden border border-slate-200 bg-white transition-all duration-1000">
-                <img
-                  src="/images/ai_medical_lab_vision.png"
-                  alt="AI Medical Research Lab Vision"
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                />
-                {/* 오버레이 글로우 */}
-                <div className="absolute inset-0 bg-transparent" />
-                <div className="absolute bottom-6 left-6 z-20">
-                  <span className="text-primary font-black text-xs tracking-widest uppercase bg-white/90 px-3 py-1 border border-slate-200">
-                    Proposed R&D Center
-                  </span>
-                </div>
-              </div>
-              {/* 이미지 하단 그림자/글로우 효과 */}
-              <div className="absolute -bottom-6 inset-x-10 h-10 pointer-events-none" />
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ③ Vision Content Section - AI Data Visualization (Style 3) */}
-      <section id="data-vision" className="relative py-28 bg-white overflow-hidden border-t border-sky-100">
-        {/* 우측 상단 블루 글로우 */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] pointer-events-none" />
-
-        <div className="max-w-screen-xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-
-            {/* 좌측: 데이터 시각화 이미지 (lg:col-span-7) */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              viewport={{ once: true }}
-              className="lg:col-span-7 relative group"
-            >
-              <div className="relative aspect-video overflow-hidden border border-slate-200 bg-white transition-all duration-1000">
-                <img
-                  src="/images/ai_data_vision.png"
-                  alt="AI Data Visualization Dashboard"
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-transparent" />
-
-                {/* 스캔 라인 애니메이션 효과 */}
-                <div className="absolute inset-0 pointer-events-none" />
-              </div>
-              {/* 장식용 테크 요소 */}
-              <div className="absolute inset-0 pointer-events-none" />
-            </motion.div>
-
-            {/* 우측: 설명 텍스트 (lg:col-span-5) */}
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="lg:col-span-5"
-            >
-              <div className="inline-block px-4 py-1.5 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-white leading-none">
-                Data Integration
-              </div>
-              <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-8">
-                <span className="text-slate-900 uppercase">지능형</span><br />
-                <span className="text-primary font-black uppercase shadow-none">데이터 솔루션</span>
-              </h2>
-              <div className="w-16 h-[2px] bg-primary mb-8 shadow-none" />
-
-              <div className="space-y-6">
-                <p className="text-slate-800 font-bold text-xl leading-snug">
-                  빅데이터 기반의 정밀 의료 알고리즘
-                </p>
-                <p className="text-slate-600 text-lg font-medium leading-relaxed max-w-xl break-keep">
-                  수만 건의 임상 데이터를 분석하여 최적의 에너지를 제안하는 스마트 알고리즘을 개발합니다. 청안메디칼의 모든 장비는 스스로 학습하고 진화하며 의료진에게 최상의 파트너가 될 것입니다.
-                </p>
-              </div>
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
 
       {/* ④ Vision Content Section - Full Width Announcement */}
-      <section id="full-announcement" className="relative h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+      <section id="full-announcement" className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* 전체 배경 이미지 */}
         <div className="absolute inset-0 z-0">
           <img

@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-[#5D5D5D] pt-16 pb-12 border-t border-white/5">
       <div className="max-w-screen-xl mx-auto px-6">
-        <div className="mb-16 h-32 md:h-48 flex justify-center md:justify-start items-center ml-0 md:-ml-24">
+        <div className="mb-14 h-28 md:h-40 flex justify-center md:justify-start items-center ml-0 md:-ml-24">
           <img
             src="/images/청안로고.png"
             alt="CHEONGAN"
@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-white/40">
+        <div className="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-white/40">
           <div className="flex flex-wrap justify-center md:justify-start gap-6 md:gap-12 mb-8 md:mb-0">
             <Link href="https://pf.kakao.com/_nEETxj" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 group shrink-0">
               <div className="w-8 h-8 rounded-full bg-white/10 border border-white/10 flex items-center justify-center group-hover:bg-[#FAE100] group-hover:border-[#FAE100] transition-colors shadow-sm">
