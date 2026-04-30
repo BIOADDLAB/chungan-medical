@@ -572,7 +572,7 @@ export default function UPulsePage() {
                           src={item.img}
                           alt={item.code}
                           fill
-                          className="object-contain"
+                          className="object-contain gray-icon-filter"
                         />
                       ) : (
                         <div className="w-full h-full bg-slate-100 flex items-center justify-center rounded-2xl">

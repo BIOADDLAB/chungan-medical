@@ -608,3 +608,8 @@ header {
     transition: all 0.1s ease;
   }
 }
+
+/* Icon Gray Filter (#5D5D5D) */
+.gray-icon-filter {
+  filter: invert(37%) sepia(0%) saturate(0%) hue-rotate(167deg) brightness(96%) contrast(89%);
+}
