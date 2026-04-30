@@ -646,8 +646,8 @@ export default function NPulsePage() {
 
 
                                 {/* 3개 코어 연결선 */}
-                                <svg viewBox="0 0 400 400" className="absolute inset-0 w-full h-full opacity-30 pointer-events-none">
-                                    <path d="M200,80 L100,280 L300,280 Z" fill="none" stroke="#00B7F1" strokeWidth="1" strokeDasharray="5,5" />
+                                <svg viewBox="0 0 400 400" className="absolute inset-0 w-full h-full opacity-60 pointer-events-none">
+                                    <path d="M200,80 L100,280 L300,280 Z" fill="none" stroke="#00B7F1" strokeWidth="2.5" strokeDasharray="6,6" />
                                     <circle cx="200" cy="80" r="4" fill="#00B7F1" />
                                     <circle cx="100" cy="280" r="4" fill="#00B7F1" />
                                     <circle cx="300" cy="280" r="4" fill="#00B7F1" />
@@ -661,7 +661,7 @@ export default function NPulsePage() {
                                             borderColor: "#00B7F1",
                                         }}
                                         transition={{ duration: 0 }}
-                                        className="absolute -top-7 w-36 h-36 rounded-full bg-white border-slate-200 flex items-center justify-center text-center p-4 cursor-pointer pointer-events-auto z-30 border"
+                                        className="absolute -top-7 w-36 h-36 rounded-full bg-white border-slate-200 flex items-center justify-center text-center p-4 cursor-pointer pointer-events-auto z-30 border-2"
                                     >
                                         <div className="space-y-1">
                                             <div className="text-primary font-black text-[10px] tracking-widest">UNIT 01</div>
@@ -675,7 +675,7 @@ export default function NPulsePage() {
                                             borderColor: "#00B7F1",
                                         }}
                                         transition={{ duration: 0 }}
-                                        className="absolute bottom-10 left-0 w-36 h-36 rounded-full bg-white border-slate-200 flex items-center justify-center text-center p-4 cursor-pointer pointer-events-auto z-30 border"
+                                        className="absolute bottom-10 left-0 w-36 h-36 rounded-full bg-white border-slate-200 flex items-center justify-center text-center p-4 cursor-pointer pointer-events-auto z-30 border-2"
                                     >
                                         <div className="space-y-1">
                                             <div className="text-primary font-black text-[10px] tracking-widest">UNIT 02</div>
@@ -689,7 +689,7 @@ export default function NPulsePage() {
                                             borderColor: "#00B7F1",
                                         }}
                                         transition={{ duration: 0 }}
-                                        className="absolute bottom-10 right-0 w-36 h-36 rounded-full bg-white border-slate-200 flex items-center justify-center text-center p-4 cursor-pointer pointer-events-auto z-30 border"
+                                        className="absolute bottom-10 right-0 w-36 h-36 rounded-full bg-white border-slate-200 flex items-center justify-center text-center p-4 cursor-pointer pointer-events-auto z-30 border-2"
                                     >
                                         <div className="space-y-1">
                                             <div className="text-primary font-black text-[10px] tracking-widest">UNIT 03</div>
