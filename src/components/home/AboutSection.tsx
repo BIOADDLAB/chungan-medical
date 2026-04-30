@@ -41,11 +41,18 @@ export default function AboutSection() {
             </div>
 
             <div className="space-y-4">
-              <p>병의원 원장님과 맺은 인간적인 유대감과 장비 및 개원관련 수많은 경험을 바탕으로 국내에 광범위한 유통망을 확보해왔습니다.</p>
+              <p className="break-keep opacity-90">
+                병의원 원장님과 맺은 인간적인 유대감과 장비 및<br className="hidden md:block" />
+                개원 관련 수많은 경험을 바탕으로 국내에 광범위한<br className="hidden md:block" />
+                유통망을 확보해왔습니다.
+              </p>
             </div>
 
             <div className="space-y-4">
-              <p>앞으로도 더 나은 서비스와 혁신적인 솔루션을 제공하며 끊임없이 발전하는 모습으로 보답하겠습니다.</p>
+              <p className="break-keep opacity-90">
+                앞으로도 더 나은 서비스와 혁신적인 솔루션을<br className="hidden md:block" />
+                제공하며 끊임없이 발전하는 모습으로 보답하겠습니다.
+              </p>
             </div>
           </div>
         </div>
