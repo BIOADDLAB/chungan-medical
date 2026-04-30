@@ -33,26 +33,19 @@ export default function AboutSection() {
           </div>
 
           {/* Intro Body Text (Middle to Bottom) */}
-          <div className="space-y-10 text-slate-600 text-base md:text-lg leading-relaxed font-normal max-w-xl">
+          <div className="space-y-10 text-slate-600 text-base md:text-lg leading-relaxed font-normal">
             <div className="space-y-2">
               <p className="font-bold text-slate-900 text-xl">안녕하세요.</p>
-              <p className="text-slate-900/90 font-medium">주식회사 청안메디칼 코퍼레이션입니다.</p>
-              <p className="break-keep opacity-90">청안은 지난 20년 동안 국내 피부미용 의료장비 시장에 몸담아 오고 있습니다.</p>
+              <p className="text-slate-900/90">주식회사 청안메디칼 코퍼레이션입니다.</p>
+              <p>청안은 지난 20년 동안 국내 피부미용 의료장비 시장에 몸담아 오고 있습니다.</p>
             </div>
 
             <div className="space-y-4">
-              <p className="break-keep opacity-90">
-                병의원 원장님과 맺은 인간적인 유대감과<br className="hidden md:block" />
-                장비 및 개원관련 수많은 경험을 바탕으로<br className="hidden md:block" />
-                국내에 광범위한 유통망을 확보해왔습니다.
-              </p>
+              <p>병의원 원장님과 맺은 인간적인 유대감과 장비 및 개원관련 수많은 경험을 바탕으로 국내에 광범위한 유통망을 확보해왔습니다.</p>
             </div>
 
             <div className="space-y-4">
-              <p className="break-keep opacity-90">
-                앞으로도 더 나은 서비스와 혁신적인 솔루션을 제공하며<br className="hidden md:block" />
-                끊임없이 발전하는 모습으로 보답하겠습니다.
-              </p>
+              <p>앞으로도 더 나은 서비스와 혁신적인 솔루션을 제공하며 끊임없이 발전하는 모습으로 보답하겠습니다.</p>
             </div>
           </div>
         </div>
