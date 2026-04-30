@@ -256,7 +256,7 @@ export default function VRoAdvancePage() {
             {/* Left Column: Concept & Stats */}
             <div className="lg:w-[58%] flex flex-col gap-16 leading-none">
               {/* Concept Diagram Area (Left Top) - Comprehensive Catalog Layout with Signature Blue */}
-              <div className="relative h-[500px] lg:h-[560px] bg-white rounded-[40px] border border-sky-100 overflow-hidden flex flex-col items-stretch leading-none">
+              <div className="relative h-[500px] lg:h-[560px] bg-white rounded-[40px] border-2 border-sky-100 overflow-hidden flex flex-col items-stretch leading-none">
                 <div className="absolute inset-0 bg-tech-grid opacity-[0.05] pointer-events-none" />
 
                 <div className="bg-sky-50/50 border-b border-sky-100 px-8 py-5 relative z-10 text-center">
@@ -424,7 +424,7 @@ export default function VRoAdvancePage() {
             </div>
 
             {/* Right Column: Cartridge Engineering Sidebar (More compact with better spacing) */}
-            <div className="lg:w-[42%] bg-white rounded-[40px] border border-sky-100 p-6 lg:p-10 flex flex-col relative overflow-hidden leading-none">
+            <div className="lg:w-[42%] bg-white rounded-[40px] border-2 border-sky-100 p-6 lg:p-10 flex flex-col relative overflow-hidden leading-none">
 
 
               <div className="space-y-10 relative z-10 leading-none text-left">
@@ -519,9 +519,9 @@ export default function VRoAdvancePage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16 items-start leading-none">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16 items-stretch leading-none">
             {/* Left Content Area */}
-            <div className="flex flex-col space-y-14 leading-none">
+            <div className="flex flex-col space-y-14 leading-none h-full">
 
               {/* Dot & Line Mode 블록 */}
               <div className="space-y-8 leading-none">
@@ -583,13 +583,13 @@ export default function VRoAdvancePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="space-y-8 pt-12 leading-none"
+                className="space-y-8 pt-12 leading-none flex-1 flex flex-col"
               >
                 <h5 className="text-slate-900 font-black text-2xl lg:text-3xl tracking-tighter border-b-2 border-primary/40 pb-3 w-fit">
                   에너지 집중도를 강화한 새로운 카트리지
                 </h5>
 
-                <div className="bg-white p-3 lg:p-10 rounded-[36px] border border-sky-100 relative overflow-hidden">
+                <div className="bg-white p-3 lg:p-10 rounded-[36px] border-2 border-sky-100 relative overflow-hidden flex-1 flex flex-col justify-center">
                   <div className="absolute inset-0 bg-tech-dots opacity-5 pointer-events-none" />
 
                   {/* 비교 다이어그램 (Simplified One-Arrow Layout) */}
@@ -663,7 +663,7 @@ export default function VRoAdvancePage() {
               viewport={{ once: true }}
               className="flex flex-col leading-none"
             >
-              <div className="bg-white rounded-[44px] border border-sky-100 p-4 lg:p-12 flex flex-col h-full relative overflow-hidden">
+              <div className="bg-white rounded-[44px] border-2 border-sky-100 p-4 lg:p-12 flex flex-col h-full relative overflow-hidden">
 
 
                 <h5 className="text-slate-900 font-black text-xl lg:text-2xl tracking-tighter leading-snug text-center break-keep mb-10 relative z-10">
@@ -675,9 +675,9 @@ export default function VRoAdvancePage() {
                   {/* Slim & Normal Type */}
                   <div className="space-y-5">
                     <div className="flex items-center justify-center gap-3">
-                      <div className="flex-1 h-px bg-sky-100" />
+                      <div className="flex-1 h-[2px] bg-sky-100" />
                       <span className="text-slate-700 font-bold text-sm whitespace-nowrap">Slim &amp; Normal Type 카트리지</span>
-                      <div className="flex-1 h-px bg-sky-100" />
+                      <div className="flex-1 h-[2px] bg-sky-100" />
                     </div>
 
                     {/* 카트리지 그룹: S1.5 (대형) + S2, N3, N4.5 (소형) */}
@@ -718,14 +718,14 @@ export default function VRoAdvancePage() {
                   </div>
 
                   {/* 구분선 */}
-                  <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
+                  <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
                   {/* 브이로 리프팅 Type */}
                   <div className="space-y-5">
                     <div className="flex items-center justify-center gap-3">
-                      <div className="flex-1 h-px bg-sky-100" />
+                      <div className="flex-1 h-[2px] bg-sky-100" />
                       <span className="text-slate-700 font-bold text-sm whitespace-nowrap">브이로 리프팅 Type 카트리지</span>
-                      <div className="flex-1 h-px bg-sky-100" />
+                      <div className="flex-1 h-[2px] bg-sky-100" />
                     </div>
 
                     {/* 카트리지 그룹: A1.5 (대형 시안) + A2, A3, A4.5 (소형) */}
@@ -768,7 +768,7 @@ export default function VRoAdvancePage() {
                   <p className="text-slate-600 text-sm lg:text-base font-medium tracking-tight break-keep leading-relaxed">
                     시술 강도 및 통증의 정도에 따른<br />시술 유형을 선택하여
                   </p>
-                  <div className="mt-3 inline-block px-5 py-2.5 bg-slate-50 border border-primary/30 rounded-xl">
+                  <div className="mt-3 inline-block px-5 py-2.5 bg-slate-50 border-2 border-primary/30 rounded-xl">
                     <span className="text-primary font-black text-lg lg:text-xl tracking-tighter">개인별 맞춤형 시술 제공</span>
                   </div>
                   <p className="text-slate-600 text-sm font-medium mt-1.5">이 가능합니다.</p>
