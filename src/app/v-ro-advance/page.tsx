@@ -29,11 +29,11 @@ export default function VRoAdvancePage() {
       >
         <img
           src="/images/cover/vro_advance_cover.jpg"
-          className="absolute inset-0 w-full h-full object-cover z-0 brightness-[0.75]"
+          className="absolute inset-0 w-full h-full object-cover z-0 brightness-[0.95]"
           alt="V-RO Advance Cover"
         />
         {/* 어두운 오버레이 (밝기 낮추기) */}
-        <div className="absolute inset-0 bg-black/50 z-10" />
+        <div className="absolute inset-0 bg-black/10 z-10" />
         {/* 그라디언트 오버레이 (상하단 깊이감) */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50 z-10" />
         {/* Tech Grid 오버레이 */}

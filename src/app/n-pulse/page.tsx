@@ -88,11 +88,11 @@ export default function NPulsePage() {
             >
                 <img
                     src="/images/cover/npulse_pro_fx_cover.jpg"
-                    className="absolute inset-0 w-full h-full object-cover z-0 brightness-[0.8]"
+                    className="absolute inset-0 w-full h-full object-cover z-0 brightness-[0.95]"
                     alt="N-Pulse PRO, FX Cover"
                 />
                 {/* 어두운 오버레이 (밝기 낮추기) */}
-                <div className="absolute inset-0 bg-black/45 z-10" />
+                <div className="absolute inset-0 bg-black/10 z-10" />
                 {/* 그라디언트 오버레이 (상하단 깊이감) */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50 z-10" />
                 {/* Tech Grid 오버레이 */}
