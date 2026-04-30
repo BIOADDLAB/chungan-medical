@@ -78,11 +78,11 @@ export default function PartnerMarquee() {
         </motion.p>
       </div>
 
-      <div className="relative py-24 bg-[#F0F9FF] border-y border-[#00B3E4]/10 overflow-hidden group">
+      <div className="relative py-24 bg-[#e0f2fe] border-y border-[#00B3E4]/10 overflow-hidden group">
         <div className="absolute inset-0 bg-tech-grid opacity-[0.03] pointer-events-none" />
 
-        <div className="absolute inset-y-0 left-0 w-32 md:w-64 bg-gradient-to-r from-[#F0F9FF] to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-y-0 right-0 w-32 md:w-64 bg-gradient-to-l from-[#F0F9FF] to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 left-0 w-32 md:w-64 bg-gradient-to-r from-[#e0f2fe] to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-32 md:w-64 bg-gradient-to-l from-[#e0f2fe] to-transparent z-10 pointer-events-none" />
 
         <div className="flex select-none overflow-hidden">
           <div

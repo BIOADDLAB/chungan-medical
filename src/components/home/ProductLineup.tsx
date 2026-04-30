@@ -32,7 +32,7 @@ export default function ProductLineup() {
   const nextRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <section id="services" className="product-section py-16 md:py-24 overflow-hidden">
+    <section id="services" className="product-section py-16 md:py-24 overflow-hidden bg-sky-100">
       <div className="absolute inset-0 bg-tech-dots opacity-30 mix-blend-multiply pointer-events-none" />
       <div className="max-w-screen-xl mx-auto px-6 relative z-10">
         {/* Header */}

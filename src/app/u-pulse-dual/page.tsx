@@ -245,13 +245,13 @@ export default function UPulsePage() {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mt-16 px-4">
-                  <div className="glass-panel p-8 border-sky-100 bg-sky-50 hover:bg-sky-100 transition-all group">
+                  <div className="glass-panel p-8 border-sky-100 bg-sky-100 hover:bg-sky-200 transition-all group">
                     <p className="text-base md:text-lg font-medium leading-relaxed text-slate-600 group-hover:text-slate-900 transition-colors">
                       높은 Peak Power와 낮은 Pulse Duration이 열 손상을
                       최소화하고 부작용이 거의 없는 새로운 <span className="text-slate-900 font-bold">DDS</span>입니다.
                     </p>
                   </div>
-                  <div className="glass-panel p-8 border-sky-100 bg-sky-50 hover:bg-sky-100 transition-all group">
+                  <div className="glass-panel p-8 border-sky-100 bg-sky-100 hover:bg-sky-200 transition-all group">
                     <p className="text-base md:text-lg font-medium leading-relaxed text-slate-600 group-hover:text-slate-900 transition-colors">
                       Micro Hole은 유효 성분 전달 통로 역할은 하면서
                       동시에 섬유아세포를 활성화해 콜라겐 생성을 유도합니다.
@@ -382,7 +382,7 @@ export default function UPulsePage() {
       <div className="h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
       {/* NEW SECTION: Skin Rejuvenation Process Flow */}
-      <section id="skin-rejuvenation" className="relative py-28 bg-sky-50 overflow-hidden">
+      <section id="skin-rejuvenation" className="relative py-28 bg-sky-100 overflow-hidden">
 
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
@@ -524,7 +524,7 @@ export default function UPulsePage() {
                 '유지 비용 없음'
               ].map((text, idx) => (
                 <div key={idx} className="flex items-center gap-5 group">
-                  <div className="flex-shrink-0 w-7 h-7 rounded border border-sky-100 bg-sky-50 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/5 transition-all duration-300">
+                  <div className="flex-shrink-0 w-7 h-7 rounded border border-sky-100 bg-sky-100 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/5 transition-all duration-300">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-slate-600 group-hover:text-primary transition-colors">
                       <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>

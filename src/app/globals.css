@@ -236,8 +236,6 @@ header {
 
 /* Product Section */
 .product-section {
-  background: #f0f9ff;
-  /* Light sky */
   position: relative;
 }
 
@@ -559,7 +557,6 @@ header {
 /* Partners Marquee (Digital Display) */
 .partners-marquee-container {
   position: relative;
-  background-color: #F0F9FF;
   background-image: linear-gradient(rgba(0, 183, 241, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 183, 241, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -573,7 +570,7 @@ header {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #F0F9FF 0%, transparent 15%, transparent 85%, #F0F9FF 100%);
+  background: linear-gradient(90deg, #e0f2fe 0%, transparent 15%, transparent 85%, #e0f2fe 100%);
   z-index: 10;
   pointer-events: none;
 }

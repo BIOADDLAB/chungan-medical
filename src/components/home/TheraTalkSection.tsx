@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const TheraTalkSection = () => {
     return (
-        <section className="relative py-28 bg-sky-50 overflow-hidden border-t border-sky-100">
+        <section className="relative py-28 bg-sky-100 overflow-hidden border-t border-sky-100">
             {/* 배경 데코레이션 */}
             <div className="absolute inset-0 bg-tech-dots opacity-30 mix-blend-multiply pointer-events-none" />
 

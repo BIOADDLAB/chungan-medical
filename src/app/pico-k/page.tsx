@@ -150,7 +150,7 @@ export default function PicoKPage() {
       </section>
 
       {/* ④ Key Benefits / Features Section */}
-      <section id="features" className="relative py-24 bg-sky-50 overflow-hidden">
+      <section id="features" className="relative py-24 bg-sky-100 overflow-hidden">
         <div className="absolute inset-0 bg-tech-dots opacity-20 mix-blend-multiply pointer-events-none" />
         <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
@@ -400,7 +400,7 @@ export default function PicoKPage() {
       </section>
 
       {/* ⑥ Technical Detail 04 & 05: Performance Standards */}
-      <section id="tech-performance-standards" className="relative py-28 bg-sky-50 overflow-hidden border-t border-sky-100">
+      <section id="tech-performance-standards" className="relative py-28 bg-sky-100 overflow-hidden border-t border-sky-100">
         <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">

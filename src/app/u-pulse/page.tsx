@@ -172,7 +172,7 @@ export default function UPulsePage() {
       </section>
 
       {/* ③ High-Peak-Power Pulsed Technology (Full Stable Container) */}
-      <section id="u-pulse-tech" className="relative py-32 bg-sky-50 overflow-x-clip">
+      <section id="u-pulse-tech" className="relative py-32 bg-sky-100 overflow-x-clip">
         {/* 배경 장식 요소 */}
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
 
@@ -485,7 +485,7 @@ export default function UPulsePage() {
       </section>
 
       {/* Technical Detail 03: Zoom Handpiece */}
-      <section id="tech-zoom-handpiece" className="py-28 bg-sky-50 text-slate-900 overflow-hidden relative border-t border-sky-100">
+      <section id="tech-zoom-handpiece" className="relative py-28 bg-sky-100 text-slate-900 overflow-hidden border-t border-sky-100">
         <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
@@ -714,7 +714,7 @@ export default function UPulsePage() {
       </section>
 
       {/* Section: Before & After - Tech Enhanced */}
-      <section id="u-pulse-before-after" className="py-28 bg-sky-50 text-slate-900 overflow-hidden relative">
+      <section id="u-pulse-before-after" className="relative py-28 bg-sky-100 text-slate-900 overflow-hidden relative">
         {/* Tech Decor Background */}
         <div className="absolute inset-0 bg-tech-dots opacity-20 mix-blend-multiply pointer-events-none" />
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
@@ -1037,7 +1037,7 @@ export default function UPulsePage() {
       </section>
 
       {/* Section: Technical Specifications - Orchestration Compliant */}
-      <section id="u-pulse-tech-specs" className="py-28 bg-sky-50 text-slate-900 overflow-hidden relative">
+      <section id="u-pulse-tech-specs" className="py-28 bg-sky-100 text-slate-900 overflow-hidden relative">
         <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
 
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
