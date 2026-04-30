@@ -310,7 +310,7 @@ export default function SylfirmXPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
                 viewport={{ once: true }}
-                className="bg-white border border-sky-100 p-8 md:p-10 flex flex-col items-center group hover:bg-sky-100 transition-all duration-500 rounded-3xl"
+                className="bg-white border border-sky-100 p-8 md:p-10 flex flex-col items-center group hover:bg-sky-50 transition-all duration-500 rounded-3xl"
               >
                 <div className="shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-[#D1D9F0] to-[#E2E8F7] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500">
                   <span className="text-4xl font-black text-[#1A1C23] font-inter leading-none">300</span>
@@ -344,7 +344,7 @@ export default function SylfirmXPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white border border-sky-100 p-8 md:p-10 flex flex-col items-center group hover:bg-sky-100 transition-all duration-500 rounded-3xl"
+                className="bg-white border border-sky-100 p-8 md:p-10 flex flex-col items-center group hover:bg-sky-50 transition-all duration-500 rounded-3xl"
               >
                 <div className="shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-[#D1D9F0] to-[#E2E8F7] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500">
                   <span className="text-6xl font-black text-[#1A1C23] font-inter leading-none">C</span>
@@ -378,7 +378,7 @@ export default function SylfirmXPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="bg-white border border-sky-100 p-8 md:p-10 flex flex-col items-center group hover:bg-sky-100 transition-all duration-500 rounded-3xl"
+                className="bg-white border border-sky-100 p-8 md:p-10 flex flex-col items-center group hover:bg-sky-50 transition-all duration-500 rounded-3xl"
               >
                 <div className="shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-[#D1D9F0] to-[#E2E8F7] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500">
                   <span className="text-6xl font-black text-[#1A1C23] font-inter leading-none">P</span>
