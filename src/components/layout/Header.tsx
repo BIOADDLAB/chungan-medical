@@ -50,20 +50,20 @@ export default function Header() {
                 className={`h-[56px] md:h-[100px] w-auto object-contain transition-all duration-300 
                   ${scrolled 
                     ? '[filter:brightness(0)_saturate(100%)_invert(38%)_sepia(0%)_saturate(0%)_hue-rotate(143deg)_brightness(91%)_contrast(84%)] group-hover:[filter:invert(56%)_sepia(95%)_saturate(1831%)_hue-rotate(160deg)_brightness(94%)_contrast(101%)]' 
-                    : 'brightness-0 invert group-hover:[filter:invert(56%)_sepia(95%)_saturate(1831%)_hue-rotate(160deg)_brightness(94%)_contrast(101%)]'
+                    : 'brightness-0 group-hover:[filter:invert(56%)_sepia(95%)_saturate(1831%)_hue-rotate(160deg)_brightness(94%)_contrast(101%)]'
                   }`}
               />
             </Link>
           </div>
 
           <nav className={`hidden md:flex items-center gap-12 lg:gap-16 font-semibold h-full ${scrolled ? 'text-[#5D5D5D]' : 'text-slate-800'}`}>
-            <Link href="/#about" className={`nav-link hover:text-primary transition duration-300 flex items-center h-full whitespace-nowrap ${!scrolled && 'text-white'}`}>
+            <Link href="/#about" className="nav-link hover:text-primary transition duration-300 flex items-center h-full whitespace-nowrap">
               회사소개
             </Link>
 
             {/* Products Dropdown - Reverted to Simple Compact Box */}
             <div className="relative h-full flex items-center group cursor-pointer">
-              <span className={`nav-link hover:text-primary transition duration-300 flex items-center h-full whitespace-nowrap ${!scrolled && 'text-white'}`}>
+              <span className="nav-link hover:text-primary transition duration-300 flex items-center h-full whitespace-nowrap">
                 제품소개
               </span>
 
@@ -81,12 +81,12 @@ export default function Header() {
               </div>
             </div>
 
-            <Link href="/future-vision" className={`nav-link hover:text-primary transition duration-300 flex items-center h-full whitespace-nowrap ${!scrolled && 'text-white'}`}>
+            <Link href="/future-vision" className="nav-link hover:text-primary transition duration-300 flex items-center h-full whitespace-nowrap">
               미래비전
             </Link>
             <Link
               href="/contact"
-              className={`nav-link hover:text-primary transition duration-300 flex items-center h-full uppercase whitespace-nowrap ${!scrolled && 'text-white'}`}
+              className="nav-link hover:text-primary transition duration-300 flex items-center h-full uppercase whitespace-nowrap"
             >
               contact
             </Link>
@@ -94,13 +94,13 @@ export default function Header() {
 
           {/* Right Area */}
           <div className="flex-shrink-0 md:flex-1 flex justify-end items-center ml-4 md:ml-0">
-            <div className={`hidden md:flex items-center space-x-2 font-bold cursor-pointer hover:text-primary transition ${scrolled ? 'text-[#5D5D5D]' : 'text-white'}`}>
+            <div className={`hidden md:flex items-center space-x-2 font-bold cursor-pointer hover:text-primary transition ${scrolled ? 'text-[#5D5D5D]' : 'text-slate-800'}`}>
               <span>KOR</span>
               <span>▾</span>
             </div>
 
             <button
-              className={`md:hidden p-2 -mr-2 focus:outline-none z-[70] ${scrolled ? 'text-[#5D5D5D]' : 'text-white'}`}
+              className={`md:hidden p-2 -mr-2 focus:outline-none z-[70] ${scrolled ? 'text-[#5D5D5D]' : 'text-slate-800'}`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle Menu"
             >
