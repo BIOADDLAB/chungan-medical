@@ -316,7 +316,7 @@ export default function SylfirmXPage() {
                   <span className="text-4xl font-black text-[#1A1C23] font-inter leading-none">300</span>
                 </div>
                 <div className="text-center mb-8 h-[70px] flex items-center justify-center">
-                  <h4 className="text-[17px] md:text-[18px] font-black text-slate-900 leading-tight break-keep">
+                  <h4 className="text-[17px] md:text-[18px] font-black text-slate-900 leading-relaxed break-keep">
                     최소 통증, 최소 마취 시술이 <br className="md:hidden" />
                     <span className="whitespace-nowrap">가능한 <span className="text-primary">300마이크론(μm) 모드</span></span>
                   </h4>
@@ -350,7 +350,7 @@ export default function SylfirmXPage() {
                   <span className="text-6xl font-black text-[#1A1C23] font-inter leading-none">C</span>
                 </div>
                 <div className="text-center mb-8 h-[70px] flex items-center justify-center">
-                  <h4 className="text-[17px] md:text-[18px] font-black text-slate-900 leading-tight break-keep">
+                  <h4 className="text-[17px] md:text-[18px] font-black text-slate-900 leading-relaxed break-keep">
                     피부 탄력&리프팅&흉터 <br className="md:hidden" />
                     <span className="whitespace-nowrap">개선에 <span className="text-primary">최적화 된 셀모드(CW)</span></span>
                   </h4>
@@ -384,7 +384,7 @@ export default function SylfirmXPage() {
                   <span className="text-6xl font-black text-[#1A1C23] font-inter leading-none">P</span>
                 </div>
                 <div className="text-center mb-8 h-[70px] flex items-center justify-center">
-                  <h4 className="text-[17px] md:text-[18px] font-black text-slate-900 leading-tight break-keep">
+                  <h4 className="text-[17px] md:text-[18px] font-black text-slate-900 leading-relaxed break-keep">
                     기미&홍조&색소침착에 <br className="md:hidden" />
                     <span className="text-primary whitespace-nowrap">최적화 된 리페어(PW)</span>
                   </h4>
