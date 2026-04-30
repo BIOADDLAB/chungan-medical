@@ -86,16 +86,17 @@ export default function NPulsePage() {
                 id="hero"
                 className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-100"
             >
-                {/* 배경 이미지 레이어 */}
                 <img
-                    src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1920&q=80"
-                    className="absolute inset-0 w-full h-full object-cover z-0 opacity-80 brightness-[0.85] contrast-[1.05]"
-                    alt="medical background"
+                    src="/images/cover/npulse_pro_fx_cover.jpg"
+                    className="absolute inset-0 w-full h-full object-cover z-0 brightness-[0.8]"
+                    alt="N-Pulse PRO, FX Cover"
                 />
-                {/* 그라디언트 오버레이 */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/40 z-10" />
+                {/* 어두운 오버레이 (밝기 낮추기) */}
+                <div className="absolute inset-0 bg-black/45 z-10" />
+                {/* 그라디언트 오버레이 (상하단 깊이감) */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50 z-10" />
                 {/* Tech Grid 오버레이 */}
-                <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-multiply z-10 pointer-events-none" />
+                <div className="absolute inset-0 bg-tech-grid opacity-20 mix-blend-overlay z-10 pointer-events-none" />
 
                 {/* 콘텐츠 */}
                 <div className="relative z-20 flex flex-col items-center max-w-screen-xl mx-auto px-6 w-full">
