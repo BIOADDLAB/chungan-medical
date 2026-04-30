@@ -1,8 +1,23 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef } from 'react';
+import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
 import Link from 'next/link';
+
+function Counter({ value, duration = 2 }: { value: number; duration?: number }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+
+  useEffect(() => {
+    if (isInView) {
+      animate(count, value, { duration: duration, ease: "easeOut" });
+    }
+  }, [isInView, count, value, duration]);
+
+  return <span ref={ref}><motion.span>{rounded}</motion.span></span>;
+}
 
 export default function VRoAdvancePage() {
   return (
@@ -350,7 +365,9 @@ export default function VRoAdvancePage() {
                     className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-12 group"
                   >
                     <div className="flex-shrink-0 min-w-[200px] lg:min-w-[240px]">
-                      <span className="text-primary text-7xl lg:text-8xl font-black font-inter tracking-tighter block group-hover:scale-105 transition-transform duration-500">+43%</span>
+                      <div className="text-primary text-7xl lg:text-8xl font-black font-inter tracking-tighter tabular-nums block group-hover:scale-105 transition-transform duration-500 min-w-[1.5em]">
+                        +<Counter value={43} />%
+                      </div>
                     </div>
 
                     <div className="flex-1 space-y-4">
@@ -381,7 +398,9 @@ export default function VRoAdvancePage() {
                     className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-12 group"
                   >
                     <div className="flex-shrink-0 min-w-[200px] lg:min-w-[240px]">
-                      <span className="text-primary text-7xl lg:text-8xl font-black font-inter tracking-tighter block group-hover:scale-105 transition-transform duration-500">+93%</span>
+                      <div className="text-primary text-7xl lg:text-8xl font-black font-inter tracking-tighter tabular-nums block group-hover:scale-105 transition-transform duration-500 min-w-[1.5em]">
+                        +<Counter value={93} />%
+                      </div>
                     </div>
 
                     <div className="flex-1 space-y-4">
