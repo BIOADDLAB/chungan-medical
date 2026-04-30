@@ -45,7 +45,7 @@ export default function PicoKPage() {
             className="flex flex-col items-center"
           >
             <div className="w-16 h-[2px] bg-primary mb-6" />
-            <p className="text-white/90 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl">
+            <p className="text-white/90 text-lg md:text-xl font-medium tracking-tight uppercase max-w-2xl">
               합리적인 피부미용 의료 장비, <span className="text-primary font-bold">정확한 기술의 시작</span>
             </p>
           </motion.div>

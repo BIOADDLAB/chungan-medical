@@ -63,7 +63,7 @@ export default function ContactPage() {
             className="flex flex-col items-center"
           >
             <div className="w-16 h-[2px] bg-primary mb-6" />
-            <p className="text-white/90 text-lg md:text-xl font-medium tracking-[0.15em] md:tracking-[0.2em] uppercase max-w-3xl leading-relaxed break-keep">
+            <p className="text-white/90 text-lg md:text-xl font-medium tracking-tight uppercase max-w-3xl leading-relaxed break-keep">
               합리적인 피부미용 의료 장비, <span className="text-primary font-bold">그리고 최고의 선택</span>
             </p>
           </motion.div>

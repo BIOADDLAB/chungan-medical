@@ -45,7 +45,7 @@ export default function FutureVisionPage() {
             className="flex flex-col items-center"
           >
             <div className="w-16 h-[2px] bg-primary mb-6" />
-            <p className="text-white/90 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl">
+            <p className="text-white/90 text-lg md:text-xl font-medium tracking-tight uppercase max-w-2xl">
               청안메디칼이 그리는 <br className="block md:hidden" /> <span className="text-primary font-bold">내일의 가치</span>
             </p>
           </motion.div>
@@ -93,7 +93,7 @@ export default function FutureVisionPage() {
             <div className="inline-block px-4 py-1.5 border border-white/30 text-white text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-white/10 backdrop-blur-sm leading-none">
               Future Landmark
             </div>
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white mb-8 drop-shadow-lg">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white mb-8 drop-shadow-lg leading-relaxed">
               AI 관련 제조 및 연구소 <br />
               <span className="text-primary drop-shadow-md">설립 예정</span>
             </h2>

@@ -118,7 +118,7 @@ export default function NPulsePage() {
                         className="flex flex-col items-center"
                     >
                         <div className="w-16 h-[2px] bg-primary mb-6 shadow-[0_0_15px_rgba(0,183,241,0.5)]" />
-                        <p className="text-white/90 text-lg md:text-xl font-medium tracking-[0.2em] uppercase max-w-2xl drop-shadow-md">
+                        <p className="text-white/90 text-lg md:text-xl font-medium tracking-tight uppercase max-w-2xl drop-shadow-md">
                             합리적인 피부미용 의료 장비, <span className="text-primary font-bold">정확한 기술의 시작</span>
                         </p>
                     </motion.div>
