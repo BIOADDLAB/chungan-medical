@@ -11,7 +11,7 @@ export default function SylfirmXPage() {
       {/* ① Hero Section (Standard Tech Style) */}
       <section
         id="hero"
-        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-50"
+        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-100"
       >
         <img
           src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1920&q=80"
@@ -152,7 +152,7 @@ export default function SylfirmXPage() {
       </section>
 
       {/* ③ Sylfirm-X Indication Section (Orchestration Standard) */}
-      <section id="indication" className="relative py-28 bg-sky-50 overflow-hidden border-t border-sky-100">
+      <section id="indication" className="relative py-28 bg-sky-100 overflow-hidden border-t border-sky-100">
         <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none mix-blend-multiply" />
         <div className="max-w-screen-xl mx-auto px-6 relative z-10">
           <div className="text-center mb-14">
@@ -214,7 +214,7 @@ export default function SylfirmXPage() {
                   </div>
 
                   <div className="p-8 space-y-6 flex-grow flex flex-col justify-center bg-white">
-                    <div className="aspect-[16/7] bg-sky-50 rounded-lg flex items-center justify-center relative overflow-hidden group shrink-0 border border-sky-100">
+                    <div className="aspect-[16/7] bg-sky-100 rounded-lg flex items-center justify-center relative overflow-hidden group shrink-0 border border-sky-100">
                       <img src="/images/sylfirmx/cw1.png" alt="CW Energy visualization" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
                       <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                     </div>
@@ -264,7 +264,7 @@ export default function SylfirmXPage() {
                   </div>
 
                   <div className="p-8 space-y-6 flex-grow flex flex-col justify-center bg-white">
-                    <div className="aspect-[16/7] bg-sky-50 rounded-lg flex items-center justify-center relative overflow-hidden group shrink-0 border border-sky-100">
+                    <div className="aspect-[16/7] bg-sky-100 rounded-lg flex items-center justify-center relative overflow-hidden group shrink-0 border border-sky-100">
                       <img src="/images/sylfirmx/pw1.png" alt="PW Energy visualization" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
                       <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                     </div>
@@ -310,7 +310,7 @@ export default function SylfirmXPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
                 viewport={{ once: true }}
-                className="bg-white border border-sky-100 p-8 md:p-10 flex flex-col items-center group hover:bg-sky-50 transition-all duration-500 rounded-3xl"
+                className="bg-white border border-sky-100 p-8 md:p-10 flex flex-col items-center group hover:bg-sky-100 transition-all duration-500 rounded-3xl"
               >
                 <div className="shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-[#D1D9F0] to-[#E2E8F7] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500">
                   <span className="text-4xl font-black text-[#1A1C23] font-inter leading-none">300</span>
@@ -344,7 +344,7 @@ export default function SylfirmXPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white border border-sky-100 p-8 md:p-10 flex flex-col items-center group hover:bg-sky-50 transition-all duration-500 rounded-3xl"
+                className="bg-white border border-sky-100 p-8 md:p-10 flex flex-col items-center group hover:bg-sky-100 transition-all duration-500 rounded-3xl"
               >
                 <div className="shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-[#D1D9F0] to-[#E2E8F7] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500">
                   <span className="text-6xl font-black text-[#1A1C23] font-inter leading-none">C</span>
@@ -378,7 +378,7 @@ export default function SylfirmXPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="bg-white border border-sky-100 p-8 md:p-10 flex flex-col items-center group hover:bg-sky-50 transition-all duration-500 rounded-3xl"
+                className="bg-white border border-sky-100 p-8 md:p-10 flex flex-col items-center group hover:bg-sky-100 transition-all duration-500 rounded-3xl"
               >
                 <div className="shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-[#D1D9F0] to-[#E2E8F7] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500">
                   <span className="text-6xl font-black text-[#1A1C23] font-inter leading-none">P</span>
