@@ -84,7 +84,7 @@ export default function NPulsePage() {
             {/* ① Hero Section (PICO-K Style) */}
             <section
                 id="hero"
-                className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-50"
+                className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-100"
             >
                 {/* 배경 이미지 레이어 */}
                 <img
@@ -222,7 +222,7 @@ export default function NPulsePage() {
             </section>
 
             {/* ③ Advanced Technology Section (Standardized Tech Style) */}
-            <section id="advanced-tech" className="relative py-28 bg-sky-50 overflow-hidden">
+            <section id="advanced-tech" className="relative py-28 bg-sky-100 overflow-hidden">
                 {/* 테크 배경 장식 */}
                 <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none mix-blend-multiply" />
 
@@ -366,7 +366,7 @@ export default function NPulsePage() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1 }}
                         viewport={{ once: true }}
-                        className="bg-sky-50 border border-sky-100 p-4 md:p-8 rounded-2xl"
+                        className="bg-sky-100 border border-sky-100 p-4 md:p-8 rounded-2xl"
                     >
                         <div className="flex flex-col xl:flex-row items-center gap-4 xl:gap-6">
                             {/* Steps 1-3 Cluster: Unrolled for individual control */}
@@ -434,7 +434,7 @@ export default function NPulsePage() {
             </section>
 
             {/* ⑤ Beam Size Section (Standardized Tech Style) */}
-            <section className="relative py-28 bg-sky-50 overflow-hidden">
+            <section className="relative py-28 bg-sky-100 overflow-hidden">
                 <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none mix-blend-multiply" />
 
 
@@ -708,7 +708,7 @@ export default function NPulsePage() {
             </section>
 
             {/* ⑦ Indication Section */}
-            <section id="indication" className="relative py-28 bg-sky-50 overflow-hidden border-t border-sky-100">
+            <section id="indication" className="relative py-28 bg-sky-100 overflow-hidden border-t border-sky-100">
                 <div className="absolute inset-0 bg-tech-dots opacity-10 pointer-events-none mix-blend-multiply" />
 
 
