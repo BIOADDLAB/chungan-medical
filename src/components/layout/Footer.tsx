@@ -4,11 +4,11 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-sky-50 pt-16 pb-12 border-t border-sky-100">
       <div className="max-w-screen-xl mx-auto px-6">
-        <div className="mb-16 h-32 md:h-48 flex justify-start items-center">
+        <div className="mb-16 h-32 md:h-48 flex justify-center md:justify-start items-center ml-0 md:-ml-24">
           <img
             src="/images/청안로고.png"
             alt="CHEONGAN"
-            className="w-80 md:w-[520px] opacity-100 brightness-0 object-contain object-left"
+            className="w-80 md:w-[520px] opacity-100 brightness-0 object-contain object-center md:object-left"
           />
         </div>
 
