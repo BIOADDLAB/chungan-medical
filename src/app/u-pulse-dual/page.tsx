@@ -146,7 +146,7 @@ export default function UPulsePage() {
                   src="/images/upulse_dual/dualhand.png"
                   alt="Handle: Black"
                   fill
-                  className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  className="object-cover opacity-90 group-hover:opacity-100 scale-110 group-hover:scale-[1.15] transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none mix-blend-multiply" />
 
