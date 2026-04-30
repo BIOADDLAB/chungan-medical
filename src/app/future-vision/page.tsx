@@ -76,29 +76,28 @@ export default function FutureVisionPage() {
           <img
             src="/images/ai_center_exterior.png"
             alt="AI Research Center Exterior"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover brightness-[0.7] saturate-[0.8] contrast-[1.1]"
           />
-          {/* 밝은 오버레이 및 틴트 */}
-          <div className="absolute inset-0 bg-white/30" />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white/80" />
+          {/* 어두운 오버레이 및 비네팅 효과 (가독성 극대화) */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/60 z-10" />
         </div>
 
         {/* 중앙 텍스트 */}
-        <div className="relative z-10 max-w-screen-xl mx-auto px-6 text-center">
+        <div className="relative z-20 max-w-screen-xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            <div className="inline-block px-4 py-1.5 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-white leading-none">
+            <div className="inline-block px-4 py-1.5 border border-white/30 text-white text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-white/10 backdrop-blur-sm leading-none">
               Future Landmark
             </div>
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 mb-8">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white mb-8 drop-shadow-lg">
               AI 관련 제조 및 연구소 <br />
-              <span className="text-primary shadow-none">설립 예정</span>
+              <span className="text-primary drop-shadow-md">설립 예정</span>
             </h2>
-            <div className="w-24 h-[2px] bg-primary mx-auto shadow-none" />
+            <div className="w-24 h-[2px] bg-primary mx-auto drop-shadow-md" />
           </motion.div>
         </div>
 
