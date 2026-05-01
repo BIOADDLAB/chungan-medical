@@ -134,8 +134,8 @@ export default function SylfirmXPage() {
                     <div>
                       <p className="text-slate-900 text-lg md:text-xl font-black tracking-tight mb-2 uppercase font-inter leading-none h-7 md:h-8 flex items-center">VERSATILE SOLUTIONS</p>
                       <p className="text-slate-600 text-[15px] md:text-[16px] font-medium leading-relaxed tracking-tight">
-                        레이저와 달리 피부 타입 · 피부 컬러에 상관없이 시술 가능하며 <br className="hidden md:block" />
-                        민감해 레이저 시술이 불가능한 환자도 시술 가능합니다.
+                        레이저와 달리 피부 타입 · 피부 컬러에 상관없이 시술 가능하며 민감해 <br className="hidden md:block" />
+                        레이저 시술이 불가능한 환자도 시술 가능합니다.
                       </p>
                     </div>
                   </div>
