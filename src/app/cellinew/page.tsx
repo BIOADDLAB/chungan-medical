@@ -221,7 +221,7 @@ export default function CellinewPage() {
                   <ul className="space-y-6 text-slate-600 text-sm md:text-[17px] font-medium tracking-tight leading-relaxed">
                     <li className="flex items-start gap-4">
                       <div className="mt-[10px] w-2 h-2 bg-primary rounded-full shrink-0" />
-                      <span>열이 가해지면 콜라겐의 <span className="text-slate-900 font-bold">실타래모양</span>을 유지하게 하는 연결고리가 끊어지며 리모델링이 시작됨</span>
+                      <span>열이 가해지면 콜라겐의 <span className="text-slate-900 font-bold">실타래모양</span>을 유지하게 하는 연결고리가 <br /> 끊어지며 리모델링이 시작됨</span>
                     </li>
                     <li className="flex items-start gap-4">
                       <div className="mt-[10px] w-2 h-2 bg-primary rounded-full shrink-0" />
