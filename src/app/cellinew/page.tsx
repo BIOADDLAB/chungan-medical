@@ -221,7 +221,16 @@ export default function CellinewPage() {
                   <ul className="space-y-6 text-slate-600 text-sm md:text-[17px] font-medium tracking-tight leading-relaxed">
                     <li className="flex items-start gap-4">
                       <div className="mt-[10px] w-2 h-2 bg-primary rounded-full shrink-0" />
-                      <span>열이 가해지면 콜라겐의 <span className="text-slate-900 font-bold">실타래모양</span>을 유지하게 하는 연결고리가 <br /> 끊어지며 리모델링이 시작됨</span>
+                      <>
+                        {/* Desktop Version */}
+                        <span className="hidden md:inline">
+                          열이 가해지면 콜라겐의 <span className="text-slate-900 font-bold">실타래모양</span>을 유지하게 하는 연결고리가 <br /> 끊어지며 리모델링이 시작됨
+                        </span>
+                        {/* Mobile Version */}
+                        <span className="md:hidden inline-block">
+                          열이 가해지면 콜라겐의 <span className="text-slate-900 font-bold">실타래모양</span>을 유지 <br /> 하게 하는 연결고리가 끊어지며 리모델링이 <br /> 시작됨
+                        </span>
+                      </>
                     </li>
                     <li className="flex items-start gap-4">
                       <div className="mt-[10px] w-2 h-2 bg-primary rounded-full shrink-0" />
@@ -257,7 +266,16 @@ export default function CellinewPage() {
                   <ul className="space-y-6 text-slate-600 text-sm md:text-[17px] font-medium tracking-tight leading-relaxed">
                     <li className="flex items-start gap-4">
                       <div className="mt-[10px] w-2 h-2 bg-primary rounded-full shrink-0" />
-                      <span>진피와 섬유격막에 변성이 일어나 섬유아세포 활동 증가로  <br />신생 콜라겐 생성</span>
+                      <>
+                        {/* Desktop Version */}
+                        <span className="hidden md:inline">
+                          진피와 섬유격막에 변성이 일어나 섬유아세포 활동 증가로  <br />신생 콜라겐 생성
+                        </span>
+                        {/* Mobile Version */}
+                        <span className="md:hidden inline-block">
+                          진피와 섬유격막에 변성이 일어나 섬유아세 <br /> 포 활동 증가로 신생 콜라겐 생성
+                        </span>
+                      </>
                     </li>
                     <li className="flex items-start gap-4">
                       <div className="mt-[10px] w-2 h-2 bg-primary rounded-full shrink-0" />
