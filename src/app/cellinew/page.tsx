@@ -257,7 +257,7 @@ export default function CellinewPage() {
                   <ul className="space-y-6 text-slate-600 text-sm md:text-[17px] font-medium tracking-tight leading-relaxed">
                     <li className="flex items-start gap-4">
                       <div className="mt-[10px] w-2 h-2 bg-primary rounded-full shrink-0" />
-                      <span>진피와 섬유격막에 변성이 일어나 섬유아세포 활동 증가로 신생 콜라겐 생성</span>
+                      <span>진피와 섬유격막에 변성이 일어나 섬유아세포 활동 증가로  <br />신생 콜라겐 생성</span>
                     </li>
                     <li className="flex items-start gap-4">
                       <div className="mt-[10px] w-2 h-2 bg-primary rounded-full shrink-0" />
