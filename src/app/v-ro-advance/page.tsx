@@ -39,29 +39,7 @@ export default function VRoAdvancePage() {
         {/* Tech Grid 오버레이 */}
         <div className="absolute inset-0 bg-tech-grid opacity-20 mix-blend-overlay z-10 pointer-events-none" />
 
-        <div className="relative z-20 flex flex-col items-center max-w-screen-xl mx-auto px-6 w-full">
-          <motion.h1
-            initial={{ opacity: 0, y: 30, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white"
-          >
-            <span className="hero-title-main !text-white">V-RO - </span>
-            <span className="hero-title-highlight ml-0 md:ml-4">ADVANCE</span>
-          </motion.h1>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col items-center"
-          >
-            <div className="w-16 h-[2px] bg-primary mb-6" />
-            <p className="text-white/90 text-lg md:text-xl font-medium tracking-tight uppercase max-w-3xl">
-              합리적인 피부미용 의료 장비, <span className="text-primary font-bold">정확한 기술의 시작</span>
-            </p>
-          </motion.div>
-        </div>
+        {/* 콘텐츠 삭제됨 (배경 이미지 자체 텍스트 사용) */}
 
         <div className="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center text-slate-700">
           <Link
