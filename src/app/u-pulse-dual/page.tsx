@@ -244,17 +244,18 @@ export default function UPulsePage() {
                   만들어주는 피부 재생 장비입니다.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mt-16 px-4">
-                  <div className="glass-panel p-8 border-sky-100 bg-sky-100 hover:bg-sky-200 transition-all group">
-                    <p className="text-base md:text-lg font-medium leading-relaxed text-slate-600 group-hover:text-slate-900 transition-colors">
-                      높은 Peak Power와 낮은 Pulse Duration이 열 손상을
-                      최소화하고 부작용이 거의 없는 새로운 <span className="text-slate-900 font-bold">DDS</span>입니다.
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mt-16 px-4 max-w-5xl mx-auto">
+                  <div className="glass-panel p-5 md:p-10 border-sky-100 bg-sky-100 hover:bg-sky-200 transition-all group">
+                    <p className="text-[15px] md:text-[18px] font-medium leading-relaxed text-slate-600 group-hover:text-slate-900 transition-colors break-keep tracking-tighter">
+                      높은 Peak Power와 낮은 Pulse Duration이 열 손상을 최소화하고 <br className="md:hidden" />
+                      부작용이 거의 없는 새로운 <span className="text-slate-900 font-bold">DDS</span>입니다.
                     </p>
                   </div>
-                  <div className="glass-panel p-8 border-sky-100 bg-sky-100 hover:bg-sky-200 transition-all group">
-                    <p className="text-base md:text-lg font-medium leading-relaxed text-slate-600 group-hover:text-slate-900 transition-colors">
-                      Micro Hole은 유효 성분 전달 통로 역할은 하면서
-                      동시에 섬유아세포를 활성화해 콜라겐 생성을 유도합니다.
+                  <div className="glass-panel p-5 md:p-10 border-sky-100 bg-sky-100 hover:bg-sky-200 transition-all group">
+                    <p className="text-[15px] md:text-[18px] font-medium leading-relaxed text-slate-600 group-hover:text-slate-900 transition-colors break-keep tracking-tighter">
+                      Micro Hole은 유효 성분 전달 통로 <br className="md:hidden" />
+                      역할은 하면서 동시에 섬유아세포를 <br className="md:hidden" />
+                      활성화해 콜라겐 생성을 유도합니다.
                     </p>
                   </div>
                 </div>
