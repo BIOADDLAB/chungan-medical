@@ -141,7 +141,7 @@ const TheraTalkSection = () => {
                                 viewport={{ once: true }}
                                 className="group"
                             >
-                                <div className="p-8 h-full border border-sky-100 bg-white hover:bg-sky-50 hover:border-primary/30 transition-all duration-500 rounded-xl flex flex-col justify-between">
+                                <div className="p-8 h-full border border-sky-100 bg-white hover:bg-sky-50 hover:border-primary/30 transition-all duration-500 rounded-xl flex flex-col">
                                     <h4 className="text-slate-900 font-bold text-lg md:text-xl mb-4 group-hover:text-primary transition-colors">
                                         {item.title}
                                     </h4>
