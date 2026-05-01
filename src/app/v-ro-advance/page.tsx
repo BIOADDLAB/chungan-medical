@@ -775,7 +775,6 @@ export default function VRoAdvancePage() {
                   <div className="mt-3 inline-block px-5 py-2.5 bg-slate-50 border-2 border-primary/30 rounded-xl">
                     <span className="text-primary font-black text-lg lg:text-xl tracking-tighter">개인별 맞춤형 시술 제공</span>
                   </div>
-                  <p className="text-slate-600 text-sm font-medium mt-1.5">이 가능합니다.</p>
                 </div>
               </div>
             </motion.div>
