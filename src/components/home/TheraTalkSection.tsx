@@ -21,8 +21,10 @@ const TheraTalkSection = () => {
                     <div className="inline-block px-4 py-1.5 border border-primary/30 text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 bg-primary/5">
                         Consulting Solution
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-8 uppercase leading-tight text-slate-900">
-                        TheraTalk <span className="text-primary">Solution</span>
+                    <h2 className="flex items-center justify-center mb-8">
+                        <div className="relative flex items-center justify-center w-[200px] md:w-[380px] h-[60px] md:h-[90px]">
+                            <img src="/images/theratalk.png" alt="TheraTalk" className="absolute w-[320px] md:w-[600px] max-w-none object-contain" />
+                        </div>
                     </h2>
                     <div className="w-20 h-[2px] bg-primary mx-auto mb-8" />
                 </motion.div>
