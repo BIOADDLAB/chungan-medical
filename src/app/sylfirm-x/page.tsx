@@ -367,7 +367,7 @@ export default function SylfirmXPage() {
                     <div className="flex items-center h-[21px] shrink-0">
                       <span className="text-primary text-[8px]">●</span>
                     </div>
-                    <span className="break-keep">콜라겐, 엘라스틴파이버 생성으로 피부 탄력 개선</span>
+                    <span className="whitespace-nowrap">콜라겐, 엘라스틴파이버 생성으로 피부 탄력 개선</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="flex items-center h-[21px] shrink-0">
