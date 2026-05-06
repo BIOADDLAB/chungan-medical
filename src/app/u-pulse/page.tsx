@@ -9,54 +9,31 @@ import Image from 'next/image';
 export default function UPulsePage() {
   return (
     <>
-      {/* ① Hero Section (PICO-K Style) */}
+      {/* ① Hero Section (U-PULSE Style) */}
       <section
         id="hero"
-        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-50"
+        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-100"
       >
-        {/* 배경 이미지 레이어 */}
         <img
-          src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1920&q=80"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-80 brightness-[0.85] contrast-[1.05]"
-          alt="medical background"
+          src="/images/cover/upulse_cover.jpg"
+          className="absolute inset-0 w-full h-full object-cover z-0 brightness-[0.95]"
+          alt="U-Pulse Cover"
         />
-        {/* 그라디언트 오버레이 */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/40 z-10" />
+        {/* 어두운 오버레이 (밝기 낮추기) */}
+        <div className="absolute inset-0 bg-black/10 z-10" />
+        {/* 그라디언트 오버레이 (상하단 깊이감) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50 z-10" />
         {/* Tech Grid 오버레이 */}
-        <div className="absolute inset-0 bg-tech-grid opacity-30 mix-blend-multiply z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-tech-grid opacity-20 mix-blend-overlay z-10 pointer-events-none" />
 
-        {/* 콘텐츠 */}
-        <div className="relative z-20 flex flex-col items-center max-w-screen-xl mx-auto px-6 w-full">
-          {/* 타이틀 */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-7xl font-black mb-8 tracking-tight uppercase leading-tight text-white"
-          >
-            <span className="hero-title-main block md:inline !text-white">U - PULSE</span>
-          </motion.h1>
-
-          {/* 부제 */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col items-center"
-          >
-            <div className="w-16 h-[2px] bg-primary mb-6" />
-            <p className="text-white/90 text-lg md:text-xl font-medium tracking-tight uppercase max-w-2xl">
-              합리적인 피부미용 의료 장비, <span className="text-primary font-bold">정확한 기술의 시작</span>
-            </p>
-          </motion.div>
-        </div>
+        {/* 콘텐츠 삭제됨 (배경 이미지 자체 텍스트 사용) */}
 
         {/* 스크롤 유도 버튼 */}
         <div className="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center">
           <Link
             href="#u-pulse-difference"
             aria-label="Scroll down"
-            className="inline-flex justify-center items-center w-12 h-12 border border-slate-300 rounded-full hover:bg-slate-100 hover:text-black transition duration-300 animate-bounce group bg-white/50 backdrop-blur-sm"
+            className="inline-flex justify-center items-center w-12 h-12 border border-slate-300 rounded-full hover:bg-slate-100 hover:text-black transition duration-300 animate-bounce group shadow-2xl bg-white/50 backdrop-blur-sm"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-slate-700 group-hover:text-black transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
