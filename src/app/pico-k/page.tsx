@@ -13,7 +13,10 @@ export default function PicoKPage() {
         id="hero"
         className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center px-4 bg-sky-100"
       >
-        <img
+        <motion.img
+          initial={{ scale: 1.0 }}
+          animate={{ scale: 1.05 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
           src="/images/cover/picok_cover.jpg"
           className="absolute inset-0 w-full h-full object-cover z-0 brightness-[0.95]"
           alt="PICO-K Cover"

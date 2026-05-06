@@ -39,7 +39,10 @@ export default function ContactPage() {
       >
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/35 z-10"></div>
-          <img
+          <motion.img
+            initial={{ scale: 1.0 }}
+            animate={{ scale: 1.05 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             src="/images/cover/contact_cover.png"
             className="absolute inset-0 w-full h-full object-cover z-0 opacity-80 brightness-[0.85] contrast-[1.05]"
             alt="Contact background"
