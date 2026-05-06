@@ -18,11 +18,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cheongan-next.vercel.app"),
   title: "청안메디칼 (CHEONGAN MEDICAL)",
   description: "합리적인 피부미용 의료장비, 최고의 선택 청안메디칼",
+  icons: {
+    icon: "/images/favicon.png",
+  },
   openGraph: {
     title: "청안메디칼 (CHEONGAN MEDICAL)",
     description: "합리적인 피부미용 의료장비, 최고의 선택 청안메디칼",
+    url: "https://cheongan-next.vercel.app",
+    siteName: "청안메디칼",
     images: [
       {
         url: "/images/opengraph.png",
@@ -31,6 +37,7 @@ export const metadata: Metadata = {
         alt: "청안메디칼 대표 이미지",
       },
     ],
+    locale: "ko_KR",
     type: "website",
   },
 };
