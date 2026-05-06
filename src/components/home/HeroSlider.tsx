@@ -10,52 +10,25 @@ import 'swiper/css/pagination';
 
 const heroSlides = [
   {
-    background: 'bg-sky-50',
-    overlay: (
-      <>
-        <img
-          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1920&q=80"
-          className="absolute inset-0 h-full w-full object-cover z-0 opacity-85 brightness-[0.85] contrast-[1.05]"
-          alt="medical interior"
-        />
-        <div className="absolute inset-0 pointer-events-none overflow-hidden h-screen w-full z-10">
-          <div className="absolute inset-0 bg-tech-grid opacity-10" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/35 pointer-events-none" />
-        </div>
-      </>
-    ),
+    src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1920&q=80",
+    alt: "medical interior",
     title: '합리적인 피부미용 의료 장비,',
     highlight: '정확한 기술의 시작',
+    type: 'tech'
   },
   {
-    background: 'bg-sky-50',
-    overlay: (
-      <>
-        <div className="absolute inset-0 bg-black/15 z-10" />
-        <img
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-85 mix-blend-normal brightness-[0.85] contrast-[1.02]"
-          alt="office meeting"
-        />
-      </>
-    ),
+    src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80",
+    alt: "office meeting",
     title: '합리적인 피부미용 의료 장비,',
     highlight: '그리고 최고의 선택',
+    type: 'office'
   },
   {
-    background: 'bg-sky-50',
-    overlay: (
-      <>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent z-10" />
-        <img
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-85 mix-blend-normal brightness-[0.85] contrast-[1.0]"
-          alt="abstract tech"
-        />
-      </>
-    ),
+    src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80",
+    alt: "abstract tech",
     title: 'Do What is Right,',
     highlight: 'Not what is easy',
+    type: 'vision'
   },
 ];
 
@@ -76,27 +49,57 @@ export default function HeroSlider() {
         className="hero-swiper h-full w-full"
       >
         {heroSlides.map((slide, index) => (
-          <SwiperSlide key={`${slide.title}-${index}`} className={`relative h-full w-full ${slide.background}`}>
-            {slide.overlay}
+          <SwiperSlide key={index} className="relative h-full w-full bg-sky-50">
+            {({ isActive }) => (
+              <>
+                {/* Background Image with Animation tied to isActive */}
+                <div className="absolute inset-0 overflow-hidden">
+                  <motion.img
+                    key={isActive ? `active-${index}` : `inactive-${index}`}
+                    initial={{ scale: 1.0 }}
+                    animate={isActive ? { scale: 1.05 } : { scale: 1.0 }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    src={slide.src}
+                    className="absolute inset-0 h-full w-full object-cover z-0 opacity-85 brightness-[0.85] contrast-[1.05]"
+                    alt={slide.alt}
+                  />
+                  
+                  {/* Overlays */}
+                  {slide.type === 'tech' && (
+                    <div className="absolute inset-0 pointer-events-none overflow-hidden h-screen w-full z-10">
+                      <div className="absolute inset-0 bg-tech-grid opacity-10" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/35 pointer-events-none" />
+                    </div>
+                  )}
+                  {slide.type === 'office' && (
+                    <div className="absolute inset-0 bg-black/15 z-10" />
+                  )}
+                  {slide.type === 'vision' && (
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent z-10" />
+                  )}
+                </div>
 
-            <div className="relative z-20 flex h-full flex-col items-center justify-center px-4 text-center">
-              <motion.div
-                initial={{ opacity: 0, width: 0 }}
-                whileInView={{ opacity: 1, width: 'clamp(72px, 7vw, 128px)' }}
-                transition={{ duration: 0.8 }}
-                className="hero-accent-line mb-10"
-              />
-              <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.15 }}
-                className="hero-title mb-20"
-              >
-                <span className="hero-title-main !text-white">{slide.title}</span>
-                <br />
-                <span className="hero-title-highlight">{slide.highlight}</span>
-              </motion.h1>
-            </div>
+                {/* Content */}
+                <div className="relative z-20 flex h-full flex-col items-center justify-center px-4 text-center">
+                  <motion.div
+                    initial={{ opacity: 0, width: 0 }}
+                    animate={isActive ? { opacity: 1, width: 'clamp(72px, 7vw, 128px)' } : { opacity: 0, width: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="hero-accent-line mb-10"
+                  />
+                  <motion.h1
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                    transition={{ duration: 0.8, delay: 0.15 }}
+                    className="hero-title mb-20"
+                  >
+                    <span className="hero-title-main !text-white">{slide.title}</span>
+                    <br />
+                    <span className="hero-title-highlight">{slide.highlight}</span>
+                  </motion.h1>
+                </div>
+              </>
+            )}
           </SwiperSlide>
         ))}
       </Swiper>
