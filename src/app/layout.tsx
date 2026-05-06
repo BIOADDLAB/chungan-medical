@@ -18,7 +18,6 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cheongan-next.vercel.app"),
   title: "청안메디칼 (CHEONGAN MEDICAL)",
   description: "합리적인 피부미용 의료장비, 최고의 선택 청안메디칼",
   icons: {
@@ -27,7 +26,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: "청안메디칼 (CHEONGAN MEDICAL)",
     description: "합리적인 피부미용 의료장비, 최고의 선택 청안메디칼",
-    url: "https://cheongan-next.vercel.app",
     siteName: "청안메디칼",
     images: [
       {
