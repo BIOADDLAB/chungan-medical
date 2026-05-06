@@ -20,6 +20,19 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "청안메디칼 (CHEONGAN MEDICAL)",
   description: "합리적인 피부미용 의료장비, 최고의 선택 청안메디칼",
+  openGraph: {
+    title: "청안메디칼 (CHEONGAN MEDICAL)",
+    description: "합리적인 피부미용 의료장비, 최고의 선택 청안메디칼",
+    images: [
+      {
+        url: "/images/opengraph.png",
+        width: 1200,
+        height: 630,
+        alt: "청안메디칼 대표 이미지",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
