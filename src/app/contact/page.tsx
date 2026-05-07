@@ -1,9 +1,13 @@
 'use client';
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function ContactPage() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
   const [formData, setFormData] = useState({
     hospital: '',
     name: '',
@@ -11,8 +15,11 @@ export default function ContactPage() {
     phone: '',
     subject: '',
     message: '',
+    interestedProducts: [] as string[],
     agree: false,
   });
+
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
 
   const products = [
     'PICO-K',
@@ -25,9 +32,117 @@ export default function ContactPage() {
     'REFIT',
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleCheckboxChange = (product: string) => {
+    setFormData(prev => {
+      const isSelected = prev.interestedProducts.includes(product);
+      if (isSelected) {
+        return { ...prev, interestedProducts: prev.interestedProducts.filter(p => p !== product) };
+      } else {
+        return { ...prev, interestedProducts: [...prev.interestedProducts, product] };
+      }
+    });
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      const newFiles = Array.from(e.target.files);
+      
+      // 현재 파일 개수 체크
+      if (selectedFiles.length + newFiles.length > 5) {
+        alert('최대 5개의 파일만 첨부할 수 있습니다.');
+        return;
+      }
+      
+      // 현재 선택된 파일들의 총 용량 계산
+      const currentTotalSize = selectedFiles.reduce((acc, file) => acc + file.size, 0);
+      
+      // 새로 추가할 파일들 중 개별 용량(10MB) 및 전체 용량(20MB) 체크
+      let addedSize = 0;
+      const validFiles = newFiles.filter(file => {
+        if (file.size > 10 * 1024 * 1024) {
+          alert(`파일 '${file.name}'의 크기가 10MB를 초과합니다.`);
+          return false;
+        }
+        
+        if (currentTotalSize + addedSize + file.size > 20 * 1024 * 1024) {
+          alert('전체 파일 크기는 20MB를 초과할 수 없습니다.');
+          return false;
+        }
+        
+        addedSize += file.size;
+        return true;
+      });
+
+      // 기존 파일들과 합쳐서 업데이트
+      setSelectedFiles(prev => [...prev, ...validFiles]);
+      
+      // input 초기화
+      if (e.target) e.target.value = '';
+    }
+  };
+
+  const removeFile = (index: number) => {
+    setSelectedFiles(prev => prev.filter((_, i) => i !== index));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('문의가 접수되었습니다. (데모)');
+    
+    if (!formData.agree) {
+      alert('개인정보 수집 및 이용에 동의해주세요.');
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const submitData = new FormData();
+      submitData.append('hospital', formData.hospital);
+      submitData.append('name', formData.name);
+      submitData.append('email', formData.email);
+      submitData.append('phone', formData.phone);
+      submitData.append('subject', formData.subject);
+      submitData.append('message', formData.message);
+      submitData.append('products', formData.interestedProducts.join(', '));
+      
+      // 여러 파일 추가
+      selectedFiles.forEach(file => {
+        submitData.append('file', file);
+      });
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: submitData,
+      });
+
+      if (response.ok) {
+        alert('문의가 성공적으로 발송되었습니다. 확인 후 연락드리겠습니다.');
+        setFormData({
+          hospital: '',
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: '',
+          interestedProducts: [],
+          agree: false,
+        });
+        setSelectedFiles([]);
+        if (formRef.current) formRef.current.reset();
+      } else {
+        throw new Error('전송 실패');
+      }
+    } catch (error) {
+      console.error('Email 전송 오류:', error);
+      alert('전송 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -76,7 +191,7 @@ export default function ContactPage() {
       {/* Contact Form Section */}
       <section id="contact-form" className="pt-24 md:pt-32 pb-32 bg-white text-slate-900 leading-none">
         <div className="max-w-[1000px] mx-auto px-6">
-          <form onSubmit={handleSubmit} className="space-y-12 leading-none">
+          <form onSubmit={handleSubmit} ref={formRef} className="space-y-12 leading-none">
 
             {/* Form Header Info */}
             <div className="flex justify-between items-end border-b border-sky-100 pb-4 mb-10 md:mb-14">
@@ -96,6 +211,9 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="text"
+                  name="hospital"
+                  value={formData.hospital}
+                  onChange={handleInputChange}
                   required
                   className="w-full bg-slate-50 border border-slate-200 p-4 rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all font-bold text-slate-900 placeholder:text-slate-400 hover:border-primary/50"
                   placeholder="HOSPITAL / COMPANY"
@@ -111,6 +229,9 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                   required
                   className="w-full bg-slate-50 border border-slate-200 p-4 rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all font-bold text-slate-900 placeholder:text-slate-400 hover:border-primary/50"
                   placeholder="NAME"
@@ -131,6 +252,9 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   required
                   className="w-full bg-slate-50 border border-slate-200 p-4 rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all font-bold text-slate-900 placeholder:text-slate-400 hover:border-primary/50"
                   placeholder="EXAMPLE@EMAIL.COM"
@@ -147,6 +271,9 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
                   required
                   className="w-full bg-slate-50 border border-slate-200 p-4 rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all font-bold text-slate-900 placeholder:text-slate-400 hover:border-primary/50"
                   placeholder="010-0000-0000"
@@ -173,7 +300,12 @@ export default function ContactPage() {
                 {products.map((product) => (
                   <label key={product} className="flex items-center gap-3 cursor-pointer group">
                     <div className="relative flex items-center justify-center">
-                      <input type="checkbox" className="peer appearance-none w-5 h-5 border border-slate-300 rounded bg-slate-50 checked:bg-primary checked:border-primary transition-all cursor-pointer" />
+                      <input
+                        type="checkbox"
+                        checked={formData.interestedProducts.includes(product)}
+                        onChange={() => handleCheckboxChange(product)}
+                        className="peer appearance-none w-5 h-5 border border-slate-300 rounded bg-slate-50 checked:bg-primary checked:border-primary transition-all cursor-pointer"
+                      />
                       <svg className="absolute w-3 h-3 text-white opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><polyline points="20 6 9 17 4 12"></polyline></svg>
                     </div>
                     <span className="text-[13px] font-black text-slate-600 group-hover:text-primary transition tracking-tight">
@@ -183,7 +315,12 @@ export default function ContactPage() {
                 ))}
                 <label className="flex items-center gap-3 cursor-pointer group">
                   <div className="relative flex items-center justify-center">
-                    <input type="checkbox" className="peer appearance-none w-5 h-5 border border-primary/40 rounded bg-primary/5 checked:bg-primary checked:border-primary transition-all cursor-pointer" />
+                    <input
+                      type="checkbox"
+                      checked={formData.interestedProducts.includes('개원 문의')}
+                      onChange={() => handleCheckboxChange('개원 문의')}
+                      className="peer appearance-none w-5 h-5 border border-primary/40 rounded bg-primary/5 checked:bg-primary checked:border-primary transition-all cursor-pointer"
+                    />
                     <svg className="absolute w-3 h-3 text-white opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
                   <span className="text-[13px] font-black text-primary">개원 문의</span>
@@ -202,6 +339,9 @@ export default function ContactPage() {
               </label>
               <input
                 type="text"
+                name="subject"
+                value={formData.subject}
+                onChange={handleInputChange}
                 required
                 className="w-full bg-slate-50 border border-slate-200 p-4 rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all font-bold text-slate-900 placeholder:text-slate-400 hover:border-primary/50"
                 placeholder="SUBJECT"
@@ -218,6 +358,9 @@ export default function ContactPage() {
                 문의내용 <span className="text-primary ml-1">*</span>
               </label>
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
                 required
                 className="w-full bg-slate-50 border border-slate-200 p-4 rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all font-bold text-slate-900 placeholder:text-slate-400 hover:border-primary/50 h-56 resize-none leading-relaxed"
                 placeholder="MESSAGE DETAILS..."
@@ -232,24 +375,75 @@ export default function ContactPage() {
               className="py-10 border-t border-slate-200"
             >
               <label className="block text-[13px] font-black text-slate-600 mb-6 tracking-widest uppercase">첨부파일 (ATTACHMENTS)</label>
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-                <label className="cursor-pointer bg-slate-50 border border-slate-200 rounded-full py-3 px-8 font-black text-[12px] tracking-widest text-primary hover:bg-primary/10 hover:border-primary/50 flex items-center gap-3 transition-all duration-300 uppercase shadow-sm group">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 transform group-hover:rotate-90 transition-transform duration-300"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M12 4v16m8-8H4" />
-                  </svg>
-                  Select File
-                  <input type="file" className="hidden" />
-                </label>
-                <div className="flex flex-col">
-                  <span className="text-[11px] text-slate-500 font-bold tracking-tight mb-1">MAX SIZE: 10MB</span>
-                  <span className="text-[11px] text-slate-500 font-bold tracking-tight">SUPPORTED: JPG, PNG, GIF, PDF</span>
+              <div className="flex flex-col gap-6">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                  <label className="cursor-pointer bg-slate-50 border border-slate-200 rounded-full py-3 px-8 font-black text-[12px] tracking-widest text-primary hover:bg-primary/10 hover:border-primary/50 flex items-center gap-3 transition-all duration-300 uppercase shadow-sm group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4 transform group-hover:rotate-90 transition-transform duration-300"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M12 4v16m8-8H4" />
+                    </svg>
+                    Add Files
+                    <input 
+                      type="file" 
+                      multiple
+                      className="hidden" 
+                      onChange={handleFileChange}
+                      ref={fileInputRef}
+                    />
+                  </label>
+                  <div className="flex flex-col">
+                    <span className="text-[11px] text-slate-500 font-bold tracking-tight mb-1">TOTAL MAX: 20MB (MAX 5 FILES)</span>
+                    <span className="text-[11px] text-slate-500 font-bold tracking-tight">SUPPORTED: JPG, PNG, GIF, PDF</span>
+                  </div>
                 </div>
+
+                {/* File List Display */}
+                <AnimatePresence>
+                  {selectedFiles.length > 0 && (
+                    <motion.div 
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="space-y-2 mt-2"
+                    >
+                      {selectedFiles.map((file, index) => (
+                        <motion.div 
+                          key={`${file.name}-${index}`}
+                          initial={{ x: -10, opacity: 0 }}
+                          animate={{ x: 0, opacity: 1 }}
+                          exit={{ x: 10, opacity: 0 }}
+                          className="flex items-center justify-between bg-slate-50 border border-slate-100 rounded-lg p-3 group hover:border-primary/30 transition-colors"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary">
+                              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                              </svg>
+                            </div>
+                            <div className="flex flex-col">
+                              <span className="text-[13px] font-black text-slate-700 truncate max-w-[200px] md:max-w-md">{file.name}</span>
+                              <span className="text-[11px] font-bold text-slate-400">{(file.size / 1024 / 1024).toFixed(2)}MB</span>
+                            </div>
+                          </div>
+                          <button 
+                            type="button"
+                            onClick={() => removeFile(index)}
+                            className="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-full transition-all"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                          </button>
+                        </motion.div>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </motion.div>
 
@@ -261,7 +455,13 @@ export default function ContactPage() {
               className="pt-8 border-t border-slate-200"
             >
               <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" required className="appearance-none w-5 h-5 border border-slate-300 rounded bg-slate-50 checked:bg-primary checked:border-primary transition-all cursor-pointer" />
+                <input
+                  type="checkbox"
+                  checked={formData.agree}
+                  onChange={(e) => setFormData(prev => ({ ...prev, agree: e.target.checked }))}
+                  required
+                  className="appearance-none w-5 h-5 border border-slate-300 rounded bg-slate-50 checked:bg-primary checked:border-primary transition-all cursor-pointer"
+                />
                 <span className="text-[12px] sm:text-[13px] font-bold text-slate-600 group-hover:text-primary transition tracking-tight whitespace-nowrap">
                   기재하신 개인정보의 수집 및 이용에 동의합니다. (필수)
                 </span>
@@ -277,9 +477,12 @@ export default function ContactPage() {
             >
               <button
                 type="submit"
-                className="relative group bg-primary hover:bg-white text-white hover:text-primary text-[16px] md:text-[18px] font-black py-5 px-16 md:px-24 rounded-full shadow-sm transition-all duration-500 transform hover:-translate-y-1 uppercase tracking-widest font-inter border-2 border-transparent hover:border-primary"
+                disabled={isSubmitting}
+                className="relative group bg-primary hover:bg-white text-white hover:text-primary text-[16px] md:text-[18px] font-black py-5 px-16 md:px-24 rounded-full shadow-sm transition-all duration-500 transform hover:-translate-y-1 uppercase tracking-widest font-inter border-2 border-transparent hover:border-primary disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <span className="relative z-10 transition-colors duration-500">Send Message</span>
+                <span className="relative z-10 transition-colors duration-500">
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </span>
               </button>
             </motion.div>
           </form>
