@@ -61,16 +61,17 @@ export default function ContactPage() {
       // 현재 선택된 파일들의 총 용량 계산
       const currentTotalSize = selectedFiles.reduce((acc, file) => acc + file.size, 0);
       
-      // 새로 추가할 파일들 중 개별 용량(10MB) 및 전체 용량(20MB) 체크
+      // 새로 추가할 파일들 중 개별 용량(10MB) 및 전체 용량(4MB) 체크
       let addedSize = 0;
       const validFiles = newFiles.filter(file => {
-        if (file.size > 10 * 1024 * 1024) {
-          alert(`파일 '${file.name}'의 크기가 10MB를 초과합니다.`);
+        // 개별 파일은 4MB 내에서라면 10MB 체크는 의미가 없으므로 함께 4MB 기준으로 생각
+        if (file.size > 4 * 1024 * 1024) {
+          alert(`파일 '${file.name}'의 크기가 4MB를 초과합니다.`);
           return false;
         }
         
-        if (currentTotalSize + addedSize + file.size > 20 * 1024 * 1024) {
-          alert('전체 파일 크기는 20MB를 초과할 수 없습니다.');
+        if (currentTotalSize + addedSize + file.size > 4 * 1024 * 1024) {
+          alert('전체 파일 크기는 4MB를 초과할 수 없습니다.');
           return false;
         }
         
@@ -397,7 +398,7 @@ export default function ContactPage() {
                     />
                   </label>
                   <div className="flex flex-col">
-                    <span className="text-[11px] text-slate-500 font-bold tracking-tight mb-1">TOTAL MAX: 20MB (MAX 5 FILES)</span>
+                    <span className="text-[11px] text-slate-500 font-bold tracking-tight mb-1">TOTAL MAX: 4MB (MAX 5 FILES)</span>
                     <span className="text-[11px] text-slate-500 font-bold tracking-tight">SUPPORTED: JPG, PNG, GIF, PDF</span>
                   </div>
                 </div>
