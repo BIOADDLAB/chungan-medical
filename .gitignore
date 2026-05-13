@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI & Planning docs
+AGENTS.md
+CLAUDE.md
+orchestration.md
+DESIGN_PLAN.md
+DESIGN_SYSTEM.md
+light-theme-plan.md
+contact-system-guide.md
