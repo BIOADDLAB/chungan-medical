@@ -71,13 +71,13 @@ export default function Footer() {
               </div>
               <span className="font-bold tracking-wider text-[0.7rem] group-hover:text-white transition-colors">KAKAO</span>
             </Link>
-            <Link href="https://www.instagram.com/chungan_medical_corporation" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 group shrink-0">
+            <Link href="https://www.instagram.com/chungan_medical_corporation?igsh=OXphMHk2NWhpOXBq" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 group shrink-0">
               <div className="w-8 h-8 rounded-full bg-white/10 border border-white/10 flex items-center justify-center group-hover:bg-[#E1306C] group-hover:border-[#E1306C] transition-colors shadow-sm">
                 <svg className="w-4 h-4 text-white/60 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
               </div>
               <span className="font-bold tracking-wider text-[0.7rem] group-hover:text-white transition-colors">INSTAGRAM</span>
             </Link>
-            <Link href="https://blog.naver.com/hwangh6293" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 group shrink-0">
+            <Link href="https://naver.me/5zUXvUyk" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 group shrink-0">
               <div className="w-8 h-8 rounded-full bg-white/10 border border-white/10 flex items-center justify-center group-hover:bg-[#03C75A] group-hover:border-[#03C75A] transition-colors shadow-sm">
                 <span className="text-[10px] font-black text-white/60 group-hover:text-white">b</span>
               </div>

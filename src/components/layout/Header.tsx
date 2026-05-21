@@ -4,6 +4,60 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
+type SocialIconVariant = 'insta' | 'blog';
+
+const SOCIAL_LINKS: { variant: SocialIconVariant; href: string; label: string }[] = [
+  {
+    variant: 'insta',
+    href: 'https://www.instagram.com/chungan_medical_corporation?igsh=OXphMHk2NWhpOXBq',
+    label: 'Instagram',
+  },
+  {
+    variant: 'blog',
+    href: 'https://naver.me/5zUXvUyk',
+    label: 'Blog',
+  },
+];
+
+function socialIconSrc(variant: SocialIconVariant, tone: 'white' | 'gray' | 'blue') {
+  return `/images/logo/${variant}-${tone}.png`;
+}
+
+function SocialIconLink({
+  variant,
+  href,
+  label,
+  defaultTone,
+  className = '',
+}: {
+  variant: SocialIconVariant;
+  href: string;
+  label: string;
+  defaultTone: 'white' | 'gray';
+  className?: string;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className={`group relative flex h-4 w-4 shrink-0 items-center justify-center md:h-5 md:w-5 ${className}`}
+    >
+      <img
+        src={socialIconSrc(variant, defaultTone)}
+        alt=""
+        className="h-full w-full object-contain transition-opacity duration-300 group-hover:opacity-0"
+      />
+      <img
+        src={socialIconSrc(variant, 'blue')}
+        alt=""
+        className="absolute inset-0 h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      />
+    </a>
+  );
+}
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,6 +81,7 @@ export default function Header() {
     { name: 'SYLFIRM X', href: '/sylfirm-x' },
     { name: 'CELLINEW', href: '/cellinew' },
     { name: 'V-RO ADVANCE', href: '/v-ro-advance' },
+    { name: 'MIGLOW', href: '/miglow' },
   ];
 
   return (
@@ -93,14 +148,26 @@ export default function Header() {
           </nav>
 
           {/* Right Area */}
-          <div className="flex-shrink-0 md:flex-1 flex justify-end items-center ml-4 md:ml-0">
-            <div className={`hidden md:flex items-center space-x-2 font-bold cursor-pointer hover:text-primary transition ${scrolled ? 'text-[#5D5D5D]' : 'text-white'}`}>
+          <div className="flex-shrink-0 md:flex-1 flex justify-end items-center gap-2 md:gap-3 ml-4 md:ml-0 pr-2 md:pr-2">
+            <div className="flex items-center gap-4 md:gap-5">
+              {SOCIAL_LINKS.map((social) => (
+                <SocialIconLink
+                  key={social.variant}
+                  variant={social.variant}
+                  href={social.href}
+                  label={social.label}
+                  defaultTone={scrolled ? 'gray' : 'white'}
+                />
+              ))}
+            </div>
+
+            <div className="hidden items-center space-x-2 font-bold cursor-pointer hover:text-primary transition">
               <span>KOR</span>
               <span>▾</span>
             </div>
 
             <button
-              className={`md:hidden p-2 -mr-2 focus:outline-none z-[70] ${scrolled ? 'text-[#5D5D5D]' : 'text-white'}`}
+              className={`md:hidden p-2 mr-0 focus:outline-none z-[70] ${scrolled ? 'text-[#5D5D5D]' : 'text-white'}`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle Menu"
             >
@@ -173,9 +240,23 @@ export default function Header() {
                   <span>contact</span>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-40"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </Link>
-                <div className="px-8 py-10 flex items-center gap-6 border-t border-sky-100 mt-auto">
-                  <span className="text-primary font-bold">KOR</span>
-                  <span className="text-slate-400 font-bold hover:text-slate-800 transition cursor-pointer">ENG</span>
+                <div className="px-8 py-10 flex flex-col gap-8 border-t border-sky-100 mt-auto">
+                  <div className="flex items-center gap-6">
+                    {SOCIAL_LINKS.map((social) => (
+                      <SocialIconLink
+                        key={social.variant}
+                        variant={social.variant}
+                        href={social.href}
+                        label={social.label}
+                        defaultTone="gray"
+                        className="h-5 w-5"
+                      />
+                    ))}
+                  </div>
+                  <div className="hidden items-center gap-6">
+                    <span className="text-primary font-bold">KOR</span>
+                    <span className="text-slate-400 font-bold hover:text-slate-800 transition cursor-pointer">ENG</span>
+                  </div>
                 </div>
               </nav>
             </div>

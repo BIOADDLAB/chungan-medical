@@ -28,8 +28,8 @@ export default function ContactPage() {
     'SYLFIRM X',
     'CELLINEW',
     'V-RO ADVANCE',
-    'AQUAPURE',
-    'REFIT',
+    'MIGLOW',
+    'Terratalk'
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

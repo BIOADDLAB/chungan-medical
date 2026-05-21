@@ -12,6 +12,7 @@ const PARTNER_LOGOS = [
   { name: '상상하다', src: '상상하다3.png', width: 2078, height: 821 },
   { name: '스마트브랜딩', src: '스마트브랜딩.png', width: 4167, height: 4167 },
   { name: '유노택스', src: '유노택스.png', width: 10779, height: 2457 },
+  { name: '신한에스', src: '신한에스.png', width: 1772, height: 1772 },
 ];
 
 export default function PartnerMarquee() {
@@ -78,7 +79,7 @@ export default function PartnerMarquee() {
         </motion.p>
       </div>
 
-      <div className="relative py-24 bg-[#e0f2fe] border-y border-[#00B3E4]/10 overflow-hidden group">
+      <div className="relative py-8 md:py-10 bg-[#e0f2fe] border-y border-[#00B3E4]/10 overflow-hidden group">
         <div className="absolute inset-0 bg-tech-grid opacity-[0.03] pointer-events-none" />
 
         <div className="absolute inset-y-0 left-0 w-32 md:w-64 bg-gradient-to-r from-[#e0f2fe] to-transparent z-10 pointer-events-none" />
@@ -99,14 +100,14 @@ export default function PartnerMarquee() {
                 {PARTNER_LOGOS.map((logo) => (
                   <div
                     key={`${setIndex}-${logo.src}`}
-                    className="flex-shrink-0 flex items-center justify-center grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer px-4"
+                    className="flex h-24 w-[180px] flex-shrink-0 items-center justify-center grayscale opacity-40 transition-all duration-500 hover:grayscale-0 hover:opacity-100 cursor-pointer md:h-32 md:w-[260px]"
                   >
                     <Image
                       src={`/images/down_logo/${logo.src}`}
                       alt={logo.name}
                       width={logo.width}
                       height={logo.height}
-                      className="h-16 md:h-20 w-auto object-contain"
+                      className="max-h-full max-w-full object-contain"
                     />
                   </div>
                 ))}
