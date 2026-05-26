@@ -25,7 +25,7 @@ const PRODUCTS = [
   { id: 6, name: 'SYLFIRM X', image: '/images/machine/실펌x 사진1.png', logo: '/images/machine/실펌 로고.png', makerLogo: '/images/machine/비올 로고.png' },
   { id: 7, name: 'CELLINEW', image: '/images/machine/셀리뉴_수정.png', logo: '/images/machine/셀리뉴 로고.png', makerLogo: '/images/machine/비올 로고.png' },
   { id: 8, name: 'V-RO ADVANCE', image: '/images/machine/브이로어드밴스 사진.png', logo: '/images/machine/브이로어드밴스 로고.png', makerLogo: '/images/machine/하이로닉 로고.png' },
-  { id: 10, name: 'MIGLOW', image: '/images/machine/MIGLOW 장비.png', logo: '/images/machine/MIGLOW 로고(골드).png', makerLogo: '/images/machine/snj로고.png' },
+  { id: 10, name: 'MIGLOW', image: '/images/machine/MIGLOW 장비.png', logo: '/images/machine/MIGLOW 로고(골드).png', makerLogo: '/images/machine/하이로닉 로고.png' },
 ];
 
 export default function ProductLineup() {
