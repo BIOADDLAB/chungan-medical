@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="space-y-4 text-[0.9rem]">
             <div className="flex">
               <span className="w-24 font-bold text-white/50">회사명</span>
-              <span className="text-white font-medium">(주)청안메디컬코퍼레이션</span>
+              <span className="text-white font-medium">(주)청안메디칼코퍼레이션</span>
             </div>
             <div className="flex">
               <span className="w-24 font-bold text-white/50">대표자</span>
@@ -25,7 +25,7 @@ export default function Footer() {
             </div>
             <div className="flex">
               <span className="w-24 font-bold text-white/50">이메일</span>
-              <span className="text-white font-medium">hwangh6293@naver.com</span>
+              <span className="text-white font-medium">hwangh6293@chungancorp.com</span>
             </div>
             <div className="flex">
               <span className="w-24 font-bold text-white/50">사업자번호</span>
@@ -51,10 +51,13 @@ export default function Footer() {
               <Link href="/contact" className="hover:text-white transition duration-300 uppercase">CONTACT</Link>
             </p>
             <h3 className="text-2xl md:text-4xl font-bold font-inter mb-6 hover:text-white transition duration-300 cursor-pointer text-white">
-              hwangh6293@naver.com
+              chungan@chungancorp.com
             </h3>
             <p className="text-white/70 mb-2 font-inter text-sm">
-              <span className="text-white/50 mr-2">TEL</span> 010-5115-6293
+              <span className="text-white/50 mr-2">TEL</span> 031-217-6813
+            </p>
+            <p className="text-white/70 mb-2 font-inter text-sm">
+              <span className="text-white/50 mr-2">PHONE</span> 010-5115-6293
             </p>
             <p className="text-white/70 font-inter text-sm">
               <span className="text-white/50 mr-2">FAX</span> 0504-172-6293
@@ -76,12 +79,6 @@ export default function Footer() {
                 <svg className="w-4 h-4 text-white/60 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
               </div>
               <span className="font-bold tracking-wider text-[0.7rem] group-hover:text-white transition-colors">INSTAGRAM</span>
-            </Link>
-            <Link href="https://naver.me/5zUXvUyk" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 group shrink-0">
-              <div className="w-8 h-8 rounded-full bg-white/10 border border-white/10 flex items-center justify-center group-hover:bg-[#03C75A] group-hover:border-[#03C75A] transition-colors shadow-sm">
-                <span className="text-[10px] font-black text-white/60 group-hover:text-white">b</span>
-              </div>
-              <span className="font-bold tracking-wider text-[0.7rem] group-hover:text-white transition-colors">BLOG</span>
             </Link>
           </div>
           <div className="font-inter">Copyright© CHEONGAN. All Rights Reserved.</div>

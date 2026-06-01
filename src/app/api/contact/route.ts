@@ -70,7 +70,7 @@ export async function POST(req: Request) {
 
     // 메일 내용 구성 (HTML 형식)
     const mailOptions: any = {
-      from: `청안 메디컬 <${process.env.NAVER_USER}@naver.com>`,
+      from: `청안 메디칼 <${process.env.NAVER_USER}@naver.com>`,
       to: process.env.RECEIVER_EMAIL,
       subject: `[홈페이지 문의] ${subject} - ${name}님`,
       html: `
