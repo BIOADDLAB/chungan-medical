@@ -101,7 +101,7 @@ export default function Header() {
             >
               <img
                 src="/images/청안로고.png"
-                alt="CHEONGAN"
+                alt="CHUNGAN"
                 className={`h-[56px] md:h-[100px] w-auto object-contain transition-all duration-300 
                   ${scrolled 
                     ? '[filter:brightness(0)_saturate(100%)_invert(38%)_sepia(0%)_saturate(0%)_hue-rotate(143deg)_brightness(91%)_contrast(84%)] group-hover:[filter:invert(56%)_sepia(95%)_saturate(1831%)_hue-rotate(160deg)_brightness(94%)_contrast(101%)]' 
@@ -196,7 +196,7 @@ export default function Header() {
             {/* Top Bar Logo & Close Button */}
             <div className="absolute top-0 left-0 w-full h-20 md:h-28 flex items-center justify-between px-4 border-b border-sky-100">
               <div className="p-1 -ml-12">
-                <img src="/images/청안로고.png" alt="CHEONGAN" className="h-[56px] w-auto brightness-0" />
+                <img src="/images/청안로고.png" alt="CHUNGAN" className="h-[56px] w-auto brightness-0" />
               </div>
               <button
                 onClick={() => setIsMenuOpen(false)}

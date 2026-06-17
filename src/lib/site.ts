@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: '청안메디칼',
-  title: '청안메디칼 (CHEONGAN MEDICAL)',
+  title: '청안메디칼 (CHUNGAN MEDICAL)',
   description:
     '(주)청안메디칼코퍼레이션은 PICO-K, U-Pulse, SYLFIRM X, CELLINEW, V-RO ADVANCE, MIGLOW 등 병원·피부과 맞춤 피부미용 의료장비를 공급하는 전문 기업입니다.',
   companyName: '(주)청안메디칼코퍼레이션',

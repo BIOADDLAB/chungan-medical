@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="mb-14 h-28 md:h-40 flex justify-center md:justify-start items-center ml-0 md:-ml-24">
           <img
             src="/images/청안로고.png"
-            alt="CHEONGAN"
+            alt="CHUNGAN"
             className="w-80 md:w-[520px] opacity-100 brightness-0 invert object-contain object-center md:object-left"
           />
         </div>
@@ -81,7 +81,7 @@ export default function Footer() {
               <span className="font-bold tracking-wider text-[0.7rem] group-hover:text-white transition-colors">INSTAGRAM</span>
             </Link>
           </div>
-          <div className="font-inter">Copyright© CHEONGAN. All Rights Reserved.</div>
+          <div className="font-inter">Copyright© CHUNGAN. All Rights Reserved.</div>
         </div>
       </div>
     </footer>

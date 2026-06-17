@@ -46,7 +46,7 @@ export default function ConsultingOrbit() {
               <div className="cn-plus-symbol overflow-hidden border-0">
                 <img
                   src="/images/청안turnkey 로고1.png"
-                  alt="CHEONGAN TURNKEY"
+                  alt="CHUNGAN TURNKEY"
                   className="w-full h-full object-cover [filter:invert(56%)_sepia(95%)_saturate(1831%)_hue-rotate(160deg)_brightness(94%)_contrast(101%)]"
                 />
               </div>
