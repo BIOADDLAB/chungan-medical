@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import RevealProvider from "@/components/RevealProvider";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import { createSiteMetadata } from "@/lib/metadata";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
@@ -64,6 +65,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <GoogleAnalytics />
       </body>
     </html>
   );

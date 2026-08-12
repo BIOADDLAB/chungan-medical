@@ -11,6 +11,8 @@ export const siteConfig = {
     google: 'NUbPKBh-7buxybUJr0MJ86DXNAKks2usu6FioI-jLdE',
     naver: '319f95fb0b6fdda0ba5f6a66e4d79212be398176',
   },
+  gaMeasurementId:
+    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-4H2HBNQVR0',
 } as const;
 
 export type ChangeFrequency =
