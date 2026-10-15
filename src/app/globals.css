@@ -6,8 +6,8 @@
   /* Deep tech dark blue-black */
   --color-light: #F9F9F9;
 
-  --font-sans: var(--font-noto-sans-kr), var(--font-inter), sans-serif;
-  --font-inter: var(--font-inter), sans-serif;
+  --font-sans: "Noto Sans KR", "Inter", sans-serif;
+  --font-inter: "Inter", sans-serif;
 }
 
 :root {
@@ -79,7 +79,7 @@ body {
 }
 
 .hero-title {
-  font-family: var(--font-noto-sans-kr), sans-serif;
+  font-family: var(--font-sans);
   font-size: clamp(2rem, 4.5vw, 4.25rem);
   font-weight: 700;
   line-height: 1.25;

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Noto_Sans_KR, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -7,18 +6,6 @@ import RevealProvider from "@/components/RevealProvider";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import { createSiteMetadata } from "@/lib/metadata";
 import { absoluteUrl, siteConfig } from "@/lib/site";
-
-const notoSansKr = Noto_Sans_KR({
-  weight: ['400', '500', '700', '800'],
-  subsets: ["latin"],
-  variable: "--font-noto-sans-kr",
-});
-
-const inter = Inter({
-  weight: ['400', '500', '700', '800'],
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -53,7 +40,15 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="ko" className={`${notoSansKr.variable} ${inter.variable}`}>
+    <html lang="ko">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-screen flex flex-col font-sans selection:bg-primary selection:text-white">
         <script
           type="application/ld+json"
