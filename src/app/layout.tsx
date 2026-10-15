@@ -41,7 +41,7 @@ export default function RootLayout({
     telephone: '+82-31-217-6813',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '테헤란로 70길 12 H타워 148,302-1호',
+      streetAddress: '학동로3길 27, 2층 일부',
       addressLocality: '강남구',
       addressRegion: '서울특별시',
       addressCountry: 'KR',
